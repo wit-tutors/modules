@@ -1,0 +1,528 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Design Patterns</h2>
+    <p> All Labs in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic01-context/book/index.html">
+      Lab-01
+    </a>
+    
+    <a class="item" href="topic02-template-method-strategy/book-template-method-strategy/index.html">
+      Lab-02
+    </a>
+    
+    <a class="item" href="topic03-command/book-a-command/index.html">
+      Lab-03
+    </a>
+    
+    <a class="item" href="topic04-prototype/book-a-prototype/index.html">
+      lab-04
+    </a>
+    
+    <a class="item" href="topic05-gof-patterns/book/index.html">
+      Lab-05
+    </a>
+    
+    <a class="item" href="topic06-adapter-singleton-memento/book/index.html">
+      Lab-06
+    </a>
+    
+    <a class="item" href="topic07-enterprise-patterns-1/book/index.html">
+      Lab-07
+    </a>
+    
+    <a class="item" href="topic08-architecture/book/index.html">
+      Lab-08
+    </a>
+    
+    <a class="item" href="topic09-enterprise-patterns-2/book/index.html">
+      Lab-09
+    </a>
+    
+    <a class="item" href="topic10-half-sync/book/index.html">
+      Lab-10
+    </a>
+    
+    <a class="item" href="topic11-microservices/book-a/index.html">
+      Lab-11-A
+    </a>
+    
+    <a class="item" href="topic11-microservices/book-b/index.html">
+      Lab-11-B
+    </a>
+    
+    <a class="item" href="topic12-xtend/book-a/index.html">
+      Lab-12-A
+    </a>
+    
+    <a class="item" href="topic12-xtend/book-b/index.html">
+      Lab-12-B
+    </a>
+    
+    <a class="item" href="topic12-xtend/book-c/index.html">
+      Lab-12-C
+    </a>
+    
+    <a class="item" href="topic13-swift/book/index.html">
+      SwiftToDoLab
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic01-context/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-01 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01-context/book/img/main.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Prepare an suitable version of Eclipse for the forthcoming labs. Download and become familiar with the pacemaker-console project. Explore the Strategy pattern in this context.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-template-method-strategy/book-template-method-strategy/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-02 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-template-method-strategy/book-template-method-strategy/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Review the Java variants of the template method and strategy patterns. Reoode these in Xtend. Reimplement Strategy using Lambdas in Xtend</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-command/book-a-command/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-03 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-command/book-a-command/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Rework the cliche library, using Strategy to delegate command processing. Implement the Command pattern into a simplified version of Pacemaker. Extend the implementation to include undo/redo capability</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-prototype/book-a-prototype/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> lab-04 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-prototype/book-a-prototype/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Explore some deficiencies in the pacemaker command pattern implementation. Introduce prototype into the pacemaker application to fix these issues.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-gof-patterns/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-05 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-gof-patterns/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Layout a new Android project with a single activity. Design this activity to permit simple sports activities to be specified. Implement the Activity class to support these controls</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-adapter-singleton-memento/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-06 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-adapter-singleton-memento/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Extend the pacemaker-android app to enable activities to be listed. Explore three patterns in this context: memento, singleton, adapter</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-enterprise-patterns-1/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-07 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-enterprise-patterns-1/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Create a new version of pacemaker using the play framework</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08-architecture/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-08 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08-architecture/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Build a set of views to support signup/login and navigation, Incorporate suitable models. Explore how flow-synchronisation works in this context.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-enterprise-patterns-2/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-09 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-enterprise-patterns-2/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Extend the pacemaker-service application to incorporate service layer. Utilize the layer in the pacemaker-android to retrieve a list of current users</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-half-sync/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-10 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-half-sync/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Complete the android application to include activity sync support</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-microservices/book-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-11-A </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-microservices/book-a/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Build a version of the pacemaker-service API in node.js. Install a version of the node application in Docker. Run this docker module in a vagrant managed VM</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-microservices/book-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-11-B </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-microservices/book-b/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Build a User Interface for the pacemaker-node based on ember.js</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12-xtend/book-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-12-A </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12-xtend/book-a/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Develop an application in Android using the Xtend language</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12-xtend/book-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-12-B </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12-xtend/book-b/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Introduce Services into the Xtend YambaX application. Implement a background service to periodically update the twitter timeline</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12-xtend/book-c/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-12-C </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12-xtend/book-c/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Incorporate Broadcast Event Senders/Receivers into the application. Use BootReciever to recieve boot event to start application service on launch. Use NetworkReveicer to stop/start service when network is starting/stopping. Use Broadcast Events for status updates from background service to TimelineActivity</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic13-swift/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> SwiftToDoLab </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic13-swift/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Rebuild the ToDo application from the apple developer documentation in Swift</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

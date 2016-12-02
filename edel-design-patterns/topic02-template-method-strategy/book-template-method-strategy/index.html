@@ -1,0 +1,955 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Template Method & Strategy
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-02">
+      Lab-02
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-context/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic02-template-method-strategy/book-template-method-strategy/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-command/book-a-command/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-prototype/book-a-prototype/index.html">
+          lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-gof-patterns/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-adapter-singleton-memento/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-enterprise-patterns-1/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-architecture/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-enterprise-patterns-2/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-half-sync/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-microservices/book-a/index.html">
+          Lab-11-A
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-microservices/book-b/index.html">
+          Lab-11-B
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-xtend/book-a/index.html">
+          Lab-12-A
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-xtend/book-b/index.html">
+          Lab-12-B
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-xtend/book-c/index.html">
+          Lab-12-C
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic13-swift/book/index.html">
+          SwiftToDoLab
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-02">
+        <h1>Objectives</h1>
+<p>Review the Java variants of the template method and strategy patterns. Reoode these in Xtend. Reimplement Strategy using Lambdas in Xtend</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Template Method</h1>
+<p>Assuming you have a recent version of Eclipse installed, create a new eclipse project called <code>solver-patterns</code>.</p>
+<p>Create a package called <code>templatemethod</code> - and bring in these classes:</p>
+<h2>MinimaSolver</h2>
+<pre><code class="lang-java">package templatemethod;
+
+public abstract class MinimaSolver
+{
+  public MinimaSolver()
+  {
+  }
+
+  double[] minima(double[] line)
+  {
+    // do some pre-processing
+    double[] result = null;
+    result = algorithm(line);
+    // do some post-processing
+    return result;
+  }
+
+  public abstract double[] algorithm(double[] line);
+}</code></pre>
+<h2>BisectionSolver</h2>
+<pre><code class="lang-java">package templatemethod;
+
+public class BisectionSolver extends MinimaSolver
+{
+  public double[] algorithm(double[] line)
+  {
+    // Compute Minima on line
+    //  - algorithm
+    double x = 5.5;  // simulated result
+    double y = 6.6;  // simulated result
+
+    return new double[]{x, y};
+  }
+}</code></pre>
+<h2>LeastSquaresSolver</h2>
+<pre><code class="lang-java">package templatemethod;
+
+public class LeastSquaresSolver extends MinimaSolver
+{
+  public double[] algorithm(double[] line)
+  {
+    // Compute Minima on line
+    //  - algorithm
+    double x = 1.1;  // simulated result
+    double y = 2.2;  // simulated result
+
+    return new double[]{x, y};
+  }
+}</code></pre>
+<h2>NewtonsMethodSolver</h2>
+<pre><code class="lang-java">package templatemethod;
+
+public class NewtonsMethodSolver extends MinimaSolver
+{
+  public double[] algorithm(double[] line)
+  {
+    // Compute Minima on line
+    //  - algorithm
+    double x = 3.3;  // simulated result
+    double y = 4.4;  // simulated result
+
+    return new double[]{x, y};    
+  }
+}</code></pre>
+<h2>MinimaSolverTest</h2>
+<pre><code class="lang-java">package templatemethod;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class MinimaSolverTest
+{
+  private double[] line = { 1.0, 2.0, 1.0, 2.0, -1.0, 3.0, 4.0, 5.0, 4.0 };
+  private MinimaSolver solver;
+
+  @Test
+  public void leastSquaresAlgorithm()
+  {
+    solver = new LeastSquaresSolver();
+    double[] result = solver.minima(line);
+    assertTrue(result[0] == 1.1);
+    assertTrue(result[1] == 2.2);
+  }
+
+  @Test
+  public void newtonsMethodAlgorithm()
+  {
+    solver = new NewtonsMethodSolver();
+    double[] result = solver.minima(line);
+    assertTrue(result[0] == 3.3);
+    assertTrue(result[1] == 4.4);
+  }
+
+  @Test
+  public void bisection()
+  {
+    solver = new BisectionSolver();
+    double[] result = solver.minima(line);
+    assertTrue(result[0] == 5.5);
+    assertTrue(result[1] == 6.6);
+  }
+}</code></pre>
+<p>(You will need to include JUint libraries for the above to compile)</p>
+<p>Verify that the tests pass</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Strategy</h1>
+<p>Create a package in the same package called <code>strategy</code> - and bring in these classes:</p>
+<h2>FindMinima</h2>
+<pre><code class="lang-java">package strategy;
+
+public interface FindMinima
+{
+  double[] algorithm(double[] line);
+}</code></pre>
+<h2>MinimaSolver</h2>
+<pre><code class="lang-java">package strategy;
+
+public class MinimaSolver
+{
+  private FindMinima strategy;
+
+  public MinimaSolver(FindMinima strategy)
+  {
+    this.strategy = strategy;
+  }
+
+  double[] minima(double[] line)
+  {
+
+    // do some pre-processing
+    double[] result = null;
+
+    result = strategy.algorithm(line);
+
+    // do some post-processing
+    return result;
+  }
+
+  public void changeStrategy(FindMinima newStrategy)
+  {
+    strategy = newStrategy;
+  }
+}</code></pre>
+<h2>BisecionStrategy</h2>
+<pre><code class="lang-java">package strategy;
+
+public class BisectionStrategy implements FindMinima
+{
+  public double[] algorithm(double[] line)
+  {
+    // Compute Minima on line
+    //  - algorithm
+    double x = 5.5;  // simulated result
+    double y = 6.6;  // simulated result
+
+    return new double[]{x, y};
+  }
+}</code></pre>
+<h2>LeastSquaresStrategy</h2>
+<pre><code class="lang-java">package strategy;
+
+public class LeastSquaresStrategy implements FindMinima
+{
+  public double[] algorithm(double[] line)
+  {
+    // Compute Minima on line
+    //  - algorithm
+    double x = 1.1;  // simulated result
+    double y = 2.2;  // simulated result
+
+    return new double[]{x, y};
+  }
+}</code></pre>
+<h2>NewtonsMethodStrategy</h2>
+<pre><code class="lang-java">package strategy;
+
+public class NewtonsMethodStrategy implements FindMinima
+{
+  public double[] algorithm(double[] line)
+  {
+    // Compute Minima on line
+    //  - algorithm
+    double x = 3.3;  // simulated result
+    double y = 4.4;  // simulated result
+
+    return new double[]{x, y};  
+  }
+}</code></pre>
+<h2>MinimaSolverTest</h2>
+<pre><code class="lang-java">package strategy;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class MinimaSolverTest
+{
+  private double[] line = {1.0, 2.0, 1.0, 2.0, -1.0, 3.0, 4.0, 5.0, 4.0};
+  private MinimaSolver solver;
+
+  @Test
+  public void leastSquares()
+  {
+    solver = new MinimaSolver(new LeastSquaresStrategy());
+    double[] result = solver.minima(line);
+    assertTrue(result[0] == 1.1);
+    assertTrue(result[1] == 2.2);
+  }
+
+  @Test
+  public void newtonsMethod()
+  {
+    solver = new MinimaSolver(new NewtonsMethodStrategy());
+    double[] result = solver.minima(line);
+    assertTrue(result[0] == 3.3);
+    assertTrue(result[1] == 4.4);
+  }
+
+  @Test
+  public void bisection()
+  {
+    solver = new MinimaSolver(new BisectionStrategy());
+    double[] result = solver.minima(line);
+    assertTrue(result[0] == 5.5);
+    assertTrue(result[1] == 6.6);
+  }
+
+  @Test
+  public void testChangeAlgorithm()
+  {
+    solver = new MinimaSolver(new LeastSquaresStrategy());
+
+    double[] result = solver.minima(line);
+    assertTrue(result[0] == 1.1);
+    assertTrue(result[1] == 2.2);
+    solver.changeStrategy(new BisectionStrategy());
+
+    result = solver.minima(line);
+    assertTrue(result[0] == 5.5);
+    assertTrue(result[1] == 6.6);
+  }
+}</code></pre>
+<p>Verify that the tests pass</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Xtend TemplateMethod</h1>
+<p>Xtend is one the potential successors to Java (others include Scala and Kotlin). Xtend has some advantages over these, not least its simplicity and robust implementation. We will review xtend on next weeks lab, but you can try the experiments in the next few steps in order to gain an initial familiarity.</p>
+<p>You must be using <code>Eclipse for DSL Developers</code> distribution, or install XTend into your version of eclipse.</p>
+<ul>
+<li><a href="https://www.eclipse.org/xtend/">https://www.eclipse.org/xtend/</a></li>
+</ul>
+<p>In the same project, create a new package called <code>xtemplatemethod</code>. Using the eclipse context menu, create an <code>XTend class</code> called MinmaSolver. Once you have created the class, eclipse will generate an error if the XTend libraries are not included.. Selecting the error in the IDE, and selecting autocorrect may be the easies way of having the libraries included.</p>
+<p>We can place multiple classes in a single source file in XTend:</p>
+<h2>MinimaSolver</h2>
+<pre><code>package xtemplatemethod
+
+abstract class MinimaSolver 
+{
+  new()
+  {
+  }
+
+  def double[] minima(double[] line)
+  {
+    // do some pre-processing
+    var double[] result = null
+    result = algorithm(line)
+    // do some post-processing
+    result
+  }
+
+  def abstract double[] algorithm(double[] line);
+}
+
+class BisectionSolver extends MinimaSolver
+{
+  override algorithm(double[] line) 
+  {
+    // Compute Minima on line
+    //  - algorithm
+    val x = 5.5;  // simulated result
+    val y = 6.6;  // simulated result
+    #[x, y]
+  }
+}
+
+class NewtonsMethodSolver extends MinimaSolver
+{
+  override algorithm(double[] line) 
+  {
+    // Compute Minima on line
+    //  - algorithm
+    val x = 3.3;  // simulated result
+    val y = 4.4;  // simulated result
+    #[x, y]    
+  }
+}
+
+class LeastSquaresSolver extends MinimaSolver
+{
+  override algorithm(double[] line) 
+  {
+    // Compute Minima on line
+    //  - algorithm
+    val x = 1.1;  // simulated result
+    val y = 2.2;  // simulated result
+    #[x, y]     
+  }</code></pre>
+<h2>MinimaSolverTest</h2>
+<pre><code class="lang-java">package xtemplatemethod
+
+import static org.junit.Assert.*
+import org.junit.Test
+
+class MinimaSolverTest
+{
+  val line = #[ 1.0, 2.0, 1.0, 2.0, -1.0, 3.0, 4.0, 5.0, 4.0 ]
+  var MinimaSolver solver
+
+  @Test
+  def newtonsMetod()
+  {
+    solver = new NewtonsMethodSolver
+    val result = solver.minima(line)
+    assertTrue(result.get(0) == 3.3)
+    assertTrue(result.get(1) == 4.4)
+  }
+
+    @Test
+  def leastSquares()
+  {
+    solver = new LeastSquaresSolver
+    val result = solver.minima(line)
+    assertTrue(result.get(0) == 1.1)
+    assertTrue(result.get(1) == 2.2)
+  }
+  @Test
+  def bisection()
+  {
+    solver = new BisectionSolver
+    val result = solver.minima(line)
+    assertTrue(result.get(0) == 5.5)
+    assertTrue(result.get(1) == 6.6)
+  }
+}</code></pre>
+<p>You may need to manually add &#39;XTend Library&#39; to the project for the above to compile. To do this, select the Project in Package Explorer and then select the context menu. From this menu select &#39;Build Path&#39; and from there locate the &#39;Add Library&#39; dialog. &#39;Xtend Library&#39; will be available here if Xtend is installed correctly.</p>
+<p>Verify that these tests pass..</p>
+<p>If there are no errors, eclipse will have generated a source folder called &#39;xtend-gen&#39; in the project, with a matching set of packages for the xtend sources.. Explore the generated &#39;xtemplatemethod&#39; package, you should see the java version of:</p>
+<ul>
+<li>BisectionSolver</li>
+<li>NewtonsMethodSolver</li>
+<li>LeastSquaresSolver</li>
+<li>MinimaSolver</li>
+<li>MinimaSolverTest</li>
+</ul>
+<p>Have a close look at each of these classes, and note any differences from the xtend versions..</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>XTend Strategy SAM</h1>
+<p>Create a new package called <code>xstrategysam</code> and create the following xtend classes:</p>
+<h2>MinimaSolver</h2>
+<pre><code class="lang-java">package xstrategysam
+
+import java.util.List
+
+public interface FindMinima
+{
+  def List&lt;Double&gt; algorithm(List&lt;Double&gt;line)
+}
+
+class MinimaSolver 
+{
+  private FindMinima findMinima
+
+  new(FindMinima findMinima)
+  {
+    this.findMinima = findMinima
+  }
+
+  def double[] minima(double[] line)
+  {
+    // do some pre-processing
+    val result = findMinima.algorithm(line)
+    // do some post-processing
+    result
+  }
+}</code></pre>
+<h2>Algorithms</h2>
+<pre><code class="lang-java">package xstrategysam
+
+import java.util.List
+
+public class Bisection implements FindMinima
+{
+  override List&lt;Double&gt; algorithm(List&lt;Double&gt;line)
+  {
+    return #[5.5, 6.6]
+  }
+}
+
+public class NewtonsMethod implements FindMinima
+{
+  override List&lt;Double&gt; algorithm(List&lt;Double&gt;line)
+  {
+    return #[3.3, 4.4]
+  }
+}
+
+public class LeastSquares implements FindMinima
+{
+  override List&lt;Double&gt; algorithm(List&lt;Double&gt;line)
+  {
+    return #[1.1, 2.2]
+  }
+}</code></pre>
+<p>Verify that the following tests pass:</p>
+<h3>MinimaSolverTest</h3>
+<pre><code class="lang-java">package xstrategysam
+
+import static org.junit.Assert.*
+import org.junit.Test
+
+class MinimaSolverTest
+{
+  val line          = #[ 1.0, 2.0, 1.0, 2.0, -1.0, 3.0, 4.0, 5.0, 4.0 ]
+  var MinimaSolver solver        
+
+  @Test
+  def leastSquares()
+  { 
+    solver = new MinimaSolver (new LeastSquares)
+    val result = solver.minima(line)
+    assertTrue(result.get(0) == 1.1)
+    assertTrue(result.get(1) == 2.2)
+  }
+
+  @Test
+  def newtonsMethod()
+  {
+   solver = new MinimaSolver (new NewtonsMethod)
+    val result = solver.minima(line)
+    assertTrue(result.get(0) == 3.3)
+    assertTrue(result.get(1) == 4.4)
+  }
+
+  @Test
+  def bisection()
+  {
+    solver = new MinimaSolver (new Bisection)
+    val result = solver.minima(line)
+    assertTrue(result.get(0) == 5.5)
+    assertTrue(result.get(1) == 6.6)
+  }
+}</code></pre>
+<p>Explore the generated java sources for the above xtend classes.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>XTend Strategy</h1>
+<p>Create a new package called <code>xstrategy</code> and create the following xtend classes:</p>
+<h2>MinimaSolver</h2>
+<pre><code class="lang-java">package xstrategy
+
+import java.util.List
+
+class MinimaSolver 
+{
+  public (List&lt;Double&gt;)=&gt;List&lt;Double&gt; findMinima
+
+  new((List&lt;Double&gt;)=&gt;List&lt;Double&gt; findMinima)
+  {
+    this.findMinima = findMinima
+  }
+
+  def List&lt;Double&gt; minima(double[] line)
+  {
+    // do some pre-processing
+    val result = findMinima.apply(line)
+    // do some post-processing
+    result
+  }
+}</code></pre>
+<h2>Algorithms</h2>
+<pre><code class="lang-java">package xstrategy
+
+import java.util.List
+
+class Algorithms 
+{  
+  public val bisection     = [ List&lt;Double&gt; line | 
+                                // Compute Minima on line
+                                //  - algorithm
+                                val x = 5.5  // simulated result
+                                val y = 6.6  // simulated result
+                                #[x, y]    
+                             ]  
+
+  public val newtonsMethod = [ List&lt;Double&gt; line | 
+                                // Compute Minima on line
+                                //  - algorithm
+                                val x = 3.3  // simulated result
+                                val y = 4.4  // simulated result
+                                #[x, y]    
+                             ]  
+
+  public val leastSquares = [ List&lt;Double&gt; line | 
+                                // Compute Minima on line
+                                //  - algorithm
+                                val x = 1.1  // simulated result
+                                val y = 2.2  // simulated result
+                                #[x, y]    
+                             ]     
+}</code></pre>
+<p>Verify that the following tests pass:</p>
+<h3>MinimaSolverTest</h3>
+<pre><code class="lang-java">package xstrategy
+
+import java.util.ArrayList
+import java.util.List
+import org.junit.Test
+import xstrategysam.Bisection
+
+import static org.junit.Assert.*
+
+class MinimaSolverTest
+{
+  val line       = #[ 1.0, 2.0, 1.0, 2.0, -1.0, 3.0, 4.0, 5.0, 4.0 ]
+  val algorithms = new Algorithms
+
+  @Test
+  def newtonsMethod()
+  {
+    var solver = new MinimaSolver (algorithms.newtonsMethod)
+    val result = solver.minima(line)
+    assertTrue(result.get(0) == 3.3)
+    assertTrue(result.get(1) == 4.4)    
+  }
+
+  @Test
+  def leastSquares()
+  { 
+    var solver = new MinimaSolver (algorithms.leastSquares)
+    val result = solver.minima(line)
+    assertTrue(result.get(0) == 1.1)
+    assertTrue(result.get(1) == 2.2)
+  }
+
+  @Test
+  def bisection()
+  {
+    var solver = new MinimaSolver (algorithms.bisection)
+    val result = solver.minima(line)
+    assertTrue(result.get(0) == 5.5)
+    assertTrue(result.get(1) == 6.6)
+  }
+
+  @Test
+  def algorithmList()
+  {
+    var List &lt;(List&lt;Double&gt;)=&gt;List&lt;Double&gt;&gt; list = new ArrayList
+
+    list.add(algorithms.bisection)
+    list.add(algorithms.newtonsMethod)
+    list.add(algorithms.leastSquares)
+
+    for ((List&lt;Double&gt;)=&gt;List&lt;Double&gt; algorithm : list)
+    {
+      algorithm.apply(line)
+    }
+  }
+}</code></pre>
+<p>Explore the generated java sources for the above xtend classes..</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Single Abstract Method</h1>
+<p>SAM optimisation and lambda conversion is an interesting topic in Java 8:</p>
+<ul>
+<li><a href="http://baddotrobot.com/blog/2014/04/07/functional-interfaces-in-java8/">http://baddotrobot.com/blog/2014/04/07/functional-interfaces-in-java8/</a></li>
+</ul>
+<p>Xtend supports this feature - as we can see with a simple experiment. Going back to the xstrategysam package, include this extra test:</p>
+<pre><code class="lang-java">  @Test
+  def SAM()
+  { 
+    val algorithms = new Algorithms()
+
+    solver = new MinimaSolver (algorithms.bisection);
+    val result = solver.minima(line)
+    assertTrue(result.get(0) == 5.5)
+    assertTrue(result.get(1) == 6.6)
+  }</code></pre>
+<p>You will need to import the Algorightms class from the xstrategy package:</p>
+<pre><code>import xstrategy.Algorithms</code></pre>
+<p>This looks innocent, but relfect again on what is happening here:</p>
+<pre><code class="lang-java">    solver = new MinimaSolver (algorithms.bisection);
+    val result = solver.minima(line);</code></pre>
+<p>The solver being used here is this one:</p>
+<pre><code class="lang-java">class MinimaSolver 
+{
+  new()
+  {
+  }
+
+  def double[] minima(double[] line, FindMinima findMinima)
+  {
+    // do some pre-processing
+    val result = findMinima..algorithm(line)
+    // do some post-processing
+    result
+  }
+}</code></pre>
+<p>... which expects an object implementing FindMinima interface. However, we are passing an lambda like this:</p>
+<pre><code class="lang-java">  public val bisection     = [ List&lt;Double&gt; line | 
+                                // Compute Minima on line
+                                //  - algorithm
+                                val x = 5.5  // simulated result
+                                val y = 6.6  // simulated result
+                                #[x, y]    
+                             ]</code></pre>
+<p>which has, in fact, nothing to do with the FindMinima interface:</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Repo for this lab&lt;</h1>
+<ul>
+<li><a href="https://github.com/wit-design-patterns-2016/solver-patterns">https://github.com/wit-design-patterns-2016/solver-patterns</a></li>
+</ul>
+<h1>Exercise 1</h1>
+<p>Examine the following:</p>
+<pre><code class="lang-java">    var List &lt;(List&lt;Double&gt;)=&gt;List&lt;Double&gt;&gt; list = new ArrayList
+
+    list.add(algorithms.bisection)
+    list.add(algorithms.newtonsMethod)
+    list.add(algorithms.leastSquares)</code></pre>
+<p>What is going on in the above fragment?</p>
+<p>Turn this fragment into a unit test - and incorporate into the xtrategy package</p>
+<h1>Exercise 2:</h1>
+<p>Java 8 now also has Lambda Expressions:</p>
+<ul>
+<li><a href="http://radar.oreilly.com/2014/04/whats-new-in-java-8-lambdas.html">http://radar.oreilly.com/2014/04/whats-new-in-java-8-lambdas.html</a></li>
+<li><a href="http://www.lambdafaq.org">http://www.lambdafaq.org</a></li>
+</ul>
+<p>Using the above sources, recode step 05 - the xtend strategy implemented using labmdas - into Java 8.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

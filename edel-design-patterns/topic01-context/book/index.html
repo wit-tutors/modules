@@ -1,0 +1,636 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Design Pattens Context
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-01">
+      Lab-01
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="active item" href="../../topic01-context/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-template-method-strategy/book-template-method-strategy/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-command/book-a-command/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-prototype/book-a-prototype/index.html">
+          lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-gof-patterns/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-adapter-singleton-memento/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-enterprise-patterns-1/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-architecture/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-enterprise-patterns-2/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-half-sync/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-microservices/book-a/index.html">
+          Lab-11-A
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-microservices/book-b/index.html">
+          Lab-11-B
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-xtend/book-a/index.html">
+          Lab-12-A
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-xtend/book-b/index.html">
+          Lab-12-B
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-xtend/book-c/index.html">
+          Lab-12-C
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic13-swift/book/index.html">
+          SwiftToDoLab
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-01">
+        <h1>Objectives</h1>
+<p>Prepare an suitable version of Eclipse for the forthcoming labs. Download and become familiar with the pacemaker-console project. Explore the Strategy pattern in this context.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Tools</h1>
+<p>Download and install the following:</p>
+<h2>Xtend:</h2>
+<p>Download the latest <code>Eclipse for DSL Developers</code></p>
+<ul>
+<li><a href="http://www.eclipse.org/downloads/packages/eclipse-ide-java-and-dsl-developers/mars1">http://www.eclipse.org/downloads/packages/eclipse-ide-java-and-dsl-developers/mars1</a></li>
+</ul>
+<h2>Play Framework:</h2>
+<p>From this site:</p>
+<ul>
+<li><a href="http://www.playframework.com/">http://www.playframework.com/</a></li>
+</ul>
+<p>in particular this download page:</p>
+<ul>
+<li><a href="https://www.playframework.com/download#older-versions">https://www.playframework.com/download#older-versions</a></li>
+</ul>
+<p>... and Download and install the latest non-activator version of the Play framework (currently 2.2.6)</p>
+<h2>Android</h2>
+<p>From this site:</p>
+<ul>
+<li><a href="http://tools.android.com/download/studio/builds/2-0-preview">http://tools.android.com/download/studio/builds/2-0-preview</a></li>
+</ul>
+<p>Download an install the latest Android Studio 2 build.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Pacemaker</h1>
+<p>Download and import this project into your eclipse workspace:</p>
+<ul>
+<li><a href="./archives/pacemaker-console-lab01.zip">pacemaker-console-lab01.zip</a></li>
+</ul>
+<p>This is a java version of the pacemaker project you may be familiar with.</p>
+<p>The valid commands are documented here:</p>
+<ul>
+<li><a href="./archives/pacemaker-console.pdf">pacemaker-console.pdf</a></li>
+</ul>
+<p>In addition the above commands, entering &#39;!la&#39; will list all of the commands:</p>
+<pre><code>!la
+
+abbrev    name    params
+!el    !enable-logging    (fileName)
+!dl    !disable-logging    ()
+!rs    !run-script    (filename)
+!gle    !get-last-exception    ()
+!sdt    !set-display-time    (do-display-time)
+?l    ?list    (startsWith)
+?l    ?list    ()
+?h    ?help    (command-name)
+?h    ?help    ()
+?la    ?list-all    ()
+?ghh    ?generate-HTML-help    (file-name, include-prefixed)
+l    load    ()
+s    store    ()
+lu    list-users    ()
+cu    create-user    (first name, last name, email, password)
+lu    list-user    (email)
+lius    list-user    (id)
+la    list-activities    (user id)
+du    delete-user    (id)
+aa    add-activity    (user-id, type, location, distance, datetime, duration)
+al    add-location    (activity-id, latitude, longitude)
+pm&gt;</code></pre>
+<p>and the <code>!rs</code> command will run a specific script. So, if we have a script like this is <code>test.script</code>:</p>
+<pre><code>cu homer simpsom homer@simpson.com secret
+cu marge simpson marge@simpson.com secret
+aa 1 walk  fridge .001  &quot;11:12:2013 11:20:00&quot; 01:20:12
+aa 1 walk  bar     1.0  &quot;13:12:2013 02:20:00&quot; 00:00:00
+aa 1 run   work    2.2  &quot;14:12:2013 03:20:00&quot; 01:10:00
+aa 2 walk  shop    2.5  &quot;15:12:2013 10:20:00&quot; 02:03:00
+aa 2 cycle shop    4.5  &quot;16:12:2013 08:20:00&quot; 03:03:00
+al 3 23.3 32.3
+al 3 23.3 32.5
+al 3 23.3 32.6</code></pre>
+<p>and we execute:</p>
+<pre><code>!rs test.script</code></pre>
+<p>then the above users/activities/locations will be added.</p>
+<p>If you then enter:</p>
+<pre><code>save</code></pre>
+<p>.. and refresh the eclipse workspace, it should reveal &#39;datastore.xml&#39; containing the above entries.</p>
+<p>If reatart the program and enter </p>
+<pre><code>load</code></pre>
+<p>it should restore the entries. Experiment with this now until you are happy it functions as expected.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>XMLSerializer</h1>
+<p>The serialization has been centralised into this class:</p>
+<pre><code>public class XMLSerializer
+{
+  private Deque&lt;Object&gt; stack = new ArrayDeque&lt;&gt;();
+  private File file;
+
+  public XMLSerializer(String filename)
+  {
+    this.file = new File(filename + &quot;.xml&quot;);
+  }
+
+  public void push(Object o)
+  {
+    stack.push(o);
+  }
+
+  public Object pop()
+  {
+    return stack.pop(); 
+  }
+
+  @SuppressWarnings(&quot;unchecked&quot;)
+  public void read() throws Exception
+  {
+    ObjectInputStream is = null;
+
+    try
+    {
+      XStream xstream = new XStream(new DomDriver());
+      is = xstream.createObjectInputStream(new FileReader(file));
+      stack = ( Deque&lt;Object&gt;) is.readObject();
+    }
+    finally
+    {
+      if (is != null)
+      {
+        is.close();
+      }
+    }
+  }
+
+  public void write() throws Exception
+  {
+    ObjectOutputStream os = null;
+
+    try
+    {
+      XStream xstream = new XStream(new DomDriver());
+      os = xstream.createObjectOutputStream(new FileWriter(file));
+      os.writeObject(stack);
+    }
+    finally
+    {
+      if (os != null)
+      {
+        os.close();
+      }
+    }
+  }
+}</code></pre>
+<p>This is engaged by the PacemakerAPI load/store methods:</p>
+<pre><code>  @SuppressWarnings(&quot;unchecked&quot;)
+  public void load() throws Exception
+  {
+    serializer.read();
+    activityIndex = (Long) serializer.pop();
+    userIndex     = (Long) serializer.pop();
+    activityMap   = (Map&lt;Long, Activity&gt;) serializer.pop();
+    userEmailMap  = (Map&lt;String, User&gt;) serializer.pop();
+    userMap       = (Map&lt;Long, User&gt;) serializer.pop();
+    users         = userMap.values();
+  }
+
+  public void store() throws Exception
+  {
+    serializer.push(userMap);
+    serializer.push(userEmailMap);
+    serializer.push(activityMap);
+    serializer.push(userIndex);
+    serializer.push(activityIndex);
+    serializer.write();
+  }</code></pre>
+<p>Which are in turn invoked from PacemakerShell:</p>
+<pre><code>  @Command(description=&quot;Load activities persistent store&quot;)
+  public void load () throws Exception
+  {
+    paceApi.load();
+  }
+
+  @Command(description=&quot;Store activities persistent store&quot;)
+  public void store () throws Exception
+  {
+    paceApi.store();
+  }</code></pre>
+<p>Make sure you understand the above mechanisms. Perhaps debug into the running program and inspect the program state as you go.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Change File Format Command</h1>
+<p>We would like to support a new command - <code>cff</code> - short for change file format. This command is to permit xml or json serialisation format.</p>
+<p>To save in xml format:</p>
+<pre><code>cff xml
+save</code></pre>
+<p>to save in json:</p>
+<pre><code>cff json
+save</code></pre>
+<p>to load from either:</p>
+<pre><code>cff json
+load</code></pre>
+<pre><code>cff xml
+load</code></pre>
+<p>This is the implementation of the command in the shell class:</p>
+<pre><code class="lang-java">  @Command(description=&quot;Set file format&quot;)
+  public void changeFileFormat (@Param(name=&quot;file format: xml, json&quot;) String fileFormat)
+  {
+    if (fileFormat.equals(&quot;xml&quot;))
+      paceApi.serializer = xmlSerializer;
+    else if (fileFormat.equals(&quot;json&quot;))
+      paceApi.serializer = jsonSerializer; 
+  }</code></pre>
+<p>Notice that we now have 2 seralizers - one for XML and one for JSON.</p>
+<p>Here is an implementation of a JSON serializer :</p>
+<pre><code class="lang-java">package utils;
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.Deque;
+import java.util.ArrayDeque;
+
+
+public class JSONSerializer
+{
+  private Deque&lt;Object&gt; stack = new ArrayDeque&lt;&gt;();
+  private File file;
+
+  public JSONSerializer (String filename)
+  {
+    this.file = new File(filename + &quot;.json&quot;);
+  }
+
+  @Override
+  public void push(Object o)
+  {
+    stack.push(o);
+  }
+
+  @Override
+  public Object pop()
+  {
+    return stack.pop();
+  }
+
+  @SuppressWarnings(&quot;unchecked&quot;)
+  @Override
+  public void read() throws Exception
+  {
+    ObjectInputStream is = null;
+
+    try
+    {
+      XStream xstream = new XStream(new JettisonMappedXmlDriver());
+      is = xstream.createObjectInputStream(new FileReader(file));
+      stack = ( Deque&lt;Object&gt;) is.readObject();
+    }
+    finally
+    {
+      if (is != null)
+      {
+        is.close();
+      }
+    }
+  }
+
+  public void write() throws Exception
+  {
+    ObjectOutputStream os = null;
+
+    try
+    {
+      XStream xstream = new XStream(new JettisonMappedXmlDriver());
+      os = xstream.createObjectOutputStream(new FileWriter(file));
+      os.writeObject(stack);
+    }
+    finally
+    {
+      if (os != null)
+      {
+        os.close();
+      }
+    }
+  }
+}</code></pre>
+<p>Incorporate this class + the above command into your project.</p>
+<p>It will have errors (see next step)</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Strategy</h1>
+<p>See if you can complete the implementation such that the <code>cff</code> command works as expected.</p>
+<p>This will require:</p>
+<ul>
+<li>a Serializer interface</li>
+<li>this interface is to be implemented by XMLSerializer &amp; JSONSerializer</li>
+<li>refactor Pacemaker API to use this interface instead of the concrete classes</li>
+</ul>
+<p>The overall effect should be to keep knowledge of the specific serializer away from the PacemanerAPI class.</p>
+<p>The solution is presented in the next step.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<h2>Solution:</h2>
+<p>This is a solution:</p>
+<ul>
+<li><a href="https://github.com/wit-design-patterns-2016/pacemaker-console/commits/master">https://github.com/wit-design-patterns-2016/pacemaker-console/commits/master</a></li>
+</ul>
+<p>These three commits encapsulate the application of the pattern:</p>
+<ul>
+<li><a href="https://github.com/wit-design-patterns-2016/pacemaker-console/commit/aa968dd94fb6332ac9aa71c4055bed5ae082e210">https://github.com/wit-design-patterns-2016/pacemaker-console/commit/aa968dd94fb6332ac9aa71c4055bed5ae082e210</a></li>
+<li><a href="https://github.com/wit-design-patterns-2016/pacemaker-console/commit/0357413d3fd8a203b9d23bc3dad61a4967df54b8">https://github.com/wit-design-patterns-2016/pacemaker-console/commit/0357413d3fd8a203b9d23bc3dad61a4967df54b8</a></li>
+<li><a href="https://github.com/wit-design-patterns-2016/pacemaker-console/commit/da81a3b9ebc741cd99c7b106e86bb05840af2c93">https://github.com/wit-design-patterns-2016/pacemaker-console/commit/da81a3b9ebc741cd99c7b106e86bb05840af2c93</a></li>
+</ul>
+<p>Verify that this is equivalent to your solution.</p>
+<h2>Exercise:</h2>
+<p>Consider introducing a new serializer to support the YAML file format:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/YAML">http://en.wikipedia.org/wiki/YAML</a></li>
+</ul>
+<p>This is a prominent java YAML library:</p>
+<ul>
+<li><a href="http://www.snakeyaml.org">http://www.snakeyaml.org</a></li>
+</ul>
+<p>Here is a version of a <code>write</code> method that will serialize our stack data structure:</p>
+<pre><code class="lang-java">  public void write() throws Exception
+  {
+    Yaml yaml = new Yaml();
+    FileWriter writer = new FileWriter(file);
+    for (Object o : stack)
+    {
+      yaml.dump (stack.pop(), writer);
+    }
+    writer.close();
+  }</code></pre>
+<p>Try this out and explore the generated output.</p>
+<p>Is it possible to seamlessly integrate this into pacemaker as another serializer?</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

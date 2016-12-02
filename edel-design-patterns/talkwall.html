@@ -1,0 +1,1777 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Design Patterns</h2>
+    <p> All Slides in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic00-catalogues/talk-1/rc008-designpatterns_online.pdf">
+      DZone Reference Card
+    </a>
+    
+    <a class="item" href="topic00-catalogues/talk-2/designpatternscard.pdf">
+      GOF Reference Card
+    </a>
+    
+    <a class="item" href="topic00-catalogues/talk-3/holub_design_patterns.pdf">
+      Holub Catalogue
+    </a>
+    
+    <a class="item" href="topic00-catalogues/talk-4/GoF_DesignPatterns_Java_UML.pdf">
+      Logical Catalogiue
+    </a>
+    
+    <a class="item" href="topic01-context/talk-a-introduction/introduction.pdf">
+      Introduction
+    </a>
+    
+    <a class="item" href="topic01-context/talk-b-context/context.pdf">
+      Context
+    </a>
+    
+    <a class="item" href="topic01-context/talk-c-languages/languages.pdf">
+      Programming Languages
+    </a>
+    
+    <a class="item" href="topic01-context/talk-e-patterns-case-study/patterns-case-study.pdf">
+      Patterns Case Study
+    </a>
+    
+    <a class="item" href="topic02-template-method-strategy/talk-1-template-method/template-method.pdf">
+      Template Method
+    </a>
+    
+    <a class="item" href="topic02-template-method-strategy/talk-2-strategy/strategy.pdf">
+      Strategy
+    </a>
+    
+    <a class="item" href="topic02-template-method-strategy/talk-3-solver/solver.pdf">
+      Solver
+    </a>
+    
+    <a class="item" href="topic02-template-method-strategy/talk-4-xtend/xtend.pdf">
+      XTend
+    </a>
+    
+    <a class="item" href="topic02-template-method-strategy/talk-5-xtend-solver/xtend-solver.pdf">
+      Lambda Solver
+    </a>
+    
+    <a class="item" href="topic03-command/talk-1-command/command.pdf">
+      Command
+    </a>
+    
+    <a class="item" href="topic03-command/talk-2-pacemaker-structure/pacemaker-structure.pdf">
+      Pacemaker Structure
+    </a>
+    
+    <a class="item" href="topic03-command/talk-3-pacemaker-cliche/pacemaker-cliche.pdf">
+      Pacemaker Cliche
+    </a>
+    
+    <a class="item" href="topic03-command/talk-4-pacemaker-command/pacemaker-command.pdf">
+      Pacemaker Command
+    </a>
+    
+    <a class="item" href="topic03-command/talk-5-pacemaker-undo/pacemaker-undo.pdf">
+      Pacemaker Undo
+    </a>
+    
+    <a class="item" href="topic03-command/talk-6-undo-redo-challenges/undo-redo-challenges.pdf">
+      Undo / Redo Challenges
+    </a>
+    
+    <a class="item" href="topic03-command/talk-7-b-prototype/prototype.pdf">
+      Prototype
+    </a>
+    
+    <a class="item" href="topic03-command/talk-8-pacemaker-prototype/pacemaker-prototype.pdf">
+      Pacemaker Prototype
+    </a>
+    
+    <a class="item" href="topic04-prototype/talk-1-undo-redo-challenges/undo-redo-challenges.pdf">
+      Undo / Redo Challenges
+    </a>
+    
+    <a class="item" href="topic04-prototype/talk-2-b-prototype/prototype.pdf">
+      Prototype
+    </a>
+    
+    <a class="item" href="topic04-prototype/talk-3-pacemaker-prototype/pacemaker-prototype.pdf">
+      Pacemaker Prototype
+    </a>
+    
+    <a class="item" href="topic04-prototype/talk-4-door-light-camera-example/door-light-camera-example.pdf">
+      Door/Light/Camera Example
+    </a>
+    
+    <a class="item" href="topic04-prototype/talk-5-observer/observer.pdf">
+      Observer
+    </a>
+    
+    <a class="item" href="topic04-prototype/talk-6-catalogues/catalogues.pdf">
+      Pattern Catalogues
+    </a>
+    
+    <a class="item" href="topic05-gof-patterns/talk-1-pattern-happy/pattern-happy.pdf">
+      Pattern Happy
+    </a>
+    
+    <a class="item" href="topic05-gof-patterns/talk-2-background/background.pdf">
+      Background
+    </a>
+    
+    <a class="item" href="topic05-gof-patterns/talk-3-principles/principles.pdf">
+      Principles
+    </a>
+    
+    <a class="item" href="topic05-gof-patterns/talk-4-categories/categories.pdf">
+      Categories
+    </a>
+    
+    <a class="item" href="topic05-gof-patterns/talk-5-selection/selection.pdf">
+      Selection
+    </a>
+    
+    <a class="item" href="topic05-gof-patterns/talk-6-catalogues/catalogues.pdf">
+      Catalogues
+    </a>
+    
+    <a class="item" href="topic06-adapter-singleton-memento/talk-1-adapter/adapter.pdf">
+      Adapter
+    </a>
+    
+    <a class="item" href="topic06-adapter-singleton-memento/talk-2-singleton/singleton.pdf">
+      Singleton
+    </a>
+    
+    <a class="item" href="topic06-adapter-singleton-memento/talk-3-memento/memento.pdf">
+      Memento
+    </a>
+    
+    <a class="item" href="topic06-adapter-singleton-memento/talk-4-gui-patterns/gui-patterns.pdf">
+      GUI Patterns
+    </a>
+    
+    <a class="item" href="topic06-adapter-singleton-memento/talk-5-pacemaker-android-patterns/pacemaker-android-patterns.pdf">
+      Pacemaker Android Patterns
+    </a>
+    
+    <a class="item" href="topic06-adapter-singleton-memento/talk-6-gui-synchronisation/gui-synchronsisation.pdf">
+      GUI Synchronsiation
+    </a>
+    
+    <a class="item" href="topic07-enterprise-patterns-1/talk-1-further-gui-patterns/further-gui-patterns.pdf">
+      Further GUI Patterns
+    </a>
+    
+    <a class="item" href="topic07-enterprise-patterns-1/talk-2-enterprise-characteristics/enterprise-characteristics.pdf">
+      Enterprise Characteristics
+    </a>
+    
+    <a class="item" href="topic07-enterprise-patterns-1/talk-3-enterprise-patterns/enterprise-patterns.pdf">
+      Enterprise Patterns
+    </a>
+    
+    <a class="item" href="topic07-enterprise-patterns-1/talk-4-pacemaker-play/pacemaker-play.pdf">
+      Pacemaker Play
+    </a>
+    
+    <a class="item" href="topic07-enterprise-patterns-1/talk-5-play-framework/play-framework.pdf">
+      Play Framework
+    </a>
+    
+    <a class="item" href="topic07-enterprise-patterns-1/talk-6-pacemaker-ux/pacemaker-ux.pdf">
+      Pacemaker UX
+    </a>
+    
+    <a class="item" href="topic07-enterprise-patterns-1/talk-7-assignment/assignment.pdf">
+      Assignment
+    </a>
+    
+    <a class="item" href="topic08-architecture/talk-1-structure101/error: missing pdf">
+      error: missing pdf
+    </a>
+    
+    <a class="item" href="topic09-enterprise-patterns-2/talk-1-enterprise-performance/enterprise-performance.pdf">
+      Enterprise Performance
+    </a>
+    
+    <a class="item" href="topic09-enterprise-patterns-2/talk-2-layering/layering.pdf">
+      Layering
+    </a>
+    
+    <a class="item" href="topic09-enterprise-patterns-2/talk-3-domain-logic/domain-logic.pdf">
+      Domain Logic
+    </a>
+    
+    <a class="item" href="topic09-enterprise-patterns-2/talk-4-data-source/data-source.pdf">
+      Data Source
+    </a>
+    
+    <a class="item" href="topic09-enterprise-patterns-2/talk-5-web-presentation/e-web-presentation.pdf">
+      Web Presentation
+    </a>
+    
+    <a class="item" href="topic09-enterprise-patterns-2/talk-6-assignment-update/assignment-update.pdf">
+      Assignment Update
+    </a>
+    
+    <a class="item" href="topic10-half-sync/talk-1-pacemaker-v3/pacemaker-v3.pdf">
+      Pacemaker V3
+    </a>
+    
+    <a class="item" href="topic10-half-sync/talk-2-threads/threads.pdf">
+      Threads
+    </a>
+    
+    <a class="item" href="topic10-half-sync/talk-3-android-threads/android-threads.pdf">
+      Android Threads
+    </a>
+    
+    <a class="item" href="topic10-half-sync/talk-4-d-POSA4-half-sync-half-async/POSA4-half-sync-half-async.pdf">
+      POSA Half Sync / Half Async
+    </a>
+    
+    <a class="item" href="topic10-half-sync/talk-5-pacemaker-v4/pacemaker-v4.pdf">
+      Pacemaker v4
+    </a>
+    
+    <a class="item" href="topic10-half-sync/talk-6-mediator/mediator.pdf">
+      Mediator
+    </a>
+    
+    <a class="item" href="topic11-microservices/talk-1-javascript/javascript.pdf">
+      Javascript
+    </a>
+    
+    <a class="item" href="topic11-microservices/talk-2-Intro-to-mean-stack/Intro-to-mean-stack.pdf">
+      Mean Stack
+    </a>
+    
+    <a class="item" href="topic11-microservices/talk-3-microservices-pattern/microservices-pattern.pdf">
+      Microservice Patterns
+    </a>
+    
+    <a class="item" href="topic11-microservices/talk-4-kafkaesque-microbial/kafkaesque-microbial.pdf">
+      Kafaesque Microbial
+    </a>
+    
+    <a class="item" href="topic12-xtend/talk-1-yamba/yamba.pdf">
+      Yamba
+    </a>
+    
+    <a class="item" href="topic12-xtend/talk-2-xtend-android-app/xtend-android-app.pdf">
+      Xtend Android
+    </a>
+    
+    <a class="item" href="topic12-xtend/talk-3-services/services.pdf">
+      Services
+    </a>
+    
+    <a class="item" href="topic12-xtend/talk-4-command/command.pdf">
+      Command
+    </a>
+    
+    <a class="item" href="topic12-xtend/talk-5-broadcast-recievers/broadcast-recievers.pdf">
+      Broadcast Receivers
+    </a>
+    
+    <a class="item" href="topic12-xtend/talk-6-mediator/mediator.pdf">
+      Mediator
+    </a>
+    
+    <a class="item" href="topic12-xtend/talk-7-composite/composite.pdf">
+      Composite
+    </a>
+    
+    <a class="item" href="topic12-xtend/talk-8-bridge/bridge.pdf">
+      Bridge
+    </a>
+    
+    <a class="item" href="topic13-swift/talk-1-swift-context/swift-context.pdf">
+      Swift Context
+    </a>
+    
+    <a class="item" href="topic13-swift/talk-2-todolist/todolist.pdf">
+      Todo List
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic00-catalogues/talk-1/rc008-designpatterns_online.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> DZone Reference Card </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic00-catalogues/talk-1/rc008-designpatterns_online.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic00-catalogues/talk-2/designpatternscard.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> GOF Reference Card </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic00-catalogues/talk-2/designpatternscard.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic00-catalogues/talk-3/holub_design_patterns.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Holub Catalogue </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic00-catalogues/talk-3/holub_design_patterns.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic00-catalogues/talk-4/GoF_DesignPatterns_Java_UML.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Logical Catalogiue </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic00-catalogues/talk-4/GoF_DesignPatterns_Java_UML.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01-context/talk-a-introduction/introduction.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Introduction </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01-context/talk-a-introduction/introduction.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>An introduction to the module and its assessment mechanisms. Also, the key sources for general context.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01-context/talk-b-context/context.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Context </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01-context/talk-b-context/context.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Position patterns in a continuum of Software Engineering knowledge. Explore contrasting definitions of patterns and introduce a definition of patterns appropriate to this module.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01-context/talk-c-languages/languages.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Programming Languages </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01-context/talk-c-languages/languages.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Look at programming languages form a number of alternative perspectives. Explore, in particular, how languages approach typing and how we can categorize them according to a typing spectrum.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01-context/talk-e-patterns-case-study/patterns-case-study.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Patterns Case Study </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01-context/talk-e-patterns-case-study/patterns-case-study.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Plunge into patterns by looking at an example problem/solution. Attempt to characterize the nature of a pattern in concrete terms.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-template-method-strategy/talk-1-template-method/template-method.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Template Method </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-template-method-strategy/talk-1-template-method/template-method.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Create an abstract class that implements a procedure using abstract methods. These abstract methods must be implemented in derived classes to actually perform each step of the procedure.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-template-method-strategy/talk-2-strategy/strategy.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Strategy </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-template-method-strategy/talk-2-strategy/strategy.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Have the class that uses the algorithm contain a reference to an interface (or abstract class) that has a method specifying a specific algorithm. Each implementation of the interface (or derived class) implements the algorithm as appropriate.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-template-method-strategy/talk-3-solver/solver.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Solver </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-template-method-strategy/talk-3-solver/solver.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Review the Template Method and Strategy Patterns in the context of a simple problem.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-template-method-strategy/talk-4-xtend/xtend.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> XTend </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-template-method-strategy/talk-4-xtend/xtend.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Xtend is a good representative of a language exhibiting more modern approach to typing. We review it here and discuss its main features.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-template-method-strategy/talk-5-xtend-solver/xtend-solver.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Lambda Solver </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-template-method-strategy/talk-5-xtend-solver/xtend-solver.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Explore the same problem in Xtend. In particular, review how the Xtend &#39;lambdas&#39; mechanism can simplify the solution significantly.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-command/talk-1-command/command.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Command </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-command/talk-1-command/command.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Encapsulate a request as an object facilitating the parameterization of clients with different requests, queuing requests and the potential support undoable operations.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-command/talk-2-pacemaker-structure/pacemaker-structure.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker Structure </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-command/talk-2-pacemaker-structure/pacemaker-structure.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Pacemaker reimplemented to incorporate the command pattern. This version is more sophisticated than the previous version - we model it here to get a general understanding of its structure.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-command/talk-3-pacemaker-cliche/pacemaker-cliche.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker Cliche </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-command/talk-3-pacemaker-cliche/pacemaker-cliche.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-command/talk-4-pacemaker-command/pacemaker-command.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker Command </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-command/talk-4-pacemaker-command/pacemaker-command.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-command/talk-5-pacemaker-undo/pacemaker-undo.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker Undo </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-command/talk-5-pacemaker-undo/pacemaker-undo.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-command/talk-6-undo-redo-challenges/undo-redo-challenges.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Undo / Redo Challenges </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-command/talk-6-undo-redo-challenges/undo-redo-challenges.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-command/talk-7-b-prototype/prototype.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Prototype </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-command/talk-7-b-prototype/prototype.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-command/talk-8-pacemaker-prototype/pacemaker-prototype.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker Prototype </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-command/talk-8-pacemaker-prototype/pacemaker-prototype.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-prototype/talk-1-undo-redo-challenges/undo-redo-challenges.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Undo / Redo Challenges </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-prototype/talk-1-undo-redo-challenges/undo-redo-challenges.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-prototype/talk-2-b-prototype/prototype.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Prototype </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-prototype/talk-2-b-prototype/prototype.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-prototype/talk-3-pacemaker-prototype/pacemaker-prototype.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker Prototype </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-prototype/talk-3-pacemaker-prototype/pacemaker-prototype.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-prototype/talk-4-door-light-camera-example/door-light-camera-example.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Door/Light/Camera Example </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-prototype/talk-4-door-light-camera-example/door-light-camera-example.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-prototype/talk-5-observer/observer.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Observer </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-prototype/talk-5-observer/observer.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-prototype/talk-6-catalogues/catalogues.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pattern Catalogues </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-prototype/talk-6-catalogues/catalogues.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-gof-patterns/talk-1-pattern-happy/pattern-happy.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pattern Happy </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-gof-patterns/talk-1-pattern-happy/pattern-happy.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-gof-patterns/talk-2-background/background.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Background </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-gof-patterns/talk-2-background/background.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-gof-patterns/talk-3-principles/principles.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Principles </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-gof-patterns/talk-3-principles/principles.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-gof-patterns/talk-4-categories/categories.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Categories </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-gof-patterns/talk-4-categories/categories.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-gof-patterns/talk-5-selection/selection.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Selection </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-gof-patterns/talk-5-selection/selection.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-gof-patterns/talk-6-catalogues/catalogues.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Catalogues </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-gof-patterns/talk-6-catalogues/catalogues.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-adapter-singleton-memento/talk-1-adapter/adapter.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Adapter </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-adapter-singleton-memento/talk-1-adapter/adapter.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-adapter-singleton-memento/talk-2-singleton/singleton.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Singleton </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-adapter-singleton-memento/talk-2-singleton/singleton.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-adapter-singleton-memento/talk-3-memento/memento.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Memento </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-adapter-singleton-memento/talk-3-memento/memento.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-adapter-singleton-memento/talk-4-gui-patterns/gui-patterns.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> GUI Patterns </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-adapter-singleton-memento/talk-4-gui-patterns/gui-patterns.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-adapter-singleton-memento/talk-5-pacemaker-android-patterns/pacemaker-android-patterns.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker Android Patterns </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-adapter-singleton-memento/talk-5-pacemaker-android-patterns/pacemaker-android-patterns.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-adapter-singleton-memento/talk-6-gui-synchronisation/gui-synchronsisation.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> GUI Synchronsiation </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-adapter-singleton-memento/talk-6-gui-synchronisation/gui-synchronsisation.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-enterprise-patterns-1/talk-1-further-gui-patterns/further-gui-patterns.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Further GUI Patterns </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-enterprise-patterns-1/talk-1-further-gui-patterns/further-gui-patterns.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-enterprise-patterns-1/talk-2-enterprise-characteristics/enterprise-characteristics.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Enterprise Characteristics </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-enterprise-patterns-1/talk-2-enterprise-characteristics/enterprise-characteristics.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-enterprise-patterns-1/talk-3-enterprise-patterns/enterprise-patterns.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Enterprise Patterns </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-enterprise-patterns-1/talk-3-enterprise-patterns/enterprise-patterns.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-enterprise-patterns-1/talk-4-pacemaker-play/pacemaker-play.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker Play </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-enterprise-patterns-1/talk-4-pacemaker-play/pacemaker-play.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-enterprise-patterns-1/talk-5-play-framework/play-framework.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Play Framework </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-enterprise-patterns-1/talk-5-play-framework/play-framework.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-enterprise-patterns-1/talk-6-pacemaker-ux/pacemaker-ux.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker UX </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-enterprise-patterns-1/talk-6-pacemaker-ux/pacemaker-ux.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-enterprise-patterns-1/talk-7-assignment/assignment.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Assignment </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-enterprise-patterns-1/talk-7-assignment/assignment.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08-architecture/talk-1-structure101/error: missing pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="file large icon"></i></div>
+        <div class="header"> error: missing pdf </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08-architecture/talk-1-structure101/null">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-enterprise-patterns-2/talk-1-enterprise-performance/enterprise-performance.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Enterprise Performance </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-enterprise-patterns-2/talk-1-enterprise-performance/enterprise-performance.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-enterprise-patterns-2/talk-2-layering/layering.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Layering </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-enterprise-patterns-2/talk-2-layering/layering.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-enterprise-patterns-2/talk-3-domain-logic/domain-logic.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Domain Logic </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-enterprise-patterns-2/talk-3-domain-logic/domain-logic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-enterprise-patterns-2/talk-4-data-source/data-source.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Data Source </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-enterprise-patterns-2/talk-4-data-source/data-source.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-enterprise-patterns-2/talk-5-web-presentation/e-web-presentation.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Web Presentation </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-enterprise-patterns-2/talk-5-web-presentation/e-web-presentation.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-enterprise-patterns-2/talk-6-assignment-update/assignment-update.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Assignment Update </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-enterprise-patterns-2/talk-6-assignment-update/assignment-update.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-half-sync/talk-1-pacemaker-v3/pacemaker-v3.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker V3 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-half-sync/talk-1-pacemaker-v3/pacemaker-v3.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-half-sync/talk-2-threads/threads.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Threads </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-half-sync/talk-2-threads/threads.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-half-sync/talk-3-android-threads/android-threads.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Android Threads </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-half-sync/talk-3-android-threads/android-threads.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-half-sync/talk-4-d-POSA4-half-sync-half-async/POSA4-half-sync-half-async.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> POSA Half Sync / Half Async </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-half-sync/talk-4-d-POSA4-half-sync-half-async/POSA4-half-sync-half-async.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-half-sync/talk-5-pacemaker-v4/pacemaker-v4.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker v4 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-half-sync/talk-5-pacemaker-v4/pacemaker-v4.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-half-sync/talk-6-mediator/mediator.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Mediator </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-half-sync/talk-6-mediator/mediator.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-microservices/talk-1-javascript/javascript.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Javascript </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-microservices/talk-1-javascript/javascript.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-microservices/talk-2-Intro-to-mean-stack/Intro-to-mean-stack.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Mean Stack </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-microservices/talk-2-Intro-to-mean-stack/Intro-to-mean-stack.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-microservices/talk-3-microservices-pattern/microservices-pattern.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Microservice Patterns </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-microservices/talk-3-microservices-pattern/microservices-pattern.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-microservices/talk-4-kafkaesque-microbial/kafkaesque-microbial.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Kafaesque Microbial </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-microservices/talk-4-kafkaesque-microbial/kafkaesque-microbial.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12-xtend/talk-1-yamba/yamba.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Yamba </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12-xtend/talk-1-yamba/yamba.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12-xtend/talk-2-xtend-android-app/xtend-android-app.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Xtend Android </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12-xtend/talk-2-xtend-android-app/xtend-android-app.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12-xtend/talk-3-services/services.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Services </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12-xtend/talk-3-services/services.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12-xtend/talk-4-command/command.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Command </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12-xtend/talk-4-command/command.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12-xtend/talk-5-broadcast-recievers/broadcast-recievers.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Broadcast Receivers </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12-xtend/talk-5-broadcast-recievers/broadcast-recievers.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12-xtend/talk-6-mediator/mediator.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Mediator </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12-xtend/talk-6-mediator/mediator.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12-xtend/talk-7-composite/composite.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Composite </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12-xtend/talk-7-composite/composite.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12-xtend/talk-8-bridge/bridge.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Bridge </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12-xtend/talk-8-bridge/bridge.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic13-swift/talk-1-swift-context/swift-context.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Swift Context </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic13-swift/talk-1-swift-context/swift-context.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic13-swift/talk-2-todolist/todolist.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Todo List </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic13-swift/talk-2-todolist/todolist.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

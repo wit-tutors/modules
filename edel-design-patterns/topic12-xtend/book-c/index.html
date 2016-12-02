@@ -1,0 +1,717 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Xtend Android
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-12-C">
+      Lab-12-C
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-context/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-template-method-strategy/book-template-method-strategy/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-command/book-a-command/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-prototype/book-a-prototype/index.html">
+          lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-gof-patterns/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-adapter-singleton-memento/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-enterprise-patterns-1/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-architecture/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-enterprise-patterns-2/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-half-sync/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-microservices/book-a/index.html">
+          Lab-11-A
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-microservices/book-b/index.html">
+          Lab-11-B
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-xtend/book-a/index.html">
+          Lab-12-A
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-xtend/book-b/index.html">
+          Lab-12-B
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic12-xtend/book-c/index.html">
+          Lab-12-C
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic13-swift/book/index.html">
+          SwiftToDoLab
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-12-C">
+        <h1>Objectives</h1>
+<p>Incorporate Broadcast Event Senders/Receivers into the application. Use BootReciever to recieve boot event to start application service on launch. Use NetworkReveicer to stop/start service when network is starting/stopping. Use Broadcast Events for status updates from background service to TimelineActivity</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>BroadcastReciever - Boot</h1>
+<p>Introduce this class to receive bootloader events:</p>
+<h2>YambaApplication.xtend</h2>
+<pre><code class="lang-java">class BootReceiver extends BroadcastReceiver
+{
+  override onReceive(Context context, Intent intent) 
+  {
+    context.startService(new Intent(context, typeof(UpdaterService)))
+  }
+}</code></pre>
+<p>This will start the updater service when the device boots. It requires this permission in the manifest:</p>
+<h2>AndroidManifest</h2>
+<pre><code>    &lt;uses-permission android:name=&quot;android.permission.RECEIVE_BOOT_COMPLETED&quot; /&gt;</code></pre>
+<pre><code>      &lt;receiver android:name=&quot;com.marakana.yambax.BootReceiver&quot;&gt;
+        &lt;intent-filter&gt;
+          &lt;action android:name=&quot;android.intent.action.BOOT_COMPLETED&quot; /&gt;
+        &lt;/intent-filter&gt; 
+      &lt;/receiver&gt;</code></pre>
+<p>We can change our default service state to running:</p>
+<h2>YambaApplication.xtend</h2>
+<pre><code class="lang-java">  @Property boolean                serviceRunning = true</code></pre>
+<p>.. and also make some adjustments to the toggle service action:</p>
+<h2>BaseActivity.xtend</h2>
+<pre><code class="lang-java">  val toggleService = [ | intent = new Intent(this, typeof(UpdaterService))
+                          if (app.isServiceRunning)
+                            stopService(intent)
+                           else
+                            startService(intent) 
+                          app.serviceRunning = !app.serviceRunning] as Command</code></pre>
+<p>You can inspect the list of running services on the device:</p>
+<p><img src="img/00.png" alt=""></p>
+<hr>
+<h4><a href="https://github.com/edeleastar/yambax/commit/18e01fd9497959213352b2a9c91a77a78ccc2c3f">Source</a></h4>
+<hr>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>BaroadcastReciever - tweets</h1>
+<p>We can employ Android Broadcast events for the status updates, removing the custom event mechanism we have hand coded.</p>
+<p>We first define some resources to describe the events:</p>
+<h2>res/values/strings.xml</h2>
+<pre><code>  &lt;string name=&quot;send_timeline_notifications_permission_label&quot;&gt;Sends Timeline Notifications&lt;/string&gt;
+  &lt;string name=&quot;send_timeline_notifications_permission_description&quot;&gt;Allow this application to send timeline notifications to other applications&lt;/string&gt;
+  &lt;string name=&quot;receive_timeline_notifications_permission_label&quot;&gt;Receive Timeline Notifications&lt;/string&gt;
+  &lt;string name=&quot;receive_timeline_notifications_permission_description&quot;&gt;Allow this application to receive timeline notifications from other applications&lt;/string&gt;</code></pre>
+<p>.. and then declare them in the manifest:</p>
+<h2>AndroidManifest.xml</h2>
+<pre><code>    &lt;uses-permission android:name=&quot;com.marakana.yamba.SEND_TIMELINE_NOTIFICATIONS&quot; /&gt;
+    &lt;uses-permission android:name=&quot;com.marakana.yamba.RECEIVE_TIMELINE_NOTIFICATIONS&quot; /&gt;
+
+    &lt;permission android:name=&quot;com.marakana.yamba.SEND_TIMELINE_NOTIFICATIONS&quot;
+      android:label=&quot;@string/send_timeline_notifications_permission_label&quot;
+      android:description=&quot;@string/send_timeline_notifications_permission_description&quot;
+      android:permissionGroup=&quot;android.permission-group.PERSONAL_INFO&quot;
+      android:protectionLevel=&quot;normal&quot; /&gt;
+
+    &lt;permission android:name=&quot;com.marakana.yamba.RECEIVE_TIMELINE_NOTIFICATIONS&quot;
+      android:label=&quot;@string/receive_timeline_notifications_permission_label&quot;
+      android:description=&quot;@string/receive_timeline_notifications_permission_description&quot;
+      android:permissionGroup=&quot;android.permission-group.PERSONAL_INFO&quot;
+      android:protectionLevel=&quot;normal&quot; /&gt;</code></pre>
+<p>The strings need to be replicated in the UpdaterService class:</p>
+<h2>UpdaterService</h2>
+<pre><code>  public static final String NEW_STATUS_INTENT              = &quot;com.marakana.yamba.NEW_STATUS&quot;
+  public static final String SEND_TIMELINE_NOTIFICATIONS    = &quot;com.marakana.yamba.SEND_TIMELINE_NOTIFICATIONS&quot;;
+  public static final String RECEIVE_TIMELINE_NOTIFICATIONS = &quot;com.marakana.yamba.RECEIVE_TIMELINE_NOTIFICATIONS&quot;</code></pre>
+<p>.. and then dispatched :</p>
+<pre><code class="lang-java">  override def void doBackgroundTask()
+  {
+    try
+    {
+      val List&lt;Twitter.Status&gt; timeline  = twitter.getFriendsTimeline
+      newTweets = if (app.timeline.size == 0) timeline else timeline.filter [it.id &gt; app.timeline.get(0).id]
+      Log.e(&quot;YAMBA&quot;, &quot;number of new tweets= &quot; + newTweets.size)      
+
+      app.updateTimeline(newTweets)
+      sendBroadcast(new Intent(NEW_STATUS_INTENT), RECEIVE_TIMELINE_NOTIFICATIONS);      
+    }
+    catch (TwitterException e)
+    {
+      Log.e(&quot;YAMBA&quot;, &quot;Failed to connect to twitter service&quot;, e); 
+    }
+  }</code></pre>
+<p>The knock on changes involve changes to the main application object:</p>
+<h2>YambaApplication.xtend</h2>
+<pre><code>  def updateTimeline(Iterable&lt;Twitter.Status&gt; newTweets)
+  {
+    newTweets.forEach[timeline.add(0, it)]
+  }
+
+  def clearTimeline()
+  {
+    timeline.clear
+    // todo - clear timeline view
+  }
+}</code></pre>
+<p>.. and the TimelineActivity, which gets an new receiver object:</p>
+<h2>TimelineActivity</h2>
+<pre><code class="lang-java">class TimelineReceiver extends BroadcastReceiver
+{
+  var TimelineActivity timelineActivity
+
+  new (TimelineActivity activity)
+  {
+      timelineActivity = activity;
+  }
+
+  override onReceive(Context context, Intent intent) 
+  {
+      timelineActivity.timelineAdapter.notifyDataSetChanged
+  }
+} 
+
+class TimelineActivity extends BaseActivity
+{  
+  @Property TimelineAdapter timelineAdapter
+  var TimelineReceiver receiver
+  var IntentFilter     filter
+
+  override onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.timeline)
+    timelineAdapter    = new TimelineAdapter(this, R.layout.row, app.timeline)
+
+    receiver = new TimelineReceiver (this)
+    filter   = new IntentFilter( UpdaterService.NEW_STATUS_INTENT )
+  }
+
+  override onStart()
+  { 
+    super.onStart    
+    val listTimeline = findViewById(R.id.listTimeline) as ListView
+    listTimeline.setAdapter(timelineAdapter);
+  }
+
+  override onResume()
+  {
+      super.onResume
+    super.registerReceiver(receiver, filter, UpdaterService.SEND_TIMELINE_NOTIFICATIONS, null);
+  }
+
+  override onPause() 
+  {
+    super.onPause();
+    unregisterReceiver(receiver) 
+  }
+}</code></pre>
+<hr>
+<h4><a href="https://github.com/edeleastar/yambax/commit/7e3b107c6d33b759924c08711cdde46fdecc6284">Source</a></h4>
+<hr>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>BroadcastReceiver - Network Events</h1>
+<p>We can also potentially improve the energy deficiency of our application by disabling the background task when the network is unavailable:</p>
+<pre><code>class NetworkReceiver extends BroadcastReceiver 
+{ 
+  override onReceive(Context context, Intent intent) 
+  {
+    val isNetworkDown = intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY, false); 
+
+    if (isNetworkDown) 
+    {
+      if (YambaApplication.serviceRunning)
+      {
+        Log.d(&quot;YAMBA&quot;, &quot;onReceive: NOT connected, stopping UpdaterService&quot;);
+        context.stopService(new Intent(context, typeof(UpdaterService)))
+      }
+    }
+    else 
+    {
+      if (!YambaApplication.serviceRunning)
+      {
+        Log.d(&quot;YAMBA&quot;, &quot;onReceive: connected, starting UpdaterService&quot;);
+        context.startService(new Intent(context, typeof(UpdaterService)))
+      }
+    }
+  }
+}</code></pre>
+<p>This will involves setting our initial service back to false:</p>
+<h2>YambaApplication.xtend</h2>
+<pre><code class="lang-java">  public static boolean            serviceRunning = false</code></pre>
+<p>.. and other adjustments:</p>
+<h2>BaseActivity.xtend</h2>
+<pre><code>  val toggleService = [ | intent = new Intent(this, typeof(UpdaterService))
+                          if (YambaApplication.serviceRunning)
+                            stopService(intent)
+                           else
+                            startService(intent) 
+                          YambaApplication.serviceRunning = !YambaApplication.serviceRunning] as Command</code></pre>
+<pre><code>  override onMenuOpened(int featureId, Menu menu)
+  { 
+    val toggleItem = menu.findItem(R.id.itemToggleService)
+    toggleItem.title = if (YambaApplication.serviceRunning) R.string.titleServiceStop         else R.string.titleServiceStart
+    toggleItem.icon  = if (YambaApplication.serviceRunning) android.R.drawable.ic_media_pause else android.R.drawable.ic_media_play
+    true
+  }</code></pre>
+<h2>UpdaterService</h2>
+<pre><code>  override onStartCommand(Intent intent, int flags, int startId)
+  {
+    super.onStartCommand(intent, flags, startId)
+    startBackgroundTask
+    YambaApplication.serviceRunning = true
+    START_STICKY;
+  }
+
+  override onDestroy()
+  {
+    super.onDestroy
+    stopBackgroundTask
+    YambaApplication.serviceRunning = false
+  }</code></pre>
+<h2>AndroidManifest</h2>
+<pre><code>  &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;</code></pre>
+<pre><code>      &lt;receiver android:name=&quot;com.marakana.yambax.NetworkReceiver&quot;&gt;
+        &lt;intent-filter&gt;
+          &lt;action android:name=&quot;android.net.conn.CONNECTIVITY_CHANGE&quot; /&gt;
+        &lt;/intent-filter&gt;
+      &lt;/receiver&gt;</code></pre>
+<hr>
+<h3><a href="https://github.com/edeleastar/yambax/commit/0a3dc09d6d5642901c3e4f85ed9aaccfae5aad07">Source</a></h3>
+<hr>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Purge Timeline</h1>
+<p>Finally, our timeline should be cleared if a purge action received:</p>
+<h2>YambaApplication.xtend</h2>
+<pre><code>  def clearTimeline()
+  {
+    timeline.clear
+    sendBroadcast(new Intent(UpdaterService.NEW_STATUS_INTENT), UpdaterService.RECEIVE_TIMELINE_NOTIFICATIONS);   
+  }</code></pre>
+<hr>
+<h3><a href="https://github.com/edeleastar/yambax/commit/6982314d07f27d2edfe973028f3d75c719ee9a75">Source</a></h3>
+<hr>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises (Assignment Ideas)</h1>
+<p>These labs are based on the application developed using this text:</p>
+<ul>
+<li><a href="http://shop.oreilly.com/product/0636920010883.do">http://shop.oreilly.com/product/0636920010883.do</a></li>
+</ul>
+<p>The Yamba application here uses android API largely compatible with Android 3.0 and earlier.</p>
+<p>However, it has been substantially revised to use a full suite of modern facilities introduced in subsequent releases:</p>
+<ul>
+<li><a href="http://shop.oreilly.com/product/0636920023456.do">http://shop.oreilly.com/product/0636920023456.do</a></li>
+</ul>
+<p>A full set up repos for all the code in the revised application is here:</p>
+<ul>
+<li><https://github.com/learning- android></li>
+</ul>
+<p>(Toc is reproduce at the end of this page)</p>
+<p>Specifically, the revised application includes:</p>
+<ul>
+<li>Fragments</li>
+<li>Actions and Action Bars</li>
+<li>Content Providers</li>
+<li>Intent Services</li>
+<li>Alarms</li>
+<li><p>Live Wallpapers</p>
+</li>
+<li><p>a number of minor improvements.</p>
+</li>
+</ul>
+<p>A version of YambaX (written in xtend) -  fully updated to include the above features, would be an interesting and useful assignment topic</p>
+<h2>ToC for Learning Android 2nd Edition</h2>
+<h3>Chapter 1 Android Overview</h3>
+<ul>
+<li>Android Overview</li>
+<li>History</li>
+<li>Android Versions</li>
+<li>Android Flavors</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 2 Java Review</h3>
+<ul>
+<li>Comments</li>
+<li>Data Types: Primitives and Objects</li>
+<li>Modifiers</li>
+<li>Arrays</li>
+<li>Operators</li>
+<li>Control Flow Statements</li>
+<li>Error/Exception Handling</li>
+<li>Complex Example</li>
+<li>Interfaces and Inheritance</li>
+<li>Collections</li>
+<li>Generics</li>
+<li>Threads</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 3 The Stack</h3>
+<ul>
+<li>Stack Overview</li>
+<li>Linux</li>
+<li>Native Layer</li>
+<li>Dalvik</li>
+<li>Application Framework</li>
+<li>Applications</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 4 Installing and Beginning Use of Android Tools</h3>
+<ul>
+<li>Installing Java Development Kit</li>
+<li>Installing the Android SDK</li>
+<li>Hello World!</li>
+<li>Anatomy of an Android Project</li>
+<li>Drawable Resources</li>
+<li>Building the Project</li>
+<li>Android Emulator</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 5 Main Building Blocks</h3>
+<ul>
+<li>A Real- World Example</li>
+<li>Activities</li>
+<li>Intents</li>
+<li>Services</li>
+<li>Content Providers</li>
+<li>Broadcast Receivers</li>
+<li>Application Context</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 6 Yamba Project Overview</h3>
+<ul>
+<li>The Yamba Application</li>
+<li>Design Philosophy</li>
+<li>Project Design</li>
+<li>Part 1: Android User Interface</li>
+<li>Part 2: Intents, ActionBar, and More</li>
+<li>Part 3: Android Services</li>
+<li>Part 4: Content Providers</li>
+<li>Part 5: Lists and Adapters</li>
+<li>Part 6: Broadcast Receivers</li>
+<li>Part 7: App Widgets</li>
+<li>Part 8: Networking and the Web (HTTP)</li>
+<li>Part 9: Live Wallpaper and Handlers</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 7 Android User Interface</h3>
+<ul>
+<li>Two Ways to Create a User Interface</li>
+<li>Views and Layouts</li>
+<li>Starting the Yamba Project</li>
+<li>The StatusActivity Layout</li>
+<li>The StatusActivity Java Class</li>
+<li>Logging Messages in Android</li>
+<li>Threading in Android</li>
+<li>Other UI Events</li>
+<li>Alternative Resources</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 8 Fragments</h3>
+<ul>
+<li>Fragment Example</li>
+<li>Fragment Life Cyle</li>
+<li>Dynamically Adding Fragments</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 9 Intents, Action Bar, and More</h3>
+<ul>
+<li>Preferences</li>
+<li>The Action Bar</li>
+<li>Shared Preferences and Updating Status Fragment</li>
+<li>The Filesystem Explained</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 10 Services</h3>
+<ul>
+<li>Our Example Service: RefreshService</li>
+<li>Pulling Data from Yamba</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 11 Content Providers</h3>
+<ul>
+<li>Databases on Android</li>
+<li>Status Contract Class</li>
+<li>Update RefreshService</li>
+<li>Content Providers</li>
+<li>Creating a Content Provider</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 12 Lists and Adapters</h3>
+<ul>
+<li>MainActivity</li>
+<li>Basic MainActivity</li>
+<li>Timeline Fragment</li>
+<li>About Adapters</li>
+<li>Loading the Data</li>
+<li>Custom Logic via ViewBinder</li>
+<li>Details View</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 13 Broadcast Receivers</h3>
+<ul>
+<li>About Broadcast Receivers</li>
+<li>BootReceiver</li>
+<li>Alarms and System Services</li>
+<li>Broadcasting Intents</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 14 App Widgets</h3>
+<ul>
+<li>Using Content Providers Through Widgets</li>
+<li>Summary
+Chapter 15 Networking and Web Overview</li>
+<li>Quick Example</li>
+<li>Networking Basics</li>
+<li>HTTP API</li>
+<li>Apache HTTP Client</li>
+<li>HttpUrlConnection</li>
+<li>Networking in the Background using AsyncTask and AsyncTaskLoader</li>
+<li>Summary</li>
+</ul>
+<h3>Chapter 16 Interaction and Animation: Live Wallpaper and Handlers</h3>
+<ul>
+<li>Live Wallpaper</li>
+<li>Handler</li>
+<li>Summary</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

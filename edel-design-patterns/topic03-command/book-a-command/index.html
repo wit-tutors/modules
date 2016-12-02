@@ -1,0 +1,839 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Command
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-03">
+      Lab-03
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="Exerises">
+      Exerises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-context/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-template-method-strategy/book-template-method-strategy/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03-command/book-a-command/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-prototype/book-a-prototype/index.html">
+          lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-gof-patterns/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-adapter-singleton-memento/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-enterprise-patterns-1/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-architecture/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-enterprise-patterns-2/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-half-sync/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-microservices/book-a/index.html">
+          Lab-11-A
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-microservices/book-b/index.html">
+          Lab-11-B
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-xtend/book-a/index.html">
+          Lab-12-A
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-xtend/book-b/index.html">
+          Lab-12-B
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12-xtend/book-c/index.html">
+          Lab-12-C
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic13-swift/book/index.html">
+          SwiftToDoLab
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-03">
+        <h1>Objectives</h1>
+<p>Rework the cliche library, using Strategy to delegate command processing. Implement the Command pattern into a simplified version of Pacemaker. Extend the implementation to include undo/redo capability</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<h2>Cliche</h2>
+<p>Clone this repository:</p>
+<ul>
+<li><a href="https://github.com/budhash/cliche.git">https://github.com/budhash/cliche.git</a></li>
+</ul>
+<p>Create a new Eclipse java project called &#39;cliche&#39; and incorporate the source into this project. The simplest way of doing this is to create a new eclipse project and drag/drop the <code>src/main/java/com</code> folder directly into the <code>src</code> folder of the blank eclipse project.</p>
+<h2>Pacemakerconsole</h2>
+<p>Using the pacemaker-console project from  lab-01, or this repo here:</p>
+<ul>
+<li><a href="https://github.com/wit-design-patterns-2016/pacemaker-console/releases/tag/Lab01">https://github.com/wit-design-patterns-2016/pacemaker-console/releases/tag/Lab01</a></li>
+</ul>
+<p>Import into eclipse.</p>
+<p>This project contains an jar file for cliche. Remove this from the project. This will generate errors.</p>
+<p>Fix these errors by making the pacemaker-console project depend on the cliche project (Project Properties-&gt;Java Build Path-&gt;Projects)</p>
+<p>You will need to change the imports in PacemakerShell, as the packages have been renamed in the github repo:</p>
+<pre><code>import com.budhash.cliche.Command;
+import com.budhash.cliche.Param;
+import com.budhash.cliche.Shell;
+import com.budhash.cliche.ShellFactory;</code></pre>
+<p>Verify that pacemaker-console works as expected.</p>
+<h2>Refactor pacemaker-console:</h2>
+<p>Make the following small change to pacemaker-console:</p>
+<ul>
+<li>Create a new package called &#39;main&#39;</li>
+<li>Move the class PacemakerShell from &#39;controllers&#39; into this package.</li>
+</ul>
+<p>This will trigger a range of visibility errors, as PacemakerShell is now in a different package. All of the errors can be removed by making all methods in PacemakerShell public.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Strategy for cliche</h1>
+<p>We would like to make a small adjustment to the cliche library, using the Strategy pattern to allow clients to &#39;hook into&#39; the command processing engine.</p>
+<p>In the com.budhash.cliche package, introduce the following interface:</p>
+<pre><code class="lang-java">package com.budhash.cliche;
+
+public interface CommandProcessor
+{
+  public void doCommand(ShellCommand command, Object[] parameters);
+}</code></pre>
+<p>In the Shell class, introduce the following public member:</p>
+<pre><code class="lang-java">    public CommandProcessor processor;</code></pre>
+<p>In the ShellFactory, adjust the following method to initialise this new member:</p>
+<pre><code class="lang-java">    public static Shell createConsoleShell(String prompt, String appName, Object mainHandler, CommandProcessor processor) {
+        Shell shell = createConsoleShell(prompt, appName, mainHandler, new EmptyMultiMap&lt;String, Object&gt;());
+        shell.processor = processor;
+        return shell;
+    }</code></pre>
+<p>Finally, rework this Shell method to engage this strategy if it it initialized:</p>
+<pre><code class="lang-java">    private void processCommand(String discriminator, List&lt;Token&gt; tokens) throws CLIException {
+        assert discriminator != null;
+        assert ! discriminator.equals(&quot;&quot;);
+
+        ShellCommand commandToInvoke = commandTable.lookupCommand(discriminator, tokens);
+
+        Class[] paramClasses = commandToInvoke.getMethod().getParameterTypes();
+        Object[] parameters = inputConverter.convertToParameters(tokens, paramClasses,
+                commandToInvoke.getMethod().isVarArgs());
+
+        outputHeader(commandToInvoke.getHeader(), parameters);
+
+        long timeBefore = Calendar.getInstance().getTimeInMillis();
+
+        Object invocationResult = null;
+        //Object invocationResult = commandToInvoke.invoke(parameters);
+        if (processor!= null)
+        {
+          processor.doCommand(commandToInvoke, parameters);
+        }
+        else
+        {
+          invocationResult = commandToInvoke.invoke(parameters);
+        }
+
+        long timeAfter = Calendar.getInstance().getTimeInMillis();
+
+        if (invocationResult != null) {
+            output.output(invocationResult, outputConverter);
+        }
+        if (displayTime) {
+            final long time = timeAfter - timeBefore;
+            if (time != 0L) {
+                output.output(String.format(TIME_MS_FORMAT_STRING, time), outputConverter);
+            }
+        }
+    }</code></pre>
+<p>In the above the relevant changes are just this:</p>
+<pre><code class="lang-java">        Object invocationResult = null;
+        //Object invocationResult = commandToInvoke.invoke(parameters);
+        if (processor!= null)
+        {
+          processor.doCommand(commandToInvoke, parameters);
+        }
+        else
+        {
+          invocationResult = commandToInvoke.invoke(parameters);
+        }</code></pre>
+<p>The overall effect of these adjustments is that we can choose to short circuit the command processor, and have all commands rerouted to our processor.</p>
+<p>We will make use of this shortly.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Commands</h1>
+<p>Introduce a new package called &#39;command&#39; into the pacemaker-console project. </p>
+<p>Create a new class called <code>Command</code>:</p>
+<pre><code class="lang-java">package command;
+
+import parsers.Parser;
+import controllers.PacemakerAPI;
+
+public abstract class Command
+{
+  protected PacemakerAPI pacemaker;
+  protected Parser       parser;
+
+  public Command()
+  {}
+
+  public Command(PacemakerAPI pacemaker, Parser parser)
+  {
+    this.pacemaker = pacemaker;
+    this.parser    = parser;
+  }
+
+  public abstract void doCommand(Object[] parameters)  throws Exception;
+}</code></pre>
+<p>Include the following three commands:</p>
+<pre><code>package command;
+
+import parsers.Parser;
+import controllers.PacemakerAPI;
+
+public class ListUsersCommand extends Command
+{
+  public ListUsersCommand(PacemakerAPI pacemaker, Parser parser)
+  {
+    super(pacemaker, parser);
+  }
+
+  public void doCommand(Object[] parameters) throws Exception
+  {
+    System.out.println(parser.renderUsers(pacemaker.getUsers()));
+  }
+}</code></pre>
+<pre><code class="lang-java">package command;
+
+import models.User;
+import parsers.Parser;
+import controllers.PacemakerAPI;
+
+public class CreateUserCommand extends Command
+{
+  User user;
+
+  public CreateUserCommand(PacemakerAPI pacemaker, Parser parser)
+  {
+    super(pacemaker, parser);
+  }
+
+  public void doCommand(Object[] parameters) throws Exception
+  {
+    Long id = pacemaker.createUser((String)parameters[0], (String)parameters[1], (String)parameters[2], (String)parameters[3]);
+    System.out.println(parser.renderUser(pacemaker.getUser(id)));
+    this.user = pacemaker.getUser(id);
+  }
+}</code></pre>
+<pre><code class="lang-java">package command;
+
+import models.User;
+import parsers.Parser;
+import controllers.PacemakerAPI;
+
+public class DeleteUserCommand extends Command
+{
+  private User user;
+
+  public DeleteUserCommand(PacemakerAPI pacemaker, Parser parser)
+  {
+    super(pacemaker, parser);
+  }
+
+  public void doCommand(Object[] parameters) throws Exception
+  {
+    this.user = pacemaker.getUser((Long)parameters[0]);
+    pacemaker.deleteUser((Long)parameters[0]);
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>CommandDispatcher &amp; CommandSpecifications</h1>
+<p>Also in the command package, incorporate this class:</p>
+<pre><code class="lang-java">package command;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
+public class CommandDispatcher
+{
+  private Map&lt;String, Command&gt; commands;
+
+  public CommandDispatcher()
+  {
+    commands = new HashMap&lt;String, Command&gt;();
+  }
+
+  public void addCommand(String commandName, Command command)
+  {
+    commands.put(commandName, command);
+  }
+
+  public boolean dispatchCommand(String commandName, Object [] parameters) throws Exception
+  {
+    boolean dispatched = false;
+    Command command = commands.get(commandName);
+
+    if (command != null)
+    { 
+      dispatched = true;
+      command.doCommand(parameters);
+    }
+    return dispatched;
+  }
+}</code></pre>
+<p>Finally, this class here will encapsulate the &#39;cliche&#39; command specifications:</p>
+<pre><code class="lang-java">package command;
+
+import com.budhash.cliche.Command;
+import com.budhash.cliche.Param;
+
+public class CommandSpecifications
+{
+  @Command(description=&quot;List all users details&quot;)
+  public void listUsers () throws Exception
+  {}
+
+  @Command(description=&quot;Create a new User&quot;)
+  public void createUser (@Param(name=&quot;first name&quot;) String firstname, @Param(name=&quot;last name&quot;) String lastname, 
+                          @Param(name=&quot;email&quot;)      String email,     @Param(name=&quot;password&quot;)  String password) throws Exception 
+  {}
+
+  @Command(description=&quot;Delete a User&quot;)
+  public void deleteUser (@Param(name=&quot;id&quot;) Long id)
+  {}
+}</code></pre>
+<p>Note, however, that we do not have any implementations here, as we will be using the command objects + command dispatcher to trigger the commands themselves.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>controllers</h1>
+<p>We are going to significantly simplify the project in order to explore command without too much distraction. So, delete the &#39;PacemakerService&#39;
+class from the &#39;controllers&#39; package.</p>
+<p>Now, replace the PacemakerShell class with the following simpler version:</p>
+<pre><code class="lang-java">package main;
+
+import parsers.AsciiParser;
+import parsers.Parser;
+import command.CommandDispatcher;
+import command.CommandSpecifications;
+import command.CreateUserCommand;
+import command.DeleteUserCommand;
+import command.ListUsersCommand;
+import controllers.PacemakerAPI;
+
+import com.budhash.cliche.CommandProcessor;
+import com.budhash.cliche.Shell;
+import com.budhash.cliche.ShellCommand;
+import com.budhash.cliche.ShellFactory;
+
+public class PacemakerShell implements CommandProcessor
+{
+  private CommandDispatcher dispatcher;
+  private PacemakerAPI       paceApi;
+
+  public PacemakerShell() 
+  {
+    Parser parser = new AsciiParser();
+    paceApi    = new PacemakerAPI();
+    dispatcher = new CommandDispatcher();
+    dispatcher.addCommand(&quot;list-users&quot;,  new ListUsersCommand(paceApi,  parser));  
+    dispatcher.addCommand(&quot;create-user&quot;, new CreateUserCommand(paceApi, parser));  
+    dispatcher.addCommand(&quot;delete-user&quot;, new DeleteUserCommand(paceApi, parser));  
+  }  
+
+  @Override
+  public void doCommand(ShellCommand command, Object[] parameters)
+  {
+    try
+    {
+      dispatcher.dispatchCommand(command.getName(), parameters);
+    }
+    catch (Exception e)
+    {
+      System.out.println(&quot;Error executing command&quot;);
+    }
+  } 
+
+  public static void main(String[] args) throws Exception
+  {
+    PacemakerShell main = new PacemakerShell();
+    CommandSpecifications commandSpecs = new CommandSpecifications();
+
+    Shell shell = ShellFactory.createConsoleShell(&quot;pm&quot;, &quot;Welcome to pacemaker-console - ?help for instructions&quot;, commandSpecs, main);
+    shell.commandLoop();
+  }
+}</code></pre>
+<p>This application should run now. We only support three commands:</p>
+<ul>
+<li>lu</li>
+<li>cu</li>
+<li>du</li>
+</ul>
+<p>Experiment with them and verify the behave as expected.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Undo</h1>
+<p>In order to support undo/redo, we can  equip the dispatcher with and undo/redo stack:</p>
+<pre><code>  private Stack&lt;Command&gt; undoBuffer;
+  private Stack&lt;Command&gt; redoBuffer;</code></pre>
+<p>... and in the constructor intialise this:</p>
+<pre><code>  public CommandDispatcher()
+  {
+    undoBuffer = new Stack&lt;Command&gt;();
+    redoBuffer = new Stack&lt;Command&gt;();
+    commands = new HashMap&lt;String, Command&gt;();
+
+    commands.put(&quot;undo&quot;, new UndoCommand(undoBuffer, redoBuffer));
+    commands.put(&quot;redo&quot;, new RedoCommand(undoBuffer, redoBuffer));
+  }</code></pre>
+<p>These are the Undo and Redo command classes:</p>
+<pre><code class="lang-java">package command;
+
+import java.util.Stack;
+
+public class UndoCommand extends Command
+{
+  private Stack&lt;Command&gt; undoBuffer;
+  private Stack&lt;Command&gt; redoBuffer;
+
+  public UndoCommand(Stack&lt;Command&gt; undoBuffer, Stack&lt;Command&gt; redoBuffer)
+  {
+    this.undoBuffer = undoBuffer;
+    this.redoBuffer = redoBuffer;
+  }
+
+  public void doCommand(Object[] parameters) throws Exception
+  {
+    if (undoBuffer.size() &gt; 0)
+    {
+      Command command = undoBuffer.pop();
+      command.undoCommand();
+      redoBuffer.push(command);
+    }
+  }
+}</code></pre>
+<pre><code class="lang-java">package command;
+
+import java.util.Stack;
+
+public class RedoCommand extends Command
+{
+  private Stack&lt;Command&gt; undoBuffer;
+  private Stack&lt;Command&gt; redoBuffer;
+
+  public RedoCommand(Stack&lt;Command&gt; undoBuffer, Stack&lt;Command&gt; redoBuffer)
+  {
+    this.undoBuffer = undoBuffer;
+    this.redoBuffer = redoBuffer;
+  }
+
+  public void doCommand(Object[] parameters) throws Exception
+  {
+    if (redoBuffer.size() &gt; 0)
+    {
+      Command command = redoBuffer.pop();
+      command.redoCommand();
+      undoBuffer.push(command);
+    }
+  }
+}</code></pre>
+<p>Note that they require &#39;undo&#39; and &#39;redo methods in the command class:</p>
+<pre><code>public abstract class Command
+{
+  //...
+  public void undoCommand() throws Exception
+  {}
+
+  public void redoCommand() throws Exception
+  {}
+}</code></pre>
+<p>Which we can implement if we choose. They make sense for CreateUser and DeleteUser, but not for ListUsers:</p>
+<pre><code class="lang-java">public class CreateUserCommand extends Command
+{
+  //...
+
+  public void undoCommand() throws Exception
+  {
+    pacemaker.deleteUser(user.id);
+  }
+
+  public void redoCommand() throws Exception
+  {
+    pacemaker.createUser(user.firstname, user.lastname, user.email, user.password);
+  }
+}</code></pre>
+<pre><code class="lang-java">public class DeleteUserCommand extends Command
+{
+  //...
+
+  public void undoCommand() throws Exception
+  {
+    pacemaker.createUser(user.firstname, user.lastname, user.email, user.password);
+  }
+
+  public void redoCommand() throws Exception
+  {
+    pacemaker.deleteUser(user.id);
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Updated Dispatcher</h1>
+<p>We also need to make these commands known to cliche by putting them in the CommandDescriptor class:</p>
+<pre><code>  @Command(description=&quot;undo last command&quot;)
+  public void undo () throws Exception
+  {}
+
+  @Command(description=&quot;redo last command&quot;)
+  public void redo () throws Exception
+  {}</code></pre>
+<p>The dispatchCommand method will need to be reworked as follows:</p>
+<pre><code class="lang-java">  public boolean dispatchCommand(String commandName, Object [] parameters) throws Exception
+  {
+    boolean dispatched = false;
+    Command command = commands.get(commandName);
+
+    if (command != null)
+    { 
+      dispatched = true;
+      command.doCommand(parameters);
+      if ((command instanceof CreateUserCommand) || (command instanceof DeleteUserCommand))
+      {
+        undoBuffer.push(command);
+      }
+    }
+    return dispatched;
+  }</code></pre>
+<p>Note that only CreateUserCommand and DeleteUserCommand are &#39;undoable&#39;.</p>
+<p>We should be in a position to test this now. A session might go something like this:</p>
+<pre><code>Welcome to pacemaker-console - ?help for instructions
+pm&gt; cu a a a a
++----+-----------+----------+-------+----------+
+| ID | FIRSTNAME | LASTNAME | EMAIL | PASSWORD |
++----+-----------+----------+-------+----------+
+|  1 |         a |        a |     a |        a |
++----+-----------+----------+-------+----------+
+
+pm&gt; undo
+pm&gt; lu
+
+pm&gt;</code></pre>
+<p>Redo should also work:</p>
+<pre><code>Welcome to pacemaker-console - ?help for instructions
+pm&gt; cu a a a a
++----+-----------+----------+-------+----------+
+| ID | FIRSTNAME | LASTNAME | EMAIL | PASSWORD |
++----+-----------+----------+-------+----------+
+|  1 |         a |        a |     a |        a |
++----+-----------+----------+-------+----------+
+
+pm&gt; undo
+pm&gt; lu
+
+pm&gt; redo
+pm&gt; lu
++----+-----------+----------+-------+----------+
+| ID | FIRSTNAME | LASTNAME | EMAIL | PASSWORD |
++----+-----------+----------+-------+----------+
+|  2 |         a |        a |     a |        a |
++----+-----------+----------+-------+----------+
+
+pm&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exerises">
+        <h1>Exercises</h1>
+<h2>Solution so far:</h2>
+<ul>
+<li><a href="https://github.com/wit-design-patterns-2016/cliche">https://github.com/wit-design-patterns-2016/cliche</a></li>
+<li><a href="https://github.com/wit-design-patterns-2016/pacemaker-console/releases/tag/Lab03a">https://github.com/wit-design-patterns-2016/pacemaker-console/releases/tag/Lab03a</a></li>
+</ul>
+<h2>More commands</h2>
+<p>Introduce some more commands from the reference implementation. This will involve:</p>
+<ul>
+<li>Defining a Command derived class</li>
+<li>Extending the &#39;CommandDescriptor&#39; class to specific the command to cliche</li>
+<li>Creating and inserting the command into the command map in the PacemakerShell constructor</li>
+</ul>
+<h2>undo/redo</h2>
+<p>Try the following:</p>
+<pre><code>Welcome to pacemaker-console - ?help for instructions
+pm&gt; cu a a a a
++----+-----------+----------+-------+----------+
+| ID | FIRSTNAME | LASTNAME | EMAIL | PASSWORD |
++----+-----------+----------+-------+----------+
+|  1 |         a |        a |     a |        a |
++----+-----------+----------+-------+----------+
+
+pm&gt; cu b b b b
++----+-----------+----------+-------+----------+
+| ID | FIRSTNAME | LASTNAME | EMAIL | PASSWORD |
++----+-----------+----------+-------+----------+
+|  2 |         b |        b |     b |        b |
++----+-----------+----------+-------+----------+
+
+pm&gt; undo
+pm&gt; undo
+Error executing command
+pm&gt;</code></pre>
+<p>Why are we getting the above error?</p>
+<p>If you resolve this error, you will note it has a serious design flaw, requiring some significant rethink in order to make this work as expected.</p>
+<p>HINT:</p>
+<p>This pattern here may prove useful:</p>
+<ul>
+<li><a href="http://sourcemaking.com/design_patterns/prototype">http://sourcemaking.com/design_patterns/prototype</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

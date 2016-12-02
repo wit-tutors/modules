@@ -1,0 +1,996 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Design Patterns</h2>
+    <p> Top Level Topics </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="#"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic00-catalogues/index.html">
+        Design Patterns Catalogues
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic00-catalogues/talk-1/rc008-designpatterns_online.pdf">
+          DZone Reference Card</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic00-catalogues/talk-2/designpatternscard.pdf">
+          GOF Reference Card</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic00-catalogues/talk-3/holub_design_patterns.pdf">
+          Holub Catalogue</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic00-catalogues/talk-4/GoF_DesignPatterns_Java_UML.pdf">
+          Logical Catalogiue</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic01-context/index.html">
+        Design Pattens Context
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic01-context/talk-a-introduction/introduction.pdf">
+          Introduction</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-context/talk-b-context/context.pdf">
+          Context</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-context/talk-c-languages/languages.pdf">
+          Programming Languages</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-context/talk-e-patterns-case-study/patterns-case-study.pdf">
+          Patterns Case Study</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-context/book/index.html">
+          Lab-01</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic02-template-method-strategy/index.html">
+        Template Method & Strategy
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic02-template-method-strategy/talk-1-template-method/template-method.pdf">
+          Template Method</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-template-method-strategy/talk-2-strategy/strategy.pdf">
+          Strategy</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-template-method-strategy/talk-3-solver/solver.pdf">
+          Solver</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-template-method-strategy/talk-4-xtend/xtend.pdf">
+          XTend</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-template-method-strategy/talk-5-xtend-solver/xtend-solver.pdf">
+          Lambda Solver</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-template-method-strategy/book-template-method-strategy/index.html">
+          Lab-02</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic03-command/index.html">
+        Command
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03-command/talk-1-command/command.pdf">
+          Command</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-command/talk-2-pacemaker-structure/pacemaker-structure.pdf">
+          Pacemaker Structure</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-command/talk-3-pacemaker-cliche/pacemaker-cliche.pdf">
+          Pacemaker Cliche</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-command/talk-4-pacemaker-command/pacemaker-command.pdf">
+          Pacemaker Command</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-command/talk-5-pacemaker-undo/pacemaker-undo.pdf">
+          Pacemaker Undo</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-command/talk-6-undo-redo-challenges/undo-redo-challenges.pdf">
+          Undo / Redo Challenges</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-command/talk-7-b-prototype/prototype.pdf">
+          Prototype</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-command/talk-8-pacemaker-prototype/pacemaker-prototype.pdf">
+          Pacemaker Prototype</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-command/book-a-command/index.html">
+          Lab-03</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic04-prototype/index.html">
+        Prototype
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic04-prototype/talk-1-undo-redo-challenges/undo-redo-challenges.pdf">
+          Undo / Redo Challenges</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04-prototype/talk-2-b-prototype/prototype.pdf">
+          Prototype</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04-prototype/talk-3-pacemaker-prototype/pacemaker-prototype.pdf">
+          Pacemaker Prototype</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04-prototype/talk-4-door-light-camera-example/door-light-camera-example.pdf">
+          Door/Light/Camera Example</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04-prototype/talk-5-observer/observer.pdf">
+          Observer</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04-prototype/talk-6-catalogues/catalogues.pdf">
+          Pattern Catalogues</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04-prototype/book-a-prototype/index.html">
+          lab-04</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic05-gof-patterns/index.html">
+        GoF Patterns
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic05-gof-patterns/talk-1-pattern-happy/pattern-happy.pdf">
+          Pattern Happy</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05-gof-patterns/talk-2-background/background.pdf">
+          Background</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05-gof-patterns/talk-3-principles/principles.pdf">
+          Principles</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05-gof-patterns/talk-4-categories/categories.pdf">
+          Categories</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05-gof-patterns/talk-5-selection/selection.pdf">
+          Selection</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05-gof-patterns/talk-6-catalogues/catalogues.pdf">
+          Catalogues</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05-gof-patterns/book/index.html">
+          Lab-05</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic06-adapter-singleton-memento/index.html">
+        Adapter, Singleton, Memento 
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic06-adapter-singleton-memento/talk-1-adapter/adapter.pdf">
+          Adapter</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-adapter-singleton-memento/talk-2-singleton/singleton.pdf">
+          Singleton</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-adapter-singleton-memento/talk-3-memento/memento.pdf">
+          Memento</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-adapter-singleton-memento/talk-4-gui-patterns/gui-patterns.pdf">
+          GUI Patterns</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-adapter-singleton-memento/talk-5-pacemaker-android-patterns/pacemaker-android-patterns.pdf">
+          Pacemaker Android Patterns</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-adapter-singleton-memento/talk-6-gui-synchronisation/gui-synchronsisation.pdf">
+          GUI Synchronsiation</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-adapter-singleton-memento/book/index.html">
+          Lab-06</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic07-enterprise-patterns-1/index.html">
+        Enterprise Patterns I
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic07-enterprise-patterns-1/talk-1-further-gui-patterns/further-gui-patterns.pdf">
+          Further GUI Patterns</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-enterprise-patterns-1/talk-2-enterprise-characteristics/enterprise-characteristics.pdf">
+          Enterprise Characteristics</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-enterprise-patterns-1/talk-3-enterprise-patterns/enterprise-patterns.pdf">
+          Enterprise Patterns</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-enterprise-patterns-1/talk-4-pacemaker-play/pacemaker-play.pdf">
+          Pacemaker Play</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-enterprise-patterns-1/talk-5-play-framework/play-framework.pdf">
+          Play Framework</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-enterprise-patterns-1/talk-6-pacemaker-ux/pacemaker-ux.pdf">
+          Pacemaker UX</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-enterprise-patterns-1/talk-7-assignment/assignment.pdf">
+          Assignment</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-enterprise-patterns-1/book/index.html">
+          Lab-07</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic08-architecture/index.html">
+        Architecture
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic08-architecture/talk-1-structure101/error: missing pdf">
+          error: missing pdf</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08-architecture/book/index.html">
+          Lab-08</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic09-enterprise-patterns-2/index.html">
+        Enterprise Patterns II
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic09-enterprise-patterns-2/talk-1-enterprise-performance/enterprise-performance.pdf">
+          Enterprise Performance</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-enterprise-patterns-2/talk-2-layering/layering.pdf">
+          Layering</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-enterprise-patterns-2/talk-3-domain-logic/domain-logic.pdf">
+          Domain Logic</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-enterprise-patterns-2/talk-4-data-source/data-source.pdf">
+          Data Source</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-enterprise-patterns-2/talk-5-web-presentation/e-web-presentation.pdf">
+          Web Presentation</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-enterprise-patterns-2/talk-6-assignment-update/assignment-update.pdf">
+          Assignment Update</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-enterprise-patterns-2/book/index.html">
+          Lab-09</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic10-half-sync/index.html">
+        Half Sync/Half Async
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic10-half-sync/talk-1-pacemaker-v3/pacemaker-v3.pdf">
+          Pacemaker V3</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-half-sync/talk-2-threads/threads.pdf">
+          Threads</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-half-sync/talk-3-android-threads/android-threads.pdf">
+          Android Threads</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-half-sync/talk-4-d-POSA4-half-sync-half-async/POSA4-half-sync-half-async.pdf">
+          POSA Half Sync / Half Async</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-half-sync/talk-5-pacemaker-v4/pacemaker-v4.pdf">
+          Pacemaker v4</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-half-sync/talk-6-mediator/mediator.pdf">
+          Mediator</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-half-sync/book/index.html">
+          Lab-10</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic11-microservices/index.html">
+        Javascript & Microservices
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic11-microservices/talk-1-javascript/javascript.pdf">
+          Javascript</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11-microservices/talk-2-Intro-to-mean-stack/Intro-to-mean-stack.pdf">
+          Mean Stack</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11-microservices/talk-3-microservices-pattern/microservices-pattern.pdf">
+          Microservice Patterns</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11-microservices/talk-4-kafkaesque-microbial/kafkaesque-microbial.pdf">
+          Kafaesque Microbial</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11-microservices/book-a/index.html">
+          Lab-11-A</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11-microservices/book-b/index.html">
+          Lab-11-B</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic12-xtend/index.html">
+        Xtend Android
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic12-xtend/talk-1-yamba/yamba.pdf">
+          Yamba</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12-xtend/talk-2-xtend-android-app/xtend-android-app.pdf">
+          Xtend Android</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12-xtend/talk-3-services/services.pdf">
+          Services</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12-xtend/talk-4-command/command.pdf">
+          Command</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12-xtend/talk-5-broadcast-recievers/broadcast-recievers.pdf">
+          Broadcast Receivers</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12-xtend/talk-6-mediator/mediator.pdf">
+          Mediator</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12-xtend/talk-7-composite/composite.pdf">
+          Composite</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12-xtend/talk-8-bridge/bridge.pdf">
+          Bridge</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12-xtend/book-a/index.html">
+          Lab-12-A</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12-xtend/book-b/index.html">
+          Lab-12-B</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12-xtend/book-c/index.html">
+          Lab-12-C</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic13-swift/index.html">
+        Perspectives on Swift
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic13-swift/talk-1-swift-context/swift-context.pdf">
+          Swift Context</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic13-swift/talk-2-todolist/todolist.pdf">
+          Todo List</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic13-swift/book/index.html">
+          SwiftToDoLab</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+          
+  <a class="ui raised link card" href="./topic00-catalogues/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Design Patterns Catalogues </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic00-catalogues/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic01-context/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Design Pattens Context </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic01-context/talk-a-introduction/introduction.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Review the course structure and assessment methods and key sources. Explore the context of design patterns, including aspects of programming language design. Explore a specific problem in detail and use this problem to identify 2 potential solutions</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic02-template-method-strategy/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Template Method & Strategy </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic02-template-method-strategy/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Review the Template Method &amp; Strategy Patterns in detail. Assess a simple example of these patterns in action. Explore the primary features of the Xtend programming language. Reimplement both patterns in Xtend, with a particular emphasis on understanding the use of Lambdas in this context</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic03-command/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Command </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic03-command/talk-1-command/command.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Examine the Command Pattern implementation in detail, including the undo/redo mechanisms. Consider potential pitfalls with command implementations</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic04-prototype/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Prototype </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic04-prototype/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Re-examine the outstanding issues with the command implementation. Review the Prototype Pattern and show how this pattern is a useful fit for the command pattern</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic05-gof-patterns/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> GoF Patterns </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic05-gof-patterns/talk-1-pattern-happy/pattern-happy.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Explore the origins of patterns and refer to the key sources. Enumerate the principles behind the GoF patterns. Review of the categorization of the GoF patterns. Look at the motivations behind selecting specific patterns</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic06-adapter-singleton-memento/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Adapter, Singleton, Memento  </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic06-adapter-singleton-memento/talk-1-adapter/adapter.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Review the adapter, memento and singleton patterns, Investigate how these patterns surface in Android. Explore the landscape UI Patterns in general</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic07-enterprise-patterns-1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Enterprise Patterns I </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic07-enterprise-patterns-1/talk-1-further-gui-patterns/further-gui-patterns.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Explore the nature of Enterprise Software. Review the performance characteristics of these types of applications. Examine the general categories of Enterprise Software Patterns</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic08-architecture/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Architecture </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic08-architecture/talk-1-structure101/null">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A presentation on the Software Architecture and the Structure 101 Studio Product</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic09-enterprise-patterns-2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Enterprise Patterns II </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic09-enterprise-patterns-2/talk-1-enterprise-performance/enterprise-performance.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Conclude an examination of Enterprise patters as documented in PoEAA, focusing on: Domain Logic Patterns, Data Patterns Presentation &amp; Session Patterns. Illustrate with the current pacemaker-service app</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic10-half-sync/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Half Sync/Half Async </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic10-half-sync/talk-1-pacemaker-v3/pacemaker-v3.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Review the basic operation of Threads in Java. Explore the implications of threading in Android Applications. Enumerate the major pattern groupings in the POSA catalogue. Show how Half Sync/Half Sync pattern is employed in Android</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic11-microservices/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Javascript & Microservices </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic11-microservices/talk-1-javascript/javascript.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Explore the world of server side javascript and node.js. Introduce docker and discuss it role in javascript applcation deployment. Review the fundamentals of Single Page Applications, illustrated with and ember.js example</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic12-xtend/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Xtend Android </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic12-xtend/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Explore the structure of an Android Application written in Xtend, paying particular attention to general reduction in boilerplate code and the liberal use of lambdas and other convenience features. Use this application to review sync issues and now they can be managed using: Services &amp; Broadcast Receivers</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic13-swift/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Perspectives on Swift </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic13-swift/talk-1-swift-context/swift-context.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Place swift in context. Explore aspects of the syntax</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

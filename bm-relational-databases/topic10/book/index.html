@@ -1,0 +1,296 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Table Joins
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-10">
+      Lab-10
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic10/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-b/index.html">
+          Lab-11
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-10">
+        <h2>Objectives</h2>
+<p>Practice SQL SELECT statement joining to multiple tables.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>ON and USING clause</h1>
+<p>Login to applicaiton express</p>
+<p><a href="https://iacademy3.oracle.com/">https://iacademy3.oracle.com/</a></p>
+<p><img src="./img/01.png" alt=""></p>
+<p>Choose SQL Workshop and then SQL Commands</p>
+<p><img src="./img/02.png" alt=""></p>
+<p>Write the necessary SQL SELECT statements for the following queries.
+Tor each query consider the output, practice your use of column and table aliases, concatenation and ordering of output. You will also need to investigate the tables to find the correct column names and foreign keys etc. Use the Object Browser to do this.</p>
+<ul>
+<li>Join the locations and departments table using the location_id column.</li>
+<li>Join DJs on Demand d_play_list_items, d_track_listings and d_cds tables with the JOIN USING syntax. Include the song ID, CD number, title, and comments in the output.</li>
+<li>Display the city, department name, location ID, and department ID for departments 10, 20, and 30 for the city of Seattle.</li>
+<li>Display country name, region ID and region name for Americans.</li>
+<li>Write a statement joining the employees and jobs tables. Display the first and last names, hire date, job id, job title and maximum salary. Limit the query to those employees who are in jobs that can earn more than 12000.</li>
+<li>Display job title, employee first name, last name, and email for all employees who are stock clerks.</li>
+<li>Use JOIN ON syntax to query and display the location ID, city, and department name for all canadian locations.</li>
+<li>Query and display manager ID, department ID, department name, first name, and last name for all employees in department 80, 90, 100 and 190).</li>
+<li>Display employee ID, last name, deparment ID, department name and hire date for those employees whose hire date was June 7, 1994.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>OUTER JOINS</h1>
+<p>Practice OUTER joins</p>
+<ul>
+<li>Return the first name, last name and department name for all employees including those employees not assigned to a department.</li>
+<li>Return the first name, last name and department name for all employees including those departments that do not have an employee assigned to them.</li>
+<li>Return the first name, last name and department name for all employees including those departments that do not have an employee assigned to them and those employees not assigned to a department.</li>
+<li>Query the DJs on Demand database to return the first name, last name, event date, and description of the event the client held. Include all the clients even if they have not had an event scheduled.</li>
+<li>Using the Gloabl Fast Foods database, show the shift description and shift assignment date even if there is no date assigned for each shift description.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>SELF JOINS</h1>
+<p>Practice SELF JOINS</p>
+<ul>
+<li>Display the employee&#39;s last name and employee number along with the manager&#39;s last name and manager number. Label the columns Employee, Emp#, Manager, and Mgr#</li>
+<li>Modify the first query to display all employees and their manager, even if the employee does not have a manager. Order the list alphabetically by the last name of the employee.</li>
+<li>Display the names and hire dates for all employees who were hired before their managers, along with their managers&#39; names and hire dates. Label the columns Employee, Emp hired, Manager, and Mgr Hired.</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Dr. Brenda Mullally (bmullally@wit.ie).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,578 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Programming Fundamentals I (Processing)</h2>
+    <p> All Labs in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Dr. Siobhan Drohan & Mairead Meagher .
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic01-intro-to-processing/book/index.html">
+      Lab-01
+    </a>
+    
+    <a class="item" href="topic02-animate-your-drawings/book1/index.html">
+      Lab-02
+    </a>
+    
+    <a class="item" href="topic02-animate-your-drawings/book2/index.html">
+      Code to Download
+    </a>
+    
+    <a class="item" href="topic03-conditionals-and-events/book/index.html">
+      Lab-03
+    </a>
+    
+    <a class="item" href="topic04-iteration-for-while/book/index.html">
+      Lab-04
+    </a>
+    
+    <a class="item" href="topic05-methods/book/index.html">
+      Lab-05
+    </a>
+    
+    <a class="item" href="topic06-more-on-methods/book/index.html">
+      Lab-06
+    </a>
+    
+    <a class="item" href="topic07-strings-and-intro-to-classes/book/index.html">
+      Lab-07
+    </a>
+    
+    <a class="item" href="topic08-classes-encapsulation/book-1/index.html">
+      Lab-08
+    </a>
+    
+    <a class="item" href="topic09-arrays-and-pong/book-1/index.html">
+      Lab-9a
+    </a>
+    
+    <a class="item" href="topic09-arrays-and-pong/book-2/index.html">
+      Lab-9b
+    </a>
+    
+    <a class="item" href="topic09-arrays-and-pong/book-3/index.html">
+      Lab-9c
+    </a>
+    
+    <a class="item" href="topic10-more-on-pong/book-1/index.html">
+      Lab-10a
+    </a>
+    
+    <a class="item" href="topic10-more-on-pong/book-2/index.html">
+      Lab-10b
+    </a>
+    
+    <a class="item" href="topic10-more-on-pong/book-3/index.html">
+      Lab-10c
+    </a>
+    
+    <a class="item" href="topic13-assignments/book-1/index.html">
+      Formative Assessment
+    </a>
+    
+    <a class="item" href="topic13-assignments/book-2/index.html">
+      Assignment-1
+    </a>
+    
+    <a class="item" href="topic13-assignments/book-3/index.html">
+      Assignment-2
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic01-intro-to-processing/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-01 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01-intro-to-processing/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- be familiar with the PDE (Processing Development Environment).- be able to use methods to draw basic shapes and add colour to these shapes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-animate-your-drawings/book1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-02 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-animate-your-drawings/book1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- be able to write code to animate simple drawings.- be aware of the system variables in the PDE and be able to use them effectively.- understand primitive data types and be able to use them in non-complex problems.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-animate-your-drawings/book2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Code to Download </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-animate-your-drawings/book2/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- have downloaded code used in class.- understand the code used.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-conditionals-and-events/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-03 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-conditionals-and-events/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should be able to code animated drawings using the following constructs:- conditional statements- relational operators- logical operators- variables- mouse events- key events</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-iteration-for-while/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-04 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-iteration-for-while/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should understand variable scope and be able to code static drawings using for and while loops.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-methods/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-05 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-methods/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <ul>
+<li>On completion of this lab you should be able to use methods to handle mouse events and also be able to write your own methods.- There are no exercises for this lab; instead we suggest you use the lab time to work on your assignment.</li>
+</ul>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-more-on-methods/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-06 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-more-on-methods/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <ul>
+<li>On completion of this lab you should be able to write more sophisticated methods, particularly using parameters and returning data.  You will also learn how to use the String methods.</li>
+</ul>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-strings-and-intro-to-classes/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-07 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-strings-and-intro-to-classes/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- be able to write code with more String methods- be able to write a class and an object of the class.- be able to write and call class contructors.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08-classes-encapsulation/book-1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-08 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08-classes-encapsulation/book-1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- be able to write methods for a class and call those methods- be able to write getters and setters for each field.- be able to write code to implement given validation rules in setters and constructors- start to understand how we protect the data in an object via class code. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-arrays-and-pong/book-1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-9a </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-arrays-and-pong/book-1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- be able to write Swing components- be able to write JOptionPane methods- be able to produce message and dialog boxes</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-arrays-and-pong/book-2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-9b </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-arrays-and-pong/book-2/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- be able to declare and construct an array- be able to write loops involving arrays- be able to read values in from the keyboard into  an array using JOptionPane methods. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-arrays-and-pong/book-3/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-9c </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-arrays-and-pong/book-3/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- be familiar with the game of pong. - be able to write methods for a class and call those methods.- be able to write getters and setters for each field.- be able to write code to implement given validation rules in setters and constructors.- start to understand how we protect the data in an object via class code. In this lab, you will work on PongGameV1_0 and PongGameV2_0.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-more-on-pong/book-1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-10a </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-more-on-pong/book-1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- be very familiar with the game of pong. - be able to include collision detection code for the Ball and Paddle class.- be able to maintain lives lost and scores for the game.- be able to maintain tournament data.In this lab, you will work on PongGameV3_0, PongGameV4_0 and PongGameV5_0.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-more-on-pong/book-2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-10b </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-more-on-pong/book-2/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- - be familiar with the Player class. - be familiar with how arrays are used in the Player class. - be familiar with how the Player class is incorporated into the game.- be able to understand and call simple data analysis algorithms.- be able to switch output from console to dialog boxes when appropriate. In this lab, you will work on PongGameV5_0, PongGame7_0 and PongGameV8_0.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-more-on-pong/book-3/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-10c </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-more-on-pong/book-3/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- be familiar with the pythagorean theorem for collision detection.In this lab, you will work on PongGameV9_0.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic13-assignments/book-1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Formative Assessment </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic13-assignments/book-1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The details of your formative assessment are listed in this area.  The marks you get from this assessment will NOT go towards your final module mark but will act as a learning tool for attempting and submitting an assignment.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic13-assignments/book-2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Assignment-1 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic13-assignments/book-2/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <h2>Overview of assignment - This is your first assignment.  - You are asked to write a working animation.  - You will then be asked to present your code during your lab the week following submission.</h2>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic13-assignments/book-3/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Assignment-2 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic13-assignments/book-3/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <h2>Overview of assignment - This is your second assignment.  - You are asked to write a working animation.  - You will be asked to interview on your code during study week.</h2>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

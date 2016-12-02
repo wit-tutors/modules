@@ -1,0 +1,106 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Create 'scott' database/schema and use this database
+-- -----------------------------------------------------
+
+CREATE SCHEMA IF NOT EXISTS scott ;
+
+USE scott ;
+
+-- -----------------------------------------------------
+-- Create table scott.dept
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS scott.dept (
+  deptno INT NOT NULL,
+  dname VARCHAR(14),
+  loc VARCHAR (13),
+  PRIMARY KEY (deptno) )
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Create table scott.emp
+-- -----------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS scott.emp (
+
+  empno INT NOT NULL,
+  ename VARCHAR(10),
+  job VARCHAR(9),
+  mgr INT,
+  hiredate DATE,
+  sal DECIMAL(7,2),
+  comm DECIMAL(7,2),
+  deptno INT,
+  PRIMARY KEY (empno),
+	CONSTRAINT fk_deptno
+	FOREIGN KEY (deptno)
+	REFERENCES scott.dept(deptno) )
+ENGINE = InnoDB;
+
+USE scott ;
+
+-- -----------------------------------------------------
+-- Populate table scott.dept
+-- -----------------------------------------------------
+
+INSERT INTO DEPT VALUES (10,'ACCOUNTING','NEW YORK');
+
+INSERT INTO DEPT VALUES (20,'RESEARCH','DALLAS');
+
+INSERT INTO DEPT VALUES (30,'SALES','CHICAGO');
+
+INSERT INTO DEPT VALUES (40,'OPERATIONS','BOSTON');
+
+-- -----------------------------------------------------
+-- Populate table scott.emp
+-- -----------------------------------------------------
+INSERT INTO EMP VALUES 
+(7369,'SMITH','CLERK',7902,'1980-12-17',800,NULL,20);
+
+INSERT INTO EMP VALUES
+(7499,'ALLEN','SALESMAN',7698,'1981-02-20',1600,300,30);
+
+INSERT INTO EMP VALUES
+(7521,'WARD','SALESMAN',7698,'1981-02-22',1250,500,30);
+
+INSERT INTO EMP VALUES
+(7566,'JONES','MANAGER',7839,'1981-04-02',2975,NULL,20);
+
+INSERT INTO EMP VALUES
+(7654,'MARTIN','SALESMAN',7698,'1981-09-28',1250,1400,30);
+
+INSERT INTO EMP VALUES
+(7698,'BLAKE','MANAGER',7839,'1981-05-01',2850,NULL,30);
+
+INSERT INTO EMP VALUES
+(7782,'CLARK','MANAGER',7839,'1981-06-09',2450,NULL,10);
+
+INSERT INTO EMP VALUES
+(7788,'SCOTT','ANALYST',7566,'1987-07-13',3000,NULL,20);
+
+INSERT INTO EMP VALUES
+(7839,'KING','PRESIDENT',NULL,'1981-11-17',5000,NULL,10);
+
+INSERT INTO EMP VALUES
+(7844,'TURNER','SALESMAN',7698,'1981-09-08',1500,0,30);
+
+INSERT INTO EMP VALUES
+(7876,'ADAMS','CLERK',7788,'1987-07-13',1100,NULL,20);
+
+INSERT INTO EMP VALUES
+(7900,'JAMES','CLERK',7698,'1981-12-03',950,NULL,30);
+
+INSERT INTO EMP VALUES
+(7902,'FORD','ANALYST',7566,'1981-12-03',3000,NULL,20);
+
+INSERT INTO EMP VALUES
+(7934,'MILLER','CLERK',7782,'1982-01-23',1300,NULL,10);
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

@@ -1,0 +1,712 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Programming Fundamentals I (Processing)</h2>
+    <p> All Slides in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Dr. Siobhan Drohan & Mairead Meagher .
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic01-intro-to-processing/talk-1/a-processing-pde.pdf">
+      Introduction to the PDE
+    </a>
+    
+    <a class="item" href="topic01-intro-to-processing/talk-2/b-processing-static-drawings.pdf">
+      Static Drawings
+    </a>
+    
+    <a class="item" href="topic01-intro-to-processing/talk-3/c-processing-formatting-shapes.pdf">
+      Formatting Shapes
+    </a>
+    
+    <a class="item" href="topic02-animate-your-drawings/talk-1/a-processing-basic-animation.pdf">
+      Basic Animation
+    </a>
+    
+    <a class="item" href="topic02-animate-your-drawings/talk-2/b-processing-data-types.pdf">
+      Data Types
+    </a>
+    
+    <a class="item" href="topic03-conditionals-and-events/talk-1/a-processing-conditional-statements.pdf">
+      Conditional Statements
+    </a>
+    
+    <a class="item" href="topic03-conditionals-and-events/talk-2/b-processing-mouse-events.pdf">
+      Mouse Events
+    </a>
+    
+    <a class="item" href="topic04-iteration-for-while/talk-1/a-scope-of-variables.pdf">
+      Scope of Variables
+    </a>
+    
+    <a class="item" href="topic04-iteration-for-while/talk-2/b-processing-iteration-while.pdf">
+      While loops
+    </a>
+    
+    <a class="item" href="topic04-iteration-for-while/talk-3/c-processing-iteration-for.pdf">
+      For loops
+    </a>
+    
+    <a class="item" href="topic05-methods/talk-1/a-processing-mouse-event-methods.pdf">
+      Mouse event methods
+    </a>
+    
+    <a class="item" href="topic05-methods/talk-2/b-processing-bespoke-methods.pdf">
+      Bespoke methods
+    </a>
+    
+    <a class="item" href="topic06-more-on-methods/talk-1/a-processing-more-on-methods.pdf">
+      More on methods
+    </a>
+    
+    <a class="item" href="topic06-more-on-methods/talk-2/b-processing-strings.pdf">
+      Strings
+    </a>
+    
+    <a class="item" href="topic07-strings-and-intro-to-classes/talk-1/a-processing-more-on-strings.pdf">
+      More on Strings
+    </a>
+    
+    <a class="item" href="topic07-strings-and-intro-to-classes/talk-2/b-processing-classes-and-objects.pdf">
+      Classes and Objects
+    </a>
+    
+    <a class="item" href="topic08-classes-encapsulation/talk-1/a-processing-classes-adding-behaviour.pdf">
+      Behaviour in Classes
+    </a>
+    
+    <a class="item" href="topic08-classes-encapsulation/talk-2/b-processing-encapsulation.pdf">
+      Classes and Objects
+    </a>
+    
+    <a class="item" href="topic09-arrays-and-pong/talk-1/a-processing-joptionpane.pdf">
+       Using Swing
+    </a>
+    
+    <a class="item" href="topic09-arrays-and-pong/talk-2/a-processing-arrays.pdf">
+       Using Arrays
+    </a>
+    
+    <a class="item" href="topic09-arrays-and-pong/talk-3/a-processing-game-of-pongV1_V2.pdf">
+      Game of Pong
+    </a>
+    
+    <a class="item" href="topic10-more-on-pong/talk-1/a-processing-game-of-pongV3_V4_V5.pdf">
+      Game of Pong
+    </a>
+    
+    <a class="item" href="topic10-more-on-pong/talk-2/b-processing-game-of-pongV6_V7_V8.pdf">
+       PongGame - Advanced versions
+    </a>
+    
+    <a class="item" href="topic10-more-on-pong/talk-3/c-processing-game-of-pong-V9-pythagoras.pdf">
+      Game of Pong - Pythagoreas Collision Detection
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic01-intro-to-processing/talk-1/a-processing-pde.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Introduction to the PDE </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01-intro-to-processing/talk-1/a-processing-pde.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We start by exploring Processing and then looking into the Processing Development Environment (PDE).</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01-intro-to-processing/talk-2/b-processing-static-drawings.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Static Drawings </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01-intro-to-processing/talk-2/b-processing-static-drawings.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Here we will start to code.  In particular, we will step through the creation of static drawings using basic shapes.  You will also cover Grayscale and RGB colour schemes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01-intro-to-processing/talk-3/c-processing-formatting-shapes.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Formatting Shapes </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01-intro-to-processing/talk-3/c-processing-formatting-shapes.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Here we will format basic shapes with colour and outline.  We will also look at commenting your code.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-animate-your-drawings/talk-1/a-processing-basic-animation.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Basic Animation </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-animate-your-drawings/talk-1/a-processing-basic-animation.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We start by exploring the setup() and draw() functions that animate our drawings.  We will also look at system variables that come with Processing.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-animate-your-drawings/talk-2/b-processing-data-types.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Data Types </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-animate-your-drawings/talk-2/b-processing-data-types.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will investigate Java&#39;s primitive data types and learn about some arithmetic operators that we can use with them.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-conditionals-and-events/talk-1/a-processing-conditional-statements.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Conditional Statements </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-conditionals-and-events/talk-1/a-processing-conditional-statements.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will learn how to write conditional statements (if statements) and boolean expressions in Java.  We will also learn about logical operators. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-conditionals-and-events/talk-2/b-processing-mouse-events.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Mouse Events </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-conditionals-and-events/talk-2/b-processing-mouse-events.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will learn how to handle mouse events.  We will also do a recap on Arithmetic Operators but this time, we will look at the order of evalation of these operators. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-iteration-for-while/talk-1/a-scope-of-variables.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Scope of Variables </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-iteration-for-while/talk-1/a-scope-of-variables.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will look at the principles behind where a where a variable is availble for use. Also we look at some nice new assignment statements. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-iteration-for-while/talk-2/b-processing-iteration-while.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> While loops </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-iteration-for-while/talk-2/b-processing-iteration-while.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Having learnt how to control repetition using for loops, we will now look at another approach...using while loops.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-iteration-for-while/talk-3/c-processing-iteration-for.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> For loops </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-iteration-for-while/talk-3/c-processing-iteration-for.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Having learnt how to control repetition using while loops, we will now look at another approach...using for loops. We then look at comparative uses of for and while loops.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-methods/talk-1/a-processing-mouse-event-methods.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Mouse event methods </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-methods/talk-1/a-processing-mouse-event-methods.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>To handle mouse events, we will learn how to use mouse methods instead of testing the mouse system variables.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-methods/talk-2/b-processing-bespoke-methods.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Bespoke methods </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-methods/talk-2/b-processing-bespoke-methods.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will learn how to write our own methods in this session.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-more-on-methods/talk-1/a-processing-more-on-methods.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> More on methods </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-more-on-methods/talk-1/a-processing-more-on-methods.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will look at writing more methods in this session.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-more-on-methods/talk-2/b-processing-strings.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Strings </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-more-on-methods/talk-2/b-processing-strings.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will learn more about Strings and the methods we can use on them.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-strings-and-intro-to-classes/talk-1/a-processing-more-on-strings.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> More on Strings </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-strings-and-intro-to-classes/talk-1/a-processing-more-on-strings.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will look at more complex String methods; ones that use the indexed location of the characters comprising the String.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-strings-and-intro-to-classes/talk-2/b-processing-classes-and-objects.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Classes and Objects </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-strings-and-intro-to-classes/talk-2/b-processing-classes-and-objects.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this session, we will move beyond the String class and look at writing our own, bespoke classes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08-classes-encapsulation/talk-1/a-processing-classes-adding-behaviour.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Behaviour in Classes </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08-classes-encapsulation/talk-1/a-processing-classes-adding-behaviour.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will look at extending the Spot class by adding behaviour (i.e. methods).</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08-classes-encapsulation/talk-2/b-processing-encapsulation.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Classes and Objects </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08-classes-encapsulation/talk-2/b-processing-encapsulation.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this session, we will learn why our design of Spot breaks encapsulation rules.  We will then fix our design.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-arrays-and-pong/talk-1/a-processing-joptionpane.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header">  Using Swing </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-arrays-and-pong/talk-1/a-processing-joptionpane.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this session you will learn about the concept of Swing and it&#39;s JOptionPane methods</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-arrays-and-pong/talk-2/a-processing-arrays.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header">  Using Arrays </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-arrays-and-pong/talk-2/a-processing-arrays.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this session, you will learn about primitive arrays and their syntax.  You will also learn how to use loops with arrays as well as using JOptionPane to read input into arrays. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-arrays-and-pong/talk-3/a-processing-game-of-pongV1_V2.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Game of Pong </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-arrays-and-pong/talk-3/a-processing-game-of-pongV1_V2.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will look at the completed Game of Pong solution (V8.0) and start working on V1.0 and V2.0</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-more-on-pong/talk-1/a-processing-game-of-pongV3_V4_V5.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Game of Pong </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-more-on-pong/talk-1/a-processing-game-of-pongV3_V4_V5.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will continue working on Game of Pong and investigate V3.0, V4.0 and V5.0</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-more-on-pong/talk-2/b-processing-game-of-pongV6_V7_V8.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header">  PongGame - Advanced versions </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-more-on-pong/talk-2/b-processing-game-of-pongV6_V7_V8.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this session we will delve deeper into the Pong game and look at the Player class and its use of Arrays.  We will also look at simple data analysis algorithms along with other techniques for outputting data.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-more-on-pong/talk-3/c-processing-game-of-pong-V9-pythagoras.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Game of Pong - Pythagoreas Collision Detection </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-more-on-pong/talk-3/c-processing-game-of-pong-V9-pythagoras.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We will introduce the pythagorean theorem for collision detection (PongGameV9_0).</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

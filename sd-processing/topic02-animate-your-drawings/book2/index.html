@@ -1,0 +1,430 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Animating your drawings
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Code to Download">
+      Code to Download
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-intro-to-processing/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-animate-your-drawings/book1/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic02-animate-your-drawings/book2/index.html">
+          Code to Download
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-conditionals-and-events/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-iteration-for-while/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-methods/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-more-on-methods/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-strings-and-intro-to-classes/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-classes-encapsulation/book-1/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-arrays-and-pong/book-1/index.html">
+          Lab-9a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-arrays-and-pong/book-2/index.html">
+          Lab-9b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-arrays-and-pong/book-3/index.html">
+          Lab-9c
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-more-on-pong/book-1/index.html">
+          Lab-10a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-more-on-pong/book-2/index.html">
+          Lab-10b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-more-on-pong/book-3/index.html">
+          Lab-10c
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic13-assignments/book-1/index.html">
+          Formative Assessment
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic13-assignments/book-2/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic13-assignments/book-3/index.html">
+          Assignment-2
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Code to Download">
+        <h1>Objectives</h1>
+<p>On completion of this lab you should:</p>
+<ul>
+<li><p>have downloaded code used in class.</p>
+</li>
+<li><p>understand the code used.</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Code used in lectures this week</h1>
+<p>The solution for the previous lab can be found <a href="archives/lab01_solution.zip">here</a>. </p>
+<h1>Remember our lab advice!</h1>
+<ul>
+<li>Your labs are not a race to be the first student finished.</li>
+<li>It is very important that you:<ul>
+<li>take your time.</li>
+<li>read the instructions carefully.</li>
+<li>ask your lecturer to explain concepts that you don&#39;t understand; that is what we are here for!</li>
+<li>attend &#39;&#39;ALL&#39;&#39; your classes; attendance will be taken.</li>
+</ul>
+</li>
+<li>where code is given in labs, don&#39;t cut and paste it; maximise your learning by typing the code in.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>draw() method</h1>
+<pre><code>void setup()
+{
+  size(500,400); 
+  background(0);
+}
+
+void draw()
+{
+  stroke(0, 0, 0);
+  fill(60, 220, 90);
+  ellipse(mouseX, mouseY, 100, 100);
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h2>Declaring Variables</h2>
+<pre><code>byte firstNumber;          //declares a variable firstNumber of type byte
+int secondNumber;       //declares a variable secondNumber of type int
+
+firstNumber = 40;          //assign a value of 40 to firstNumber
+secondNumber = 70;    //assign a value of 70 to secondNumber
+
+int thirdNumber = 80;   //you can declare a variable and assign a value
+                                     //on one line.
+
+int x, y, z;                      //multiple variables of the same type can be defined
+                                    //on one line.</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>System Variables in Processing</h1>
+<pre><code>void setup()
+{
+  size(500,400); 
+}
+
+void draw()
+{
+  background(0);
+  stroke(0, 0, 0);
+  fill(60, 220, 90);
+  rect(0,100,width, 15);
+  ellipse(mouseX, mouseY, 100, 100);
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Arithmethic Operators - Exercises</h1>
+<h2>Exercise 1</h2>
+<pre><code>size(500, 400);
+background(0);
+stroke(153);
+strokeWeight(4);
+
+int a = 50;
+int b = 120;
+int c = 180;
+
+line(a, b, a+c, b);
+line(a, b+10, a+c, b+10);
+line(a, b+20, a+c, b+20);
+line(a, b+30, a+c, b+30);</code></pre>
+<h2>Exercise 2</h2>
+<pre><code>size(500, 400);
+background(0);
+stroke(153);
+strokeWeight(4);
+
+int a = 50;
+int b = 120;
+int c = 180;
+
+line(a, b, a+c, b);
+line(a, b+10, a+c, b+10);
+line(a, b+20, a+c, b+20);
+line(a, b+30, a+c, b+30);
+
+a = a + c;
+b = height-b;
+
+line(a, b, a+c, b);
+line(a, b+10, a+c, b+10);
+line(a, b+20, a+c, b+20);
+line(a, b+30, a+c, b+30);</code></pre>
+<h2>Exercise 3</h2>
+<pre><code>size(400, 200);
+background(0);
+stroke(153);
+strokeWeight(4);
+
+int a = 50;
+int b = 1500;
+int c = 4;
+
+line(a, b/10, a*c, b/10);
+line(a, b/20, a*c, b/20);
+line(a, b/30, a*c, b/30);
+line(a, b/40, a*c, b/40);
+line(a, b/50, a*c, b/50);</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Dr. Siobhan Drohan & Mairead Meagher .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

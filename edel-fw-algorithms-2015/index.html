@@ -1,0 +1,614 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Algorithms</h2>
+    <p> Top Level Topics </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="#"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Frank Walsh & Eamonn De Leastar .
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic01/index.html">
+        Classes, Interfaces & Objects
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic01/talk-1/objects-and-classes.pdf">
+          Classes & Objects</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/talk-2/data-abstraction-and-api.pdf">
+          Data Abstraction and Application Programming Interfaces (APIs) </a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/book-1/index.html">
+          Lab-01</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/book-2/index.html">
+          Lab-02</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/book-3/index.html">
+          Lab-03</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic02/index.html">
+        Introduction to Algorithms
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-1/intro.pdf">
+          Algorithms Intro and Union Find</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-2/image_processing.pdf">
+          Digital Images and Java</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/book-1/index.html">
+          Lab-04</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/book-2/index.html">
+          Image_Processing_Lab</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/book-3/index.html">
+          Assignment-1</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic03/index.html">
+        TDD Part I
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-a-tdd-intro/tdd-intro.pdf">
+          TDD Introduction</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-b-tdd-first-tests/first-tests.pdf">
+          First Tests</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-c-junit-annotations/annotations.pdf">
+          Annotations</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/book-TDD-01/index.html">
+          TDD-01</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic04/index.html">
+        Analysis of Algorithms
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-1/analysis.pdf">
+          Analysis of Algorithms</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/book-1/index.html">
+          Lab-05</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic05/index.html">
+        Sorting
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-1/sorts.pdf">
+          Sorting</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-2/recursion.pdf">
+          Recursion</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-3/divide_and_conquer.pdf">
+          Divide and Conquer</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/book-1/index.html">
+          Lab-06</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/book-2/index.html">
+          assignment-2</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic06/index.html">
+        Collections & Pacemaker
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-a-collections/b-collections.pdf">
+          Collections</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-b-pragmatic-testing/b-pragmatic-testing.pdf">
+          Pragmatic Testing</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-c-pacemaker-first-tests/pacemaker.pdf">
+          Pacemaker with First Tests</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-d-pacemaker-tests+fixtures/c-pacemaker-tests.pdf">
+          Pacemaker with Fixtures + Tests</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/book-TDD-02/index.html">
+          TDD-02</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/book-TDD-03/index.html">
+          TDD-03</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic07/index.html">
+        TDD Part II
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-a-writing-tests/a-writing-tests.pdf">
+          Writing Tests</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-b-right-bicep/b-bicep.pdf">
+          Right BICEP</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-c-correct/c-correct.pdf">
+          C.O.R.R.E.C.T</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-d- asssignment-tests/assignment-tests.pdf">
+          Assignment Tests</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/book-TDD-04/index.html">
+          TDD-04</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic08/index.html">
+        Serialization
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-a-streams/a-streams.pdf">
+          Streams</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-b-serializers/serializers.pdf">
+          Pacemaker TDD 05</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-c-pacemake-serializer/pacemaker-tdd-05.pdf">
+          Pacemaker TDD 05</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-d-exceptions/a-exceptions.pdf">
+          Exceptions</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-e-movies/movies-1.pdf">
+          Movie Assignment</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-f-movies-2/movies-2.pdf">
+          Movie Serialization</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/book-TDD-05/index.html">
+          TDD-Lab-05</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/book-x-cmd-line/index.html">
+          Command-Line</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic09/index.html">
+        #Repeat Assignment
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+          
+  <a class="ui raised link card" href="./topic01/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Classes, Interfaces & Objects </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic01/talk-1/objects-and-classes.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This topic provides a quick review of Java Objects, Classes and Interfaces. You will also cover packages, constructors, polymorphism, information hiding and abstract classes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic02/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Introduction to Algorithms </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic02/talk-1/intro.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic03/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> TDD Part I </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic03/talk-a-tdd-intro/tdd-intro.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Test Driven Development has been among the most influential approaches in recent software engineering history. Here we look at its origins, principles and some of the important benefits of the approach.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic04/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Analysis of Algorithms </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic04/talk-1/analysis.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>As you begin to create more complex programs that process large amounts of data you will need to consider performance (e.g. how long will my program take to run?). This topic introduces the scientific method for predicting the running time of your algorithms. You will also learn how to produce mathematical models  for algorithms and estimate an algorithms order of growth using tilda notation.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic05/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Sorting </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic05/talk-1/sorts.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic06/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Collections & Pacemaker </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic06/talk-a-collections/b-collections.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>All programming languages will have support for a range of common data structures. Unlike typical dynamic programming language, collections are implemented as a standard library in Java (as opposed to being built in). We will survey the major features of this library, focusing on the principle interfaces and implementations. There is considerable more to collections, which should be investigated independently.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic07/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> TDD Part II </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic07/talk-a-writing-tests/a-writing-tests.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A review of the basic structure of JUnit based tests, elaborating on the primary assert calls and annotations + Guidelines for Composing Tests phrased using the acronym: - Right, Boundary, Inverse, Cross-check, Errors &amp; Performance.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic08/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Serialization </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic08/talk-a-streams/a-streams.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic09/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> #Repeat Assignment </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic09/book-1/img/main.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Repeat assignment specification.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

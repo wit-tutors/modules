@@ -1,0 +1,847 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      OCP and Play Tests
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-10">
+      Lab-10
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01 - paradigms and languages/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02 - java language/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03 - inheritance and collections/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04 - serialisation and TDD I/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05 - TDD II/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06 - exceptions and maven/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-1/index.html">
+          Lab-08a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-2/index.html">
+          Lab-08b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-1/index.html">
+          Lab-09a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-2/index.html">
+          Lab-09b
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic10 - OCP and play testing/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-2/index.html">
+          Lab-11b
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-10">
+        <h1>Objectives</h1>
+<p>Start writing unit tests for our play framework app i.e. test the models, views and controllers over the REST api.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Getting ready</h1>
+<p>Should you need it, this is the solution to the previous lab.  We will use this as the starting point for this lab:</p>
+<ul>
+<li><a href="archives/pacemakerplay-lab10-start.zip">Starting point for lab</a></li>
+</ul>
+<p>Note that we removed the nationality field from User; it was only inserted to demonstrate database evolutions.</p>
+<p>If you are using our starting code, download, unzip and import it into eclipse.</p>
+<h2>Use in-memory database</h2>
+<p>Open your application.conf and make sure you are using the h2 database (it is uncommented):</p>
+<pre><code>  #remote postgres database on heroku
+  #default.driver=org.postgresql.Driver
+  #default.url=&quot;jdbc:postgresql://ec2-54-235-208-3.compute-1.amazonaws.com:5432/dbjga15tgnfbef?user=euoojolrsszmcl&amp;password=G66hiSiTNonBJvZpI4ty55fRzA&amp;ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory&quot;
+  #default.url=${DATABASE_URL}
+
+  #local h2 database
+  default.driver = org.h2.Driver
+  default.url = &quot;jdbc:h2:mem:play&quot;
+  default.username = sa
+  default.password = &quot;&quot;</code></pre>
+<h2>Ensure all is ok with the app (localhost)</h2>
+<p>Within your project folder, open your command prompt/shell and run the app (localhost) just to make sure all is ok before we start updating the code.</p>
+<pre><code>activator run</code></pre>
+<p>Now we are ready to start writing JUnit tests.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Testing Models (User)</h1>
+<p>There are three different approaches that we will cover for testing our model, User (UserTest1, UserTest2 and UserTest3).</p>
+<p>In the test folder of your project, create a new package called <strong>models</strong>.  </p>
+<p>Within this package, create a new JUnit test class called <strong>UserTest1</strong>.</p>
+<p><img src="img/00.png" alt=""></p>
+<p>Delete the generated <strong>test()</strong> method.</p>
+<p><img src="img/01.png" alt=""></p>
+<h2>h2 database</h2>
+<p>Ensure that your <strong>application.conf</strong> file is using the <strong>in memory</strong> h2 database:</p>
+<pre><code>#local h2 database  
+default.driver = org.h2.Driver 
+default.url = &quot;jdbc:h2:mem:play&quot; 
+default.username = sa 
+default.password = &quot;“</code></pre>
+<h2>UserTest1.java</h2>
+<p>Add the following test to UserTest1.java:</p>
+<pre><code class="lang-java">@Test
+public void createAndRetrieveUserByEmail() {
+
+    // Create a new user and save it
+    new User(&quot;Joe&quot;, &quot;Soap&quot;, &quot;joesoap@gmail.com&quot;, &quot;secret&quot;).save();
+
+    // Retrieve the user with e-mail address joesoap@gmail.com
+    User joesoap = User.findByEmail(&quot;joesoap@gmail.com&quot;);
+
+    // Test 
+    assertNotNull(joesoap);
+    assertThat(&quot;Joe&quot;, equalTo(joesoap.firstname));
+    assertThat(&quot;Soap&quot;, equalTo(joesoap.lastname));
+    assertThat(&quot;joesoap@gmail.com&quot;, equalTo(joesoap.email));
+    assertThat(&quot;secret&quot;, equalTo(joesoap.password));
+}</code></pre>
+<p>In your command shell, make sure you are in the project directory.  Then run this command:</p>
+<pre><code>activator test</code></pre>
+<p>You should expect this test to fail.  </p>
+<p><img src="img/02.png" alt=""></p>
+<p>The problem is that we have no application running.  We will use play&#39;s <strong>fakeApplication</strong> in our tests.</p>
+<h2>fakeApplication</h2>
+<p>Setup a fake application in <strong>UserTest1</strong> by adding the following code to the existing code:</p>
+<pre><code class="lang-java">public static Application fakeApp; 
+
+@BeforeClass
+public static void startApp(){
+    fakeApp = Helpers.fakeApplication(Helpers.inMemoryDatabase());
+    Helpers.start(fakeApp);
+}
+
+@AfterClass
+public static void stopApp(){
+   Helpers.stop(fakeApp);
+}</code></pre>
+<p>You will need to import these classes:</p>
+<pre><code class="lang-java">import play.Application;
+import play.test.Helpers;</code></pre>
+<p>Try the <strong>activator test</strong> command again.  This time you should have success:</p>
+<p><img src="img/03.png" alt=""></p>
+<h2>Force your test to fail</h2>
+<p>You can, if you want, force your test to fail, just to make sure all is ok with your fakeApplication.</p>
+<p>Make a change to any assertion in the above test that will cause a fail e.g.</p>
+<pre><code class="lang-java">assertThat(&quot;ssgsgsecret&quot;, equalTo(joesoap.password));</code></pre>
+<p>Your test should fail as expected:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>Undo the change you made to your assertion.  Ensure your test is passing by running <strong>activator test</strong>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>More tests in UserTest1</h1>
+<p>Before adding another test to UserTest1, create a Fixtures.java file in your <strong>test/models</strong> package.  </p>
+<p>In this file, add the following code:</p>
+<pre><code class="lang-java">public class Fixtures {
+
+    public static String userJson = &quot;{\n&quot;
+              +  &quot;\&quot;email\&quot;    : \&quot;jim@simpson.com\&quot; ,\n&quot;
+              +  &quot;\&quot;firstName\&quot;: \&quot;Jim\&quot;             ,\n&quot;
+              +  &quot;\&quot;lastName\&quot; : \&quot;Simpson\&quot;         ,\n&quot;
+              +  &quot;\&quot;password\&quot; : \&quot;secret\&quot;           \n&quot;
+         + &quot;}&quot;;
+
+    public static User users[] = { 
+          new User (&quot;homer&quot;,  &quot;simpson&quot;, &quot;homer@simpson.com&quot;,  &quot;secret&quot;),
+          new User (&quot;lisa&quot;,   &quot;simpson&quot;, &quot;lisa@simpson.com&quot;,   &quot;secret&quot;),
+          new User (&quot;maggie&quot;, &quot;simpson&quot;, &quot;maggie@simpson.com&quot;, &quot;secret&quot;),
+          new User (&quot;bart&quot;,   &quot;simpson&quot;, &quot;bart@simpson.com&quot;,   &quot;secret&quot;),
+          new User (&quot;marge&quot;,  &quot;simpson&quot;, &quot;marge@simpson.com&quot;,  &quot;secret&quot;),
+        };
+
+}</code></pre>
+<p>Return to <strong>UserTest1</strong> and add the following test to it:</p>
+<pre><code class="lang-java">@Test
+public void deleteAllUsersResultsInEmptyUserTable() {
+
+  //Assert that the user table is empty
+  assertThat(User.findAll().size(), equalTo(0));
+
+  // Add all the users listed in the Fixtures class to the user table
+  for (User user : Fixtures.users){
+    new User(user.firstname, 
+             user.lastname, 
+             user.email, 
+             user.password)
+            .save();
+  }
+  //Ensure all were added successfully
+  assertThat(User.findAll().size(), equalTo(Fixtures.users.length));
+
+  //Delete all the users that were just added
+  User.deleteAll();
+
+  //Assert that the user table is once again empty
+  assertThat(User.findAll().size(), equalTo(0));
+}</code></pre>
+<p>In your command prompt, run your tests:</p>
+<pre><code>activator test</code></pre>
+<p>The test will fail:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>The test failed because the previous test added a User record to our User table.  Therefore, the first assertion in the above test fails:</p>
+<pre><code class="lang-java">assertThat(User.findAll().size(), equalTo(0));</code></pre>
+<p>As each test should ideally be independent of the other tests in the class, we need to clean our database before each test.  There are two options for doing this.</p>
+<h2>Option 1 - Creating a new fakeApplication for each test</h2>
+<p>Our current test class creates a new fakeApplication before the class runs and stops the fakeApplication after the class finishes running:</p>
+<pre><code class="lang-java">@BeforeClass
+public static void startApp(){
+    fakeApp = Helpers.fakeApplication(Helpers.inMemoryDatabase());
+    Helpers.start(fakeApp);
+}
+
+@AfterClass
+public static void stopApp(){
+   Helpers.stop(fakeApp);
+}</code></pre>
+<p>Refactor your class so that the fakeApplication is created before each test:</p>
+<pre><code class="lang-java">@Before
+public void startApp(){
+    fakeApp = Helpers.fakeApplication(Helpers.inMemoryDatabase());
+    Helpers.start(fakeApp);
+}
+
+@After
+public void stopApp(){
+   Helpers.stop(fakeApp);
+}</code></pre>
+<p>Run your tests.  The failing test should now pass.</p>
+<h2>Option 2 - Using the evolutions scripts to drop and recreate user table</h2>
+<p>Option 1 above can result in slow running tests as we are creating and stopping a fakeApplication for each test.  </p>
+<p>Another option is to create the fakeApplication once in the a test class and use the play generated evolution scripts to drop and recreate the User table before each test. </p>
+<p>Remove the existing before and after methods from <strong>UserTest1</strong> and replace it with these:</p>
+<pre><code class="lang-java">  //instance fields
+  public static String createDdl = &quot;&quot;;
+  public static String dropDdl = &quot;&quot;;
+
+  @BeforeClass
+  public static void startApp() throws IOException {
+    fakeApp = Helpers.fakeApplication(Helpers.inMemoryDatabase());
+    Helpers.start(fakeApp);
+    // Reading the evolution file
+    String evolutionContent = FileUtils.readFileToString( 
+    fakeApp.getWrappedApplication().getFile(&quot;conf/evolutions/default/1.sql&quot;));
+    // Splitting the String to get Create &amp; Drop DDL
+    String[] splittedEvolutionContent = evolutionContent.split(&quot;# --- !Ups&quot;);
+    String[] upsDowns = splittedEvolutionContent[1].split(&quot;# --- !Downs&quot;);
+    createDdl = upsDowns[0];
+    dropDdl = upsDowns[1];
+  }
+
+  @AfterClass
+  public static void stopApp(){
+    Helpers.stop(fakeApp);
+  }
+
+  @Before
+  public void createCleanDb() {
+    Ebean.execute(Ebean.createCallableSql(dropDdl));
+    Ebean.execute(Ebean.createCallableSql(createDdl));
+  }</code></pre>
+<p>Run your tests again:</p>
+<pre><code>activator test</code></pre>
+<p>The tests should run successfully because the user table is cleared down before each test:</p>
+<p><img src="img/06.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Testing Models - UserTest2</h1>
+<p>Another way of testing models is to use lambdas functions to set up your fakeApplication.</p>
+<p>In your <strong>test/models</strong> package, create a new JUnit test class <strong>UserTest2</strong>.</p>
+<p>Enter the following code into it:</p>
+<pre><code class="lang-java">package models;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+import static org.hamcrest.CoreMatchers.*;
+import static play.test.Helpers.*;
+
+public class UserTest2 {
+
+@Test
+public void createAndRetrieveUserByEmail() {
+  running(fakeApplication(inMemoryDatabase()), () -&gt; {
+    // Create a new user and save it
+    new User(&quot;Joe&quot;, &quot;Soap&quot;, &quot;joesoap@gmail.com&quot;, &quot;secret&quot;).save();
+    // Retrieve the user with e-mail address joesoap@gmail.com
+    User joesoap = User.findByEmail(&quot;joesoap@gmail.com&quot;);
+    // Test 
+    assertNotNull(joesoap);
+    assertThat(&quot;Joe&quot;, equalTo(joesoap.firstname));
+    assertThat(&quot;Soap&quot;, equalTo(joesoap.lastname));
+    assertThat(&quot;joesoap@gmail.com&quot;, equalTo(joesoap.email));
+    assertThat(&quot;secret&quot;, equalTo(joesoap.password));
+      });
+   }
+}</code></pre>
+<p>Via your command prompt, run the tests:</p>
+<pre><code>activator test</code></pre>
+<p>All should run successfully:</p>
+<p><img src="img/07.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Testing Models - UserTest3</h1>
+<p>Another way of testing models is to extend <strong>WithApplication</strong>.</p>
+<p>In your <strong>test/models</strong> package, create a new JUnit test class <strong>UserTest3</strong>.</p>
+<p>Enter the following code into it:</p>
+<pre><code class="lang-java">package models;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+import play.test.WithApplication;
+import static org.hamcrest.CoreMatchers.*;
+import static play.test.Helpers.*;
+
+public class UserTest3 extends WithApplication{
+//automatically ensures that a fake application is started
+//and stopped for each test method.
+
+  @Test
+  public void createAndRetrieveUserByEmail() {
+
+    // Create a new user and save it
+    new User(&quot;Joe&quot;, &quot;Soap&quot;, &quot;joesoap@gmail.com&quot;, &quot;secret&quot;).save();
+
+    //Retrieve the user with e-mail address joesoap@gmail.com
+    User joesoap = User.findByEmail(&quot;joesoap@gmail.com&quot;);
+
+    // Test 
+    assertNotNull(joesoap);
+    assertThat(&quot;Joe&quot;, equalTo(joesoap.firstname));
+    assertThat(&quot;Soap&quot;, equalTo(joesoap.lastname));
+    assertThat(&quot;joesoap@gmail.com&quot;, equalTo(joesoap.email));
+    assertThat(&quot;secret&quot;, equalTo(joesoap.password));
+  }
+}</code></pre>
+<p>Via your command prompt, run the tests:</p>
+<pre><code>activator test</code></pre>
+<p>All should run successfully:</p>
+<p><img src="img/08.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Testing HomeController</h1>
+<p>Currently the code in your HomeController.java class is this:</p>
+<pre><code class="lang-java">package controllers;
+
+import play.mvc.*;
+import views.html.*;
+
+/**
+ * This controller contains an action to handle HTTP requests
+ * to the application&#39;s home page.
+ */
+public class HomeController extends Controller {
+    /**
+     * An action that renders an HTML page with a welcome message.
+     * The configuration in the &lt;code&gt;routes&lt;/code&gt; file means that
+     * this method will be called when the application receives a
+     * &lt;code&gt;GET&lt;/code&gt; request with a path of &lt;code&gt;/&lt;/code&gt;.
+     */
+    public Result index() {
+        return ok(index.render(&quot;Welcome to Pacemaker Web 1.0&quot;));
+    }
+}</code></pre>
+<p>In the test folder of your project, create a new package called <strong>controllers</strong>.  </p>
+<p>Within this package, create a new JUnit test class called <strong>HomeControllerTest</strong>.</p>
+<p><img src="img/09.png" alt=""></p>
+<p>Delete the generated <strong>test()</strong> method.</p>
+<p><img src="img/10.png" alt=""></p>
+<p>Enter the following code into the <strong>HomeControllerTest</strong> class:</p>
+<pre><code class="lang-java">package controllers;
+
+import static org.junit.Assert.*;
+import static play.mvc.Http.Status.OK;
+import static play.test.Helpers.contentAsString;
+
+import org.junit.Test;
+import play.mvc.Result;
+
+public class HomeControllerTest {
+
+    @Test
+    //Testing the index method to ensure the home page of the 
+    //application is rendered correctly
+    public void testIndex() {
+      Result result = new HomeController().index();
+      assertEquals(OK, result.status());
+      assertEquals(&quot;text/html&quot;, result.contentType().get());
+      assertEquals(&quot;utf-8&quot;, result.charset().get());
+      assertTrue(contentAsString(result).contains(&quot;Welcome to Pacemaker Web&quot;));
+    }
+
+}</code></pre>
+<p>Via your command prompt, run the tests:</p>
+<pre><code>activator test</code></pre>
+<p>All should run successfully:</p>
+<p><img src="img/11.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Testing PacemakerAPI</h1>
+<p>Open your PacemakerAPI.java class. Review the code so that it is fresh in your mind.</p>
+<p>Open the conf/routes file.  Review the contents also.  We will be testing our PacemakerAPI via these routes.</p>
+<p>Open the test/models/Fixtures file.  Note in particular the String <strong>userJson</strong>.  We will use this in our tests also:</p>
+<pre><code class="lang-java">public class Fixtures {
+
+    public static String userJson = &quot;{\n&quot;
+              +  &quot;\&quot;email\&quot;    : \&quot;jim@simpson.com\&quot; ,\n&quot;
+              +  &quot;\&quot;firstName\&quot;: \&quot;Jim\&quot;             ,\n&quot;
+              +  &quot;\&quot;lastName\&quot; : \&quot;Simpson\&quot;         ,\n&quot;
+              +  &quot;\&quot;password\&quot; : \&quot;secret\&quot;           \n&quot;
+         + &quot;}&quot;;
+
+      public static User users[] = { 
+          new User (&quot;homer&quot;,  &quot;simpson&quot;, &quot;homer@simpson.com&quot;,  &quot;secret&quot;),
+          new User (&quot;lisa&quot;,   &quot;simpson&quot;, &quot;lisa@simpson.com&quot;,   &quot;secret&quot;),
+          new User (&quot;maggie&quot;, &quot;simpson&quot;, &quot;maggie@simpson.com&quot;, &quot;secret&quot;),
+          new User (&quot;bart&quot;,   &quot;simpson&quot;, &quot;bart@simpson.com&quot;,   &quot;secret&quot;),
+          new User (&quot;marge&quot;,  &quot;simpson&quot;, &quot;marge@simpson.com&quot;,  &quot;secret&quot;),
+        };
+
+}</code></pre>
+<h2>Testing the PacemakerAPI createUser() method</h2>
+<p>In the <strong>test/controllers</strong> package, create a new JUnit test class called <strong>PacemakerAPITest</strong> and enter the following code into it:</p>
+<pre><code class="lang-java">package controllers;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+import models.Fixtures;
+import play.libs.Json;
+import com.fasterxml.jackson.databind.JsonNode;
+import play.mvc.Http.RequestBuilder;
+import static play.test.Helpers.POST;
+import static play.test.Helpers.route;
+import static play.mvc.Http.Status.OK;
+import static org.hamcrest.CoreMatchers.equalTo;
+import play.mvc.Result;
+import play.test.WithApplication;
+
+public class PacemakerAPITest extends WithApplication{
+
+    @Test
+    //This route test should call the createUser() method in PacemakerAPI
+    public void POSTOnApiUsersRouteCreatesUser() {
+
+      //Set up a user parsed in JsonNode format
+      String body = Fixtures.userJson;
+      JsonNode json = Json.parse(body);
+
+      //Invoke the createUser() method by calling this URI
+      RequestBuilder request = new RequestBuilder()
+              .method(POST)
+              .uri(&quot;/api/users&quot;)
+              .bodyJson(json);
+      Result result = route(request);
+
+      //Test that the HTTP status returned was OK
+      assertThat(result.status(), equalTo(OK));    
+    }
+}</code></pre>
+<p>Via your command prompt, when you run the tests, the above test should be successful:</p>
+<pre><code>activator test</code></pre>
+<p>However, the above test does not check that a user was added to the User table.  Refactor the above test to add assertions to test the contents of the User table before and after the POST e.g.:</p>
+<pre><code class="lang-java">@Test
+    //This route test should call the createUser() method in PacemakerAPI
+    public void POSTOnApiUsersRouteCreatesUser() {
+
+      //ensure the database is empty before exercising tests
+      assertThat(User.findAll().size(), equalTo(0));
+
+      //Set up a new user String in JSON format
+      String body = Fixtures.userJson;
+      JsonNode json = Json.parse(body);
+
+      //Invoke the createUser() method by calling this URI
+      RequestBuilder request = new RequestBuilder()
+              .method(POST)
+              .uri(&quot;/api/users&quot;)
+              .bodyJson(json);
+      Result result = route(request);
+
+      //Test that the HTTP status returned was OK
+      assertThat(result.status(), equalTo(OK));    
+      //ensure the database has one user after exercising tests
+      assertThat(User.findAll().size(), equalTo(1));
+    }</code></pre>
+<p>Via your command prompt, when you run the tests, the above test should also be successful.</p>
+<p>However, if we look at the actual method we are trying to test, you will see that we haven&#39;t tested the two <strong>renderUser</strong> methods:</p>
+<pre><code class="lang-java"> public Result createUser(){
+    User user = renderUser(request().body().asJson().toString());
+    user.save();
+    return ok(renderUser(user));
+  }</code></pre>
+<h2>Testing renderUser methods</h2>
+<p>The renderUser methods are located in the JsonParer class:</p>
+<pre><code class="lang-java">package parsers;
+
+import models.User;
+import flexjson.JSONDeserializer;
+import flexjson.JSONSerializer;
+
+public class JsonParser{
+  private static JSONSerializer userSerializer = new JSONSerializer();
+
+  public static User renderUser(String json){
+    return new JSONDeserializer&lt;User&gt;().deserialize(json, User.class); 
+  }
+
+  public static String renderUser(Object obj){
+    return userSerializer.serialize(obj);
+  }
+}</code></pre>
+<p>Ideally, we should test these methods in a <strong>JsonParserTest</strong> class.  So, in the test folder of your project, create a new package called <strong>parsers</strong>.  </p>
+<p><img src="img/12.png" alt=""></p>
+<p>Within this package, create a new JUnit test class called <strong>JsonParserTest</strong>.</p>
+<p>Delete the generated <strong>test()</strong> method.</p>
+<p><img src="img/13.png" alt=""></p>
+<p>In the <strong>JsonParserTest</strong> class, enter the following code:</p>
+<pre><code class="lang-java">
+package parsers;
+
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.containsString;
+import org.junit.Test;
+import models.User;
+import play.test.WithApplication;
+
+public class JsonParserTest extends WithApplication{
+
+@Test
+public void userConvertsToJsonStringAndBackAgain() {
+      // Create a new user and save it in the database
+    new User(&quot;Jim&quot;, &quot;Simpson&quot;, &quot;jim@simpson.com&quot;, &quot;secret&quot;).save();
+
+    // Retrieve the user we just added by their email address
+    User joesoap = User.findByEmail(&quot;jim@simpson.com&quot;);
+
+    //Test the parsing of the User into a String
+    String jsonReturned = JsonParser.renderUser(joesoap);
+
+    // Test the String returned from the parse contains the user data
+    assertNotNull(jsonReturned);
+    assertThat(jsonReturned, containsString(&quot;jim@simpson.com&quot;));
+    assertThat(jsonReturned, containsString(&quot;Jim&quot;));
+    assertThat(jsonReturned, containsString(&quot;Simpson&quot;));
+    assertThat(jsonReturned, containsString(&quot;secret&quot;));
+
+    // Test the String returned from the parse re-renders into user object format
+    assertThat(joesoap, equalTo(JsonParser.renderUser(jsonReturned)));    
+  }
+}</code></pre>
+<p>Via your command prompt, when you run the tests, the above test should also be successful.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>More PacemakerAPI Test s</h1>
+<p>In the <strong>PacemakerAPITest</strong> class, enter the following tests (read them to ensure you understand the mechanics of the tests):</p>
+<pre><code class="lang-java"> @Test
+ public void DELETEOnApiUsersRouteShouldExist() {
+        RequestBuilder request =  new RequestBuilder()
+                .method(DELETE)
+                .uri(&quot;/api/users&quot;);
+
+        Result result = route(request);
+        assertThat(result.status(), equalTo(OK));
+ }
+
+ @Test
+ public void GETOnApiUsersRouteShouldExist() {
+   Result result = route(fakeRequest(GET,&quot;/api/users&quot;));
+   assertThat(result.status(), equalTo(OK));
+ }
+
+ @Test
+ public void GETOnDummyRouteShouldNotBeFound() {
+   Result result = route(fakeRequest(GET, &quot;/api/blah&quot;));
+   assertThat(result.status(), equalTo(NOT_FOUND));
+ }</code></pre>
+<p>Via your command prompt, when you run the tests, the above test should also be successful.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Testing Templates/Views</h1>
+<p>In a previous lab, when you created your pacemakerplay project from a play-java seed, two sample test classes were created:  <strong>ApplicationTest</strong> and <strong>IntegrationTest</strong>.  </p>
+<p>Open the <strong>ApplicationTest</strong> class (it should be in test/default package):</p>
+<pre><code class="lang-java">public class ApplicationTest {
+
+ @Test
+ //This is just a dummy test to ensure that all is ok with JUnit!
+ public void simpleCheck() {
+   int a = 1 + 1;
+   assertEquals(2, a);
+ }
+
+ @Test
+ public void renderTemplate() {
+   Content html = views.html.index.render(&quot;Welcome to Pacemaker Web 1.0&quot;);
+   assertEquals(&quot;text/html&quot;, html.contentType());
+   assertTrue(html.body().contains(&quot;Welcome to Pacemaker Web 1.0&quot;));
+ }
+
+}</code></pre>
+<p>We are interested in the renderTemplate() method as it is unit testing our view template, index.<br>As a template is a standard Scala function, we can execute it from a test and check the result. </p>
+<p>Review the <strong>renderTemplate</strong> code above.</p>
+<p>If you were having a problem with the test classes in this lab, the solution can be found here:</p>
+<ul>
+<li><a href="archives/pacemakerplay-lab10.zip">Solution for the lab</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & Dr. Siobhan Drohan.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

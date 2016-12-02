@@ -1,0 +1,452 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Introduction to Algorithms
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-04">
+      Lab-04
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-04">
+        <h1>Lab 4 - Union-Find</h1>
+<p> On competing the lab you will:</p>
+<ul>
+<li>Understand the union find algorithm.</li>
+<li>Develop implementation of the union-find algorithm.</li>
+<li>Create a JUnit test for Union Find algorithms using Eclipse.</li>
+<li>Modify union-find implementation to include path compression.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Eclipse: Implement Union Find</h1>
+<p>Develop classes <strong>QuickFindUF, QuickUnionUF</strong> and <strong>WeightedQuickUnionUF</strong> that implement quick-find, quick-union and weighted quick-union respectively. All classes will have the following API:
+<img src="img/00.png" alt=""> </p>
+<h3>Create Eclipse Project</h3>
+<ol>
+<li>Create a new project called <em>lab4</em>.  </li>
+<li>Create a <strong>package</strong> called <em>lab4</em>.</li>
+</ol>
+<h3>Add stdlib jar to the project</h3>
+<ol>
+<li>Create a folder called <em>lib</em> in your project folder.</li>
+<li>Download the <em>stdlib-package</em> jar from <a href="http://introcs.cs.princeton.edu/java/stdlib/stdlib-package.jar">here</a>  and copy to the <em>lib</em> folder.</li>
+<li>Select  the jar file, then right click and select Build Path -&gt; Add to Build Path.</li>
+</ol>
+<h3>Create Class</h3>
+<ol>
+<li>Use the following code as a starter. Please refer to the class notes for instruction on how to implement the methods in the following class: </li>
+</ol>
+<pre><code>package lab4;
+
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
+
+public class QuickFindUF {
+    private int[] id;    // id[i] = component identifier of i
+    private int count;   // number of components
+
+    /**
+     * Initializes an empty union-find data structure with N sites
+     */
+    public QuickFindUF(int N) {
+       //TODO
+    }
+
+    /**
+     * Returns the number of components.
+     */
+    public int count() {
+        //TODO
+        return 0;
+    }
+
+    /**
+     * Returns the component identifier for the component containing site p.
+     */
+    public int find(int p) {
+        //TODO
+        return 0;
+    }
+
+    /**
+     * Returns true if the the two sites are in the same component.
+     */
+    public boolean connected(int p, int q) {
+       //TODO
+        return false;
+    }
+
+    /**
+     * Merges the component containing site p with the 
+     * the component containing site q.
+     */
+    public void union(int p, int q) {
+        //TODO
+    }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Eclipse: Union Find Exercises</h1>
+<p>You should do the following exercises by hand using paper and pencil. Then, confirm your answer for the id[] array using the result from exercise 1(You can use Eclipse Debugging to view the id[] array values or just print the values to the console). The number of ‘sites’ for each question is 10 (i.e. the size of the id[] array,N = 10) </p>
+<ol>
+<li>Show the contents of the id[] array and the number of components for each input pair when you use quick-find for the sequence:
+9-0 3-4 5-8 7-2 2-1 5-7 0-3 4-2.</li>
+<li>Repeat exercise 1, but use quick-union. Draw the forest of trees represented by the id[] array after each input pair is processed.</li>
+<li>Repeat exercise 1, but use weighted quick-union.</li>
+</ol>
+<p>Add the following main method to the classes from exercise 1 to check your results:</p>
+<pre><code>/**
+     * Reads in a sequence of pairs of integers (between 0 and N-1) from standard input, 
+     * where each integer represents some site;
+     * if the sites are in different components, merge the two components
+     * and print the pair to standard output.
+     */
+    public static void main(String[] args) {
+        StdOut.println(&quot;Enter the number of &#39;sites&#39;:&quot;);
+        int N = StdIn.readInt();
+        QuickFindUF uf = new QuickFindUF(N);
+        StdOut.println(&quot;Input pairs of integers:&quot;);
+        while (!StdIn.isEmpty()) {
+            int p = StdIn.readInt();
+            int q = StdIn.readInt();
+            if (uf.connected(p, q)) continue;
+            uf.union(p, q);
+            StdOut.println(p + &quot; &quot; + q);
+            StdOut.println(uf.count() + &quot; components&quot;);
+        }
+
+    }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Eclipse: Create JUnit Test</h1>
+<p>In this section of the lab you will create a test case that checks the functionality of the classes you created so far.</p>
+<h4>Create QuickFindUFTest</h4>
+<ol>
+<li>Add JUnit4 to you project path by right clicking on the project and selecting <strong>Build Path -&gt; Configure Build Path</strong>. In the library tab, select <strong>Add Library</strong> and select JUnit from the options available. Then, in the JUnit dialog screen,  select <strong>JUnit4</strong>. If you&#39;ve any difficulty with this please ask your instructor. </li>
+<li>Select the lab4 project in Eclipse and do <strong>File -&gt; New -&gt; Junit Test Case</strong>. the start the JUnit wizard. Enter <em>QuickFindUFTest</em> as the name and select to create <em>setup()</em> and <em>teardown()</em> method stubs and select <em>next</em>.
+<img src="img/unittest1.png" alt=""> </li>
+<li>In the Test Methods step, select all method except the main method as follows:
+<img src="img/unittest3.png" alt=""></li>
+<li>Click finish to generate the Junit Test.<h3>Add the Test Code</h3>
+Add the following private field to the test case:<pre><code>private QuickFindUF     uf;</code></pre>
+Find the <strong>setup()</strong> method in the generated code and add the following code to initialise <em>uf</em>:<pre><code>uf = new QuickFindUF(10);</code></pre>
+For the rest of the generated method stubs, replace the <em>fail(&quot;not yet implemented&quot;)</em> statement with the following code to test each method:</li>
+</ol>
+<p><strong>testQuickFindUF()</strong>:</p>
+<pre><code>    for (int i = 0; i &lt; 10; i++) assertSame(i, uf.find(i));</code></pre>
+<p><strong>testCount()</strong>:</p>
+<pre><code>    assertSame(uf.count(),10);</code></pre>
+<p><strong>testFind()</strong>:</p>
+<pre><code>        assertSame(0, uf.find(0));
+
+        uf.union(0,9);
+        assertSame(9, uf.find(0));</code></pre>
+<p><strong>testConnected()</strong>:</p>
+<pre><code>    //test sites not connected
+    for (int i = 1; i &lt; 10; i++) {
+            assertFalse(uf.connected(0, i));
+        }
+
+    //test connections
+    uf.union(0, 1);
+        uf.union(9, 8);
+        assertTrue(uf.connected(1, 0));
+        assertTrue(uf.connected(9, 8));
+
+        uf.union(8, 1);
+        assertTrue(uf.connected(0, 9));</code></pre>
+<p><strong>testUnion()</strong></p>
+<pre><code>    uf.union(0, 1);
+        uf.union(1, 2);
+        uf.union(2, 3);
+        uf.union(3, 4);
+        assertSame(4, uf.find(0));
+        assertNotSame(uf.find(0),uf.find(5));</code></pre>
+<h3>Run the Test</h3>
+<p>In the <em>Package Explorer</em> view, right click on the  QuickFindUFTest and select <strong>Run as -&gt; Junit Test</strong>. This will run your test case and open the JUnit view with the results. All going well it should look like this:
+<img src="img/unittest2.png" alt=""> </p>
+<p>Now, create tests for the other union find classes (Quick Find, Weighted Quick Find).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Path Compression</h1>
+<p>Modify QuickUnionUF.java from exercise 1 to include path compression, by adding a loop to find() that links every site on the path from p to the root. Give a sequence of input pairs that causes this method to produce a path of length 4. 
+Remember from Class: the cost per operation for this algorithm is known to be logarithmic.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

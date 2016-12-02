@@ -1,0 +1,881 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Play Framework and Cloud
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-08b">
+      Lab-08b
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01 - paradigms and languages/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02 - java language/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03 - inheritance and collections/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04 - serialisation and TDD I/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05 - TDD II/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06 - exceptions and maven/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-1/index.html">
+          Lab-08a
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic08 - framework and cloud/book-2/index.html">
+          Lab-08b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-1/index.html">
+          Lab-09a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-2/index.html">
+          Lab-09b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10 - OCP and play testing/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-2/index.html">
+          Lab-11b
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-08b">
+        <h1>Objectives</h1>
+<p>Add functionality to the pacemakerplay app that you created in the previous lab. Re-deploy this updated app to the cloud. Perform some simple tests on the local and hosted version.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Verify your pacemakerplay app</h1>
+<p>Before we start updating <strong>pacemakerplay</strong>, we can run a simple test to ensure that &quot;all is ok&quot; with both our cloud and local versions. </p>
+<p>Note:  in this lab we will use Eclipse to edit our project and the activator console commands.  However,you are free to use the <strong>Activator UI</strong> should you wish instead.</p>
+<h2>Cloud version</h2>
+<p>Open a command prompt and navigate to your <strong>pacemakerplay</strong> app from the previous lab.</p>
+<p>Within the <strong>pacemakerplay</strong> folder, login to Heroku:</p>
+<pre><code>heroku login</code></pre>
+<p>And start your app:</p>
+<pre><code>heroku open</code></pre>
+<p>If it runs successfully, you should have the following displayed:</p>
+<p><img src="img/01.png" alt=""> </p>
+<h2>Local version</h2>
+<p>To verify our local version, enter the command:</p>
+<pre><code>activatior ~run</code></pre>
+<p>Navigate to <a href="http://localhost:9000">http://localhost:9000</a> to verify that the local version is working.</p>
+<p>If it runs successfully, you should have the following displayed:</p>
+<p><img src="img/02.png" alt=""> </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>User Model</h1>
+<p>Open your <strong>pacemakerplay</strong> app in Eclipse.</p>
+<p>Create a new package in <strong>app</strong> called <strong>models</strong>. </p>
+<p>Introduce this class into this package:</p>
+<pre><code class="lang-java">package models;
+
+import java.util.List;
+import static com.google.common.base.MoreObjects.toStringHelper;
+import com.google.common.base.Objects;
+
+import javax.persistence.*;
+import com.avaje.ebean.Model;
+
+@Entity
+@Table(name=&quot;my_user&quot;)
+public class User extends Model
+{
+  @Id
+  @GeneratedValue
+  public Long   id;
+  public String firstname;
+  public String lastname;
+  public String email;
+  public String password;
+  public static Find&lt;String, User&gt; find = new Find&lt;String, User&gt;(){};
+
+  public User()
+  {
+  }
+
+  public User(String firstname, String lastname, String email, String password)
+  {
+    this.firstname = firstname;
+    this.lastname  = lastname;
+    this.email     = email;
+    this.password  = password;
+  }
+
+  public void update (User user)
+  {
+    this.firstname = user.firstname;
+    this.lastname  = user.lastname;
+    this.email     = user.email;
+    this.password  = user.password;
+  }
+
+  public String toString()
+  {
+    return toStringHelper(this)
+        .add(&quot;Id&quot;, id)
+        .add(&quot;Firstname&quot;, firstname)
+        .add(&quot;Lastname&quot;, lastname)
+        .add(&quot;Email&quot;, email)
+        .add(&quot;Passwrod&quot;, password).toString();
+  }
+
+  @Override
+  public boolean equals(final Object obj)
+  {
+    if (obj instanceof User)
+    {
+      final User other = (User) obj;
+      return Objects.equal(firstname, other.firstname) 
+          &amp;&amp; Objects.equal(lastname, other.lastname)
+          &amp;&amp; Objects.equal(email, other.email);
+    }
+    else
+    {
+      return false;
+    }
+  }
+
+  public static User findByEmail(String email)
+  {
+    return  User.find.where().eq(&quot;email&quot;, email).findUnique();
+  }
+
+  public static User findById(Long id)
+  {
+    return find.where().eq(&quot;id&quot;, id).findUnique();
+  }
+
+  public static List&lt;User&gt; findAll()
+  {
+    return find.all();
+  }
+
+  public static void deleteAll()
+  {
+    for (User user: User.findAll())
+    {
+      user.delete();
+    }
+  } 
+
+}</code></pre>
+<p>The Play imports and annotations are NOT automatically recognised by Eclipse:</p>
+<p><img src="img/03.png" alt=""> </p>
+<p>And (if you still have your localhost Activator running), you will see that it doesn&#39;t compile either.</p>
+<p><img src="img/04.png" alt=""> </p>
+<h2>FIX - setup ebean and our development database</h2>
+<p>We need to enable <strong>sbt-play-ebean</strong>.  To do this, edit your project/plugin.sbt file and you will see that sbt-play-ebean is commented out.  Uncomment it and save the file:</p>
+<pre><code>// Play Ebean support, to enable, uncomment this line, and enable in your build.sbt using
+// enablePlugins(PlayEbean).
+addSbtPlugin(&quot;com.typesafe.sbt&quot; % &quot;sbt-play-ebean&quot; % &quot;3.0.2&quot;)</code></pre>
+<p>We now need to update our <strong>build.sbt</strong> file to enable the Play Ebean plugin...just add <strong>PlayEbean</strong> to <strong>val root</strong>:</p>
+<pre><code>lazy val root = (project in file(&quot;.&quot;)).enablePlugins(PlayJava, PlayEbean)</code></pre>
+<p>And then we need to specify, in our <strong>conf/application.conf</strong> file where our <strong>models</strong> live:</p>
+<pre><code>#location of ebean models
+ebean.default=&quot;models.*&quot;</code></pre>
+<p>We also need to enable the default h2 database.  To do this, uncomment the default database in the applications.conf file:</p>
+<pre><code>  default.driver = org.h2.Driver
+  default.url = &quot;jdbc:h2:mem:play&quot;
+  default.username = sa
+  default.password = &quot;&quot;</code></pre>
+<p>When you have made the above changes and saved the files, return to your console and enter:</p>
+<pre><code>activator compile</code></pre>
+<p>You should have a clean compile now.  Enter this command to verify your app is operational:</p>
+<pre><code>activator ~run</code></pre>
+<p>You are nearly there now!  When you go to localhost:9000, you should be presented with a red warning telling you that your database needs evolving:  </p>
+<p><img src="img/06.png" alt=""></p>
+<p>Click on the button to <strong>Apply this script now!</strong>.  Your database will evolve (more on this later)!</p>
+<h2>Eclipse is still underlining the imports in red, even though it is compiling</h2>
+<p>If you are still seeing the imports underlined in red, even though your app is compiling and running, you need to run this command:</p>
+<pre><code>activator eclipse</code></pre>
+<p>It will reload your project for you and will enable eclipse to recognise these imports (and associated methods):</p>
+<pre><code>C:\Users\Siobhan\workspace-play\pacemakerplay&gt;activator eclipse
+ACTIVATOR_HOME=C:\dev\activator-dist-1.3.10
+The system cannot find the file BIN_DIRECTORY\..\conf\sbtconfig.txt.
+[info] Loading project definition from C:\Users\Siobhan\workspace-play\pacemakerplay\project
+[info] Set current project to pacemakerplay (in build file:/C:/Users/Siobhan/workspace-play/pacemakerplay/)
+[info] About to create Eclipse project files for your project(s).
+[info] Successfully created Eclipse project files for project(s):
+[info] pacemakerplay
+
+C:\Users\Siobhan\workspace-play\pacemakerplay&gt;</code></pre>
+<h2>Ebean documentation</h2>
+<ul>
+<li><a href="https://playframework.com/documentation/2.5.x/JavaEbean">https://playframework.com/documentation/2.5.x/JavaEbean</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Parsers</h1>
+<p>Create a new package called <strong>parsers</strong> and bring in this class:</p>
+<pre><code class="lang-java">package parsers;
+
+import models.User;
+import flexjson.JSONDeserializer;
+import flexjson.JSONSerializer;
+
+public class JsonParser
+{
+  private static JSONSerializer  userSerializer     = new JSONSerializer();
+
+  public static User renderUser(String json)
+  {
+    return new JSONDeserializer&lt;User&gt;().deserialize(json, User.class); 
+  }
+
+  public static String renderUser(Object obj)
+  {
+    return userSerializer.serialize(obj);
+  }
+}</code></pre>
+<p>You will notice that the <strong>flexjson</strong> import is not recognised.  We will need to add this dependency to our build.sbt file.</p>
+<p>Edit your <strong>build.sbt</strong> file and include <strong>flexjson</strong> as a library dependency:</p>
+<pre><code>libraryDependencies ++= Seq(
+  javaJdbc,
+  cache,
+  javaWs,
+  &quot;org.postgresql&quot; % &quot;postgresql&quot; % &quot;9.4-1201-jdbc41&quot;,
+  &quot;net.sf.flexjson&quot; % &quot;flexjson&quot; % &quot;3.3&quot;)</code></pre>
+<p>Back on the console, if your app is running, terminate it by pressing `CTRL-D&#39; and enter the following two commands:</p>
+<pre><code>activator eclipse</code></pre>
+<p>... and refresh the project in eclipse.  The error associated with the <strong>flexjson</strong> import should now be resolved. </p>
+<p>Compile the project again by typing <strong>activator compile</strong> on your console.</p>
+<p>The project should be without error, run it in the console again and browse to:</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+<p>You will be presented with the red error again, informing you that your database needs evolution.  Apply the script.</p>
+<h2>Evolving your database</h2>
+<p>We can ensure that the schema evolutions are done automatically by adding <strong>evolutions</strong> as a library dependency to our build.sbt:</p>
+<pre><code>libraryDependencies ++= Seq(
+  javaJdbc,
+  cache,
+  javaWs,
+  evolutions,
+  &quot;org.postgresql&quot; % &quot;postgresql&quot; % &quot;9.4-1201-jdbc41&quot;,
+  &quot;net.sf.flexjson&quot; % &quot;flexjson&quot; % &quot;3.3&quot;)</code></pre>
+<p>And updating the <strong>play.evolutions</strong> setting in <strong>application.conf</strong> to have the autoApply set to true: </p>
+<pre><code>play.evolutions {
+  # You can disable evolutions for a specific datasource if necessary
+  #db.default.enabled = false
+  db.default.autoApply=true
+  db.default.autoApplyDowns=true
+}</code></pre>
+<p>Compile these changes and run the application; have your schema evolutions been applied automatically?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Controller</h1>
+<p>There is already a package called <strong>controllers</strong>. </p>
+<p>Create a new class in this package:</p>
+<pre><code class="lang-java">package controllers;
+
+import static parsers.JsonParser.*;
+import play.mvc.*;
+
+import java.util.*;
+
+import models.*;
+
+public class PacemakerAPI extends Controller
+{  
+
+  public Result  users()
+  {
+    List&lt;User&gt; users = User.findAll();
+    return ok(renderUser(users));
+  }
+
+  public Result user(Long id)
+  {
+    User user = User.findById(id);  
+    return user==null? notFound() : ok(renderUser(user)); 
+  }
+
+  public Result createUser()
+  {
+    User user = renderUser(request().body().asJson().toString());
+    user.save();
+    return ok(renderUser(user));
+  }
+
+  public Result deleteUser(Long id)
+  {
+    Result result = notFound();
+    User user = User.findById(id);
+    if (user != null)
+    {
+      user.delete();
+      result = ok();
+    }
+    return result;
+  }
+
+  public Result deleteAllUsers()
+  {
+    User.deleteAll();
+    return ok();
+  }
+
+  public Result updateUser(Long id)
+  {
+    Result result = notFound();
+    User user = User.findById(id);
+    if (user != null)
+    {
+      User updatedUser = renderUser(request().body().asJson().toString());
+      user.update(updatedUser);
+      user.save();
+      result = ok(renderUser(user));
+    }
+    return result;
+  }
+}</code></pre>
+<p>The project should continue to be without errors (compile &amp; run it to verify).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Routes and h2-Database</h1>
+<p>Open the file <strong>conf/routes</strong> in eclipse, and introduce the following entries (immediately below &#39;GET /&#39;)</p>
+<pre><code>GET     /api/users                            controllers.PacemakerAPI.users()
+DELETE  /api/users                            controllers.PacemakerAPI.deleteAllUsers()
+POST    /api/users                            controllers.PacemakerAPI.createUser()
+
+GET    /api/users/:id                         controllers.PacemakerAPI.user(id: Long)
+DELETE /api/users/:id                         controllers.PacemakerAPI.deleteUser(id: Long)
+PUT    /api/users/:id                         controllers.PacemakerAPI.updateUser(id: Long)</code></pre>
+<p>Back in the console, terminate the project if is already running (Control-D), and enter the following commands:</p>
+<pre><code>activator compile
+activator run</code></pre>
+<p>The usual welcome page will be displayed.</p>
+<p>Check can you navigate to a new route we created above:</p>
+<ul>
+<li><a href="http://localhost:9000/api/users">http://localhost:9000/api/users</a></li>
+</ul>
+<p>The following webage should be displayed, indicating that the users table is empty:</p>
+<p><img src="img/07.png" alt=""></p>
+<h2>Interrogating the h2 database</h2>
+<p>Now that you have evolved your database and you have a users table, you may want to interrogate it through the h2-broswer. </p>
+<p>Return to your browser and stop your application on the localhost.</p>
+<p>Enter this command to open the <strong>activator</strong> command shell:</p>
+<pre><code>activator</code></pre>
+<p>Note:  You need to start the h2-browser and the applicaiton from the same <strong>activator</strong> shell.</p>
+<p>Within the opened <strong>activator</strong> command shell, enter this command to open the h2-browser in your browser (don&#39;t log into the database yet though):</p>
+<pre><code>h2-browser</code></pre>
+<p><img src="img/09.png" alt=""></p>
+<pre><code>run</code></pre>
+<p>Go to your browser and navigate to <a href="http://localhost:9000/">http://localhost:9000/</a>.  This will cause Play to connect to the in-memory H2 database and to initialise it with some default data, if any.</p>
+<p>Now that your localhost is running, you are in a position to log into your h2-browser by clicking the <strong>connect</strong> button (make sure your connection parameters match the ones above).</p>
+<p>You should be able to browse the database - containing the table &#39;MY_USER&#39;:</p>
+<p><img src="img/10.png" alt=""></p>
+<h2>Interim solution to the project</h2>
+<p>If your project is not compiling for some reason, this is an archive of the completed project here.</p>
+<ul>
+<li><a href="archives/pacemakerplay-step05.zip">pacemakerplay-step05.zip</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Testing</h1>
+<p>Make sure the app is running, and browse to :</p>
+<ul>
+<li><a href="http://localhost:9000/api/users">http://localhost:9000/api/users</a></li>
+</ul>
+<p>Viewing the page source, you should see:</p>
+<pre><code>[]</code></pre>
+<h2>Using Broswer Developer Tools</h2>
+<p>Keep an eye on the actual HTTP traffic by switching on the developer tools in your browser e.g.:</p>
+<ul>
+<li>Microsoft Edge, press F12 to toggle the developer tools on and off.</li>
+<li>Chrome via More Tools menu -&gt; Developers Tools:</li>
+</ul>
+<p><img src="img/11.png" alt=""></p>
+<p>Try browsing to this url:</p>
+<ul>
+<li><a href="http://localhost:9000/api/users/1">http://localhost:9000/api/users/1</a></li>
+</ul>
+<p>As there is no user with the id of 1, the developer tools should display the &#39;404&#39;, not found error:</p>
+<p><img src="img/12.png" alt=""></p>
+<h2>Using Chrome POSTMAN</h2>
+<p>More comprehensive tools for testing HTTP interfaces are available. </p>
+<p>Search for the Chrome <strong>Postman REST Client</strong> and add the app to Chrome.  </p>
+<p>Using Postman, experiment with the two links we tested above:</p>
+<p><img src="img/13.png" alt=""></p>
+<p><img src="img/14.png" alt=""></p>
+<p>Now try to replicate the request as shown in the two screen shots below:</p>
+<p><img src="img/15.png" alt="Headers - Content-Type set to &#39;application/json&#39;">
+<img src="img/16.png" alt="Body - settings and Json "></p>
+<p>When you press &#39;Send&#39; you may see this response:</p>
+<p><img src="img/17.png" alt=""></p>
+<p>Now try this GET request again:</p>
+<ul>
+<li><a href="http://localhost:9000/api/users/1">http://localhost:9000/api/users/1</a></li>
+</ul>
+<p>In the above interchange, we have used the REST interface to create a User, and then subsequently retrieved the user (by the id 1).</p>
+<h2>Exercises</h2>
+<p>Create a few more users and verify that you can get them. See if you can also do the following:</p>
+<ul>
+<li>Delete (via a DELETE) request</li>
+<li>Update (via a PUT) request.</li>
+</ul>
+<p>Also, examine the database via the h2-console, and see if you can verify if the &#39;my_users&#39; table is being updated.  Did you notice that DELETE has two entries in the routes.conf.  Test both of these entries (you will need to enter a parameter to delete a specific user).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Deployment</h1>
+<p>In the previous play lab, you created an Heroku account and deployed your skeleton pacemakerplay app to the cloud.  Now we will look at deploying the latest version of our pacemakerplay app to the cloud.</p>
+<h2>Enabling Postgresql capabilities in your app</h2>
+<p>Postgres is the database that our app will use in Heroku.  We use the h2 database locally.  </p>
+<p>In a previous step we included Postgres dependencies in our app...see build.sbt:</p>
+<pre><code>name := &quot;&quot;&quot;pacemakerplay&quot;&quot;&quot;
+
+version := &quot;1.0-SNAPSHOT&quot;
+
+lazy val root = (project in file(&quot;.&quot;)).enablePlugins(PlayJava, PlayEbean)
+
+scalaVersion := &quot;2.11.7&quot;
+
+libraryDependencies ++= Seq(
+  javaJdbc,
+  cache,
+  javaWs,
+  evolutions,
+  &quot;org.postgresql&quot; % &quot;postgresql&quot; % &quot;9.4-1201-jdbc41&quot;,
+  &quot;net.sf.flexjson&quot; % &quot;flexjson&quot; % &quot;3.3&quot;)</code></pre>
+<h2>Inform app to use the database deployed on Heroku instead of h2</h2>
+<p>Before we can deploy the app, we need to indicate that we wish to use the database deployed on Heroku, and not the embedded h2 database we have for test purposes locally. </p>
+<p>Open <strong>conf/application.conf</strong> and make the following adjustments:</p>
+<pre><code>default.driver=org.postgresql.Driver
+default.url=${DATABASE_URL}
+
+#default.driver = org.h2.Driver
+#default.url = &quot;jdbc:h2:mem:play&quot;
+#default.username = sa
+#default.password = &quot;&quot;</code></pre>
+<p>That is, we comment out the local settings, and bring in a driver for postgressq + indicate the database connection string is to come from the environment variable on heroku.</p>
+<h2>Push changes to Heroku</h2>
+<p>Save these changes now and on your command prompt for the pacemakerplay project, enter the following commands:</p>
+<pre><code> git add .
+ git commit -m &quot;basic app connecting to postresql database&quot;
+ git push heroku master</code></pre>
+<p>Assuming your heroku setup was successful in the previous lab, your changes should be pushed to heroku:</p>
+<pre><code>...
+...
+remote: -----&gt; Dropping ivy cache from the slug
+remote: -----&gt; Dropping sbt boot dir from the slug
+remote: -----&gt; Dropping compilation artifacts from the slug
+remote: -----&gt; Discovering process types
+remote:        Procfile declares types -&gt; web
+remote:
+remote: -----&gt; Compressing...
+remote:        Done: 98.5M
+remote: -----&gt; Launching...
+remote:        Released v6
+remote:        https://calm-sierra-69816.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/calm-sierra-69816.git
+   be02048..a97ee08  master -&gt; master
+
+C:\Users\Siobhan\workspace-play\pacemakerplay&gt;</code></pre>
+<p>Test that your app is working in the cloud by opening it in your browser: </p>
+<pre><code>heroku open</code></pre>
+<p>If you get an <strong>Application Error</strong> web page, interrogate the heroku logs to give you clues as to what went wrong:</p>
+<pre><code>heroku logs</code></pre>
+<p>If your app opened successfully, you should see something similar to this:</p>
+<p><img src="img/18.png" alt=""></p>
+<h2>Testing the remote app</h2>
+<p>Experiment with some of the urls we used in the last step.</p>
+<p>Also, use Postman to create some users, similiar to how we did it with the local version:</p>
+<p><img src="img/19.png" alt=""></p>
+<h2>Familiarise yourself with Heroku dashboard and tools</h2>
+<p>Visit the heroku dashboard:</p>
+<ul>
+<li><a href="https://dashboard.heroku.com/apps">https://dashboard.heroku.com/apps</a></li>
+</ul>
+<p>... and explore the various settings for your app. </p>
+<p>Play close attention to the Installed add on: Heroku Postgres. Have a look at this and its settings.  </p>
+<p>The databases are also listed independently here:</p>
+<ul>
+<li><a href="https://postgres.heroku.com/databases">https://postgres.heroku.com/databases</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Connecting pgadmin client to your remote database</h1>
+<p>The h2 browser is not usable on the heroku infrastructure (is it postgress after all).  So, if we want to view our database in a GUI based application, we need to install software that is capable of connecting to our remote postgres database.</p>
+<h2>Installing and configuring pgadmin</h2>
+<p>Install a suitable version of <strong>pgadmin</strong> for your system:</p>
+<ul>
+<li><a href="http://www.pgadmin.org">http://www.pgadmin.org</a></li>
+</ul>
+<p>Open pgadmin and click on the link to <strong>Add New Server</strong></p>
+<p><img src="img/20.png" alt=""></p>
+<p>Navigate to the <strong>Connection</strong> settings for the new server (we are going to change these based on your specific db settings in heroku):</p>
+<p><img src="img/21.png" alt=""></p>
+<p>Navigate to your specific database in Heroku and view the settings:</p>
+<p><img src="img/22.png" alt=""></p>
+<p>Return to pgadmin and update the settings to connect to your specific remote database in Heroku:</p>
+<p><img src="img/23.png" alt=""></p>
+<p>It can be difficult to locate your database - but it is in there somewhere:</p>
+<p><img src="img/24.png" alt=""></p>
+<p>Scroll down and find it:</p>
+<p><img src="img/25.png" alt=""></p>
+<h2>Creating a SELECT script to run over my_user table</h2>
+<p>Right click on your my_user table, select <strong>Scripts</strong>, followed by <strong>SELECT Script</strong>.  </p>
+<p><img src="img/26.png" alt=""></p>
+<p>Execute this script and, if you added users through POSTMAN, you will see some results:</p>
+<p><img src="img/27.png" alt=""></p>
+<h2>Locating your database easier</h2>
+<p>To locate your database, you have to scroll through a LOT of other databases.  pgadmin3 had a capability to restrict the database list to only those you have access to, however pgadmin4 no longer has these <strong>advanced</strong> capabilities when you right click on <strong>Server</strong> and select <strong>Properties...</strong>:</p>
+<p><img src="img/28.png" alt=""></p>
+<p>Current advice is to use <strong>pgadmin3</strong> if you find this feature of <strong>pgadmin4</strong> frustrating:</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/12663639/how-to-hide-databases-that-i-am-not-allowed-to-access/13298802#13298802">http://stackoverflow.com/questions/12663639/how-to-hide-databases-that-i-am-not-allowed-to-access/13298802#13298802</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Connecting Local App to Remote Database</h1>
+<h2>Current database configurations</h2>
+<p>Our local application and our remote version are configured to use different databases. These configurations are visible in application.conf:</p>
+<pre><code>  #remote postgres database on heroku
+  default.driver=org.postgresql.Driver
+  default.url=${DATABASE_URL}
+
+  #local h2 database
+  #default.driver = org.h2.Driver
+  #default.url = &quot;jdbc:h2:mem:play&quot;
+  #default.username = sa
+  #default.password = &quot;&quot;</code></pre>
+<p>In the above it is configured for remote (heroku) database. </p>
+<p>When we run our localhost version and want to use the embedded h2 database, we comment out these first two entries and comment in the remaining four:</p>
+<pre><code>  #remote postgres database on heroku
+  #default.driver=org.postgresql.Driver
+  #default.url=${DATABASE_URL}
+
+  #local h2 database
+  default.driver = org.h2.Driver
+  default.url = &quot;jdbc:h2:mem:play&quot;
+  default.username = sa
+  default.password = &quot;&quot;</code></pre>
+<h2>Connecting localhost to remote heroku database</h2>
+<p>It will be useful to try an alternative combination - run the application locally, but have it use the heroku hosted database. This can be particularly important where there are significant differences in database SQL dialects. Here is how to do it. </p>
+<ul>
+<li>Locate the JDBC connection string for your database on heroku by entering the following command in your command prompt:</li>
+</ul>
+<pre><code>heroku pg:credentials DATABASE</code></pre>
+<ul>
+<li>Your connection info string similar to the one below will be returned:</li>
+</ul>
+<pre><code>Connection info string:
+   &quot;dbname=dbjga15tgnfbef host=ec2-54-235-208-3.compute-1.amazonaws.com port=5432 user=euoojolrsszmcl password=G66hiSiTNonBJvZpI4ty55fRzA sslmode=require&quot;
+Connection URL:
+    postgres://euoojolrsszmcl:G66hiSiTNonBJvZpI4ty55fRzA@ec2-54-235-208-3.compute-1.amazonaws.com:5432/dbjga15tgnfbef</code></pre>
+<ul>
+<li>The format of the remote postgres connection string is:</li>
+</ul>
+<p><img src="img/29.png" alt=""></p>
+<ul>
+<li>Format your connection string accordingly, and place it in your application.conf as your default remote url - something like this:</li>
+</ul>
+<pre><code>  #remote postgres database on heroku
+  default.driver=org.postgresql.Driver
+  default.url=&quot;jdbc:postgresql://ec2-54-235-208-3.compute-1.amazonaws.com:5432/dbjga15tgnfbef?user=euoojolrsszmcl&amp;password=G66hiSiTNonBJvZpI4ty55fRzA&amp;ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory&quot;
+  #default.url=${DATABASE_URL}
+
+  #local h2 database
+  #default.driver = org.h2.Driver
+  #default.url = &quot;jdbc:h2:mem:play&quot;
+  #default.username = sa
+  #default.password = &quot;&quot;</code></pre>
+<ul>
+<li>Note that the above connection string needed one more fragment before it can work - you need to append the following directly to the end of the string (as is done above):</li>
+</ul>
+<pre><code>&amp;ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory</code></pre>
+<h2>Verify your local app is connecting to remote database</h2>
+<p>Now, restart the local app, it should be using the postgress database on Heroku (it will be a litte slower relfecting this). </p>
+<p>Verify that you are pointing to the remote database from your localhost by adding a user through POSTMAN and interrogating the remote database to verify the remote user has been added.  </p>
+<p>Note: previous users that you had in your remote my_user database may have been cleared down.  Our db evolutions are set for both <strong>ups</strong> and <strong>downs</strong>; therefore, your my_user table was probably dropped when your app evolved to connect to the remote db.  You can configure your application to stop the <strong>down</strong> scripts running over production data and dropping your tables but we can leave our configuration as is (we have no live data to worry about). </p>
+<h2>Verify your remote app is still behaving itself after the db configuation changes</h2>
+<p>Commit and push your changes to Heroku:</p>
+<pre><code>git add .
+git commit -m &quot;local app using remote database&quot;
+git push heroku master</code></pre>
+<p>Open your remote app:</p>
+<pre><code>heroku open</code></pre>
+<p>When your app launches, navigate to the /api/users link and verify that the user you just added through POSTMAN is displayed.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>Archive of the project so far:</p>
+<ul>
+<li><a href="archives/pacemakerplay-step09.zip">pacemakerplay-step09.zip</a></li>
+</ul>
+<h2>Exercise: Heroku Commands</h2>
+<p>Open another shell in your pacemaker folder. Experiment with the heroku logs command:</p>
+<pre><code>heroku logs -t</code></pre>
+<p>which will let you monitor the remote app.</p>
+<p>Also, explore these commands</p>
+<pre><code>heroku pg:info</code></pre>
+<p>and</p>
+<pre><code>heroku pg:reset</code></pre>
+<p>The last command provides a way of resetting (deleting) the schema for the database. See if you can use the command to delete the database, and then re-deploy the application (either locally or remotely).</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & Dr. Siobhan Drohan.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

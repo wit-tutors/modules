@@ -1,0 +1,282 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+  <header class="ui middle aligned center aligned stackable grid segment">
+
+    <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+    <div class="seven wide center aligned column">
+      <h2> Sorting </h2>
+      <p> Single Topic </p>
+    </div>
+
+    
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="../index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+    
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Frank Walsh & Eamonn De Leastar .
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+    
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="../talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="../labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <div class="header">
+      <a class="item" href="#">
+        Sorting
+      </a>
+    </div>
+    <div class="menu">
+      
+        <a class="item" href="talk-1/sorts.pdf">
+          Sorting
+        </a>
+      
+        <a class="item" href="talk-2/recursion.pdf">
+          Recursion
+        </a>
+      
+        <a class="item" href="talk-3/divide_and_conquer.pdf">
+          Divide and Conquer
+        </a>
+      
+        <a class="item" href="book-1/index.html">
+          Lab-06
+        </a>
+      
+        <a class="item" href="book-2/index.html">
+          assignment-2
+        </a>
+      
+    </div>
+  </div>
+
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="talk-1/sorts.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Sorting </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="talk-1/sorts.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This talk introduces  the comparable interface and how this is used in sorting algorithms. Three well known sorting algorithms are descibed and you will be shown how sorting can be used to shuffle a deck of cards. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="talk-2/recursion.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Recursion </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="talk-2/recursion.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This talk serves as a preliminary discussion for covering more advanced sorting algorithms.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="talk-3/divide_and_conquer.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Divide and Conquer </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="talk-3/divide_and_conquer.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Divide and conquer works by recursively breaking down a problem into two or more smaller  sub-problems(divide) , until these become simple enough to be solved directly (conquer).</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="book-1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-06 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="book-1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p> On competing the lab you will:- Implement a comparable class.- Generate random data for testing.- Sort using insertion and Selection sort.- Compare the performance of selection and insertion sort. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="book-2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> assignment-2 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="book-2/img/main.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Many companies use recommender systems to suggest products, information, and friends to their customers .  In this assignment you will develop a Movie recommender using existing movie data.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+
+      </div>
+    </div>
+   </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

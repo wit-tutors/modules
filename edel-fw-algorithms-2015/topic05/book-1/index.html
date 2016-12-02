@@ -1,0 +1,341 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Sorting
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-06">
+      Lab-06
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-06">
+        <h1>Lab 6 - Sorting</h1>
+<p> On competing the lab you will:</p>
+<ul>
+<li>Implement a comparable class.</li>
+<li>Generate random data for testing.</li>
+<li>Sort using insertion and Selection sort.</li>
+<li>Compare the performance of selection and insertion sort. </li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Eclipse: Data Generation</h1>
+<p>Create a new project in Eclipse called Lab6Sorting1. </p>
+<h3>Data Generation</h3>
+<ul>
+<li>Create an implementation of the simplified Date class as shown in lecture slides. In addition:<ul>
+<li>add getters for all fields in the class.</li>
+<li>Add a suitable toString() method.</li>
+</ul>
+</li>
+<li>Create implementations of both the <strong>Selection</strong> sort and <strong>Insertion</strong> sort algorithms as described in the lecture slides. Remember that the <em>less()</em> and <em>exch()</em> methods in both Insertion and Selection are exactly the same, only the sort() method changes.</li>
+<li>Create a utility class called DateArrayGenerator that contains a method:<pre><code>public static Date [] randomDateArray(int n)</code></pre>
+that returns an array of n random dates over the last 100 years(1915-2015). Use the Date class from step 1. You can ignore accounting for leap years if you wish. Test it by including a main method in the class that outputs the following when run:
+<img src="img/00.png" alt=""></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h2>Algorithm Comparison</h2>
+<p>You know from lectures that the efficiency class of both insertion and selection sort is quadratic for random arrays. Furthermore the running time should increase at a similar rate for larger inputs but insertion should be slightly faster. Prove this using an empirical approach as follows:
+Using the Insertion and Selection classes from the previous section, develop an executable Java class called SortCompare that contains the following method:</p>
+<pre><code>public static double time(String alg, Comparable[] a) {
+
+        double startTime = System.currentTimeMillis();
+        if (alg.equals(&quot;Insertion&quot;))
+            Insertion.sort(a);
+        if (alg.equals(&quot;Selection&quot;))
+            Selection.sort(a);
+
+        return System.currentTimeMillis() - startTime;
+
+    }</code></pre>
+<ul>
+<li>Now create another method in SortCompare that calculates the average running time for k random arrays of size n. Refer to the slides for empirical analysis of algorithms for ideas. The signature of the method should be:<pre><code>public static double timeRandomInput(String alg, int n, int k)</code></pre>
+</li>
+</ul>
+<p>Finally, write a main method similar to the following that compares the running time of the two algorithms. You can change the size and number of random arrays (1000 and 100 respectively is manageable but remember these are quadratic algorithms!)</p>
+<pre><code>public static void main(String[] args) {
+
+            String alg1 = &quot;Insertion&quot;;
+            String alg2 = &quot;Selection&quot;;
+
+            StdOut.println(&quot;Enter the input size of the Date arrays:&quot;);
+            int n = StdIn.readInt();
+            StdOut.println(&quot;Enter the number of different inputs to be generated:&quot;);
+            int k = StdIn.readInt();
+            double t1 = timeRandomInput(alg1, n, k); // total for alg1
+            double t2 = timeRandomInput(alg2, n, k); // total for alg2
+            StdOut.printf(&quot;For %d random Dates\n %s is&quot;, n, alg1);
+            StdOut.printf(&quot; %.1f times faster than %s\n&quot;, t2 / t1, alg2);
+
+
+    }</code></pre>
+<ul>
+<li>Do a couple of runs on your computer and see if the results match to what you expected from the notes.<br>As a challenge, try to modify your SortCompare class to generate a partially sorted array instead of random. Then compare the running times again. If the theory is correct, Insertion should be quicker. </li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

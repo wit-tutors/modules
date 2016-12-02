@@ -1,0 +1,732 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Algorithms</h2>
+    <p> All Slides in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Frank Walsh & Eamonn De Leastar .
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic01/talk-1/objects-and-classes.pdf">
+      Classes & Objects
+    </a>
+    
+    <a class="item" href="topic01/talk-2/data-abstraction-and-api.pdf">
+      Data Abstraction and Application Programming Interfaces (APIs) 
+    </a>
+    
+    <a class="item" href="topic02/talk-1/intro.pdf">
+      Algorithms Intro and Union Find
+    </a>
+    
+    <a class="item" href="topic02/talk-2/image_processing.pdf">
+      Digital Images and Java
+    </a>
+    
+    <a class="item" href="topic03/talk-a-tdd-intro/tdd-intro.pdf">
+      TDD Introduction
+    </a>
+    
+    <a class="item" href="topic03/talk-b-tdd-first-tests/first-tests.pdf">
+      First Tests
+    </a>
+    
+    <a class="item" href="topic03/talk-c-junit-annotations/annotations.pdf">
+      Annotations
+    </a>
+    
+    <a class="item" href="topic04/talk-1/analysis.pdf">
+      Analysis of Algorithms
+    </a>
+    
+    <a class="item" href="topic05/talk-1/sorts.pdf">
+      Sorting
+    </a>
+    
+    <a class="item" href="topic05/talk-2/recursion.pdf">
+      Recursion
+    </a>
+    
+    <a class="item" href="topic05/talk-3/divide_and_conquer.pdf">
+      Divide and Conquer
+    </a>
+    
+    <a class="item" href="topic06/talk-a-collections/b-collections.pdf">
+      Collections
+    </a>
+    
+    <a class="item" href="topic06/talk-b-pragmatic-testing/b-pragmatic-testing.pdf">
+      Pragmatic Testing
+    </a>
+    
+    <a class="item" href="topic06/talk-c-pacemaker-first-tests/pacemaker.pdf">
+      Pacemaker with First Tests
+    </a>
+    
+    <a class="item" href="topic06/talk-d-pacemaker-tests+fixtures/c-pacemaker-tests.pdf">
+      Pacemaker with Fixtures + Tests
+    </a>
+    
+    <a class="item" href="topic07/talk-a-writing-tests/a-writing-tests.pdf">
+      Writing Tests
+    </a>
+    
+    <a class="item" href="topic07/talk-b-right-bicep/b-bicep.pdf">
+      Right BICEP
+    </a>
+    
+    <a class="item" href="topic07/talk-c-correct/c-correct.pdf">
+      C.O.R.R.E.C.T
+    </a>
+    
+    <a class="item" href="topic07/talk-d- asssignment-tests/assignment-tests.pdf">
+      Assignment Tests
+    </a>
+    
+    <a class="item" href="topic08/talk-a-streams/a-streams.pdf">
+      Streams
+    </a>
+    
+    <a class="item" href="topic08/talk-b-serializers/serializers.pdf">
+      Pacemaker TDD 05
+    </a>
+    
+    <a class="item" href="topic08/talk-c-pacemake-serializer/pacemaker-tdd-05.pdf">
+      Pacemaker TDD 05
+    </a>
+    
+    <a class="item" href="topic08/talk-d-exceptions/a-exceptions.pdf">
+      Exceptions
+    </a>
+    
+    <a class="item" href="topic08/talk-e-movies/movies-1.pdf">
+      Movie Assignment
+    </a>
+    
+    <a class="item" href="topic08/talk-f-movies-2/movies-2.pdf">
+      Movie Serialization
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic01/talk-1/objects-and-classes.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Classes & Objects </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01/talk-1/objects-and-classes.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This topic provides a quick review of Java Objects, Classes and Interfaces. You will also cover packages, constructors, polymorphism, information hiding and abstract classes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01/talk-2/data-abstraction-and-api.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Data Abstraction and Application Programming Interfaces (APIs)  </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01/talk-2/data-abstraction-and-api.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This lecture introduces the concept of abstract data types and Application Programming Interfaces(APIs). You will see some common examples in the Java programming language and also learn how to write clients for Java APIs.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02/talk-1/intro.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Algorithms Intro and Union Find </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02/talk-1/intro.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02/talk-2/image_processing.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Digital Images and Java </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02/talk-2/image_processing.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This talk provides a quick overview of digital images and how they can be processed in Java. Image resolution, quantisation, colour and binarisation are explored for raster images. Understanding these concepts is vital to completing your first assignment.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-a-tdd-intro/tdd-intro.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> TDD Introduction </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-a-tdd-intro/tdd-intro.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Test Driven Development has been among the most influential approaches in recent software engineering history. Here we look at its origins, principles and some of the important benefits of the approach.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-b-tdd-first-tests/first-tests.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> First Tests </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-b-tdd-first-tests/first-tests.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The essential elements of TDD are fairly easy to grasp. The support libraries (xUnit) are relatively straightforward, and we can expect our IDE to provide direct assistance to using these libraries. Here we look at the facilities Eclipse provides to the JUnit library.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-c-junit-annotations/annotations.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Annotations </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-c-junit-annotations/annotations.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Earlier JUnit libraries relied on Inheritance and specific design patterns to integrate the unit tests into runnable test suites. Modern JUnit relies on Java Annotations - which simplify test structure and enable more flexible structuring of tests classes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/talk-1/analysis.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Analysis of Algorithms </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/talk-1/analysis.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This talk introduces the scientific method and how it can be applied to predict  the running time of an algorithm. You will also learn how to produce mathematical models  for algorithms and estimate an algorithms order of growth using tilda notation.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/talk-1/sorts.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Sorting </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/talk-1/sorts.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This talk introduces  the comparable interface and how this is used in sorting algorithms. Three well known sorting algorithms are descibed and you will be shown how sorting can be used to shuffle a deck of cards. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/talk-2/recursion.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Recursion </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/talk-2/recursion.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This talk serves as a preliminary discussion for covering more advanced sorting algorithms.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/talk-3/divide_and_conquer.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Divide and Conquer </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/talk-3/divide_and_conquer.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Divide and conquer works by recursively breaking down a problem into two or more smaller  sub-problems(divide) , until these become simple enough to be solved directly (conquer).</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06/talk-a-collections/b-collections.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Collections </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06/talk-a-collections/b-collections.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>All programming languages will have support for a range of common data structures. Unlike typical dynamic programming language, collections are implemented as a standard library in Java (as opposed to being built in). We will survey the major features of this library, focusing on the principle interfaces and implementations. There is considerable more to collections, which should be investigated independently.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06/talk-b-pragmatic-testing/b-pragmatic-testing.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pragmatic Testing </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06/talk-b-pragmatic-testing/b-pragmatic-testing.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>One way of becoming familiar with TDD is to explore some simple examples of various strategies that might be employed in some simple examples. Here we look at useful examples from the Pragmatic series - which laid out much of the early exploration of TDD.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06/talk-c-pacemaker-first-tests/pacemaker.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker with First Tests </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06/talk-c-pacemaker-first-tests/pacemaker.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We revise the initial pacemaker lab to use collections and a simple API</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06/talk-d-pacemaker-tests+fixtures/c-pacemaker-tests.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker with Fixtures + Tests </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06/talk-d-pacemaker-tests+fixtures/c-pacemaker-tests.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We try to apply some of these practices to the Pacemaker app we are building the labs. In general many of the tests are straightforward but we strive to make elegant use of fixtures.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07/talk-a-writing-tests/a-writing-tests.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Writing Tests </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07/talk-a-writing-tests/a-writing-tests.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A review of the basic structure of JUnit based tests, elaborating on the primary assert calls and annotations.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07/talk-b-right-bicep/b-bicep.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Right BICEP </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07/talk-b-right-bicep/b-bicep.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Guidelines for Composing Tests phrased using the acronym: - Right, Boundary, Inverse, Cross-check, Errors &amp; Performance.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07/talk-c-correct/c-correct.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> C.O.R.R.E.C.T </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07/talk-c-correct/c-correct.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>More guidelines - this time the acronym is Conformance, Ordering, Range, Reference, Existing, Cardinality, Time.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07/talk-d- asssignment-tests/assignment-tests.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Assignment Tests </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07/talk-d- asssignment-tests/assignment-tests.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Guidelines on some of the tests you may write as part of your assignment</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08/talk-a-streams/a-streams.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Streams </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08/talk-a-streams/a-streams.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>At the heart of the JDK are object I/O and Serialization capabilities, packaged into a comprehensive library for managing the life cycle of simple objects. Although the approach taken by this particular base library has to some extent been superseded by other approaches, it remains an important and influential technical approach, that can be usefully applied in simpler standalone applications.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08/talk-b-serializers/serializers.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker TDD 05 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08/talk-b-serializers/serializers.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08/talk-c-pacemake-serializer/pacemaker-tdd-05.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker TDD 05 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08/talk-c-pacemake-serializer/pacemaker-tdd-05.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08/talk-d-exceptions/a-exceptions.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Exceptions </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08/talk-d-exceptions/a-exceptions.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Dealing with unexpected events and errors is usually delegated to the Exceptions mechanism in Java. Here we review the nature of exceptions and identify some best practices when dealing with exceptions generated from libraries and frameworks.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08/talk-e-movies/movies-1.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Movie Assignment </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08/talk-e-movies/movies-1.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A walk though how you might approach your second assignment</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08/talk-f-movies-2/movies-2.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Movie Serialization </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08/talk-f-movies-2/movies-2.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A look at a bug in our existing serialization library + an review of how CSV ingestion can be approached.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

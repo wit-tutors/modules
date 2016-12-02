@@ -1,0 +1,416 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Introduction to Algorithms
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Assignment-1">
+      Assignment-1
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Assignment-1">
+        <h1>Machine Vision using Union-Find</h1>
+<p>In this assignment you will use the Union-Find algorithm to develop a Java program that can:</p>
+<ul>
+<li>Read in an image file</li>
+<li>Count the number of objects in the image</li>
+<li>Locate and highlight  objects in the image</li>
+<li>Provide full JUnit test coverage </li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h2>Background</h2>
+<p><a href="https://en.wikipedia.org/wiki/Connected-component_labeling">Connected Component Labeling </a> is a well known approach in image processing and computer vision. It can be used in various applications, for example detecting objects on a conveyor belt or locate characters on a registration plate. The Union-Find algorithms can be used to implement connected component labeling.
+In this assignment you will develop a Java program that can:</p>
+<ul>
+<li>read in an image file</li>
+<li>count the number of &quot;items&quot; in the image</li>
+<li>locate and highlight the items</li>
+<li>provide full test coverage</li>
+</ul>
+<p><img src="img/irishplate_comp.png" alt="  Registration plate image with characters located using connected component labeling"></p>
+<h2>General Requirements</h2>
+<p>You are required to develop a class, ComponentImage, that has the following API:</p>
+<h4>public class ComponentImage</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"></td>
+<td align="left">ComponentImage(String fileLocation)</td>
+<td align="left">initialise the ComponentImage using image file location.</td>
+</tr>
+<tr>
+<td align="left">int</td>
+<td align="left">countComponents()</td>
+<td align="left">returns number of components in the image</td>
+</tr>
+<tr>
+<td align="left">Picture</td>
+<td align="left">binaryComponentImage()</td>
+<td align="left">creates binary image representation of original image</td>
+</tr>
+<tr>
+<td align="left">Picture</td>
+<td align="left">colourComponentImage()</td>
+<td align="left">creates coloured image representation of original image</td>
+</tr>
+<tr>
+<td align="left">Picture</td>
+<td align="left">highlightComponentImage()</td>
+<td align="left">creates image with Components highlighted by red  box</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>An example of what the output should look like is as follows:</p>
+<p><img src="img/01.png" alt=" a - original image. b - binaryComponentImage. c - colourComponentImage. d - identifiedComponentImage "></p>
+<p><strong>You are required to use an  union-find algorithms</strong> to identify and count the number of items in an image. You MUST conform to the API in the above table - failure to do so will result in a loss of marks. You can use the following <a href="https://drive.google.com/file/d/0BxtnCYpIWp3DWG1QQWxKakQwbkU">starter code</a>  and images if you wish.</p>
+<p>You are recommended to implement the above API in the order that the methods appear. Furthermore, you are requested to follow a Test Driven Development approach, incuding a comprehensive JUnit test with full test coverage. The following steps will give you guidelines to accomplish this.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h2>Images in Java</h2>
+<h3>Reading in an image to your program</h3>
+<p>The <a href="http://introcs.cs.princeton.edu/java/stdlib/javadoc/Picture.html">Picture</a>  class  is part of the stdlib-package.jar and can be used  to represent most image files (e.g. jpg,bmp) in a Java program. For example, the following code will create a Picture object in your program by reading in a .jpg from the given filename or URL.</p>
+<pre><code>Picture p = new Picture(&quot;C:\some_folder\my_pic.jpg&quot;)</code></pre>
+<p>Furthermore, the <a href="http://introcs.cs.princeton.edu/java/31datatype/Luminance.java.html">Luminance</a>  class allows us to convert from colour to greyscale. Examples of image processing using these classes can be found <a href="http://introcs.cs.princeton.edu/java/31datatype/">here.</a></p>
+<h3>Binarising an Image</h3>
+<p>Translating an image to a binary form  can be used to find items in an image. For example, if there is enough contrast in colour between items of interest and background then we can choose a threshold value and change all pixel values greater than threshold to white , otherwise set value to black. </p>
+<p><img src="img/03.png" alt="Binarising a greyscale image."> </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h2>Counting Objects</h2>
+<p>All components in a binarised image will have the same pixel values - either black or white. By representing each pixel as a ‘site’ or element in a Union-Find data structure, we can track and count the components in an image by connecting pixels that are beside each other and have the same value. </p>
+<p><img src="img/02.png" alt=""> </p>
+<p>So an approach to use union find would be as follows:</p>
+<ol>
+<li>let n = number of pixels in image</li>
+<li>Create binary version of image</li>
+<li>Create a Union-Find data structure  with N sites</li>
+<li>For each pixel p in the image:
+... check adjacent pixel q 
+... if p.value==q.value
+...... connect p and q  </li>
+</ol>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h2>Submission and Marking Scheme</h2>
+<h3>Submission Instructions</h3>
+<p>Create a git repository called <strong>algorithms-assign1</strong> on <a href="https://github.com/"><strong>Github</strong></a> or <a href="https://bitbucket.org/"><strong>Bitbucket</strong></a>  and submit the URL of this repository via the assigment link in Moodle.<br>If you use Github, you can create free public repositories. If you wish to keep your submission private,  use Bitbucket but you must share your repository with you tutors on Bitbucket:  fxwalsh and edel020.</p>
+<h3>Marking Schema (Tentative)</h3>
+<p>The table below shows a general marking scheme that will be applied to your submission. </p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Feature:</strong></th>
+<th align="left">Coding Style and Conformity to spec.</th>
+<th align="left">Read in Image</th>
+<th align="left">Compute Binary Image</th>
+<th align="left">Application of Union-Find to Image</th>
+<th align="left">Correct Component Count using Union Find</th>
+<th align="left">Coloured Components Image</th>
+<th align="left">Highlight Components</th>
+<th align="left">Testing and Test Coverage</th>
+<th align="left">Advanced Features (e.g. GUI)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Marks:</strong></td>
+<td align="left">5</td>
+<td align="left">5</td>
+<td align="left">15</td>
+<td align="left">15</td>
+<td align="left">5</td>
+<td align="left">15</td>
+<td align="left">10</td>
+<td align="left">15</td>
+<td align="left">15</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,744 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Agile Software Development</h2>
+    <p> Top Level Topics </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="#"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar & Dr. Siobhan Drohan.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic01 - paradigms and languages/index.html">
+        Paradigms & Languages
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic01 - paradigms and languages/talk-1/a-software-paradigms.pdf">
+          Software Paradigms</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01 - paradigms and languages/talk-2/b-programming-languages.pdf">
+          Programming Languages</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01 - paradigms and languages/talk-3/c-agile-adoption.pdf">
+          RefCardz: Agile Adoption</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01 - paradigms and languages/talk-4/d-eclipse-refcard.pdf">
+          RefCardz: Eclipse</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01 - paradigms and languages/book/index.html">
+          Lab-01</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic02 - java language/index.html">
+        The Java Programming Language
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic02 - java language/talk-1/a-java-overview.pdf">
+          Introduction</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02 - java language/talk-2/b-classes.pdf">
+          Classes</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02 - java language/talk-3/c-control-statements.pdf">
+          Control Statements</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02 - java language/talk-4/d-object-oriented-concepts.pdf">
+          Object Oriented Concepts</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02 - java language/talk-5/e-assignment.pdf">
+          Assignment 1</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02 - java language/book/index.html">
+          Lab-02</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic03 - inheritance and collections/index.html">
+        Inheritance & Collections
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03 - inheritance and collections/talk-1/a-inheritance.pdf">
+          Inheritance</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03 - inheritance and collections/talk-2/b-collections.pdf">
+          Collections</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03 - inheritance and collections/book/index.html">
+          Lab-03</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic04 - serialisation and TDD I/index.html">
+        Serialization & Test Driven Development I
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic04 - serialisation and TDD I/talk-1/a-streams.pdf">
+          Streams</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04 - serialisation and TDD I/talk-2/b-tdd-intro.pdf">
+          TDD Introduction</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04 - serialisation and TDD I/talk-3/c-first-tests.pdf">
+          First Tests</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04 - serialisation and TDD I/book/index.html">
+          Lab-04</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic05 - TDD II/index.html">
+        Test Driven Development II
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic05 - TDD II/talk-1/a-annotations.pdf">
+          Annotations</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05 - TDD II/talk-2/b-pragmatic-testing.pdf">
+          Pragmatic Testing</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05 - TDD II/talk-3/c-pacemaker-tests.pdf">
+          Pacemaker Tests</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05 - TDD II/talk-4/d-junit-easymock-refcard.pdf">
+          RefCardz: JUnit and EasyMock</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05 - TDD II/book/index.html">
+          Lab-05</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic06 - exceptions and maven/index.html">
+        Exceptions & Maven
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic06 - exceptions and maven/talk-1/a-exceptions.pdf">
+          Exceptions</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06 - exceptions and maven/talk-2/b-devops-and-maven.pdf">
+          Maven Introduction</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06 - exceptions and maven/talk-3/c-maven-example.pdf">
+          Maven Example</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06 - exceptions and maven/book/index.html">
+          Lab-06</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic07 - TDD III/index.html">
+        TDDIII and Xtend
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic07 - TDD III/talk-1/a-writing-junit-tests.pdf">
+          Writing Tests</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07 - TDD III/talk-2/b-bicep.pdf">
+          Right BICEP</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07 - TDD III/talk-3/c-correct.pdf">
+          C.O.R.R.E.C.T</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07 - TDD III/talk-4/a-xtend-introduction.pdf">
+          Xtend Introduction</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic08 - framework and cloud/index.html">
+        Play Framework and Cloud
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic08 - framework and cloud/talk-1/a-intro-to-play-activator.pdf">
+          Play Activator</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08 - framework and cloud/talk-2/b-activator-pacemaker-cloud.pdf">
+          Pacemaker Cloud</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08 - framework and cloud/talk-3/c-assignment-2.pdf">
+          Assignment 2</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08 - framework and cloud/book-1/index.html">
+          Lab-08a</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08 - framework and cloud/book-2/index.html">
+          Lab-08b</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic09 - SRP/index.html">
+        SRP and Assignment 1 solution
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic09 - SRP/talk-1/a-pacemaker-uml-code.pdf">
+          Pacemaker Solution</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09 - SRP/talk-2/b-pacemaker-101.pdf">
+          Structure 101 Analysis</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09 - SRP/talk-3/a-SRP.pdf">
+          Single Responsibility Principle</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09 - SRP/talk-4/d-activator-pacemaker-evolutions.pdf">
+          Database Evolutions</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09 - SRP/book-1/index.html">
+          Lab-09a</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09 - SRP/book-2/index.html">
+          Lab-09b</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic10 - OCP and play testing/index.html">
+        OCP and Play Tests
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic10 - OCP and play testing/talk-1/a-open-closed-principle.pdf">
+          Open Closed Principle</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10 - OCP and play testing/talk-2/b-pacemaker-play-testing.pdf">
+          Play Tests</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10 - OCP and play testing/book-1/index.html">
+          Lab-10</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic11 - semantic and TDD IV/index.html">
+        Semantic and More Testing
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic11 - semantic and TDD IV/talk-1/c-semantic-and-play.pdf">
+          Semantic HTML + UI</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11 - semantic and TDD IV/talk-2/b-first-principles.pdf">
+          FIRST Principles</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11 - semantic and TDD IV/book-1/index.html">
+          Lab-11a</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11 - semantic and TDD IV/book-2/index.html">
+          Lab-11b</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic12 - liskov and mocking/index.html">
+        Liskov and Mocking
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic12 - liskov and mocking/talk-1/a-liskov-substitution-principle.pdf">
+          Liskov Substitution Principle</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12 - liskov and mocking/talk-2/b-mocking-and-doubles.pdf">
+          Mocking and Doubles</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12 - liskov and mocking/talk-3/c-mocking-in-pacemaker.pdf">
+          Mocking in Pacemaker 2.0</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+          
+  <a class="ui raised link card" href="./topic01 - paradigms and languages/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Paradigms & Languages </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic01 - paradigms and languages/talk-1/a-software-paradigms.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic02 - java language/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> The Java Programming Language </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic02 - java language/talk-1/a-java-overview.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic03 - inheritance and collections/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Inheritance & Collections </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic03 - inheritance and collections/talk-1/a-inheritance.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic04 - serialisation and TDD I/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Serialization & Test Driven Development I </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic04 - serialisation and TDD I/talk-1/a-streams.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic05 - TDD II/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Test Driven Development II </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic05 - TDD II/talk-1/a-annotations.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic06 - exceptions and maven/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Exceptions & Maven </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic06 - exceptions and maven/talk-1/a-exceptions.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic07 - TDD III/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> TDDIII and Xtend </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic07 - TDD III/talk-1/a-writing-junit-tests.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic08 - framework and cloud/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Play Framework and Cloud </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic08 - framework and cloud/talk-1/a-intro-to-play-activator.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic09 - SRP/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> SRP and Assignment 1 solution </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic09 - SRP/talk-1/a-pacemaker-uml-code.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic10 - OCP and play testing/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> OCP and Play Tests </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic10 - OCP and play testing/talk-1/a-open-closed-principle.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic11 - semantic and TDD IV/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Semantic and More Testing </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic11 - semantic and TDD IV/talk-1/c-semantic-and-play.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic12 - liskov and mocking/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Liskov and Mocking </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic12 - liskov and mocking/talk-1/a-liskov-substitution-principle.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

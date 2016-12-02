@@ -1,0 +1,532 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Algorithms</h2>
+    <p> All Labs in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Frank Walsh & Eamonn De Leastar .
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic01/book-1/index.html">
+      Lab-01
+    </a>
+    
+    <a class="item" href="topic01/book-2/index.html">
+      Lab-02
+    </a>
+    
+    <a class="item" href="topic01/book-3/index.html">
+      Lab-03
+    </a>
+    
+    <a class="item" href="topic02/book-1/index.html">
+      Lab-04
+    </a>
+    
+    <a class="item" href="topic02/book-2/index.html">
+      Image_Processing_Lab
+    </a>
+    
+    <a class="item" href="topic02/book-3/index.html">
+      Assignment-1
+    </a>
+    
+    <a class="item" href="topic03/book-TDD-01/index.html">
+      TDD-01
+    </a>
+    
+    <a class="item" href="topic04/book-1/index.html">
+      Lab-05
+    </a>
+    
+    <a class="item" href="topic05/book-1/index.html">
+      Lab-06
+    </a>
+    
+    <a class="item" href="topic05/book-2/index.html">
+      assignment-2
+    </a>
+    
+    <a class="item" href="topic06/book-TDD-02/index.html">
+      TDD-02
+    </a>
+    
+    <a class="item" href="topic06/book-TDD-03/index.html">
+      TDD-03
+    </a>
+    
+    <a class="item" href="topic07/book-TDD-04/index.html">
+      TDD-04
+    </a>
+    
+    <a class="item" href="topic08/book-TDD-05/index.html">
+      TDD-Lab-05
+    </a>
+    
+    <a class="item" href="topic08/book-x-cmd-line/index.html">
+      Command-Line
+    </a>
+    
+    <a class="item" href="topic09/book-1/index.html">
+      REPEAT-ASSIGNMENT
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic01/book-1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-01 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01/book-1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <ul>
+<li>Understand workspaces in Eclipse- Understand Java Interfaces paradigm- Specify an Interface- Implement the Interface- Use of Interface/Implementation in a Client Object</li>
+</ul>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01/book-2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-02 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01/book-2/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <ul>
+<li>Understand workspaces in Eclipse- Open the Debug Perspective in Eclipse.- Suspend, Resume and Terminate a Java Program.- Set Break Points.- Step through code.- View variable values</li>
+</ul>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01/book-3/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-03 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01/book-3/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Develop a java program that reads in strings from the following URL and stores them in a sorted list.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02/book-1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-04 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02/book-1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p> On competing the lab you will:- Understand the union find algorithm.- Develop implementation of the union-find algorithm.- Create a JUnit test for Union Find algorithms using Eclipse.- Modify union-find implementation to include path compression.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02/book-2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Image_Processing_Lab </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02/book-2/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this lab you will:- Read in an image into a Java program- Output image data (width and height in pixels)- Binarise an image- Find objects in an imagePlease refer to the image processing slides for example code.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02/book-3/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Assignment-1 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02/book-3/img/main.gif">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this assignment you will use the Union-Find algorithm to develop a Java program that can:- Read in an image file- Count the number of objects in the image- Locate and highlight  objects in the image- Provide full JUnit test coverage </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/book-TDD-01/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> TDD-01 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/book-TDD-01/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The objective of this lab set up a simple command line app to be used as a foundation for exploring TDD in subsequent labs</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/book-1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-05 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/book-1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p> On competing the lab you will:- Know how to apply Scientific Method to analyse an algorithm.- Empirically derive an equation to estimate the running time of an algorithm.- Using tilda notation, derive a mathematical cost model for the running time of an algorithm</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/book-1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-06 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/book-1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p> On competing the lab you will:- Implement a comparable class.- Generate random data for testing.- Sort using insertion and Selection sort.- Compare the performance of selection and insertion sort. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/book-2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> assignment-2 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/book-2/img/main.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Many companies use recommender systems to suggest products, information, and friends to their customers .  In this assignment you will develop a Movie recommender using existing movie data.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06/book-TDD-02/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> TDD-02 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06/book-TDD-02/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Evolve the application developed in lab01 with additional capabilities</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06/book-TDD-03/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> TDD-03 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06/book-TDD-03/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Expand the pacemaker model to include Location and Activity classes. Introduce a set of tests to verify the behavior of the model.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07/book-TDD-04/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> TDD-04 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07/book-TDD-04/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Extend the pacemaker application to incorporate a serialization mechanism to enable users &amp; activities to be persisted to a file. We will then try to generalize this mechanism, which will enable us to experiment with alternative serialization formats.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08/book-TDD-05/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> TDD-Lab-05 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08/book-TDD-05/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Extend the pacemaker project  to include tests for the persistence mechanisms.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08/book-x-cmd-line/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Command-Line </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08/book-x-cmd-line/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Extend the pacemaker project  to include a simple command line facility</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09/book-1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> REPEAT-ASSIGNMENT </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09/book-1/img/main.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this assignment you will develop a Book manager and recommender.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

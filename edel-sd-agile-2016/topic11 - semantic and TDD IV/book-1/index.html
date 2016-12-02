@@ -1,0 +1,927 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Semantic and More Testing
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-11a">
+      Lab-11a
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01 - paradigms and languages/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02 - java language/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03 - inheritance and collections/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04 - serialisation and TDD I/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05 - TDD II/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06 - exceptions and maven/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-1/index.html">
+          Lab-08a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-2/index.html">
+          Lab-08b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-1/index.html">
+          Lab-09a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-2/index.html">
+          Lab-09b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10 - OCP and play testing/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic11 - semantic and TDD IV/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-2/index.html">
+          Lab-11b
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-11a">
+        <h1>Objectives</h1>
+<p>Incorporate Activity class into the placemaker service. Extend the junit tests to exercise the new feature. Using this as a role model, in the exercises introduce Location into the service.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Activities</h1>
+<p>We already have a Java version of Activity from an earlier lab:</p>
+<pre><code class="lang-java">package models;
+
+import static com.google.common.base.MoreObjects.toStringHelper;
+import com.google.common.base.Objects;
+
+public class Activity 
+{ 
+  static Long   counter = 0l;
+
+  public Long   id;
+  public String type;
+  public String location;
+  public double distance;
+
+  public Activity()
+  {
+  }
+
+  public Activity(String type, String location, double distance)
+  {
+    this.id        = counter++;
+    this.type      = type;
+    this.location  = location;
+    this.distance  = distance;
+  }
+
+  @Override
+  public String toString()
+  {
+    return toStringHelper(this).addValue(id)
+                               .addValue(type)
+                               .addValue(location)
+                               .addValue(distance)
+                               .toString();
+  }
+
+  @Override
+  public boolean equals(final Object obj)
+  {
+    if (obj instanceof Activity)
+    {
+      final Activity other = (Activity) obj;
+      return Objects.equal(type, other.type) 
+          &amp;&amp; Objects.equal(location,  other.location)
+          &amp;&amp; Objects.equal(distance,  other.distance) ; 
+    }
+    else
+    {
+      return false;
+    }
+  }
+
+  @Override  
+  public int hashCode()  
+  {  
+     return Objects.hashCode(this.id, this.type, this.location, this.distance);  
+  } 
+}</code></pre>
+<p>(The route has been removed for the moment)</p>
+<p>Adapting this to work within our Play App is reasonably straightforward. </p>
+<p>First, remove all references to the counter - our IDs are now going to be managed by the database. Then, bring the JPA annotation <code>@Entity</code> and also give your table a name. Have the class inherit from Model, and annotate our id with @Id and @GeneratedValue:</p>
+<pre><code class="lang-java">package models;
+
+import static com.google.common.base.MoreObjects.toStringHelper;
+import com.google.common.base.Objects;
+
+import javax.persistence.*;
+import com.avaje.ebean.Model;
+import com.avaje.ebean.Model.Find;
+
+@Entity
+@Table(name=&quot;my_activity&quot;)
+public class Activity extends Model{
+
+  @Id
+  @GeneratedValue
+  public Long   id;</code></pre>
+<p>We also equip the class with a <strong>find</strong> object:</p>
+<pre><code class="lang-java">  public static Find&lt;String, Activity&gt; find = new Find&lt;String, Activity&gt;(){};</code></pre>
+<p>And include methods, similiar to those in User, that allow you to <strong>update</strong> an activity,  <strong>findById</strong> to locate an activity by id, <strong>findAll</strong> activities, and <strong>deleteAll</strong> activities.  Here is a sample findById method:</p>
+<pre><code class="lang-java">  public static Activity findById(Long id)
+  {
+    return find.where().eq(&quot;id&quot;, id).findUnique();
+  }</code></pre>
+<p>These facilitates simple typesafe model queries.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>User</h1>
+<p>In our User model, a user has a list of Activities. This has been modeled as a map in and earlier version of User:</p>
+<pre><code class="lang-java">  public Map&lt;Long, Activity&gt; activities = new HashMap&lt;&gt;();</code></pre>
+<p>We can revert to slightly simpler model in Play - and take advantage of the framework to manage this relationship efficiently. Insert the following into the User class:</p>
+<pre><code class="lang-java">  @OneToMany(cascade=CascadeType.ALL)
+  public List&lt;Activity&gt; activities = new ArrayList&lt;Activity&gt;();</code></pre>
+<p>The OneToMany annotation will ensure that the generated database will accommodate this relationship. We have implemented it in unidirectional manner - the Users know about the activity instances, but not the other way around (We may wish to revisit this later).</p>
+<p>See </p>
+<ul>
+<li><a href="http://en.wikibooks.org/wiki/Java_Persistence/OneToMany">http://en.wikibooks.org/wiki/Java_Persistence/OneToMany</a></li>
+</ul>
+<p>for a general introduction as to how this relationship is realised in a database.</p>
+<h1>Json Support</h1>
+<p>When we wish to expose aspects of our model, we need Json support. Here is a revised version of the JsonParser to accommodate the Activity class (and also a renderUsers method):</p>
+<pre><code class="lang-java">package parsers;
+
+import models.Activity;
+import models.User;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import flexjson.JSONDeserializer;
+import flexjson.JSONSerializer;
+
+public class JsonParser
+{
+  private static JSONSerializer userSerializer     = new JSONSerializer();
+  private static JSONSerializer activitySerializer = new JSONSerializer();
+
+  public static User renderUser(String json)
+  {
+    return new JSONDeserializer&lt;User&gt;().deserialize(json, User.class); 
+  }
+
+  public static String renderUser(Object obj)
+  {
+    return userSerializer.serialize(obj);
+  }
+
+  public static List&lt;User&gt; renderUsers(String json)
+  {
+    return new JSONDeserializer&lt;ArrayList&lt;User&gt;&gt;().use(&quot;values&quot;, User.class).deserialize(json);
+  }   
+
+  public static Activity renderActivity(String json)
+  {
+    return new JSONDeserializer&lt;Activity&gt;().deserialize(json, Activity.class);
+  }
+
+  public static String renderActivity(Object obj)
+  {
+    return activitySerializer.serialize(obj);
+  }
+
+  public static  List&lt;Activity&gt; renderActivities (String json)
+  {
+    return new JSONDeserializer&lt;ArrayList&lt;Activity&gt;&gt;().use(&quot;values&quot;, Activity.class).deserialize(json);
+  }  
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>API</h1>
+<p>These are additional API methods that should be appended to PacemakerAPI to support Activity API access:</p>
+<pre><code class="lang-java">  public Result activities (Long userId)
+  {  
+    User user = User.findById(userId);
+    return ok(renderActivity(user.activities));
+  }
+
+  public Result createActivity (Long userId)
+  { 
+    User     user     = User.findById(userId);
+    Activity activity = renderActivity(request().body().asJson().toString());  
+
+    user.activities.add(activity);
+    user.save();
+
+    return ok(renderActivity(activity));
+  }
+
+  public Result activity (Long userId, Long activityId)
+  {  
+    User     user     = User.findById(userId);
+    Activity activity = Activity.findById(activityId);
+
+    if (activity == null)
+    {
+      return notFound();
+    }
+    else
+    {
+      return user.activities.contains(activity)? ok(renderActivity(activity)): badRequest();
+    }
+  }  
+
+  public Result deleteActivity (Long userId, Long activityId)
+  {  
+    User     user     = User.findById(userId);
+    Activity activity = Activity.findById(activityId);
+
+    if (activity == null)
+    {
+      return notFound();
+    }
+    else
+    {
+      if (user.activities.contains(activity))
+      {
+        user.activities.remove(activity);
+        activity.delete();
+        user.save();
+        return ok();
+      }
+      else
+      {
+        return badRequest();
+      }
+
+    }
+  }  
+
+  public Result updateActivity (Long userId, Long activityId)
+  {
+    User     user     = User.findById(userId);
+    Activity activity = Activity.findById(activityId);
+
+    if (activity == null)
+    {
+      return notFound();
+    }
+    else
+    {
+      if (user.activities.contains(activity))
+      {
+        Activity updatedActivity = renderActivity(request().body().asJson().toString());
+        activity.distance = updatedActivity.distance;
+        activity.location = updatedActivity.location;
+        activity.type     = updatedActivity.type;
+
+        activity.save();
+        return ok(renderActivity(updatedActivity));
+      }
+      else
+      {
+        return badRequest();
+      }
+    }
+  }</code></pre>
+<p>These features are exposed by additional routes in conf/routes:</p>
+<pre><code>#User/Activity routes
+GET    /api/users/:userId/activities                controllers.PacemakerAPI.activities(userId: Long)
+POST   /api/users/:userId/activities                controllers.PacemakerAPI.createActivity(userId: Long)
+
+GET    /api/users/:userId/activities/:activityId    controllers.PacemakerAPI.activity(userId: Long, activityId:Long)
+DELETE /api/users/:userId/activities/:activityId    controllers.PacemakerAPI.deleteActivity(userId: Long, activityId:Long)
+PUT    /api/users/:userId/activities/:activityId    controllers.PacemakerAPI.updateActivity(userId: Long, activityId:Long)</code></pre>
+<p>Compile and run these changes:</p>
+<pre><code>activator compile
+activator run</code></pre>
+<p>When your app is running on localhost, test out some of the new routes above via POSTMAN.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Testing - JsonParser</h1>
+<p>We can now turn our attention to unit testing these changes - and see if we can exercise these new APIs.</p>
+<h2>Testing JsonParser</h2>
+<p>Currently, our JsonParserTest class has this test method for testing <strong>renderUser</strong>:</p>
+<pre><code class="lang-java">  @Test
+  public void userConvertsToJsonStringAndBackAgain() {    
+      // Create a new user and save it in the database
+      new User(&quot;Jim&quot;, &quot;Simpson&quot;, &quot;jim@simpson.com&quot;, &quot;secret&quot;).save();
+
+      // Retrieve the user we just added by their email address
+      User joesoap = User.findByEmail(&quot;jim@simpson.com&quot;);
+
+      //Test the parsing of the User into a String
+      String jsonReturned = JsonParser.renderUser(joesoap);
+
+      // Test the String returned from the parse contains the user data
+      assertNotNull(jsonReturned);
+      assertThat(jsonReturned, containsString(&quot;jim@simpson.com&quot;));
+      assertThat(jsonReturned, containsString(&quot;Jim&quot;));
+      assertThat(jsonReturned, containsString(&quot;Simpson&quot;));
+      assertThat(jsonReturned, containsString(&quot;secret&quot;));
+
+      // Test the String returned from the parse re-renders into user object format
+      assertThat(joesoap, equalTo(JsonParser.renderUser(jsonReturned)));    
+  }</code></pre>
+<p>If we cloned the above test and refactored it to test Activity parsing, we would get the following runtime error:</p>
+<pre><code>javax.persistence.PersistenceException: Error inserting bean [class models.Activity] with unidirectional relationship. For inserts you must use cascade save on the master bean [class models.User]</code></pre>
+<p>So testing the activity json parsing is not going to be a straight forward clone of the user approach!  It appears we need to add a user to the database prior to adding an activity. Then we can test.  Try this code:</p>
+<pre><code class="lang-java">  @Test
+  public void activityConvertsToJsonStringAndBackAgain() {    
+      // Create a new user and save it in the database
+      new User(&quot;Jim&quot;, &quot;Simpson&quot;, &quot;jim@simpson.com&quot;, &quot;secret&quot;).save();
+
+      // Retrieve the user we just added by their email address
+      User joesoap = User.findByEmail(&quot;jim@simpson.com&quot;);
+
+      // Create a new activity and save it in the database
+      joesoap.activities.add(new Activity(&quot;Run&quot;, &quot;Tramore&quot;, 12.33));
+      joesoap.save();
+
+      // Retrieve the activity we just added; id should be 1
+      Activity activity = Activity.findById(1l);
+
+      //Test the parsing of the Activity into a String
+      String jsonReturned = JsonParser.renderActivity(activity);
+
+      // Test the String returned from the parse contains some activity data
+      assertNotNull(jsonReturned);
+      assertThat(jsonReturned, containsString(&quot;Run&quot;));
+      assertThat(jsonReturned, containsString(&quot;Tramore&quot;));
+
+      // Test the String returned from the parse re-renders into activity object format
+      assertThat(activity, equalTo(JsonParser.renderActivity(jsonReturned)));    
+  }</code></pre>
+<p>Run the test to ensure it is working as expected.</p>
+<p>If for some reason, no tests are running when you type <strong>activator test</strong>, clean your test target classes using the command <strong>activator clean test</strong>.  When you run <strong>activator test</strong> again, your tests should kick off.  </p>
+<p>You may notice that there is no test for the methods, <strong>renderUsers</strong> and <strong>renderActivities</strong>.   Currently these methods are not used by our API, so we can ignore these for the moment (we just included these methods in case you needed them).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Testing - api (create)</h1>
+<p>In last week&#39;s labs, we wrote a few sample (some skeleton) tests for the PacemakerAPI:</p>
+<pre><code class="lang-java">    @Test
+    //This route test should call the createUser() method in PacemakerAPI
+    public void POSTOnApiUsersRouteCreatesUser() {
+
+      //ensure the database is empty before exercising tests
+      assertThat(User.findAll().size(), equalTo(0));          
+
+      //Set up a user parsed in JsonNode format
+      String body = Fixtures.userJson;
+      JsonNode json = Json.parse(body);
+
+      //Invoke the createUser() method by calling this URI
+      RequestBuilder request = new RequestBuilder()
+              .method(POST)
+              .uri(&quot;/api/users&quot;)
+              .bodyJson(json);
+      Result result = route(request);
+
+      //Test that the HTTP status returned was OK
+      assertThat(result.status(), equalTo(OK));
+
+      //ensure the database has one user after exercising tests
+      assertThat(User.findAll().size(), equalTo(1));
+    }
+
+    @Test
+    public void DELETEOnApiUsersRouteShouldExist() {
+        RequestBuilder request = new RequestBuilder()
+                .method(DELETE)
+                .uri(&quot;/api/users&quot;);
+
+        Result result = route(request);
+        assertThat(result.status(), equalTo(OK));
+    }
+
+    @Test
+    public void GETOnApiUsersRouteShouldExist() {
+        Result result = route(fakeRequest(GET, &quot;/api/users&quot;));
+        assertThat(result.status(), equalTo(OK));
+    }
+
+    @Test
+    public void GETOnDummyRouteShouldNotBeFound() {
+        Result result = route(fakeRequest(GET, &quot;/api/blah&quot;));
+        assertThat(result.status(), equalTo(NOT_FOUND));
+    }</code></pre>
+<p>Add a new test to test that an activity is created for a specific user:</p>
+<pre><code class="lang-java">    @Test
+    //This route test should call the createActivity() method in PacemakerAPI
+    //and add the activity for a specific user  
+    public void POSTOnApiUsersActivityRouteCreatesActivity() {
+
+      //ensure the User and Activity tables are empty before exercising tests
+      assertThat(User.findAll().size(), equalTo(0));          
+      assertThat(Activity.findAll().size(), equalTo(0));
+
+      //First, invoke createUser() to create a user whom we will add activities to
+      RequestBuilder userRequest = new RequestBuilder()
+              .method(POST)
+              .uri(&quot;/api/users&quot;)
+              .bodyJson(Json.parse(Fixtures.userJson));
+      Result userResult = route(userRequest);
+      assertThat(userResult.status(), equalTo(OK));
+      assertThat(User.findAll().size(), equalTo(1));
+
+      //Now that the user is added successfully, we can exercise the activity test
+      RequestBuilder activityRequest = new RequestBuilder()
+              .method(POST)
+              .uri(&quot;/api/users/1/activities&quot;)
+              .bodyJson(Json.parse(Fixtures.activityJson));
+      Result activityResult = route(activityRequest);
+      assertThat(activityResult.status(), equalTo(OK));
+      assertThat(Activity.findAll().size(), equalTo(1));
+    }</code></pre>
+<p>And supplement our Fixtures with a sample Activity Json object:</p>
+<pre><code class="lang-java">  public static String activityJson  = &quot;{\n&quot;
+                                    +  &quot;\&quot;type\&quot;      : \&quot;run\&quot;                 ,\n&quot;
+                                    +  &quot;\&quot;location\&quot;  : \&quot;Dunmore\&quot;             ,\n&quot;
+                                    +  &quot;\&quot;distance\&quot;  : 3                        \n&quot;
+                               + &quot;}&quot;;</code></pre>
+<p>Run this test to ensure that it is working as expected.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Testing - api (delete)</h1>
+<p>Last week, we added this test to our PacemakerAPITest class:</p>
+<pre><code class="lang-java">    @Test
+    public void DELETEOnApiUsersRouteShouldExist() {
+        RequestBuilder request = new RequestBuilder()
+                .method(DELETE)
+                .uri(&quot;/api/users&quot;);
+
+        Result result = route(request);
+        assertThat(result.status(), equalTo(OK));
+    }</code></pre>
+<p>This test simply tested that the existing route existed in conf/routes and that the resulting status returned from the API call was OK.  It did not test what happened in the API method, deleteAllUsers().</p>
+<p>In the following  test, we will focus on testing the <strong>deleteUser(Long id)</strong> method.  We will test the call exists and that OK is returned, but we will also include tests to ensure that the user (id is passed as a parameter) and it&#39;s associated activities are deleted:</p>
+<p>~~java
+    @Test
+    public void DELETEOnApiUsersIdRouteShouldDeleteUserAndAssociatedActivity() {</p>
+<pre><code>  //ensure the User and Activity tables are empty before exercising tests
+  assertThat(User.findAll().size(), equalTo(0));          
+  assertThat(Activity.findAll().size(), equalTo(0));
+
+  //First, invoke createUser() to create a user whom we will add activities to
+  RequestBuilder userRequest = new RequestBuilder()
+          .method(POST)
+          .uri(&quot;/api/users&quot;)
+          .bodyJson(Json.parse(Fixtures.userJson));
+  Result userResult = route(userRequest);
+  assertThat(userResult.status(), equalTo(OK));
+  assertThat(User.findAll().size(), equalTo(1));
+
+  //Second, invoke createActivity to add an activity to the user above
+  RequestBuilder activityRequest = new RequestBuilder()
+          .method(POST)
+          .uri(&quot;/api/users/1/activities&quot;)
+          .bodyJson(Json.parse(Fixtures.activityJson));
+  Result activityResult = route(activityRequest);
+  assertThat(activityResult.status(), equalTo(OK));
+  assertThat(Activity.findAll().size(), equalTo(1));
+
+  //Now invoke deleteUser(Long id) and test both the user and the activity are deleted
+  RequestBuilder deleteRequest = new RequestBuilder()
+          .method(DELETE)
+          .uri(&quot;/api/users/1&quot;);
+  Result deleteResult = route(deleteRequest);
+  assertThat(deleteResult.status(), equalTo(OK));
+
+  assertThat(User.findAll().size(), equalTo(0));
+  assertThat(Activity.findAll().size(), equalTo(0));
+}</code></pre>
+<pre><code>
+Our tests are starting to get repetitive e.g. same code for adding a user and an activity is added into multiple tests and this repetition is likely to continue as our tests grow.  We should instead refactor our tests so that we have **helper** methods to add a user and an activity e.g.:
+
+~~~java
+    private Result addUser()
+    {
+        RequestBuilder userRequest = new RequestBuilder()
+                .method(POST)
+                .uri(&quot;/api/users&quot;)
+                .bodyJson(Json.parse(Fixtures.userJson));
+       return route(userRequest);
+    }
+
+    private Result addActivityToUser()
+    {
+        RequestBuilder activityRequest = new RequestBuilder()
+                .method(POST)
+                .uri(&quot;/api/users/1/activities&quot;)
+                .bodyJson(Json.parse(Fixtures.activityJson));
+        return route(activityRequest);        
+    }</code></pre>
+<p>Refactoring the tests in PacemakerAPITest to use these helper methods will produce code similar to this (note that we left all assertions in the test methods):</p>
+<pre><code class="lang-java">    @Test
+    //This route test should call the createUser() method in PacemakerAPI
+    public void POSTOnApiUsersRouteCreatesUser() {
+
+      //ensure the database is empty before exercising tests
+      assertThat(User.findAll().size(), equalTo(0));          
+
+      //Invoke the createUser() method and ensure the HTTP status returned was OK
+      assertThat(addUser().status(), equalTo(OK));
+
+      //ensure the database has one user after exercising tests
+      assertThat(User.findAll().size(), equalTo(1));
+    }
+
+    @Test
+    //This route test should call the createActivity() method in PacemakerAPI
+    //and add the activity for a specific user  
+    public void POSTOnApiUsersActivityRouteCreatesActivity() {
+
+      //ensure the User and Activity tables are empty before exercising tests
+      assertThat(User.findAll().size(), equalTo(0));          
+      assertThat(Activity.findAll().size(), equalTo(0));
+
+      //First, invoke createUser() to create a user whom we will add activities to
+      assertThat(addUser().status(), equalTo(OK));
+      assertThat(User.findAll().size(), equalTo(1));
+
+      //Now that the user is added successfully, we can exercise the activity test
+      assertThat(addActivityToUser().status(), equalTo(OK));
+      assertThat(Activity.findAll().size(), equalTo(1));
+    }
+
+    @Test
+    public void DELETEOnApiUsersIdRouteShouldDeleteUserAndAssociatedActivity() {
+      //ensure the User and Activity tables are empty before exercising tests
+      assertThat(User.findAll().size(), equalTo(0));          
+      assertThat(Activity.findAll().size(), equalTo(0));
+
+      //First, invoke createUser() to create a user whom we will add activities to
+      assertThat(addUser().status(), equalTo(OK));
+      assertThat(User.findAll().size(), equalTo(1));
+
+      //Second, invoke createActivity to add an activity to the user above
+      assertThat(addActivityToUser().status(), equalTo(OK));
+      assertThat(Activity.findAll().size(), equalTo(1));
+
+      //Now invoke deleteUser(Long id) and test both the user and the activity are deleted
+      RequestBuilder deleteRequest = new RequestBuilder()
+              .method(DELETE)
+              .uri(&quot;/api/users/1&quot;);
+      Result deleteResult = route(deleteRequest);
+      assertThat(deleteResult.status(), equalTo(OK));
+
+      assertThat(User.findAll().size(), equalTo(0));
+      assertThat(Activity.findAll().size(), equalTo(0));
+    }</code></pre>
+<p>When you have these changes made, run your tests again to ensure that all is ok.</p>
+<p>At this stage, you could make a decision as to whether you are happy to use a new <strong>fakeApplication</strong> for each test and populate the tables for each individual test, or maybe move this test class to use only one <strong>fakeApplication</strong> for all tests and populate it @BeforeClass.  Both options have pros and cons and the choice of option will depend on your application needs and the tests you plan to write.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Testing - Activity</h1>
+<p>In your test/models package, create a new test class called <strong>ActivityTest</strong>.  </p>
+<p>Insert the following test into the class.</p>
+<pre><code class="lang-java">package models;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+import parsers.JsonParser;
+import play.test.WithApplication;
+import static org.hamcrest.CoreMatchers.*;
+
+public class ActivityTest extends WithApplication{
+//automatically ensures that a fake application is started
+//and stopped for each test method.
+
+  @Test
+  public void createAndRetrieveActivityForUser() {
+    // Create a new user and save it in the database
+      new User(&quot;Jim&quot;, &quot;Simpson&quot;, &quot;jim@simpson.com&quot;, &quot;secret&quot;).save();
+      User joesoap = User.findByEmail(&quot;jim@simpson.com&quot;);
+      joesoap.activities.add(new Activity(&quot;Run&quot;, &quot;Tramore&quot;, 12.33));
+      joesoap.save();
+
+      // Retrieve the activity we just added; id should be 1
+      Activity activity = Activity.findById(1l);
+
+      //Test that the fields in the returned activity was set up correctly
+      assertNotNull(activity);
+      assertThat(&quot;Run&quot;, equalTo(activity.type));
+      assertThat(&quot;Tramore&quot;, equalTo(activity.location));
+      assertThat(12.33, equalTo(activity.distance));
+  }
+}</code></pre>
+<p>Run this test.  It should now pass.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<ul>
+<li><a href="archives/pacemakerplay-lab11a.zip">Solution for the lab so far</a></li>
+</ul>
+<h2>Exercise 1:  Further enhance the User/Activity tests.</h2>
+<p>So far, we have only put in a handful of tests for each class.  These tests are by no means exhaustive.</p>
+<p>Consider what other tests are required to test the application in entirety; you don&#39;t need to code them all up as the exercise...just map out what you would plan to test.</p>
+<p>Code coverage tools would provide support here.  </p>
+<h2>Exercise 2: Implementing the Location class</h2>
+<p>Using the User/Activity classes as a role model, consider introducing the Location class into the model. This is a revision of the Location class from our console app:</p>
+<pre><code class="lang-java">package models;
+
+import static com.google.common.base.MoreObjects.toStringHelper;
+import com.google.common.base.Objects;
+
+import javax.persistence.*;
+import com.avaje.ebean.Model;
+import com.avaje.ebean.Model.Find;
+
+@Entity
+public class Location extends Model
+{
+  @Id
+  @GeneratedValue
+  public Long id;
+
+  public float latitude;
+  public float longitude;
+
+  public Location()
+  {
+  }
+
+  public Location (float latitude, float longitude)
+  {
+    this.latitude = latitude;
+    this.longitude = longitude;
+  }
+
+  @Override
+  public boolean equals(final Object obj)
+  {
+    if (obj instanceof Location)
+    {
+      final Location other = (Location) obj;
+      return Objects.equal(latitude, other.latitude) 
+          &amp;&amp; Objects.equal(longitude, other.longitude);
+    }
+    else
+    {
+      return false;
+    }
+  }
+
+  public String toString()
+  {
+    return Objects.toStringHelper(this)
+        .add(&quot;Latitude&quot;, latitude)
+        .add(&quot;Longitude&quot;, longitude).toString();
+  }</code></pre>
+<p>Introduce a <code>OneToMany</code> relationship from Activity to Location (in the same way we realised the relationship in our console app).</p>
+<p>Extend the JsonParser classe to accommodate the Location class transformation.</p>
+<p>Agument the routes to facilitate route create/read/update/delete by providing new routes using POST/GET/PUT/DELETE verbs.</p>
+<p>Introduce new tests into the app to exercise the new location feature.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & Dr. Siobhan Drohan.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

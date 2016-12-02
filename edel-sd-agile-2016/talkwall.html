@@ -1,0 +1,1057 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Agile Software Development</h2>
+    <p> All Slides in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar & Dr. Siobhan Drohan.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic01 - paradigms and languages/talk-1/a-software-paradigms.pdf">
+      Software Paradigms
+    </a>
+    
+    <a class="item" href="topic01 - paradigms and languages/talk-2/b-programming-languages.pdf">
+      Programming Languages
+    </a>
+    
+    <a class="item" href="topic01 - paradigms and languages/talk-3/c-agile-adoption.pdf">
+      RefCardz: Agile Adoption
+    </a>
+    
+    <a class="item" href="topic01 - paradigms and languages/talk-4/d-eclipse-refcard.pdf">
+      RefCardz: Eclipse
+    </a>
+    
+    <a class="item" href="topic02 - java language/talk-1/a-java-overview.pdf">
+      Introduction
+    </a>
+    
+    <a class="item" href="topic02 - java language/talk-2/b-classes.pdf">
+      Classes
+    </a>
+    
+    <a class="item" href="topic02 - java language/talk-3/c-control-statements.pdf">
+      Control Statements
+    </a>
+    
+    <a class="item" href="topic02 - java language/talk-4/d-object-oriented-concepts.pdf">
+      Object Oriented Concepts
+    </a>
+    
+    <a class="item" href="topic02 - java language/talk-5/e-assignment.pdf">
+      Assignment 1
+    </a>
+    
+    <a class="item" href="topic03 - inheritance and collections/talk-1/a-inheritance.pdf">
+      Inheritance
+    </a>
+    
+    <a class="item" href="topic03 - inheritance and collections/talk-2/b-collections.pdf">
+      Collections
+    </a>
+    
+    <a class="item" href="topic04 - serialisation and TDD I/talk-1/a-streams.pdf">
+      Streams
+    </a>
+    
+    <a class="item" href="topic04 - serialisation and TDD I/talk-2/b-tdd-intro.pdf">
+      TDD Introduction
+    </a>
+    
+    <a class="item" href="topic04 - serialisation and TDD I/talk-3/c-first-tests.pdf">
+      First Tests
+    </a>
+    
+    <a class="item" href="topic05 - TDD II/talk-1/a-annotations.pdf">
+      Annotations
+    </a>
+    
+    <a class="item" href="topic05 - TDD II/talk-2/b-pragmatic-testing.pdf">
+      Pragmatic Testing
+    </a>
+    
+    <a class="item" href="topic05 - TDD II/talk-3/c-pacemaker-tests.pdf">
+      Pacemaker Tests
+    </a>
+    
+    <a class="item" href="topic05 - TDD II/talk-4/d-junit-easymock-refcard.pdf">
+      RefCardz: JUnit and EasyMock
+    </a>
+    
+    <a class="item" href="topic06 - exceptions and maven/talk-1/a-exceptions.pdf">
+      Exceptions
+    </a>
+    
+    <a class="item" href="topic06 - exceptions and maven/talk-2/b-devops-and-maven.pdf">
+      Maven Introduction
+    </a>
+    
+    <a class="item" href="topic06 - exceptions and maven/talk-3/c-maven-example.pdf">
+      Maven Example
+    </a>
+    
+    <a class="item" href="topic07 - TDD III/talk-1/a-writing-junit-tests.pdf">
+      Writing Tests
+    </a>
+    
+    <a class="item" href="topic07 - TDD III/talk-2/b-bicep.pdf">
+      Right BICEP
+    </a>
+    
+    <a class="item" href="topic07 - TDD III/talk-3/c-correct.pdf">
+      C.O.R.R.E.C.T
+    </a>
+    
+    <a class="item" href="topic07 - TDD III/talk-4/a-xtend-introduction.pdf">
+      Xtend Introduction
+    </a>
+    
+    <a class="item" href="topic08 - framework and cloud/talk-1/a-intro-to-play-activator.pdf">
+      Play Activator
+    </a>
+    
+    <a class="item" href="topic08 - framework and cloud/talk-2/b-activator-pacemaker-cloud.pdf">
+      Pacemaker Cloud
+    </a>
+    
+    <a class="item" href="topic08 - framework and cloud/talk-3/c-assignment-2.pdf">
+      Assignment 2
+    </a>
+    
+    <a class="item" href="topic09 - SRP/talk-1/a-pacemaker-uml-code.pdf">
+      Pacemaker Solution
+    </a>
+    
+    <a class="item" href="topic09 - SRP/talk-2/b-pacemaker-101.pdf">
+      Structure 101 Analysis
+    </a>
+    
+    <a class="item" href="topic09 - SRP/talk-3/a-SRP.pdf">
+      Single Responsibility Principle
+    </a>
+    
+    <a class="item" href="topic09 - SRP/talk-4/d-activator-pacemaker-evolutions.pdf">
+      Database Evolutions
+    </a>
+    
+    <a class="item" href="topic10 - OCP and play testing/talk-1/a-open-closed-principle.pdf">
+      Open Closed Principle
+    </a>
+    
+    <a class="item" href="topic10 - OCP and play testing/talk-2/b-pacemaker-play-testing.pdf">
+      Play Tests
+    </a>
+    
+    <a class="item" href="topic11 - semantic and TDD IV/talk-1/c-semantic-and-play.pdf">
+      Semantic HTML + UI
+    </a>
+    
+    <a class="item" href="topic11 - semantic and TDD IV/talk-2/b-first-principles.pdf">
+      FIRST Principles
+    </a>
+    
+    <a class="item" href="topic12 - liskov and mocking/talk-1/a-liskov-substitution-principle.pdf">
+      Liskov Substitution Principle
+    </a>
+    
+    <a class="item" href="topic12 - liskov and mocking/talk-2/b-mocking-and-doubles.pdf">
+      Mocking and Doubles
+    </a>
+    
+    <a class="item" href="topic12 - liskov and mocking/talk-3/c-mocking-in-pacemaker.pdf">
+      Mocking in Pacemaker 2.0
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic01 - paradigms and languages/talk-1/a-software-paradigms.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Software Paradigms </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01 - paradigms and languages/talk-1/a-software-paradigms.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The term &#39;Paradigm&#39; is sometimes used to attempt to encapsulate a mind-set associated with different movements in programming. Here we try to characterise what this means, and walk though some of the paradigms, old and new, in the field.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01 - paradigms and languages/talk-2/b-programming-languages.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Programming Languages </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01 - paradigms and languages/talk-2/b-programming-languages.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The history of programming languages is a facinating and continually evolving discipline. We briefly review alternative &#39;forces&#39; shaping this evolution, as well as inspecting the programming &#39;family tree&#39;. We will also walk through an extended example, exploring alternatives expressions of the same programme. This may yield some insights into current programming notations trends.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01 - paradigms and languages/talk-3/c-agile-adoption.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> RefCardz: Agile Adoption </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01 - paradigms and languages/talk-3/c-agile-adoption.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This ref card discusses agile adoption from the perspective of improving software quality.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01 - paradigms and languages/talk-4/d-eclipse-refcard.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> RefCardz: Eclipse </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01 - paradigms and languages/talk-4/d-eclipse-refcard.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This ref card is very useful for those new to the Eclipse IDE.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02 - java language/talk-1/a-java-overview.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Introduction </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02 - java language/talk-1/a-java-overview.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The java programming language is a mature, well understood language that powers many enterprises and public web applications. Originally design for the consumer electronics market, it was quickly adopted as general purpose, versatile language relatively easy to learn and master.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02 - java language/talk-2/b-classes.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Classes </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02 - java language/talk-2/b-classes.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Classes are the fundamental abstraction in the language. Understanding their structure, layout and semantics is essential. In particular a clear understanding of the difference between static and regular attributes &amp; methods + the role of the Object pseudo class is essential.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02 - java language/talk-3/c-control-statements.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Control Statements </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02 - java language/talk-3/c-control-statements.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The set of control statements are largely inherited from C and C++. There are small number of these and their structure and behaviour is largely unsurprising.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02 - java language/talk-4/d-object-oriented-concepts.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Object Oriented Concepts </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02 - java language/talk-4/d-object-oriented-concepts.gif">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Behind the language are a set of well-understood principles. These principles are independent of Java, but underpin its structure and meaning. Understanding these principles is important and is a useful starting point for comparing Java and the features of other programming languages.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02 - java language/talk-5/e-assignment.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Assignment 1 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02 - java language/talk-5/e-assignment.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This is your first assignment. It is a java console application, whose specification is presented here. A useful working pattern over the next few weeks would be to complete each lab, and and then evaluate the specification (and the project of the lab) and see where you need to go with it.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03 - inheritance and collections/talk-1/a-inheritance.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Inheritance </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03 - inheritance and collections/talk-1/a-inheritance.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Object Oriented thinking has consistently placed the inheritance relationship as a key feature of its approach. We review how this relationship is realized in Java. As you will see it is a complex relationship, and we will return to the difficulties it can cause in a later topic.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03 - inheritance and collections/talk-2/b-collections.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Collections </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03 - inheritance and collections/talk-2/b-collections.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>All programming languages will have support for a range of common data structures. Unlike typical dynamic programming language, collections are implemented as a standard library in Java (as opposed to being built in). We will survey the major features of this library, focusing on the principle interfaces and implementations. There is considerable more to collections, which should be investigated independently.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04 - serialisation and TDD I/talk-1/a-streams.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Streams </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04 - serialisation and TDD I/talk-1/a-streams.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>At the heart of the JDK are object I/O and Serialization capabilities, packaged into a comprehensive library for managing the life cycle of simple objects. Although the approach taken by this particular base library has to some extent been superseded by other approaches, it remains an important and influential technical approach, that can be usefully applied in simpler standalone applications.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04 - serialisation and TDD I/talk-2/b-tdd-intro.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> TDD Introduction </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04 - serialisation and TDD I/talk-2/b-tdd-intro.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Test Driven Development has been among the most influential approaches in recent software engineering history. Here we look at its origins, principles and some of the important benefits of the approach.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04 - serialisation and TDD I/talk-3/c-first-tests.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> First Tests </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04 - serialisation and TDD I/talk-3/c-first-tests.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The essential elements of TDD are fairly easy to grasp. The support libraries (xUnit) are relatively straightforward, and we can expect our IDE to provide direct assistance to using these libraries. Here we look at the facilities Eclipse provides to the JUnit library.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05 - TDD II/talk-1/a-annotations.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Annotations </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05 - TDD II/talk-1/a-annotations.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Earlier JUnit libraries relied on Inheritance and specific design patterns to integrate the unit tests into runnable test suites. Modern JUnit relies on Java Annotations - which simplify test structure and enable more flexible structuring of tests classes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05 - TDD II/talk-2/b-pragmatic-testing.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pragmatic Testing </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05 - TDD II/talk-2/b-pragmatic-testing.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>One way of becoming familiar with TDD is to explore some simple examples of various strategies that might be employed in some simple examples. Here we look at useful examples from the Pragmatic series - which laid out much of the early exploration of TDD.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05 - TDD II/talk-3/c-pacemaker-tests.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker Tests </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05 - TDD II/talk-3/c-pacemaker-tests.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We try to apply some of these practices to the Pacemaker app we are building the labs. In general many of the tests are straightforward, however there are some subtleties in the serializer tests.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05 - TDD II/talk-4/d-junit-easymock-refcard.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> RefCardz: JUnit and EasyMock </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05 - TDD II/talk-4/d-junit-easymock-refcard.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This ref card gives tips on JUnit&#39;s lifecycle and annotations.  It also covers EasyMock, which we will look at in later lectures.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06 - exceptions and maven/talk-1/a-exceptions.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Exceptions </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06 - exceptions and maven/talk-1/a-exceptions.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Dealing with unexpected events and errors is usually delegated to the Exceptions mechanism in Java. Here we review the nature of exceptions and identify some best practices when dealing with exceptions generated from libraries and frameworks.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06 - exceptions and maven/talk-2/b-devops-and-maven.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Maven Introduction </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06 - exceptions and maven/talk-2/b-devops-and-maven.gif">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Building and deploying Java applications can be a source of considerable complexity and ad-hoc procedures. Maven is a tool than aims to standardize this process, incorporating rigorous dependency management, repository structure and project layout best practices.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06 - exceptions and maven/talk-3/c-maven-example.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Maven Example </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06 - exceptions and maven/talk-3/c-maven-example.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Using maven in practice will involve bootstrapping a project from scratch, and dealing immediately with library dependencies. For well known libraries this will be straightforward. For obscure or abandoned libraries, we need to take some additional steps.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07 - TDD III/talk-1/a-writing-junit-tests.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Writing Tests </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07 - TDD III/talk-1/a-writing-junit-tests.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A review of the basic structure of JUnit based tests, elaborating on the primary assert calls and annotations.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07 - TDD III/talk-2/b-bicep.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Right BICEP </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07 - TDD III/talk-2/b-bicep.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Guidelines for Composing Tests phrased using the acronym: - Right, Boundary, Inverse, Cross-check, Errors &amp; Performance.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07 - TDD III/talk-3/c-correct.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> C.O.R.R.E.C.T </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07 - TDD III/talk-3/c-correct.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>More guidelines - this time the acronym is Conformance, Ordering, Range, Reference, Existing, Cardinality, Time.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07 - TDD III/talk-4/a-xtend-introduction.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Xtend Introduction </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07 - TDD III/talk-4/a-xtend-introduction.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Xtend is an interesting &quot;Java Successor&quot; language, which exhibits many modern programing language features. Strongly influenced by python and to a certain extend Scala. The language us a useful example of the effectiveness of type inference.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08 - framework and cloud/talk-1/a-intro-to-play-activator.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Play Activator </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08 - framework and cloud/talk-1/a-intro-to-play-activator.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>An introduction to the anatomy of the Play Framework.  Also learn how to install and run Play projects with Activator.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08 - framework and cloud/talk-2/b-activator-pacemaker-cloud.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker Cloud </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08 - framework and cloud/talk-2/b-activator-pacemaker-cloud.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Redevelop the Pacemaker application into a simple cloud service. Expose this service as a REST API</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08 - framework and cloud/talk-3/c-assignment-2.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Assignment 2 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08 - framework and cloud/talk-3/c-assignment-2.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The solution to assignment 1 was developed partly with assignment 2 in mind. Here is the specification.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09 - SRP/talk-1/a-pacemaker-uml-code.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Pacemaker Solution </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09 - SRP/talk-1/a-pacemaker-uml-code.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This is a sample solution to assignment 1, Implemented in xtend and accompanied by simplified UML models.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09 - SRP/talk-2/b-pacemaker-101.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Structure 101 Analysis </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09 - SRP/talk-2/b-pacemaker-101.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Structure 101 from Headway will generate interesting and informative perspectives of the structure and organisation of a java, or java derived, language.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09 - SRP/talk-3/a-SRP.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Single Responsibility Principle </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09 - SRP/talk-3/a-SRP.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>SRP is a simple yet effective guideline for determining the core features of a class. It is the first of the SOLID principles, a well respected source of effective design practices.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09 - SRP/talk-4/d-activator-pacemaker-evolutions.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Database Evolutions </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09 - SRP/talk-4/d-activator-pacemaker-evolutions.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>If you are using the Play Framework - and any Relational Database - then database evolution will be a central concern and a key source of misconfiguration errors.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10 - OCP and play testing/talk-1/a-open-closed-principle.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Open Closed Principle </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10 - OCP and play testing/talk-1/a-open-closed-principle.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>THe second of the &quot;SOLID&quot; principles: &quot;Software Entities should be open for extension but closed for modification&quot;</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10 - OCP and play testing/talk-2/b-pacemaker-play-testing.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Play Tests </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10 - OCP and play testing/talk-2/b-pacemaker-play-testing.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Implement a series of JUnit test classes into the Pacemaker Play app.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11 - semantic and TDD IV/talk-1/c-semantic-and-play.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Semantic HTML + UI </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11 - semantic and TDD IV/talk-1/c-semantic-and-play.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The final pacemaker lab is based on semantic HTML elements + the semantic UI CSS library. Here the salient features of both are reviewed.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11 - semantic and TDD IV/talk-2/b-first-principles.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> FIRST Principles </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11 - semantic and TDD IV/talk-2/b-first-principles.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Guidelines for Composing Tests phrased using the acronym: - Fast, Isolate, Repeatable, Self-Validating, Timely</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12 - liskov and mocking/talk-1/a-liskov-substitution-principle.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Liskov Substitution Principle </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12 - liskov and mocking/talk-1/a-liskov-substitution-principle.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Another of the SOLID principles - this time a more subtle take on inheritance, emphasizing the core behaviours expected by the relationship.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12 - liskov and mocking/talk-2/b-mocking-and-doubles.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Mocking and Doubles </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12 - liskov and mocking/talk-2/b-mocking-and-doubles.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Examine Unit Test Patterns, in particular &#39;Test Double&#39; and &#39;Mock Objects&#39;. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12 - liskov and mocking/talk-3/c-mocking-in-pacemaker.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Mocking in Pacemaker 2.0 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12 - liskov and mocking/talk-3/c-mocking-in-pacemaker.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>An exploration of potential opportunities for Mocking in Pacemaker 2.0. These could include a social subsystem, which could be concieved as an independent system, mocked out in advance of its development.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local-project language="java" version="3.5.4164" flavor="j2se">
+  <property name="show-needs-to-compile" value="false" />
+  <property name="hide-externals" value="true" />
+  <property name="detail-mode" value="true" />
+  <property name="project-type" value="maven" />
+  <property name="hide-deprecated" value="false" />
+  <property name="action-set-mod" value="10" />
+  <property name="parse-archive-in-archive" value="false" />
+  <classpath relativeto="/Users/edeleastar/repos/modules/agile/lab-prjs/pacemaker-console-xtend">
+    <classpathentry kind="lib" path="target/pacemaker-console-xtend-1.0.jar" />
+    <classpathentry kind="lib" path="target/pacemaker-console-xtend-1.0.jar" />
+    <classpathentry kind="lib" path="target/pacemaker-console-xtend-1.0.jar" />
+    <classpathentry kind="lib" path="target/pacemaker-console-xtend-1.0.jar" />
+    <classpathentry kind="lib" path="target/pacemaker-console-xtend-1.0.jar" />
+  </classpath>
+  <pom-root-files>
+    <pom path="/Users/edeleastar/repos/modules/agile/lab-prjs/pacemaker-console-xtend/pom.xml" />
+  </pom-root-files>
+  <transformations>
+    <transformation in="*" out="{jar}.*" />
+  </transformations>
+  <restructuring>
+    <set version="2" name="List 1" hiview="Codemap" active="true" todo="false" />
+  </restructuring>
+  <sourcepaths>
+    <pathentry type="file" path="/Users/edeleastar/repos/modules/agile/lab-prjs/pacemaker-console-xtend/src/main/java" />
+  </sourcepaths>
+  <grid-set sep="." version="3.5.4164">
+    <grid name="Diagram 1" enforce="true" strict="false">
+      <row>
+        <cell name="pacemaker-console-xtend" pattern="pacemaker-console-xtend.pacemaker-console-xtend.*" vexpanded="true" visibility="public" drill="false">
+          <grid>
+            <row>
+              <cell name="controllers" pattern="pacemaker-console-xtend.pacemaker-console-xtend.controllers.?" vexpanded="true" visibility="public" drill="false">
+                <grid>
+                  <row>
+                    <cell name="PacemakerShell" pattern="pacemaker-console-xtend.pacemaker-console-xtend.controllers.PacemakerShell" vexpanded="false" visibility="public" drill="false" />
+                  </row>
+                  <row>
+                    <cell name="PacemakerService" pattern="pacemaker-console-xtend.pacemaker-console-xtend.controllers.PacemakerService" vexpanded="false" visibility="public" drill="false" />
+                  </row>
+                  <row>
+                    <cell name="NotFound" pattern="pacemaker-console-xtend.pacemaker-console-xtend.controllers.NotFound" vexpanded="false" visibility="public" drill="false" />
+                    <cell name="Ok" pattern="pacemaker-console-xtend.pacemaker-console-xtend.controllers.Ok" vexpanded="false" visibility="public" drill="false" />
+                  </row>
+                  <row>
+                    <cell name="PacemakerAPI" pattern="pacemaker-console-xtend.pacemaker-console-xtend.controllers.PacemakerAPI" vexpanded="false" visibility="public" drill="false" />
+                    <cell name="Response" pattern="pacemaker-console-xtend.pacemaker-console-xtend.controllers.Response" vexpanded="false" visibility="public" drill="false" />
+                  </row>
+                </grid>
+              </cell>
+            </row>
+            <row>
+              <cell name="parsers" pattern="pacemaker-console-xtend.pacemaker-console-xtend.parsers.?" vexpanded="true" visibility="public" drill="false">
+                <grid>
+                  <row>
+                    <cell name="AsciiParser" pattern="pacemaker-console-xtend.pacemaker-console-xtend.parsers.AsciiParser" vexpanded="false" visibility="public" drill="false" />
+                    <cell name="JsonParser" pattern="pacemaker-console-xtend.pacemaker-console-xtend.parsers.JsonParser" vexpanded="false" visibility="public" drill="false" />
+                  </row>
+                  <row>
+                    <cell name="ActivityMixin" pattern="pacemaker-console-xtend.pacemaker-console-xtend.parsers.ActivityMixin" vexpanded="false" visibility="public" drill="false" />
+                    <cell name="Parser" pattern="pacemaker-console-xtend.pacemaker-console-xtend.parsers.Parser" vexpanded="false" visibility="public" drill="false" />
+                    <cell name="UserMixin" pattern="pacemaker-console-xtend.pacemaker-console-xtend.parsers.UserMixin" vexpanded="false" visibility="public" drill="false" />
+                  </row>
+                </grid>
+              </cell>
+            </row>
+            <row>
+              <cell name="models" pattern="pacemaker-console-xtend.pacemaker-console-xtend.models.?" vexpanded="true" visibility="public" drill="false">
+                <grid>
+                  <row>
+                    <cell name="User" pattern="pacemaker-console-xtend.pacemaker-console-xtend.models.User" vexpanded="false" visibility="public" drill="false" />
+                  </row>
+                  <row>
+                    <cell name="Activity" pattern="pacemaker-console-xtend.pacemaker-console-xtend.models.Activity" vexpanded="false" visibility="public" drill="false" />
+                  </row>
+                  <row>
+                    <cell name="Location" pattern="pacemaker-console-xtend.pacemaker-console-xtend.models.Location" vexpanded="false" visibility="public" drill="false" />
+                  </row>
+                </grid>
+              </cell>
+              <cell name="utils" pattern="pacemaker-console-xtend.pacemaker-console-xtend.utils.?" vexpanded="true" visibility="public" drill="false">
+                <grid>
+                  <row>
+                    <cell name="JSONSerializer" pattern="pacemaker-console-xtend.pacemaker-console-xtend.utils.JSONSerializer" vexpanded="false" visibility="public" drill="false" />
+                    <cell name="XMLSerializer" pattern="pacemaker-console-xtend.pacemaker-console-xtend.utils.XMLSerializer" vexpanded="false" visibility="public" drill="false" />
+                  </row>
+                  <row>
+                    <cell name="DateTimeFormatters" pattern="pacemaker-console-xtend.pacemaker-console-xtend.utils.DateTimeFormatters" vexpanded="false" visibility="public" drill="false" />
+                    <cell name="Serializer" pattern="pacemaker-console-xtend.pacemaker-console-xtend.utils.Serializer" vexpanded="false" visibility="public" drill="false" />
+                  </row>
+                </grid>
+              </cell>
+            </row>
+          </grid>
+        </cell>
+      </row>
+      <description>Top-level breakout</description>
+    </grid>
+  </grid-set>
+</local-project>
+

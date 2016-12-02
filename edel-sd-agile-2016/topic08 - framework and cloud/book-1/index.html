@@ -1,0 +1,627 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Play Framework and Cloud
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-08a">
+      Lab-08a
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01 - paradigms and languages/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02 - java language/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03 - inheritance and collections/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04 - serialisation and TDD I/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05 - TDD II/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06 - exceptions and maven/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic08 - framework and cloud/book-1/index.html">
+          Lab-08a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-2/index.html">
+          Lab-08b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-1/index.html">
+          Lab-09a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-2/index.html">
+          Lab-09b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10 - OCP and play testing/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-2/index.html">
+          Lab-11b
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-08a">
+        <h2>Objectives</h2>
+<ul>
+<li>Download and install the latest version of Play (with the Activator).</li>
+<li>Learn about play by experimenting with Activator&#39;s tutorials and templates.</li>
+<li>Learn how to use play from both the Activator UI and the Console (using Eclipse as the editor).</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h2>Installing Play (with Activator)</h2>
+<p>Navigate to the download section of the Play Framework website:</p>
+<ul>
+<li><a href="https://www.playframework.com/download">https://www.playframework.com/download</a></li>
+</ul>
+<p><img src="img/00.png" alt=""></p>
+<p>Click on the <strong>Offline Disribution</strong> link to download the latest version of Play with the Activator.</p>
+<p>Activator is distributed as a single archive file that expands out to its own subdirectory.  Extract the <strong>typesfe-activator</strong> zip file to a folder where your development software resides e.g. a <strong>dev</strong> folder on your C drive.  The activator application will be approx 750MB on disk and will have a similiar folder structure to this:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Add the Activator <strong>bin</strong> folder to your system path:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>Play with Activator should now be successfully installed.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h2>Starting the Activator UI</h2>
+<p>Open a command prompt and, in a convenient location, create a <strong>workspace</strong> folder for play.  </p>
+<p>Change into this folder and type <strong>activator ui</strong>:</p>
+<p><img src="img/03.png" alt=""></p>
+<p>As this is our first time starting the Activator UI, a series of file downloads will initiate:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>The play application should start and should be listening on port 8888 of your localhost. </p>
+<p>The Activator UI should open in your browser:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>Note: you can also start the Activator UI by running the <strong>activator.bat</strong> file stored in the <strong>bin</strong> folder for your activator distribution.</p>
+<p>If you are not seeing the activator home page, check your firewall settings to see if there are conflicts in there.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Choosing a Tutorial</h1>
+<p>In your Activator UI, with the <strong>Tutorials</strong> option selected, enter <strong>CRUD</strong> into the search box:</p>
+<p><img src="img/06.png" alt=""> </p>
+<p>Click on the <strong>Play + Java + CRUD</strong> result.  Once you are happy with the name of your new app and its location (you should be pointing at your new workpace folder), click the <strong>Create app</strong> button.  We took the default project name of <strong>play2-crud-activator</strong>.   </p>
+<p><img src="img/07.png" alt=""> </p>
+<p>The template cloning process will start:</p>
+<p><img src="img/08.png" alt=""> </p>
+<p>Followed by the sbt build lifecycle:</p>
+<p><img src="img/09.png" alt=""> </p>
+<p>Once the sbt build lifecycle completes, the application is ready to explore:</p>
+<p><img src="img/10.png" alt=""> </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Take the Tutorial</h1>
+<p>Read through each of the steps in the tutorial.  This will give you an overview of the architecture underlying the Play Framekwork:</p>
+<p><img src="img/11.png" alt=""> </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>The Develop Lifecycle</h1>
+<p>Play has a number of steps in its <strong>Develop</strong> lifecycle: build, code, run, test.</p>
+<p><img src="img/12.png" alt=""> </p>
+<h2>Build step</h2>
+<p>Click on the <strong>Build</strong> tab and then click the <strong>Compile</strong> button. As the code is compiling, you should see compiler activity in the <strong>Tasks</strong> and <strong>Full Output</strong> frames.</p>
+<p><img src="img/13.png" alt=""> </p>
+<h2>Test step</h2>
+<p>In the <strong>Test</strong> tab, you can run any tests that are in the <strong>test</strong> folder and the result of the tests is displayed.  We will look at this in more detail later. </p>
+<h2>Code step</h2>
+<p>Click on the <strong>Code</strong> tab.  You should now see your project directory structure.  Navigate to the controllers/Application.java file.</p>
+<p><img src="img/14.png" alt=""></p>
+<p>Applications.java has an index() method.  </p>
+<p>Navigate to your conf/routes file.  This file maps the route from your browser URL to your java methods.  It states that Application.index() should be called when you navigate to <a href="http://localhost:9000/">http://localhost:9000/</a>.  </p>
+<h2>Run step</h2>
+<p>Click on the <strong>Run</strong> tab and then click on the displayed <strong>Run</strong> button.  </p>
+<p>Your web app should now be listening on <a href="http://localhost:9000/">http://localhost:9000/</a>.  Navigate to this link and you should see this page:</p>
+<p><img src="img/15.png" alt=""></p>
+<p>Click on the <strong>CRUD Index</strong> link and try adding some items.  Don&#39;t worry yet about understanding how the architecture of the app is working...we will cover this in subsequent labs and lectures.  We just want you to be familiar with the folder structure, the build process and running apps at this stage.</p>
+<h2>Stop the app and exit the UI</h2>
+<p>Return to your <strong>Activator UI</strong>, click on the <strong>Run</strong> tab, followed by the <strong>Stop</strong> button.  </p>
+<p>Now that you have shut down your app, you need to shut down <strong>Activator</strong> as it is still listening on port 8888.</p>
+<p>Return to the console where you entered your <strong>Activator UI</strong> command and press CTRL + C.  When prompted, press <strong>Y</strong> to terminate the batch job. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Eclipse &amp; Activator Console</h1>
+<p>If you would prefer not to use the <strong>Activator UI</strong> for developing your app, you can choose to edit in Eclipse and use the Activator console commands instead.</p>
+<p>Ensure that you have the <strong>Activator UI</strong> closed before starting this step.</p>
+<h2>Creating a project with Console Activator</h2>
+<p>Start a new command prompt/shell and navigate to the workspace folder you created in an earlier step.  </p>
+<p>Enter the command:</p>
+<pre><code>activator new pacemakerplay</code></pre>
+<p>When prompted, choose option 5 (play-java) and hit enter:</p>
+<pre><code>C:\Users\Siobhan\workspace-play&gt;activator new pacemakerplay
+ACTIVATOR_HOME=C:\dev\activator-dist-1.3.10
+The system cannot find the file BIN_DIRECTORY\..\conf\sbtconfig.txt.
+
+Fetching the latest list of templates...
+
+Browse the list of templates: http://lightbend.com/activator/templates
+Choose from these featured templates or enter a template name:
+  1) minimal-akka-java-seed
+  2) minimal-akka-scala-seed
+  3) minimal-java
+  4) minimal-scala
+  5) play-java
+  6) play-scala
+(hit tab to see a list of all templates)
+&gt;</code></pre>
+<p>Change directory into the <strong>pacemakerplay</strong> folder and display the contents of the folder.   </p>
+<h2>Editing the project with Eclipse</h2>
+<p>Within the <strong>pacemakerplay</strong> folder, enter this command to generate the project files for eclipse.  </p>
+<pre><code>activator eclipse</code></pre>
+<p>This may not work for you first go:</p>
+<pre><code>C:\Users\Siobhan\workspace-play\pacemakerplay&gt;activator eclipse
+ACTIVATOR_HOME=C:\dev\activator-dist-1.3.10
+The system cannot find the file BIN_DIRECTORY\..\conf\sbtconfig.txt.
+[info] Loading project definition from C:\Users\Siobhan\workspace-play\pacemakerplay\project
+[info] Set current project to pacemakerplay (in build file:/C:/Users/Siobhan/workspace-play/pacemakerplay/)
+[error] Not a valid command: eclipse (similar: help, alias)
+[error] Not a valid project ID: eclipse
+[error] Expected &#39;:&#39; (if selecting a configuration)
+[error] Not a valid key: eclipse (similar: deliver, licenses, clean)
+[error] eclipse
+[error]        ^</code></pre>
+<p>If the above error is generated, edit your <strong>plugins.sbt</strong> in the <strong>project</strong> directory to include the following and run the <strong>activator eclipse</strong> command again:</p>
+<pre><code>addSbtPlugin(&quot;com.typesafe.sbteclipse&quot; % &quot;sbteclipse-plugin&quot; % &quot;4.0.0&quot;)</code></pre>
+<p>Numerous jars should have been successfully downloaded and the project files for eclipse should have been created.</p>
+<p>Open eclipse and import <strong>pacemakerplay</strong> as an existing project.  Your directory structure should look similar to this:</p>
+<p><img src="img/16.png" alt=""> </p>
+<h2>Running the project from the console</h2>
+<p>Within the <strong>pacemakerplay</strong> folder, enter the command:</p>
+<pre><code>activator ~run</code></pre>
+<p>When the command has finished executing, it should inform you of the following:</p>
+<pre><code>[success] Compiled in 54s
+[info] application - ApplicationTimer demo: Starting application at 2016-10-20T18:36:44.594Z
+[info] play.api.Play - Application started (Dev)</code></pre>
+<p>Navigate to this link <a href="http://localhost:9000/">http://localhost:9000/</a>.  If your app started correctly, the following page should be displayed:</p>
+<p><img src="img/17.png" alt=""> </p>
+<p>Read the info on the above page.  Between the information on this page and the project files in Eclipse, can you figure out how this page was dispayed?</p>
+<h2>Making a change</h2>
+<p>Return to Eclipse and edit the controllers/HomeController.java file to display a different welcome message e.g. &quot;Welcome to Pacemaker Web 1.0&quot;:</p>
+<pre><code class="lang-java">public class HomeController extends Controller {
+
+    /**
+     * An action that renders an HTML page with a welcome message.
+     * The configuration in the &lt;code&gt;routes&lt;/code&gt; file means that
+     * this method will be called when the application receives a
+     * &lt;code&gt;GET&lt;/code&gt; request with a path of &lt;code&gt;/&lt;/code&gt;.
+     */
+    public Result index() {
+        return ok(index.render(&quot;Welcome to Pacemaker Web 1.0&quot;));
+    }
+
+}</code></pre>
+<p>Save the file and return to the command prompt where you started the application from.  </p>
+<p>As you are running in <strong>continuous mode</strong> (you prefixed run with a ~), you should see that it automatically compiled your changes:</p>
+<pre><code>[success] Compiled in 11s
+[info] application - ApplicationTimer demo: Starting application at 2016-10-21T08:37:55.395Z
+[info] play.api.Play - Application started (Dev)
+[info] Compiling 1 Java source to C:\Users\Siobhan\workspace-play\pacemakerplay\target\scala-2.11\classes...
+[success] Compiled in 603ms</code></pre>
+<p>Refresh your <a href="http://localhost:9000">http://localhost:9000</a> page in your browser.  You should now see your new welcome message:</p>
+<p><img src="img/18.png" alt=""> </p>
+<h2>Testing your change</h2>
+<p>Return to Eclipse and locate the two test classes (Application and Integration) that were generated when you created the new application.</p>
+<p>We want to demonstrate tests failing, so in ApplicationTest.java, change the welcome message to <strong>contain</strong> any random string e.g.</p>
+<pre><code class="lang-java">@Test
+    public void renderTemplate() {
+        Content html = views.html.index.render(&quot;This test is going to fail!!!&quot;);
+        assertEquals(&quot;text/html&quot;, html.contentType());
+        assertTrue(html.body().contains(&quot;This test will fail!!!&quot;));
+    }</code></pre>
+<p>Make a similar change to the welcome message in the IntegrationTest.java class.</p>
+<p>Save these files.</p>
+<p>Return to your command prompt and press CTRL + D to stop you application running.</p>
+<p>Type the command:</p>
+<pre><code class="lang-~">activator test</code></pre>
+<p>The output should show that 2 tests failed and 1 passed: </p>
+<pre><code>C:\Users\Siobhan\workspace-play\pacemakerplay&gt;activator test
+ACTIVATOR_HOME=C:\dev\activator-dist-1.3.10
+The system cannot find the file BIN_DIRECTORY\..\conf\sbtconfig.txt.
+[info] Loading project definition from C:\Users\Siobhan\workspace-play\pacemakerplay\project
+[info] Set current project to pacemakerplay (in build file:/C:/Users/Siobhan/workspace-play/pacemakerplay/)
+[info] Compiling 1 Java source to C:\Users\Siobhan\workspace-play\pacemakerplay\target\scala-2.11\test-classes...
+[info] application - Creating Pool for datasource &#39;default&#39;
+[info] application - ApplicationTimer demo: Starting application at 2016-10-21T08:47:30.756Z
+[info] application - ApplicationTimer demo: Stopping application at 2016-10-21T08:47:33.340Z after 3s.
+[info] application - Shutting down connection pool.
+[error] Test IntegrationTest.test failed: null, took 4.6 sec
+[error] Test ApplicationTest.renderTemplate failed: null, took 0.001 sec
+[error] Failed: Total 3, Failed 2, Errors 0, Passed 1
+[error] Failed tests:
+[error]         ApplicationTest
+[error]         IntegrationTest
+[error] (test:test) sbt.TestsFailedException: Tests unsuccessful
+[error] Total time: 8 s, completed 21-Oct-2016 09:47:33
+
+C:\Users\Siobhan\workspace-play\pacemakerplay&gt;</code></pre>
+<p>Return to Eclipse and in both ApplicationTest.java and IntegrationTest.java, change the tests to contain your welcome message e.g.:</p>
+<pre><code class="lang-java">    @Test
+    public void renderTemplate() {
+        Content html = views.html.index.render(&quot;Welcome to Pacemaker Web 1.0&quot;);
+        assertEquals(&quot;text/html&quot;, html.contentType());
+        assertTrue(html.body().contains(&quot;Welcome to Pacemaker Web 1.0&quot;));
+    }</code></pre>
+<p>Rerun the tests and verify that the failed tests are now successful.</p>
+<pre><code>C:\Users\Siobhan\workspace-play\pacemakerplay&gt;activator test
+ACTIVATOR_HOME=C:\dev\activator-dist-1.3.10
+The system cannot find the file BIN_DIRECTORY\..\conf\sbtconfig.txt.
+[info] Loading project definition from C:\Users\Siobhan\workspace-play\pacemakerplay\project
+[info] Set current project to pacemakerplay (in build file:/C:/Users/Siobhan/workspace-play/pacemakerplay/)
+[info] Compiling 2 Java sources to C:\Users\Siobhan\workspace-play\pacemakerplay\target\scala-2.11\test-classes...
+[info] application - Creating Pool for datasource &#39;default&#39;
+[info] application - ApplicationTimer demo: Starting application at 2016-10-21T08:49:45.881Z
+[info] application - ApplicationTimer demo: Stopping application at 2016-10-21T08:49:48.749Z after 3s.
+[info] application - Shutting down connection pool.
+[info] Passed: Total 3, Failed 0, Errors 0, Passed 3
+[success] Total time: 8 s, completed 21-Oct-2016 09:49:48
+
+C:\Users\Siobhan\workspace-play\pacemakerplay&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Deployment</h1>
+<p>Heroku, through git and a series of console commands, seamlessly supports the deployment of Play apps.</p>
+<h2>Installing Heroku CLI (formerly called Heroku Toolbelt)</h2>
+<p>If you don&#39;t have a Heroku account, create a free one:</p>
+<ul>
+<li><a href="https://signup.heroku.com/">https://signup.heroku.com/</a></li>
+</ul>
+<p>Follow the instructions to install Heroku CLI (command shell which contains git):</p>
+<ul>
+<li><a href="https://devcenter.heroku.com/articles/heroku-command-line">https://devcenter.heroku.com/articles/heroku-command-line</a></li>
+</ul>
+<p>If you have a command prompt open, close it and open a new command prompt.  </p>
+<p>Enter the command to verify that Heroku installed successfully:</p>
+<pre><code> heroku --version</code></pre>
+<p>Note:  this command will do an initial install of the CLI:</p>
+<pre><code>C:\Users\Siobhan&gt;heroku --version
+heroku-cli: Installing CLI... 17.56MB/17.56MB
+heroku/toolbelt/3.43.12 (i386-mingw32) ruby/2.1.7
+heroku-cli/5.4.7-8dc2c80 (windows-386) go1.7.1
+You have no installed plugins.
+
+C:\Users\Siobhan&gt;</code></pre>
+<h2>Logging into Heroku</h2>
+<p>In your command prompt, navigate to your <strong>pacemakerplay</strong> directory and enter the command:</p>
+<pre><code> heroku login</code></pre>
+<p>When prompted for your login credentials, enter them:</p>
+<pre><code>CC:\Users\Siobhan\workspace-play\pacemakerplay&gt;heroku login
+Enter your Heroku credentials.
+Email: sdrohan@wit.ie
+Password (typing will be hidden):
+Logged in as sdrohan@wit.ie
+
+C:\Users\Siobhan\workspace-play\pacemakerplay&gt;</code></pre>
+<h2>Setting up shared SSH keys</h2>
+<p>If you don’t already use SSH and if you want to use SSH Git transport on Heroku, you’ll need to create a public/private key pair to deploy code. This keypair is used for the strong cryptography and that uniquely identifies you as a developer when pushing code changes.</p>
+<p>Follow the steps here to set up your key:</p>
+<ul>
+<li><a href="https://devcenter.heroku.com/articles/keys">https://devcenter.heroku.com/articles/keys</a></li>
+</ul>
+<p>If you are having difficulty locating the <strong>git-bash</strong> shell, it should be in your program files directory, within the <strong>Git</strong> folder.  Note: setting up your key won&#39;t work in your command prompt; you need a <strong>git-bash</strong> shell.</p>
+<p>Once you have your key generated, return to your command prompt and enter:</p>
+<pre><code>heroku keys:add</code></pre>
+<p>You should see the following output:</p>
+<pre><code>C:\Users\Siobhan\workspace-play\pacemakerplay&gt;heroku keys:add
+Found an SSH public key at C:\Users\Siobhan\.ssh\id_rsa.pub
+? Would you like to upload it to Heroku? Yes
+Uploading C:\Users\Siobhan\.ssh\id_rsa.pub SSH key... done
+
+C:\Users\Siobhan\workspace-play\pacemakerplay&gt;</code></pre>
+<h2>Converting your app to a git repo</h2>
+<p>Before we can push our app to Heroku, we need to convert <strong>pacemakerplay</strong> to a git repo.</p>
+<p>Create a new git repo by entering this command: </p>
+<pre><code>git init</code></pre>
+<p>Add all created files to the git repo: </p>
+<pre><code>git add .</code></pre>
+<p>Commit the added files:  </p>
+<pre><code>git commit -m init</code></pre>
+<h2>Converting your app to a Heroku project</h2>
+<p>Now that our app is a git repo, we can enter:</p>
+<pre><code>heroku create</code></pre>
+<p>This will provision a new application on Heroku:</p>
+<pre><code>C:\Users\Siobhan\workspace-play\pacemakerplay&gt;heroku create
+Creating app... done, calm-sierra-69816
+https://calm-sierra-69816.herokuapp.com/ | https://git.heroku.com/calm-sierra-69816.git
+
+C:\Users\Siobhan\workspace-play\pacemakerplay&gt;</code></pre>
+<h2>Pushing your app to the Heroku cloud</h2>
+<p>To push to the cloud, enter:</p>
+<pre><code>git push heroku master</code></pre>
+<p>On the first push, there will be a LOT of console output from this command! But at the end, it should say something like this:</p>
+<pre><code>remote: -----&gt; Compressing...
+remote:        Done: 95.3M
+remote: -----&gt; Launching...
+remote:        Released v4
+remote:        https://calm-sierra-69816.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy.... done.
+To https://git.heroku.com/calm-sierra-69816.git
+ * [new branch]      master -&gt; master
+
+C:\Users\Siobhan\workspace-play\pacemakerplay&gt;</code></pre>
+<h2>Verify your app is running remotely</h2>
+<p>To open your remote app in a browser, enter the command:</p>
+<pre><code>heroku open</code></pre>
+<p>You more than likely have the following error appearing:</p>
+<p><img src="img/19.png" alt=""> </p>
+<p>Enter this command to see if you can figure out what went wrong (hint: you are missing a Procfile and the instructions are below for adding it):</p>
+<pre><code>heroku logs</code></pre>
+<p>You need to create a <strong>Procfile</strong> in your project root directory (note upper case P for Procfile and no file extension) and add in the following line to it:</p>
+<pre><code>web: target/universal/stage/bin/pacemakerplay -Dhttp.port=${PORT} -Ddb.default.driver=org.postgresql.Driver -Ddb.default.url=${DATABASE_URL} -Dplay.crypto.secret=&quot;thisisthesecretpleasechangeit&quot;</code></pre>
+<p>Enter the following commands to push to Heroku:</p>
+<pre><code>git add .
+git commit -m &quot;Creating a Procfile&quot;
+git push heroku master</code></pre>
+<p>Once you have pushed this file, try running your app again using <strong>heroku open</strong>.  </p>
+<p>It will still not work.  We mentioned the postgres database in our procfile (we will use this database in our next lab, so we can set it up now).  However, we don&#39;t have the Postgres library dependency in our <strong>build.sbt</strong>.  Add the <strong>postgresql</strong> dependency to build.sbt:</p>
+<pre><code>name := &quot;&quot;&quot;pacemakerplay&quot;&quot;&quot;
+
+version := &quot;1.0-SNAPSHOT&quot;
+
+lazy val root = (project in file(&quot;.&quot;)).enablePlugins(PlayJava)
+
+scalaVersion := &quot;2.11.7&quot;
+
+libraryDependencies ++= Seq(
+  javaJdbc,
+  cache,
+  javaWs,
+  &quot;org.postgresql&quot; % &quot;postgresql&quot; % &quot;9.4-1201-jdbc41&quot;)</code></pre>
+<p>Push this change to Heroku:</p>
+<pre><code>git add .
+git commit -m &quot;adding postgres library dependency to build.sbt&quot;
+git push heroku master</code></pre>
+<p>Now try running your app again:</p>
+<pre><code>heroku open</code></pre>
+<p>This time, it should run successfully, you should have the following displayed:</p>
+<p><img src="img/20.png" alt=""> </p>
+<h2>Familiarise yourself with Heroku Dashboard</h2>
+<p>Log into Heroku online and familiarise yourself with the dashboard:</p>
+<ul>
+<li><a href="https://dashboard.heroku.com/apps">https://dashboard.heroku.com/apps</a></li>
+</ul>
+<p>In particular, explore the various settings for your app.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & Dr. Siobhan Drohan.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

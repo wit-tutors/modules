@@ -1,0 +1,924 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Serialization
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Command-Line">
+      Command-Line
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Command-Line">
+        <h1>Objectives</h1>
+<p>Extend the pacemaker project  to include a simple command line facility</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<p>This lab assumes you have completed the previous lab - this is the complete archive here:</p>
+<ul>
+<li><a href="archives/pacemaker-tdd-05.zip">pacemaker-tdd-05.zip</a></li>
+</ul>
+<p>This lab will attach a command line interface to pacemaker. We will use this library here:</p>
+<ul>
+<li><a href="https://code.google.com/p/cliche/">https://code.google.com/p/cliche/</a></li>
+</ul>
+<p>It has been ported to github here:</p>
+<ul>
+<li><a href="https://github.com/budhash/cliche">https://github.com/budhash/cliche</a></li>
+</ul>
+<p>For our purposes, we can just use this jar file:</p>
+<ul>
+<li><a href="archives/asg.cliche-110413.jar">asg.cliche-110413.jar</a></li>
+</ul>
+<p>Download the jar, copy it to the <code>lib</code> folder of the pacemaker project and add it to the build</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Main</h1>
+<p>You already have a class called <code>Main</code> in the controllers package. Replace the contents of this class with the following:</p>
+<pre><code>package controllers;
+
+import java.io.File;
+import utils.Serializer;
+import utils.XMLSerializer;
+
+import asg.cliche.Shell;
+import asg.cliche.ShellFactory;
+
+
+public class Main
+{
+  public PacemakerAPI paceApi;
+
+  public Main() throws Exception
+  {
+    File datastore = new File(&quot;datastore.xml&quot;);
+    Serializer serializer = new XMLSerializer(datastore);
+
+    paceApi = new PacemakerAPI(serializer);
+    if (datastore.isFile())
+    {
+      paceApi.load();
+    }
+  }
+
+  public static void main(String[] args) throws Exception
+  {
+    Main main = new Main();
+
+    Shell shell = ShellFactory.createConsoleShell(&quot;pm&quot;, &quot;Welcome to pacemaker-console - ?help for instructions&quot;, main);
+    shell.commandLoop();
+
+    main.paceApi.store();
+  }
+}</code></pre>
+<p>Run the application, and you should see a command line console:</p>
+<pre><code>Welcome to pacemaker-console - ?help for instructions
+pm&gt;</code></pre>
+<p>Enter <code>?help</code> to see what commands you have:</p>
+<pre><code>?help
+This is Cliche shell (http://cliche.sourceforge.net).
+To list all available commands enter ?list or ?list-all, the latter will also show you system commands. To get detailed info on a command enter ?help command-name
+pm&gt;</code></pre>
+<p>and &#39;?list-all` for a complete list:</p>
+<pre><code>pm&gt; ?list-all
+abbrev  name  params
+!rs !run-script (filename)
+!el !enable-logging (fileName)
+!dl !disable-logging  ()
+!gle  !get-last-exception ()
+!sdt  !set-display-time (do-display-time)
+?l  ?list (startsWith)
+?l  ?list ()
+?h  ?help (command-name)
+?h  ?help ()
+?ghh  ?generate-HTML-help (file-name, include-prefixed)
+?la ?list-all ()
+pm&gt;</code></pre>
+<p><code>exit</code> will terminate the application.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Datastore file</h1>
+<p>You will notice that the main method loads a file called <code>datastore.xml</code>:</p>
+<pre><code>    File datastore = new File(&quot;datastore.xml&quot;);
+    Serializer serializer = new XMLSerializer(datastore);</code></pre>
+<p>We can generate this from our last unit tests - by running the Persistence unit test with the last line commented out:</p>
+<pre><code>  @Test
+  public void testXMLSerializer() throws Exception
+  { 
+    String datastoreFile = &quot;testdatastore.xml&quot;;
+    //deleteFile (datastoreFile);
+
+    Serializer serializer = new XMLSerializer(new File (datastoreFile));
+
+    pacemaker = new PacemakerAPI(serializer); 
+    populate(pacemaker);
+    pacemaker.store();
+
+    PacemakerAPI pacemaker2 =  new PacemakerAPI(serializer);
+    pacemaker2.load();
+
+    assertEquals (pacemaker.getUsers().size(), pacemaker2.getUsers().size());
+    for (User user : pacemaker.getUsers())
+    {
+      assertTrue (pacemaker2.getUsers().contains(user));
+    }
+    //deleteFile (&quot;testdatastore.xml&quot;);
+  }</code></pre>
+<p>This leaves a populated file called <code>testdatastore.xml</code> in your project (refresh to see it). Make a copy of this and call it <code>datastore.xml</code>. This will then be loaded when we run the main method.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>GetUsers</h1>
+<p>We cam bring in our first command. Place this method in the main class:</p>
+<pre><code>  @Command(description=&quot;Get all users details&quot;)
+  public void getUsers ()
+  {
+    Collection&lt;User&gt; users = paceApi.getUsers();
+    System.out.println(users);
+  }</code></pre>
+<p>Now run the app again, and type <code>?list-all</code>:</p>
+<pre><code>Welcome to pacemaker-console - ?help for instructions
+pm&gt; ?list-all
+abbrev  name  params
+!el !enable-logging (fileName)
+!dl !disable-logging  ()
+!rs !run-script (filename)
+!sdt  !set-display-time (do-display-time)
+!gle  !get-last-exception ()
+?l  ?list (startsWith)
+?l  ?list ()
+?h  ?help (command-name)
+?h  ?help ()
+?la ?list-all ()
+?ghh  ?generate-HTML-help (file-name, include-prefixed)
+gu  get-users ()
+pm&gt;</code></pre>
+<p>Notice we have a new command - get-users - which we just implemented. Try it now:</p>
+<pre><code>pm&gt; get-users
+[User{4, marge, simpson, secret, marge@simpson.com}, User{5, lisa, simpson, secret, lisa@simpson.com}, User{6, bart, simpson, secret, bart@simpson.com}, User{7, maggie, simpson, secret, maggie@simpson.com}]
+pm&gt;</code></pre>
+<p>The user experience is minimal - but we can see the users (generated from our test and saved to datastore.xml) are there.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>User Commands</h1>
+<p>We can add in the remaining user commands:</p>
+<pre><code>  @Command(description=&quot;Create a new User&quot;)
+  public void createUser (@Param(name=&quot;first name&quot;) String firstName, @Param(name=&quot;last name&quot;) String lastName, 
+                          @Param(name=&quot;email&quot;)      String email,     @Param(name=&quot;password&quot;)  String password)
+  {
+    paceApi.createUser(firstName, lastName, email, password);
+  }
+
+  @Command(description=&quot;Get a Users detail&quot;)
+  public void getUser (@Param(name=&quot;email&quot;) String email)
+  {
+    User user = paceApi.getUserByEmail(email);
+    System.out.println(user);
+  }
+
+  @Command(description=&quot;Delete a User&quot;)
+  public void deleteUser (@Param(name=&quot;email&quot;) String email)
+  {
+    Optional&lt;User&gt; user = Optional.fromNullable(paceApi.getUserByEmail(email));
+    if (user.isPresent())
+    {
+      paceApi.deleteUser(user.get().id);
+    }
+  }</code></pre>
+<p>Note carefully how the paramaters are defined. Run the app again and the new commands are visible:</p>
+<pre><code>Welcome to pacemaker-console - ?help for instructions
+pm&gt; ?list-all
+abbrev    name    params
+....
+gu    get-user    (email)
+gu    get-users    ()
+cu    create-user    (first name, last name, email, password)
+du    delete-user    (email)
+pm&gt;</code></pre>
+<p>Try these commands out now and verify that the work as expected.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Activities &amp; Locations</h1>
+<p>These are the Activity &amp; Location commands:</p>
+<pre><code>  @Command(description=&quot;Add an activity&quot;)
+  public void addActivity (@Param(name=&quot;user-id&quot;)  Long   id,       @Param(name=&quot;type&quot;) String type, 
+                           @Param(name=&quot;location&quot;) String location, @Param(name=&quot;distance&quot;) double distance)
+  {
+    Optional&lt;User&gt; user = Optional.fromNullable(paceApi.getUser(id));
+    if (user.isPresent())
+    {
+      paceApi.createActivity(id, type, location, distance);
+    }
+  }
+
+  @Command(description=&quot;Add Location to an activity&quot;)
+  public void addLocation (@Param(name=&quot;activity-id&quot;)  Long  id,   
+                           @Param(name=&quot;latitude&quot;)     float latitude, @Param(name=&quot;longitude&quot;) float longitude)
+  {
+    Optional&lt;Activity&gt; activity = Optional.fromNullable(paceApi.getActivity(id));
+    if (activity.isPresent())
+    {
+      paceApi.addLocation(activity.get().id, latitude, longitude);
+    }
+  }</code></pre>
+<p>When you incorporate these, and try to add an activity - you will notice that the activities are not listed with the users details. This is because our user models toString method doesn&#39;t include the activities list. We can fix this now:</p>
+<pre><code>  public String toString()
+  {
+    return toStringHelper(this).addValue(id)
+                               .addValue(firstName)
+                               .addValue(lastName)
+                               .addValue(password)
+                               .addValue(email)   
+                               .addValue(activities)
+                               .toString();
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Enhanced UX</h1>
+<p>This output of model objects to the console is more or less unreadable - as everything is on one line. We can improve on this but replacing the toString methods with something more readable.</p>
+<p>This disucssion here provides the class, compatible with Guava, that will do the trick:</p>
+<ul>
+<li><a href="https://code.google.com/p/guava-libraries/issues/detail?id=655">https://code.google.com/p/guava-libraries/issues/detail?id=655</a></li>
+</ul>
+<p>Create this new class in the <code>utils</code> package (from the above discussion):</p>
+<pre><code>package utils;
+
+import com.google.common.base.Preconditions;
+import com.google.common.base.Strings;
+import com.google.common.collect.Maps;
+import java.lang.reflect.Field;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
+import java.util.Arrays;
+import java.util.Map;
+import java.util.Map.Entry;
+
+/**
+ * Generates a JSON-style representation of an Object. The output is meant to
+ * facilitate readability, nothing more. As such, it does not adhere perfectly
+ * to the JSON standard.
+ * &lt;p/&gt;
+ * 
+ * @author Gili Tzabari
+ */
+public final class ToJsonString
+{
+  /**
+   * Styles for opening braces.
+   */
+  @SuppressWarnings(&quot;PublicInnerClass&quot;)
+  public static enum BraceStyle
+  {
+    /**
+     * Opening brace should go on the same line as the key.
+     */
+    SAME_LINE,
+    /**
+     * Opening brace should go on the line after the key.
+     */
+    NEW_LINE;
+  }
+
+  private final StringBuilder builder;
+  private BraceStyle braceStyle = BraceStyle.NEW_LINE;
+  private int indentSize = 2;
+  private final Map&lt;String, Object&gt; map = Maps.newHashMap();
+
+  /**
+   * Creates a new ToJsonString.
+   * &lt;p/&gt;
+   * 
+   * @param className
+   *          the name of the class we are processing
+   * @throws NullPointerException
+   *           if className or braceStyle are null
+   * @throws IllegalArgumentException
+   *           if indentSize is negative
+   */
+  public ToJsonString(String className)
+  {
+    Preconditions.checkNotNull(className, &quot;className may not be null&quot;);
+
+    this.builder = new StringBuilder(32).append(className);
+  }
+
+  /**
+   * Creates a new ToJsonString. Uses Reflection to associate the names of all
+   * fields with their values. This method does not process superclass
+   * properties.
+   * &lt;p/&gt;
+   * 
+   * @param clazz
+   *          the class whose fields to process
+   * @param obj
+   *          the object whose values to read
+   * @throws IllegalArgumentException
+   *           if the specified object is not an instance of the class or
+   *           interface declaring the underlying field (or a subclass or
+   *           implementor thereof)
+   */
+  public ToJsonString(Class&lt;?&gt; clazz, Object obj)
+  {
+    this(clazz.getName());
+    putAllFields(clazz, obj);
+  }
+
+  /**
+   * Sets the number of characters to use when indenting output.
+   * &lt;p/&gt;
+   * 
+   * @param indentSize
+   *          the number of characters to use when indenting output
+   * @throws IllegalArgumentException
+   *           if indentSize is negative
+   * @return this
+   */
+  public ToJsonString setIndentSize(int indentSize)
+  {
+    Preconditions.checkArgument(indentSize &gt;= 0, &quot;indentSize must be non-negative&quot;);
+
+    this.indentSize = indentSize;
+    return this;
+  }
+
+  /**
+   * Sets the style to use for opening braces.
+   * &lt;p/&gt;
+   * 
+   * @param braceStyle
+   *          the style to use for opening braces
+   * @return this
+   * @throws NullPointerException
+   *           if braceStyle is null
+   */
+  public ToJsonString setBraceStyle(BraceStyle braceStyle)
+  {
+    Preconditions.checkNotNull(braceStyle, &quot;braceStyle may not be null&quot;);
+
+    this.braceStyle = braceStyle;
+    return this;
+  }
+
+  /**
+   * Uses Reflection to associate the names of all fields with their values.
+   * This method does not process superclass properties.
+   * &lt;p/&gt;
+   * 
+   * @param clazz
+   *          the class whose fields to process
+   * @param obj
+   *          the object whose values to read
+   * @return this
+   * @throws NullPointerException
+   *           if clazz or obj are null
+   * @throws IllegalArgumentException
+   *           if the specified object is not an instance of the class or
+   *           interface declaring the underlying field (or a subclass or
+   *           implementor thereof)
+   */
+  public ToJsonString putAllFields(final Class&lt;?&gt; clazz, final Object obj)
+  {
+    Preconditions.checkNotNull(clazz, &quot;clazz may not be null&quot;);
+    Preconditions.checkNotNull(obj, &quot;obj may not be null&quot;);
+
+    if (!clazz.isAssignableFrom(obj.getClass()))
+      throw new IllegalArgumentException(&quot;obj must be an instance of &quot; + clazz);
+    AccessController.doPrivileged(new PrivilegedAction&lt;Void&gt;()
+    {
+      @Override
+      public Void run()
+      {
+        try
+        {
+          for (Field field : clazz.getDeclaredFields())
+          {
+            field.setAccessible(true);
+            put(field.getName(), field.get(obj));
+          }
+        }
+        catch (IllegalAccessException e)
+        {
+          throw new AssertionError(e);
+        }
+        return null;
+      }
+    });
+    return this;
+  }
+
+  /**
+   * Associates the specified value with the specified key. If the key was
+   * already associated with a value, the old value is replaced by the specified
+   * value. If {@code value} is {@code null}, the string {@code &quot;null&quot;} is used.
+   * &lt;p/&gt;
+   * 
+   * @param key
+   *          the key
+   * @param value
+   *          the value
+   * @return this
+   */
+  public ToJsonString put(String key, Object value)
+  {
+    Preconditions.checkNotNull(key, &quot;key may not be null&quot;);
+
+    map.put(key, value);
+    return this;
+  }
+
+  @Override
+  public String toString()
+  {
+    switch (braceStyle)
+    {
+    case NEW_LINE:
+    {
+      this.builder.append(&quot;\n{\n&quot;);
+      break;
+    }
+    case SAME_LINE:
+    {
+      this.builder.append(&quot; {\n&quot;);
+      break;
+    }
+    default:
+      throw new AssertionError(&quot;Unexpected braceStyle: &quot; + braceStyle);
+    }
+    String separator = &quot;&quot;;
+    String indent = Strings.repeat(&quot; &quot;, indentSize);
+    for (Entry&lt;String, Object&gt; entry : map.entrySet())
+    {
+      builder.append(separator).append(indent).append(&quot;\&quot;&quot;).append(entry.getKey()).append(&quot;\&quot;: &quot;);
+      Object value = entry.getValue();
+      if (value instanceof String)
+        builder.append(&quot;\&quot;&quot;);
+      if (value == null)
+        builder.append(&quot;null&quot;);
+      else if (value.getClass().isArray())
+      {
+        String arrayValue;
+        if (value instanceof Object[])
+          arrayValue = Arrays.toString((Object[]) value);
+        else if (value instanceof byte[])
+          arrayValue = Arrays.toString((byte[]) value);
+        else if (value instanceof short[])
+          arrayValue = Arrays.toString((short[]) value);
+        else if (value instanceof int[])
+          arrayValue = Arrays.toString((int[]) value);
+        else if (value instanceof long[])
+          arrayValue = Arrays.toString((long[]) value);
+        else if (value instanceof char[])
+          arrayValue = Arrays.toString((char[]) value);
+        else if (value instanceof float[])
+          arrayValue = Arrays.toString((float[]) value);
+        else if (value instanceof double[])
+          arrayValue = Arrays.toString((double[]) value);
+        else if (value instanceof boolean[])
+          arrayValue = Arrays.toString((boolean[]) value);
+        else throw new AssertionError(&quot;Unknown array type: &quot; + value.getClass().getName());
+        builder.append(arrayValue.replace(&quot;\n&quot;, &quot;\n&quot; + indent));
+      }
+      else builder.append(value.toString().replace(&quot;\n&quot;, &quot;\n&quot; + indent));
+      if (value instanceof String)
+        builder.append(&quot;\&quot;&quot;);
+      separator = &quot;,\n&quot;;
+    }
+    return builder.append(&quot;\n}&quot;).toString();
+  }
+}</code></pre>
+<p>Now replace all of the toString methods in the model objects with this version (same one for all classes) :</p>
+<pre><code>  public String toString()
+  {
+    return new ToJsonString(getClass(), this).toString();
+  }</code></pre>
+<p>Now when you list all users it will be readable in Json Format:</p>
+<pre><code>[models.User
+{
+  &quot;firstName&quot;: &quot;marge&quot;,
+  &quot;lastName&quot;: &quot;simpson&quot;,
+  &quot;password&quot;: &quot;secret&quot;,
+  &quot;activities&quot;: {5=models.Activity
+  {
+    &quot;route&quot;: [models.Location
+    {
+      &quot;latitude&quot;: 23.3,
+      &quot;counter&quot;: 0,
+      &quot;id&quot;: 4,
+      &quot;longitude&quot;: 33.3
+    }, models.Location
+    {
+      &quot;latitude&quot;: 34.4,
+      &quot;counter&quot;: 0,
+      &quot;id&quot;: 5,
+      &quot;longitude&quot;: 45.2
+    }, models.Location
+    {
+      &quot;latitude&quot;: 25.3,
+      &quot;counter&quot;: 0,
+      &quot;id&quot;: 6,
+      &quot;longitude&quot;: 34.3
+    }, models.Location
+    {
+      &quot;latitude&quot;: 44.4,
+      &quot;counter&quot;: 0,
+      &quot;id&quot;: 7,
+      &quot;longitude&quot;: 23.3
+    }],
+    &quot;distance&quot;: 0.001,
+    &quot;location&quot;: &quot;fridge&quot;,
+    &quot;counter&quot;: 0,
+    &quot;id&quot;: 5,
+    &quot;type&quot;: &quot;walk&quot;
+  }, 6=models.Activity
+  {
+    &quot;route&quot;: [],
+    &quot;distance&quot;: 1.0,
+    &quot;location&quot;: &quot;bar&quot;,
+    &quot;counter&quot;: 0,
+    &quot;id&quot;: 6,
+    &quot;type&quot;: &quot;walk&quot;
+  }},
+  &quot;counter&quot;: 0,
+  &quot;id&quot;: 4,
+  &quot;email&quot;: &quot;marge@simpson.com&quot;
+}, models.User
+{
+  &quot;firstName&quot;: &quot;lisa&quot;,
+  &quot;lastName&quot;: &quot;simpson&quot;,
+  &quot;password&quot;: &quot;secret&quot;,
+  &quot;activities&quot;: {7=models.Activity
+  {
+    &quot;route&quot;: [],
+    &quot;distance&quot;: 2.2,
+    &quot;location&quot;: &quot;work&quot;,
+    &quot;counter&quot;: 0,
+    &quot;id&quot;: 7,
+    &quot;type&quot;: &quot;run&quot;
+  }, 8=models.Activity
+  {
+    &quot;route&quot;: [],
+    &quot;distance&quot;: 2.5,
+    &quot;location&quot;: &quot;shop&quot;,
+    &quot;counter&quot;: 0,
+    &quot;id&quot;: 8,
+    &quot;type&quot;: &quot;walk&quot;
+  }},
+  &quot;counter&quot;: 0,
+  &quot;id&quot;: 5,
+  &quot;email&quot;: &quot;lisa@simpson.com&quot;
+}, models.User
+{
+  &quot;firstName&quot;: &quot;bart&quot;,
+  &quot;lastName&quot;: &quot;simpson&quot;,
+  &quot;password&quot;: &quot;secret&quot;,
+  &quot;activities&quot;: {},
+  &quot;counter&quot;: 0,
+  &quot;id&quot;: 6,
+  &quot;email&quot;: &quot;bart@simpson.com&quot;
+}, models.User
+{
+  &quot;firstName&quot;: &quot;maggie&quot;,
+  &quot;lastName&quot;: &quot;simpson&quot;,
+  &quot;password&quot;: &quot;secret&quot;,
+  &quot;activities&quot;: {},
+  &quot;counter&quot;: 0,
+  &quot;id&quot;: 7,
+  &quot;email&quot;: &quot;maggie@simpson.com&quot;
+}]</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Solution</h1>
+<p>Archive of the completed pacemaker application:</p>
+<ul>
+<li><a href="https://github.com/wit-computing/algorithms-2015-pacemaker">https://github.com/wit-computing/algorithms-2015-pacemaker</a></li>
+</ul>
+<p>Note the commit history:</p>
+<ul>
+<li><a href="https://github.com/wit-computing/algorithms-2015-pacemaker/commits/master">https://github.com/wit-computing/algorithms-2015-pacemaker/commits/master</a></li>
+</ul>
+<p>which includes the complete application from empty project to this final version.</p>
+<h2>Exercises  Scripting</h2>
+<p>Look again at the complete command list:</p>
+<pre><code>Welcome to pacemaker-console - ?help for instructions
+pm&gt; ?list-all
+abbrev  name  params
+!rs !run-script (filename)
+!el !enable-logging (fileName)
+!dl !disable-logging  ()
+!gle  !get-last-exception ()
+!sdt  !set-display-time (do-display-time)
+?l  ?list (startsWith)
+?l  ?list ()
+?h  ?help (command-name)
+?h  ?help ()
+?la ?list-all ()
+?ghh  ?generate-HTML-help (file-name, include-prefixed)
+gu  get-user  (email)
+gu  get-users ()
+cu  create-user (first name, last name, email, password)
+du  delete-user (email)
+aa  add-activity  (user-id, type, location, distance)
+al  add-location  (activity-id, latitude, longitude)
+pm&gt;</code></pre>
+<p>The <code>!rs</code> command will allow you to save a sequence of commands to a file, and the run the lot. Try this now - it might be useful for some simple testing.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

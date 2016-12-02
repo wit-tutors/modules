@@ -1,0 +1,671 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Collections & Pacemaker
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="TDD-02">
+      TDD-02
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="Archive">
+      Archive
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="TDD-02">
+        <h1>Objectives</h1>
+<p>Evolve the application developed in lab01 with additional capabilities</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<p>You should have a project from lab01 looking something like this:</p>
+<p><img src="./img/00.png" alt=""></p>
+<p>This is an archive of the project if you dont have it completed:</p>
+<ul>
+<li><a href="./archives/pacemaker-lab01.zip">pacemaker-lab01.zip</a></li>
+</ul>
+<p>Make sure you can import the application into eclipse and run it</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Guava Library</h1>
+<p>Download the latest version of this library here:</p>
+<ul>
+<li><a href="https://github.com/google/guava">https://github.com/google/guava</a></li>
+</ul>
+<p>The jar file is available here:</p>
+<ul>
+<li><a href="https://github.com/google/guava/wiki/Release18">https://github.com/google/guava/wiki/Release18</a></li>
+</ul>
+<p>Download the <code>guava-18.0.jar</code> file featured prominently in the above. Drag and drop the file to the <code>lib</code> file of your pacemaker project and add it to the build path. Your project should look like this:</p>
+<p><img src="img/04.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>PacemakerAPI</h1>
+<p>In the controllers package, create new class called &quot;PacemakerAPI&quot;, containing the following:</p>
+<pre><code class="lang-java">package controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.User;
+
+public class PacemakerAPI
+{
+  private List &lt;User&gt; users = new ArrayList&lt;User&gt;();
+
+  public List&lt;User&gt; getUsers ()
+  {
+    return users;
+  }
+
+  public  void deleteUsers() 
+  {
+    users.clear();
+  }
+
+  public User createUser(String firstName, String lastName, String email, String password) 
+  {
+    User user = new User (firstName, lastName, email, password);
+    users.add(user);
+    return user;
+  }
+
+  public User getUser(String email) 
+  {
+    for (User user : users)
+    {
+      if (email.equals(user.email))
+        return user;
+    }
+    return null;
+  }
+
+  public void deleteUser(String email) 
+  {
+    User foundUser = null;
+    for (User user : users)
+    {
+      if (email.equals(user.email))
+        foundUser = user;
+    }
+    if (foundUser != null)
+    {
+      users.remove(foundUser);
+    }
+  }
+}</code></pre>
+<p>Read this class carefully - making sure you understand each method.</p>
+<p>Replace your current <code>main</code> class with the following:</p>
+<pre><code>package controllers;
+
+import java.io.IOException;
+import java.util.List;
+
+import models.User;
+
+public class Main
+{
+  public static void main(String[] args) throws IOException
+  {    
+    PacemakerAPI pacemakerAPI = new PacemakerAPI();
+
+    pacemakerAPI.createUser(&quot;Bart&quot;,  &quot;Simpson&quot;, &quot;bart@simpson.com&quot;,  &quot;secret&quot;);
+    pacemakerAPI.createUser(&quot;Homer&quot;, &quot;Simpson&quot;, &quot;homer@simpson.com&quot;, &quot;secret&quot;);
+    pacemakerAPI.createUser(&quot;Lisa&quot;,  &quot;Simpson&quot;, &quot;lisa@simpson.com&quot;,  &quot;secret&quot;);
+
+    List&lt;User&gt; users = pacemakerAPI.getUsers();
+    System.out.println(users);
+  }
+}</code></pre>
+<p>Run the application now - the output on the console should be something like this:</p>
+<pre><code>[models.User@15db9742, models.User@6d06d69c, models.User@7852e922]</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>toString</h1>
+<p>The console display of the User objects, which appear as some sort of memory address. We can fix this my introducing a &#39;toString&#39; method into the User class:</p>
+<pre><code class="lang-java">  public String toString()
+  {
+    return firstName + &#39; &#39; + lastName +&#39; &#39; +  email +&#39; &#39; +  password; 
+  }</code></pre>
+<p>Run the app again, and verify that you can see the actual user details.</p>
+<pre><code>[Bart Simpson bart@simpson.com secret, Homer Simpson bart@simpson.com secret, Lisa Simpson bart@simpson.com secret]</code></pre>
+<p>The Guava libraries we imported:</p>
+<ul>
+<li><a href="https://github.com/google/guava">https://github.com/google/guava</a></li>
+</ul>
+<p>contains some useful utilities for building toString. Introduce the following import into the top of the User class:</p>
+<pre><code>import static com.google.common.base.MoreObjects.toStringHelper;</code></pre>
+<p>and rewrite toString as follows:</p>
+<pre><code class="lang-java">  public String toString()
+  {
+    return toStringHelper(this).addValue(firstName)
+                               .addValue(lastName)
+                               .addValue(password)
+                               .addValue(email)                               
+                               .toString();
+  }</code></pre>
+<p>The above fragment will require this import:</p>
+<pre><code>import static com.google.common.base.MoreObjects.toStringHelper;</code></pre>
+<p>Run the app again, and note the slightly changed representation of the Users.</p>
+<pre><code>[User{Bart, Simpson, secret, bart@simpson.com}, User{Homer, Simpson, secret, bart@simpson.com}, User{Lisa, Simpson, secret, bart@simpson.com}]</code></pre>
+<p>We should commit this version now before making any more changes. Right click on the project in Package Explore, select Team-&gt;Commit - and fill out the form - and the commit:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>Then select <code>Push to upstream</code> from the Team menu to upload your changes to github. Make that the github repo contains the new additions (by browsing on github to the source code). </p>
+<p>Dont proceed to the next step until you have verified that the git push is operating correctly.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Upgrade PacemakerAPI</h1>
+<p>PacemakerAPI currently uses a List data structure. It might make sense to rework this to use a Map - keyed on the email address.</p>
+<p>First, redefine the users collection in PacemakerAPI to be a map:</p>
+<pre><code class="lang-java">  private Map&lt;String, User&gt; users = new HashMap&lt;String, User&gt;();</code></pre>
+<p>(import the libraries in the usual way)</p>
+<p>This will require some changes to the api itself:</p>
+<ul>
+<li>getUsers will return a collection, not a list, of the user in the map:</li>
+</ul>
+<pre><code class="lang-java">  public Collection&lt;User&gt; getUsers ()
+  {
+    return users.values();
+  }</code></pre>
+<ul>
+<li>putting a user into the collection will be different:</li>
+</ul>
+<pre><code class="lang-java">  public User createUser(String firstName, String lastName, String email, String password) 
+  {
+    User user = new User (firstName, lastName, email, password);
+    users.put(email, user);
+    return user;
+  }</code></pre>
+<ul>
+<li>searching for a user, though, becomes simpler:</li>
+</ul>
+<pre><code class="lang-java">  public User getUser(String email) 
+  {
+    return users.get(email);
+  }</code></pre>
+<ul>
+<li>as does deleteUser:</li>
+</ul>
+<pre><code class="lang-java">  public void deleteUser(String email) 
+  {
+    users.remove(email);
+  }</code></pre>
+<p>There will be an error in Main when these changes are introduced (see if you can fix it).
+Verify that the app works as expected.</p>
+<p>Commit these changes with a suitable commit message.</p>
+<p>The creation of the Map is a little verbose:</p>
+<pre><code class="lang-java">  private Map&lt;String, User&gt; users = new HashMap&lt;String, User&gt;();</code></pre>
+<p>Java 7 simplifies this with a new syntax:</p>
+<pre><code class="lang-java">  private Map&lt;String, User&gt; users = new HashMap&lt;&gt;();</code></pre>
+<p>Eliminating the repetition of the type parameters.</p>
+<p>If we are using maps - it is recommended that the hash functions used be associated with the actual (preferably unique) values in the object to be inserted into the container.</p>
+<p>We should also strengthen the hash associated with the User class, as we are now storing it in a Map. The Guava libraries we have imported provide some guidance and support:</p>
+<ul>
+<li><a href="https://github.com/google/guava/wiki/HashingExplained">https://github.com/google/guava/wiki/HashingExplained</a></li>
+</ul>
+<p>and we can refactor User to use its hash functions. First, import the requisite class:</p>
+<pre><code class="lang-java">import com.google.common.base.Objects;</code></pre>
+<p>...and then implement the hash function to use our objects attributes:</p>
+<pre><code class="lang-java">  @Override  
+  public int hashCode()  
+  {  
+     return Objects.hashCode(this.lastName, this.firstName, this.email, this.password);  
+  }</code></pre>
+<p>Note the user of the &#39;Override&#39; attribute - discussed here:</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/94361/when-do-you-use-javas-override-annotation-and-why">Override</a></li>
+</ul>
+<p>We should also add override to toString:</p>
+<pre><code class="lang-java">  @Override
+  public String toString()
+  {
+    return toStringHelper(this).addValue(firstName)
+                               .addValue(lastName)
+                               .addValue(password)
+                               .addValue(email)                               
+                               .toString();
+  }</code></pre>
+<p>The Main class will no longer be compiling - the call to getUsers now returns a <code>Collection</code> instead of a <code>List</code>:</p>
+<pre><code>    Collection&lt;User&gt; users = pacemakerAPI.getUsers();</code></pre>
+<p>When everything is compiling and running correctly, commit all changes with a suitable message and push to github.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>IDs</h1>
+<p>We might wish to use IDs in addition to emails when referencing out users. The User class can be extended to include these attributes:</p>
+<pre><code class="lang-java">public class User 
+{
+  static Long   counter = 0l;
+
+  public Long   id;
+  //...  
+
+  public User(String firstName, String lastName, String email, String password)
+  {
+    this.id        = counter++;
+    //...
+  }</code></pre>
+<p>We can think think of the principal users collection as the userIndex, and introduce a separate collection call emailIndex - which stores the same object against a different key for rapid access:</p>
+<pre><code class="lang-java">public class PacemakerAPI
+{
+  private Map&lt;Long, User&gt;     userIndex       = new HashMap&lt;&gt;();
+  private Map&lt;String, User&gt;   emailIndex      = new HashMap&lt;&gt;();
+
+  public Collection&lt;User&gt; getUsers ()
+  {
+    return userIndex.values();
+  }
+
+  public  void deleteUsers() 
+  {
+    userIndex.clear();
+    emailIndex.clear();
+  }
+
+  public User createUser(String firstName, String lastName, String email, String password) 
+  {
+    User user = new User (firstName, lastName, email, password);
+    userIndex.put(user.id, user);
+    emailIndex.put(email, user);
+    return user;
+  }
+
+  public User getUserByEmail(String email) 
+  {
+    return emailIndex.get(email);
+  }
+
+  public User getUser(Long id) 
+  {
+    return userIndex.get(id);
+  }
+
+  public void deleteUser(Long id) 
+  {
+    User user = userIndex.remove(id);
+    emailIndex.remove(user.email);
+  }
+}</code></pre>
+<p>Review the above code - note getUser and deleteUser have been adjusted to use IDs.</p>
+<p>Main can be reworked to use the above API - testing the delete method in the process:</p>
+<pre><code class="lang-java">    PacemakerAPI pacemakerAPI = new PacemakerAPI();
+
+    pacemakerAPI.createUser(&quot;Bart&quot;, &quot;Simpson&quot;,   &quot;bart@simpson.com&quot;, &quot;secret&quot;);
+    pacemakerAPI.createUser(&quot;Homer&quot;, &quot;Simpson&quot;,  &quot;homer@simpson.com&quot;, &quot;secret&quot;);
+    pacemakerAPI.createUser(&quot;Lisa&quot;, &quot;Simpson&quot;, &quot; lisa@simpson.com&quot;, &quot;secret&quot;);
+
+    Collection&lt;User&gt; users = pacemakerAPI.getUsers();
+    System.out.println(users);
+
+    User homer = pacemakerAPI.getUserByEmail(&quot;homer@simpson.com&quot;);
+    System.out.println(homer);
+
+    pacemakerAPI.deleteUser(homer.id);
+    users = pacemakerAPI.getUsers();
+    System.out.println(users);</code></pre>
+<p>When everything is compiling and running correctly, commit all changes with a suitable message and push to github.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>User Tests</h1>
+<p>Create a new &#39;<code>Source Folder</code> in your project called <code>test</code>:</p>
+<p><img src="img/06.png" alt=""></p>
+<pre><code>package models;
+
+import static org.junit.Assert.*;
+
+import java.util.HashSet;
+import java.util.Set;
+import org.junit.Test;
+
+import static models.Fixtures.users;
+
+public class UserTest
+{
+  User homer = new User (&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;,  &quot;secret&quot;);
+
+  @Test
+  public void testCreate()
+  {
+    assertEquals (&quot;homer&quot;,               homer.firstName);
+    assertEquals (&quot;simpson&quot;,             homer.lastName);
+    assertEquals (&quot;homer@simpson.com&quot;,   homer.email);   
+    assertEquals (&quot;secret&quot;,              homer.password);   
+  }
+
+  @Test
+  public void testIds()
+  {
+    Set&lt;Long&gt; ids = new HashSet&lt;&gt;();
+    for (User user : users)
+    {
+      ids.add(user.id);
+    }
+    assertEquals (users.length, ids.size());
+  }
+
+  @Test
+  public void testToString()
+  {
+    assertEquals (&quot;User{&quot; + homer.id + &quot;, homer, simpson, secret, homer@simpson.com}&quot;, homer.toString());
+  }
+}</code></pre>
+<p>When you bring in this class, it will not compile due to missing libraries. Figure out how to add these now one way or another. Eclipse might prompt with this auto-fixup dialog:</p>
+<p><img src="img/07.png" alt=""></p>
+<p>It will still not compile - as we are missing the fixtures:</p>
+<pre><code>package models;
+
+public class Fixtures
+{
+  public static User[] users =
+  {
+    new User (&quot;marge&quot;, &quot;simpson&quot;, &quot;marge@simpson.com&quot;,  &quot;secret&quot;),
+    new User (&quot;lisa&quot;,  &quot;simpson&quot;, &quot;lisa@simpson.com&quot;,   &quot;secret&quot;),
+    new User (&quot;bart&quot;,  &quot;simpson&quot;, &quot;bart@simpson.com&quot;,   &quot;secret&quot;),
+    new User (&quot;maggie&quot;,&quot;simpson&quot;, &quot;maggie@simpson.com&quot;, &quot;secret&quot;)
+  };
+}</code></pre>
+<p>The tests should run now - but one of them is failing. Can you fix it?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Archive">
+        <h1>Archive</h1>
+<h2>Archive of project so far...</h2>
+<ul>
+<li><a href="https://github.com/wit-computing/algorithms-2015-pacemaker">https://github.com/wit-computing/algorithms-2015-pacemaker</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

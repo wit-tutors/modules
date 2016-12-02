@@ -1,0 +1,487 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Serialization
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="TDD-Lab-05">
+      TDD-Lab-05
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="TDD-Lab-05">
+        <h1>Objectives</h1>
+<p>Extend the pacemaker project  to include tests for the persistence mechanisms.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<p>This lab assumes you have completed the previous lab - this is the complete archive here:</p>
+<ul>
+<li><a href="archives/pacemaker-tdd-04.zip">pacemaker-tdd-04.zip</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Populate</h1>
+<p>Create a new test specifically for persistence (includeing all the neccessary imports here for convenience):</p>
+<pre><code class="lang-java">package models;
+import controllers.PacemakerAPI;
+import static org.junit.Assert.*;
+
+import java.io.File;
+import java.util.Collection;
+
+import models.Activity;
+import models.Location;
+import models.User;
+
+import org.junit.Test;
+
+import utils.Serializer;
+import utils.XMLSerializer;
+import controllers.PacemakerAPI;
+import static models.Fixtures.users;
+import static models.Fixtures.activities;
+import static models.Fixtures.locations;
+
+public class PersistenceTest
+{
+  PacemakerAPI pacemaker;
+
+}</code></pre>
+<p>Before writing a test, we introduce a utility method which we will user to create a dataset in pacemakerAPI. This is not a test, but will be called from a test.</p>
+<pre><code class="lang-java">  void populate (PacemakerAPI pacemaker)
+  {
+    for (User user : users)
+    {
+      pacemaker.createUser(user.firstName, user.lastName, user.email, user.password);
+    }
+    User user1 = pacemaker.getUserByEmail(users[0].email);
+    Activity activity = pacemaker.createActivity(user1.id, activities[0].type, activities[0].location, activities[0].distance);
+    pacemaker.createActivity(user1.id, activities[1].type, activities[1].location, activities[1].distance);
+    User user2 = pacemaker.getUserByEmail(users[1].email);
+    pacemaker.createActivity(user2.id, activities[2].type, activities[2].location, activities[2].distance);
+    pacemaker.createActivity(user2.id, activities[3].type, activities[3].location, activities[3].distance);
+
+    for (Location location : locations)
+    {
+      pacemaker.addLocation(activity.id, location.latitude, location.longitude);
+    }
+  }</code></pre>
+<p>It creates some users + activities, and then adds a route to one of the activities. We can write a test to see if this is functioning generally as expected:</p>
+<pre><code class="lang-java">  @Test
+  public void testPopulate()
+  { 
+    pacemaker = new PacemakerAPI(null);
+    assertEquals(0, pacemaker.getUsers().size());
+    populate (pacemaker);
+
+    assertEquals(users.length, pacemaker.getUsers().size());
+    assertEquals(2, pacemaker.getUserByEmail(users[0].email).activities.size());
+    assertEquals(2, pacemaker.getUserByEmail(users[1].email).activities.size());   
+    Long activityID = pacemaker.getUserByEmail(users[0].email).activities.keySet().iterator().next();
+    assertEquals(locations.length, pacemaker.getActivity(activityID).route.size());   
+  }</code></pre>
+<p>This should pass. However, we are not using the serializer yet. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Serializer Test</h1>
+<p>Before writing the serializer test, we need a simple file deleting utility:</p>
+<pre><code class="lang-java">  void deleteFile(String fileName)
+  {
+    File datastore = new File (&quot;testdatastore.xml&quot;);
+    if (datastore.exists())
+    {
+      datastore.delete();
+    }
+  }</code></pre>
+<p>Now we can write a new test specifically to see if an object model is serialized - and restored - successfully.</p>
+<pre><code class="lang-java">  @Test
+  public void testXMLSerializer() throws Exception
+  { 
+    String datastoreFile = &quot;testdatastore.xml&quot;;
+    deleteFile (datastoreFile);
+
+    Serializer serializer = new XMLSerializer(new File (datastoreFile));
+
+    pacemaker = new PacemakerAPI(serializer); 
+    populate(pacemaker);
+    pacemaker.store();
+
+    PacemakerAPI pacemaker2 =  new PacemakerAPI(serializer);
+    pacemaker2.load();
+
+    assertEquals (pacemaker.getUsers().size(), pacemaker2.getUsers().size());
+    for (User user : pacemaker.getUsers())
+    {
+      assertTrue (pacemaker2.getUsers().contains(user));
+    }
+    deleteFile (&quot;testdatastore.xml&quot;);
+  }</code></pre>
+<p>This is a complex test, involving the creating of two pacemakerAPI objects. One is populated with complete object graph and serialized. The second loads this graph.</p>
+<p>As both are held in memory, we can run through them in the final loop to test for equivalence.</p>
+<p>Try this now and the tests should pass. </p>
+<p>I</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Equals Method</h1>
+<p>In order to verify that the full object graph is being compared, place breakpoints in the equals() method in User, Activity and Location, and run the test again in the debugger.</p>
+<p>Do you notice anything unusual?</p>
+<p>Only the User.equals() method is being triggered, the activities or locations equals are never called. This is because the equals method in User is incomplete. Here is a revision, which includes the extra method call:</p>
+<pre><code class="lang-java">  @Override
+  public boolean equals(final Object obj)
+  {
+    if (obj instanceof User)
+    {
+      final User other = (User) obj;
+      return Objects.equal(firstName,   other.firstName) 
+          &amp;&amp;  Objects.equal(lastName,    other.lastName)
+          &amp;&amp;  Objects.equal(email,       other.email)
+          &amp;&amp;  Objects.equal(password,    other.password)
+          &amp;&amp;  Objects.equal(activities,  other.activities);      
+    }
+    else
+    {
+      return false;
+    }
+  }</code></pre>
+<p>This test should still run successfully, but perform a more effective &#39;deep compare&#39; of the full object graph.</p>
+<p>Finally, reflect again on this &#39;populate&#39; method:</p>
+<pre><code class="lang-java">  void populate (PacemakerAPI pacemaker)
+  {
+    for (User user : users)
+    {
+      pacemaker.createUser(user.firstName, user.lastName, user.email, user.password);
+    }
+    User user1 = pacemaker.getUserByEmail(users[0].email);
+    Activity activity = pacemaker.createActivity(user1.id, activities[0].type, activities[0].location, activities[0].distance);
+    pacemaker.createActivity(user1.id, activities[1].type, activities[1].location, activities[1].distance);
+    User user2 = pacemaker.getUserByEmail(users[1].email);
+    pacemaker.createActivity(user2.id, activities[2].type, activities[2].location, activities[2].distance);
+    pacemaker.createActivity(user2.id, activities[3].type, activities[3].location, activities[3].distance);
+
+    for (Location location : locations)
+    {
+      pacemaker.addLocation(activity.id, location.latitude, location.longitude);
+    }
+  }</code></pre>
+<p>This is very clumsy and poorly abstracted code. Are there alternative approaches?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Test Packages</h1>
+<p>Currently the app is structured like this in eclipse:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>The test classes should be adjusted to better align with the packages they are testing. Refactor the project to look like this:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>It should be possible to do this just using drag and drop within the package explorer.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Solution</h1>
+<p>Archive of the completed lab:</p>
+<ul>
+<li><a href="archives/pacemaker-tdd-05.zip">pacemaker-tdd-05.zip</a></li>
+</ul>
+<h3>JSON</h3>
+<p>For many uses, XML has largely been replaced with JSON:</p>
+<ul>
+<li><a href="http://www.json.org/">http://www.json.org/</a></li>
+</ul>
+<p>Which offers some considerable benefits as a simple representation of data structures. The xtream library  supports JSON:</p>
+<ul>
+<li><a href="http://x-stream.github.io/json-tutorial.html">http://x-stream.github.io/json-tutorial.html</a></li>
+</ul>
+<p>You will need these additional jar files to use incorporate JSON into the existing pacemaker project:</p>
+<ul>
+<li><a href="http://mvnrepository.com/artifact/org.codehaus.jettison/jettison/1.3.7">jettison</a></li>
+<li><a href="http://mvnrepository.com/artifact/stax/stax/1.2.0">stax</a></li>
+</ul>
+<p>Design a new class called JSONSerializer - whose task is to persist the pacemaker models to JSON instead of XML.</p>
+<p>Note - you already have built a useful test for this - so the implementation will have immediate access to a regression test to see if it works successfully or not.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

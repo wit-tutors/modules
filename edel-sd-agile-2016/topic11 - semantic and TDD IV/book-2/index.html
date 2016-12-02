@@ -1,0 +1,770 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Semantic and More Testing
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-11b">
+      Lab-11b
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01 - paradigms and languages/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02 - java language/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03 - inheritance and collections/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04 - serialisation and TDD I/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05 - TDD II/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06 - exceptions and maven/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-1/index.html">
+          Lab-08a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-2/index.html">
+          Lab-08b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-1/index.html">
+          Lab-09a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-2/index.html">
+          Lab-09b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10 - OCP and play testing/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic11 - semantic and TDD IV/book-2/index.html">
+          Lab-11b
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-11b">
+        <h1>Objectives</h1>
+<p>Introduce elements of a web UI onto the pacemaker. Rework (in the final archive) the ui into a simple app</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Initial Data</h1>
+<p>Create a new file called &#39;initial-data.yml&#39; in the conf folder of pacemakerplay. Incorporate the following data:</p>
+<pre><code># Users
+users:
+
+    - !!models.User
+        email:      homer@simpson.com
+        firstname:  homer
+        lastname:   simpson        
+        password:   secret
+
+    - !!models.User
+        email:      bart@simpson.com
+        firstname:  bart
+        lastname:   simpson        
+        password:   secret
+
+    - !!models.User
+        email:      marge@simpson.com
+        firstname:  marge
+        lastname:   simpson        
+        password:   secret   
+
+    - !!models.User
+        email:      lisa@simpson.com
+        firstname:  lisa
+        lastname:   simpson        
+        password:   secret</code></pre>
+<p>In the app folder (not in any package), introduce this class:</p>
+<pre><code class="lang-java">import play.*;
+import play.libs.*;
+import java.util.*;
+import com.avaje.ebean.*;
+
+import models.*;
+@SuppressWarnings(&quot;unchecked&quot;)
+public class Global extends GlobalSettings
+{
+  public void onStart(Application app)
+  {
+    InitialData.insert(app);
+  }
+
+  static class InitialData
+  {
+    public static void insert(Application app)
+    {
+      if (Ebean.find(User.class).findRowCount() == 0)
+      {
+        Map&lt;String, List&lt;User&gt;&gt; all = (Map&lt;String, List&lt;User&gt;&gt;) Yaml.load(&quot;initial-data.yml&quot;);
+        Ebean.saveAll(all.get(&quot;users&quot;));
+      }
+    }
+  }
+}</code></pre>
+<p>Now run the app in the usual way - but make sure to run the database browser first (h2-browser command).</p>
+<p>Verify that, once the app is launched, the user table is populated with the above values.</p>
+<p>Can you forsee (in your JUnit tests) any potential problems by adding in initial data into our database?</p>
+<p>Run your tests to see what happens.  Make any necessary changes to your tests based on having initial starting data.  </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Semantic UI</h1>
+<p>Visit Semantic UI github account:</p>
+<ul>
+<li><a href="https://github.com/Semantic-Org/Semantic-UI">https://github.com/Semantic-Org/Semantic-UI</a></li>
+</ul>
+<p>and download as a zip archive. Expand the archive, which should look like this:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Open the pacemakerplay project in eclipse, and expand the &#39;public&#39; folder:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>Now drag and drop the &#39;dist&#39; folder from the semantic ui download, and drop it into the public folder. On the way you will get this dialog:</p>
+<p><img src="img/03.png" alt=""></p>
+<p>Make sure to select &#39;copy&#39; as shown. Once it is copied over, rename the &#39;dist&#39; folder to &#39;semantic&#39;</p>
+<p><img src="img/04.png" alt=""></p>
+<p>You <strong><em>may</em></strong> get an error during the renaming of &#39;dist&#39; to &#39;semantic&#39;.  This will result in the &#39;dist&#39; folder remaining in your public folder.  Check that it is only folders left in &#39;dist&#39; (i.e. no files remain after the rename) and delete the &#39;dist&#39; folder.</p>
+<h2>Using Semantic css</h2>
+<p>We can now include the semantic css into our ui by changing <code>views/main.scala.html</code> as follows:</p>
+<pre><code class="lang-html">@(title: String)(content: Html)
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;@title&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;@routes.Assets.versioned(&quot;semantic/semantic.css&quot;)&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;@routes.Assets.versioned(&quot;stylesheets/main.css&quot;)&quot;&gt;
+        &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;@routes.Assets.versioned(&quot;images/favicon.png&quot;)&quot;&gt;
+        &lt;script src=&quot;@routes.Assets.versioned(&quot;javascripts/hello.js&quot;)&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;@routes.Assets.versioned(&quot;semantic/semantic.min.js&quot;)&quot;&gt;&lt;/script&gt; 
+    &lt;/head&gt;
+    &lt;body&gt;
+        @content
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>We have just entered two extra lines above - a new stylesheet included before the existing one and a javascript after the hello.js include.</p>
+<p>To test this, we will change the index file <code>views/index.scala</code> as follows:</p>
+<pre><code class="lang-xml">@(message: String)
+
+@main(&quot;Welcome to Pacemaker&quot;) {
+
+    &lt;div class=&quot;ui segment&quot;&gt;
+      &lt;p&gt; @message &lt;/p&gt;
+    &lt;/div&gt;
+}</code></pre>
+<p>You may need to do a clean on your compile to pick up the changes, prior to running the app:</p>
+<pre><code>activator clean compile
+activator run</code></pre>
+<p>This should display the greeting in a simple segment:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>Introduction to segments here:</p>
+<ul>
+<li><a href="http://semantic-ui.com/elements/segment.html">http://semantic-ui.com/elements/segment.html</a></li>
+</ul>
+<p>The above page is rendered in response to <code>/</code> request as mapped in the routes file:</p>
+<pre><code>GET     /                                          controllers.Application.index()</code></pre>
+<p>... this is the controller itself:</p>
+<pre><code class="lang-java">public class HomeController extends Controller {
+
+    public Result index() {
+        return ok(index.render(&quot;Welcome to Pacemaker Web 1.0&quot;));
+    }
+
+}</code></pre>
+<p>See if you can follow the logic of the page creation - particularly the relationship between:</p>
+<ul>
+<li>HomeController.java</li>
+<li>index.scala.html</li>
+<li>main.scala.html</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Passing Parameters to the View</h1>
+<p>Instead of passing a string in the HomeController controller:</p>
+<pre><code class="lang-java">   return ok(index.render(&quot;Welcome to Pacemaker Web 1.0&quot;));</code></pre>
+<p>We could send the list of users:</p>
+<pre><code class="lang-java">    List&lt;User&gt; users = User.findAll();
+    return ok(index.render(users));</code></pre>
+<p>This will generate a syntax error:</p>
+<pre><code>[error] C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace-play\pacemakerplay-lab11b\app\controllers\HomeController.java:24:  java.util.List&lt;models.User&gt; cannot be converted to java.lang.String
+[error]         return ok(index.render(users));</code></pre>
+<p>The reason this error is generated is the template is expecting a String:</p>
+<pre><code class="lang-xml">@(message: String)
+
+@main(&quot;Welcome to Pacemaker&quot;) {
+
+  &lt;div class=&quot;ui segment&quot;&gt;
+    &lt;p&gt; @message &lt;/p&gt;
+  &lt;/div&gt;
+
+}</code></pre>
+<p>Change this to expect a list:</p>
+<pre><code class="lang-xml">@(users: List[User])
+
+@main(&quot;Welcome to Play&quot;) {
+
+  &lt;div class=&quot;ui segment&quot;&gt;
+    &lt;p&gt; &lt;/p&gt;
+  &lt;/div&gt;
+
+}</code></pre>
+<p>Compile these changes; it should compile now.</p>
+<p>Run <strong>activator test</strong>.  Our <strong>renderTemplate</strong> in <strong>ApplicationTest</strong> fails:</p>
+<pre><code>[error] C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace-play\pacemakerplay-lab11b\test\ApplicationTest.java:39:  java.lang.String cannot be converted to java.util.List&lt;models.User&gt;
+[error]         Content html = views.html.index.render(&quot;Welcome to Pacemaker Web 1.0&quot;);</code></pre>
+<p>Comment out this test for the moment.</p>
+<p>Run <strong>activator test</strong> again.  Now you should have two other failed tests:</p>
+<pre><code>[error] Failed: Total 16, Failed 2, Errors 0, Passed 14
+[error] Failed tests:
+[error]         controllers.HomeControllerTest
+[error]         IntegrationTest
+[error] (test:test) sbt.TestsFailedException: Tests unsuccessful
+[error] Total time: 69 s, completed 21-Nov-2016 16:14:42</code></pre>
+<p>From the output of your tests, can you figure out what happened?</p>
+<p>Basically, we changed the index method of HomeController to interrogate the database, however, our HomeControllerTest above don&#39;t have a fakeApplication started.  Make these changes to HomeControllerTest:</p>
+<pre><code class="lang-java">public class HomeControllerTest extends WithApplication{
+
+  @Test
+    //Testing the index method to ensure the home page of the 
+    //application is rendered correctly
+    public void testIndex() {
+      Result result = new HomeController().index();
+      assertEquals(OK, result.status());
+      assertEquals(&quot;text/html&quot;, result.contentType().get());
+      assertEquals(&quot;utf-8&quot;, result.charset().get());
+      assertTrue(contentAsString(result).contains(&quot;Welcome to Pacemaker&quot;));
+    }  
+}</code></pre>
+<p>The IntegrationTest.java file was generated by Play.  Really, we don&#39;t need the test in this class as we have covered this test in another class.  You can delete this whole file.</p>
+<p>Run the tests again.</p>
+<p>Once you have successful tests, run the application and verify that your localhost starts and the initial-data is displayed on your home page.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Displaying the Users List</h1>
+<p>The templating language - used to generate the actual html pages - is a very simple subset of Scala.</p>
+<ul>
+<li><a href="https://www.playframework.com/documentation/2.5.1/ScalaTemplates">https://www.playframework.com/documentation/2.5.1/ScalaTemplates</a></li>
+</ul>
+<p>The above guide - just a single page of documentation - is probably all you need to know.</p>
+<p>Here is a revised version of index.scala.html to generate a list of users as a <code>&lt;ul&gt;</code>:</p>
+<pre><code class="lang-xml">@(users: List[User])
+
+@main(&quot;Welcome to Pacemaker&quot;) {
+
+  &lt;div class=&quot;ui segment&quot;&gt;
+  &lt;ul&gt;
+    @for(i &lt;- 0 until users.size) {
+      &lt;li&gt; 
+        @users(i).firstname @users(i).lastname &lt;/a&gt; 
+      &lt;/li&gt;
+    }
+  &lt;/ul&gt;
+  &lt;/div&gt;
+
+}</code></pre>
+<p>Run the app now, and we should see the list:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>or we can display this as an elegant table using semantic ui:</p>
+<ul>
+<li><a href="http://semantic-ui.com/collections/table.html">http://semantic-ui.com/collections/table.html</a></li>
+</ul>
+<p>Here is a revised layout using a table:</p>
+<pre><code class="lang-xml">@(users: List[User])
+
+@main(&quot;Welcome to Pacemaker&quot;) {
+
+
+    &lt;table class=&quot;ui table segment&quot;&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;First Name&lt;/th&gt;
+          &lt;th&gt;Last Name&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        @for(i &lt;- 0 until users.size) {
+          &lt;tr&gt;
+            &lt;td&gt; @users(i).firstname&lt;/td&gt; &lt;td&gt; @users(i).lastname &lt;/td&gt; 
+          &lt;/tr&gt;
+        }
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+}</code></pre>
+<p><img src="img/07.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Routing to a New View</h1>
+<p>This is a revised version of index.scala.html:</p>
+<pre><code class="lang-xml">@(users: List[User])
+
+@main(&quot;Welcome to Pacemaker&quot;) {
+
+  &lt;h1 class=&quot;ui header&quot;&gt;Pacemaker&lt;/h1&gt;
+
+    &lt;table class=&quot;ui table segment&quot;&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;First Name&lt;/th&gt;
+          &lt;th&gt;Last Name&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        @for(i &lt;- 0 until users.size) {
+          &lt;tr&gt;
+            &lt;td&gt; @users(i).firstname&lt;/td&gt; &lt;td&gt; @users(i).lastname &lt;/td&gt; 
+          &lt;/tr&gt;
+        }
+      &lt;/tbody&gt;
+
+    &lt;tfoot&gt;
+      &lt;tr&gt;
+        &lt;th colspan=&quot;2&quot;&gt;
+          &lt;a class=&quot;ui blue labeled icon button&quot; href=&quot;&quot;&gt;
+            &lt;i class=&quot;user icon&quot;&gt;&lt;/i&gt; 
+             Add User
+          &lt;/a&gt;
+        &lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/tfoot&gt;
+
+    &lt;/table&gt;
+}</code></pre>
+<p>It includes a header:</p>
+<ul>
+<li><a href="http://semantic-ui.com/elements/header.html">http://semantic-ui.com/elements/header.html</a></li>
+</ul>
+<p>and a button:</p>
+<ul>
+<li><a href="http://semantic-ui.com/elements/button.html">http://semantic-ui.com/elements/button.html</a></li>
+</ul>
+<p>which is positioned at the last row:</p>
+<ul>
+<li><a href="http://semantic-ui.com/collections/table.html">http://semantic-ui.com/collections/table.html</a></li>
+</ul>
+<p>In our code above, the href in the button is blank, so we can suggest a new route:</p>
+<pre><code class="lang-xml">          &lt;a class=&quot;ui blue labeled icon button&quot; href=&quot;/users/adduser&quot;&gt;</code></pre>
+<p>We can specify a matching route + controller action in conf/routes (just after the root route):</p>
+<pre><code class="lang-xml">GET    /users/adduser                               controllers.HomeController.addUser()</code></pre>
+<p>To wire this up, we need a new method in the HomeController controller:</p>
+<pre><code class="lang-java">  public Result addUser()
+  {
+    return ok(adduser.render());
+  }</code></pre>
+<p>and this is a new view called <code>adduser.scala.html</code>:</p>
+<pre><code class="lang-xml">@()
+
+@main(&quot;Add User&quot;) {
+
+  &lt;p&gt; Add User Form &lt;/p&gt;
+
+}</code></pre>
+<p>Compile these changes and when you run the app, the new view should be displayed.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Form Design</h1>
+<p>Forms can be assembled cleanly in Semantic UI:</p>
+<ul>
+<li><a href="http://semantic-ui.com/collections/form.html">http://semantic-ui.com/collections/form.html</a></li>
+</ul>
+<p>Here is a replacement for adduser.scala.html:</p>
+<pre><code class="lang-xml">@()
+
+@main(&quot;Add User&quot;) {
+
+        &lt;div class=&quot;ui form segment&quot;&gt;
+          &lt;div class=&quot;two fields&quot;&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;label&gt;First Name&lt;/label&gt;
+              &lt;input placeholder=&quot;First Name&quot; type=&quot;text&quot; name=&quot;firstname&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;label&gt;Last Name&lt;/label&gt;
+              &lt;input placeholder=&quot;Last Name&quot; type=&quot;text&quot; name=&quot;lastname&quot;&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;label&gt;Email&lt;/label&gt;
+            &lt;input placeholder=&quot;email&quot; type=&quot;text&quot; name=&quot;email&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;label&gt;Password&lt;/label&gt;
+            &lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;
+          &lt;/div&gt;
+          &lt;input type=&quot;submit&quot; class=&quot;ui blue submit button&quot; value=&quot;Submit&quot;&gt;
+        &lt;/div&gt;
+}</code></pre>
+<p>When you run the application, your <a href="http://localhost:9000/users/adduser">http://localhost:9000/users/adduser</a> should now look like this:</p>
+<p><img src="img/08.png" alt=""></p>
+<p>Clicking the submit button on this form does nothing.  When we click this button, ideally we would like to be redirected back to our home page (we will look at form input in the next step).</p>
+<p>To do this, we would need to encapsulate it on a standard <code>&lt;form&gt;</code> element, and define associated action and method attributes:</p>
+<pre><code class="lang-xml">  &lt;form action=&quot;/users/submituser&quot; method=&quot;POST&quot;&gt;
+    ...
+  &lt;/form&gt;</code></pre>
+<p>Place the above code around our outer div.</p>
+<p>For this to work, we will need a route:</p>
+<pre><code>POST    /users/submituser                          controllers.HomeController.submitUser()</code></pre>
+<p>and a corresponding action:</p>
+<pre><code class="lang-java">  public Result submitUser()
+  {
+    return redirect (&quot;/&quot;);
+  }</code></pre>
+<p>Compile and run these changes. </p>
+<p>This should work - and pressing the submit button should take us back to the users list page.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Form Input</h1>
+<p>Form handling in Play is well supported, and does not require significant boilerplate code. </p>
+<p>In the HomeController class, update the submitUser() method to this:</p>
+<pre><code class="lang-java">    public Result submitUser()
+    {
+      Form&lt;User&gt; boundForm = Form.form(User.class).bindFromRequest();    
+      User user = boundForm.get();
+      user.save();
+      return redirect (&quot;/&quot;);
+    }</code></pre>
+<p>This method recovers the user entered data, reads it into a new User object, which we then save. The only requirement is that we keep the names of the user members directly aligned with the &#39;name&#39; attributes in the <code>&lt;input&gt;</code> elements in the form:</p>
+<pre><code class="lang-java">public class User extends Model
+{
+  //...
+  public String firstname;
+  public String lastname;
+  public String email;
+  public String password;
+  //...
+}</code></pre>
+<pre><code class="lang-xml">  //...
+  &lt;input placeholder=&quot;First Name&quot; type=&quot;text&quot; name=&quot;firstname&quot;&gt;
+  //...
+  &lt;input placeholder=&quot;Last Name&quot;  type=&quot;text&quot; name=&quot;lastname&quot;&gt;
+  //...
+  &lt;input placeholder=&quot;email&quot;      type=&quot;text&quot; name=&quot;email&quot;&gt;
+  //...
+  &lt;input type=&quot;password&quot;                      name=&quot;password&quot;&gt;
+  //...</code></pre>
+<p>We should now have a simple UI, listing out the users. If we press the &quot;Add User&quot; button, then we should see a form which, if filled out, will take us back to the user page - to now include a new user.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Links</h1>
+<p>Our list of users could be extended to include links so we can inspect each users details.</p>
+<p>First introduce a new supporting route:</p>
+<pre><code>GET     /users/showuser/:id                        controllers.HomeController.showUser(id : Long)</code></pre>
+<p>Then the template, call <code>showuser.scala.html</code>:</p>
+<pre><code class="lang-xml">@(user : User)
+
+@main(&quot;user&quot;) {
+
+}</code></pre>
+<p>and finally the matching controller action:</p>
+<pre><code class="lang-java">  public Result showUser(Long id)
+  {
+    User user =  User.findById(id);
+    return ok(showuser.render(user));
+  }</code></pre>
+<p>This is an example of a paramaterised route (it takes an id) which serves an html page. We can now enable the user list page such that each user is a link (with the correct id) to this route: Edit index.scala.html - and rework the for loop as follows:</p>
+<pre><code class="lang-xml">        @for(i &lt;- 0 until users.size) {
+          &lt;tr&gt;
+            &lt;td&gt; &lt;a href=&quot;/users/showuser/@users(i).id&quot;&gt; @users(i).firstname &lt;/a&gt; &lt;/td&gt;  
+            &lt;td&gt; @users(i).lastname  &lt;/td&gt; 
+          &lt;/tr&gt;
+        }</code></pre>
+<p>Notice how we embedded the users first name in an<code>&lt;a&gt;</code> tag - with the correct route.</p>
+<p>Run this now - and the first names of each user should be a link, taking us to a blank page. </p>
+<p>Here is a version of showuser.scala.html` that renders some of a user details:</p>
+<pre><code class="lang-xml">@(user : User)
+
+@main(&quot;user&quot;) {
+    &lt;div class=&quot;ui form segment&quot;&gt;
+      &lt;div class=&quot;two fields&quot;&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;label&gt;First Name&lt;/label&gt;
+          &lt;input value= @user.firstname type=&quot;text&quot; name=&quot;firstname&quot; readonly&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;label&gt;Last Name&lt;/label&gt;
+          &lt;input value= @user.lastname type=&quot;text&quot; name=&quot;lastname&quot; readonly&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;field&quot;&gt;
+        &lt;label&gt;Email&lt;/label&gt;
+        &lt;input value= @user.email type=&quot;text&quot; name=&quot;email&quot; readonly&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+}</code></pre>
+<p>This should work now as expected.</p>
+<ul>
+<li><a href="archives/pacemakerplay-lab11b.zip">Solution of this lab so far</a></li>
+</ul>
+<p>Note, there is no location class included in this solution; it only contains user and activity.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Enhanced UI Version</h1>
+<p>This archive can replace the version you may have been developing during this lab:</p>
+<ul>
+<li><a href="archives/pacemakerplay-semantic.zip">pacemakerplay-semantic.zip</a></li>
+</ul>
+<p>Download, expand it, and run it.  Browse to:</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+<p>Expect to see an UI like this:</p>
+<p><img src="img/11.png" alt="">
+<img src="img/12.png" alt="">
+<img src="img/13.png" alt="">
+<img src="img/09.png" alt="">
+<img src="img/10.png" alt=""></p>
+<p>You may use this zip as the starting point for your assignment.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & Dr. Siobhan Drohan.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

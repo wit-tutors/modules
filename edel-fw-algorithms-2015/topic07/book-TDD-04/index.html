@@ -1,0 +1,697 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      TDD Part II
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="TDD-04">
+      TDD-04
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="TDD-04">
+        <h1>Objectives</h1>
+<p>Extend the pacemaker application to incorporate a serialization mechanism to enable users &amp; activities to be persisted to a file. We will then try to generalize this mechanism, which will enable us to experiment with alternative serialization formats.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Serialization</h1>
+<p>We would like to incorporate persistence into our API. First, to prove that we can get it off the ground correctly, we can try some small experiments in main. This should be your current main method:</p>
+<pre><code class="lang-java">    PacemakerAPI pacemakerAPI = new PacemakerAPI();
+
+    pacemakerAPI.createUser(&quot;Bart&quot;, &quot;Simpson&quot;,   &quot;bart@simpson.com&quot;, &quot;secret&quot;);
+    pacemakerAPI.createUser(&quot;Homer&quot;, &quot;Simpson&quot;,  &quot;homer@simpson.com&quot;, &quot;secret&quot;);
+    pacemakerAPI.createUser(&quot;Lisa&quot;, &quot;Simpson&quot;, &quot; lisa@simpson.com&quot;, &quot;secret&quot;);
+
+    Collection&lt;User&gt; users = pacemakerAPI.getUsers();
+    System.out.println(users);
+
+    User homer = pacemakerAPI.getUserByEmail(&quot;homer@simpson.com&quot;);
+    System.out.println(homer);
+
+    pacemakerAPI.deleteUser(homer.id);
+    users = pacemakerAPI.getUsers();
+    System.out.println(users);</code></pre>
+<p>Extend the above with the following:</p>
+<pre><code>    XStream xstream = new XStream(new DomDriver());
+    ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter(&quot;datastore.xml&quot;));
+    out.writeObject(users);
+    out.close();</code></pre>
+<p>And run the main program. A file called <code>datastore.xml</code> is generated:</p>
+<pre><code>&lt;object-stream&gt;
+  &lt;java.util.HashMap_-Values&gt;
+    &lt;outer-class&gt;
+      &lt;entry&gt;
+        &lt;long&gt;0&lt;/long&gt;
+        &lt;models.User&gt;
+          &lt;id&gt;0&lt;/id&gt;
+          &lt;firstName&gt;Bart&lt;/firstName&gt;
+          &lt;lastName&gt;Simpson&lt;/lastName&gt;
+          &lt;email&gt;bart@simpson.com&lt;/email&gt;
+          &lt;password&gt;secret&lt;/password&gt;
+          &lt;activities/&gt;
+        &lt;/models.User&gt;
+      &lt;/entry&gt;
+      &lt;entry&gt;
+        &lt;long&gt;2&lt;/long&gt;
+        &lt;models.User&gt;
+          &lt;id&gt;2&lt;/id&gt;
+          &lt;firstName&gt;Lisa&lt;/firstName&gt;
+          &lt;lastName&gt;Simpson&lt;/lastName&gt;
+          &lt;email&gt; lisa@simpson.com&lt;/email&gt;
+          &lt;password&gt;secret&lt;/password&gt;
+          &lt;activities/&gt;
+        &lt;/models.User&gt;
+      &lt;/entry&gt;
+    &lt;/outer-class&gt;
+  &lt;/java.util.HashMap_-Values&gt;
+&lt;/object-stream&gt;</code></pre>
+<p>Look at this file carefully. Add some activities and locations pacemaker object, and explore the contents of the xml file when you save it again.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Pacemaker API</h1>
+<p>To introduce <code>persistence</code> capability into the api, we need two new methods in PacemakerApi:</p>
+<ul>
+<li>load</li>
+<li>store</li>
+</ul>
+<p>Here they are:</p>
+<pre><code class="lang-java">  @SuppressWarnings(&quot;unchecked&quot;)
+  void load(File file) throws Exception
+  {
+    ObjectInputStream is = null;
+    try
+    {
+      XStream xstream = new XStream(new DomDriver());
+      is = xstream.createObjectInputStream(new FileReader(file));
+      userIndex       = (Map&lt;Long, User&gt;)     is.readObject();
+      emailIndex      = (Map&lt;String, User&gt;)   is.readObject();
+      activitiesIndex = (Map&lt;Long, Activity&gt;) is.readObject();
+    }
+    finally
+    {
+      if (is != null)
+      {
+        is.close();
+      }
+    }
+  }
+
+  void store(File file) throws Exception
+  {
+    XStream xstream = new XStream(new DomDriver());
+    ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter(file));
+    out.writeObject(userIndex);
+    out.writeObject(emailIndex);
+    out.writeObject(activitiesIndex);
+    out.close(); 
+  }</code></pre>
+<p>Take some time to read these now - and try them out store from the main method, replacing the fragment we inserted in the last step:</p>
+<pre><code>    pacemakerAPI.store(new File(&quot;datastore.xml&quot;));</code></pre>
+<p>Can you figure out how to load a pacemaker file?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Generalizing the Serializer</h1>
+<p>We have implemnted an xstream based serialization or our model. However, we may be interested in revising this later, selecting a different format or even serialiation component. Lets try to abstract the serializer feature a little so we can prepare for such a switch.</p>
+<p>First, introduce into the utils package a new interface:</p>
+<pre><code class="lang-java">package utils;
+
+public interface Serializer
+{
+  void push(Object o);
+  Object pop();
+  void write() throws Exception;
+  void read() throws Exception;
+}</code></pre>
+<p>... and then an implementation of this interface, using the xtream library we have been using:</p>
+<pre><code class="lang-java">package utils;
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.Stack;
+
+public class XMLSerializer implements Serializer
+{
+
+  private Stack stack = new Stack();
+  private File file;
+
+  public XMLSerializer(File file)
+  {
+    this.file = file;
+  }
+
+  public void push(Object o)
+  {
+    stack.push(o);
+  }
+
+  public Object pop()
+  {
+    return stack.pop(); 
+  }
+
+  @SuppressWarnings(&quot;unchecked&quot;)
+  public void read() throws Exception
+  {
+    ObjectInputStream is = null;
+
+    try
+    {
+      XStream xstream = new XStream(new DomDriver());
+      is = xstream.createObjectInputStream(new FileReader(file));
+      Object obj = is.readObject();
+      while (obj != null)
+      {
+        stack.push(obj);
+        obj = is.readObject();
+      }
+    }
+    finally
+    {
+      if (is != null)
+      {
+        is.close();
+      }
+    }
+  }
+
+  public void write() throws Exception
+  {
+    ObjectOutputStream os = null;
+
+    try
+    {
+      XStream xstream = new XStream(new DomDriver());
+      os = xstream.createObjectOutputStream(new FileWriter(file));
+      while (!stack.empty())
+      {
+        os.writeObject(stack.pop());  
+      }
+    }
+    finally
+    {
+      if (os != null)
+      {
+        os.close();
+      }
+    }
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>PacemakerAPI Updates</h1>
+<p>Our PacemakerAPI class can now make use of the serializer instead of getting involved in the work of serialization itself:</p>
+<pre><code class="lang-java">public class PacemakerAPI
+{
+  //...
+
+  private Serializer serializer;
+
+  public PacemakerAPI()
+  {
+  }
+
+  public PacemakerAPI(Serializer serializer)
+  {
+    this.serializer = serializer;
+  }
+
+  @SuppressWarnings(&quot;unchecked&quot;)
+  public void load() throws Exception
+  {
+    serializer.read();
+    activitiesIndex = (Map&lt;Long, Activity&gt;) serializer.pop();
+    emailIndex      = (Map&lt;String, User&gt;)   serializer.pop();
+    userIndex       = (Map&lt;Long, User&gt;)     serializer.pop();
+  }
+
+  void store() throws Exception
+  {
+    serializer.push(userIndex);
+    serializer.push(emailIndex);
+    serializer.push(activitiesIndex);
+    serializer.write(); 
+  }
+  //...
+}</code></pre>
+<p>Now rework the Main class to attempt to load from the datastore in a constructor for Main:</p>
+<pre><code class="lang-java">    File  datastore = new File(&quot;datastore2.xml&quot;);
+    Serializer serializer = new XMLSerializer(datastore);
+
+    PacemakerAPI pacemakerAPI = new PacemakerAPI(serializer);
+    if (datastore.isFile())
+    {
+      pacemakerAPI.load();
+    }
+
+    pacemakerAPI.createUser(&quot;Bart&quot;, &quot;Simpson&quot;,   &quot;bart@simpson.com&quot;, &quot;secret&quot;);
+    pacemakerAPI.createUser(&quot;Homer&quot;, &quot;Simpson&quot;,  &quot;homer@simpson.com&quot;, &quot;secret&quot;);
+    pacemakerAPI.createUser(&quot;Lisa&quot;, &quot;Simpson&quot;, &quot; lisa@simpson.com&quot;, &quot;secret&quot;);
+
+    Collection&lt;User&gt; users = pacemakerAPI.getUsers();
+    System.out.println(users);
+
+    User homer = pacemakerAPI.getUserByEmail(&quot;homer@simpson.com&quot;);
+    pacemakerAPI.createActivity(homer.id, &quot;walk&quot;, &quot;tramore&quot;, 1000);
+
+    pacemakerAPI.store();</code></pre>
+<p>Open <code>datastore2.xml</code> and have a close look:</p>
+<pre><code>&lt;object-stream&gt;
+  &lt;map&gt;
+    &lt;entry&gt;
+      &lt;long&gt;0&lt;/long&gt;
+      &lt;models.Activity&gt;
+        &lt;id&gt;0&lt;/id&gt;
+        &lt;type&gt;walk&lt;/type&gt;
+        &lt;location&gt;tramore&lt;/location&gt;
+        &lt;distance&gt;1000.0&lt;/distance&gt;
+        &lt;route/&gt;
+      &lt;/models.Activity&gt;
+    &lt;/entry&gt;
+  &lt;/map&gt;
+  &lt;map&gt;
+    &lt;entry&gt;
+      &lt;string&gt;homer@simpson.com&lt;/string&gt;
+      &lt;models.User&gt;
+        &lt;id&gt;1&lt;/id&gt;
+        &lt;firstName&gt;Homer&lt;/firstName&gt;
+        &lt;lastName&gt;Simpson&lt;/lastName&gt;
+        &lt;email&gt;homer@simpson.com&lt;/email&gt;
+        &lt;password&gt;secret&lt;/password&gt;
+        &lt;activities&gt;
+          &lt;entry&gt;
+            &lt;long&gt;0&lt;/long&gt;
+            &lt;models.Activity&gt;
+              &lt;id&gt;0&lt;/id&gt;
+              &lt;type&gt;walk&lt;/type&gt;
+              &lt;location&gt;tramore&lt;/location&gt;
+              &lt;distance&gt;1000.0&lt;/distance&gt;
+              &lt;route/&gt;
+            &lt;/models.Activity&gt;
+          &lt;/entry&gt;
+        &lt;/activities&gt;
+      &lt;/models.User&gt;
+    &lt;/entry&gt;
+    &lt;entry&gt;
+      &lt;string&gt; lisa@simpson.com&lt;/string&gt;
+      &lt;models.User&gt;
+        &lt;id&gt;2&lt;/id&gt;
+        &lt;firstName&gt;Lisa&lt;/firstName&gt;
+        &lt;lastName&gt;Simpson&lt;/lastName&gt;
+        &lt;email&gt; lisa@simpson.com&lt;/email&gt;
+        &lt;password&gt;secret&lt;/password&gt;
+        &lt;activities/&gt;
+      &lt;/models.User&gt;
+    &lt;/entry&gt;
+    &lt;entry&gt;
+      &lt;string&gt;bart@simpson.com&lt;/string&gt;
+      &lt;models.User&gt;
+        &lt;id&gt;0&lt;/id&gt;
+        &lt;firstName&gt;Bart&lt;/firstName&gt;
+        &lt;lastName&gt;Simpson&lt;/lastName&gt;
+        &lt;email&gt;bart@simpson.com&lt;/email&gt;
+        &lt;password&gt;secret&lt;/password&gt;
+        &lt;activities/&gt;
+      &lt;/models.User&gt;
+    &lt;/entry&gt;
+  &lt;/map&gt;
+  &lt;map&gt;
+    &lt;entry&gt;
+      &lt;long&gt;0&lt;/long&gt;
+      &lt;models.User&gt;
+        &lt;id&gt;0&lt;/id&gt;
+        &lt;firstName&gt;Bart&lt;/firstName&gt;
+        &lt;lastName&gt;Simpson&lt;/lastName&gt;
+        &lt;email&gt;bart@simpson.com&lt;/email&gt;
+        &lt;password&gt;secret&lt;/password&gt;
+        &lt;activities/&gt;
+      &lt;/models.User&gt;
+    &lt;/entry&gt;
+    &lt;entry&gt;
+      &lt;long&gt;1&lt;/long&gt;
+      &lt;models.User&gt;
+        &lt;id&gt;1&lt;/id&gt;
+        &lt;firstName&gt;Homer&lt;/firstName&gt;
+        &lt;lastName&gt;Simpson&lt;/lastName&gt;
+        &lt;email&gt;homer@simpson.com&lt;/email&gt;
+        &lt;password&gt;secret&lt;/password&gt;
+        &lt;activities&gt;
+          &lt;entry&gt;
+            &lt;long&gt;0&lt;/long&gt;
+            &lt;models.Activity&gt;
+              &lt;id&gt;0&lt;/id&gt;
+              &lt;type&gt;walk&lt;/type&gt;
+              &lt;location&gt;tramore&lt;/location&gt;
+              &lt;distance&gt;1000.0&lt;/distance&gt;
+              &lt;route/&gt;
+            &lt;/models.Activity&gt;
+          &lt;/entry&gt;
+        &lt;/activities&gt;
+      &lt;/models.User&gt;
+    &lt;/entry&gt;
+    &lt;entry&gt;
+      &lt;long&gt;2&lt;/long&gt;
+      &lt;models.User&gt;
+        &lt;id&gt;2&lt;/id&gt;
+        &lt;firstName&gt;Lisa&lt;/firstName&gt;
+        &lt;lastName&gt;Simpson&lt;/lastName&gt;
+        &lt;email&gt; lisa@simpson.com&lt;/email&gt;
+        &lt;password&gt;secret&lt;/password&gt;
+        &lt;activities/&gt;
+      &lt;/models.User&gt;
+    &lt;/entry&gt;
+  &lt;/map&gt;
+&lt;/object-stream&gt;</code></pre>
+<p>What is it that is wrong with the above? (Hint now many &#39;barts&#39; should there be?)</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h2>Object References and Serialization</h2>
+<p>The problem with our current serializer is that the three Maps serialized are completely independent - even though the maps in memory prior to serialization contain shared objects. This is apparent from this structural view here:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Correcting this is relatively straightforward. Object referential context is only preserved over a single writeObject operation - we have been doing several on our serializer - see the relevant fragments of the read and write methods:</p>
+<h3>write</h3>
+<pre><code class="lang-java">      while (!stack.empty())
+      {
+        os.writeObject(stack.pop());  
+      }</code></pre>
+<h3>read</h3>
+<pre><code class="lang-java">      Object obj = is.readObject();
+      while (obj != null)
+      {
+        stack.push(obj);
+        obj = is.readObject();
+      }</code></pre>
+<p>Replace the above fragments with single read/write operation:</p>
+<h3>write</h3>
+<pre><code class="lang-java">      os.writeObject(stack);</code></pre>
+<h3>read</h3>
+<pre><code class="lang-java">      stack = (Stack) is.readObject();</code></pre>
+<p>To test this, change <code>main</code> to use a different file:</p>
+<pre><code>    File  datastore = new File(&quot;datastore3.xml&quot;);</code></pre>
+<p>When you run main, it produces a different serialization structure - with objects shared via references. You can see this more easily from the structural view:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>Also explore the xml aspects - can you see the difference form <code>datastore2.xml</code> - which should still be your project?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<h2>Archive of project so far...</h2>
+<ul>
+<li><a href="archives/pacemaker-tdd-04.zip">pacemaker-tdd-04.zip</a></li>
+</ul>
+<h2>Tests</h2>
+<p>Start to think about how you can test the new persistence facility we have just introduced. </p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

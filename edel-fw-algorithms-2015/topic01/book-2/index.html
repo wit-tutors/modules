@@ -1,0 +1,452 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Classes, Interfaces & Objects
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-02">
+      Lab-02
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-02">
+        <h1>Debugging in Eclipse</h1>
+<ul>
+<li>Understand workspaces in Eclipse</li>
+<li>Open the Debug Perspective in Eclipse.</li>
+<li>Suspend, Resume and Terminate a Java Program.</li>
+<li>Set Break Points.</li>
+<li>Step through code.</li>
+<li>View variable values</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Sample Program</h1>
+<p>Create a new project called Lab2.</p>
+<p>Put the following sample program into the Lab2 source folder.</p>
+<pre><code>package algorithms;
+
+public class SampleProgram {
+
+  public static void main(String[] args) {
+    System.out.println(&quot;Starting...&quot;);
+    HelloWorldInterface hw = new HelloWorld();
+    for (int i = 0; i &lt; 1000000; i++) {
+      innerLoop(hw, i);
+    }
+
+    System.out.println(&quot;Finished.&quot;);
+  }
+
+  public static void innerLoop(HelloWorldInterface hw, int i) {
+
+    for (int j = 0; j &lt; 10000; j++) {
+      hw.display();
+      System.out.println(&quot;i=&quot; + i + &quot;, j=&quot; + j);
+      delay();
+    }
+  }
+
+  // Change the value of the delay loop to speed up or slow things down .
+  public static void delay() {
+    for (int k = 0; k &lt; 1000; k++)
+      ; // this is the empty statement which is covered later
+  }
+}</code></pre>
+<p>The Sample Program uses the class and interface you created in the previous lab. To include them on your build path, right-click on Lab2 in the Package Explorer and select <code>Build Path -&gt; Configure Build Path.</code></p>
+<p>Select the Project tab and add lab01 as shown below. Now your code should compile correctly.(you need to have lab02 complete)</p>
+<p><img src="img/00.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>The Debug Perspective</h1>
+<p>Switch to the debug perspective by clicking on the  icon in the top-right corner of the Eclipse window.</p>
+<p>Select Debug from the list of perspectives.</p>
+<p><img src="img/01.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Suspending, Resuming and Terminating</h1>
+<p>Return to the Java perspective and open SampleProgram.java in the program editor</p>
+<p>Select <code>Run-&gt;Debug as-&gt;Java Application</code></p>
+<p>You should see the program printing to the console:</p>
+<p><img src="img/02.png" alt=""></p>
+<h2>Suspending, Resuming and Terminating</h2>
+<p>While the program is running, switch to the Debug Perspective. Find the Resume, Suspend and Terminate button in the toolbar.</p>
+<p>Click on Suspend (the yellow vertical lines) and Resume (yellow bar and green triangle) to suspend and resume program execution. Observe what happens. </p>
+<p>Finally, click the Terminate button(red square) to stop execution.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Break Points</h1>
+<p>You can use break points to suspend execution at a particular line in your code. Set a break point by double clicking in the grey bar beside the first call to System.out.println as shown below.</p>
+<p><img src="img/03.pmg" alt=""></p>
+<p>Run the program in Debug as before. Execution will automatically suspend just before the breakpoint you have set.</p>
+<h2>More Break Points</h2>
+<p>Put another break point somewhere in the innerloop(...) method and click on the Resume button.</p>
+<p>You will notice execution now stops at every iteration in the innerloop(...) method. You should also notice the Variables and Break window in the top right corner of the Debug Perspective: </p>
+<p><img src="img/04.png" alt=""></p>
+<h2>Break Points Window</h2>
+<p>Use the breakpoint window to disable the second break point in innerloop(..) by unchecking the option.</p>
+<p><img src="img/05.png" alt=""></p>
+<p>Now resume the program again. You should now notice this checkpoint is ignored.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Stepping through code</h1>
+<p>You may want more control over the execution of a program to really understand what’s going on in the code.</p>
+<p>Terminate your program if it is still running</p>
+<p>Re-activate the breakpoint in the innerloop() method and run the program in Debug mode again. 
+When the program suspends at the first break point, find the following buttons:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>Find the Step Over button (using tool tip text) and click it to step though the code on line at a time.</p>
+<ul>
+<li>try this out by stepping over the innerloop() method call.</li>
+</ul>
+<p>Find the Step Into button and use it to step through code. Step into will also go “into” any method calls.</p>
+<ul>
+<li>try this out by stepping into the innerloop() method call.</li>
+</ul>
+<p>Finally, the Step Return allows you to return from a method call and suspends where the method returns.</p>
+<ul>
+<li>try this out by returning from the innerloop() method</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Variables</h1>
+<p>As before, run the program in debug mode and use Step Over to bring execution to the innerloop(...) method call.</p>
+<p>Move the mouse pointer over one of the variables. It’s current value will be shown in a pop-up window</p>
+<p><img src="img/07.png" alt=""></p>
+<p>Also, current variable values are shown in the variables window in the top right of the Debug perspective</p>
+<p><img src="img/08.png" alt=""></p>
+<p>Step into the innerloop() method and monitor the changes to i and j as you step through the code </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>Debug Practice</h1>
+<p>Include this class here into your project:</p>
+<pre><code>package algorithms;
+
+import java.util.Scanner;
+
+public class BuggyStringReverse {
+
+  public static void main(String[] args) {
+    Scanner stdin = new Scanner(System.in);
+
+    String s;
+
+    System.out.println(&quot;\n Please enter a String to reverse: &quot;);
+    s = stdin.next();
+
+    stdin.close();
+    System.out.println(&quot;The reverse of \&quot;&quot; + s + &quot;\&quot; is &quot; + reverseString(s));
+
+  }
+
+  public static String reverseString(String s) {
+
+    // initiate vars
+    String rev = &quot;&quot;;
+
+    int counter = 0;
+
+    for (int i = 0; i &lt; s.length(); i++) {
+      rev += s.charAt(s.length() - counter);
+      counter++;
+    }
+    return rev;
+  }
+}</code></pre>
+<p>The program takes a string as input and reverses it (i.e. “banana” should return “ananab”). </p>
+<p>However it does not work. Confirm this by running it in Eclipse. Then use the debugger to find the problem and fix it.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

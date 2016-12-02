@@ -1,0 +1,376 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      SRP and Assignment 1 solution
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-09b">
+      Lab-09b
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01 - paradigms and languages/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02 - java language/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03 - inheritance and collections/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04 - serialisation and TDD I/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05 - TDD II/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06 - exceptions and maven/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-1/index.html">
+          Lab-08a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-2/index.html">
+          Lab-08b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-1/index.html">
+          Lab-09a
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic09 - SRP/book-2/index.html">
+          Lab-09b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10 - OCP and play testing/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-2/index.html">
+          Lab-11b
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-09b">
+        <h1>Objectives</h1>
+<p>Brief lab to further explore Database evolutions in Play. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Evolution - Local</h1>
+<p>From last weeks lab you should have a version of pacemakerplay running locally on your localhost. </p>
+<p>The last solution given for the play project is here:</p>
+<ul>
+<li><a href="archives/pacemakerplay.zip">pacemakerplay.zip</a></li>
+</ul>
+<p>You may also have this running on heroku if you completed the relevant steps from last week. If you did, then you may also have a version of the app that can run locally, but be connected to the remote database.</p>
+<p>We have set evolutions to true in our application.conf:</p>
+<pre><code>  db.default.autoApply=true
+  db.default.autoApplyDowns=true</code></pre>
+<p>This means that, if we change the our Model, the play framework will realise this as the application starts up, and will do two things:</p>
+<ul>
+<li>Generate an SQL script that will &#39;evolve&#39; the database to accommodate the changed model</li>
+<li>Execute this script as the app is launching.</li>
+</ul>
+<p>Here is our current script - in conf/evolutions/default/1.sql</p>
+<pre><code># --- Created by Ebean DDL
+# To stop Ebean DDL generation, remove this comment and start using Evolutions
+
+# --- !Ups
+
+create table my_user (
+  id                            bigserial not null,
+  firstname                     varchar(255),
+  lastname                      varchar(255),
+  email                         varchar(255),
+  password                      varchar(255),
+  constraint pk_my_user primary key (id)
+);
+
+
+# --- !Downs
+
+drop table if exists my_user cascade;</code></pre>
+<p>We will make a small change in User to see this process in action. Edit &#39;User&#39; class to have a new field:</p>
+<pre><code class="lang-java">  public String nationality;</code></pre>
+<p>To run the app locally, you need to comment in the local database connection, and comment out the heroku settings:</p>
+<pre><code>  #remote postgres database on heroku
+  #default.driver=org.postgresql.Driver
+  #default.url=&quot;jdbc:postgresql://ec2-54-235-208-3.compute-1.amazonaws.com:5432/dbjga15tgnfbef?user=euoojolrsszmcl&amp;password=G66hiSiTNonBJvZpI4ty55fRzA&amp;ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory&quot;
+  #default.url=${DATABASE_URL}
+
+  #local h2 database
+  default.driver = org.h2.Driver
+  default.url = &quot;jdbc:h2:mem:play&quot;
+  default.username = sa
+  default.password = &quot;&quot;</code></pre>
+<p>Run the app locally - just using the <strong>run</strong> command within the <strong>activator</strong> shell - and browse to the app. </p>
+<p>Now open 1.sql - and it should have an extra entry in the script:</p>
+<pre><code>  nationality               varchar(255),</code></pre>
+<p>(You may need to refresh eclipse before opening)</p>
+<p>Using Chrome POSTMAN, create a new user and verify that the new field is present.</p>
+<p>Recap what we have just done:</p>
+<ul>
+<li>Revised the model</li>
+<li>Generated an evolution script</li>
+<li>Applied this evolution to the database</li>
+</ul>
+<p>All of this have been triggered just be running the app locally.</p>
+<p>Exit the activator shell.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Evolution - Remote</h1>
+<p>In order to deploy our revised application to heroku, we will need to make sure that the generated script is compatible with Postgres, as opposed to the local internal database we are using locally. In addition, we would need to:</p>
+<ul>
+<li>Generate compatible Evolution script compatible with Heroku</li>
+<li>Commit all changes to Git</li>
+<li>Push app to Heroku</li>
+</ul>
+<h2>Generate Compatible Evolution script compatible with Heroku.</h2>
+<p>Using last weeks lab as a guide, run a version of your app locally that is using the heroku database. This will just adjusting your application.conf to look something like this:</p>
+<pre><code>  #remote postgres database on heroku
+  default.driver=org.postgresql.Driver
+  default.url=&quot;jdbc:postgresql://ec2-54-235-208-3.compute-1.amazonaws.com:5432/dbjga15tgnfbef?user=euoojolrsszmcl&amp;password=G66hiSiTNonBJvZpI4ty55fRzA&amp;ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory&quot;
+  #default.url=${DATABASE_URL}
+
+  #local h2 database
+  #default.driver = org.h2.Driver
+  #default.url = &quot;jdbc:h2:mem:play&quot;
+  #default.username = sa
+  #default.password = &quot;&quot;</code></pre>
+<p>NB: Do not use the connection url above, as this is specific to one database on my account.</p>
+<p>Restart the play shell and run the app - and it should start up successfully - and generate the correct evolution script.</p>
+<h2>Commit all changes to Git</h2>
+<p>To get the app ready for deployment, change the database settings back to this:</p>
+<pre><code>  #remote postgres database on heroku
+  default.driver=org.postgresql.Driver
+  #default.url=&quot;jdbc:postgresql://ec2-54-235-208-3.compute-1.amazonaws.com:5432/dbjga15tgnfbef?user=euoojolrsszmcl&amp;password=G66hiSiTNonBJvZpI4ty55fRzA&amp;ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory&quot;
+  default.url=${DATABASE_URL}
+
+  #local h2 database
+  #default.driver = org.h2.Driver
+  #default.url = &quot;jdbc:h2:mem:play&quot;
+  #default.username = sa
+  #default.password = &quot;&quot;</code></pre>
+<p>We also have live changes to User.java and the sql script.</p>
+<p>You can use the heroku toolbelt that you downloaded last week to handle your commit and push to Heroku.  </p>
+<pre><code>git add .
+git commit -m &quot;adding nationality to the user model&quot;</code></pre>
+<p>Alteratively, you can use eclipse to handle your commit (Git should be built in to your version of eclipse).  The instructions for using eclipse are listed below.</p>
+<p>First, select your project and select &#39;Team-&gt;Share&#39; form the context menu</p>
+<p><img src="img/19.png" alt=""></p>
+<p>The project is already configured and committed to git (we did this in last weeks lab). By pressing &#39;finish&#39; we are just picking up the git configuration already established.</p>
+<p>Our workspace will change to look like this:</p>
+<p><img src="img/20.png" alt=""></p>
+<p>There are symbols in front of each icon indicating the status of the file - whether it is committed, changed, deleted etc in git. However, note that the <code>User.java</code> a<code>application.comf</code> and <code>1.sql</code> files have a &#39;&gt;&#39;. This indicates that they has been changed, but not committed. Select your project again and select &#39;Team-&gt;Commit&#39; - you should see this dialog:</p>
+<p><img src="img/21.png" alt=""></p>
+<p>Enter a suitable message - and commit the changes. (If you see other files in here - particularly ones beginning in &#39;.target&#39;, do not select them for committal).</p>
+<h2>Push app to Heroku</h2>
+<p>If you are still running the <strong>activator</strong> console, exit it, bringing you back to your shell.</p>
+<p>Push the new version to heroku:</p>
+<pre><code>git push heroku master</code></pre>
+<p>Using Postmaster, test the newly deployed app - verify that there is a new field called nationality in the user object.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & Dr. Siobhan Drohan.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

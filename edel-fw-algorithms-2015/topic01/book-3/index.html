@@ -1,0 +1,371 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Classes, Interfaces & Objects
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-03">
+      Lab-03
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-03">
+        <h1>Read text from a URL</h1>
+<p>Develop a java program that reads in strings from the following URL and stores them in a sorted list.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Problem Specification</h1>
+<p>Develop a java program that reads in strings from the following URL and stores them in a sorted list.</p>
+<ul>
+<li><a href="http://dl.dropbox.com/u/18678304/2011/BSc2/words.txt">http://dl.dropbox.com/u/18678304/2011/BSc2/words.txt</a></li>
+</ul>
+<p>The user should then be able to enter a sub-string and the program should return a list of matching strings that contain the substring. All matching strings should be displayed, sorted and the search should be case insensitive.</p>
+<h2>Implementation Steps</h2>
+<ul>
+<li>Create a class called WordList. An instance of the  WordList class should have a list of all the words from the URL above(hint: use composition). The WordList class should implement this interface.  </li>
+</ul>
+<pre><code>package algorithms;
+
+import java.util.List;
+
+public interface StringSearchInterface {
+
+  public abstract List&lt;String&gt; getSubstringList(String subString);
+
+  public abstract void addString(String s);
+
+}</code></pre>
+<p>As you have not covered networking or exceptions in Java I’ve included a link to an example constructor for WordList(NOTE: it’s not complete!). However you should try to to figure out how to read from a URL yourself using the web (Try googling “read from url java”). Example constructor excerpt here:</p>
+<pre><code>  public WordList(String urlString) throws IOException {
+
+    BufferedReader in = null;
+    try {
+      wordList = new ArrayList&lt;String&gt;();
+      in = new BufferedReader(new InputStreamReader(new URL(urlString).openStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null)
+        wordList.add(inputLine);
+    }
+    finally {
+      if (in != null)
+        in.close();
+    }
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>JUint Test</h1>
+<ul>
+<li>The following JUnit test case  will give you an indication of further implementation details and should be usable without modification. You can also include more rigorous test cases is you wish. </li>
+</ul>
+<pre><code>package algorithms;
+
+import static org.junit.Assert.*;
+import java.util.List;
+import org.junit.Test;
+
+public class WordListTest {
+
+  private static final String url = &quot;http://dl.dropbox.com/u/18678304/2011/BSc2/words.txt&quot;;
+
+  @Test
+  public void testAddString() throws Exception {
+    StringSearchInterface wordList;
+    String s = &quot;I Love Javaaaaaa!&quot;;
+    String searchString = &quot;love&quot;;
+
+    wordList = new WordList(url);
+
+    wordList.addString(s);
+    System.out.println(wordList.getSubstringList(searchString).size());
+    // check that the search returned some results
+    assertTrue(wordList.getSubstringList(s).size() == 1);
+
+  }
+
+  @Test
+  public void testGetSubstringList() throws Exception {
+    StringSearchInterface wordList;
+    String s = &quot;umb&quot;;
+
+    wordList = new WordList(url);
+    List&lt;String&gt; resultList = wordList.getSubstringList(s);
+
+    // check that the search returned some result(i.e. there is a match
+    // in the list)
+    assertTrue(resultList.size() &gt; 0);
+
+  }
+
+  @Test
+  public void testWordList() throws Exception {
+    StringSearchInterface wordList;
+
+    wordList = new WordList(url);
+    assertNotNull(wordList);
+  }
+}</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,473 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      SRP and Assignment 1 solution
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-09a">
+      Lab-09a
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01 - paradigms and languages/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02 - java language/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03 - inheritance and collections/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04 - serialisation and TDD I/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05 - TDD II/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06 - exceptions and maven/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-1/index.html">
+          Lab-08a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-2/index.html">
+          Lab-08b
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic09 - SRP/book-1/index.html">
+          Lab-09a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-2/index.html">
+          Lab-09b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10 - OCP and play testing/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-2/index.html">
+          Lab-11b
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-09a">
+        <h1>Objectives</h1>
+<p>Build pacemaker-1.0 from source using maven. Reverse engineer to UML and Structure 101. Uses these modeling tools on your own assignment</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Sample Solution for the Project</h1>
+<p>The solution will require maven to be installed on your computer.</p>
+<ul>
+<li><a href="http://maven.apache.org/">http://maven.apache.org/</a></li>
+</ul>
+<p>Download and install the latest version if you havent done so already. Make sure it on your command line path, such that when you type:</p>
+<pre><code>mvn -v</code></pre>
+<p>you might get something like this:</p>
+<pre><code>Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T16:41:47+00:00)
+Maven home: C:\dev\apache-maven-3.3.9\bin\..
+Java version: 1.8.0_73, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_73\jre
+Default locale: en_IE, platform encoding: Cp1252
+OS name: &quot;windows 10&quot;, version: &quot;10.0&quot;, arch: &quot;amd64&quot;, family: &quot;dos&quot;</code></pre>
+<p>The sample solution below is a skeleton solution designed for the purpose of demonstrating Visual Paradigm and Structure101; for this reason, it should not be considered as the complete, difinitive solution:</p>
+<ul>
+<li><a href="archives/pacemaker-console-xtend.zip">pacemaker-console-xtend.zip</a></li>
+</ul>
+<p>Download and unarchive.</p>
+<p>It is a maven project, which includes these dependencies:</p>
+<pre><code class="lang-xml">    &lt;dependencies&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.eclipse.xtend&lt;/groupId&gt;
+      &lt;artifactId&gt;org.eclipse.xtend.lib&lt;/artifactId&gt;
+      &lt;version&gt;${xtend.version}&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;junit&lt;/groupId&gt;
+      &lt;artifactId&gt;junit&lt;/artifactId&gt;
+      &lt;version&gt;4.11&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.google.guava&lt;/groupId&gt;
+      &lt;artifactId&gt;guava&lt;/artifactId&gt;
+      &lt;version&gt;18.0&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.thoughtworks.xstream&lt;/groupId&gt;
+      &lt;artifactId&gt;xstream&lt;/artifactId&gt;
+      &lt;version&gt;1.4.8&lt;/version&gt;
+    &lt;/dependency&gt;    
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.codehaus.jettison&lt;/groupId&gt;
+      &lt;artifactId&gt;jettison&lt;/artifactId&gt;
+      &lt;version&gt;1.3.4&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.googlecode.clichemaven&lt;/groupId&gt;
+      &lt;artifactId&gt;cliche&lt;/artifactId&gt;
+      &lt;version&gt;110413&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;btc-ascii-table&lt;/groupId&gt;
+      &lt;artifactId&gt;btc-ascii-table&lt;/artifactId&gt;
+      &lt;version&gt;1.0&lt;/version&gt;
+    &lt;/dependency&gt; 
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.codehaus.jackson&lt;/groupId&gt;
+      &lt;artifactId&gt;jackson-core-asl&lt;/artifactId&gt;
+      &lt;version&gt;1.9.13&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+      &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+      &lt;version&gt;2.2.3&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;joda-time&lt;/groupId&gt;
+      &lt;artifactId&gt;joda-time&lt;/artifactId&gt;
+      &lt;version&gt;2.3&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;/dependencies&gt;</code></pre>
+<p>One of these dependencies does not install correctly from the Maven repo:</p>
+<ul>
+<li><a href="archives/btc-ascii-table-1.0.jar">btc-ascii-table-1.0.jar</a></li>
+</ul>
+<p>Download this jar, navigate to the folder containing the jar and install it using the following maven command:</p>
+<pre><code>mvn install:install-file -Dfile=btc-ascii-table-1.0.jar -DgroupId=btc-ascii-table -DartifactId=btc-ascii-table -Dversion=1.0 -Dpackaging=jar</code></pre>
+<p>The project should build now and the above component should be installed in your .m2 repo. </p>
+<p>Try the following commands:</p>
+<pre><code>mvn compile
+mvn test
+mvn package
+mvn eclipse:eclipse</code></pre>
+<p>After the latter, the project can be imported into eclipse:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>From there you should be able to execute it, and also run all tests.</p>
+<p>Navigate to your \target\surefire-reports directory and check out the surefire reports that were generated by the maven-surefire-plugin.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Install Visual Paradigm</h1>
+<p>To reverse engineer your code to UML, you will need Visual Paradigm.</p>
+<p>Download and install the latest evaluation version from here:</p>
+<ul>
+<li><a href="http://www.visual-paradigm.com/download/archive/">http://www.visual-paradigm.com/download/archive/</a></li>
+</ul>
+<p>In order to avoid excessive information in the UML diagrams, customise the defaults as follows:</p>
+<h2>Shape</h2>
+<p>Select <strong>Windows-&gt;Project Options-&gt;Diagramming-&gt;Shape</strong> to look like this:</p>
+<p><img src="img/02.png" alt=""></p>
+<h2>Presentation</h2>
+<p>Select <strong>Tools-&gt;Project Options-&gt;Diagramming-&gt;Class-&gt;Presentation</strong> to look like this:</p>
+<p><img src="img/03.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Reverse Engineer Class Diagram</h1>
+<p>Select <strong>Tools-&gt;Code-&gt;Instant Reverse-&gt;Java</strong></p>
+<p><img src="img/04.png" alt=""></p>
+<p>Press <strong>Add Source Folder</strong> and select the <strong>xtend</strong> from <strong>src/main/generated-sources</strong> in the maven project as shown here:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>Press the <strong>ok</strong> buttons - and Visual Paradigm should ingest the sources presenting you with a <strong>model</strong> view:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>Right click on a package - say models - and select <strong>Reverse To-&gt;New Class Diagram</strong></p>
+<p><img src="img/07.png" alt=""></p>
+<p>Which should produce something like this:</p>
+<p><img src="img/08.png" alt=""></p>
+<p>Name the package <strong>models</strong> by directly typing in the top left of the canvas:</p>
+<p><img src="img/09.png" alt=""></p>
+<p>Reverse each of the other packages, and we should see something like this for each one (rename the packages as you go along)</p>
+<p><img src="img/10.png" alt=""></p>
+<p><img src="img/11.png" alt=""></p>
+<p><img src="img/12.png" alt=""></p>
+<p>Become familiar with the <strong>Diagram</strong> view as well as the <strong>Model</strong> view you have been using so far:</p>
+<p><img src="img/12a.png" alt=""></p>
+<p>Most of the reverse engineering went as expected - representing key aspects of the model reasonable accurately. However, there are some deficiencies in the &#39;model&#39; package - see if you can fix these now such that the model looks like this:</p>
+<p><img src="img/12b.png" alt=""></p>
+<p><a href="http://www.uml-diagrams.org/association.html">This is a good resource</a> if you need to refresh your memory on UML associations.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Reverse Engineer Sequence Diagrams</h1>
+<p>We can also reverse <strong>Sequence Diagrams</strong> from the source, which yield a more dynamic view of the application.</p>
+<p>In the Model view, select <strong>PacemakerService-&gt;createActivity</strong> and select <strong>Reverse To-&gt;Sequence Diagram</strong>:</p>
+<p><img src="img/15.png" alt=""></p>
+<p>This should yield a sequence diagram similar to this one (note: you will probably have parameters and return types on your diagram):</p>
+<p><img src="img/16.png" alt=""></p>
+<p>Here is a reverse of the createUser method in the same class:</p>
+<p><img src="img/17.png" alt=""></p>
+<p>Experiment with a few of the other methods.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Structure 101 Analysis</h1>
+<p>Visit the products page for HeadWay Software and review the strengths / benefits of Structure101:</p>
+<ul>
+<li><a href="http://structure101.com">http://structure101.com</a></li>
+</ul>
+<p>Download the Structure 101 Studio product (java):</p>
+<pre><code>- &lt;http://structure101.com/downloads/&gt;
+- You will need to register for a free 30 day trial (receive an activation key by email).</code></pre>
+<p>Reverse engineer the sample solution using the 101 tool. You will have seen the screen shots in the lecture of a 101 reverse of the project. </p>
+<p>User guides here:</p>
+<ul>
+<li><a href="http://structure101.com/resources/#resources=0">http://structure101.com/resources/#resources=0</a></li>
+</ul>
+<p>These should enable you to reproduce the diagrams reviewed in the lecture.  </p>
+<p>Note: if your JUnit test classes are appearing in your diagrams you may need to exclude them from your Structure101 project.</p>
+<h2>The Structure-101 Eclipse plug-in</h2>
+<p>You can install the Eclipse Structure-101 plugin if you wish.  The link to the software is:</p>
+<pre><code>- &lt;http://www.structure101.com/downloads/structure101/ideplugin/eclipse&gt;</code></pre>
+<p>NOTE: The eclipse plugin diagrams are read-only; you associate a project you previously built in Structure-101 with your open eclipse project.  Once the association is in place, the plugin retrieves the architecture diagrams from the repository and displays them in the Diagrams viewer.   It then plugs itself into the IDE build system, ready to check for violations whenever a project source file is (re-)compiled. Any violations it finds are shown as overlays on the architecture diagrams in the Diagrams Viewer.  </p>
+<p>For more information, <a href="http://structure101.com/help/java/build/Content/ideplugin/configuration.html">see here</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>If you used java or a java derived language, you should be in a position to reverse engineer your solution using:</p>
+<ul>
+<li>Visual Paradigm for UML</li>
+<li>Structure 101</li>
+</ul>
+<p>as reviewed in this lab. Do this now.</p>
+<h2>Reverse Engineer of pacemaker-console-xtend</h2>
+<p>This is a Visual Paradigm reverse of the solution we provided earlier in the lab:</p>
+<ul>
+<li><a href="archives/pacemaker-v1.vpp">pacemaker-v1.vpp</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & Dr. Siobhan Drohan.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

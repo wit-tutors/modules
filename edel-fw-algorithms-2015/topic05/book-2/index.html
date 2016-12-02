@@ -1,0 +1,417 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Sorting
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="assignment-2">
+      assignment-2
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="assignment-2">
+        <h1>Assignment 2</h1>
+<p>Many companies use recommender systems to suggest products, information, and friends to their customers .  In this assignment you will develop a Movie recommender using existing movie data.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h2>Overview</h2>
+<p>Many companies use recommender systems to suggest products, information, and friends to their customers . These systems analyse usage patterns to suggest what a user would prefer from among a collection of things he has never experienced. For example, fig.1 shows Amazon’s recommendations based on a user’s activity (e.g. other movies they’ve rated etc.). 
+<img src="img/00.png" alt="Amazon Recommendations" title="Amazon Recommendations">
+Recommender systems are big business - recently  Netflix ran an open competition for a recommender algorithm. The winners prize was $1 million. In this assignment, you will develop a similar recommender algorithm for Movies but, unfortunately, there&#39;s no cash prize involved.</p>
+<p>The main aims of this assignment is to write a Java program that can:</p>
+<ul>
+<li>Load existing movie, user and rating data into a Java program. </li>
+<li>Develop a suitable data serializer.</li>
+<li>Create a suitable API to view and manipulate movie, user, and rating data.</li>
+<li>Make movie recommendations for user.</li>
+<li>Provide unit testing which provides adequate code coverage and uses C.O.R.R.E.C.T. and Right B.I.C.E.P guidelines</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h2>Movie Data</h2>
+<p>You are provided with the following data adapted from  <a href="https://movielens.org/">MovieLens</a>. You will need to examine the data files and read the README file to design and develop suitable abstract data types  to represent the data in your Java program (hint: User, Movie and Rating classes). The Movie lens files are in <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a>  text format - you will have to write your own code that can parse the Movielens data. 
+You will use the following two data sets; a large data set and a small data set. It might be more convenient to use the smaller data set in the early part of development, then move to the larger data set later on.
+<a href="data/moviedata_small.zip">small data set</a> .
+<a href="data/moviedata.zip">large data set</a> .</p>
+<p>The following code example uses ADTs from  <a href="http://introcs.cs.princeton.edu/java/stdlib/stdlib-package.jar">Stanford University&#39;s standard library</a>  to read in a text file line by line, parse the data, and print the data to the standard output  :</p>
+<pre><code>        File usersFile = new File(&quot;data_movieLens/users5.dat&quot;);
+        In inUsers = new In(usersFile);
+          //each field is separated(delimited) by a &#39;|&#39;
+        String delims = &quot;[|]&quot;;
+        while (!inUsers.isEmpty()) {
+            // get user and rating from data source
+            String userDetails = inUsers.readLine();
+
+            // parse user details string
+            String[] userTokens = userDetails.split(delims);
+
+            // output user data to console.
+            if (userTokens.length == 7) {
+                System.out.println(&quot;UserID: &quot;+userTokens[0]+&quot;,First Name:&quot;+
+                        userTokens[1]+&quot;,Surname:&quot; + userTokens[2]+&quot;,Age:&quot;+
+                        Integer.parseInt(userTokens[3])+&quot;,Gender:&quot;+userTokens[4]+&quot;,Occupation:&quot;+
+                        userTokens[5]);
+
+            }else
+            {
+                throw new Exception(&quot;Invalid member length: &quot;+userTokens.length);
+            }
+        }</code></pre>
+<p>The above code produces output similar to the following:</p>
+<blockquote>
+<p>UserID: 1, First Name:Leonard, Surname:Hernandez, Age:24, Gender:M, Occupation:technician
+UserID: 2, First Name:Melody, Surname:Roberson, Age:53, Gender:F, Occupation:other
+UserID: 3, First Name:Gregory, Surname:Newton, Age:23, Gender:M, Occupation:writer
+UserID: 4, First Name:Oliver, Surname:George, Age:24, Gender:M, Occupation:technician
+UserID: 5, First Name:Jenna, Surname:Parker, Age:33, Gender:F, Occupation:other</p>
+</blockquote>
+<p>You will also need to use  suitable data structures that will support the functionality of the program.</p>
+<h2>Serializer</h2>
+<p>Develop a serializer that can serialize/deserialize all the data into a single file. You must use a well known external data format such as XML, JSON or both. </p>
+<h2>Recommender API</h2>
+<p>Develop a recommender api that provides <strong>at least</strong> the following interface description. The interface desciption is in the form <em>methodName(parameter list)</em>. The parameter list includes required parameters - you can include more if you wish.</p>
+<pre><code>addUser(firstName,lastName,age,gender,occupation)
+removeUser(userID)
+addMovie(title, year, url)
+addRating(userID, movieID, rating)
+getMovie(movieID)
+getUserRatings(userID)
+getUserRecommendations(userID)
+getTopTenMovies()
+load()
+write()</code></pre>
+<h2>Recommender Application</h2>
+<p>Use the api to develop an end user application. This can be a simple command line interface that allows a user to access the functionality in the Recommender API(e.g. list movies, rate a movie, get movie details.) . One consideration here is to include a user login facility in the application.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h2>Making recommendations</h2>
+<p>The following are two possible approaches for implementing the recommendation function.</p>
+<h3>Approach 1:</h3>
+<p>A simple approach would be to make almost the same prediction for every member. In this case the program would simply calculate the average rating for all the films in the database, sort the films by rating and then from that sorted list, suggest the top 5 films that the member hasn&#39;t already rated. With this simple approach, the only information unique to the member used by the prediction algorithm was whether or not the member had seen a film.</p>
+<h3>Approach 2:</h3>
+<p>A better prediction about what a member might like by considering his actual ratings in the past and how these ratings compare to the ratings given by other customers. Consider how you decide on movie recommendations from friends. If a friend tells you about a number of movies that s(he) enjoyed and you also enjoyed them, then when your friend recommends another movie that you have never seen, you probably are willing to go see it. On the other hand, if you and a different friend always tend to disagree about movies, you are not likely to go to see a movie this friend recommends.
+A program can calculate how similar two users are by treating their ratings as a vector and calculating the dot product of these two vectors (the dot product is just the sum of the products of each of the corresponding elements.) For example, suppose we had 3 films in our database and Paddy rated them [5, 3,-5], Clodagh rated them [1, 5,-3], Ronan rated them [5, -3, 5], and Michael rated them [1, 3, 0]. </p>
+<blockquote>
+<p>The similarity between Paddy and Ronan is:      (5 x 5) + (3 x -3) + (-5 x 5) = 25 - 9 - 25 = -9. 
+The similarity between Paddy and Clodagh is: (5 x 1) + (3 x 5) + (-5 x -3) = 5 + 15 + 15 = 35. The similarity between Paddy and Michael is:    (5 x 1) + (3 x 3) + (-5 x 0) = 5 + 9 + 0 = 14. </p>
+</blockquote>
+<p>We see that if both people like a film (rating it with a positive number) it increases their similarity and if both people dislike a film (both giving it a negative number) it also increases their similarity.
+Once you have calculated the similarity between Paddy and every other customer, you can then identify whose ratings are most similar to Paddy&#39;s. In this case Clodagh is most similar to Paddy, so we would recommend to Paddy the top films from Clodagh&#39;s list that Paddy hadn&#39;t already rated.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h2>Testing</h2>
+<p>Approx 20% of marks in this assignment is for the testing strategy. You are required to provide the following:</p>
+<ul>
+<li>JUnit test cases + a series of tests</li>
+<li>For the tests you write - indicate in a comment the ‘type’ of test you are intending. This ‘type’ can be drawn from the ‘pragmatic’ guidelines:CORRECT (7 guidelines), RIGHT Bicep (5 guidelines)</li>
+<li>Your test strategy should test the persistance mechanism (serialisation/deserialisation)</li>
+<li>Coverage will be measured (but with modest expectations).</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h2>Assignment Submission</h2>
+<p>Please submit assignment as a Github or Bitbucket repository. The following are expected to be included:</p>
+<ul>
+<li>Appropriate abstract data types         </li>
+<li>Comparisons</li>
+<li>Arrays/Lists/Maps of abstract data types     </li>
+<li>Modular programming</li>
+<li>use of    standard libraries</li>
+<li>Reading from and writing to files</li>
+<li>Searching</li>
+<li>Sorting</li>
+</ul>
+<p>All code should be internally documented and your repository should contain by a readme file that clearly and concisely explains the features of your program. General marking scheme, including above expectations, is as follows:</p>
+<blockquote>
+<p>Load External Data:        10;
+Serialiser:                10;
+Add/Remove objects:    15;
+Get top 10 Movies:        10;
+Add Rating:    5;
+Rate Movie:    5;
+Reccomendations:    25;
+Testing:        20.</p>
+</blockquote>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

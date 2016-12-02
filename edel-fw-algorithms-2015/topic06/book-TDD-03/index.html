@@ -1,0 +1,1164 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Collections & Pacemaker
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="TDD-03">
+      TDD-03
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="TDD-03">
+        <h1>Objectives</h1>
+<p>Expand the pacemaker model to include Location and Activity classes. Introduce a set of tests to verify the behavior of the model.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Activity &amp; Location classes</h1>
+<p>Introduce these classes into your model:</p>
+<h3>Location</h3>
+<pre><code class="lang-java">package models;
+
+import static com.google.common.base.MoreObjects.toStringHelper;
+
+import com.google.common.base.Objects;
+
+public class Location
+{
+  static Long   counter = 0l;
+
+  public Long  id;
+  public float latitude;
+  public float longitude;
+
+  public Location()
+  {
+  }
+
+  public Location (float latitude, float longitude)
+  {
+    this.id        = counter++;
+    this.latitude  = latitude;
+    this.longitude = longitude;
+  }
+
+  @Override
+  public String toString()
+  {
+    return toStringHelper(this).addValue(id)
+                               .addValue(latitude)
+                               .addValue(longitude)                              
+                               .toString();
+  }
+
+  @Override  
+  public int hashCode()  
+  {  
+     return Objects.hashCode(this.id, this.latitude, this.longitude);  
+  } 
+}</code></pre>
+<h3>Activity</h3>
+<pre><code class="lang-java">ppackage models;
+
+import static com.google.common.base.MoreObjects.toStringHelper;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.common.base.Objects;
+
+public class Activity 
+{ 
+  static Long   counter = 0l;
+
+  public Long   id;
+
+  public String type;
+  public String location;
+  public double distance;
+
+  public List&lt;Location&gt; route = new ArrayList&lt;&gt;();
+
+  public Activity()
+  {
+  }
+
+  public Activity(String type, String location, double distance)
+  {
+    this.id        = counter++;
+    this.type      = type;
+    this.location  = location;
+    this.distance  = distance;
+  }
+
+  @Override
+  public String toString()
+  {
+    return toStringHelper(this).addValue(id)
+                               .addValue(type)
+                               .addValue(location)
+                               .addValue(distance)
+                               .addValue(route)
+                               .toString();
+  }
+
+  @Override  
+  public int hashCode()  
+  {  
+     return Objects.hashCode(this.id, this.type, this.location, this.distance);  
+  } 
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>User &amp; PacemakerAPI</h1>
+<p>In Users, introduce the following new field:</p>
+<pre><code>  public Map&lt;Long, Activity&gt; activities = new HashMap&lt;&gt;();</code></pre>
+<h2>PacemakerAPI</h2>
+<p>We can now rework the PacemakerAPI to more effectively manage the model. Here is a new version:</p>
+<pre><code class="lang-java">package controllers;
+
+import java.util.Collection;
+import com.google.common.base.Optional;
+import java.util.HashMap;
+import java.util.Map;
+import models.Activity;
+import models.Location;
+import models.User;
+
+public class PacemakerAPI
+{
+  private Map&lt;Long,   User&gt;   userIndex       = new HashMap&lt;&gt;();
+  private Map&lt;String, User&gt;   emailIndex      = new HashMap&lt;&gt;();
+  private Map&lt;Long, Activity&gt; activitiesIndex = new HashMap&lt;&gt;();
+
+  public PacemakerAPI()
+  {
+  }
+
+  public Collection&lt;User&gt; getUsers ()
+  {
+    return userIndex.values();
+  }
+
+  public  void deleteUsers() 
+  {
+    userIndex.clear();
+    emailIndex.clear();
+  }
+
+  public User createUser(String firstName, String lastName, String email, String password) 
+  {
+    User user = new User (firstName, lastName, email, password);
+    userIndex.put(user.id, user);
+    emailIndex.put(email, user);
+    return user;
+  }
+
+  public User getUserByEmail(String email) 
+  {
+    return emailIndex.get(email);
+  }
+
+  public User getUser(Long id) 
+  {
+    return userIndex.get(id);
+  }
+
+  public void deleteUser(Long id) 
+  {
+    User user = userIndex.remove(id);
+    emailIndex.remove(user.email);
+  }
+
+  public void createActivity(Long id, String type, String location, double distance)
+  {
+    Activity activity = new Activity (type, location, distance);
+    Optional&lt;User&gt; user = Optional.fromNullable(userIndex.get(id));
+    if (user.isPresent())
+    {
+      user.get().activities.put(activity.id, activity);
+      activitiesIndex.put(activity.id, activity);
+    }
+  }
+
+  public Activity getActivity (Long id)
+  {
+    return activitiesIndex.get(id);
+  }
+
+  public void addLocation (Long id, float latitude, float longitude)
+  {
+    Optional&lt;Activity&gt; activity = Optional.fromNullable(activitiesIndex.get(id));
+    if (activity.isPresent())
+    {
+      activity.get().route.add(new Location(latitude, longitude));
+    }
+  }
+}</code></pre>
+<p>Read this class carefully - particularly the <code>createActivity</code> and <code>addLocation</code> methods.</p>
+<p>Commit and push your project to github with a suitable commit message
+.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>LocationTest</h1>
+<p>Create a new unit test in the new models package called <code>LocationTest</code>:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>If you use the Eclipse wizards to create the test, the generated class should look like this:</p>
+<pre><code class="lang-java">package models;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class LocationTest
+{
+
+  @Test
+  public void test()
+  {
+    fail(&quot;Not yet implemented&quot;);
+  }
+}</code></pre>
+<p>To run the test, select the &#39;test&#39; folder, right click and select &#39;Run As-&gt;Junit Test&#39;</p>
+<p><img src="img/06.png" alt=""></p>
+<p>This should display the JUnit Test Runner:</p>
+<p><img src="img/07.png" alt=""></p>
+<p>This is our first unit test - deliberately failing for the moment.</p>
+<p>Replace the failing test with the following:</p>
+<pre><code class="lang-java">  @Test
+  public void testCreate()
+  {
+    Location one = new Location(23.3f, 33.3f);
+    assertEquals (0.01, 23.3f, one.latitude);
+    assertEquals (0.01, 33.3f, one.longitude);
+  }</code></pre>
+<p>Which should now pass:</p>
+<p><img src="img/08.png" alt=""></p>
+<p>Some more tests:</p>
+<pre><code class="lang-java">  @Test
+  public void testIds()
+  {
+    Location one = new Location(23.3f, 33.3f);
+    Location two = new Location(34.4f, 22.2f);
+    assertNotEquals(one.id, two.id);
+
+  }
+
+  @Test
+  public void testToString()
+  {
+    Location one = new Location(23.3f, 33.3f);
+    assertEquals (&quot;Location{2, 23.3, 33.3}&quot;, one.toString());
+  }</code></pre>
+<p>All should now be passing:</p>
+<p><img src="img/09.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Fixtures</h1>
+<p>We can simplify the test marginally by sharing the object initializations between tests:</p>
+<pre><code class="lang-java">package models;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class LocationTest
+{
+  private Location one;
+  private Location two;
+
+  @Before
+  public void setup()
+  {
+    one = new Location(23.3f, 33.3f);
+    two = new Location(34.4f, 22.2f);
+  }
+
+  @After
+  public void tearDown()
+  {
+    one = two = null;
+  }
+
+  @Test
+  public void testCreate()
+  {
+    assertEquals (0.01, 23.3f, one.latitude);
+    assertEquals (0.01, 33.3f, one.longitude);
+  }
+
+  @Test
+  public void testIds()
+  {
+    assertNotEquals(one.id, two.id);
+  }
+
+  @Test
+  public void testToString()
+  {
+    assertEquals (&quot;Location{2, 23.3, 33.3}&quot;, one.toString());
+  }
+}</code></pre>
+<p>Ready this carefully - the tests are identical, with the setup/tearDown methods called before/after each individual test.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>UserTest &amp; ActivityTest</h1>
+<p>Here is a new version of the UserTest:</p>
+<pre><code class="lang-java">package models;
+
+import static org.junit.Assert.*;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class UserTest
+{
+  private User[] users =
+  {
+    new User (&quot;marge&quot;, &quot;simpson&quot;, &quot;marge@simpson.com&quot;,  &quot;secret&quot;),
+    new User (&quot;lisa&quot;,  &quot;simpson&quot;, &quot;lisa@simpson.com&quot;,   &quot;secret&quot;),
+    new User (&quot;bart&quot;,  &quot;simpson&quot;, &quot;bart@simpson.com&quot;,   &quot;secret&quot;),
+    new User (&quot;maggie&quot;,&quot;simpson&quot;, &quot;maggie@simpson.com&quot;, &quot;secret&quot;)
+  };
+  User homer = new User (&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;,  &quot;secret&quot;);
+
+  @Test
+  public void testCreate()
+  {
+    assertEquals (&quot;homer&quot;,               homer.firstName);
+    assertEquals (&quot;simpson&quot;,             homer.lastName);
+    assertEquals (&quot;homer@simpson.com&quot;,   homer.email);   
+    assertEquals (&quot;secret&quot;,              homer.password);   
+  }
+
+  @Test
+  public void testIds()
+  {
+    Set&lt;Long&gt; ids = new HashSet&lt;&gt;();
+    for (User user : users)
+    {
+      ids.add(user.id);
+    }
+    assertEquals (users.length, ids.size());
+  }
+
+  @Test
+  public void testToString()
+  {
+    assertEquals (&quot;User{&quot; + homer.id + &quot;, homer, simpson, secret, homer@simpson.com}&quot;, homer.toString());
+  }
+}</code></pre>
+<p>Make sure it passes. Note carefully the <code>testIds()</code> test. Can you see its rationale?</p>
+<p>Here is an ActivityTest:</p>
+<pre><code>package models;
+
+import static org.junit.Assert.*;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class ActivityTest
+{
+  private Activity[] activities =
+  {
+    new Activity (&quot;walk&quot;,  &quot;fridge&quot;, 0.001),
+    new Activity (&quot;walk&quot;,  &quot;bar&quot;,    1.0),
+    new Activity (&quot;run&quot;,   &quot;work&quot;,   2.2),
+    new Activity (&quot;walk&quot;,  &quot;shop&quot;,   2.5),
+    new Activity (&quot;cycle&quot;, &quot;school&quot;, 4.5)
+  };
+
+  Activity test = new Activity (&quot;walk&quot;,  &quot;fridge&quot;, 0.001);
+
+  @Test
+  public void testCreate()
+  {
+    assertEquals (&quot;walk&quot;,          test.type);
+    assertEquals (&quot;fridge&quot;,        test.location);
+    assertEquals (0.0001, 0.001,   test.distance);    
+  }
+
+  @Test
+  public void testToString()
+  {
+    assertEquals (&quot;Activity{&quot; + test.id + &quot;, walk, fridge, 0.001, []}&quot;, test.toString());
+  }
+}</code></pre>
+<p>All these tests should pass, and should be able to run all test in one test runner:</p>
+<p><img src="img/10.png" alt=""></p>
+<p>Commit and push to github.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Static Fixtures</h1>
+<p>In preparation for testing the PacemakerAPI, it may be useful to integrate all the static fixture data into a single class:</p>
+<pre><code class="lang-java">package models;
+
+public class Fixtures
+{
+  public static User[] users =
+  {
+    new User (&quot;marge&quot;, &quot;simpson&quot;, &quot;marge@simpson.com&quot;,  &quot;secret&quot;),
+    new User (&quot;lisa&quot;,  &quot;simpson&quot;, &quot;lisa@simpson.com&quot;,   &quot;secret&quot;),
+    new User (&quot;bart&quot;,  &quot;simpson&quot;, &quot;bart@simpson.com&quot;,   &quot;secret&quot;),
+    new User (&quot;maggie&quot;,&quot;simpson&quot;, &quot;maggie@simpson.com&quot;, &quot;secret&quot;)
+  };
+
+  public static Activity[] activities =
+  {
+    new Activity (&quot;walk&quot;,  &quot;fridge&quot;, 0.001),
+    new Activity (&quot;walk&quot;,  &quot;bar&quot;,    1.0),
+    new Activity (&quot;run&quot;,   &quot;work&quot;,   2.2),
+    new Activity (&quot;walk&quot;,  &quot;shop&quot;,   2.5),
+    new Activity (&quot;cycle&quot;, &quot;school&quot;, 4.5)
+  };
+
+  public static Location[]locations =
+  {
+    new Location(23.3f, 33.3f),
+    new Location(34.4f, 45.2f),  
+    new Location(25.3f, 34.3f),
+    new Location(44.4f, 23.3f)       
+  };
+}</code></pre>
+<p>This will enable us to simplify the three unit test somewhat:</p>
+<h3>LocationTest</h3>
+<pre><code class="lang-java">package models;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import static models.Fixtures.locations;
+
+public class LocationTest
+{ 
+  @Test
+  public void testCreate()
+  {
+    assertEquals (0.01, 23.3f, locations[0].latitude);
+    assertEquals (0.01, 33.3f, locations[0].longitude);
+  }
+
+  @Test
+  public void testIds()
+  {
+    assertNotEquals(locations[0].id, locations[1].id);
+  }
+
+  @Test
+  public void testToString()
+  {
+    assertEquals (&quot;Location{&quot; + locations[0].id + &quot;, 23.3, 33.3}&quot;, locations[0].toString());
+  }
+}</code></pre>
+<h3>ActivityTest</h3>
+<pre><code class="lang-java">package models;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class ActivityTest
+{ 
+  Activity test = new Activity (&quot;walk&quot;,  &quot;fridge&quot;, 0.001);
+
+  @Test
+  public void testCreate()
+  {
+    assertEquals (&quot;walk&quot;,          test.type);
+    assertEquals (&quot;fridge&quot;,        test.location);
+    assertEquals (0.0001, 0.001,   test.distance);    
+  }
+
+  @Test
+  public void testToString()
+  {
+    assertEquals (&quot;Activity{&quot; + test.id + &quot;, walk, fridge, 0.001, []}&quot;, test.toString());
+  }
+}</code></pre>
+<h3>UserTest</h3>
+<pre><code class="lang-java">package models;
+
+import static org.junit.Assert.*;
+
+import java.util.HashSet;
+import java.util.Set;
+import org.junit.Test;
+
+import static models.Fixtures.users;
+
+public class UserTest
+{
+  User homer = new User (&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;,  &quot;secret&quot;);
+
+  @Test
+  public void testCreate()
+  {
+    assertEquals (&quot;homer&quot;,               homer.firstName);
+    assertEquals (&quot;simpson&quot;,             homer.lastName);
+    assertEquals (&quot;homer@simpson.com&quot;,   homer.email);   
+    assertEquals (&quot;secret&quot;,              homer.password);   
+  }
+
+  @Test
+  public void testIds()
+  {
+    Set&lt;Long&gt; ids = new HashSet&lt;&gt;();
+    for (User user : users)
+    {
+      ids.add(user.id);
+    }
+    assertEquals (users.length, ids.size());
+  }
+
+  @Test
+  public void testToString()
+  {
+    assertEquals (&quot;User{&quot; + homer.id + &quot;, homer, simpson, secret, homer@simpson.com&quot;, homer.toString());
+  }
+}</code></pre>
+<p>Integrate these version and verify that app passes all tests.</p>
+<p>Commit these changes with a suitable message.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>First PacemakerAPI Test</h1>
+<p>PacemakerAPI is a more sophisticated class, whose testing will require a little more discipline and focus. We can start with a skeleton, which will include static imports + a fixture:</p>
+<pre><code class="lang-java">package models;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import controllers.PacemakerAPI;
+import static models.Fixtures.users;
+import static models.Fixtures.activities;
+import static models.Fixtures.locations;
+
+public class PacemakerAPITest
+{
+  private PacemakerAPI pacemaker;
+
+  @Before
+  public void setup()
+  {
+    pacemaker = new PacemakerAPI();
+  }
+
+  @After
+  public void tearDown()
+  {
+    pacemaker = null;
+  }
+
+  @Test
+  public void testUser()
+  {
+    assertEquals (0, pacemaker.getUsers().size());
+  } 
+}</code></pre>
+<p>This should of course pass and verifies that we are starting with an empty model. We can augment the test:</p>
+<pre><code class="lang-java">  @Test
+  public void testUserEmpty()
+  {
+    User homer = new User (&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;,  &quot;secret&quot;);
+
+    assertEquals (0, pacemaker.getUsers().size());
+    pacemaker.createUser(&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;, &quot;secret&quot;);
+    assertEquals (1, pacemaker.getUsers().size());
+  }</code></pre>
+<p>Which should also pass...</p>
+<p>Our API returns a User object - which we can verify:</p>
+<pre><code class="lang-java">  @Test
+  public void testUser()
+  {
+    User homer = new User (&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;,  &quot;secret&quot;);
+
+    assertEquals (0, pacemaker.getUsers().size());
+    pacemaker.createUser(&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;, &quot;secret&quot;);
+    assertEquals (1, pacemaker.getUsers().size());
+
+    assertEquals (homer, pacemaker.getUserByEmail(&quot;homer@simpson.com&quot;));
+  }</code></pre>
+<p>This time the test fails. The default behaviour of this test is to trigger a call to &#39;equals()&#39; on the User objects. We haven&#39;t implemented this method, so the default behaviour is to do an identity comparison:</p>
+<ul>
+<li><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html#equals%28java.lang.Object%29">Object.equals</a></li>
+</ul>
+<p>Implementing Equals can be tricky - and there are numerous approaches:</p>
+<ul>
+<li><a href="http://www.javapractices.com/topic/TopicAction.do?Id=17">http://www.javapractices.com/topic/TopicAction.do?Id=17</a></li>
+</ul>
+<p>However, we are already using guava support for toString, so our easiest route is to use the equivalent for equals implementation. This means revisiting the User class, introducing this implementation:</p>
+<pre><code class="lang-java">  @Override
+  public boolean equals(final Object obj)
+  {
+    if (obj instanceof User)
+    {
+      final User other = (User) obj;
+      return Objects.equal(firstName, other.firstName) 
+          &amp;&amp; Objects.equal(lastName,  other.lastName)
+          &amp;&amp; Objects.equal(email,     other.email)
+          &amp;&amp; Objects.equal(password,  other.password);
+    }
+    else
+    {
+      return false;
+    }
+  }</code></pre>
+<p>We should verify our understanding of this method by introducing a new test into UserTest:</p>
+<pre><code class="lang-java">  @Test
+  public void testEquals()
+  {
+    User homer2 = new User (&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;,  &quot;secret&quot;); 
+    User bart   = new User (&quot;bart&quot;, &quot;simpson&quot;, &quot;bartr@simpson.com&quot;,  &quot;secret&quot;); 
+
+    assertEquals(homer, homer);
+    assertEquals(homer, homer2);
+    assertNotEquals(homer, bart);
+  }</code></pre>
+<p>This should pass, and out PacemakerAPITest should also now pass.</p>
+<p>Identity and Equality are important concepts to understand - and there are JUnit primitives that can be used to verify two characteristics individually. Extend the testEquals method as follows:</p>
+<pre><code class="lang-java">    assertSame(homer, homer);
+    assertNotSame(homer, homer2);</code></pre>
+<p>This verifies that homer and homer2 are equals (equality or equivalence test), but not the same (identity test).</p>
+<p>Location and Activity should also have their own equals implementations:</p>
+<pre><code class="lang-java">  @Override
+  public boolean equals(final Object obj)
+  {
+    if (obj instanceof Location)
+    {
+      final Location other = (Location) obj;
+      return Objects.equal(latitude, other.latitude) 
+          &amp;&amp; Objects.equal(longitude, other.longitude);
+    }
+    else
+    {
+      return false;
+    }
+  }</code></pre>
+<pre><code class="lang-java">  @Override
+  public boolean equals(final Object obj)
+  {
+    if (obj instanceof Activity)
+    {
+      final Activity other = (Activity) obj;
+      return Objects.equal(type, other.type) 
+          &amp;&amp; Objects.equal(location,  other.location)
+          &amp;&amp; Objects.equal(distance,  other.distance)
+          &amp;&amp; Objects.equal(route,     other.route);    
+    }
+    else
+    {
+      return false;
+    }
+  }</code></pre>
+<p>What, precisely, will happen when this call is triggered in Activity.equals?</p>
+<pre><code class="lang-java">          &amp;&amp; Objects.equal(route,     other.route);</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>More PacemakerAPITests</h1>
+<p>Introduce this unit test</p>
+<pre><code class="lang-java">  @Test
+  public void testUsers()
+  {
+    for (User user : users)
+    {
+      pacemaker.createUser(user.firstName, user.lastName, user.email, user.password);
+    }
+    assertEquals (users.length, pacemaker.getUsers().size());
+  }</code></pre>
+<p>This test should succeed. However, we can strengthen the test now that we have equals methods in place:</p>
+<pre><code class="lang-java">  @Test
+  public void testUsers()
+  {
+    for (User user : users)
+    {
+      pacemaker.createUser(user.firstName, user.lastName, user.email, user.password);
+    }
+    assertEquals (users.length, pacemaker.getUsers().size());
+    for (User user: users)
+    {
+      User eachUser = pacemaker.getUserByEmail(user.email);
+      assertEquals (user, eachUser);
+      assertNotSame(user, eachUser);
+    }
+  }</code></pre>
+<p>Now we can test delete:</p>
+<pre><code class="lang-java">  @Test
+  public void testDeleteUsers()
+  {
+    for (User user : users)
+    {
+      pacemaker.createUser(user.firstName, user.lastName, user.email, user.password);
+    }
+    assertEquals (users.length, pacemaker.getUsers().size());
+    User marge = pacemaker.getUserByEmail(&quot;marge@simpson.com&quot;);
+    pacemaker.deleteUser(marge.id);
+    assertEquals (users.length-1, pacemaker.getUsers().size());    
+  }</code></pre>
+<p>We should continually review our test code in an attempt to keep it as concise as possible. We can consider the test code as important as the main app, with the same care to remove repetition and generally keep in good shape.</p>
+<p>All the tests in PacemakerAPITest can be simplified if we share a fixture. Here is a replacement for all of the above:</p>
+<pre><code class="lang-java">public class PacemakerAPITest
+{
+  private PacemakerAPI pacemaker;
+
+  @Before
+  public void setup()
+  {
+    pacemaker = new PacemakerAPI(null);
+    for (User user : users)
+    {
+      pacemaker.createUser(user.firstName, user.lastName, user.email, user.password);
+    }
+  }
+
+  @After
+  public void tearDown()
+  {
+    pacemaker = null;
+  }
+
+  @Test
+  public void testUser()
+  {
+    assertEquals (users.length, pacemaker.getUsers().size());
+    pacemaker.createUser(&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;, &quot;secret&quot;);
+    assertEquals (users.length+1, pacemaker.getUsers().size());
+    assertEquals (users[0], pacemaker.getUserByEmail(users[0].email));
+  }  
+
+  @Test
+  public void testUsers()
+  {
+    assertEquals (users.length, pacemaker.getUsers().size());
+    for (User user: users)
+    {
+      User eachUser = pacemaker.getUserByEmail(user.email);
+      assertEquals (user, eachUser);
+      assertNotSame(user, eachUser);
+    }
+  }
+
+  @Test
+  public void testDeleteUsers()
+  {
+    assertEquals (users.length, pacemaker.getUsers().size());
+    User marge = pacemaker.getUserByEmail(&quot;marge@simpson.com&quot;);
+    pacemaker.deleteUser(marge.id);
+    assertEquals (users.length-1, pacemaker.getUsers().size());    
+  }  
+}</code></pre>
+<p>Note the adjustments made to testUser in this context.</p>
+<p>Commit this to git.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Activities Tests</h1>
+<p>These three methods in PacemakerAPI are untested:</p>
+<pre><code class="lang-java">  public void createActivity(Long id, String type, String location, double distance)
+
+  public Activity getActivity (Long id)
+
+  public void addLocation (Long id, float latitude, float longitude)</code></pre>
+<p>The first one, in particular, seems somehow untestable. How can we verify if the activity is created successfully? This is an error in the design - only spotted now when we attempt to write a test. Had we written the tests first then we are unlikely to have written the method in this way.</p>
+<p>First, lets correct the implementation:</p>
+<pre><code class="lang-java">  public Activity createActivity(Long id, String type, String location, double distance)
+  {
+    Activity activity = null;
+    Optional&lt;User&gt; user = Optional.fromNullable(userIndex.get(id));
+    if (user.isPresent())
+    {
+      activity = new Activity (type, location, distance);
+      user.get().activities.put(activity.id, activity);
+      activitiesIndex.put(activity.id, activity);
+    }
+    return activity;
+  }</code></pre>
+<p>Now we can write the test:</p>
+<pre><code class="lang-java">  @Test
+  public void testAddActivity()
+  {
+    User marge = pacemaker.getUserByEmail(&quot;marge@simpson.com&quot;);
+    assertNotNull(marge);
+    Activity activity = pacemaker.createActivity(marge.id, activities[0].type, activities[0].location, activities[0].distance);
+    assertNotNull(activity);
+    Activity returnedActivity = pacemaker.getActivity(activity.id);
+    assertNotNull(returnedActivity);
+    assertEquals(activities[0],  returnedActivity);
+    assertNotSame(activities[0], returnedActivity);
+  }</code></pre>
+<p>This test is probably a little overwrought - and we can reduce the number of asserts to make its operation clearer:</p>
+<pre><code class="lang-java">  @Test
+  public void testAddActivity()
+  {
+    User marge = pacemaker.getUserByEmail(&quot;marge@simpson.com&quot;);
+    Activity activity = pacemaker.createActivity(marge.id, activities[0].type, activities[0].location, activities[0].distance);
+    Activity returnedActivity = pacemaker.getActivity(activity.id);
+    assertEquals(activities[0],  returnedActivity);
+    assertNotSame(activities[0], returnedActivity);
+  }</code></pre>
+<p>Now we write a test to add a location to an activity:</p>
+<pre><code class="lang-java">  @Test
+  public void testAddActivityWithSingleLocation()
+  {
+    User marge = pacemaker.getUserByEmail(&quot;marge@simpson.com&quot;);
+    Long activityId = pacemaker.createActivity(marge.id, activities[0].type, activities[0].location, activities[0].distance).id;
+
+    pacemaker.addLocation(activityId, locations[0].latitude, locations[0].longitude);
+
+    Activity activity = pacemaker.getActivity(activityId);
+    assertEquals (1, activity.route.size());
+    assertEquals(0.0001, locations[0].latitude,  activity.route.get(0).latitude);
+    assertEquals(0.0001, locations[0].longitude, activity.route.get(0).longitude);   
+  }</code></pre>
+<p>If this passes (try it) we can be more ambitious and test multiple locations:</p>
+<pre><code class="lang-java">  @Test
+  public void testAddActivityWithMultipleLocation()
+  {
+    User marge = pacemaker.getUserByEmail(&quot;marge@simpson.com&quot;);
+    Long activityId = pacemaker.createActivity(marge.id, activities[0].type, activities[0].location, activities[0].distance).id;
+
+    for (Location location : locations)
+    {
+      pacemaker.addLocation(activityId, location.latitude, location.longitude);      
+    }
+
+    Activity activity = pacemaker.getActivity(activityId);
+    assertEquals (locations.length, activity.route.size());
+    int i = 0;
+    for (Location location : activity.route)
+    {
+      assertEquals(location, locations[i]);
+      i++;
+    }
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>We now have a more substantial body of tests, which should all run:</p>
+<p><img src="img/13.png" alt=""></p>
+<p>Archive of lab so far:</p>
+<ul>
+<li><a href="archives/pacemaker-tdd-03.zip">pacemaker-tdd-03</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

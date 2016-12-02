@@ -1,0 +1,908 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Exceptions & Maven
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-06">
+      Lab-06
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" data-tab="JUnit5">
+      JUnit5
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01 - paradigms and languages/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02 - java language/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03 - inheritance and collections/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04 - serialisation and TDD I/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05 - TDD II/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic06 - exceptions and maven/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-1/index.html">
+          Lab-08a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08 - framework and cloud/book-2/index.html">
+          Lab-08b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-1/index.html">
+          Lab-09a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09 - SRP/book-2/index.html">
+          Lab-09b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10 - OCP and play testing/book-1/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-1/index.html">
+          Lab-11a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11 - semantic and TDD IV/book-2/index.html">
+          Lab-11b
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-06">
+        <h2>Objectives</h2>
+<p>Install and configure maven and then create and and test a single module maven project with several external dependencies. Once this is working, incorporate into Eclipse.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Install Maven</h1>
+<p>Visit the main Maven site:</p>
+<ul>
+<li><a href="http://maven.apache.org/">http://maven.apache.org/</a></li>
+</ul>
+<p>and review some of the general introductions.</p>
+<p>Download the project archive (note: download the binary and not the source):</p>
+<ul>
+<li><a href="http://maven.apache.org/download.html">http://maven.apache.org/download.html</a></li>
+</ul>
+<p>Follow these installations instructions:</p>
+<ul>
+<li><a href="http://maven.apache.org/install.html">http://maven.apache.org/install.html</a></li>
+</ul>
+<p>If you are working on one of the desktops in the MSc lab (D05), you may need an additional step to circumvent the firewall rules. Read this FAQ entry here:</p>
+<ul>
+<li><a href="http://maven.apache.org/guides/mini/guide-proxies.html">http://maven.apache.org/guides/mini/guide-proxies.html</a></li>
+</ul>
+<p>Finally, to verify a successful installation, follow this 5 minute guide</p>
+<ul>
+<li><a href="http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html</a></li>
+</ul>
+<p>An important aspect of the installation is which version of the JDK it uses. There is a significant difference between the class file formats from 1.6 to 1.7. For the code + libraries in this lab to build successfully, you should have java 1.8 installed.  </p>
+<p>Maven should use minimum 1.8 too.  You can check this my entering &#39;mvn -version&#39; on the console. You should see something like this:</p>
+<pre><code>C:\Users\Siobhan&gt;mvn -version
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T16:41:47+00:00)
+Maven home: C:\dev\apache-maven-3.3.9\bin\..
+Java version: 1.8.0_73, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_73\jre
+Default locale: en_IE, platform encoding: Cp1252
+OS name: &quot;windows 10&quot;, version: &quot;10.0&quot;, arch: &quot;amd64&quot;, family: &quot;dos&quot;
+
+C:\Users\Siobhan&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Create Project</h1>
+<h2>Review pacemaker project</h2>
+<p>You should have the pacemaker project from lab04 in your workspace:</p>
+<p><img src="img/001.png" alt=""></p>
+<p>If you don&#39;t have a lab04 pacemaker project, you can download it from here:  </p>
+<ul>
+<li><a href="archives/pacemaker-console-lab04.zip">pacemaker-console-lab04.zip</a></li>
+</ul>
+<h2>Create Maven Project</h2>
+<p>Navigate to a suitable folder (i.e. a new workspace that you will use for maven projects) and enter the following command:</p>
+<pre><code> mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DgroupId=pacemaker -DartifactId=pacemaker-console-maven</code></pre>
+<p>This may take some time, maven will download quite a few artifacts into it own repository. If you are asked to enter versions for certain items, just hit the enter key.  Eventually it should complete successfully.</p>
+<p>The command will have created the following project structure:</p>
+<p><img src="img/002.png" alt=""></p>
+<p>The key file to inspect is the generated pom.xml:</p>
+<pre><code class="lang-xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;groupId&gt;pacemaker&lt;/groupId&gt;
+  &lt;artifactId&gt;pacemaker-console-maven&lt;/artifactId&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+  &lt;packaging&gt;jar&lt;/packaging&gt;
+
+  &lt;name&gt;pacemaker-console-maven&lt;/name&gt;
+  &lt;url&gt;http://maven.apache.org&lt;/url&gt;
+
+  &lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+  &lt;/properties&gt;
+
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;junit&lt;/groupId&gt;
+      &lt;artifactId&gt;junit&lt;/artifactId&gt;
+      &lt;version&gt;3.8.1&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+&lt;/project&gt;</code></pre>
+<h2>Generate an Eclipse Project</h2>
+<p>On the command line, change into the pacemaker-console-maven folder and enter the following command:</p>
+<pre><code>mvn eclipse:eclipse</code></pre>
+<p>This will generate an eclipse project from the pom.</p>
+<p>In eclipse, import this project (as an existing project). It should show up on your workspace like this:</p>
+<p><img src="img/003.png" alt=""></p>
+<h2>Copy paste sources into new project</h2>
+<p>Within eclipse, you should be able to copy/paste all of the sources into the appropriate folder in the new project. Also, delete the maven generated <strong>pacemaker</strong> packages:</p>
+<p><img src="img/004.png" alt=""></p>
+<p>There are a significant number of errors however, which we will fix in the next step.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h2>Incorporate Correct Library References</h2>
+<p>Inspect the pacemaker-console-maven folder, open and review the &quot;pom.xml&quot; file.</p>
+<pre><code class="lang-xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;groupId&gt;pacemaker&lt;/groupId&gt;
+  &lt;artifactId&gt;pacemaker-console-maven&lt;/artifactId&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+  &lt;packaging&gt;jar&lt;/packaging&gt;
+
+  &lt;name&gt;pacemaker-console-maven&lt;/name&gt;
+  &lt;url&gt;http://maven.apache.org&lt;/url&gt;
+
+  &lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+  &lt;/properties&gt;
+
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;junit&lt;/groupId&gt;
+      &lt;artifactId&gt;junit&lt;/artifactId&gt;
+      &lt;version&gt;3.8.1&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+&lt;/project&gt;</code></pre>
+<p>Modify the &quot;url&quot; and &quot;version&quot; elements to be more consistent with our project:</p>
+<pre><code class="lang-xml">  &lt;version&gt;1.0&lt;/version&gt;
+  &lt;url&gt;www.wit.ie&lt;/url&gt;</code></pre>
+<p>A note on Version VS SNAPSHOT: </p>
+<ul>
+<li>Version: if Maven once downloaded the mentioned version, say 1.0, it will never try to download a newer 1.0 available in repository. To download the updated code, the version is be upgraded to 1.1. </li>
+<li>SNAPSHOT, Maven will automatically fetch the latest SNAPSHOT (e.g. 1.0-SNAPSHOT) everytime the team builds their project.</li>
+</ul>
+<p>We are using Java 8 for our application and associated libraries. We can specifically enable this version by extending the <strong><properties></strong> section as follows:</p>
+<pre><code class="lang-xml">  &lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;
+    &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
+  &lt;/properties&gt;</code></pre>
+<p>The junit version in the generated POM is incorrect (3.8.1), acquire and configure the 4.11 version:</p>
+<pre><code class="lang-xml">    &lt;dependency&gt;
+      &lt;groupId&gt;junit&lt;/groupId&gt;
+      &lt;artifactId&gt;junit&lt;/artifactId&gt;
+      &lt;version&gt;4.11&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;</code></pre>
+<p>We are using a range of libraries, which we must incorporated into the pom. Guava and Xstream are well known, and already in the standard maven repositories. We just insert the correct references:</p>
+<pre><code class="lang-xml">    &lt;dependency&gt;
+      &lt;groupId&gt;com.google.guava&lt;/groupId&gt;
+      &lt;artifactId&gt;guava&lt;/artifactId&gt;
+      &lt;version&gt;18.0&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.thoughtworks.xstream&lt;/groupId&gt;
+      &lt;artifactId&gt;xstream&lt;/artifactId&gt;
+      &lt;version&gt;1.4.8&lt;/version&gt;
+    &lt;/dependency&gt;</code></pre>
+<p>However, Cliche is older and us not in a common repository. We must still include it however. We will deal with it in the next step.</p>
+<pre><code class="lang-xml">    &lt;dependency&gt;
+      &lt;groupId&gt;asg-cliche&lt;/groupId&gt;
+      &lt;artifactId&gt;asg-cliche&lt;/artifactId&gt;
+      &lt;version&gt;1.0&lt;/version&gt;
+    &lt;/dependency&gt;</code></pre>
+<h3>Complete POM</h3>
+<p>The full version of the POM should look like this:</p>
+<pre><code class="lang-xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;groupId&gt;pacemaker&lt;/groupId&gt;
+  &lt;artifactId&gt;pacemaker-console-maven&lt;/artifactId&gt;
+  &lt;version&gt;1.0&lt;/version&gt;
+  &lt;packaging&gt;jar&lt;/packaging&gt;
+
+  &lt;name&gt;pacemaker-console-maven&lt;/name&gt;
+  &lt;url&gt;http://www.wit.ie&lt;/url&gt;
+
+  &lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;
+    &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
+  &lt;/properties&gt;
+
+  &lt;dependencies&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;junit&lt;/groupId&gt;
+      &lt;artifactId&gt;junit&lt;/artifactId&gt;
+      &lt;version&gt;4.11&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.google.guava&lt;/groupId&gt;
+      &lt;artifactId&gt;guava&lt;/artifactId&gt;
+      &lt;version&gt;18.0&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.thoughtworks.xstream&lt;/groupId&gt;
+      &lt;artifactId&gt;xstream&lt;/artifactId&gt;
+      &lt;version&gt;1.4.8&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+      &lt;groupId&gt;asg-cliche&lt;/groupId&gt;
+      &lt;artifactId&gt;asg-cliche&lt;/artifactId&gt;
+      &lt;version&gt;1.0&lt;/version&gt;
+    &lt;/dependency&gt;  
+
+  &lt;/dependencies&gt;
+&lt;/project&gt;</code></pre>
+<p>To ensure that the maven file is correct, return to your command prompt and enter the following command:</p>
+<pre><code>mvn validate</code></pre>
+<p>This will pick up any errors in the POM, although it will not check availability of the dependencies.</p>
+<pre><code>C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven&gt;mvn validate
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building pacemaker-console-maven 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.100 s
+[INFO] Finished at: 2016-10-13T13:39:41+01:00
+[INFO] Final Memory: 5M/123M
+[INFO] ------------------------------------------------------------------------
+
+C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven&gt;</code></pre>
+<p>Note:  If you have used any other components in lab04 e.g. ASCIITable, you will need to include this as a dependency in your pom.xml e.g.:</p>
+<pre><code class="lang-xml">&lt;!-- https://mvnrepository.com/artifact/de.vandermeer/asciitable --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;de.vandermeer&lt;/groupId&gt;
+    &lt;artifactId&gt;asciitable&lt;/artifactId&gt;
+    &lt;version&gt;0.2.5&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Build</h1>
+<h2>Attempting to compile and test</h2>
+<p>In your command prompt/shell, type in <strong>mvn test</strong>.  It will fail because maven cannot resolve the asg-cliche dependency:</p>
+<pre><code>C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven&gt;mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building pacemaker-console-maven 1.0
+[INFO] ------------------------------------------------------------------------
+[WARNING] The POM for asg-cliche:asg-cliche:jar:1.0 is missing, no dependency information available
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.337 s
+[INFO] Finished at: 2016-10-13T13:40:45+01:00
+[INFO] Final Memory: 6M/123M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project pacemaker-console-maven: Could not resolve dependencies for project pacemaker:pacemaker-console-maven:jar:1.0: Failure to find asg-cliche:asg-cliche:jar:1.0 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced -&gt; [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+
+C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven&gt;</code></pre>
+<h2>Resolving asg-cliche</h2>
+<p>The asg-cliche library is not in any public repository, so we must install it ourselves in our local repo. </p>
+<p>Locate the jar from a previous project, and rename it for simplicity to be asg-cliche-1.0.jar.  Create a, say, <strong>resources</strong> folder in your <strong>..\pacemaker-console-maven\src\main\ </strong> directory and place your jar file in here.</p>
+<p>In your command prompt/shell, navigate to this folder and enter the following command:</p>
+<pre><code>mvn install:install-file -Dfile=asg-cliche-1.0.jar -DgroupId=asg-cliche -DartifactId=asg-cliche -Dversion=1.0 -Dpackaging=jar</code></pre>
+<p>This will install the jar file in the local .m2 repository.  In windows, this repo is located in a similar directory structure to this:  <strong>C:\Users\Siobhan.m2\</strong></p>
+<pre><code>C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven\src\main\resources&gt;mvn install:install-file -Dfile=asg-cliche-1.0.jar -DgroupId=asg-cliche -DartifactId=asg-cliche -Dversion=1.0 -Dpackaging=jar
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install-file (default-cli) @ standalone-pom ---
+[INFO] Installing C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven\src\main\resources\asg-cliche-1.0.jar to C:\Users\Siobhan\.m2\repository\asg-cliche\asg-cliche\1.0\asg-cliche-1.0.jar
+[INFO] Installing C:\Users\Siobhan\AppData\Local\Temp\mvninstall9125095421859336544.pom to C:\Users\Siobhan\.m2\repository\asg-cliche\asg-cliche\1.0\asg-cliche-1.0.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.712 s
+[INFO] Finished at: 2016-10-13T13:45:52+01:00
+[INFO] Final Memory: 7M/123M
+[INFO] ------------------------------------------------------------------------
+
+C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven\src\main\resources&gt;</code></pre>
+<h2>Build Goal</h2>
+<p>In your command prompt/shell, return to your &quot;pacemaker-console-maven&quot; project folder where your pom.xml is stored. Type the following:</p>
+<pre><code>mvn test</code></pre>
+<p>A broad range of downloads will be generated by this command, including updates to maven itself and the referenced libraries. If successful, the build process will eventually report successful test execution.</p>
+<p>Locate and inspect the generated &quot;target&quot; folder in the pacemaker-console-maven project.</p>
+<p>Return back to the root directory of the project and regenerate the eclipse project to eliminate the errors:</p>
+<pre><code>mvn eclipse:eclipse</code></pre>
+<p>Before refreshing the project in eclipse, you need to make sure that the &#39;M2_REPO&#39; classpath variable is &#39;bound&#39; to your local .m2 folder. These variables are available in &#39;Window-&gt;Preferences-&gt;Java-&gt;Build Path-&gt;Classpath Variables&#39;</p>
+<p>Creating a variable will enable you to enter something like this:</p>
+<p><img src="img/007.png" alt=""></p>
+<p>If configured successfully, it may look like this:</p>
+<p><img src="img/006.png" alt=""></p>
+<p>When refreshed, the project should be fully resolved in eclipse:</p>
+<p><img src="img/008.png" alt=""></p>
+<p>Refresh the project in Eclipse, and the errors should be gone. You should be able to run the project and also run the test from within eclipse.</p>
+<h2>Package Goal</h2>
+<p>Try the following command:</p>
+<pre><code>mvn package</code></pre>
+<p>This should generate a pacemaker-console-maven-1.0.jar file in the target folder</p>
+<p>Try to work out the command line necessary to execute the application within your command prompt/shell.</p>
+<p>The command is:</p>
+<pre><code>mvn exec:java -Dexec.mainClass=&quot;controllers.Main&quot;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Explore Repositories</h1>
+<h2>Local Repository</h2>
+<p>Locate the local maven repository - it should be in your home folder/.m2/repository. It contains not just dependencies explicitly downloaded as part of the project you have just constructed, but also components downloaded by maven as part of the goals you have invoked. This may include components used by maven itself.</p>
+<p>If you examine the repository, and recall the naming system we adopted for the cliche component, then you can locate the generated jar file.</p>
+<h3>Install Goal</h3>
+<p>We can install the component we just generated into the local maven repository.  To do this, navigate to the folder containing your pom.xml and type:</p>
+<pre><code>mvn install</code></pre>
+<p>In the output from the install command, you can see the directory structure associated with the install of your pacemaker jar file. </p>
+<pre><code>[INFO] Installing C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven\target\pacemaker-console-maven-1.0.jar to C:\Users\Siobhan\.m2\repository\pacemaker\pacemaker-console-maven\1.0\pacemaker-console-maven-1.0.jar
+[INFO] Installing C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven\pom.xml to C:\Users\Siobhan\.m2\repository\pacemaker\pacemaker-console-maven\1.0\pacemaker-console-maven-1.0.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.781 s
+[INFO] Finished at: 2016-10-13T16:39:44+01:00
+[INFO] Final Memory: 11M/155M
+[INFO] ------------------------------------------------------------------------
+
+C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven&gt;</code></pre>
+<h2>Unix Launch Script</h2>
+<p>Executing the component from the command line requires a review of the locations of the generated jar file, and the associated libraries. The previous step will have centralized all of these into the maven 2 repository HOME/.m2/repository. The simplest mechanism for launching the application will be to compose a shell script.</p>
+<p>On Unix/Linux/OS X, the script can be structured as follows:</p>
+<pre><code>M2_REPO=/Users/edeleastar/.m2/repository
+export CLASSPATH=%CLASSPATH%:\
+${M2_REPO}/pacemaker/pacemaker-console-maven/1.0/pacemaker-console-maven-1.0.jar:\
+${M2_REPO}/com/thoughtworks/xstream/xstream/1.4.8/xstream-1.4.8.jar:\
+${M2_REPO}/com/google/guava/guava/18.0/guava.18.0.jar:\
+${M2_REPO}/asg-cliche/asg-cliche/1.0/asg-cliche-1.0.jar
+java controllers.Main</code></pre>
+<p>The first two entries establish environment variables to abbreviate the location of the maven repository, and the Pim jar just installed into it. The &#39;export CLASSPATH...&#39; entry sets up the classpath to include the pim jar file, and also the required libraries (also located in the repository). The final entry is the launch command itself, which invokes the main method in the appropriate class.</p>
+<h2>Windows Launch Script</h2>
+<p>The following batch file contains the launch script to construct the classpath appropriately. The Windows version of the launch script has a similar structure, but different syntax:</p>
+<pre><code>echo off
+set M2_REPO=C:/Users/Siobhan/.m2/repository
+set CLASSPATH=.;%CLASSPATH%;%M2_REPO%/pacemaker/pacemaker-console-maven/1.0/pacemaker-console-maven-1.0.jar;%M2_REPO%/com/thoughtworks/xstream/xstream/1.4.8/xstream-1.4.8.jar;%M2_REPO%/com/google/guava/guava/18.0/guava.18.0.jar;%M2_REPO%/asg-cliche/asg-cliche/1.0/asg-cliche-1.0.jar;&quot;
+java controllers.Main</code></pre>
+<p>The script is very sensitive to cases, semicolons (instead of colons in the original) and the presence of whitespace. Also, note carefully the structure of the M2_REPO folder path in particular.</p>
+<h2>Launching the app from the command prompt</h2>
+<p>Based on your OS, run the desired script.  You should expect to be using the pacemaker console user interface.  If you are not seeing the pacemaker console and see this output instead, there is a pom.xml fix detailed below:</p>
+<pre><code>C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven&gt;java controllers.Main
+Error: A JNI error has occurred, please check your installation and try again
+Exception in thread &quot;main&quot; java.lang.NoClassDefFoundError: de/vandermeer/asciitable/v2/render/V2_Width
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+        at java.lang.Class.privateGetMethodRecursive(Unknown Source)
+        at java.lang.Class.getMethod0(Unknown Source)
+        at java.lang.Class.getMethod(Unknown Source)
+        at sun.launcher.LauncherHelper.validateMainClass(Unknown Source)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: de.vandermeer.asciitable.v2.render.V2_Width
+        at java.net.URLClassLoader.findClass(Unknown Source)
+        at java.lang.ClassLoader.loadClass(Unknown Source)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+        at java.lang.ClassLoader.loadClass(Unknown Source)
+        ... 7 more</code></pre>
+<p>To get around this problem, add the following <strong><build></strong> section into your pom.xml, making sure you have the correct path for your Main class.</p>
+<pre><code class="lang-XML">  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+       &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt;
+        &lt;version&gt;2.4.3&lt;/version&gt;
+        &lt;executions&gt;
+          &lt;execution&gt;
+            &lt;phase&gt;package&lt;/phase&gt;
+            &lt;goals&gt;
+              &lt;goal&gt;shade&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+              &lt;transformers&gt;
+                &lt;transformer implementation=&quot;org.apache.maven.plugins.shade.resource.ManifestResourceTransformer&quot;&gt;
+                  &lt;mainClass&gt;controllers.Main&lt;/mainClass&gt;
+                &lt;/transformer&gt;
+              &lt;/transformers&gt;
+            &lt;/configuration&gt;
+          &lt;/execution&gt;
+        &lt;/executions&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;</code></pre>
+<p>Save your pom.xml and rerun the <strong>mvn install</strong> command.</p>
+<p>Rerun the desired batch script from above and you should now see the pacemaker console running.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>The complete maven pim project so far:</p>
+<ul>
+<li><a href="archives/pacemaker-console-maven.zip">pacemaker-console-maven.zip</a></li>
+</ul>
+<h2>Exercise 1</h2>
+<p>Install the following editor:</p>
+<ul>
+<li><a href="http://www.sublimetext.com/">http://www.sublimetext.com/</a></li>
+</ul>
+<p>Note that by just dragging / dropping a folder into the editor window a &#39;project&#39; view is presented, not unlike the package view in Eclipse. This includes syntax highlighting, but not of course refactoring or debugging.</p>
+<p>Make a superficial change to the user interface of the pacemaker application - a different greeting for example. Just using maven - and the execution scripts we have covered in the last step, build, test and interactively execute the application</p>
+<h2>Exercise 2</h2>
+<p>Suppose you wanted to use the joda date time library </p>
+<ul>
+<li><a href="http://www.joda.org/joda-time">http://www.joda.org/joda-time</a></li>
+</ul>
+<p>and say you are interested in its Duration data type:</p>
+<ul>
+<li><a href="http://www.joda.org/joda-time/key_duration.html">http://www.joda.org/joda-time/key_duration.html</a></li>
+</ul>
+<p>When just using eclipse, you would have incorporate the relevant jar files into the project. With maven however, you will need to incorporate the appropriate references into the pom file.</p>
+<p>This it the maven repository for joda time libraries:</p>
+<ul>
+<li><a href="http://mvnrepository.com/artifact/joda-time/joda-time">http://mvnrepository.com/artifact/joda-time/joda-time</a></li>
+</ul>
+<p>.. and the latest version is:</p>
+<ul>
+<li><a href="http://mvnrepository.com/artifact/joda-time/joda-time/2.9.4">http://mvnrepository.com/artifact/joda-time/joda-time/2.9.4</a></li>
+</ul>
+<p>Remember, the steps involved in bringing in a new library:</p>
+<ul>
+<li>incorporate the dependency into the pom</li>
+<li>do a build or test (via maven) </li>
+<li>regenerate the eclipse project using &#39;mvn eclipse:eclipse&#39;</li>
+<li>refresh the project in eclipse</li>
+</ul>
+<p>Try this now for joda time - perhaps introducing a Duration attribute into Activity.</p>
+<h2>Exercise 3: Maven Eclipse Plugin</h2>
+<p>This is a plugin for eclipse to support maven directly in the IDE:</p>
+<ul>
+<li><a href="http://www.eclipse.org/m2e/">http://www.eclipse.org/m2e/</a></li>
+</ul>
+<p>Documented here:</p>
+<ul>
+<li><a href="http://www.eclipse.org/m2e/documentation/m2e-documentation.html">http://www.eclipse.org/m2e/documentation/m2e-documentation.html</a></li>
+</ul>
+<p>Install the plugp-in using <strong>Eclipse-&gt;Help-&gt;Install new software..</strong> and the link: <a href="http://download.eclipse.org/technology/m2e/releases">http://download.eclipse.org/technology/m2e/releases</a> </p>
+<p>Convert the project we are currently working on to a Maven project using <strong>Configure -&gt; Convert to Maven Project</strong>.  </p>
+<p>You now should have a <strong>Maven</strong> option on your context sensitive menu. Explore these options.</p>
+<h2>Exercise 4: Gradle</h2>
+<p>Gradle is seen as a potential successor to Maven - and is in fact built on the maven infrastructure.</p>
+<ul>
+<li><a href="http://www.gradle.org/">http://www.gradle.org/</a></li>
+</ul>
+<p>Investigate the issues associate with moving from maven to Gradle. This page might be useful:</p>
+<ul>
+<li><a href="https://gradle.org/maven_vs_gradle/">https://gradle.org/maven_vs_gradle/</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="JUnit5">
+        <h1>Maven and JUnit5</h1>
+<p>Currently there is no direct Junit5 support in Eclipse:</p>
+<ul>
+<li><a href="https://www.eclipse.org/home/search.php?q=eclipse%20junit5">https://www.eclipse.org/home/search.php?q=eclipse%20junit5</a></li>
+</ul>
+<p>The JUnit team has developed a very basic provider for Maven Surefire that lets you run JUnit 4 and JUnit5 (Jupiter) tests via <strong>mvn test</strong>.</p>
+<p>Briefly review the <strong>junit5-maven-consumer</strong> project:</p>
+<ul>
+<li><a href="https://github.com/junit-team/junit5-samples">https://github.com/junit-team/junit5-samples</a></li>
+</ul>
+<p>We will now incorporate FirstTest.java and SecondTest.java into our pacemaker-console-maven project.  Once we are satisfied that our JUnit5 tests are running correctly via maven, we can then update some of our existing JUnit4 tests to JUnit5.</p>
+<h2>Incorporating JUnit5 capabilities</h2>
+<p>Edit the pom.xml file in your <strong>pacemaker-console-maven</strong> project to include the following.  Note that you may have the <strong><build></strong> element in your pom already, so just add this plugin to it:</p>
+<pre><code class="lang-XML">...
+&lt;build&gt;
+    &lt;plugins&gt;
+        ...
+            &lt;plugin&gt;
+                &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+                &lt;version&gt;2.19.1&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;includes&gt;
+                        &lt;include&gt;**/Test*.java&lt;/include&gt;
+                        &lt;include&gt;**/*Test.java&lt;/include&gt;
+                        &lt;include&gt;**/*Tests.java&lt;/include&gt;
+                        &lt;include&gt;**/*TestCase.java&lt;/include&gt;
+                    &lt;/includes&gt;
+                &lt;/configuration&gt;
+                &lt;dependencies&gt;
+                    &lt;dependency&gt;
+                        &lt;groupId&gt;org.junit.platform&lt;/groupId&gt;
+                        &lt;artifactId&gt;junit-platform-surefire-provider&lt;/artifactId&gt;
+                        &lt;version&gt;1.0.0-M2&lt;/version&gt;
+                    &lt;/dependency&gt;
+                    &lt;dependency&gt;
+                        &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+                        &lt;artifactId&gt;junit-jupiter-engine&lt;/artifactId&gt;
+                        &lt;version&gt;5.0.0-M2&lt;/version&gt;
+                    &lt;/dependency&gt;
+                    &lt;dependency&gt;
+                        &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
+                        &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
+                        &lt;version&gt;4.12.0-M1&lt;/version&gt;
+                    &lt;/dependency&gt;
+                &lt;/dependencies&gt;
+            &lt;/plugin&gt;
+&lt;/build&gt;
+...</code></pre>
+<p>Now add the following dependency to your pom (in the same area where you have the JUnit 4.11 dependency):</p>
+<pre><code class="lang-XML">        &lt;dependency&gt;
+            &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+            &lt;artifactId&gt;junit-jupiter-api&lt;/artifactId&gt;
+            &lt;version&gt;5.0.0-M2&lt;/version&gt;
+        &lt;/dependency&gt;</code></pre>
+<p>Save pom.xml and run the command, <strong>mvn validate</strong> to ensure that your pom.xml is ok. </p>
+<p>In the test/controllers package, we can test the JUnit5 dependency by creating this basic JUnit5 test class:</p>
+<pre><code class="lang-java">package controllers;
+
+//source:  https://github.com/junit-team/junit5-samples
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
+
+class FirstTest {
+
+    @Test
+    @DisplayName(&quot;My 1st JUnit 5 test!&quot;)
+    void myFirstTest(TestInfo testInfo) {
+        assertEquals(2, 1 + 1, &quot;1 + 1 should equal 2&quot;);
+        assertEquals(&quot;My 1st JUnit 5 test!&quot;, testInfo.getDisplayName(), () -&gt; &quot;TestInfo is injected correctly&quot;);
+    }
+
+}</code></pre>
+<p>Run <strong>mvn test</strong>. The output should show that <strong>FirstTest</strong> JUnit5 tests ran successfully.</p>
+<pre><code>[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ pacemaker-console-maven ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running controllers.FirstTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec - in controllers.FirstTest
+Running controllers.PacemakerAPITest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec - in controllers.PacemakerAPITest
+Running controllers.PersistenceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.366 sec - in controllers.PersistenceTest
+Running models.ActivityTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in models.ActivityTest
+Running models.LocationTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in models.LocationTest
+Running models.UserTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec - in models.UserTest
+
+Results :
+
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.623 s
+[INFO] Finished at: 2016-10-14T16:38:41+01:00
+[INFO] Final Memory: 11M/224M
+[INFO] ------------------------------------------------------------------------
+
+C:\Users\Siobhan\Dropbox\2016-2017\agile\workspace_maven\pacemaker-console-maven&gt;</code></pre>
+<h2>Adding a second test class</h2>
+<p>Now that JUnit5 is recognised by your app, create another test class in the test/controllers package:</p>
+<pre><code class="lang-java">package controllers;
+
+//source:  https://github.com/junit-team/junit5-samples
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
+class SecondTest {
+
+    @Test
+    @Disabled
+    void mySecondTest() {
+        assertEquals(2, 1, &quot;2 is not equal to 1&quot;);
+    }
+
+}</code></pre>
+<p>Save it and re-run <strong>mvn test</strong> again.  Your output should now show that you ran 20 tests with one skipped:</p>
+<pre><code>-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running controllers.FirstTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.143 sec - in controllers.FirstTest
+Running controllers.PacemakerAPITest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec - in controllers.PacemakerAPITest
+Running controllers.PersistenceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.243 sec - in controllers.PersistenceTest
+Running controllers.SecondTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.012 sec - in controllers.SecondTest
+Running models.ActivityTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in models.ActivityTest
+Running models.LocationTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec - in models.LocationTest
+Running models.UserTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in models.UserTest
+
+Results :
+
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 1</code></pre>
+<h2>Running JUnit5 inside Eclipse</h2>
+<p>Now that we have JUnit5 running through maven, we will now focus on running JUnit5 through Eclipse.  </p>
+<p>Right click on FirstTests.java and select the <strong>Run as</strong> option.  You will notice that you don&#39;t have the option to run as a JUnit test:</p>
+<p><img src="img/009.png" alt=""></p>
+<p>We can fix this by adding the following dependency to pom.xml:</p>
+<pre><code class="lang-XML">        &lt;dependency&gt;
+            &lt;groupId&gt;org.junit.platform&lt;/groupId&gt;
+            &lt;artifactId&gt;junit-platform-runner&lt;/artifactId&gt; 
+              &lt;version&gt;1.0.0-M2&lt;/version&gt;
+        &lt;/dependency&gt;</code></pre>
+<p>Then add the following class level annotation (and associated imports) to the two JUnit5 test classes:</p>
+<pre><code class="lang-java">import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
+
+@RunWith(JUnitPlatform.class)</code></pre>
+<p>Run <strong>mvn compile</strong> and once the build is successful, you should be now see the JUnit run option:</p>
+<p><img src="img/010.png" alt=""></p>
+<h2>Refactoring pacemaker tests</h2>
+<p>The purpose of the above steps was to incorporate JUnit5 capabilities into both the maven build of <strong>pacemaker-console-maven</strong> and the Eclipse IDE, whilst verifying that the JUnit5 tests were running correctly.  </p>
+<p>You are now in a position to refactor your pacemaker tests from JUnit4 to JUnit5, should you wish to do so.  You can delete the FirstTest and SecondTest classes as they were only for verification purposes.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & Dr. Siobhan Drohan.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

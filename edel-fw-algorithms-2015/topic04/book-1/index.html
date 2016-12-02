@@ -1,0 +1,452 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Analysis of Algorithms
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-05">
+      Lab-05
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-1/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-2/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-3/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-1/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-2/index.html">
+          Image_Processing_Lab
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-3/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-TDD-01/index.html">
+          TDD-01
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic04/book-1/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-1/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-2/index.html">
+          assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-02/index.html">
+          TDD-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-TDD-03/index.html">
+          TDD-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-TDD-04/index.html">
+          TDD-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-TDD-05/index.html">
+          TDD-Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-x-cmd-line/index.html">
+          Command-Line
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-1/index.html">
+          REPEAT-ASSIGNMENT
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-05">
+        <h1>Lab 5 - Analysis of Algorithms</h1>
+<p> On competing the lab you will:</p>
+<ul>
+<li>Know how to apply Scientific Method to analyse an algorithm.</li>
+<li>Empirically derive an equation to estimate the running time of an algorithm.</li>
+<li>Using tilda notation, derive a mathematical cost model for the running time of an algorithm</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Eclipse: Implement Sorter Class</h1>
+<p>Implement a sorting algorithm  and use the scientific method to predict it&#39;s running time
+<img src="img/00.jpg" alt=""> </p>
+<h3>Create Eclipse Project</h3>
+<ol>
+<li>Create a new project called <em>lab6</em>.  </li>
+<li>Create a <strong>package</strong> called <em>lab6</em>.</li>
+</ol>
+<h3>Add stdlib jar to the project</h3>
+<ol>
+<li>Create a folder called <em>lib</em> in your project folder.</li>
+<li>Download the <em>stdlib-package</em> jar from <a href="http://introcs.cs.princeton.edu/java/stdlib/stdlib-package.jar">here</a>  and copy to the <em>lib</em> folder.</li>
+<li>Select  the jar file, then right click and select Build Path -&gt; Add to Build Path.</li>
+</ol>
+<h3>Create Class</h3>
+<ol>
+<li>Create a class called Sorter and add the following method: </li>
+</ol>
+<pre><code>    public static int[] doSort(int[] a){
+
+        for (int i = 0; i &lt; a.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j &lt; a.length; j++)
+                if (a[j] &lt; a[index])
+                    index = j;
+
+            int smallerNumber = a[index]; 
+            a[index] = a[i];
+            a[i] = smallerNumber;
+        }
+        return a;
+    }</code></pre>
+<p>We want to make some observations of running time for the doSort(...) method. To do this we need a way to produce integer arrays to use and the input parameter for the doSort(..) method. Add the following method to the Sorter class:</p>
+<pre><code>    public static int[] generateIntArray(int n) {
+        Random rand = new Random();
+
+        int [] array = new int[n];
+
+        for (int i=0;i&lt;n;i++)
+            array[i]=rand.nextInt();
+
+        return array;
+    }</code></pre>
+<p>Finally, create the following main method that can execute the algorithm for randomised integer arrays of various sizes:</p>
+<pre><code>    public static void main(String[] args) {
+          int[] a = generateIntArray(10000);
+          Stopwatch    stopwatch = new Stopwatch();
+          doSort(a);
+          double    time = stopwatch.elapsedTime(); 
+          System.out.println(&quot;elapsed    time &quot; + time);
+    }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h2>Make Some Observations</h2>
+<p>Now run the program for different size inputs. It&#39;s a good idea to plan your experiment. start with a size of 10,000 and double the input size for each subsequent run.  Complete the following table with the running times. </p>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th align="center">Time (seconds)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10000</td>
+<td align="center">?</td>
+</tr>
+<tr>
+<td>20000</td>
+<td align="center">?</td>
+</tr>
+<tr>
+<td>40000</td>
+<td align="center">?</td>
+</tr>
+<tr>
+<td>80000</td>
+<td align="center">?</td>
+</tr>
+<tr>
+<td>160000</td>
+<td align="center">?</td>
+</tr>
+<tr>
+<td>320000</td>
+<td align="center">?</td>
+</tr>
+</tbody>
+</table>
+<h2>Analyse the data</h2>
+<p>For this part you may want to use a spreadsheet application. Enter your recorded data into a spreadsheet  and use the charting tool to plot the result. 
+The following are instructions for MS Excel:
+- Enter your data in a new blank spreadsheet
+<img src="img/01.png" alt=""> 
+- Now get the log values of the data. In the cell enter the following formula <code>=log(A1, 2)</code> where the first argument  is the cell containing to the 1st input size value (N) and the second argument is the base (i.e. base 2)
+<img src="img/02.png" alt=""> 
+- You can use the charting tool to &quot;fit&quot; an equation to the data. Select the data an click Insert-&gt;Scatter Chart
+<img src="img/03.png" alt=""> 
+- Select/click on the data points and right cligk to bring up a menu. Select &quot;inset Tr4end line. We want to use the Power law so select power as the regression/line type. Also, select &quot;show equation&quot;. You may need to look up the help option in the spreadsheet appication you&#39;re using. You should end up with something resembling the  following:
+<img src="img/04.png" alt=""> 
+- You can now use the equation as the basis for your hypothesis for predicting running time of you algorithm. remember the power depends on the algorithm, the coefficient depends on the hardware, software etc. of the machine. </p>
+<h3>#</h3>
+<h3>Hypothesis</h3>
+<p>Using the equation from the last section, predict the running time for an array of size 50,000. Then, run an experiment using your program to validate if your hypothesis is correct. It wont be exactly the same but should be close if your hypothesis is correct.</p>
+<h2>Birthday Problem</h2>
+<p>How likely is it that, in a group of people, at least 2 of them have the same birthday? Write a program that takes an integer N from the command line and generates a random sequence of integers between 0 and N – 1. Run experiments to validate the hypothesis that the number of integers generated before the first repeated value is found is $$sqrt(pi N/2)$$</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h2>Analytical Analysis</h2>
+<p>The following exercised will help you learn how to analyse your programs and code:</p>
+<h4>Initial Analysis</h4>
+<p>For each of the following algorithms, indicate:
+a) a natural size metric for its inputs; 
+b) its basic operation; 
+c) whether the basic operation count can be different for inputs of the same size.</p>
+<ul>
+<li>search for a key K in a list of n numbers</li>
+<li>computing the sum of n numbers</li>
+<li>computing n!(Factorial of n)</li>
+<li>finding the largest element in a list of n numbers</li>
+</ul>
+<h4>Mathematical Models and Tilda Notation</h4>
+<p>Refer to the code used previously in this lab:</p>
+<pre><code>    public static int[] doSort(int[] a){
+
+        for (int i = 0; i &lt; a.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j &lt; a.length; j++)
+                if (a[j] &lt; a[index])
+                    index = j;
+
+            int smallerNumber = a[index]; 
+            a[index] = a[i];
+            a[i] = smallerNumber;
+        }
+        return a;
+    }</code></pre>
+<ul>
+<li>What is the problem size for this algorithm?</li>
+<li>Identify the &quot;basic operation&quot; in the algorithm. Remember from lectures, a basic operation is usually in the inner loop that runs the most number of times. </li>
+<li>Define a cost model that includes the basic operation(hint: number of array accesses). This should take the form C(N) = ...). </li>
+<li>Use tilda notation to simlpify the cost model.</li>
+</ul>
+<p><strong>Tilda Notation</strong></p>
+<p>Use tilda notation to simlify the following:</p>
+<p>a. $$N + 1$$
+d. $$2N^3  + 15 N 2 + N$$
+b. $$1 + 1/N$$
+c. $$(1 + 1/N )(1 + 2/N )$$
+e. $$lg(2N )/lg N$$</p>
+<h2>Creative Exercises</h2>
+<p><strong>Throwing eggs from a building:</strong> Suppose that you have an N-story building and
+plenty of eggs. Suppose also that an egg is broken if it is thrown off floor F or higher,
+and unhurt otherwise. Devise a strategy to determine the value of F such that the
+number of broken eggs is ~lg N when using ~lg N throws, then find a way to reduce the
+cost to ~2lg F.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Frank Walsh & Eamonn De Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

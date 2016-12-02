@@ -1,0 +1,342 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Introduction to Android Development</h2>
+    <p> Top Level Topics </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="#"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    David Drohan, Eamonn de Leastar & John Fitzgerald.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic01-overview-and-tools/index.html">
+        1: Overview & Tools
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic01-overview-and-tools/talk-1-intro-to-android/intro.to.android.pdf">
+          Android Overview</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-overview-and-tools/talk-2-android-anatomy/02.anatomy.pdf">
+          Android Anatomy</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-overview-and-tools/talk-3-first-android-app/03.first.android.app.pdf">
+          Donation - "A First Look"</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-overview-and-tools/book-a-lab-01/index.html">
+          Lab-01</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-overview-and-tools/book-b-lab-02/index.html">
+          Lab-02</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic02-activities-and-navigation/index.html">
+        2: Activities & Navigation
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic02-activities-and-navigation/talk-4-ui-overview/overview.pdf">
+          Android UX</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-activities-and-navigation/talk-5-activities-layouts/activities-layouts.pdf">
+          Activities, Layouts & Menus</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-activities-and-navigation/book-a-donation-02/index.html">
+          Lab-03</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic03-app-structure/index.html">
+        3: Data Models, App Structure & Design
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03-app-structure/talk-6-app-structure/app-structure.pdf">
+          Application Structure</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-app-structure/talk-7-app-design/app-design.pdf">
+          Application Design</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-app-structure/book-a-donation-03/index.html">
+          Lab-04</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic04-persistence/index.html">
+        3: Data Persistence & Multithreading
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic04-persistence/talk-8-persistence/persistence.pdf">
+          Data Persistence & SQLite</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04-persistence/talk-9-multithreading/multithreading.pdf">
+          Android Multithreading</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04-persistence/book-a-donation-04/index.html">
+          Lab-05</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+          
+  <a class="ui raised link card" href="./topic01-overview-and-tools/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 1: Overview & Tools </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic01-overview-and-tools/talk-1-intro-to-android/intro.to.android.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this section we take a first look at Android, it&#39;s User Interface and the major components that make up an Android application. When you&#39;re finished this section you should :<ul>  <li>be familiar with the Android ecosystem</li>  <li>be aware of the major Android application components</li>  <li>be able to build a simple Android app and</li>  <li>be able to deploy an Android app to an emulator and run/test it</li></ul></p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic02-activities-and-navigation/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 2: Activities & Navigation </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic02-activities-and-navigation/talk-4-ui-overview/overview.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Android, like iOS, has introduced a new visual language for interaction on the devices it supports. This language is different from previous graphical environments (Windows, OSX), and is optimised for touch based interaction. In the second version of the Donation app we start to get a sense of this language and the programming paradigms to support it.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic03-app-structure/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 3: Data Models, App Structure & Design </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic03-app-structure/talk-6-app-structure/app-structure.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This first application is already composed of a range of classes related to each other via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app. We then move on to a new version of the app though which we will explore the major features of the SDK.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic04-persistence/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 3: Data Persistence & Multithreading </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic04-persistence/talk-8-persistence/persistence.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This first application is already composed of a range of classes related to each other via different types of relationships. We can capture this design graphically in UML, exploring the true nature of the structure of the app. We then move on to a new version of the app though which we will explore the major features of the SDK.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

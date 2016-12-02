@@ -1,0 +1,762 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Semantic HTML + More Layout
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-06">
+      Lab-06
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="10">
+      10
+    </a>
+    
+    <a class="item" data-tab="archives">
+      archives
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Lab-00
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic06/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a/index.html">
+          Lab-07-a
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-b/index.html">
+          Lab-07-b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-a/index.html">
+          Lab-11
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-06">
+        <h1>Objectives</h1>
+<p>Review CSS fundamentals Layout fundamentals via a series of discreet experiments. Each experiment is in a separate <code>html/css</code> file and explores important rules associated with the box model, layout and positioning via simple, concrete examples. Some of the material is drawn from the excellent <code>http://learnlayout.com</code> resource.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h2>Lab setup up</h2>
+<p>For all of the steps in this lab, you will use the following project:</p>
+<ul>
+<li><a href="archives/learn-css-layout-1-starter.zip">learn-css-layout-1-starter.zip</a></li>
+</ul>
+<p>Download and unzip this file, and open it in sublime. Remember, dragging/dropping the folder into Sublime should enable you to see something like this:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Each of the folders contains a single html + css file. These are largely empty and will be the focus of the experiments in this lab. You will be adding elements/rules to the html/css files (and examining the results in a browser). Each folder will focus on a different aspect of CSS layout techniques.</p>
+<h1>no layout</h1>
+<p>For the following experiments, work in the <code>01.no-layout</code> folder.</p>
+<p>Having no layout whatsoever is almost ok if all you want is one big column of content. However, if a user makes the browser window really wide, it gets kind of annoying to read: after each line your eyes have a long distance to travel right-to-left to the next line. </p>
+<p>Paste an example paragraph into the body:</p>
+<pre><code>  &lt;p&gt;
+    Vel et enim consulatu. Te civibus copiosae salutandi vel. Adhuc sonet libris ad eam, 
+    mundi affert mea ex. Dicunt feugiat patrioque et mel, id qui nusquam maluisset, ei vim 
+    justo ceteros vituperata. Mei saepe mediocrem ut. Repudiare definitiones ea ius, sint 
+    commodo est ea, nam no nemore diceret.
+  &lt;/p&gt;</code></pre>
+<p>Open the file in a browser and try various sizes.</p>
+<p>Before we fix this problem, let&#39;s make sure we&#39;re clear on the very important display property.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>the &quot;display&quot; property</h1>
+<p>For the following experiments, work in the <code>01.the-display-property</code> folder.</p>
+<p>Display is CSS&#39;s most important property for controlling layout. Every element has a default display value depending on what type of element it is. The default for most elements is usually block or inline. A block element is often called a block-level element. An inline element is always just called an inline element.</p>
+<h2>block</h2>
+<p>div is the standard block-level element. A block-level element starts on a new line and stretches out to the left and right as far as it can. Other common block-level elements are p and form, and new in HTML5 are header, footer, section, and more.</p>
+<h2>inline</h2>
+<p>span is the standard inline element. An inline element can wrap some text inside a paragraph <code>&lt;span&gt;</code> like this <code>&lt;/span&gt;</code> without disrupting the flow of that paragraph. The a element is the most common inline element, since you use them for links.</p>
+<h2>none</h2>
+<p>Another common display value is none. Some specialized elements such as script use this as their default. It is commonly used with JavaScript to hide and show elements without really deleting and recreating them.</p>
+<p>This is different from visibility. Setting display to none will render the page as though the element does not exist. visibility: hidden; will hide the element, but the element will still take up the space it would if it was fully visible.</p>
+<h2>other display values</h2>
+<p>There are plenty of more exotic display values, such as list-item and table. Here is an exhaustive list. We&#39;ll discuss inline-block and flex later on.</p>
+<h2>Experiments:</h2>
+<p>Bring in these elements into the html file:</p>
+<pre><code>  &lt;div class=&quot;status-1&quot;&gt;
+    div is the standard block-level element. A block-level element starts on a new line and stretches out to the left and right as far as it can. Other common block-level elements are p and form, and new in HTML5 are header, footer, section, and more.
+  &lt;/div&gt;
+
+  &lt;div class=&quot;status-2&quot;&gt;
+    Here is another example for test purposes
+  &lt;/div&gt;
+
+  &lt;div class=&quot;status-3&quot;&gt;
+    And this is a final paragraph. We will conduct some experiments in hiding and showing these paragraphs.
+  &lt;/div&gt;</code></pre>
+<p>..and these CSS rules:</p>
+<pre><code>.status-1 {
+  display:block;
+}
+
+.status-2 {
+  visibility: hidden;
+}
+
+.status-3 {
+  display:block;
+}</code></pre>
+<ul>
+<li>Change one of the <code>block</code> properties to <code>none</code> and observe the results. </li>
+<li>Remove the <code>visibility:hidden</code> line an observe the results</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>margin: auto;</h1>
+<p>For the following experiments, work in the <code>03.margin-auto</code> folder.</p>
+<p>Setting the width of a block-level element will prevent it from stretching out to the edges of its container to the left and right. Then, you can set the left and right margins to auto to horizontally center that element within its container. The element will take up the width you specify, then the remaining space will be split evenly between the two margins.</p>
+<p>Include the following elements in the html document:</p>
+<pre><code>  &lt;p&gt;
+    Lorem ipsum dolor sit amet, eos ut diam interesset, cu modo necessitatibus pri. Ne sit 
+    elit dicit, eum dico autem convenire an. Sed ei clita nullam, elit legimus 
+    voluptatibus ei his. Duo facilisi cotidieque at, invidunt platonem incorrupte ut has.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Vel et enim consulatu. Te civibus copiosae salutandi vel. Adhuc sonet libris ad eam, 
+    mundi affert mea ex. Dicunt feugiat patrioque et mel, id qui nusquam maluisset, ei vim 
+    justo ceteros vituperata. Mei saepe mediocrem ut. Repudiare definitiones ea ius, sint 
+    commodo est ea, nam no nemore diceret.
+  &lt;/p&gt;</code></pre>
+<p>Open in the browser and observe the margins.</p>
+<p>Now bring this into the css file:</p>
+<pre><code>body {
+  width: 600px;
+  margin: 0 auto; 
+}</code></pre>
+<p>.. and refresh. Also observer behavious as window is resized.</p>
+<p>The only problem occurs when the browser window is narrower than the width of your element. The browser resolves this by creating a horizontal scrollbar on the page. Let&#39;s improve the situation...</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>max-width</h1>
+<p>For the following experiments, work in the <code>03.max-width</code> folder.</p>
+<p>Using max-width instead of width in this situation will improve the browser&#39;s handling of small windows. This is important when making a site usable on mobile. </p>
+<pre><code>body {
+  max-width: 600px;
+  margin: 0 auto; 
+}</code></pre>
+<p>Using the same text we had previously, resize this page to check it out. The difference is quite subtle.</p>
+<p>You can also set the max-width to a percentage  - try this:</p>
+<pre><code>body {
+  max-width: 80%;
+  margin: 0 auto; 
+}</code></pre>
+<p>Note how this varies from pixels when the page is very narrow.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>box model</h1>
+<p>For the following experiments, work in the <code>05.box-model</code> folder.</p>
+<p>While we&#39;re talking about width, we should talk about width&#39;s big caveat: the box model. When you set the width of an element, the element can actually appear bigger than what you set: the element&#39;s border and padding will stretch out the element beyond the specified width. </p>
+<p>Look at the following example, where two elements with the same width value end up different sizes in the result.</p>
+<p>Hers are the elements:</p>
+<pre><code>  &lt;div class=&quot;simple&quot;&gt;
+    &lt;p&gt;
+      I&#39;m smaller...
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fancy&quot;&gt;
+    &lt;p&gt;
+      And I&#39;m bigger!
+    &lt;/p&gt;
+  &lt;/div&gt;</code></pre>
+<p>Your starter css already includes:</p>
+<pre><code>body {
+  max-width: 80%;
+  margin: 0 auto;
+}</code></pre>
+<p>... to keep things tidy. Now add:</p>
+<pre><code>.simple {
+  width: 500px;
+  margin: 20px auto;
+  border: dashed 1px;
+}
+
+.fancy {
+  width: 500px;
+  margin: 20px auto;
+  padding: 50px;
+  border: dashed 1px;
+}</code></pre>
+<p>Browse now and observe the results. The difference in size is because the padding is added to the width.</p>
+<p>(Note that in this a subsequent examples we are turning on a dash border to make the structural aspects of the page visible)</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Box Sizing</h1>
+<p>For the following experiments, work in the <code>06.box-sizing</code> folder.</p>
+<p>Over the generations, people realized that box calculations cab be error prone, so a new CSS property called box-sizing was created. </p>
+<p>When you set box-sizing: border-box; on an element, the padding and border of that element no longer increase its width. </p>
+<p>Using these elements as the last step:</p>
+<pre><code>  &lt;div class=&quot;simple dashed&quot;&gt;
+    &lt;p&gt;
+      We&#39;re the same size now!
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fancy dashed&quot;&gt;
+    &lt;p&gt;
+      Hooray!
+    &lt;/p&gt;
+  &lt;/div&gt;</code></pre>
+<p>Your started css includes this already:</p>
+<pre><code>body {
+  width: 600px;
+  margin: 0 auto; 
+}
+
+.dashed {
+  border: dashed 1px;
+}</code></pre>
+<p>Now add this:</p>
+<p>.simple {
+  width: 500px;
+  margin: 20px auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}</p>
+<p>.fancy {
+  width: 500px;
+  margin: 20px auto;
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}</p>
+<pre><code>
+Since this is so much better, some authors want all elements on all their pages to always work this way. Such authors put the following CSS on their pages:</code></pre>
+<ul>
+<li>{
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;<pre><code>    box-sizing: border-box;</code></pre>
+}
+~~~</li>
+</ul>
+<p>This ensures that all elements are always sized in this more intuitive way.</p>
+<p>Since box-sizing is pretty new, you should use the -webkit- and -moz- prefixes for now. This technique enables experimental features in specific browsers.</p>
+<p>Here is a &#39;canonical&#39; set of rules we will include in most of our CSS files from now on:</p>
+<pre><code>* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto; 
+}
+
+.dashed {
+  border: dashed 1px;
+}</code></pre>
+<p>These rules :</p>
+<ul>
+<li>setting the <code>border-box</code> sizing for all elements</li>
+<li>setting the overall page width to 80% of the page</li>
+<li>establishing a <code>dashed</code> class we might use for exploration purposes. We can use this when we want to see the boundaries of sections as we are exploring various options.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>position</h1>
+<p>For the following experiments, work in the <code>07-position</code> folder.</p>
+<p>In order to make more complex layouts, we need to discuss the position property. It has a bunch of possible values, and their names make no sense and are impossible to remember. Let&#39;s go through them one by one, but maybe you should bookmark this page too.</p>
+<h2>static</h2>
+<p>static is the default value. An element with position: static; is not positioned in any special way. A static element is said to be not positioned and an element with its position set to anything else is said to be positioned.</p>
+<p>To prove it, introduce this element:</p>
+<pre><code>  &lt;div class=&quot;static dashed&quot;&gt;
+    &lt;p&gt;
+      Vel et enim consulatu. Te civibus copiosae salutandi vel. Adhuc sonet libris ad eam, 
+      mundi affert mea ex. Dicunt feugiat patrioque et mel, id qui nusquam maluisset, ei vim 
+      justo ceteros vituperata. Mei saepe mediocrem ut. Repudiare definitiones ea ius, sint 
+      commodo est ea, nam no nemore diceret.
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;br&gt;</code></pre>
+<p>... and this rules:</p>
+<pre><code>.static {
+  position: static;
+}</code></pre>
+<p>Removing the <code>poistion:static;</code> entry should make no difference (try it).</p>
+<h2>relative</h2>
+<p>relative behaves the same as static unless you add some extra properties.</p>
+<p>Bring in this element:</p>
+<pre><code>  &lt;div class=&quot;relative1 dashed&quot;&gt;
+    &lt;p&gt;
+      Te iriure moderatius vis, nam prodesset honestatis te. Atqui facilisi at est. Ex duo vocent 
+      incorrupte eloquentiam. Agam deterruisset vel at, has no illum ipsum alterum. Virtute vivendo 
+      officiis his et, ius viris tollit homero ad. In sit euismod salutatus, cu eos malorum 
+      luptatum consulatu, et nec debet antiopam. 
+    &lt;/p&gt;
+  &lt;/div&gt;</code></pre>
+<p>... and this CSS:</p>
+<pre><code>.relative1 {
+  position: relative;
+}</code></pre>
+<p>Because we have specified <code>relative</code> without any extra parameters, there is no real effect to observe.</p>
+<p>Now try this:</p>
+<pre><code>  &lt;div class=&quot;relative2 dashed&quot;&gt;
+    &lt;p&gt;
+      Saperet maiestatis instructior te per, cu vel tota cotidieque. Vix illum regione deterruisset 
+      cu, ne cum diam suavitate complectitur, nec ex erant principes. Augue omittam no sea, putant 
+      forensibus usu te. Te iusto dicam verear mei. Dolorum posidonium no vel.    
+    &lt;/p&gt;
+  &lt;/div&gt;</code></pre>
+<p>... with this additional rule:</p>
+<pre><code>.relative2 {
+  position: relative;
+  top: -20px;
+  left: 20px;
+  width: 500px;
+}</code></pre>
+<p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element</p>
+<h2>fixed</h2>
+<p>A fixed element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. As with relative, the top, right, bottom, and left properties are used.</p>
+<p>Try this:</p>
+<pre><code>  &lt;div class=&quot;fixed dashed&quot;&gt;
+    &lt;p&gt;
+      Hello! How did I get here?
+    &lt;/p&gt;
+  &lt;/div&gt;</code></pre>
+<p>... with this:</p>
+<pre><code>.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+}</code></pre>
+<p>This should fix an element to the lower right of the canvas. Change the window dimensions and observe what happens to that element.</p>
+<h1>absolute</h1>
+<p>absolute is the trickiest position value. absolute behaves like fixed except relative to the nearest positioned ancestor instead of relative to the viewport. If an absolutely-positioned element has no positioned ancestors, it uses the document body, and still moves along with page scrolling. Remember, a &quot;positioned&quot; element is one whose position is anything except static.</p>
+<p>Here is a simple example:</p>
+<pre><code>.relative {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+.absolute {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+}</code></pre>
+<p>This stuff is tricky, but it&#39;s essential to creating great CSS layouts. On the next page we&#39;ll use position in a more practical example.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>position example</h1>
+<p>For the following experiments, work in the <code>08.position-example</code> folder.</p>
+<p>Bring in the following content:</p>
+<pre><code>  &lt;div class=&quot;container dashed&quot;&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt; &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;       &lt;/li&gt;
+        &lt;li&gt; &lt;a href=&quot;#&quot;&gt;Taco Menu&lt;/a&gt;  &lt;/li&gt;
+        &lt;li&gt; &lt;a href=&quot;#&quot;&gt;Draft List&lt;/a&gt; &lt;/li&gt;
+        &lt;li&gt; &lt;a href=&quot;#&quot;&gt;Hours&lt;/a&gt;      &lt;/li&gt;
+        &lt;li&gt; &lt;a href=&quot;#&quot;&gt;Directions&lt;/a&gt; &lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;     &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;section class=&quot;dashed&quot;&gt;
+      &lt;p&gt;
+        The &lt;code&gt;margin-left&lt;/code&gt; style for &lt;code&gt;section&lt;/code&gt;s makes sure there is room for the &lt;code&gt;nav&lt;/code&gt;. Otherwise the absolute and static elements would overlap
+      &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;dashed&quot;&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum 
+        interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas 
+        nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut 
+        aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis 
+        urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper 
+        ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae 
+        dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus 
+        pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+      &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;dashed&quot;&gt;
+      &lt;p&gt;
+        Notice what happens when you resize your browser. It works nicely!
+      &lt;/p&gt;
+    &lt;/section&gt;
+    &lt;footer class=&quot;dashed&quot;&gt;
+      &lt;p&gt;
+        If you use a fixed header or footer, make sure there is room for it! I put a &lt;code&gt;margin-bottom&lt;/code&gt; on the &lt;code&gt;body&lt;/code&gt;.
+      &lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;</code></pre>
+<p>Render in chrome and observe the layout.</p>
+<p>Now try these two rules:</p>
+<pre><code>nav {
+  position: absolute;
+  left: 0px;
+  width: 200px;
+}
+
+section {
+  margin-left: 200px;
+}</code></pre>
+<p>This locks the nav in at the top left, with the sections overlaying - but the margin keeps them from interfering with the nav. Try removing the <code>margin-left: 200px</code> property to see the difference.</p>
+<p>Now try this new rule:</p>
+<pre><code>footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+}</code></pre>
+<p>You should see the footer cling the the end of the viewport.</p>
+<p>Resize the window, and notice how the main sections will scroll behind the footer. If we dont like this behaviour, we can match the footer height with a corresponding margin entry in the the &#39;body&#39; rule:</p>
+<pre><code>body {
+  margin-bottom: 100px;
+}</code></pre>
+<p>Detecting the difference between including/excluding the above rule will take a bit of resizing/reload experiments. Essentially, if we leave the rule out then part of the content of our page will be completely excluded in certain circumstances. If we include it, then the entire page will always be visible - even if we need to scroll.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>float</h1>
+<p>For the following experiments, work in the <code>09.float</code> folder.</p>
+<p>Another CSS property used for layout is float. Float is intended for wrapping text around images.</p>
+<p>Download this image here and store it in the  <code>09.float</code> folder:</p>
+<p><img src="img/css-positioning.png" alt=""></p>
+<p>Now bring in this element:</p>
+<pre><code class="lang-html">  &lt;p&gt;
+    &lt;img src=&quot;css-positioning.png&quot; alt=&quot;An Image&quot;&gt;
+    the position CSS data type denotes a coordinate in a 2D space used to set a location relative to a box. A specific 
+    coordinate can be given by a two keywords, with specific offsets. A keyword represent one edge of the element&#39;s box or 
+    the medium line between two edges: left, right, top, bottom or center (which represents either the center between the 
+    left and right edges, or the center between the top or bottom edges, depending on the context). An offset can be 
+    either a relative value, expressed as a percentage, or an absolute length value. Positive values are offset towards 
+    the right or towards the bottom, whichever is suitable. Negative values are offset in the other.
+  &lt;/p&gt;</code></pre>
+<p>Render the above in chrome and observe the results.</p>
+<p>Now try this additional rule here:</p>
+<pre><code>img {
+  float: right;
+  margin: 0 0 1em 1em;
+}</code></pre>
+<p>... and notice the changed positioning of the image.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="10">
+        <h1>clear</h1>
+<p>For the following experiments, work in the <code>10.clear</code> folder.</p>
+<p>The clear property is important for controlling the behavior of floats. </p>
+<p>Bring in these elements:</p>
+<pre><code>  &lt;section class=&quot;box dashed&quot;&gt;
+    &lt;p&gt;
+      Lorem ipsum dolor sit amet, eos ut diam interesset, cu modo necessitatibus pri.
+    &lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section class=&quot;dashed&quot;&gt;
+    &lt;p&gt;
+      Vel et enim consulatu. Te civibus copiosae salutandi vel. Adhuc sonet libris ad eam, 
+      mundi affert mea ex. Dicunt feugiat patrioque et mel, id qui nusquam maluisset, ei vim 
+      justo ceteros vituperata. Mei saepe mediocrem ut. Repudiare definitiones ea ius, sint 
+      commodo est ea, nam no nemore diceret.
+    &lt;/p&gt;
+  &lt;/section&gt;</code></pre>
+<p>Try this rule:</p>
+<pre><code>.box {
+  float: left;
+  width: 30%;
+}</code></pre>
+<p>Look carefully at what has happened: In this case, the section element is actually after the div. However, since the div is floated to the left, this is what happens: the text in the section is floated around the div and the section surrounds the whole thing. </p>
+<p>What if we wanted the section to actually appear after the floated element?</p>
+<p>Introduce this new rule:</p>
+<pre><code>.after-box {
+  clear: left;
+}</code></pre>
+<p>... and we will give the second paragraph this class:</p>
+<pre><code>  &lt;section class=&quot;after-box dashed&quot;&gt;
+    &lt;p&gt;
+      Vel et enim consulatu. Te civibus copiosae salutandi vel. Adhuc sonet libris ad eam, 
+      mundi affert mea ex. Dicunt feugiat patrioque et mel, id qui nusquam maluisset, ei vim 
+      justo ceteros vituperata. Mei saepe mediocrem ut. Repudiare definitiones ea ius, sint 
+      commodo est ea, nam no nemore diceret.
+    &lt;/p&gt;
+  &lt;/section&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="archives">
+        <h1>Solution</h1>
+<p>Here is an archive of the completed lab:</p>
+<ul>
+<li><a href="archives/learn-css-layout-1.zip">learn-css-layout-1.zip</a></li>
+</ul>
+<p>You can browse the completed lab sessions from here:</p>
+<ul>
+<li><a href="archives/index.html">learn-css-layout-1</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn De Leastar & Dr. Brenda Mullally .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

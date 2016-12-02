@@ -1,0 +1,25 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto; 
+}
+
+.dashed {
+  border: dashed 1px;
+}
+
+.simple {
+  width: 500px;
+  margin: 20px auto;
+}
+
+.fancy {
+  width: 500px;
+  margin: 20px auto;
+  padding: 50px;
+}

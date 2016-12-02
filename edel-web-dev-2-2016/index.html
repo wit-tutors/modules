@@ -1,0 +1,742 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder">  Web App Dev</h2>
+    <p> Top Level Topics </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="#"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar .
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic01/index.html">
+        Introducing Spacebook
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic01/book-static-spacebook/index.html">
+          Lab-01</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic02/index.html">
+        Tools + Dynamic Web Introduction
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.pdf">
+          Dynamic Web Applications</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/book-tools/index.html">
+          Lab-02</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic03/index.html">
+        Starting to Play
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-1-starting-to-play/b-starting-to-play.pdf">
+          Starting to Play</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-2-spacebook-skeleton/c-spacebook-skeleton.pdf">
+          Spacebook Skeleton</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-3-play-project-structure/a-play-project-structure.pdf">
+          Play Project Structure</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-4-routes-controllers-views/b-routes-controllers-views.pdf">
+          Routes, Controllers & Views</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-5-building-web-apps/c-building-web-apps.pdf">
+          Building Web Applications</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/book-play-skeleton/index.html">
+          Lab-03</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic04/index.html">
+        Routes & Actions
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-1-exercises/d-exercises.pdf">
+          Exercises</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-2-play-review/a-play-review.pdf">
+          Play Review</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-3-form-design/b-form-design.pdf">
+          Form Design</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-4-form-input/c-form-input.pdf">
+          Models</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/book/index.html">
+          Lab-04</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic05/index.html">
+        Forms & Models
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-1/a-review-forms.pdf">
+          Review Forms</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-2/b-models_and_databases.pdf">
+          Models & Databases</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-3/c-sessions.pdf">
+          Sessions</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/book/index.html">
+          Lab-05</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic06/index.html">
+        Templates
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-2/b-status-and-members-list.pdf">
+          Status & Members List</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-3/c-following-friends.pdf">
+          Following Friends</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-5/e-assignment-1.pdf">
+          Assignment 2</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/book-a/index.html">
+          Lab-06</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic07/index.html">
+        Messages & Pictures
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-1/a-exercises.pdf">
+          Lab 06 Exercises</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-2/b-status-and-members-list.pdf">
+          Status & Members List</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-3/c-following-friends.pdf">
+          Following Friends</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/book/index.html">
+          Lab-07</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic08/index.html">
+        Test Driven Development
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-1/d-blog-feature.pdf">
+          Blog</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-2/a-tdd.pdf">
+          Test Driven Development</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-3/b-play-tests.pdf">
+          Play Tests</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/book/index.html">
+          Lab-08</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic09/index.html">
+        Modeling
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic09/talk-1/a-webdev-assign-2.pdf">
+          Assignment 1 Solution</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09/talk-2/yaml-tricks.pdf">
+          YAML & Preloaded Images</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09/talk-4/a-uml-intro.pdf">
+          UML</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09/talk-5/b-spacebook-model.pdf">
+          Spacebook Model</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09/book-a/index.html">
+          Lab-09</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09/book-b/index.html">
+          Lab-10</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic10/index.html">
+        Git Repositories
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic10/talk-1/a-repositories-1.pdf">
+          Git</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10/talk-2/b-repositories-2.pdf">
+          Repository Structure</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10/talk-3/c-assignment-2.pdf">
+          Assignment 2</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10/book-a/index.html">
+          Lab-11</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10/book-b/index.html">
+          Lab-12</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic11/index.html">
+        Javascript 1
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic11/talk-1/a-Javascript-intro.pdf">
+          Javascript Introduction</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11/talk-2/b-javascript-basics.pdf">
+          Javascript Basics</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11/talk-3/c-javascript-arrays.pdf">
+          Javascript Arrays & Objects</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11/book-1/index.html">
+          Lab-13</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic12/index.html">
+        Javascript II
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic12/talk-1/a-selection-looping.pdf">
+          Selection & Iteration</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12/talk-2/b-arrays.pdf">
+          Arrays</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12/talk-3/c-objects.pdf">
+          Objects</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12/talk-4/d-functions.pdf">
+          Functions</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12/book-1/index.html">
+          Lab-14</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+          
+  <a class="ui raised link card" href="./topic01/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Introducing Spacebook </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic01/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>As we move from static web sites to dynamic web application, we will adopt a new case study called Spacebook. This is a mini social-network application, which we will progressively enhance in successive labs.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic02/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Tools + Dynamic Web Introduction </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic02/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.gif">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic03/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Starting to Play </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic03/talk-1-starting-to-play/b-starting-to-play.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>To build a web application we need a web framework. This will define the superstructure of our application and provide essential features to enable us to compose a complicated and efficient web application</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic04/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Routes & Actions </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic04/talk-1-exercises/d-exercises.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The framework structure should now be feeling more familiar. Here we review the major features of the framework again, this time focusing on how the framework delivers the major features of a Web Application.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic05/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Forms & Models </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic05/talk-1/a-review-forms.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p> Forms are the central mechanism for acquiring information from a user - enabling simple strings and numbers to be entered into a page and &#39;submitted&#39; to an application. The model classes we introduce are saved here and we can subsequently query and update any objects we insert. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic06/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Templates </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic06/talk-2/b-status-and-members-list.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Implementing a way of following friends requires a new Model class. This will model a &quot;Friendship&quot; relationship, one of which will be created whenever a user &#39;follows&#39; another user.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic07/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Messages & Pictures </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic07/talk-1/a-exercises.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A key feature of spacebook is to enable users to leave messages for their friends. This will require a new Model class to represent individual Message objects, new actions in our Profile controller + new features in our templates.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic08/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Test Driven Development </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic08/talk-1/d-blog-feature.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>TDD is an important programming technique, central to modern development. Here we introduce the main features of the technique.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic09/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Modeling </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic09/talk-1/a-webdev-assign-2.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We can use UML to model out current version of Spacebook. This model will show the classes in the Model package and their relationships. We are building this model after we have already the classes, however we could have composed the model before or concurrent with the implementation of the classes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic10/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Git Repositories </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic10/talk-1/a-repositories-1.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic11/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Javascript 1 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic11/talk-1/a-Javascript-intro.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic12/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Javascript II </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic12/talk-1/a-selection-looping.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

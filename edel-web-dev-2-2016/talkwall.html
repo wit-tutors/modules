@@ -1,0 +1,988 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder">  Web App Dev</h2>
+    <p> All Slides in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar .
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic02/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.pdf">
+      Dynamic Web Applications
+    </a>
+    
+    <a class="item" href="topic03/talk-1-starting-to-play/b-starting-to-play.pdf">
+      Starting to Play
+    </a>
+    
+    <a class="item" href="topic03/talk-2-spacebook-skeleton/c-spacebook-skeleton.pdf">
+      Spacebook Skeleton
+    </a>
+    
+    <a class="item" href="topic03/talk-3-play-project-structure/a-play-project-structure.pdf">
+      Play Project Structure
+    </a>
+    
+    <a class="item" href="topic03/talk-4-routes-controllers-views/b-routes-controllers-views.pdf">
+      Routes, Controllers & Views
+    </a>
+    
+    <a class="item" href="topic03/talk-5-building-web-apps/c-building-web-apps.pdf">
+      Building Web Applications
+    </a>
+    
+    <a class="item" href="topic04/talk-1-exercises/d-exercises.pdf">
+      Exercises
+    </a>
+    
+    <a class="item" href="topic04/talk-2-play-review/a-play-review.pdf">
+      Play Review
+    </a>
+    
+    <a class="item" href="topic04/talk-3-form-design/b-form-design.pdf">
+      Form Design
+    </a>
+    
+    <a class="item" href="topic04/talk-4-form-input/c-form-input.pdf">
+      Models
+    </a>
+    
+    <a class="item" href="topic05/talk-1/a-review-forms.pdf">
+      Review Forms
+    </a>
+    
+    <a class="item" href="topic05/talk-2/b-models_and_databases.pdf">
+      Models & Databases
+    </a>
+    
+    <a class="item" href="topic05/talk-3/c-sessions.pdf">
+      Sessions
+    </a>
+    
+    <a class="item" href="topic06/talk-2/b-status-and-members-list.pdf">
+      Status & Members List
+    </a>
+    
+    <a class="item" href="topic06/talk-3/c-following-friends.pdf">
+      Following Friends
+    </a>
+    
+    <a class="item" href="topic06/talk-5/e-assignment-1.pdf">
+      Assignment 2
+    </a>
+    
+    <a class="item" href="topic07/talk-1/a-exercises.pdf">
+      Lab 06 Exercises
+    </a>
+    
+    <a class="item" href="topic07/talk-2/b-status-and-members-list.pdf">
+      Status & Members List
+    </a>
+    
+    <a class="item" href="topic07/talk-3/c-following-friends.pdf">
+      Following Friends
+    </a>
+    
+    <a class="item" href="topic08/talk-1/d-blog-feature.pdf">
+      Blog
+    </a>
+    
+    <a class="item" href="topic08/talk-2/a-tdd.pdf">
+      Test Driven Development
+    </a>
+    
+    <a class="item" href="topic08/talk-3/b-play-tests.pdf">
+      Play Tests
+    </a>
+    
+    <a class="item" href="topic09/talk-1/a-webdev-assign-2.pdf">
+      Assignment 1 Solution
+    </a>
+    
+    <a class="item" href="topic09/talk-2/yaml-tricks.pdf">
+      YAML & Preloaded Images
+    </a>
+    
+    <a class="item" href="topic09/talk-4/a-uml-intro.pdf">
+      UML
+    </a>
+    
+    <a class="item" href="topic09/talk-5/b-spacebook-model.pdf">
+      Spacebook Model
+    </a>
+    
+    <a class="item" href="topic10/talk-1/a-repositories-1.pdf">
+      Git
+    </a>
+    
+    <a class="item" href="topic10/talk-2/b-repositories-2.pdf">
+      Repository Structure
+    </a>
+    
+    <a class="item" href="topic10/talk-3/c-assignment-2.pdf">
+      Assignment 2
+    </a>
+    
+    <a class="item" href="topic11/talk-1/a-Javascript-intro.pdf">
+      Javascript Introduction
+    </a>
+    
+    <a class="item" href="topic11/talk-2/b-javascript-basics.pdf">
+      Javascript Basics
+    </a>
+    
+    <a class="item" href="topic11/talk-3/c-javascript-arrays.pdf">
+      Javascript Arrays & Objects
+    </a>
+    
+    <a class="item" href="topic12/talk-1/a-selection-looping.pdf">
+      Selection & Iteration
+    </a>
+    
+    <a class="item" href="topic12/talk-2/b-arrays.pdf">
+      Arrays
+    </a>
+    
+    <a class="item" href="topic12/talk-3/c-objects.pdf">
+      Objects
+    </a>
+    
+    <a class="item" href="topic12/talk-4/d-functions.pdf">
+      Functions
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic02/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Dynamic Web Applications </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.gif">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The applications to date have been static - essentially a collecting of individual web pages. For more sophisticated web site we need to move to creating web applications. This will require a shift to considering the web site as an aggregating of fragments of web pages, composed and assembled by a program we also write.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-1-starting-to-play/b-starting-to-play.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Starting to Play </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-1-starting-to-play/b-starting-to-play.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>To build a web application we need a web framework. This will define the superstructure of our application and provide essential features to enable us to compose a complicated and efficient web application</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-2-spacebook-skeleton/c-spacebook-skeleton.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Spacebook Skeleton </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-2-spacebook-skeleton/c-spacebook-skeleton.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This is the starter web application you will build in this weeks lab. It will always have a very specific structure coupled with a tightly controller life cycle for handing requests.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-3-play-project-structure/a-play-project-structure.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Play Project Structure </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-3-play-project-structure/a-play-project-structure.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Play applications follow a specific layout and structure. Understanding this is the key to making sense of play applications, allowing the developer to &#39;grow&#39; applications in an orderly manner.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-4-routes-controllers-views/b-routes-controllers-views.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Routes, Controllers & Views </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-4-routes-controllers-views/b-routes-controllers-views.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Play applications are orchestrated through the routes file. This matches the urls the application can &#39;serve&#39; to the controllers, which will build the views specific to each request.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-5-building-web-apps/c-building-web-apps.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Building Web Applications </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-5-building-web-apps/c-building-web-apps.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Web applications can be designed, implemented and tested in an orderly manner - as part of a structured and organised process. Central to such a process is a series of &#39;user stories&#39;, which concisely capture the features the application is to deliver.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/talk-1-exercises/d-exercises.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Exercises </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/talk-1-exercises/d-exercises.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The exercises in this weeks lab will reinforce your understand of routes/controllers. Here we preview how you might approach these exercises.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/talk-2-play-review/a-play-review.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Play Review </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/talk-2-play-review/a-play-review.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The framework structure should now be feeling more familiar. Here we review the major features of the framework again, this time focusing on how the framework delivers the major features of a Web Application.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/talk-3-form-design/b-form-design.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Form Design </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/talk-3-form-design/b-form-design.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A key differentiator between a Static Web Site and a Web Application is forms. This is where the user is invited to entered information - and this data may be retained and stored somewhere. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/talk-4-form-input/c-form-input.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Models </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/talk-4-form-input/c-form-input.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Retrieving information from the form and storing it is a model is at the heart of Form design. Here we look at the implementation of a simple sign up form.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/talk-1/a-review-forms.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Review Forms </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/talk-1/a-review-forms.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Another look at the forms concept. Forms are the central mechanism for acquiring information from a user - enabling simple strings and numbers to be entered into a page and &#39;submitted&#39; to an application.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/talk-2/b-models_and_databases.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Models & Databases </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/talk-2/b-models_and_databases.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A database is where we store information between requests. The model classes we introduce are saved here and we can subsequently query and update any objects we insert. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/talk-3/c-sessions.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Sessions </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/talk-3/c-sessions.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Keeping track of the currently logged in user is a challenge - as HTTP is, by definition &#39;stateless&#39;. In Play we have a simple and convenient session mechanism, which can conveniently remember information about the currently logged in user.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06/talk-2/b-status-and-members-list.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Status & Members List </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06/talk-2/b-status-and-members-list.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The Status Text is a text field the the user can enter on her profile page. The members list will be a list of actual users (not a hard coded list of the simpsons) that will be displayed on the Members page </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06/talk-3/c-following-friends.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Following Friends </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06/talk-3/c-following-friends.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Implementing a way of following friends requires a new Model class. This will model a &quot;Friendship&quot; relationship, one of which will be created whenever a user &#39;follows&#39; another user.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06/talk-5/e-assignment-1.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Assignment 2 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06/talk-5/e-assignment-1.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This is the specification for Assignment 2. You can either pursue a project using a (new) CSS framework, or attempt a set of stories in the Spacebook/Play project.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07/talk-1/a-exercises.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Lab 06 Exercises </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07/talk-1/a-exercises.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>These are the worked solutions to the exercises in Lab 06</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07/talk-2/b-status-and-members-list.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Status & Members List </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07/talk-2/b-status-and-members-list.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The Status Text is a text field the the user can enter on her profile page. The members list will be a list of actual users (not a hard coded list of the simpsons) that will be displayed on the Members page </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07/talk-3/c-following-friends.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Following Friends </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07/talk-3/c-following-friends.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Implementing a way of following friends requires a new Model class. This will model a &quot;Friendship&quot; relationship, one of which will be created whenever a user &#39;follows&#39; another user.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08/talk-1/d-blog-feature.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Blog </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08/talk-1/d-blog-feature.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A preview of the Blog Feature - developed as part of Lab 09.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08/talk-2/a-tdd.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Test Driven Development </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08/talk-2/a-tdd.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>TDD is an important programming technique, central to modern development. Here we introduce the main features of the technique.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08/talk-3/b-play-tests.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Play Tests </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08/talk-3/b-play-tests.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The Play framework incorporates TDD directly into its features, enabling tests to be executed against the models in an elegant and simple manner. TDD is an important programming technique, central to modern development. Here we introduce the main features of the technique.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09/talk-1/a-webdev-assign-2.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Assignment 1 Solution </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09/talk-1/a-webdev-assign-2.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A review of the completion of the Assignment stories. In addition (in the exercisess) an exploration of a way of making simple &#39;components&#39; out of the UI such that individuals views can reuse these components in different contexts.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09/talk-2/yaml-tricks.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> YAML & Preloaded Images </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09/talk-2/yaml-tricks.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The YAML file can be enriched to load friends/follower information in addition to basic data. However, it cannot load images - but we can do this from the bootstrap file.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09/talk-4/a-uml-intro.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> UML </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09/talk-4/a-uml-intro.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Unified Modelling Language is a visual language for representing various aspects of a software solution. A very large and comprehensive language which would take considerable study to master. Here we walk though a general introduction.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09/talk-5/b-spacebook-model.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Spacebook Model </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09/talk-5/b-spacebook-model.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We can use UML to model out current version of Spacebook. This model will show the classes in the Model package and their relationships. We are building this model after we have already the classes, however we could have composed the model before or concurrent with the implementation of the classes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10/talk-1/a-repositories-1.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Git </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10/talk-1/a-repositories-1.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>An introduction to the role of git in managing the source of a project + the main tools you will use in setting up and managing a git repository</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10/talk-2/b-repositories-2.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Repository Structure </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10/talk-2/b-repositories-2.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Creating, committing and pushing/pulling to/from a remote repository is the key skill in working with git. Here we review the major aspects to this workflow, which you will explore in the lab.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10/talk-3/c-assignment-2.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Assignment 2 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10/talk-3/c-assignment-2.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This is the specification for the second assignment. It is defined as a series of stories.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11/talk-1/a-Javascript-intro.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Javascript Introduction </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11/talk-1/a-Javascript-intro.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Place javascript in its proper context, and explore its relationship to the browser.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11/talk-2/b-javascript-basics.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Javascript Basics </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11/talk-2/b-javascript-basics.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>How to run a javascript programme in Eclipse and a browser. The basic types and features of the language. How to single step through a javascript programm.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11/talk-3/c-javascript-arrays.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Javascript Arrays & Objects </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11/talk-3/c-javascript-arrays.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Arrays and Objects are fundamentally similiar, and understanding this is one of the keys to mastering the language</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12/talk-1/a-selection-looping.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Selection & Iteration </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12/talk-1/a-selection-looping.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>What true and false mean in Javascript. The primary selection and looping constructs.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12/talk-2/b-arrays.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Arrays </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12/talk-2/b-arrays.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Arrays are a type of object that are ordered by the index of each item it contains.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12/talk-3/c-objects.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Objects </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12/talk-3/c-objects.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Javascript are effectively  unordered key/value pairs. The key is formally known as a property and the value can be any valid JavaScript type, even another object.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic12/talk-4/d-functions.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Functions </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic12/talk-4/d-functions.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Functions contain blocks of code that need to be executed repeatedly.  Functions can take zero or more arguments, and can optionally return a value.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

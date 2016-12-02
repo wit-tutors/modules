@@ -1,0 +1,736 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Web Site Dev</h2>
+    <p> Top Level Topics </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="#"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn De Leastar & Dr. Brenda Mullally .
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic01/index.html">
+        Introducing HTML
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic01/talk-1/a-introduction.pdf">
+          The Nature of the Web</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/talk-2/b-html-page-structure.pdf">
+          HTML Basics</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/book-a/index.html">
+          Lab-00</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/book-b/index.html">
+          Lab-01</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic02/index.html">
+        Introducing CSS
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-1/a-html-elements.pdf">
+          HTML Elements</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-2/css-1.pdf">
+          CSS Basics</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-3/css2.pdf">
+          CSS Rules</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-4/css3.pdf">
+          CSS Cascade</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/book/index.html">
+          Lab-02</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic03/index.html">
+         The Box Model
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-1/classes-ids-divs.pdf">
+          Classes, IDs & Divs</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-2/a-box-model-1.pdf">
+          Box Fundamentals</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-3/a-box-model-example.pdf">
+          Box Model Example</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-4/c-project-1.pdf">
+          Project 1 Specification</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/book/index.html">
+          Lab-03</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic04/index.html">
+        Layout
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-1/a-box-model-example.pdf">
+          Box Model Example</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-2/b-multicolumn-layout.pdf">
+          Multicolumn Layout</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-3/d-html_evolution.pdf">
+          The Evolution of the Web</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-4/style-guide.pdf">
+          HTML/CSS Style Guide</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/book/index.html">
+          Lab-04</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic05/index.html">
+        Navigation
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-1/a-web-design.pdf">
+          Web Design</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-2/b-css-navigation.pdf">
+          Navigation</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/book/index.html">
+          Lab-05</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic06/index.html">
+        Semantic HTML + More Layout
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-1/a-css-layout-part1.pdf">
+          CSS Layout</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-2/a-semantic-html.pdf">
+          Semantic HTML</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/book/index.html">
+          Lab-06</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic07/index.html">
+        Layout + Review
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-1/case-study.pdf">
+          Case Study</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-2/a-css-layout-part2.pdf">
+          CSS Layout</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/book-a/index.html">
+          Lab-07-a</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/book-b/index.html">
+          Lab-07-b</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic08/index.html">
+        Deployment
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-1/command-prompt.pdf">
+          Command Prompt</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-2/deployment.pdf">
+          Deployment</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-3/harp.pdf">
+          Harp & Surge</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/book/index.html">
+          Lab-08</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic09/index.html">
+        Templates
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic09/talk-1/templates.pdf">
+          Templates</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09/talk-2/project-2.pdf">
+          Project 2 Specification</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09/talk-3/tables.pdf">
+          HTML Tables</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09/book/index.html">
+          Lab-09</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic10/index.html">
+        Semantic-UI Part I
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic10/talk-a/project-structure.pdf">
+          Project Structure</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10/talk-b/sematic-ui-part-1.pdf">
+          Semantic-UI I</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10/talk-c/sematic-ui-part-2.pdf">
+          Semantic-UI II</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10/talk-d/sematic-ui-part-3.pdf">
+          Semantic-UI III</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10/book/index.html">
+          Lab-10</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic11/index.html">
+        Semantic-UI Part II
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic11/talk-1-semantic-part-4/semantic-4.pdf">
+          Semantic Part IV</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11/talk-2-forms/html5_forms.pdf">
+          Forms</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11/talk-3-css-futures/c-css-futures.pdf">
+          CSS Futures</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11/book-a/index.html">
+          Lab-11</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic12/index.html">
+        Assignments
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic12/talk-1/c-project-1.pdf">
+          Project 1 Specification</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12/talk-2/project-2.pdf">
+          Project 2 Specification</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+          
+  <a class="ui raised link card" href="./topic01/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Introducing HTML </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic01/talk-1/a-introduction.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We explore the foundations of web and get to grips with the fundamentals of the HTML language. As you will see, its structure and format is relatively straightforward, and you will be able to understand the basics very quickly. We will be focusing on a small number of &#39;tags&#39; to get started, and also on the ways in which different html files can be linked together to form a site. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic02/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Introducing CSS </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic02/topic.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>CSS is the language we use the style HTML. This language looks simple at first, but as we will see in the next few weeks, it is considerably more complex than HTML and will require a very careful approach to get right</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic03/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header">  The Box Model </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic03/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In order to style the same html elements in different ways we need to use classes. This allows us to target specific occurences of an html element for styling purposes. At the heart of the layout engine in web browsers is a concept called the &#39;box model&#39;. This defines a general layout structure for all HTML elements, providing a language for specifying important dimensions and relationships to other elements.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic04/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Layout </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic04/talk-1/a-box-model-example.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Using an understanding of the fundamental features of the box model we can start to produce more interesting page layouts. Specifically, we can break a page down into sections and use box model properties to dimension and position these sections in a flexible manner. This will allow is to grow multi-column pages that can vary according to the size of the browser windows used to view them.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic05/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Navigation </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic05/talk-1/a-web-design.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Central to a well design site is a clear and understandably navigation structure. This must easily allow the user to explore the site, provide sufficient context such that the user knows where they are at any stage, and do this in a visually pleasing and efficient manner.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic06/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Semantic HTML + More Layout </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic06/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>HTML5, the latest version of the standard, introduced a range of new elements. Among the most interesting are the so-called &#39;semantic&#39; elements. These attempt to re-examine the proliferation of DIVs in html, and proposed an alternative vocabulary that would better reflect the purpose of many of these DIVs</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic07/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Layout + Review </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic07/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A well structure site combines efficient and carefully composed CSS + well structured html content, cleanly indented with an appropriate selection of semantic elements. A simple site is reviewed here along with some more CSS layout techniques.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic08/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Deployment </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic08/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The web site will ultimately have to be moved from your local folders to a public web server where it can be accessed via a public domain. Modern tools can make this quite seamless and convenient.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic09/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Templates </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic09/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Modern web site development is more more likely to break large pages into smaller &#39;fragements&#39; - called templates. This allows a more convenient way of building large and complex sites, and facilitates greater reuse of page elements, styles and components.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic10/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Semantic-UI Part I </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic10/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Semantic-UI is a powerful and expressive CSS framework, providing a broad range of style, components and layouts.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic11/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Semantic-UI Part II </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic11/talk-1-semantic-part-4/semantic-4.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A further exploration of the Semantic-UI library - with a focus on icons, variations in segments and responsive grids</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic12/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Assignments </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic12/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>These are the two assignment specifications collected here for convenience.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

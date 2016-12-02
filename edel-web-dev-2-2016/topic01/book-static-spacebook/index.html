@@ -1,0 +1,586 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Introducing Spacebook
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-01">
+      Lab-01
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="active item" href="../../topic01/book-static-spacebook/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-tools/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-play-skeleton/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-b/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-a/index.html">
+          Lab-11
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-b/index.html">
+          Lab-12
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-1/index.html">
+          Lab-13
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-1/index.html">
+          Lab-14
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-01">
+        <p>Objectives</p>
+<p>In this lab we reconfigure a web site to use the Semantic UI CSS framework. This will involve downloading and installing the latest version into our project, and then reconfiguring the elements, classes and IDs from the earlier project to use the Semantic UI design vocabulary.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<p>Download and unzip thie project:</p>
+<ul>
+<li><a href="./archives/spacebook-static.zip">spacebook.zip</a></li>
+</ul>
+<p>Open in both sublime and in a browser and explore the site.</p>
+<p>Create new folder called spacebook-semantic - and copy over all the files from the above project into this new project</p>
+<p>Visit :</p>
+<ul>
+<li><a href="http://semantic-ui.com" target="_blank"> Semantic UI </a></li>
+</ul>
+<p>and download the archive.</p>
+<p>Extract the archive. It contains a folder called &#39;dist&#39;. Rename this folder to &#39;semantic&#39;, and copy this folder into your WebContent folder in your new project.</p>
+<p>Your project may now look like this:</p>
+<ul>
+<li><a href="./archives/spacebook-static/home.html">spacebook-static</a></li>
+</ul>
+<p>Remove all of contents of &#39;home.css&#39; - but leave the file itself in place. This will remove all styles, so your home page should look like this:</p>
+<p><img src="./img/02x.png" alt=""></p>
+<p>Most of the links should work - but all pages should be unstyled.</p>
+<h2>semanitc.css</h2>
+<p>Into the head of home.html, introduce the following entry:</p>
+<pre><code>    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;semantic/semantic.min.css&quot; media=&quot;screen&quot; /&gt;</code></pre>
+<p>This will include the semantic style sheet into your home page. It will immediately be restyled something like this:</p>
+<p><img src="img/03x.png" alt=""></p>
+<p>Place the above link is all the pages in the project. You should see small changes in the style throught the site consistent with the above image.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Menu</h1>
+<p>Move the navigation section to top of body (to before the header):</p>
+<pre><code class="lang-html">  &lt;body id=&quot;home&quot;&gt;
+     &lt;div id=&quot;navigation&quot;&gt;
+      &lt;ul id=&quot;tabs&quot;&gt;
+        &lt;li id=&quot;home&quot;&gt;    &lt;a href=&quot;home.html&quot;&gt;Home&lt;/a&gt;     &lt;/li&gt;
+        &lt;li id=&quot;members&quot;&gt; &lt;a href=&quot;members.html&quot;&gt;Members&lt;/a&gt;  &lt;/li&gt;
+        &lt;li id=&quot;homreprofile&quot;&gt; &lt;a href=&quot;homeprofile.html&quot;&gt;Profile&lt;/a&gt;  &lt;/li&gt;
+        &lt;li id=&quot;logout&quot;&gt;  &lt;a href=&quot;login.html&quot;&gt;Logout&lt;/a&gt;   &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;header&quot;&gt;
+      &lt;h1&gt;SpaceBook: Homer&#39;s Home Page&lt;/h1&gt;
+    &lt;/div&gt;</code></pre>
+<p>Remove <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> elements from within &#39;navigation&#39; and change the id from navigation to the class ui menu:</p>
+<pre><code class="lang-html">    &lt;div class=&quot;ui menu&quot;&gt;
+      &lt;a href=&quot;home.html&quot;&gt;Home&lt;/a&gt;
+      &lt;a href=&quot;members.html&quot;&gt;Members&lt;/a&gt;  
+      &lt;a href=&quot;homeprofile.html&quot;&gt;Profile&lt;/a&gt;  
+      &lt;a href=&quot;login.html&quot;&gt;Logout&lt;/a&gt;
+    &lt;/div&gt;</code></pre>
+<p>Remove the &#39;id=&quot;home&quot; from the body element, and replace the div element with a nav</p>
+<pre><code>  &lt;body&gt;
+    &lt;nav class=&quot;ui menu&quot;&gt;
+      &lt;a href=&quot;home.html&quot;&gt;Home&lt;/a&gt;
+      &lt;a href=&quot;members.html&quot;&gt;Members&lt;/a&gt;  
+      &lt;a href=&quot;homeprofile.html&quot;&gt;Profile&lt;/a&gt;  
+      &lt;a href=&quot;login.html&quot;&gt;Logout&lt;/a&gt;
+    &lt;/nav&gt;</code></pre>
+<p>Examining the page in the browser, we see the navigation section is no longer even visible:</p>
+<p><img src="./img/04.png" alt=""></p>
+<p>Introduce class for each menu item as shown:</p>
+<pre><code class="lang-html">      &lt;a class=&quot;ui item&quot; href=&quot;home.html&quot;&gt;Home&lt;/a&gt;
+      &lt;a class=&quot;ui item&quot; href=&quot;members.html&quot;&gt;Members&lt;/a&gt;  
+      &lt;a class=&quot;ui item&quot; href=&quot;homeprofile.html&quot;&gt;Profile&lt;/a&gt;  
+      &lt;a class=&quot;ui item&quot; href=&quot;login.html&quot;&gt;Logout&lt;/a&gt;</code></pre>
+<p>This should introduce a tab like menu along the top:</p>
+<p><img src="./img/04x.png" alt=""></p>
+<p>Replicate the above in:</p>
+<ul>
+<li>members.html</li>
+<li>homeprofile.html</li>
+</ul>
+<p><img src="./img/05.png" alt="">
+<img src="./img/06.png" alt=""></p>
+<h2>Exercise:</h2>
+<p>Explore alternative Menu styles here:</p>
+<ul>
+<li><a href="http://semantic-ui.com/collections/menu.html" target="_blank"> Semantic UI Menus </a></li>
+</ul>
+<p>In this documentation, the &#39;&lt;&gt;&#39; icon allows you to reveal the html used to achieve the various effects. See if you can make sense of one or two of the effects, and try them out in your menus.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Header</h1>
+<p>This is the Semantic UI approach to headers:</p>
+<ul>
+<li><a href="http://semantic-ui.com/elements/header.html" target="_blank"> Semantic UI Headers </a></li>
+</ul>
+<p>Examine all of the headers in your pages - for example:</p>
+<pre><code class="lang-html">    &lt;div class=&quot;header&quot;&gt;
+      &lt;h1&gt;SpaceBook: Homer&#39;s Home Page&lt;/h1&gt;
+    &lt;/div&gt;</code></pre>
+<p>and replace with something like this:</p>
+<pre><code>  &lt;header&gt;
+    &lt;h2 class=&quot;ui header&quot;&gt;SpaceBook: Homer&#39;s Home Page&lt;/h2&gt;
+  &lt;/header&gt;</code></pre>
+<p>Similar for members and homeprofile and all the other pages.</p>
+<h1>Exercise:</h1>
+<p>Explore alternative Header styles here:</p>
+<ul>
+<li><a href="http://semantic-ui.com/elements/header.html" target="_blank"> Semantic UI Headers </a></li>
+</ul>
+<p>Experiment and explore ....</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Sections and Articles</h1>
+<p>The &#39;maincontent&#39; div of the home page currently looks like this:</p>
+<pre><code>    &lt;div id=&quot;maincontent&quot;&gt;
+      &lt;div id=&quot;primary&quot;&gt;     
+        &lt;h2&gt; Friends &lt;/h2&gt; 
+        &lt;ul&gt; 
+          &lt;li&gt;&lt;a href=&quot;marge.html&quot;&gt;marge&lt;/a&gt;, (&lt;a href=&quot;drop/marge&quot;&gt;drop&lt;/a&gt;)&lt;/li&gt; 
+          &lt;li&gt;&lt;a href=&quot;lisa.html&quot;&gt;lisa&lt;/a&gt;, (&lt;a href=&quot;drop/lisa&quot;&gt;drop&lt;/a&gt;)&lt;/li&gt; 
+        &lt;/ul&gt;
+      &lt;/div&gt;  
+      &lt;div id=&quot;secondary&quot;&gt;
+        &lt;h2&gt; Messages &lt;/h2&gt; 
+        &lt;ul&gt; 
+          &lt;li&gt;marge says...&quot;Hey there Homer, when are you going to work?&quot;&lt;/li&gt;      
+          &lt;li&gt;lisa says...&quot;Move off the couch dad!&quot;&lt;/li&gt;     
+        &lt;/ul&gt;      
+      &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+<p>Contrast the above with this version:</p>
+<pre><code>    &lt;section&gt;
+      &lt;article&gt;     
+        &lt;h3&gt; Friends &lt;/h3&gt; 
+        &lt;ul&gt; 
+          &lt;li&gt;&lt;a href=&quot;marge.html&quot;&gt;marge&lt;/a&gt;, (&lt;a href=&quot;drop/marge&quot;&gt;drop&lt;/a&gt;)&lt;/li&gt; 
+          &lt;li&gt;&lt;a href=&quot;lisa.html&quot;&gt;lisa&lt;/a&gt;, (&lt;a href=&quot;drop/lisa&quot;&gt;drop&lt;/a&gt;)&lt;/li&gt; 
+        &lt;/ul&gt;
+      &lt;/article&gt;  
+      &lt;article&gt;
+        &lt;h3&gt; Messages &lt;/h3&gt; 
+        &lt;ul&gt; 
+          &lt;li&gt;marge says...&quot;Hey there Homer, when are you going to work?&quot;&lt;/li&gt;      
+          &lt;li&gt;lisa says...&quot;Move off the couch dad!&quot;&lt;/li&gt;     
+        &lt;/ul&gt;      
+      &lt;/article&gt;
+    &lt;/section&gt;</code></pre>
+<p>Note we are moving to using <code>&lt;section&gt;</code> and <code>&lt;article&gt;</code> elements for greater readability of the document. There should be no change in the UX - as the above are &#39;semantic&#39; (in the html5 sense) elements. These are now more correctly called &#39;section&#39; elements, and are discussed here:</p>
+<ul>
+<li><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#sections" target="_blank"> HTML Sections </a></li>
+</ul>
+<h2>Segments</h2>
+<p>Semantic UI has the notion of a &#39;segment&#39; (as opposed to sections), which offers some interesting options:</p>
+<ul>
+<li><a href="http://semantic-ui.com/elements/segment.html" target="_blank"> HTML Sections </a></li>
+</ul>
+<pre><code class="lang-html">    &lt;section class=&quot;ui segment&quot;&gt;</code></pre>
+<p>Introducing it in the above should give you a subtle change:</p>
+<p><img src="./img/07.png" alt=""></p>
+<p>Reproduce the above structure in all pages.</p>
+<p>Your version should now start to resemble this:</p>
+<ul>
+<li><a href="archives/before-grid/home.html" target="_blank"> Spacebook Semantic </a></li>
+</ul>
+<h1>Exercise</h1>
+<p>Explore alternative segment styles here:</p>
+<ul>
+<li><a href="http://semantic-ui.com/elements/segment.html" target="_blank"> HTML Sections </a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Grid</h1>
+<p>Examine the main section on &#39;home.html&#39; again - and make the adjustments shown below:</p>
+<pre><code class="lang-html">    &lt;section class=&quot;ui two column grid segment&quot;&gt;
+      &lt;article class=&quot;ui column&quot;&gt;     
+        &lt;h3&gt; Friends &lt;/h3&gt; 
+        &lt;ul&gt; 
+          &lt;li&gt;&lt;a href=&quot;marge.html&quot;&gt;marge&lt;/a&gt;, (&lt;a href=&quot;drop/marge&quot;&gt;drop&lt;/a&gt;)&lt;/li&gt; 
+          &lt;li&gt;&lt;a href=&quot;lisa.html&quot;&gt;lisa&lt;/a&gt;, (&lt;a href=&quot;drop/lisa&quot;&gt;drop&lt;/a&gt;)&lt;/li&gt; 
+        &lt;/ul&gt;
+      &lt;/article&gt;  
+      &lt;article class=&quot;ui column&quot;&gt;
+        &lt;h3&gt; Messages &lt;/h3&gt; 
+        &lt;ul&gt; 
+          &lt;li&gt;marge says...&quot;Hey there Homer, when are you going to work?&quot;&lt;/li&gt;      
+          &lt;li&gt;lisa says...&quot;Move off the couch dad!&quot;&lt;/li&gt;     
+        &lt;/ul&gt;      
+      &lt;/article&gt;
+    &lt;/section&gt;</code></pre>
+<p>This will have a dramatic effect on the page layout:</p>
+<p><img src="./img/08.png" alt=""></p>
+<p>Do same for homeprofile:</p>
+<pre><code>    &lt;section class=&quot;ui two column grid segment&quot;&gt;
+      &lt;article class=&quot;ui column&quot;&gt;    
+        &lt;p&gt; 
+          &lt;img src=&quot;images/homer.gif&quot;/&gt; 
+        &lt;/p&gt; 
+        &lt;form action=&quot;homeprofile/upload&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;  
+          &lt;input type=&quot;file&quot; name=&quot;userfile&quot; value=&quot;&quot;  /&gt;     
+          &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;upload&quot;  /&gt;  
+        &lt;/form&gt;  
+      &lt;/article&gt;  
+      &lt;article class=&quot;ui column&quot;&gt;
+        &lt;form action=&quot;homeprofile/changetext&quot; method=&quot;post&quot;&gt;         
+          &lt;textarea name=&quot;profiletext&quot; cols=&quot;30&quot; rows=&quot;8&quot; &gt;&lt;/textarea&gt;  
+          &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Change&quot;  /&gt; 
+        &lt;/form&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;</code></pre>
+<p><img src="./img/09.png" alt=""></p>
+<h2>Grid System</h2>
+<p>Explore the grid system here:</p>
+<ul>
+<li><a href="http://semantic-ui.com/collections/grid.html" target="_blank"> Semantic UI </a></li>
+</ul>
+<p>(Including the &#39;very rich history&#39; article when you have time!)</p>
+<p>The mechansisms here completely replace the floating/clearing and nesting + width dimensions of the legacy CSS we carried in to this project. We have just touched the surface here - establishing a effective 2 column layout with very little effort.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Navigation Again</h1>
+<p>Currently our navigation is mechanism is not complete - in that it does not give visual feedback on the &#39;active&#39; menu item.</p>
+<p>If we mark one of the menu items as follows in &#39;home.html&#39;:</p>
+<pre><code>    &lt;nav class=&quot;ui menu&quot;&gt;
+      &lt;a class=&quot;ui active item&quot; href=&quot;home.html&quot;&gt;Home&lt;/a&gt;
+      &lt;a class=&quot;ui item&quot; href=&quot;members.html&quot;&gt;Members&lt;/a&gt;  
+      &lt;a class=&quot;ui item&quot; href=&quot;homeprofile.html&quot;&gt;Profile&lt;/a&gt;  
+      &lt;a class=&quot;ui item&quot; href=&quot;login.html&quot;&gt;Logout&lt;/a&gt;
+    &lt;/nav&gt;</code></pre>
+<p>then &#39;members.html&#39; can be like this:</p>
+<pre><code>    &lt;nav class=&quot;ui menu&quot;&gt;
+      &lt;a class=&quot;ui item&quot; href=&quot;home.html&quot;&gt;Home&lt;/a&gt;
+      &lt;a class=&quot;ui active item&quot; href=&quot;members.html&quot;&gt;Members&lt;/a&gt;  
+      &lt;a class=&quot;ui item&quot; href=&quot;homeprofile.html&quot;&gt;Profile&lt;/a&gt;  
+      &lt;a class=&quot;ui item&quot; href=&quot;login.html&quot;&gt;Logout&lt;/a&gt;
+    &lt;/nav&gt;</code></pre>
+<p>and &#39;homeprofile.html&#39;:</p>
+<pre><code>    &lt;nav class=&quot;ui menu&quot;&gt;
+      &lt;a class=&quot;ui item&quot; href=&quot;home.html&quot;&gt;Home&lt;/a&gt;
+      &lt;a class=&quot;ui item&quot; href=&quot;members.html&quot;&gt;Members&lt;/a&gt;  
+      &lt;a class=&quot;ui active item&quot; href=&quot;homeprofile.html&quot;&gt;Profile&lt;/a&gt;  
+      &lt;a class=&quot;ui item&quot; href=&quot;login.html&quot;&gt;Logout&lt;/a&gt;
+    &lt;/nav&gt;</code></pre>
+<p>You should see appropriate indication from the menu bar as to which page you are currently on in the site.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Forms</h1>
+<p>Designing forms is more complicated that the elements of Semantic UI we have looked at so far.</p>
+<ul>
+<li><a href="http://semantic-ui.com/collections/form.html" target="_blank"> Forms </a></li>
+</ul>
+<p>We will return to it in a few weeks. In the meantime, we can take change the <code>second</code> column of home profile - currently looking like this:</p>
+<pre><code>      &lt;article class=&quot;ui column&quot;&quot;&gt;
+        &lt;form action=&quot;homeprofile/changetext&quot; method=&quot;post&quot;&gt;         
+          &lt;textarea name=&quot;profiletext&quot; cols=&quot;30&quot; rows=&quot;8&quot; &gt;&lt;/textarea&gt;  
+          &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Change&quot;  /&gt; 
+        &lt;/form&gt;
+      &lt;/article&gt;</code></pre>
+<p>and replace it with this version:</p>
+<pre><code>      &lt;article class=&quot;ui form column&quot;&gt;
+        &lt;form action=&quot;homeprofile/changetext&quot; method=&quot;post&quot;&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;label&gt;Status&lt;/label&gt; 
+            &lt;textarea name=&quot;profiletext&quot;&gt; &lt;/textarea&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;input class=&quot;ui blue button&quot; type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Change&quot; /&gt;
+          &lt;/div&gt;  
+        &lt;/form&gt;
+      &lt;/article&gt;</code></pre>
+<p>There will be some subtle changes to the layout, but we will need to explore these in more depth later. Have a read of some of the documentation in the meantime. </p>
+<p>Notice the structure of though. In general a form consistes of fields. and fields may have labels. Also, note the style of the button after we made the above change.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>Archive of the Lab so far</p>
+<ul>
+<li><a href="./archives/spacebook-semantic.zip">spacebook-semantic.zip</a></li>
+</ul>
+<h2>Exercise 1: Containing Segment</h2>
+<p>Here is a slightly changed version of the same site</p>
+<ul>
+<li><a href="archives/final/home.html" target="_blank"> Improved Spacebook </a></li>
+</ul>
+<p>Can you see the difference? Can you change your lab to be exactly the same as this one? </p>
+<h2>Exercise 2: List</h2>
+<p>Semantic UI has its own take on how lists can be implemented:</p>
+<ul>
+<li><a href="http://semantic-ui.com/elements/list.html" target="_blank"> Semantic UI Lists </a></li>
+</ul>
+<p>Explore some of the options here - and change the list - say on the home page - to use some of these styles.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

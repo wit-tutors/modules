@@ -1,0 +1,17 @@
+body {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.simple {
+  width: 500px;
+  margin: 20px auto;
+  border: dashed 1px;
+}
+
+.fancy {
+  width: 500px;
+  margin: 20px auto;
+  padding: 50px;
+  border: dashed 1px;
+}

@@ -1,0 +1,577 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Layout + Review
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-07-b">
+      Lab-07-b
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="archives">
+      archives
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Lab-00
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a/index.html">
+          Lab-07-a
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic07/book-b/index.html">
+          Lab-07-b
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-a/index.html">
+          Lab-11
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-07-b">
+        <h1>Objectives</h1>
+<p>Review CSS fundamentals Layout fundamentals via a series of discreet experiments. Each experiment is in a separate html/css file and explores important rules associated with the box model, layout and positioning via simple, concrete examples. Some of the material is drawn from the excellent <code>http://learnlayout.com</code> resource.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h2>Lab Setup up</h2>
+<p>For all of the steps in this lab, you will use the following project:</p>
+<ul>
+<li><a href="archives/learn-css-layout-2-starter.zip">learn-css-layout-2-starter.zip</a></li>
+</ul>
+<p>Download and unzip this file, and open it in sublime. Remember, dragging/dropping the folder into Sublime should enable you to see something like this:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Each of the folders contains a single html + css file. These are largely empty and will be the focus of the experiments in this lab. You will be adding elements/rules to the html/css files (and examining the results in a browser). Each folder will focus on a different aspect of CSS layout techniques.</p>
+<h1>the clearfix hack</h1>
+<p>For the following experiments, work in the <code>11.the-clearfix-hack</code> folder.</p>
+<p>Sometimes when float is used, content can overflow beyond its container.</p>
+<p>Open the file in a browser and see how the image is displayed within the <code>&lt;p</code>&gt; element. </p>
+<p>To fix this we make the second <code>&lt;div</code>&gt; a member of the clearfix class as shown here</p>
+<pre><code>&lt;div class=&quot;clearfix&quot;&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;css-positioning.png&quot; alt=&quot;An Image&quot;&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, Uh oh... this image is taller than the element containing it, and it&#39;s floated, so it&#39;s overflowing outside of its container!
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p>In the css file add the following to the existing rules:</p>
+<pre><code>
+.clearfix{
+    overflow: auto;
+}</code></pre>
+<p>Now save and refresh the browser page. The border now contains the image completely. </p>
+<p><img src="./img/02.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>float layout example</h1>
+<p>It is common to do entire layouts using float. Here is the same layout we did last week using position, but this time we use float.</p>
+<p>Open the 12.float-layout-example folder.</p>
+<p>In the index.html file you have a <code>&lt;nav</code>&gt; element and two <code>&lt;section</code>&gt; elements.</p>
+<p>In the css we will float the <code>&lt;nav</code>&gt; elment to the left and set the margin on the <code>&lt;section</code>&gt; elements to be the width of the <code>&lt;nav</code>&gt; element.,</p>
+<pre><code>nav {
+  float: left;
+  width: 200px;
+  border: solid 1px;  
+}
+
+section {
+  margin-left: 200px;
+  border: solid 1px;
+}
+
+.clearfix {
+  overflow: auto;
+}</code></pre>
+<p>We include the .clearfix here just to ensure that if the nav ever increased to be longer than the sections, or if the sections shrunk to be smaller than the nav that it would not overflow its container (because it is floated left).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>percent width</h1>
+<p>For the following experiments use the files in 13.percent-width folder</p>
+<p>Percent is a measurement unit relative to the containing block. It&#39;s great for images: here we can make the image that it is always 50% the width of its container. </p>
+<p>Edit the style.css file and add the following:</p>
+<pre><code>article img {
+  float: right;
+  width: 50%;
+}</code></pre>
+<p>By including this rule we float the image to the right of the other content.
+Open the index.html page and view the result.
+Fix the overflow of the image using clearfix.</p>
+<p>Refresh the index.html page in the percent-width folder and try shrinking the viewport down to see what happens. The image should always show as 50% of the container size.</p>
+<p>You could always use max-width to limit how big the image can grow to. It is worth experiementing with min-width aswell.</p>
+<p>You can use percent for layout (instead of position), but this can require more work. </p>
+<p>Add the following to the css file:</p>
+<pre><code>nav {
+  float: left;
+   width: 25%;
+   border: solid 1px;
+}
+
+section {
+  margin-left: 25%;
+  border: solid 1px;
+}</code></pre>
+<p>In this example, the nav content starts to degrade in how it looks when the window is too narrow. It comes down to what works for your content.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>media queries</h1>
+<p>For the following experiments use the files in 14.media-queries folder</p>
+<p>Ideally you want your web development to be &quot;Responsive&quot; so that it resonds to changes in the device it is viewd on. It should look good no matter what.</p>
+<p>Media queries are the most powerful tool for doing this. Let&#39;s take the layout that uses percent widths and have it display in one column when the browser is too small to fit the menu in the sidebar.</p>
+<p>add the following to your css file</p>
+<pre><code>@media screen and (min-width:600px) {
+  nav {
+    float: left;
+    width: 25%;
+    border: solid 1px;
+  }
+  section {
+    margin-left: 25%;
+    border: solid 1px;
+  }
+}
+@media screen and (max-width:599px) {
+  nav li {
+    display: inline;
+  }
+}</code></pre>
+<p>What happens here to our rules?</p>
+<p>When the screen is 600px wide or larger the rules for nav and section are applied to our content. Thus we see two columns with borders, one for the nav and one for the sections.</p>
+<p>When the screen is less than 600px wide the only rule applied is to change the default display property for the list items from block to inline, all the other content is rendered underneath.</p>
+<p>Now our layout looks great even on mobile browsers. Here are some popular sites that use media queries:</p>
+<ul>
+<li><a href="http://mediaqueri.es/">http://mediaqueri.es/</a></li>
+</ul>
+<p>There is a whole lot more that you can detect using media queries, you are not just restricted to min-width and max-width. Check out the options here:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries</a></li>
+</ul>
+<p>Experiment with what happens if you want the li elements to infact show as a block? try commenting out the rule for screens smaller than 600px. What happens?</p>
+<p>You can also make your layout look even better on mobile using meta viewport:</p>
+<ul>
+<li><a href="https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/">https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>inline-block</h1>
+<p>For the following experiments use the files in 15.inline-block folder</p>
+<p>You can create a grid of boxes that fills the browser and wraps nicely. This has been possible for a long time using float. But now with inline-block it&#39;s even easier. inline-block elements are like inline elements but they can have a width and height.</p>
+<p>This is the hard way of doing it (using float). 
+Add the following rules to your css file:</p>
+<pre><code>.box {
+  float: left;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+  border: solid 1px;
+}
+
+.after-box {
+  clear: left;
+  border: solid 1px;
+}</code></pre>
+<p>Save and refresh the page. You should now see boxes filling 80% of the width of the body. Each box is floated left with a specific height and width with a border and margin. </p>
+<p>The last box must clear the others.</p>
+<p>This is the easier way of doing it using inline-block.
+Replace the previous rules with the following rules:</p>
+<pre><code>.box {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+  border: solid 1px;  
+}
+
+.after-box {
+  border: solid 1px;
+}</code></pre>
+<p>Save and refresh the page. Some older browsers do give trouble in their support of inline-block.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>inline-block layout</h1>
+<p>For the following experiments use the files in 16.inline-block-layout folder</p>
+<p>You can use inline-block for layouts (as opposed to position or float).</p>
+<p>There are things to keep in mind:</p>
+<ul>
+<li>inline-block elements are affected by vertical-align property, which you probably want to set to top.</li>
+<li>You need to set the width of each column</li>
+<li>There will be a gap between the columns if there is any whitespace between them in the HTML</li>
+</ul>
+<p>Open the css file and add the following rule:</p>
+<pre><code>nav{
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+}
+.column{
+  display: inline-block;
+  vertical-align: top;
+  width: 74%;
+}</code></pre>
+<p>This will display the navigation to the left taking up 25% of the body, and the column will display to the right taking up 74% of the body. (The other 1% is taken up in default padding for inline-blocks)</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>column</h1>
+<p>For the following experiments use the files in 17.column folder</p>
+<p>There is a new set of CSS properties that let you easily make multi-column text.
+View the index.html page in the browser to see its current format.</p>
+<p>Add the following rule to the css file:</p>
+<pre><code>.three-column {
+  padding: 1em;
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+  column-count: 3;
+  column-gap: 1em;
+}</code></pre>
+<p>Add the code in the html file to ensure that the <code>&lt;p</code>&gt; element is a member of the three-column class.</p>
+<p>Save all files and refresh the page.</p>
+<p>CSS columns are very new, so you need to use the prefixes, and it won&#39;t work through IE9 or in Opera Minin. There are some more column-related properties:</p>
+<ul>
+<li><a href="http://quirksmode.org/css/columns/">http://quirksmode.org/css/columns/</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>flexbox</h1>
+<p>The new Flexbox layout mode is set to redefine how we do layouts in CSS. Unfortunately the specification has changed a lot recently, so it&#39;s implemented differently in different browsers. Still, these are examples that currently work in some browsers
+ - <a href="http://caniuse.com/#feat=flexbox">http://caniuse.com/#feat=flexbox</a>
+ that use the latest version of the standard.</p>
+<p> There are a lot of out-of-date flexbox resources around. If you want to learn more about flexbox, </p>
+<ul>
+<li><a href="https://css-tricks.com/old-flexbox-and-new-flexbox/">https://css-tricks.com/old-flexbox-and-new-flexbox/</a></li>
+</ul>
+<p>A detailed article using the latest syntax on flexbox:</p>
+<ul>
+<li><a href="https://bocoup.com/weblog/dive-into-flexbox">https://bocoup.com/weblog/dive-into-flexbox</a></li>
+</ul>
+<p> There is a lot more you can do with flexbox; these are just a few examples to give you an idea.</p>
+<h2>simple layout using flexbox</h2>
+<p>Open the folder 18.flexbox and edit the css file. Add the following rules:</p>
+<pre><code>.container {
+    display: -webkit-flex;
+    display: flex;
+}
+
+nav {
+    width: 200px;
+}
+
+.flex-column {
+    -webkit-flex: 1;
+            flex: 1;
+}</code></pre>
+<p>Next in the index.html file name the outer <code>&lt;div</code>&gt; element to be a member of the &quot;container&quot; class.
+Name the inner <code>&lt;div</code>&gt; element to be a member of the &quot;flex-column&quot; class. This means the two sections flex into 1 column</p>
+<h2>fancy layout using flexbox</h2>
+<p>In the same css file you already have open add the following rules:</p>
+<pre><code>.initial {
+        width: 200px;
+    min-width: 100px;
+}
+
+.none {
+  -webkit-flex: none;
+          flex: none;
+  width: 200px;
+}
+.flex1 {
+  -webkit-flex: 1;
+          flex: 1;
+}
+.flex2 {
+  -webkit-flex: 2;
+          flex: 2;
+}</code></pre>
+<p>Now open the fancy.html file and appropriately name each div as a member of the correct class.
+The outer div is the container and then each subsequent div is a member of each class as you have written them in the css rules.</p>
+<h2>Centering using flexbox</h2>
+<p>Add the following to the css file:</p>
+<pre><code>.vertical-container {
+    height: 300px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}</code></pre>
+<p>Open the centering.html file and ensure the div is a member of the vertical-container class. Save and load the page.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="archives">
+        <h1>Solution</h1>
+<p>Here is an archive of the completed lab:</p>
+<ul>
+<li><a href="archives/learn-css-layout-2-complete.zip">learn-css-layout-2-complete.zip</a></li>
+</ul>
+<p>You can browse the completed lab sessions from here:</p>
+<ul>
+<li><a href="archives/index.html">learn-css-layout-2-complete</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn De Leastar & Dr. Brenda Mullally .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

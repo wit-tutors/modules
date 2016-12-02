@@ -1,0 +1,696 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Starting to Play
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-03">
+      Lab-03
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-static-spacebook/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-tools/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03/book-play-skeleton/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-b/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-a/index.html">
+          Lab-11
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-b/index.html">
+          Lab-12
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-1/index.html">
+          Lab-13
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-1/index.html">
+          Lab-14
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-03">
+        <h1>Objectives</h1>
+<p>Move the Spacebook application from the static site into the structure provide by the Play framework. This will require installation of the framework, creation of a starter project and incorporation of the work we have already completed in the last lab.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Running the  Play Application</h1>
+<p>In DOS, from inside the spacebook folder, type the following command:</p>
+<pre><code>play run</code></pre>
+<p>Play will respond with something like this:</p>
+<pre><code>~        _            _ 
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/   
+~
+~ play! 1.4.1, http://www.playframework.org
+~
+~ Ctrl+C to stop
+~ 
+Listening for transport dt_socket at address: 8000
+16:30:33,586 INFO  ~ Starting /Users/edeleastar/Dropbox/webdev/2012/dev/projects/spacebook
+16:30:34,646 WARN  ~ You&#39;re running Play! in DEV mode
+16:30:34,894 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16:30:58,912 INFO  ~ Application &#39;Spacebook&#39; is now started !</code></pre>
+<p>You may get a dialog from the firewall, asking for permission to run, which you should agree to.</p>
+<p>Now run the browser, and navigate to:</p>
+<ul>
+<li><a href="http://localhost:9000/">http://localhost:9000/</a></li>
+</ul>
+<p>you should see something like this:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>Also notice that a log message will appear in the command window indicating that the app has started:</p>
+<pre><code>16:30:58,912 INFO  ~ Application &#39;Spacebook&#39; is now started !</code></pre>
+<p>To stop the application, press &quot;Control+C&quot; in the command prompt.  If you refresh the browser window, then you should now get an error</p>
+<p>Start the app again by typing &#39;play run&#39; as above. Verify that the app has started by browsing/refreshing to:</p>
+<ul>
+<li><a href="http://localhost:9000/">http://localhost:9000/</a></li>
+</ul>
+<p>Try this a few times to get used to starting/stopping the application</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Introducing some Content</h1>
+<p>In Eclipse, open the java class &quot;Application.java&quot; - which is in the &#39;controllers&#39; package located within the folder app:</p>
+<pre><code class="lang-java">package controllers;
+
+import play.*;
+import play.mvc.*;
+import java.util.*;
+import models.*;
+
+public class Application extends Controller
+{
+  public static void index()   
+  {     
+      render();   
+  }
+}</code></pre>
+<p>Now open the file &#39;index.html&#39; in the &#39;views/Application&#39; folder:</p>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /}
+#{set title:&#39;Home&#39; /}
+
+#{welcome /}</code></pre>
+<p>When you open this file, you may get am &quot;Unsupported Character Encoding&quot; message. If this happens, select &#39;UTF-8&#39;.</p>
+<p>Let us change the title to be &quot;Spacebook&quot;, and replace the &#39;welcome&#39; line with our own greeting:</p>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Spacebook&#39; /}
+
+&lt;p&gt;
+  Welcome to Spacebook!
+&lt;/p&gt;</code></pre>
+<p>Save the file in Eclipse, and reload this page:</p>
+<ul>
+<li><a href="http://localhost:9000/">http://localhost:9000/</a></li>
+</ul>
+<p>which you may already be browsing.</p>
+<p><img src="img/03.png" alt=""></p>
+<p>In the browser, right click and &#39;view source&#39;. Look carefully at the page source - which should be something like this:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Spacebook&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;/public/stylesheets/main.css&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;/public/images/favicon.png&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;     
+    &lt;p&gt;
+      Welcome to Spacebook!
+    &lt;/p&gt;        
+    &lt;script src=&quot;/public/javascripts/jquery-1.6.4.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>This single page displayed in the browser is generated from two pages in the project</p>
+<h2>views/main.html</h2>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+  &lt;head&gt;
+     &lt;title&gt;#{get &#39;title&#39; /}&lt;/title&gt;
+     &lt;meta charset=&quot;${_response_encoding}&quot;&gt;
+     &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;@{&#39;/public/stylesheets/main.css&#39;}&quot;&gt;
+     #{get &#39;moreStyles&#39; /}
+     &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;@{&#39;/public/images/favicon.png&#39;}&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    #{doLayout /}
+
+    &lt;script src=&quot;@{&#39;/public/javascripts/jquery-1.6.4.min.js&#39;}&quot; type=&quot;text/javascript&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;
+    #{get &#39;moreScripts&#39; /}
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>and</p>
+<h2>views/Application/index.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Spacebook&#39; /}
+
+&lt;p&gt;
+  Welcome to Spacebook!
+&lt;/p&gt;</code></pre>
+<p>See if you can figure out how they are related. This will be a challenge for the moment, but there are certain clues - particularly the this line:</p>
+<pre><code>    #{doLayout /}</code></pre>
+<p>in main.html.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Play Project Layout</h1>
+<p>We can start the process of making our site &#39;dynamic&#39;. This means that the pages will be composed of multiple fragments, as opposed to the single &#39;static&#39; pages we have been constructing to date.</p>
+<p>Look again at our static site, as we may have left it in an earlier lab:</p>
+<ul>
+<li><a href="archives/spacebook-semantic/home.html">spacebook-semantic</a></li>
+</ul>
+<p>You Eclipse spacebook project should look like this:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Open the file &#39;app/views/main.html&#39;. The first time you open this file, eclipse may have difficulty reading it, presenting this screen:</p>
+<p><img src="img/28.png" alt=""></p>
+<p>Select &#39;other&#39; and then &#39;UTF-8&#39; from the drop down:</p>
+<p><img src="img/29.png" alt=""></p>
+<p>main.html should now be visible:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;#{get &#39;title&#39; /}&lt;/title&gt;
+        &lt;meta charset=&quot;${_response_encoding}&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;@{&#39;/public/stylesheets/main.css&#39;}&quot;&gt;
+        #{get &#39;moreStyles&#39; /}
+        &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;@{&#39;/public/images/favicon.png&#39;}&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        #{doLayout /}
+
+        &lt;script src=&quot;@{&#39;/public/javascripts/jquery-1.6.4.min.js&#39;}&quot; type=&quot;text/javascript&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;
+        #{get &#39;moreScripts&#39; /}
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Replace this complete contents with the following:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+    &lt;title&gt;#{get &#39;title&#39; /}&lt;/title&gt;
+    &lt;meta charset=&quot;${_response_encoding}&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css&quot;&gt;
+    &lt;script src=&quot;http://code.jquery.com/jquery-2.1.1.min.js&quot;&gt;&lt;/script&gt; 
+    &lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js&quot;&gt;&lt;/script&gt;          
+    &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;@{&#39;/public/stylesheets/main.css&#39;}&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;@{&#39;/public/images/favicon.png&#39;}&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;section class=&quot;ui segment&quot;&gt;
+      #{doLayout /}
+    &lt;/section&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Run the app now with this revised styling. To run a play app, we must have a command prompt running, and be &#39;in&#39; the folder containing the project. Then we just type:</p>
+<pre><code>play run</code></pre>
+<p>and browse to:</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+<p>To see the app in action.</p>
+<p>While in the browser (Chrome preferably), we can switch between browsing the site - which looks like this:</p>
+<p><img src="img/30.png" alt=""></p>
+<p>and browsing the &#39;source. To do this, placing the mouse on the canvas, right click and select &#39;View Page Source&#39;</p>
+<p><img src="img/31.png" alt=""></p>
+<p>You will be doing this occasionally during when building web apps. Compare the <code>&lt;head&gt;</code> of this page with the html we pasted into main.html. See if you can analyse precisely the differences. They are small and will seem very obscure (for the moment).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Navbar</h1>
+<p>Reflect again on the site we have already built:</p>
+<ul>
+<li><a href="archives/spacebook-semantic/home.html">spacebook-semantic</a></li>
+</ul>
+<p>Instead of thinking of the site as a set of files on disk, currently structured thus in the &#39;static&#39; project:</p>
+<p><img src="img/02a.png" alt=""></p>
+<p>We take a logical view, and think of the site as something constructed out of &#39;parts&#39;. These may be</p>
+<ul>
+<li>Header</li>
+<li>Navigation bar</li>
+<li>Body</li>
+</ul>
+<p>Furthermore, we consider that we have several versions of the &#39;body&#39;, one each for:</p>
+<ul>
+<li>Home</li>
+<li>Members</li>
+<li>HomeProfile</li>
+<li>User Profiles for marge and lisa, and any other user</li>
+</ul>
+<p>Lets start with the navbar - this is the one we used in the static version:</p>
+<pre><code>    &lt;nav class=&quot;ui menu&quot;&gt;
+      &lt;a class=&quot;ui item&quot; href=&quot;home.html&quot;&gt;Home&lt;/a&gt;
+      &lt;a class=&quot;ui item&quot; href=&quot;members.html&quot;&gt;Members&lt;/a&gt;
+      &lt;a class=&quot;ui item&quot; href=&quot;homeprofile.html&quot;&gt;Profile&lt;/a&gt;
+      &lt;a class=&quot;ui item&quot; href=&quot;login.html&quot;&gt;Logout&lt;/a&gt;
+    &lt;/nav&gt;</code></pre>
+<p>Now, in &#39;app/views/Application/index.html&#39;, include this navbar directly after the title:</p>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Home&#39; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;home.html&quot;&gt;Home&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;members.html&quot;&gt;Members&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;homeprofile.html&quot;&gt;Profile&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;login.html&quot;&gt;Logout&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;
+  Welcome to Spacebook!
+&lt;/p&gt;</code></pre>
+<p>Save these files and, if your app is still running, refresh the page:</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+<p>Our nav bar should have appeared:</p>
+<p><img src="img/33.png" alt=""></p>
+<p>Look carefully at the &#39;source&#39; (in chrome) of this page:</p>
+<p><img src="img/34.png" alt=""></p>
+<p>Try the navbar links - you will note that get an error for each of them, something like:</p>
+<p><img src="img/35.png" alt=""></p>
+<p>Will will fix these in the next step.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Controller &amp; Views</h1>
+<h2>Controllers</h2>
+<p>Review again the class &#39;controllers/application.java&#39;</p>
+<pre><code>package controllers;
+
+import play.*;
+import play.mvc.*;
+
+import java.util.*;
+
+import models.*;
+
+public class Application extends Controller
+{
+  public static void index()
+  {
+    render();
+  }
+}</code></pre>
+<p>We would like to create 4 copies of this file - each one identical, but named as follows:</p>
+<ul>
+<li>Home</li>
+<li>Members</li>
+<li>Profile</li>
+<li>PublicProfile</li>
+</ul>
+<p>There are a number of ways of doing this. The simplest might be to select &#39;Application.java&#39; in eclipse and select &#39;Edit-&gt;Copy&#39;, then select &#39;Edit-Paste&#39;. In the ensuing dialog, enter one of the names above (including the capitalisation). If this goes according to plan, you might have a project looking like this:</p>
+<p><img src="img/36.png" alt=""></p>
+<h2>Views</h2>
+<p>Now we look at the view : <code>views/Applications/index.html</code>:</p>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /}
+#{set title:&#39;Spacebook&#39; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;home.html&quot;&gt;Home&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;members.html&quot;&gt;Members&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;homeprofile.html&quot;&gt;Profile&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;login.html&quot;&gt;Logout&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;
+  Welcome to Spacebook!
+&lt;/p&gt;</code></pre>
+<p>We need to make an important adjustment to this view - change the <code>&lt;nav&gt;</code> element to look like this:</p>
+<pre><code class="lang-html">&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/home&quot;&gt;Home&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/members&quot;&gt;Members&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/profile&quot;&gt;Profile&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Logout&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+<p>(Note the changes to the href attribute)</p>
+<p>We would now like to do the same for the &#39;views/Application/index.html&#39; file. i.e. create 4 folders named</p>
+<ul>
+<li>Home</li>
+<li>Members</li>
+<li>Profile</li>
+<li>PublicProfile</li>
+</ul>
+<p>.. again, each folder containing a file called &#39;index.html&#39;. You could use the same technique as above (Edit/Copy - Edit/Paste). Your project should be looking like this:</p>
+<p><img src="img/37.png" alt=""></p>
+<p>Finally, delete the Application controller + Application view folder - leaving you application like this:</p>
+<p><img src="img/45.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Routes</h1>
+<p>In order for the app to function correctly - we need one more change. Locate and open the file &#39;conf/routes&#39;:</p>
+<pre><code># Routes
+# This file defines all application routes (Higher priority routes first)
+# ~</code></pre>
+<h1>Home page</h1>
+<p>GET     /                                       Application.index</p>
+<h1>Ignore favicon requests</h1>
+<p>GET     /favicon.ico                            404</p>
+<h1>Map static resources from the /app/public folder to the /public path</h1>
+<p>GET     /public/                                staticDir:public</p>
+<h1>Catch all</h1>
+<ul>
+<li>/{controller}/{action}                  {controller}.{action}
+~~~</li>
+</ul>
+<p>Edit the file to look like this:</p>
+<pre><code># Routes
+# This file defines all application routes (Higher priority routes first)
+# ~</code></pre>
+<h1>Landing page</h1>
+<p>GET     /                                       Home.index</p>
+<h1>Home page</h1>
+<p>GET     /home                                   Home.index</p>
+<h1>Members page</h1>
+<p>GET     /members                                Members.index</p>
+<h1>Profile page</h1>
+<p>GET     /profile                                Profile.index</p>
+<h1>Ignore favicon requests</h1>
+<p>GET     /favicon.ico                            404</p>
+<h1>Map static resources from the /app/public folder to the /public path</h1>
+<p>GET     /public/                                staticDir:public</p>
+<h1>Catch all</h1>
+<ul>
+<li>/{controller}/{action}                  {controller}.{action}</li>
+</ul>
+<pre><code>
+Each of your view files contains a :</code></pre>
+<p>..</p>
+<p><p>
+  Welcome to Spacebook!
+</p></p>
+<pre><code>
+Change the message for each page - so that a different welcome message appears:
+
+- &#39;Welcome to the Spacebook Home Page&#39;
+- &#39;Welcome to the Spacebook Members Page&#39;
+- &#39;Welcome to the Spacebook Profile Page&#39;
+
+Do this by editing each of the index.html pages as appropriate
+
+Now, restart the app. To restart it bring up the command prompt that launched the application, and type Ctrl-C. Then type &#39;play run&#39; again.
+
+Browse to:
+
+- &lt;http://localhost:9000&gt;
+
+to see the updated app in action. The navigation bar should now function without errors (except for logout item).
+
+Finally, note that each index.html page contains the following near the top:</code></pre>
+<h1>{set title:&#39;Home&#39; /}</h1>
+<p>~~~</p>
+<p>Change this such that each page has its own title:</p>
+<ul>
+<li>Home</li>
+<li>Members</li>
+<li>Profile</li>
+</ul>
+<p>Note that this text will appear in the browsers window title - not on the canvas. Run the app and verify that this behaves as expected.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<h2>Exercise 1: Active Tab</h2>
+<p>If you look at the nav bar you will notice that there is no concept of an &#39;active&#39; tab as such. i.e. user cannot clearly see which tab they have just selected.</p>
+<p>The reason of this is that none of the <code>&lt;li&gt;</code> elements are have <code>class=&quot;ui active item&quot;</code> (check the lab05-project to see what this looks like).</p>
+<pre><code>&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui active item&quot; href=&quot;/home&quot;&gt;Home&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/members&quot;&gt;Members&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/profile&quot;&gt;Profile&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Logout&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+<p>See if you can make the necessary changes so that each menu item is activated appropriately.</p>
+<h2>Exercise 2: Alternative Menu Styles</h2>
+<p>The Semantic UI framework has many easy to use and interesting menu variations:</p>
+<ul>
+<li><a href="http://semantic-ui.com/collections/menu.html">http://semantic-ui.com/collections/menu.html</a></li>
+</ul>
+<p>See if you can trigger some of these styles. Try to get &#39;inverted&#39; menus working for instance.</p>
+<h2>2: Import Lab Solution into Eclipse</h2>
+<p>This is a solution to the lab:</p>
+<ul>
+<li><a href="archives/spacebook-baseline.zip">spacebok-baseline</a></li>
+</ul>
+<p>Download and extract this archive somewhere suitable on your PC. Make sure you know where! Once extracted, navigate to that folder in a Command Prompt. Then, type:</p>
+<pre><code>play eclipsify</code></pre>
+<p>You should get a suitable message. Back in eclipse, select &#39;File-Import-&gt;General-&gt;Existing project into workspace&#39; and select the <code>folder</code> containing the project you have just extracted. Select the project and it will become another project in your workspace called &#39;spacebook-baseline&#39;</p>
+<p>Explore and run the project. It should be more or less the same as the one you have been building in this lab. Keep this project - and the solutions to each lab from now on - in your workspace alongside the version you will be evolving each week.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

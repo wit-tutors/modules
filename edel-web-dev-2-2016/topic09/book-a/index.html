@@ -1,0 +1,1108 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Modeling
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-09">
+      Lab-09
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-static-spacebook/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-tools/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-play-skeleton/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic09/book-a/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-b/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-a/index.html">
+          Lab-11
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-b/index.html">
+          Lab-12
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-1/index.html">
+          Lab-13
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-1/index.html">
+          Lab-14
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-09">
+        <h1>Objectives</h1>
+<p>Explore the Unit test features of Play, writing some tests to verify the current behaviour of the User and Message classes. Use unit testing to implement a new feature - a simple Blog - into the app.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Spacebook-app Project</h1>
+<p>Download and import this project into your eclipse workspace in the usual way:</p>
+<ul>
+<li><a href="https://github.com/wit-web-dev-2015/spacebook-blog/releases/tag/lab-09-start">https://github.com/wit-web-dev-2015/spacebook-blog/releases/tag/lab-09-start</a></li>
+</ul>
+<p>in particular, explore the <code>views/components</code> folder. This contains the various elements from which the spacebook application has been composed.</p>
+<p>For the rest of this lab, rebase to using this solution.</p>
+<h1>Simple Test Harness</h1>
+<p>You may have seen Junit testing for simple Java applications. There is an equivalent for the Play Framework. Unit testing is particularly important if you make any changes to the model, as it allows you to verify if the model is defined correctly.</p>
+<p>In eclipse, notice that you already have a &#39;test&#39; folder, with some tests already in there:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Open the file &#39;BasicTest.java&#39;:</p>
+<pre><code class="lang-java">import org.junit.*;
+import java.util.*;
+import play.test.*;
+import models.*;
+
+public class BasicTest extends UnitTest
+{
+  @Test
+  public void aVeryImportantThingToTest()
+  {
+    assertEquals(2, 1 + 1);
+  }
+}</code></pre>
+<p>Executing this is a little different from executing standard junit tests, and requires the following stages:</p>
+<h2>Stage 1: Run the spacebook app in &#39;test mode&#39;</h2>
+<p>From the console, within the spacebook folder, run the app ass follows:</p>
+<pre><code>play test</code></pre>
+<p>This will respond as follows:</p>
+<pre><code>~        _            _ 
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/   
+~
+~ play! 1.2.5, http://www.playframework.org
+~ framework ID is test
+~
+~ Running in test mode
+~ Ctrl+C to stop
+~ 
+CompilerOracle: exclude jregex/Pretokenizer.next
+Listening for transport dt_socket at address: 8000
+08:31:32,518 INFO  ~ Starting /Users/edeleastar/repos/modules/app-dev-modelling-prj/spacebook-3
+08:31:32,522 INFO  ~ Module cloudbees is available (/Users/edeleastar/repos/modules/app-dev-modelling-prj/spacebook-3/modules/cloudbees-0.2.2)
+08:31:32,523 INFO  ~ Module crud is available (/Users/edeleastar/dev/play-1.2.5/modules/crud)
+08:31:33,136 WARN  ~ You&#39;re running Play! in DEV mode
+~
+~ Go to http://localhost:9000/@tests to run the tests
+~
+08:31:33,242 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...</code></pre>
+<h2>Stage 2: Browse to the &#39;test runner&#39;</h2>
+<p>In chrome, bring up a browser are the following url:</p>
+<ul>
+<li><a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x68;&#116;&#x74;&#x70;&#58;&#47;&#47;&#x6c;&#x6f;&#x63;&#97;&#108;&#104;&#x6f;&#x73;&#x74;&#x3a;&#x39;&#48;&#x30;&#x30;&#47;&#x40;&#116;&#101;&#115;&#x74;&#x73;">&#x68;&#116;&#x74;&#x70;&#58;&#47;&#47;&#x6c;&#x6f;&#x63;&#97;&#108;&#104;&#x6f;&#x73;&#x74;&#x3a;&#x39;&#48;&#x30;&#x30;&#47;&#x40;&#116;&#101;&#115;&#x74;&#x73;</a></li>
+</ul>
+<p>This should show this:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>Be careful here - we only want to select the &#39;BasicTest&#39; - so click once on it, and the page will look like this:</p>
+<p><img src="img/03.png" alt=""></p>
+<h2>Stage 3: Run a successful Test</h2>
+<p>Now press &#39;Start&#39; and note the changes in the page:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>This has run the tests - but as the trivial test passed, then the page remained green.</p>
+<h2>Stage 4: Run a failing Test</h2>
+<p>Make a small change to the test such that it is guaranteed to fail:</p>
+<pre><code class="lang-java">  public void aVeryImportantThingToTest()
+  {
+    assertEquals(3, 1 + 1);
+  }</code></pre>
+<p>Now run it again:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>Note carefully the error report.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Users Test</h1>
+<p>Lets write some test for the classes we already have working. Before we do so, there is an occasional anomaly in play that can cause some confusion. So, open &#39;app/default package/BootStrap.java&#39; and comment out the following:</p>
+<pre><code class="lang-java">public class Bootstrap extends Job 
+{ 
+  public void doJob()
+  {
+    if (User.count() == 0)
+    {
+     // Fixtures.deleteDatabase(); 
+     // Fixtures.loadModels(&quot;data.yml&quot;);
+    }
+  }
+}</code></pre>
+<p>We are removing the objects loaded from the yaml file for the moment. Remember to put this back in when you are finished testing.</p>
+<p>Now introduce the following test into the BasicTest class:</p>
+<pre><code class="lang-java">public class BasicTest extends UnitTest
+{
+  @Test
+  public void aVeryImportantThingToTest()
+  {
+    assertEquals(2, 1 + 1);
+  }
+
+  @Test
+  public void testCreateUser()
+  {
+    User bob = new User(&quot;bob&quot;, &quot;jones&quot;, &quot;bob@jones.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    bob.save();
+
+    User testUser = User.findByEmail(&quot;bob@jones.com&quot;);
+    assertNotNull (testUser);
+  }
+}</code></pre>
+<p>Look carefully at the &#39;testCreateUser()&#39; test. In it we are creating a new user, saving it, and then seeing if we can find the user by the email address. Save and run this test.</p>
+<p>It should succeed. Now, make a deliberate mistake in the test - try find &#39;alice&#39; instead of &#39;bob&#39; by making the following adjustment:</p>
+<pre><code class="lang-java">  @Test
+  public void testCreateUser()
+  {
+    User bob = new User(&quot;bob&quot;, &quot;jones&quot;, 20, &quot;irish&quot;, &quot;bob@jones.com&quot;, &quot;secret&quot;);
+    bob.save();
+
+    User testUser = User.findByEmail(&quot;alice@jones.com&quot;);
+    assertNotNull (testUser);
+  }</code></pre>
+<p>Run tests again, you should see something like this:</p>
+<p><img src="img/07.png" alt=""></p>
+<p>Change it back to &#39;bob&#39; and confirm that the error is now gone.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>More User Tests</h1>
+<p>You may be surprised that, even if we are running in test mode, the &#39;db&#39; interface is still visible:</p>
+<ul>
+<li><a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x68;&#x74;&#x74;&#x70;&#x3a;&#x2f;&#x2f;&#108;&#111;&#x63;&#x61;&#108;&#104;&#x6f;&#115;&#x74;&#58;&#x39;&#x30;&#48;&#48;&#x2f;&#x40;&#x64;&#x62;">&#x68;&#x74;&#x74;&#x70;&#x3a;&#x2f;&#x2f;&#108;&#111;&#x63;&#x61;&#108;&#104;&#x6f;&#115;&#x74;&#58;&#x39;&#x30;&#48;&#48;&#x2f;&#x40;&#x64;&#x62;</a></li>
+</ul>
+<p><img src="img/12.png" alt=""></p>
+<p>Explore the user objects now. If you run the test a few times, you may notice that we seem to have more than one user called bob? </p>
+<p>This is clearly an anomaly, and is the result of running the tests repeatedly - and having leftover values as a result. This should be corrected immediately as it is very important that the tests are not influenced by whatever may be in the database.</p>
+<p>Introduce the following method into BasicTest:</p>
+<pre><code class="lang-java">  @BeforeClass
+  public static void loadDB()
+  {
+    Fixtures.deleteAllModels();
+  }</code></pre>
+<p>Now run the tests a few times - and keep an eye on the number of Users via the <code>db</code> interface. There should always be only one.</p>
+<p>Introduce the following test:</p>
+<pre><code class="lang-java">  @Test
+  public void testFindUser()
+  {
+    User jim = new User(&quot;jim&quot;, &quot;smith&quot;, &quot;jim@smith.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    jim.save();
+
+    User test = User.findByEmail(&quot;jim@smith.com&quot;);
+    assertNotNull (test);
+
+    User alice = User.findByEmail(&quot;alice@jones.com&quot;);
+    assertNull (alice);
+  }</code></pre>
+<p>This is an example of a &#39;negative&#39; test. We are deliberately looking for a user (alice) who we know to be not there. Run it and make sure it passes.</p>
+<p>Try to make the test deliberately fail?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Message Tests</h1>
+<p>We have another model object called Messages already defined in our project:</p>
+<pre><code class="lang-java">public class Message extends Model
+{
+  public String messageText;
+
+  @ManyToOne
+  public User from;
+
+  @ManyToOne
+  public User to;
+
+  public Message(User from, User to, String messageText)
+  {
+    this.from = from;
+    this.to = to;
+    this.messageText = messageText;
+  }
+}</code></pre>
+<p>We can write some tests to see if this model is set up correctly:</p>
+<pre><code class="lang-java">  @Test
+  public void testCreateMessage()
+  {
+    User mary = new User(&quot;mary&quot;, &quot;colllins&quot;, &quot;mary@collins.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    mary.save();
+
+    User joan = new User(&quot;joan&quot;, &quot;colllins&quot;,&quot;joan@collins.com&quot;, &quot;secret&quot;,  20, &quot;irish&quot;);
+    joan.save();
+
+    Message msg = new Message (mary, joan, &quot;Hi there - how are you&quot;);
+    msg.save();
+
+    List&lt;Message&gt; joansMessages = Message.find(&quot;byTo&quot;, joan).fetch();
+    assertEquals (joansMessages.size(), 1);
+  }</code></pre>
+<p>Look carefully at the above test. It is structured as follows:</p>
+<ul>
+<li>Create a mary user object, and save it to the database</li>
+<li>Create a joan user object, and save it to the database</li>
+<li>Create a message object for a message from mary to joan</li>
+<li>Retrieve all of the messages for joan</li>
+<li>See if there is exactly one message</li>
+</ul>
+<p>Run this test now and see if it passes. We can extend the test to see if we also get back the correct text. Put these two lines at the end of the test:</p>
+<pre><code class="lang-java">    Message message = joansMessages.get(0);
+    assertEquals(message.messageText, &quot;Hi there - how are you&quot;);</code></pre>
+<p>Run it again and confirm it still passes. Just to confirm that everything is operating ok with the test harness, change a single character in the message, and make sure the test fails. Then change it back so that is passes again.</p>
+<p>To conclude, we bring in some more tests to:</p>
+<ul>
+<li>test for the case when there are no message for a given user</li>
+<li>test for the case when there are more than one message for a given user</li>
+</ul>
+<p>Here are the tests - bring these directly into your class:</p>
+<pre><code class="lang-java">  @Test
+  public void testNoMessagese()
+  {
+    User mary = new User(&quot;mary&quot;, &quot;colllins&quot;, &quot;mary@collins.com&quot;, &quot;secret&quot;,  20, &quot;irish&quot;);
+    mary.save();
+
+    List&lt;Message&gt; joansMessages = Message.find(&quot;byTo&quot;, mary).fetch();
+    assertEquals (joansMessages.size(), 0);
+  }
+
+  @Test
+  public void testMultipleMessages()
+  {
+    User mary = new User(&quot;mary&quot;, &quot;colllins&quot;, &quot;mary@collins.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    mary.save();
+
+    User joan = new User(&quot;joan&quot;, &quot;colllins&quot;, &quot;joan@collins.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    joan.save();
+
+    Message msg1 = new Message (mary, joan, &quot;Hi there - how are you&quot;);
+    msg1.save();
+    Message msg2 = new Message (mary, joan, &quot;Where are you now?&quot;);
+    msg2.save();
+
+    List&lt;Message&gt; joansMessages = Message.find(&quot;byTo&quot;, joan).fetch();
+    assertEquals (joansMessages.size(), 2);
+    Message message1 = joansMessages.get(0);
+    assertEquals(message1.messageText, &quot;Hi there - how are you&quot;);
+    Message message2 = joansMessages.get(1);
+    assertEquals(message2.messageText, &quot;Where are you now?&quot;);   
+  }</code></pre>
+<p>Read the tests and absorb what they are testing. These tests should all pass</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Class Specific Tests</h1>
+<p>Our complete test case now looks like this:</p>
+<pre><code class="lang-java">import org.junit.*;
+import java.util.*;
+import play.test.*;
+import models.*;
+
+public class BasicTest extends UnitTest
+{
+  @BeforeClass
+  public static void loadDB()
+  {
+    Fixtures.deleteAllModels();
+  }
+
+  @Test
+  public void testCreateUser()
+  {
+    User bob = new User(&quot;bob&quot;, &quot;jones&quot;, &quot;bob@jones.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    bob.save();
+
+    User testUser = User.findByEmail(&quot;bob@jones.com&quot;);
+    assertNotNull (testUser);
+  }
+
+  @Test
+  public void testFindUser()
+  {
+    User jim = new User(&quot;jim&quot;, &quot;smith&quot;, &quot;jim@smith.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    jim.save();
+
+    User test = User.findByEmail(&quot;jim@smith.com&quot;);
+    assertNotNull (test);
+
+    User alice = User.findByEmail(&quot;alice@jones.com&quot;);
+    assertNull (alice);
+  } 
+
+  @Test
+  public void testCreateMessage()
+  {
+    User mary = new User(&quot;mary&quot;, &quot;colllins&quot;, &quot;mary@collins.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    mary.save();
+
+    User joan = new User(&quot;joan&quot;, &quot;colllins&quot;,&quot;joan@collins.com&quot;, &quot;secret&quot;,  20, &quot;irish&quot;);
+    joan.save();
+
+    Message msg = new Message (mary, joan, &quot;Hi there - how are you&quot;);
+    msg.save();
+
+    List&lt;Message&gt; joansMessages = Message.find(&quot;byTo&quot;, joan).fetch();
+    assertEquals (joansMessages.size(), 1);
+  }  
+
+
+  @Test
+  public void testNoMessagese()
+  {
+    User mary = new User(&quot;mary&quot;, &quot;colllins&quot;, &quot;mary@collins.com&quot;, &quot;secret&quot;,  20, &quot;irish&quot;);
+    mary.save();
+
+    List&lt;Message&gt; joansMessages = Message.find(&quot;byTo&quot;, mary).fetch();
+    assertEquals (joansMessages.size(), 0);
+  }
+
+  @Test
+  public void testMultipleMessages()
+  {
+    User mary = new User(&quot;mary&quot;, &quot;colllins&quot;, &quot;mary@collins.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    mary.save();
+
+    User joan = new User(&quot;joan&quot;, &quot;colllins&quot;, &quot;joan@collins.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    joan.save();
+
+    Message msg1 = new Message (mary, joan, &quot;Hi there - how are you&quot;);
+    msg1.save();
+    Message msg2 = new Message (mary, joan, &quot;Where are you now?&quot;);
+    msg2.save();
+
+    List&lt;Message&gt; joansMessages = Message.find(&quot;byTo&quot;, joan).fetch();
+    assertEquals (joansMessages.size(), 2);
+    Message message1 = joansMessages.get(0);
+    assertEquals(message1.messageText, &quot;Hi there - how are you&quot;);
+    Message message2 = joansMessages.get(1);
+    assertEquals(message2.messageText, &quot;Where are you now?&quot;);   
+  }
+}</code></pre>
+<p>This mixes in User and Message tests. We can factor these out into classes of their own. In the same package, create a class call UserTest containing the following:</p>
+<pre><code class="lang-java">import models.User;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import play.test.Fixtures;
+import play.test.UnitTest;
+
+
+public class UserTest extends UnitTest
+{
+  @BeforeClass
+  public static void loadDB()
+  {
+    Fixtures.deleteAllModels();
+  }
+
+  @Test
+  public void testCreateUser()
+  {
+    User bob = new User(&quot;bob&quot;, &quot;jones&quot;, &quot;bob@jones.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    bob.save();
+
+    User testUser = User.findByEmail(&quot;bob@jones.com&quot;);
+    assertNotNull (testUser);
+  }
+
+  @Test
+  public void testFindUser()
+  {
+    User jim = new User(&quot;jim&quot;, &quot;smith&quot;, &quot;jim@smith.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    jim.save();
+
+    User test = User.findByEmail(&quot;jim@smith.com&quot;);
+    assertNotNull (test);
+
+    User alice = User.findByEmail(&quot;alice@jones.com&quot;);
+    assertNull (alice);
+  } 
+}</code></pre>
+<p>and a MessageTest class:</p>
+<pre><code class="lang-java">import java.util.List;
+import models.Message;
+import models.User;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import play.test.Fixtures;
+import play.test.UnitTest;
+
+
+public class MessageTest extends UnitTest
+{
+  @BeforeClass
+  public static void loadDB()
+  {
+    Fixtures.deleteAllModels();
+  }
+
+  @Test
+  public void testCreateMessage()
+  {
+    User mary = new User(&quot;mary&quot;, &quot;colllins&quot;, &quot;mary@collins.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    mary.save();
+
+    User joan = new User(&quot;joan&quot;, &quot;colllins&quot;,&quot;joan@collins.com&quot;, &quot;secret&quot;,  20, &quot;irish&quot;);
+    joan.save();
+
+    Message msg = new Message (mary, joan, &quot;Hi there - how are you&quot;);
+    msg.save();
+
+    List&lt;Message&gt; joansMessages = Message.find(&quot;byTo&quot;, joan).fetch();
+    assertEquals (joansMessages.size(), 1);
+  }  
+
+
+  @Test
+  public void testNoMessagese()
+  {
+    User mary = new User(&quot;mary&quot;, &quot;colllins&quot;, &quot;mary@collins.com&quot;, &quot;secret&quot;,  20, &quot;irish&quot;);
+    mary.save();
+
+    List&lt;Message&gt; joansMessages = Message.find(&quot;byTo&quot;, mary).fetch();
+    assertEquals (joansMessages.size(), 0);
+  }
+
+  @Test
+  public void testMultipleMessages()
+  {
+    User mary = new User(&quot;mary&quot;, &quot;colllins&quot;, &quot;mary@collins.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    mary.save();
+
+    User joan = new User(&quot;joan&quot;, &quot;colllins&quot;, &quot;joan@collins.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    joan.save();
+
+    Message msg1 = new Message (mary, joan, &quot;Hi there - how are you&quot;);
+    msg1.save();
+    Message msg2 = new Message (mary, joan, &quot;Where are you now?&quot;);
+    msg2.save();
+
+    List&lt;Message&gt; joansMessages = Message.find(&quot;byTo&quot;, joan).fetch();
+    assertEquals (joansMessages.size(), 2);
+    Message message1 = joansMessages.get(0);
+    assertEquals(message1.messageText, &quot;Hi there - how are you&quot;);
+    Message message2 = joansMessages.get(1);
+    assertEquals(message2.messageText, &quot;Where are you now?&quot;);   
+  }
+}</code></pre>
+<p>Each of these classes is just focused primarily on one of the model classes. You can delete the BasicTest, so your project should look like this:</p>
+<p><img src="img/08.png" alt=""></p>
+<p>And refreshing the test runner site:</p>
+<p><img src="img/09.png" alt=""></p>
+<p>Finally, if we select and run the tests - we can see an individual breakdown of each test:</p>
+<p><img src="img/10.png" alt=""></p>
+<p>Just to confirm that everything is going ok - deliberately break one of the test to see the type of report:</p>
+<p><img src="img/11.png" alt=""></p>
+<p>Revert to &#39;green state&#39; again by making all tests work</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Posts</h1>
+<p>We now have a useful test harness in place. This is particularly useful if we wish to introduce any changes to the model.</p>
+<p>In Particular, if we wish to introduce something like a blog, then we should fully exercise the model before experimenting with any Controllers / Views.</p>
+<p>First we introduce a &#39;Post&#39; class, which will represent a specific post to a blog:</p>
+<pre><code class="lang-java">package models;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+
+import play.db.jpa.Model;
+
+@Entity
+public class Post extends Model
+{
+  public String title;
+  public String content;
+
+  public Post(String title, String content)
+  {
+    this.title = title;
+    this.content = content;
+  }
+
+  public String toString()
+  {
+    return title;
+  } 
+}</code></pre>
+<p>This class is to be introduced into the Model package. Notice the &#39;ManyToOne&#39; annotation. This declares that there will be many post objects for each User object.</p>
+<p>Next we augment the User class to maintain a list of posts:</p>
+<pre><code class="lang-java">  @OneToMany
+  public List&lt;Post&gt; posts = new ArrayList&lt;Post&gt;();</code></pre>
+<p>The complete User class now looks like this:</p>
+<pre><code class="lang-java">package models;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import play.db.jpa.Model;
+import play.db.jpa.Blob;
+
+@Entity
+public class User extends Model
+{
+  public String firstName;
+  public String lastName;
+  public String email;
+  public String password;
+  public String statusText;
+  public Blob   profilePicture;
+  public Blob   thumbnailPicture;
+  public int    age;
+  public String nationality;
+
+  @OneToMany(mappedBy = &quot;sourceUser&quot;)
+  public List&lt;Friendship&gt; friendships = new ArrayList&lt;Friendship&gt;();
+
+  @OneToMany(mappedBy = &quot;to&quot;)
+  public List&lt;Message&gt; inbox = new ArrayList&lt;Message&gt;();
+
+  @OneToMany(mappedBy = &quot;from&quot;)
+  public List&lt;Message&gt; outbox = new ArrayList&lt;Message&gt;();
+
+  @OneToMany
+  public List&lt;Post&gt; posts = new ArrayList&lt;Post&gt;();
+
+
+  public User(String firstName, String lastName, String email, String password, int age, String nationality)
+  {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.password = password;
+    this.age = age;
+    this.nationality = nationality;
+  }
+
+  public static User findByEmail(String email)
+  {
+    return find(&quot;email&quot;, email).first();
+  }
+
+  public boolean checkPassword(String password)
+  {
+    return this.password.equals(password);
+  }  
+
+  public void befriend(User friend)
+  {
+    Friendship friendship = new Friendship(this, friend);
+    friendships.add(friendship);
+    friendship.save();
+    save();
+  }
+
+  public void unfriend(User friend)
+  {
+    Friendship thisFriendship = null;
+
+    for (Friendship friendship:friendships)
+    {
+      if (friendship.targetUser== friend)
+      {
+        thisFriendship = friendship;
+      }
+    }
+    friendships.remove(thisFriendship);
+    thisFriendship.delete();
+    save();
+  }  
+
+  public void sendMessage (User to, String messageText)
+  {
+    Message message = new Message (this, to, messageText);
+    outbox.add(message);
+    to.inbox.add(message);
+    message.save();
+  } 
+}</code></pre>
+<p>With these new and modified classes in place, we will write some tests.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Testing Posts</h1>
+<p>Back in the test package, create a new test case called &quot;BlogTest&quot;:</p>
+<pre><code class="lang-java">import java.util.ArrayList;
+import java.util.List;
+
+import models.Message;
+import models.Post;
+import models.User;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import play.test.Fixtures;
+import play.test.UnitTest;
+
+
+public class BlogTest  extends UnitTest
+{
+  @BeforeClass
+  public static void loadDB()
+  {
+    Fixtures.deleteAllModels();
+  }
+}</code></pre>
+<p>It should be alongside the MessageTest and UserTest classes we have already built.</p>
+<p>We are now going to test new features we just introduced. Here is the first test:</p>
+<pre><code class="lang-java">  @Test
+  public void testCreatePost()
+  {
+    User bob = new User(&quot;bob&quot;, &quot;jones&quot;, &quot;bob@jones.com&quot;, &quot;secret&quot;,  20, &quot;irish&quot;);
+    bob.save();
+
+    Post aPost = new Post (&quot;Post Title&quot;, &quot;This is the post content&quot;);
+    aPost.save();
+    bob.posts.add(aPost);
+    bob.save();
+
+    User user = User.findByEmail(&quot;bob@jones.com&quot;);
+    List&lt;Post&gt; posts = user.posts;
+    assertEquals(1, posts.size());
+  }</code></pre>
+<p>Save and run this test. It should pass. Read it carefully - and note what it is doing. Essentially, we are creating a post and adding it to the user bob. Then we look up bob, and see if the post is in his list of posts.</p>
+<p>Extend the test with the following lines to actually see if the post text is correct:</p>
+<pre><code class="lang-java">    Post post = posts.get(0);
+    assertEquals(post.title, &quot;Post Title&quot;);
+    assertEquals(post.content, &quot;This is the post content&quot;);</code></pre>
+<p>Now we try multiple posts:</p>
+<pre><code class="lang-java">  @Test
+  public void testCreateMultiplePosts()
+  {
+    User jim = new User(&quot;jim&quot;, &quot;jones&quot;, &quot;jim@jones.com&quot;, &quot;secret&quot;, 20, &quot;irish&quot;);
+    jim.save();
+
+    Post post1 = new Post (&quot;Post Title 1&quot;, &quot;This is the first post content&quot;);
+    post1.save();
+    Post post2 = new Post (&quot;Post Title 2&quot;, &quot;This is the second post content&quot;);
+    post2.save();
+    jim.posts.add(post1);
+    jim.posts.add(post2);
+    jim.save();
+
+    User user = User.findByEmail(&quot;jim@jones.com&quot;);
+    List&lt;Post&gt; posts = user.posts;
+    assertEquals(2, posts.size());   
+  }</code></pre>
+<p>Again - this should pass. And again, we can extend the test to verify the actual text:</p>
+<pre><code class="lang-java">    Post posta = posts.get(0);
+    assertEquals(posta.title, &quot;Post Title 1&quot;);
+    assertEquals(posta.content, &quot;This is the first post content&quot;);
+
+    Post postb = posts.get(1);
+    assertEquals(postb.title, &quot;Post Title 2&quot;);
+    assertEquals(postb.content, &quot;This is the second post content&quot;);</code></pre>
+<p>Run again and verify that we are in &#39;green&#39; state. Deliberately break the tests - but changing some of the message text in one place an not the other. Note the errors - and then change it back again.</p>
+<p>We now have the relevant model of our program successfully extended to store blog posts for a given user. The next steps will be to have the User Interface create, list and store the posts.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Route + Blog Controller</h1>
+<p>The new feature will need to be mapped to a route. Recall, the routes identifies which url patterns match which Java Controller classes/methods.</p>
+<p>Open routes and introduce these new routes:</p>
+<pre><code># Blog Controller and View
+
+GET   /blog                                     Blog.index
+POST  /blog/newpost                             Blog.newPost</code></pre>
+<p>Put them in after the &#39;Edit&#39; routes.</p>
+<p>We need a new controller class to display a users blog:</p>
+<pre><code class="lang-java">package controllers;
+
+import java.util.List;
+
+import models.Message;
+import models.Post;
+import models.User;
+import play.Logger;
+import play.mvc.Controller;
+
+public class Blog  extends Controller
+{
+  public static void index()
+  {
+    User user = Accounts.getLoggedInUser();
+    render(user);
+  }
+
+  public static void newPost(String title, String content)
+  {
+    User user = Accounts.getLoggedInUser();
+    Logger.info (&quot;title:&quot; + title + &quot; content:&quot; + content);
+    index();
+  }
+}</code></pre>
+<p>This will be in the controllers package.</p>
+<p>To match this we will need a view - which must be in the &#39;views/Blog&#39; folder - and called &#39;index.html&#39;:</p>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /}
+#{set title:&#39;Blog&#39; /}
+
+&lt;nav class=&quot;ui inverted menu&quot;&gt;
+  &lt;header class=&quot;header item&quot;&gt; Spacebook &lt;/header&gt;
+  &lt;div class=&quot;right menu&quot;&gt;
+    &lt;a class=&quot;item&quot; href=&quot;/home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;a class=&quot;item&quot; href=&quot;/members&quot;&gt;Members&lt;/a&gt;
+    &lt;a class=&quot;item&quot; href=&quot;/profile&quot;&gt;Profile&lt;/a&gt;
+    &lt;a class=&quot;active item&quot; href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;
+    &lt;a class=&quot;item&quot; href=&quot;/logout&quot;&gt;Logout&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt; 
+
+&lt;h1 class=&quot;ui inverted teal block header&quot; &gt;Blog  &lt;/h1&gt;
+&lt;section class=&quot;ui two column grid segment&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;ui column&quot;&gt;
+      &lt;p&gt; Blog Edit Controls here... &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;column&quot;&gt;
+      &lt;p&gt; Blog Posts here... &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+<p>Note carefully the new entry in the menu bar - we have a new one for blog.</p>
+<pre><code class="lang-html">    &lt;a class=&quot;item&quot; href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;</code></pre>
+<p>You will need to bring this into each of the other views: specifically &#39;Home/index.html&#39;, &#39;HomeProfile/index.html&#39; and &#39;Members/index.html&#39;</p>
+<p>Take this for s spin now. We should have the blog menu working, and it should show the placeholder text for the moment. We will conclude the initial version of the blog in the next step.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Blog Implementation</h1>
+<p>As we have already tested the post/user extensions in a previous step, the process of finalising the features is relatively straightforward.</p>
+<p>In the Blog controller, we can complete the &#39;newPost&#39; method:</p>
+<pre><code class="lang-java">  public static void newPost(String title, String content)
+  {
+    User user = Accounts.getLoggedInUser();
+
+    Post post = new Post (title, content);
+    post.save();
+    user.posts.add(post);
+    user.save();
+
+    Logger.info (&quot;title:&quot; + title + &quot; content:&quot; + content);
+    index();
+  }</code></pre>
+<p>All we needed to do was just create a post object, save it, add it to the user and then save the user.</p>
+<p>In &#39;view/Blog/index.html&#39;, we will include two new component to display blog form and list of posts respectively:</p>
+<pre><code class="lang-html">&lt;h1 class=&quot;ui inverted teal block header&quot; &gt;Blog  &lt;/h1&gt;
+&lt;section class=&quot;ui two column grid segment&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;ui column&quot;&gt;
+      #{include &quot;components/createpost.html&quot; /} 
+    &lt;/div&gt;
+    &lt;div class=&quot;column&quot;&gt;
+      #{include &quot;components/displayposts.html&quot; /} 
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+<p>Note we are including two new components here in place of the text we had in the previous version. We can implement these now:</p>
+<h2>views/components/createpost.html</h2>
+<pre><code class="lang-java">&lt;section class=&quot;ui form segment&quot;&gt;
+  &lt;h4 class=&quot;ui inverted blue block header&quot;&gt;Create a Post&lt;/h4&gt;
+  &lt;form action=&quot;/blog/newpost&quot; method=&quot;POST&quot;&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;input type=&quot;text&quot; name=&quot;title&quot; placeholder=&quot;Title&quot;&gt;&lt;/input&gt;    
+      &lt;textarea name=&quot;content&quot; placeholder=&quot;Content&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;ui button teal submit labeled icon&quot;&gt;&lt;i class=&quot;icon edit&quot;&gt;&lt;/i&gt; Create &lt;/button&gt;
+  &lt;/form&gt;
+&lt;/section&gt;</code></pre>
+<h2>views/components/displayposts.html</h2>
+<pre><code class="lang-java">&lt;section class=&quot;ui stacked segment&quot;&gt;
+  &lt;h4 class=&quot;ui inverted blue block header&quot;&gt;Published Posts&lt;/h4&gt;
+  #{list items:user.posts, as:&#39;post&#39;}
+    &lt;h5 class=&quot;ui inverted green block header&quot;&gt; ${post.title}&lt;/h5&gt;
+    &lt;p&gt; 
+      ${post.content}:
+    &lt;/p&gt;
+  #{/list}
+&lt;/section&gt;</code></pre>
+<p>Take this for a spin now. It should enable you to create a a post, and it should list posts already created.</p>
+<p>You should also be able to log out and back in - and the posts should be remembered.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>This is a completed version of the app, including new blog feature:</p>
+<ul>
+<li><a href="https://github.com/wit-web-dev-2015/spacebook-blog/releases/tag/lab-09-finish">https://github.com/wit-web-dev-2015/spacebook-blog/releases/tag/lab-09-finish</a></li>
+</ul>
+<h2>Exercise 1:</h2>
+<p>Download and expand the above project. Run Eclipsify in the usual way. Try to import the project into your eclipse workspace. You should notice that it cannot be imported - this is because you already have a project in your workspace called <code>spacebook-app-2015</code>. You cannot have 2 projects with the same name in a workspace.</p>
+<p>The solution to this is to rename the project you are trying to import. Do this now as follows:</p>
+<ul>
+<li>open the file <code>conf/application.conf</code>. On line 3 you will see the following:</li>
+</ul>
+<pre><code>application.name=spacebook-app-2015</code></pre>
+<ul>
+<li>Change this line replacing <code>spacebook-app-2015</code> with <code>spacebook-lab-09</code>. Save the file.</li>
+<li>Run <code>play eclipsify</code> again</li>
+<li>Import the project.</li>
+</ul>
+<p>If should import the project correctly now, with the new name.</p>
+<h2>Exercise 2:</h2>
+<p>The slide set this week contains a topic <code>YAML &amp; Preloaded Images</code>. This contains ways of including messages, friendships and pre-loaded images. See if you can make sense of these slides, and try some of the techniques on this project.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

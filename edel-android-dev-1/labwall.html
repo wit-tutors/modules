@@ -1,0 +1,620 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Android App Dev 1</h2>
+    <p> All Labs in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar & John Fitzgerald.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic01/book-a-donation-01/index.html">
+      Donation-01
+    </a>
+    
+    <a class="item" href="topic02-a/book-a-donation-02/index.html">
+      Donation-02
+    </a>
+    
+    <a class="item" href="topic02-b/book-b-donation-03/index.html">
+      Donation-03
+    </a>
+    
+    <a class="item" href="topic03-a/book-a-solutions-donation-03/index.html">
+      Donation-03-Solutions
+    </a>
+    
+    <a class="item" href="topic03-a/book-b-myrent-00 (Baseline/index.html">
+      MyRent-00 (Baseline)
+    </a>
+    
+    <a class="item" href="topic03-a/book-c-myrent-01 (Widgets)/index.html">
+      MyRent-01 (Widgets)
+    </a>
+    
+    <a class="item" href="topic03-b/book-a-myrent-02 (Listview) /index.html">
+      MyRent-02 (Listview)
+    </a>
+    
+    <a class="item" href="topic03-b/book-b-event-handling/index.html">
+      Event-Handling
+    </a>
+    
+    <a class="item" href="topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+      MyRent-03 (Action Bar & Dialogs)
+    </a>
+    
+    <a class="item" href="topic04-a/book-b-myrent-04-fileIO/index.html">
+      MyRent-04 (FileIO)
+    </a>
+    
+    <a class="item" href="topic04-b/book-a-myrent-05 (Up Button)/index.html">
+      MyRent-05 (Up Button)
+    </a>
+    
+    <a class="item" href="topic04-b/book-b-java-8/index.html">
+      Lambda Expressions
+    </a>
+    
+    <a class="item" href="topic04-b/book-c-event-handler-soln/index.html">
+      Event-Handling-Solution
+    </a>
+    
+    <a class="item" href="topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+      MyRent-06 (Contact & Email)
+    </a>
+    
+    <a class="item" href="topic05-a/book-b-permissions/index.html">
+      MyRent-06a (Permissions)
+    </a>
+    
+    <a class="item" href="topic05-b/book-a-myrent-07 (Fragments)/index.html">
+      MyRent-07 (Fragments)
+    </a>
+    
+    <a class="item" href="topic05-b/book-b-twopane/index.html">
+      Two Pane
+    </a>
+    
+    <a class="item" href="topic06-a/book-a-myrent-08 (Deletion)/index.html">
+      MyRent-08 (Deletion)
+    </a>
+    
+    <a class="item" href="topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+      MyRent-09 (ViewPager)
+    </a>
+    
+    <a class="item" href="topic06-b/book-a-settings/index.html">
+      MyRent-10 (Settings)
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic01/book-a-donation-01/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Donation-01 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01/book-a-donation-01/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Here we proceed to explore in detail the creating of a simple activity class + the associated layout. This process will seem quite complex on first contact - but as we proceed through the labs over the next few sessions the deep structure should start to emerge.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-a/book-a-donation-02/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Donation-02 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-a/book-a-donation-02/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Introduce a second screen to display the list of donations made by the user. In addition, enable our app its first &quot;Model&quot; objects, which will be used to store the individual donations made by the user. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-b/book-b-donation-03/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Donation-03 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-b/book-b-donation-03/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We continue the implementation of Donation to including the welcome, sign up and login. Support these views with a User model, and validate the users on log in. Continue to build on your Donation repository. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-a/book-a-solutions-donation-03/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Donation-03-Solutions </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-a/book-a-solutions-donation-03/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A total of 5 exercises were set at the end of the earlier lab - Donation-03.Here we present sample solutions to exercises 2 and 5. The other exercises require experimentation and studying the official Android documentation, links to which have been provided.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-a/book-b-myrent-00 (Baseline/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-00 (Baseline) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-a/book-b-myrent-00 (Baseline/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We start a new application in this lab, which will be succeeded by numerous version over the next few topics. In the first lab the focus is on explaining the essential &#39;plumbing&#39; of the app, and introducing the first Interface based listener you may have encountered.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-a/book-c-myrent-01 (Widgets)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-01 (Widgets) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-a/book-c-myrent-01 (Widgets)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this version of MyRent, we introduce a range of UI Widgets to evolve the UX into something more useful. These widgets will be &#39;active&#39;, meaning that the host Activity will be intercepting and responding to events the user may generate when interacting with the application.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-b/book-a-myrent-02 (Listview) /index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-02 (Listview) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-b/book-a-myrent-02 (Listview) /img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Our current version of MyRent (V01) only permits a single Residence to be entered. In this lab we seek to manage a list of residences. To do this we need to extend the model by including a new class - &#39;Portfolio&#39; - to manage all our residences. We will also need a new Activity - ResidenceListActivity - to display the full portfolio of residences.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-b/book-b-event-handling/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Event-Handling </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-b/book-b-event-handling/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This is a short lab whose aim is to provide a detailed explanation of event handling via a simple standalone non-android application</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-03 (Action Bar & Dialogs) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In a significant update to the app, we introduce navigation within the app using an Action Bar. This will allow us to create new residences, or navigate to existing ones. Additionally, we will explore a simple date picker dialog to allow the user to select a registration date for the residence.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-a/book-b-myrent-04-fileIO/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-04 (FileIO) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-a/book-b-myrent-04-fileIO/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Introduce into MyRent a serialization mechanism to save &#124; restore the residence list to and from a file. The app will load the contents of this file on launch and update the file if residence data is updated. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-b/book-a-myrent-05 (Up Button)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-05 (Up Button) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-b/book-a-myrent-05 (Up Button)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We continue to evolve navigation support in the app, providing an &#39;up&#39; button in the action bar to allow navigation from the ResidenceActivity to the ResidenceListActivity.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-b/book-b-java-8/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lambda Expressions </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-b/book-b-java-8/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Java 8, initially released in March 2014, is a major upgrade providing many new features one of which we examine here, namely <code>lambda expressions</code>. We consider situations where such expressions may be used to provide a less verbose alternatitive to anonymous classes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-b/book-c-event-handler-soln/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Event-Handling-Solution </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-b/book-c-event-handler-soln/img/main.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This is a solution to the event handling lab.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-06 (Contact & Email) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-a/book-a-myrent-06 (Contact & Email) /img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Activities within an application can reach out to activities in other applications to perform specific tasks. In this lab we introduce two new features - selecting a contact from the phone&#39;s contact lists, and sending an email to the selected user. Both of these features require the use of &#39;implicit&#39; intents.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-a/book-b-permissions/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-06a (Permissions) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-a/book-b-permissions/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Supplementary MyRent lab to demonstrate how to request permissions at run time. We restrict ourselves to the single permission READ_CONTACTS. We consider two scenarios: activity-fragment and viewpager-fragment.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-b/book-a-myrent-07 (Fragments)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-07 (Fragments) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-b/book-a-myrent-07 (Fragments)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>An Activity may comprise one or more fragments, each of which represents a portion of a user interface. Multiple fragments can be combined in a single actiity to build a multi-pane screen. In this lab our purpose in introducing fragments is to later facilitat the inclusion of a horizontal swipe feature to the ResidenceActivity class.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05-b/book-b-twopane/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Two Pane </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05-b/book-b-twopane/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p> In the previous lab we gained experience in using single-pane screens, a pane containing only a single fragment. Here we develop a simple application to demonstate how two fragments may be successively rendered on a single pane in portrait mode. We provide the same feature in landscape mode but additionaly allow the simultaneous rendering of an additional fragment. This is sometimes referred to as the master-detail pattern.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-a/book-a-myrent-08 (Deletion)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-08 (Deletion) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-a/book-a-myrent-08 (Deletion)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We introduce a facility to select and delete a subset of residences in the list view. The selected items need not be contiguous. The Android MultiChoiceModeListener interface is key to the implementation of this feature.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-09 (ViewPager) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-a/book-b-myrent-09 (Viewpager)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Here we incorporate a new feature to support horizontal &#39;swipe&#39; interaction. This allows a user to page through the entire residence list, beginning from within any details view, in either direction. In providing this feature, we make of the Android ViewPager layout manager PageAdapter abstract class.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-b/book-a-settings/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-10 (Settings) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-b/book-a-settings/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Settings allow a user to modify application features and behaviour. In this lab we demonstrate the use of settings to input a username, password pair, the size of the list of residences to download from the cloud and the frequency at which this list is automatically refreshed by a service or services. Services will be the subject of a future lab.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

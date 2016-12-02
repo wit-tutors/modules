@@ -1,0 +1,436 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder">  Android App Dev 2</h2>
+    <p> All Labs in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar & John Fitzgerald.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+      MyRent-11 (Maps - Google)
+    </a>
+    
+    <a class="item" href="topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+      MyRent-11a (Maps - MapBox)
+    </a>
+    
+    <a class="item" href="topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+      MyRentSQLite (SQLite)
+    </a>
+    
+    <a class="item" href="topic08-a/book-a-myrent-12 (SQLite)/index.html">
+      MyRent-12 (SQLite)
+    </a>
+    
+    <a class="item" href="topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+      MyRentSQLite (ContentProvider)
+    </a>
+    
+    <a class="item" href="topic09-a/book-a-myrent-service/index.html">
+      MyRent (Play Service)
+    </a>
+    
+    <a class="item" href="topic09-a/book-a-myrent-service-test/index.html">
+      MyRent (JUnit Test)
+    </a>
+    
+    <a class="item" href="topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+      MyRent-13 (Client)
+    </a>
+    
+    <a class="item" href="topic10-a/book-b-services/index.html">
+      MyRent-14 (Services)
+    </a>
+    
+    <a class="item" href="topic11-a/book-a-myrent-11 (Camera)/index.html">
+      MyRent-15 (Camera)
+    </a>
+    
+    <a class="item" href="topic11-b/book-a-crypto/index.html">
+      App Signing & Crypto
+    </a>
+    
+    <a class="item" href="topic11-c/book-a-myrent-16(Mongo)/index.html">
+      MyRent-16 (Mongo)
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-11 (Maps - Google) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-a/book-a-myrent-10 (Maps - Google)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Introduce a Google Map including necessary supporting resources such as Google Play Services Library and a personal API key. Additionally, support a landscape layout, validation of geolocation input, immediate mirroring any changes in this input in the view title and support for smaller small factor devices.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-11a (Maps - MapBox) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-a/book-b-myrent-10 (Maps - MapBox)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In a previous lab our MyRent app consumed a GoogleMap API. Here we provide an alternative mapping system provided by MapBox. This is based on the open source OpenStreetMap project. This approach has the advantage of providing greater flexibility, not requiring keys and, importantly, resulting in a significantly smaller release build.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRentSQLite (SQLite) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-b/book-a-myrent-sqlite (SQLite)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Working with a subset of the MyRent app, we develop a module to persist data using SQLite, use the Android Debug Bridge (adb) commandline tool to view the database content and as an exercise replace the file system in MyRent with an SQLite implementation.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08-a/book-a-myrent-12 (SQLite)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-12 (SQLite) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08-a/book-a-myrent-12 (SQLite)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In the MyRent series of labs we have used file storage as a means of data persistence. In an earlier lab we introduced an SQLite database to an app based on a subset of MyRent.Here we replace the file system in MyRent with an SQLite database. Later we shall open up this database to other applications using Android&#39;s ContentProvider.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRentSQLite (ContentProvider) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08-b/book-b-myrent-sqlite (ContentProvider)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In the MyRent series of labs we first used file storage as a means of data persistence. We then replaced this with a database. Here we shall open up this database to other applications using Android&#39;s ContentProvider.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-a/book-a-myrent-service/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent (Play Service) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-a/book-a-myrent-service/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Here we implement an API. It comprises a set of routes (the end points), controllers for these routes together with the means of translating Java objects to and from the Json format.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-a/book-a-myrent-service-test/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent (JUnit Test) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-a/book-a-myrent-service-test/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Explore the Unit test features of Play by writing some tests to verify the current behavior of the Residence model class for the MyRent app. Develop a test app to consume MyRent service API, progressively implementing a range of functionality in writing to and reading from the service database.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-13 (Client) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-a/book-b-myrent-14 (Retrofit Client)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In a previous lab we introduced an SQLite database. This allows us to retain a local copy of the data. Here we integrate the Retrofit REST client to facilitate manipulation of server-based data. The local and remote data are kept in sync. Testing is performed against localhost and Heroku deployed databases.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-a/book-b-services/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-14 (Services) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-a/book-b-services/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We avail of two Android classes, BroadcastReceiver and IntentService, to asynchronously refresh local data obtained by querying a cloud-based service. The BroadcastReceiver receives intents sent by a Context method, <code>sendBroadcast</code>. The IntentService handles asynchronous requests. Our approach is to initialize an alarm in the BroadcastReceiver to exercise the IntentService at interverals configurable from the settings. When the alarm fires, the local data is asynchronously refreshed.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-a/book-a-myrent-11 (Camera)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-15 (Camera) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-a/book-a-myrent-11 (Camera)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Make use of the device camera to take and serialize a photo, display it as thumbnail and create a simple single-photo gallery.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-b/book-a-crypto/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> App Signing & Crypto </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-b/book-a-crypto/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Cryptography supports the millions of daily secure internet transactions, for example, in the use of HTTPS, SSH, secure email, secure messaging and eCommerce. <br>Widespread use of cryptography is made in the Android ecosystem, for example a hash function produces a fingerprint of the app and public-key cryptography is used to generate and use a set of public-private keys in signing and verifying the app. <br>Specifically, in this lab, we shall sign our MyRent app and explore some simple uses of supporting cyptographic techniques.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-c/book-a-myrent-16(Mongo)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-16 (Mongo) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-c/book-a-myrent-16(Mongo)/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Allow the database to auto-generate the primary key (id). On creating a residence in the remote database, echo back the new record to inform the client of the id value. We demonstrate using a Play service, a JUnit test app and the MyRent Android client.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

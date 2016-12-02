@@ -1,0 +1,505 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder">  Android App Dev 2</h2>
+    <p> All Slides in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar & John Fitzgerald.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic07-a/talk-1-google-map/ba-android_maps.pdf">
+      Google Map
+    </a>
+    
+    <a class="item" href="topic07-a/talk-2-mapbox/mapbox.pdf">
+      Mapbox
+    </a>
+    
+    <a class="item" href="topic07-b/talk-1-sqlite/sqlite.pdf">
+      SQLite
+    </a>
+    
+    <a class="item" href="topic08-a/talk-1-sqlite-myrent/sqlite_myrent.pdf">
+      SQLite (MyRent)
+    </a>
+    
+    <a class="item" href="topic08-b/talk-1-content-provider/content_provider.pdf">
+      Content Providers
+    </a>
+    
+    <a class="item" href="topic09-a/talk-1-play-junit/ab-play-tests.pdf">
+      TDD in Play
+    </a>
+    
+    <a class="item" href="topic09-a/talk-2-myrent-service/myrent-service.pdf">
+      MyRent (Service)
+    </a>
+    
+    <a class="item" href="topic09-a/talk-3-myrent-test/myrent_test.pdf">
+      MyRent (JUnit Test)
+    </a>
+    
+    <a class="item" href="topic09-a/talk-4-myrent-client/myrent_client.pdf">
+      MyRent (Android Client)
+    </a>
+    
+    <a class="item" href="topic10-a/talk-1-services/services.pdf">
+      Services
+    </a>
+    
+    <a class="item" href="topic11-a/talk-1-camera/ae-android_camera.pdf">
+      Camera
+    </a>
+    
+    <a class="item" href="topic11-b/talk-1-crypto/crypto-intro.pdf">
+      App Signing (Introduction)
+    </a>
+    
+    <a class="item" href="topic11-b/talk-2-crypto/crypto-math.pdf">
+      App Signing (Crypto)
+    </a>
+    
+    <a class="item" href="topic11-c/talk-1/mongo-prep.pdf">
+      Database ID
+    </a>
+    
+    <a class="item" href="topic11-c/talk-2-retrofit/anon-class.pdf">
+      Retrofit
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic07-a/talk-1-google-map/ba-android_maps.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Google Map </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-a/talk-1-google-map/ba-android_maps.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We briefly discuss the Google Maps API in advance of a more detailed exploration in the associated lab.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-a/talk-2-mapbox/mapbox.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Mapbox </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-a/talk-2-mapbox/mapbox.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Mapbox, like Google, provides a commercial mapping service with a limited free offering that we avail of for learning purposes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-b/talk-1-sqlite/sqlite.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> SQLite </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-b/talk-1-sqlite/sqlite.jpeg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Ranks in the top ten most popular relational databases. Typical uses are in mobile, embedded and IoT apps.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08-a/talk-1-sqlite-myrent/sqlite_myrent.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> SQLite (MyRent) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08-a/talk-1-sqlite-myrent/sqlite_myrent.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The integration of SQLite into MyRent to replace the file io system follows easily from the SQLite demo lab presented last week. The DBHelper class ports without any changes. Removal of the file io artefacts is trivial as are changes to the model.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08-b/talk-1-content-provider/content_provider.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Content Providers </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08-b/talk-1-content-provider/content_provider.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Content providers are Android building blocks that facilitate access to data between applications on the same device. Because Android runs in its own process with its own permissions an application does not automatically have access to another app&#39;s data. This restriction may be surmounted by integrating a content provider into an application.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-a/talk-1-play-junit/ab-play-tests.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> TDD in Play </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-a/talk-1-play-junit/ab-play-tests.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The Play framework has very specific test support - facilitated by the JUnit libraries. This enables Play applications to be launched in test mode and specific simple tests executed on the application classes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-a/talk-2-myrent-service/myrent-service.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> MyRent (Service) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-a/talk-2-myrent-service/myrent-service.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We examine how the MyRent app is refactored into a client-service pair, the service being deployed either locally or on the cloud.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-a/talk-3-myrent-test/myrent_test.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> MyRent (JUnit Test) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-a/talk-3-myrent-test/myrent_test.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Play Framework support for JUnit is used to create a simple set of tests run against MyRent service.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic09-a/talk-4-myrent-client/myrent_client.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> MyRent (Android Client) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic09-a/talk-4-myrent-client/myrent_client.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The Retrofit HTTP client is integrated into the MyRent Android client app to provide an effective communications channel with the MyRent service. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-a/talk-1-services/services.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Services </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-a/talk-1-services/services.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We configure an alarm within BroadcastReceiver&#39;s onHandleIntent method that initiates a process terminating in a refresh of local cached data obtained     from a cloud service. The process is run on a worker thread and avails of the Retrofit HTTP client to communicate across the network so as to keep the local cached data in sync with that of the service.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-a/talk-1-camera/ae-android_camera.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Camera </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-a/talk-1-camera/ae-android_camera.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A review of a number of techniques for acquiring and manipulating images taken by the Camera under Android.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-b/talk-1-crypto/crypto-intro.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> App Signing (Introduction) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-b/talk-1-crypto/crypto-intro.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>To date we have built and run debug versions of our apps. Android Studio transparently manages the signing of these apps using auto-generated debug keys. This process will not suffice should we wish to publish to the Google Playstore. Here we examine how to prepare our app for release which entails generating and storing keys and signing the app. We then dig a little deeper and examine the cryptograpic technologies that support these actions.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-b/talk-2-crypto/crypto-math.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> App Signing (Crypto) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-b/talk-2-crypto/crypto-math.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We conclude our discussion on app signing with a very brief examination of the underlying mathematics used in basic cryptographic functions such as symmetric key and public key cryptography. Simple examples are provided to demonstrate Diffie-Hellman key exchange and RSA (public key cryptography).</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-c/talk-1/mongo-prep.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Database ID </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-c/talk-1/mongo-prep.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The mongoDB database is used in assignment 3. This database autogenerates a primary key id of type String. To date, using JPA, we have generated the id client-side. Here we discuss refactoring to adapt our app to a database where the id is autogenerated server-side.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-c/talk-2-retrofit/anon-class.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Retrofit </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-c/talk-2-retrofit/anon-class.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A class may not implement more than one Callback. Yet in some compilation units the requirement is to use Callbacks where two or perhaps more response body types are used. An example would be the need to retrieve a list of residences and to delete a particular residence. Here we examine two patterns to deal with this situation: in one we use inner classes, in the other anonymous classes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

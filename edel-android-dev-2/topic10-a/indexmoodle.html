@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.css" type="text/css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.js"></script>
+    <style>
+      
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+    <base target="_blank" />
+  </head>
+  <body>
+    <div class="ui raised segment">
+     
+
+<div class="ui four doubling stackable cards">
+
+  
+  
+  <a class="ui raised link card" href="http://wit-ictskills-2016.github.io/mobile-app-dev-2016/topic10-a/talk-1-services/services.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Services </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="http://wit-ictskills-2016.github.io/mobile-app-dev-2016/topic10-a/talk-1-services/services.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We configure an alarm within BroadcastReceiver&#39;s onHandleIntent method that initiates a process terminating in a refresh of local cached data obtained     from a cloud service. The process is run on a worker thread and avails of the Retrofit HTTP client to communicate across the network so as to keep the local cached data in sync with that of the service.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+  
+  
+  <a class="ui raised link card" href="http://wit-ictskills-2016.github.io/mobile-app-dev-2016/topic10-a/book-b-services/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent-14 (Services) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="http://wit-ictskills-2016.github.io/mobile-app-dev-2016/topic10-a/book-b-services/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We avail of two Android classes, BroadcastReceiver and IntentService, to asynchronously refresh local data obtained by querying a cloud-based service. The BroadcastReceiver receives intents sent by a Context method, <code>sendBroadcast</code>. The IntentService handles asynchronous requests. Our approach is to initialize an alarm in the BroadcastReceiver to exercise the IntentService at interverals configurable from the settings. When the alarm fires, the local data is asynchronously refreshed.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+  
+
+</div>
+
+
+    </div>
+  </body>
+ </html>

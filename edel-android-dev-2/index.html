@@ -1,0 +1,547 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder">  Android App Dev 2</h2>
+    <p> Top Level Topics </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="#"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar & John Fitzgerald.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic07-a/index.html">
+        7-a: Maps
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic07-a/talk-1-google-map/ba-android_maps.pdf">
+          Google Map</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-a/talk-2-mapbox/mapbox.pdf">
+          Mapbox</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+          MyRent-11 (Maps - Google)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+          MyRent-11a (Maps - MapBox)</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic07-b/index.html">
+        7-b: SQLite
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic07-b/talk-1-sqlite/sqlite.pdf">
+          SQLite</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+          MyRentSQLite (SQLite)</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic08-a/index.html">
+        8-a: SQLite (MyRent)
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic08-a/talk-1-sqlite-myrent/sqlite_myrent.pdf">
+          SQLite (MyRent)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08-a/book-a-myrent-12 (SQLite)/index.html">
+          MyRent-12 (SQLite)</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic08-b/index.html">
+        8-b: Content provider
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic08-b/talk-1-content-provider/content_provider.pdf">
+          Content Providers</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+          MyRentSQLite (ContentProvider)</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic09-a/index.html">
+        9-a: Client-Service
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic09-a/talk-1-play-junit/ab-play-tests.pdf">
+          TDD in Play</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-a/talk-2-myrent-service/myrent-service.pdf">
+          MyRent (Service)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-a/talk-3-myrent-test/myrent_test.pdf">
+          MyRent (JUnit Test)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-a/talk-4-myrent-client/myrent_client.pdf">
+          MyRent (Android Client)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-a/book-a-myrent-service/index.html">
+          MyRent (Play Service)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-a/book-a-myrent-service-test/index.html">
+          MyRent (JUnit Test)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+          MyRent-13 (Client)</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic10-a/index.html">
+        10-a: Services
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic10-a/talk-1-services/services.pdf">
+          Services</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10-a/book-b-services/index.html">
+          MyRent-14 (Services)</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic11-a/index.html">
+        11-a: Camera
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic11-a/talk-1-camera/ae-android_camera.pdf">
+          Camera</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11-a/book-a-myrent-11 (Camera)/index.html">
+          MyRent-15 (Camera)</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic11-b/index.html">
+        11-b: App Signing
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic11-b/talk-1-crypto/crypto-intro.pdf">
+          App Signing (Introduction)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11-b/talk-2-crypto/crypto-math.pdf">
+          App Signing (Crypto)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11-b/book-a-crypto/index.html">
+          App Signing & Crypto</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic11-c/index.html">
+        12: Supplementary topic
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic11-c/talk-1/mongo-prep.pdf">
+          Database ID</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11-c/talk-2-retrofit/anon-class.pdf">
+          Retrofit</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11-c/book-a-myrent-16(Mongo)/index.html">
+          MyRent-16 (Mongo)</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+          
+  <a class="ui raised link card" href="./topic07-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 7-a: Maps </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic07-a/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We examine how maps from two providers, Google and MapBox, may be integrated into an Android application. Both providers have published a rich API, a subset of which we use to implement a simple MyRent feature.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic07-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 7-b: SQLite </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic07-b/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>SQLite is a relational database management system (RDBMS) that becomes an integral part of the application. It implements most of the SQL standard. It is a very popular database engine and is widely used in web browsers, operating and embedded systems and mobile applications.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic08-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 8-a: SQLite (MyRent) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic08-a/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In an earlier lab we developed an application to persist the MyRent Residence model class state using a SQLite database. Here we port the core elements of this app to the MyRent application.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic08-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 8-b: Content provider </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic08-b/topic.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Data within an app may be stored using an SQLite database. But further steps are required if this data is to be made available to other applications. This additional feature may be incorporated using a content porovider. A content provider presents data to external applications in the form of tables similar to those used in the SQLite database.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic09-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 9-a: Client-Service </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic09-a/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>To date we have developed MyRent as a standalone application in which its data is stored in a SQLite database. In this topic we split the app into client-server modules. SQLite is retained but functions as a local cache, the primary model data repository now being allocated to a service. In developing the service we adopt a test-driven-development (TDD) approach, using a simple Play JUnit app to verify the service before refactoring the standalone MyRent app into a client capable of consuming the service api.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic10-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 10-a: Services </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic10-a/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Services are application components that can perform background tasks. These tasks may run for long or short periods of time. We use two particular services in MyRent, a RefreshService and a BroadcastReceiver. The BroadcastReceiver listens for a particular intent, sent either in response to booting the device or when our application starts. It then sets an alarm that triggers the refresh service at either default or user-define intervals. The refresh service keeps the data cache in sync with the data resident on the server.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic11-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 11-a: Camera </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic11-a/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Here we explore how to capture photos using an existing camera application. Although most Android devices have at least one camera we, nevertheless, verify this in advance of shooting. We show how to capture a thumnail, save the photo and add it to a, for now one-photo, gallery. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic11-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 11-b: App Signing </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic11-b/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We conclude the course with instructions on how to sign an app and with a brief discussion on the supporting cryptographic technologies. <br>Android 7.0 (Nougat) has introduced a new signing scheme, APK Signature Scheme v2. We have not covered this in this lab.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic11-c/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 12: Supplementary topic </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic11-c/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This is a supplementary topic that addressess refactoring the MyRent suite to make it compatible with databases, such as Mongo, where the model id (the primary key) is auto-generated in the service. To date the id has been generated in the client and passed to the service (Play). It also provides a pattern applicable where the Retrofit Callback<T> is required with more than one type of response body T.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

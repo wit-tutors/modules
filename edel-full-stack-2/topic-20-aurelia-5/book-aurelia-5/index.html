@@ -1,0 +1,425 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      20: Aurelia & JWT
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-Aurelia 5">
+      Lab-Aurelia 5
+    </a>
+    
+    <a class="item" data-tab="Exercise Solutions">
+      Exercise Solutions
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07.Exercises">
+      07.Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-12-api/book-api/index.html">
+          Lab-12 Apis
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-13-tdd/book-tdd/index.html">
+          Lab-13 Tdd
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-14-rest/book-rest/index.html">
+          Lab-14 Rest
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-15-aurelia-1/book-aurelia-1/index.html">
+          Lab-Aurelia 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-16-aurelia-2/book-aurelia-2/index.html">
+          Lab-Aurelia 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-17-aurelia-3/book-aurelia-3/index.html">
+          Lab-Aurelia 3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-18-aurelia-4/book-aurelia-4/index.html">
+          Lab-Aurelia 4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-19-auth/book-auth/index.html">
+          Lab-15 Auth
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic-20-aurelia-5/book-aurelia-5/index.html">
+          Lab-Aurelia 5
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-21-android-1/book-rest-client/index.html">
+          Lab-Android 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-22-android-2/book-android-client/index.html">
+          Lab-Android 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-23-android-3/book-secure-android/index.html">
+          Lab-Android 3
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-Aurelia 5">
+        <h1>Objectives</h1>
+<p>Assuming our donation-web app api has been secured with JWT tokens, revised donation-service classes to authenticate against and use these secure routes.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise Solutions">
+        <h1>Lab 22.1 Exercises</h1>
+<h2>Exercise 1: Retrieve prior donations</h2>
+<p>When you first log in, modify app such that existing donations are retrieved from donation-web. Currently we only show donations made my the current user.</p>
+<h2>src/services/donation-service.js</h2>
+<pre><code>  ...
+  constructor(data, ea, ac) {
+    ...
+    this.getDonations();
+  }
+
+  getDonations() {
+    this.ac.get(&#39;/api/donations&#39;).then(res =&gt; {
+      this.donations = res.content;
+    });
+  }
+...
+
+Note: this solution will be invalidated by our forthcoming approach to authenticated routes, and will need to be changed later.</code></pre>
+<h1>Exercise 2: Show Candidate names in report</h1>
+<p>Notice that, when you make a donation - the actual candidate&#39;s name does not appear. Why is this? In chrome, debug into the app to explore why. See if you can fix this. </p>
+<p>There are two approaches:</p>
+<ul>
+<li>You already know the candidate name in the donation-client, so just insert it into the donation.</li>
+<li>Change donation-web to populate the donation&#39;s candidate field when you create a donation.</li>
+</ul>
+<h2>Solution</h2>
+<p>This is a modification of the donation-web api for creating donations:</p>
+<pre><code>exports.makeDonation = {
+
+  auth: false,
+
+  handler: function (request, reply) {
+    const donation = new Donation(request.payload);
+    donation.candidate = request.params.id;
+    donation.save().then(newDonation =&gt; {
+      Donation.findOne(newDonation).populate(&#39;candidate&#39;).then(donation =&gt; {
+        reply(donation).code(201);
+      });
+    }).catch(err =&gt; {
+      reply(Boom.badImplementation(&#39;error making donation&#39;));
+    });
+  },
+
+};</code></pre>
+<p>When a donation is created, it populates the candidate field. No further modification should be neccessary.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>async-http-client</h1>
+<p>You must be running the jwt enabled version of the donation-web service to test these additions.</p>
+<p>This is a sophisticated change to the AsyncHttpClient class, but implemented in very concise code. </p>
+<h2>src/donation-service/async-http-client.js</h2>
+<p>First, change the constructor in import the EventAggregator:</p>
+<pre><code>import {inject} from &#39;aurelia-framework&#39;;
+import {HttpClient} from &#39;aurelia-http-client&#39;;
+import Fixtures from &#39;./fixtures&#39;;
+import {EventAggregator} from &#39;aurelia-event-aggregator&#39;;
+import {LoginStatus} from &#39;./messages&#39;;
+
+@inject(HttpClient, Fixtures, EventAggregator )
+export default class AsyncHttpClient {
+
+  constructor(httpClient, fixtures, ea) {
+    this.http = httpClient;
+    this.http.configure(http =&gt; {
+      http.withBaseUrl(fixtures.baseUrl);
+    });
+    this.ea = ea;
+  }
+...</code></pre>
+<p>Now introduce a new method to authenticate a user to the donation-web api:</p>
+<pre><code>  authenticate(url, user) {
+    this.http.post(url, user).then(response =&gt; {
+      const status = response.content;
+      if (status.success) {
+        localStorage.donation = JSON.stringify(response.content);
+        this.http.configure(configuration =&gt; {
+          configuration.withHeader(&#39;Authorization&#39;, &#39;bearer &#39; + response.content.token);
+        });
+      }
+      this.ea.publish(new LoginStatus(status));
+    }).catch(error =&gt; {
+      const status = {
+        success: false,
+        message: &#39;service not avilable&#39;
+      };
+      this.ea.publish(new LoginStatus(status));
+    });
+  }</code></pre>
+<p>In the above (invoked in the next step from donation-service), will post to an authenticate url - and if successful, attaches the returned token to all subsequent invocations. It will also store the token in local storage in case our app is suspended. However, we are not really making use of this yet.</p>
+<p>An accompanying clear method:</p>
+<pre><code>  clearAuthentication() {
+    localStorage.donation = null;
+    this.http.configure(configuration =&gt; {
+      configuration.withHeader(&#39;Authorization&#39;, &#39;&#39;);
+    });
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>donation-service login/logout</h1>
+<p>DonationService can now have its login/logout methods use the new methods.</p>
+<p>First, remove retrieval of users and donations in the constructor:</p>
+<pre><code>  constructor(data, ea, ac) {
+    this.methods = data.methods;
+    this.ea = ea;
+    this.ac = ac;
+    this.getCandidates();
+  }</code></pre>
+<p>the users and candidates are protected routes, and will fail if we attempt to read them if we are not authenticated.</p>
+<p>Now we can implement login/logout - which are considerably simplified:</p>
+<h2>src/donation-service</h2>
+<pre><code>  login(email, password) {
+    const user = {
+      email: email,
+      password: password
+    };
+    this.ac.authenticate(&#39;/api/users/authenticate&#39;, user);
+  }</code></pre>
+<pre><code>  logout() {
+    const status = {
+      success: false,
+      message: &#39;&#39;
+    };
+    this.ac.clearAuthentication();
+    this.ea.publish(new LoginStatus(new LoginStatus(status)));
+  }
+}</code></pre>
+<p>Try this now and see if it works as expected.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <p>#</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07.Exercises">
+        <h1>Exercizes</h1>
+<p>This is the project so far:</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

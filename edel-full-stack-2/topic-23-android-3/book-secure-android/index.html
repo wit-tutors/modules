@@ -1,0 +1,458 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      23: Secure Android Rest Client
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-Android 3">
+      Lab-Android 3
+    </a>
+    
+    <a class="item" data-tab="Solutions">
+      Solutions
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07.Exercises">
+      07.Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-12-api/book-api/index.html">
+          Lab-12 Apis
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-13-tdd/book-tdd/index.html">
+          Lab-13 Tdd
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-14-rest/book-rest/index.html">
+          Lab-14 Rest
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-15-aurelia-1/book-aurelia-1/index.html">
+          Lab-Aurelia 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-16-aurelia-2/book-aurelia-2/index.html">
+          Lab-Aurelia 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-17-aurelia-3/book-aurelia-3/index.html">
+          Lab-Aurelia 3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-18-aurelia-4/book-aurelia-4/index.html">
+          Lab-Aurelia 4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-19-auth/book-auth/index.html">
+          Lab-15 Auth
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-20-aurelia-5/book-aurelia-5/index.html">
+          Lab-Aurelia 5
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-21-android-1/book-rest-client/index.html">
+          Lab-Android 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-22-android-2/book-android-client/index.html">
+          Lab-Android 2
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic-23-android-3/book-secure-android/index.html">
+          Lab-Android 3
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-Android 3">
+        <h1>Objectives</h1>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Solutions">
+        <h1>Report</h1>
+<p>Try the report now before making any changes.</p>
+<p>You will notice that it seems to list the donations. Where are these coming from? We havent made any changes to the Report activity yet...</p>
+<p>We can now adjust this - and have the report display ALL donations (not just the donations made on this device).</p>
+<p>Before we start, make the following changes to the Report class:</p>
+<p>Introduce a new private member:</p>
+<pre><code>  private DonationAdapter adapter;</code></pre>
+<p>.. and change the onCreate method to initialise this member:</p>
+<pre><code>  public void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_report);
+
+    app = (DonationApp) getApplication();
+
+    listView = (ListView) findViewById(R.id.reportList);
+    adapter = new DonationAdapter (this, app.donations);
+    listView.setAdapter(adapter);
+  }</code></pre>
+<p>(we are just making the adapter a class member, previously it was local)</p>
+<p>Now, import the libraries we need:</p>
+<pre><code>import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import android.widget.Toast;</code></pre>
+<p>Then implement the callback:</p>
+<pre><code>public class Report extends AppCompatActivity implements Callback&lt;Donation&gt;</code></pre>
+<p>... and these are the required method overrides:</p>
+<pre><code>  @Override
+  public void onResponse(Call&lt;List&lt;Donation&gt;&gt; call, Response&lt;List&lt;Donation&gt;&gt; response) {
+    adapter.donations = response.body();
+    adapter.notifyDataSetChanged();
+  }
+
+  @Override
+  public void onFailure(Call&lt;List&lt;Donation&gt;&gt; call, Throwable t) {
+    Toast toast = Toast.makeText(this, &quot;Error retrieving donations&quot;, Toast.LENGTH_LONG);
+    toast.show();
+  }</code></pre>
+<p>and finally, in onCreate - make the call to retrieve the donations:</p>
+<pre><code>    Call&lt;List&lt;Donation&gt;&gt; call = (Call&lt;List&lt;Donation&gt;&gt;) app.donationService.getAllDonations();
+    call.enqueue(this);</code></pre>
+<p>Try this now - you should see a list of all dontations.</p>
+<p>Complete version of Report class at this stage:</p>
+<pre><code>package app.donation.activity;
+
+import app.donation.R;
+import app.donation.main.DonationApp;
+import app.donation.model.Donation;
+
+import android.content.Context;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import android.widget.Toast;
+
+import java.util.List;
+
+public class Report extends AppCompatActivity implements Callback&lt;List&lt;Donation&gt;&gt;
+{
+  private ListView listView;
+  private DonationApp app;
+  private DonationAdapter adapter;
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_report);
+
+    app = (DonationApp) getApplication();
+
+    listView = (ListView) findViewById(R.id.reportList);
+    adapter = new DonationAdapter (this, app.donations);
+    listView.setAdapter(adapter);
+
+    Call&lt;List&lt;Donation&gt;&gt; call = (Call&lt;List&lt;Donation&gt;&gt;) app.donationService.getAllDonations();
+    call.enqueue(this);
+  }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.menu_report, menu);
+    return true;
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.menuDonate:
+        startActivity(new Intent(this, Donate.class));
+        break;
+      case R.id.menuLogout:
+        startActivity(new Intent(this, Welcome.class));
+        break;
+    }
+    return true;
+  }
+
+  @Override
+  public void onResponse(Call&lt;List&lt;Donation&gt;&gt; call, Response&lt;List&lt;Donation&gt;&gt; response) {
+    adapter.donations = response.body();
+    adapter.notifyDataSetChanged();
+  }
+
+  @Override
+  public void onFailure(Call&lt;List&lt;Donation&gt;&gt; call, Throwable t) {
+    Toast toast = Toast.makeText(this, &quot;Error retrieving donations&quot;, Toast.LENGTH_LONG);
+    toast.show();
+  }
+}
+
+class DonationAdapter extends ArrayAdapter&lt;Donation&gt;
+{
+  private Context context;
+  public List&lt;Donation&gt; donations;
+
+  public DonationAdapter(Context context, List&lt;Donation&gt; donations) {
+    super(context, R.layout.row_layout, donations);
+    this.context = context;
+    this.donations = donations;
+  }
+
+  @Override
+  public View getView(int position, View convertView, ViewGroup parent) {
+    LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+    View view = inflater.inflate(R.layout.row_layout, parent, false);
+    Donation donation = donations.get(position);
+    TextView amountView = (TextView) view.findViewById(R.id.row_amount);
+    TextView methodView = (TextView) view.findViewById(R.id.row_method);
+
+    amountView.setText(&quot;&quot; + donation.amount);
+    methodView.setText(donation.method);
+
+    return view;
+  }
+
+  @Override
+  public int getCount() {
+    return donations.size();
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <p>#</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <p>#</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <p>#</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <p>#</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <p>#</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07.Exercises">
+        <h1>Solution</h1>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

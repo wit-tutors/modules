@@ -1,0 +1,676 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      01: Git intro & Donation web app
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Donation">
+      Donation
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="Appendix">
+      Appendix
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Donation">
+        <h1>Prototype</h1>
+<p>Develop a dynamic web application called <em>donation</em> that will allow a user to register, log in and log out, make donations and print a report of all donations.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction</h1>
+<p>Design and implement a dynamic web application called <em>donation</em> in accordance with the brief that follows in a series of screen shots.</p>
+<ul>
+<li>Use the Play application to build a prototype of the application.</li>
+<li>You should develop the application in 5 iterations tagged as v0, v1, v2, v3 and v4.</li>
+<li>An iteration comprises a completed part of the application. <ul>
+<li>Each successive iteration builds on the previous one.</li>
+<li>When you have completed the iteration it should run to completion without error and at this point you should add, commit and tag the iteration in your git repository.</li>
+</ul>
+</li>
+<li>Launch <em>donation</em> using the <em>play run</em> command within the application folder and open the application from within a browser. </li>
+<li>Where the iteration uses a model you should inspect the model and its various tables (localhost:9000/@db).</li>
+<li><p>Although you will use the <em>git</em> application to store your work in a repository, you are recommended to independently archive each iteration until you are sufficiently confident in using <em>git</em>.</p>
+</li>
+<li><p>Solutions will be provided for each iteration.</p>
+</li>
+</ul>
+<p>A sample completed application may be viewed live <a href="http://donation-v4.herokuapp.com/">here</a>.</p>
+<p>A description on how to debug into a Play app within Eclipse is available <a href="archives/Howto_Eclipse_debugger.pdf">here</a>.</p>
+<p>Use <em>git</em> to create a history of the application by creating a local repository named <em>donation</em> and committing and tagging each of the iterations v0 to v4 inclusive. Here is example code applicable to the first iteration.</p>
+<pre><code>git add .
+git commit -m &#39;iteration  v0&#39;
+git tag -a v0 -m &#39;v0&#39;
+git push &amp;&amp; git push --tags</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Iteration v0</h1>
+<ul>
+<li><p>Develop the <em>sign up</em> and <em>sign in</em> facilities.</p>
+</li>
+<li><p>Introduce a model named <em>User</em>:</p>
+</li>
+</ul>
+<p><img src="img/user-model.jpg" alt=""></p>
+<p>A user should be capable of signing up (registering) and signing in. It should be possible to open the database and verify that the user is recorded in User.</p>
+<h2>Model | View | Controller</h2>
+<p><strong>Views</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Sign up</li>
+<li>Sign in</li>
+<li>Sign out</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>Accounts</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>User</li>
+</ul>
+<p>Information relevant to this iteration is available <a href="archives/c-sessions.pdf">here</a> (<em>How to Make an Application out of a Web Page</em> by E.de Leastar).</p>
+<h2>Completed Iteration</h2>
+<p><strong>Sign Up page</strong></p>
+<p><img src="img/signup.jpg" alt=""></p>
+<p><strong>Sign in page</strong></p>
+<p><img src="img/login.jpg" alt=""></p>
+<p><img src="img/v0-package-explorer.png" alt="Figure 1: Directory structure"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Iteration v1</h1>
+<ul>
+<li>Introduce placeholder Donation Request page.</li>
+<li>Use <em>Bootstrap.java</em> to pre-load sample user data. </li>
+</ul>
+<h2>Model | View | Controller</h2>
+<p><strong>Views</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Sign up</li>
+<li>Sign in</li>
+<li>Donation</li>
+<li>Sign out</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>User</li>
+</ul>
+<h2>Completed Iteration</h2>
+<p>Here are the screen shots for this iteration.</p>
+<p><strong>Welcome page</strong></p>
+<p><img src="img/welcome.jpg" alt=""></p>
+<p><strong>Sign Up page</strong></p>
+<p><img src="img/signup.jpg" alt=""></p>
+<p><strong>Sign in page</strong></p>
+<p><img src="img/login.jpg" alt=""></p>
+<p><strong>Donate Page</strong></p>
+<p><img src="img/donation-placeholder.jpg" alt=""></p>
+<p><img src="img/v1-package-explorer.png" alt="Figure 1: Directory structure"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Iteration v2</h1>
+<p>Introduce a model named <em>Donation</em>:</p>
+<p><img src="img/donation-model.jpg" alt=""></p>
+<p>Set up a one to many relationship between User and Donation respectively.</p>
+<h2>Model | View | Controller</h2>
+<p><strong>Views</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Sign up</li>
+<li>Sign in</li>
+<li>Donation</li>
+<li>Sign out</li>
+</ul>
+<p><strong>Views</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Sign up</li>
+<li>Sign in</li>
+<li>Donation</li>
+<li>Sign out</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>User</li>
+<li>Donation</li>
+</ul>
+<h2>Completed Iteration</h2>
+<p>Here are the screen shots for this iteration.</p>
+<p><strong>Welcome page</strong></p>
+<p><img src="img/welcome.jpg" alt=""></p>
+<p><strong>Sign Up page</strong></p>
+<p><img src="img/signup.jpg" alt=""></p>
+<p><strong>Sign in page</strong></p>
+<p><img src="img/login.jpg" alt=""></p>
+<p><strong>Donate Page</strong></p>
+<p><img src="img/donate.png" alt=""></p>
+<p><img src="img/v2-package-explorer.png" alt="Figure 1: Directory structure"></p>
+<h2>HTML Controls</h2>
+<p>These are examples of the use of controls used in the application based on material in <a href="http://www.w3schools.com/html/html_forms.asp">W3Schools</a>.  </p>
+<ul>
+<li><p><strong>Checkbox</strong>  </p>
+<p>  <img src="img/checkbox.jpg" alt="Figure 1: Checkbox"></p>
+</li>
+<li><p><strong>Radio buttons</strong>  </p>
+<p>  <img src="img/radiobuttons.jpg" alt="Figure 2: Radio Buttons">  </p>
+</li>
+<li><p><strong>Drop down list</strong></p>
+<p>Here is sample code from W3Schools that you could modify to suit this application. </p>
+</li>
+</ul>
+<pre><code>  &lt;form action=&quot;&quot;&gt;
+    &lt;select name=&quot;cars&quot;&gt;
+      &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+      &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+      &lt;option value=&quot;fiat&quot; selected&gt;Fiat&lt;/option&gt;
+      &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/form&gt;</code></pre>
+<p>A better choice, perhaps, would be to use <a href="http://semantic-ui.com/modules/checkbox.html#/definition">Semantic UI controls</a>.</p>
+<p><img src="img/01.png" alt="Figure 3: Semantic UI checkbox"></p>
+<p><img src="img/02.png" alt="Figure 4: Semantic UI radio buttons"></p>
+<p>Here is Semantic UI dropdown <a href="http://semantic-ui.com/modules/dropdown.html#/usage">sample code</a>:</p>
+<pre><code>&lt;div class=&quot;ui dropdown&quot;&gt;
+  &lt;div class=&quot;text&quot;&gt;Select&lt;/div&gt;
+  &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;div class=&quot;item&quot; data-value=&quot;option1&quot;&gt;Option 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot; data-value=&quot;option2&quot;&gt;Option 2&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h2>Iteration v3</h2>
+<p>Introduce a progress bar in the Donation template which illustrates the proportion of the donation target achieved to date. </p>
+<p>Update the progress bar immediately following the making of a new donation.</p>
+<p>Create a method in the DonationController that will query the Donation model for a list of donations, calculate the percentage this constitutes of the donation target and render this percentage to the progress bar.</p>
+<p>The donation target may be an arbitray hard-coded number, say $20,000.</p>
+<p><img src="img/progress-bar.jpg" alt=""></p>
+<h1>Model | View | Controller</h1>
+<p><strong>Views</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Sign up</li>
+<li>Sign in</li>
+<li>Donation</li>
+<li>Sign out</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Accounts</li>
+<li>DonationController</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>User</li>
+<li>Donation</li>
+</ul>
+<h2>Completed Iteration</h2>
+<p>Here are the screen shots for this iteration.</p>
+<p><strong>Welcome page</strong></p>
+<p><img src="img/welcome.jpg" alt=""></p>
+<p><strong>Sign Up page</strong></p>
+<p><img src="img/signup-v3.jpg" alt=""></p>
+<p><strong>Sign in page</strong></p>
+<p><img src="img/login-v3.jpg" alt=""></p>
+<p><strong>Donate Page</strong></p>
+<p><img src="img/donate-v3.jpg" alt=""></p>
+<p><img src="img/v3-package-explorer.png" alt="Figure 1: Directory structure"></p>
+<h2>Progress bar</h2>
+<p>  The progress bar provides a visual feedback to each client of the total amount currently donated expressed as a percentage of the target amount.
+  One method of implementing the progress bar is to use Semantic UI, information on which is available <a href="http://semantic-ui.com/elements/progress.html">here</a></p>
+<p>  Here is a code snippet which shows the control syntax with a fixed value for the progress (20%).</p>
+<pre><code>&lt;div class=&quot;ui successful progress&quot;&gt;
+  &lt;div class=&quot;bar&quot; style=&quot;width:20%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>We, however, require that the progress bar be updated dynamically by pushing the appropriate value from the server after each contribution. In the code snippet that follows this dynamic value is transported in the variable <em>progressPercent</em>.    </p>
+<pre><code>  &lt;div class=&quot;ui successful progress&quot;&gt;
+    &lt;div class=&quot;bar&quot; style=&quot;width:${progress}&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+<p>Your task is to calculate the value of <strong>progressPercent</strong> following each donation and render this value in the progress bar in the view template. </p>
+<p>Note that when you have calculated the percentage figure (in a controller) you should then append the percent sign (%) to comply with the formatting requirements of the Semantic UI progress bar.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h2>Iteration v4</h2>
+<p>Introduce a report template.</p>
+<p><img src="img/report-sample.jpg" alt=""></p>
+<p>Output the table of donations and corresponding donors when the report template page is accessed.</p>
+<h2>Model | View | Controller</h2>
+<p><strong>Views</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Sign up</li>
+<li>Sign in</li>
+<li>Donation</li>
+<li>Report</li>
+<li>Sign out</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Accounts</li>
+<li>DonationController</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>User</li>
+<li>Donation</li>
+</ul>
+<h2>Completed iteration</h2>
+<p>Here are the screen shots for this iteration (which represents the completed prototype).</p>
+<p><strong>Welcome page</strong></p>
+<p><img src="img/welcome-v4.jpg" alt=""></p>
+<p><strong>Sign Up page</strong></p>
+<p><img src="img/signup.jpg" alt=""></p>
+<p><strong>Sign in page</strong></p>
+<p><img src="img/login.jpg" alt=""></p>
+<p><strong>Donate Page</strong></p>
+<p><img src="img/donate.jpg" alt=""></p>
+<p><strong>Report Page</strong></p>
+<p><img src="img/report.jpg" alt=""></p>
+<p>You may view a live version of this, the final project, <a href="http://org-wit-donation.herokuapp.com/">here</a>, hosted on Heroku.</p>
+<p><img src="img/v4-package-explorer.png" alt="Figure 1: Directory structure"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Appendix">
+        <h1>Semantic Dropdown</h1>
+<p>Figure 1 illustrates the relationships between the various components associated with a <a href="http://semantic-ui.com/modules/dropdown.html">Semantic UI dropdown</a>.</p>
+<p>The script that contains the JavaScript code to activate the dropdown is placed in an external file named <em>donate.js</em>.</p>
+<p>Validation could be added to the same file. For example, you might wish that a dropdown selection had been made before the Donate button responded on being pressed. This will be addressed in a later lab.</p>
+<p>Note the close coupling between the controller and the dropdown by studying the parameters of the method donate.</p>
+<p>Invoking the JavaScript method <em>dropdown()</em> is necessary to acivate the dropdown box.</p>
+<p><img src="img/dropdown.png" alt="Figure 1: Semantic UI dropdown"></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

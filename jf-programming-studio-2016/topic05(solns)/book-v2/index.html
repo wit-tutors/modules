@@ -1,0 +1,667 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      05: WitPress (Solutions)
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Solution-v2">
+      Solution-v2
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Solution-v2">
+        <h1>Solution v2</h1>
+<p><strong>Step-by-step guide to building WitPress application</strong></p>
+<ul>
+<li>Iteration v2 (Public Blog, About, Contact)</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Iteration v2: View (PublicBlog | PublicBlogDirectory)</h1>
+<p>In this iteration we shall:</p>
+<ul>
+<li>Provide support for public blogs. Any member of the public whether signed in or not may read the blog provided the url is known.</li>
+</ul>
+<p>We require controller|view code for PublicBlogDirectory and PublicBlog.</p>
+<ul>
+<li><p>Create a folder views/PublicBlog and in it place file <em>show.html</em>.</p>
+<ul>
+<li>show.html publishes a list of all posts and associated comments for the user whose id is received as an incoming parameter.</li>
+</ul>
+</li>
+<li><p>Create a folder views/PublicBlogDirectory and in this place a file <em>index.html</em>.</p>
+<ul>
+<li>index.html displays a list of users owning blog posts. </li>
+<li>Each item in the list provides a link that routes to the show.html template. </li>
+<li>A user id is passed as a parameter to that template.</li>
+</ul>
+</li>
+</ul>
+<p>These two files are provided below.</p>
+<p>Filename: index.html</p>
+<pre><code class="lang-html">
+#{extends &#39;main.html&#39; /}
+#{set title:&quot;Blogs on WitPress&quot; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;WitPress&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;
+  &lt;a class=&quot;ui active item&quot; href=&quot;/publicblogdirectory&quot;&gt;Public Blog Directory&lt;/a&gt; 
+  &lt;a class=&quot;ui item&quot; href=&quot;/about&quot;&gt;About&lt;/a&gt; 
+  &lt;a class=&quot;ui item&quot; href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/logout&quot;&gt;Logout&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;div class=&quot;ui one column grid&quot;&gt;
+  &lt;div class=&quot;ten wide column&quot;&gt;
+    &lt;div class=&quot;ui segment&quot;&gt;
+      &lt;div class=&quot;ui segment&quot;&gt;
+
+        #{list items:usersWithBlogs, as:&#39;user&#39;}
+        &lt;h4&gt;
+          &lt;a href=&quot;@{PublicBlog.show(user.id)}&quot;&gt; ${user.firstName} ${user.lastName} Blog&lt;/a&gt;
+        &lt;/h4&gt;
+        &lt;div class=&quot;ui divider&quot;&gt;&lt;/div&gt;
+        #{/list}
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>Observe that we have used reverse routing to provide a link to the Public Blog directory in the above code as follows:</p>
+<pre><code class="lang-java">&lt;a href=&quot;@{PublicBlog.show(user.id)}&quot;&gt; ${user.firstName} ${user.lastName} Blog&lt;/a&gt;</code></pre>
+<p>This routing allows a user to access the public blogs whether signed in or not.</p>
+<p>Filename: show.html</p>
+<pre><code class="lang-html">
+#{extends &#39;main.html&#39; /}
+#{set title:&quot;WitPress Blog for ${user.firstName} ${user.lastName}&quot; /}
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;WitPress&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;publicblogdirectory&quot;&gt;Public Blog Directory&lt;/a&gt; 
+  &lt;a class=&quot;ui item&quot; href=&quot;/about&quot;&gt;About&lt;/a&gt; 
+  &lt;a class=&quot;ui item&quot; href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;div class=&quot;ui one column grid&quot;&gt;
+  &lt;div class=&quot;ten wide column&quot;&gt;   
+  &lt;div class=&quot;ui segment&quot;&gt;
+    #{list items:reversePosts, as:&#39;post&#39;}
+      &lt;h4&gt;
+        ${post.title}
+      &lt;/h4&gt; 
+        ${post.content}
+        &lt;div class=&quot;ui divider&quot;&gt;&lt;/div&gt;
+
+      #{if loggedInUser != null}
+
+        &lt;h5&gt; Comments: &lt;/h5&gt;     
+        #{list items:post.comments, as:&#39;comment&#39;}
+         &lt;p&gt; 
+           ${comment.content}:
+         &lt;/p&gt;     
+        #{/list}  
+        &lt;div class=&quot;ui divider&quot;&gt;&lt;/div&gt;
+        &lt;form action=&quot;@{PublicBlog.newComment(post.id, user.id, loggedInUser.id)}&quot; method=&quot;POST&quot;&gt;   
+          &lt;div class=&quot;ui fluid form segment&quot;&gt;        
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;textarea placeholder=&#39;Provide a comment here&#39; name=&quot;content&quot; rows=&quot;2&quot;&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+            &lt;button class=&quot;ui green tiny button&quot;&gt;New Comment&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt; 
+
+      #{/if}    
+      #{else}
+
+        #{if post.comments.size() &gt; 0}
+          &lt;h5&gt; Comments: &lt;/h5&gt;
+            #{list items:post.comments, as:&#39;comment&#39;}
+             &lt;p&gt; 
+               ${comment.content}:
+             &lt;/p&gt;     
+            #{/list}
+        &lt;div class=&quot;ui divider&quot;&gt;&lt;/div&gt;
+        #{/if}     
+
+      #{/else}  
+    #{/list}  
+    &lt;/div&gt;    
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>Study to navigation menu and note the new entries such as Public Blog Directory, About and Contact.</p>
+<ul>
+<li>Revisit all pages and update appropriately.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Iteration v2: Controller (PublicBlog | PublicBlogDirectory)</h1>
+<p>The controller PublicBlog renders a specific blog, the blog&#39;s user being determined by an incoming user id received from the view.</p>
+<p>Filename: PublicBlog.java</p>
+<pre><code class="lang-java">
+package controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
+
+import models.Comment;
+
+import models.Post;
+import models.User;
+import play.Logger;
+import play.mvc.Controller;
+
+public class PublicBlog  extends Controller
+{
+
+  public static void show(Long id)
+  {     
+    Logger.info(&quot;Request to show blogs for user id: &quot; + id);
+    User user = User.findById(id);
+    List&lt;Post&gt; reversePosts  = new ArrayList&lt;Post&gt; (user.posts);
+    Collections.reverse(reversePosts);
+
+    User loggedInUser = null;
+    if (session.contains(&quot;logged_in_userid&quot;))
+    {
+      String userId = session.get(&quot;logged_in_userid&quot;);
+      loggedInUser = User.findById(Long.parseLong(userId));
+    }
+    render(user, loggedInUser, reversePosts);
+  } 
+
+    public static void newComment(Long postid, Long userID, Long loggedInUserID, String content)
+    {    
+      Logger.info(&quot;Post ID = &quot; + postid);
+      Post post = Post.findById(postid);
+      Comment comment = new Comment(content);
+
+      post.addComment(comment);
+      post.save();
+      show(userID);
+    } 
+}</code></pre>
+<p>The next controller lists all the users who have created at least one blog post.</p>
+<p>Filename PublicBlogDirectory.java</p>
+<pre><code class="lang-java">
+package controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
+
+import models.Comment;
+import models.Post;
+import models.User;
+import play.Logger;
+import play.mvc.Controller;
+
+public class PublicBlogDirectory  extends Controller
+{
+  public static void index()
+  {
+    ArrayList&lt;User&gt; usersWithBlogs = new ArrayList&lt;User&gt;();
+
+    List&lt;User&gt; users = User.findAll();
+    for (User user : users)
+    {
+      if (user.posts.size() &gt; 0)
+      {
+        usersWithBlogs.add(user);
+      }
+    }
+    render(usersWithBlogs);
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Contact and About</h1>
+<h2>Contact</h2>
+<p>Contact controller</p>
+<pre><code>package controllers;
+
+import play.mvc.*;
+
+
+public class Contact extends Controller
+{
+  public static void index()
+  {
+    render();
+  }
+}</code></pre>
+<p>Filename: Contact.index.html</p>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&quot;Contact&quot; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;WitPress&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/publicblogdirectory&quot;&gt;Public Blog Directory&lt;/a&gt; 
+  &lt;a class=&quot;ui item&quot; href=&quot;/about&quot;&gt;About&lt;/a&gt; 
+  &lt;a class=&quot;ui active item&quot; href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/logout&quot;&gt;Logout&lt;/a&gt;
+&lt;/nav&gt;
+
+
+&lt;div class=&quot;ui grid&quot;&gt;
+   &lt;div class=&quot;six wide column&quot;&gt;
+    &lt;div class=&quot;ui raised segment&quot;&gt;
+    &lt;h3&gt;witpress@wit.ie&lt;/h6&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h2>About</h2>
+<p>About controller:</p>
+<pre><code>package controllers;
+
+import play.mvc.*;
+
+
+public class About extends Controller
+{
+  public static void index()
+  {
+    render();
+  }
+}</code></pre>
+<p>Filename: About.index.html</p>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;About&#39; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;WitPress&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;publicblogdirectory&quot;&gt;Public Blog Directory&lt;/a&gt; 
+  &lt;a class=&quot;ui active item&quot; href=&quot;/about&quot;&gt;About&lt;/a&gt; 
+  &lt;a class=&quot;ui item&quot; href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+
+
+&lt;div class=&quot;ui grid&quot;&gt;
+   &lt;div class=&quot;six wide column&quot;&gt;
+    &lt;div class=&quot;ui raised segment&quot;&gt;
+    &lt;h3&gt;Copyright 2013 WitPress All rights reserved.&lt;/h6&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>Iteration v2 and thus the application prototype is now complete.</p>
+<p>Commit this iteration to your <em>witpress</em> repository, add a tag and push all to remote repo.</p>
+<pre><code>git add .
+git commit -m &#39;iteration  v2&#39;
+git tag -a v2 -m &#39;iteration v2&#39;
+git push &amp;&amp; git push --tags</code></pre>
+<p>An archived version is available to download: <a href="archive/witpress-solutions-2016.zip">witpress-solutions-2016</a>.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

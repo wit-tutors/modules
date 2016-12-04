@@ -1,0 +1,1079 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Assignment-1 Solutions
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Assignment-1">
+      Assignment-1
+    </a>
+    
+    <a class="item" data-tab="Solutions">
+      Solutions
+    </a>
+    
+    <a class="item" data-tab="Feedback">
+      Feedback
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-classes-objects/book-a/index.html">
+          Classes-objects
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-classes-objects/book-b/index.html">
+          Class-components
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-classes-objects(solns)/book-solutions/index.html">
+          Class-components-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-ticket-machine/book/index.html">
+          Ticket-Machine
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-ticket-machine(solns)/book-a/index.html">
+          Ticket-Machine-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-a/index.html">
+          Abstraction-modularization[1]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-b/index.html">
+          Abstraction-modularization[2]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-c/index.html">
+          Abstraction-modularization[3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization(solns)/book-solutions-ab/index.html">
+          Abstraction-modularization-Solutions-[1-2]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization(solns)/book-solutions-c/index.html">
+          Abstraction-modularization-Solutions-[3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow/book-a/index.html">
+          Generics-Control-flow
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow/book-b/index.html">
+          Control-flow
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow(solns)/book-solutions-a/index.html">
+          Notebook_solutions-[1-3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow(solns)/book-solutions-b1/index.html">
+          Grouping-objects-solutions-[1-7]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow(solns)/book-solutions-b2/index.html">
+          Grouping-objects-solutions-[8-13].md
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow(solns)/book-solutions-b3/index.html">
+          Encoding-solutions-[14-18].md
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05(assignment-1)/book-assignment-1/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05(assignment-solns-1)/book-assignment-1-solns/index.html">
+          Assignment-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-collections/book-a/index.html">
+          Collections
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-collections/book-b/index.html">
+          Class-members
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-collections/book-c/index.html">
+          Caesar Cipher
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-collections(solns)/book-solutions-a/index.html">
+          Collections-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-collections(solns)/book-solutions-b/index.html">
+          Class-members-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-collections(solns)/book-solutions-c/index.html">
+          Caesar-Cipher-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-test-debug-sort/book-a/index.html">
+          Testing-&-Debugging
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-test-debug-sort/book-b/index.html">
+          Testing-&-Debugging-(contd.)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-test-debug-sort/book-c/index.html">
+          Sorting-searching
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-test-debug-sort(solns)/book-a-b-solutions/index.html">
+          Testing-&-Debugging-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-test-debug-sort(solns)/book-c-solutions/index.html">
+          Sorting-&-Searching-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-spacebook/book-a/index.html">
+          Spacebook-(Part-1)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-spacebook/book-b/index.html">
+          Spacebook-(Part-2)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-spacebook(solns)/book-solutions/index.html">
+          Spacebook-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09(assignment-2)/book-assignment-2/index.html">
+          Assignment-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09(assignment-solns-2)/book-assignment-2-Q1-solns/index.html">
+          Assignment-2-Solutions-Q1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09(assignment-solns-2)/book-assignment-2-Q2-solns/index.html">
+          Assignment-2-Solutions-Q2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09(assignment-solns-2)/book-assignment-2-Q3-solns/index.html">
+          Assignment-2-Solutions-Q3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09(assignment-solns-2)/book-assignment-2-feedback/index.html">
+          Assignment-2-Feedback
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-interfaces/book/index.html">
+          Using_Interfaces
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-interfaces(solns)/book-solutions/index.html">
+          Interfaces-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-inheritance/book-a/index.html">
+          Polymorphism
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-inheritance/book-b/index.html">
+          Eclipse_Exceptions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-inheritance(solns)/book-a-solutions/index.html">
+          Polymorphism-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-inheritance(solns)/book-b-solutions/index.html">
+          Exceptions-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12(assignment-3)/book-assignment-3/index.html">
+          Assignment-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12(assignment-solutions-3)/book/index.html">
+          Assignment-3-Solutions
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Assignment-1">
+        <h1>Readme</h1>
+<p>Assignment 1: This is a sample solution set to Assignment 1 which is based on materials contained in the preentations and labs in the first 3 topics, namely, <em>Introduction to Java programming language</em>, <em>Analysis &amp; refactoring class</em> and <em>Object Interaction</em>. There are 4 questions, the first 2 relating to simple class design, the 3rd on the subject of string manipulation and the final one requiring an extension to the BlueJ clock display.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Solutions">
+        <h1>Solutions</h1>
+<p>A sample solution for each question is available by clicking on the links below.</p>
+<p>The solutions comprise BlueJ projects in which the assignment skeleton code has been completed for each question.</p>
+<p><a href="archives/Q1_Sphere.zip">Q1_Sphere</a></p>
+<p><a href="archives/Q2_Arrays.zip">Q2_Arrays</a></p>
+<p><a href="archives/Q3_Library.zip">Q3_Library</a></p>
+<p><a href="archives/Q4_Strings.zip">Q4_Strings</a></p>
+<p><a href="archives/Q5_Clock.zip">Q5_Clock</a></p>
+<p><a href="archives/Q5_Clock-days.zip">Q6_Clock-days</a></p>
+<p><strong>A note regarding documentation</strong></p>
+<ul>
+<li><p>The JavaDoc documentation generating tool included with BlueJ does not facilitate fine-grained configuration.</p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=8mMoVSeppYU">Here</a> is a link to an online video describing the use of JavaDoc with BlueJ.</p>
+</li>
+<li><p>Eclipse, which we shall be switching to shortly, provides configuration options as shown in Figure 1.</p>
+</li>
+<li><p>A Field Summary that includes package private and public fields is generated by default in BlueJ. Fields that are private are not included. See Figure 2.</p>
+</li>
+<li><p>Whether or not the Field Summary is documented in Eclipse is determined by how JavaDoc is configured. For example, Figure 3 illustrates the situation where private fields and methods are included in the documentation. This might be appropriate for a development team. It would be an easy matter to change the configuration appropriate to a public API.</p>
+</li>
+<li><p>Although non-standard block tags such as @brief &amp; @file are presented in the sample Cone class, it should be noted that these require special measures if they are to influence JavaDoc output. Otherwise they are ignored in generating documentation. Such customization is beyond the scope of the course. A reference is available <a href="http://www.developer.com/java/other/article.php/3085991/Javadoc-Programming.htm">here</a>.</p>
+</li>
+</ul>
+<p><img src="img/01.png" alt="Figure 1: Configuring JavaDoc output in Eclipse"></p>
+<p><img src="img/03.png" alt="Figure 2: BlueJ generated JavaDoc in which package private fields are included by default"></p>
+<p><img src="img/02.png" alt="Figure 3: Eclipse generated JavaDoc configured so that private fields and methods included"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Feedback">
+        <h1>Feedback</h1>
+<p>Javadoc
+-
+See here for default list tags (such as @param, @result):
+<a href="http://www.oracle.com/technetwork/articles/java/index-137868.html">http://www.oracle.com/technetwork/articles/java/index-137868.html</a>
+Customized tags, such as @brief, require separate treatment if they are to be reflected in the JavaDoc output. This may be addressed when Eclipse IDE is introduced to this programming module.</p>
+<p>Style Guide
+-
+The Google Java Style Guide is located here:
+<a href="https://google.github.io/styleguide/javaguide.html">https://google.github.io/styleguide/javaguide.html</a></p>
+<p>Commenting
+-
+Use tags where appropriate such as for parameters and return. Class and instance variables commented separately. For example <em>numberSphere</em>, which is a class variable, might better be separately commented on where it is declared.</p>
+<pre><code>  /**
+  * Constructs a new sphere object defined by user-supplied parameter.
+  * @param radius The radius of the sphere.
+  * numberSpheres Increments the numberSphere field by one.
+  */
+  public Sphere(double radius)
+  {
+      setState(radius);
+      numberSpheres += 1;
+  }</code></pre>
+<p>What happens here?
+-</p>
+<pre><code>    /**
+     * Method to set the state of the Sphere
+     */
+    public void setState(double radius)
+    {
+        this.radius = radius;
+        isValid(radius);
+        set++;
+    }</code></pre>
+<p>Any views on the following method?
+-</p>
+<pre><code>
+    /**
+     * Method to get the volume of a sphere
+     * @return the volume of sphere
+     */ 
+    public double volume()
+    {
+        double fourThirds = 4.0/3.0;
+        double cubed = 3.0;
+        return fourThirds * Math.PI * Math.pow(radius,cubed);
+    }</code></pre>
+<p>This method performs two tasks. A good idea?
+-</p>
+<pre><code>    /**
+     * Method to check the number of spheres
+     * @pram numberSpheres
+     */
+    public int getNumberSpheres()
+    {
+        if(numberSpheres == set)
+        {
+            return numberSpheres++;
+        }
+        else
+        {
+            return numberSpheres;
+        }
+    }</code></pre>
+<p>Consistency?
+-</p>
+<pre><code>public class Book
+{
+    private String   title;
+    private String   author;
+    private String   isbn;            // &lt;---- ?
+    private int      numberPages;     // &lt;---- ?
+    private boolean  borrowed =false; // &lt;---- ?
+    private int      numberBorrowings;
+}</code></pre>
+<p>Could this code be more compact without loss of clarity?
+-</p>
+<pre><code>    /**
+     * Method to check the loan status of a book, checks the borrowed status to return a result
+     * string 
+     */
+    public String loanStatus()  // print a message
+    {
+        if(borrowed == true ) {
+            return &quot; is not available: presently on loan&quot;;
+        }
+        else {
+            return &quot;available &quot;;
+        }
+    }</code></pre>
+<p>Any observations on this snippet of Library class?
+-</p>
+<pre><code>public class Library
+{
+    private ArrayList&lt;Book&gt; books;
+    private Book valueObj; // &lt;----------- ?
+    ...
+    ...
+    public String loanStatus(Book book) {
+        return valueObj.loanStatus();
+    }</code></pre>
+<p>Superfluous instance variable introduced
+-</p>
+<pre><code>public class Sphere
+{
+    double radius;
+    static int numberSpheres;
+    private boolean isValid; // &lt;----------------?
+    /**
+    ...
+ }</code></pre>
+<p>Documentation okay? Consistent with implementation?
+-</p>
+<pre><code>    /**
+     * Calculates the surface area, volume and circumference of the great circle.
+     * if the parameters are changed. New radius must be &gt;0.
+     * @return the new surface area, volume and circumference of the great circle.
+     * If a negative value is entered a warning is provided.
+     */
+    public void changeSize (double radius)
+    {
+        setState(radius);
+    }</code></pre>
+<p>Code bloat,  documentation &amp; styling
+-</p>
+<pre><code>    /**
+     * Makes it impossible for a user to input a negative value.
+     * If a negative value is entered a warning is provided.
+     * Check that each inputted value is valid.
+     */
+    public boolean isValid(double value)
+    {
+        if(value&gt;0) {
+            return true;
+        }
+
+        else  {
+            return false;
+        }
+    }</code></pre>
+<p>Even this, although an improvement,  could be more concise:</p>
+<pre><code>    public boolean isValid(double value)
+    {
+        return (value&gt;0)? true:false;
+    }</code></pre>
+<p>For example:</p>
+<pre><code>    public boolean isValid(double value)
+    {
+        return value &gt; 0;
+    }</code></pre>
+<p>API 
+-
+Changes to API discouraged. Example some unspecified methods introduced:</p>
+<pre><code>public class Book 
+{
+  public String getAuthor(){...}
+  public String getIsbn(){...}
+  ...
+  ...
+}</code></pre>
+<p>Needs review:
+-</p>
+<pre><code>    /**
+     * A method to determine if the library contains a particular book.  
+     */
+    public String hasBook(Book book)
+    {
+        if (books.contains(book)) {
+            return(book.loanStatus());
+        }
+        else {
+            return(book.loanStatus());
+        }
+    }</code></pre>
+<p>Documentation &amp; control flow
+-</p>
+<pre><code>  /**
+   * Checks if sphere is made of posible numbers, will show warning if not.
+   */
+  private boolean isValid(double value)
+  {
+      if(value &gt; 0) {
+          return true;  
+      }
+      else {
+         System.out.println(&quot;No Spheres for you&quot;); 
+      }
+      return false;
+  }</code></pre>
+<p>Verbose &amp; Documentation
+-</p>
+<pre><code>    /**
+     * Checks availablity of book.
+     */
+    public boolean isBorrowed() 
+    {
+        if(borrowed == false) {
+            return false;
+        }
+        return true;
+    }
+
+   // Better?
+   public boolean isBorrowed()
+   {
+     return borrowed;
+   }</code></pre>
+<p>Style (Formatting)
+-
+Horizontal whitespaces</p>
+<pre><code>    return value&gt;0; // no</code></pre>
+<pre><code>    return value &gt; 0; // yes</code></pre>
+<pre><code>    if(isValid(radius)){ // no
+          this.radius = radius;
+    }</code></pre>
+<pre><code>    if (isValid(radius)) { // yes
+          this.radius = radius;
+    }</code></pre>
+<pre><code>        int count = 0;
+        for(int i=0; i&lt;books.size(); i++)
+        {
+            count+=1;
+        }</code></pre>
+<pre><code>        int count = 0;
+        for (int i = 0; i &lt; books.size(); i++)
+        {
+            count += 1;
+        }</code></pre>
+<p>See Google Style Guide
+<a href="https://google.github.io/styleguide/javaguide.html#s4.6.2-horizontal-whitespace">https://google.github.io/styleguide/javaguide.html#s4.6.2-horizontal-whitespace</a></p>
+<p>Logical ambiguity
+-
+Missing check: is book currently on loan?</p>
+<pre><code>    /**
+     * Method to check if a Book is in the Library catalogue
+     * @param book  The book to be searched
+     * @return      Whether the book is in library
+     */
+    public String hasBook(Book book)
+    {
+        boolean check = books.contains(book);
+        String name = book.title;
+        if(check)
+        {
+            return &quot;Book title &quot;+ name + &quot; in stock and available to borrow&quot;;
+        }
+        return &quot;We do not stock book title &quot; + name;
+    }</code></pre>
+<p>Verbose
+-</p>
+<pre><code>public static boolean endsWith(String s1, String suffix)
+{
+  if(s1.endsWith(suffix)) {
+    return true;
+   }
+   return false;
+ }</code></pre>
+<pre><code>public static boolean endsWith(String s1, String suffix)
+{
+  return s1.endsWith(suffix);
+}</code></pre>
+<p>Verbosity &amp; documentation issues:
+-</p>
+<pre><code>    /**
+     * clearing a particular book from the ArrayList
+     * @param book
+     */
+    public boolean removeBook(Book book)
+    {
+        if (books.contains(book))
+        {    
+            books.remove(book);
+            return true;
+        }
+
+        else
+        {   
+            System.out.println(&quot;cant find book&quot;);
+            return false;
+        }
+    }</code></pre>
+<p>And again:</p>
+<pre><code>    /**
+     * Uses an if-else statement to facilitate the removal of a book from the 
+     *          books collection in a library
+     * @return Returns whether the library contains a book and facilitates its 
+     *          removal from the library
+     */
+    public boolean  removeBook(Book book)
+    {
+        if(books.contains(book))
+        {
+            books.remove(book);
+            return true;
+        }
+        else
+        {
+            return false;   
+        }
+    }</code></pre>
+<pre><code>/**
+ * Facilitates removal of book from list books.
+ * @param book The book to be removed.
+ * @return Returns true if book successfully removed.
+ */
+public boolean removeBook(Book book)
+{
+  return books.remove(book);
+}</code></pre>
+<p>Verbose
+-</p>
+<pre><code>public static int length(String s1, String s2)
+{
+  String s = s1+s2;
+  return s.length();
+}</code></pre>
+<p>Compare to:</p>
+<pre><code>public static int length(String s1, String s2)
+{
+  return (s1 + s2).length();
+}</code></pre>
+<p>or:</p>
+<pre><code>public static int length(String s1, String s2)
+{
+  return s1.concat(s2).length();
+}</code></pre>
+<p>Is it a good idea to include a print statement here?
+-</p>
+<pre><code>public static String reverse_1(String string)
+{
+  StringBuilder revString = new StringBuilder(string);
+  System.out.println(revString.reverse()); // &lt;---- ?
+  return revString.toString();
+}</code></pre>
+<p>Preferrable:</p>
+<pre><code>public static String reverse_1(String string)
+{
+  return new StringBuilder(string)
+    .reverse()
+    .toString();
+}</code></pre>
+<p>which is same as this inline version:</p>
+<pre><code>public static String reverse_1(String string)
+{
+  return new StringBuilder(string).reverse().toString();
+}</code></pre>
+<p>Horizontal whitespace
+-
+Note the space between operand and operator:</p>
+<pre><code>numberSpheres ++;</code></pre>
+<p>Convention requires no space between operand and operator (++):</p>
+<pre><code>numberSpheres++;</code></pre>
+<p>Documentation and parameter naming
+-</p>
+<pre><code>    /**
+     * Resets the radius of sphere object
+     * @param radius    The changed radius of the sphere // &lt;---- Excessive number whitespaces
+     */
+    public void changeSize(double newRadius) 
+    // facilitates radius reset &lt;--- duplicate comment
+    {
+        radius = newRadius;
+    }</code></pre>
+<pre><code>    /**
+     * Resets the radius of sphere object
+     * @param radius The changed radius of the sphere
+     */
+    public void changeSize(double radius) 
+    {
+        radius = radius;
+    }</code></pre>
+<p>Redundant block &amp; comment
+-</p>
+<pre><code>public static boolean isEqual(String s1, String s2)
+{
+  {
+    return s1.equals(s2);
+  }
+  //return s1.equals(s2);
+}</code></pre>
+<p>This is sufficient:</p>
+<pre><code>public static boolean isEqual(String s1, String s2)
+{
+  return s1.equals(s2);
+}</code></pre>
+<p>Any views on this snippet from Sphere class?
+-</p>
+<pre><code>  /**
+  * Here&#39;s the constructor that will create the default size of my sphere
+  * @returns setState of the sphere
+  */ 
+ public Sphere () 
+ {
+     setState(10.0);
+ }</code></pre>
+<p>Method design
+-
+Better to avoid large blocks in, for example,  <em>if-else</em> as shown here:</p>
+<pre><code>public void sumEven(int low, int hi)
+{
+  if((low % 2 == 0) &amp;&amp; (hi % 2 == 0)) {
+      // Do something: 25 lines of code here
+  }
+  else {
+     // Do something else: 1 line of code here
+   }
+ }</code></pre>
+<p>Redesign:</p>
+<pre><code>public void sumEven(int low, int hi)
+{
+  if((low % 2 != 0) || (hi % 2 != 0)) {
+      // Do something: 1 line code
+      return;
+  }
+  // Do something: 25 lines of code here
+ }</code></pre>
+<p>Make use of existing methods
+-</p>
+<pre><code>public static boolean isPalindrome(String s)
+{
+  String s1 = s.replaceAll(&quot;[^a-zA-Z]&quot;, &quot;&quot;);
+  String s2 = &quot;&quot; + new StringBuilder(s1).reverse();
+  return s2.equalsIgnoreCase(s1);
+}</code></pre>
+<pre><code>public static String reverse(String string)
+{
+  StringBuilder sb = new StringBuilder(string);
+  return &quot;&quot; + sb.reverse();
+}
+
+public static boolean isPalindrome(String s)
+{
+    String s1 = s.replaceAll(&quot;[^a-zA-Z]&quot;, &quot;&quot;);
+    return reverse(s1).equalsIgnoreCase(s1);
+}</code></pre>
+<p>This implementation of <em>isBorrowed</em> not quite correct:
+-</p>
+<pre><code>    public boolean isBorrowed()
+    {
+        if (borrowed = true);
+        System.out.println(title + &quot;On loan not available&quot;);
+        if (borrowed = false);
+        System.out.println(title + &quot;Available to Loan&quot;);
+        return borrowed;
+    }</code></pre>
+<p>Palindrome
+-
+Here is one submission in which the technique of recursion, not covered to date in class, is employed:</p>
+<pre><code>public static boolean isPalindrome(String s) {
+  if(s.length() == 0 || s.length() == 1) {
+    return true;
+  }
+  if(s.charAt(0) == s.charAt(s.length()-1)) {
+    return isPalindrome(s.substring(1, s.length()-1));
+  }
+  return false;
+}</code></pre>
+<p>And here is a similar solution available in Stackoverflow at
+<a href="http://stackoverflow.com/questions/4367260/creating-a-recursive-method-for-palindrome">http://stackoverflow.com/questions/4367260/creating-a-recursive-method-for-palindrome</a></p>
+<pre><code>public static boolean isPalindrome(String in) {
+   if(in.equals(&quot; &quot;) || in.length() &lt; 2 ) 
+     return true;   
+
+  if(in.charAt(0).equalsIgnoreCase(in.charAt(in.length-1))
+      return isPalindrome(in.substring(1,in.length-2));
+else
+  return false;
+}</code></pre>
+<p>What happens here?
+-</p>
+<pre><code>    public Sphere()
+    {
+        this.numberSpheres=numberSpheres+1;
+    }</code></pre>
+<p>Variable naming
+-
+Two observations on following snippet:</p>
+<blockquote>
+<ol>
+<li><p>variable name should begin with lower case</p>
+<blockquote>
+<p>boolean validSphere;</p>
+</blockquote>
+</li>
+<li><p>unnecessary to introduce new variable here</p>
+</li>
+</ol>
+</blockquote>
+<pre><code>public class Sphere
+{
+    ...
+    private boolean ValidSphere;
+}</code></pre>
+<p>Verbosity &amp; logical issue
+-</p>
+<pre><code>    /**
+     * Returns loan status of a specific book from library
+     * @param book
+     */
+    public String hasBook(Book book)
+    {
+        if (books.contains(book))
+        {
+            return book.loanStatus();
+        }
+        else
+        {    
+            return book.loanStatus();
+        }
+    }</code></pre>
+<p>Unnecessary blocks
+-</p>
+<pre><code>public static String reverse_1(String string)
+{
+  StringBuilder builder = new StringBuilder (string);
+  {  
+    return builder.reverse().toString();
+  }
+}</code></pre>
+<pre><code>public static int length(String s1, String s2)
+{
+  String concatenated = s1 + s2;
+  {
+    return concatenated.length();           
+  }
+}</code></pre>
+<p>Use camel case
+-</p>
+<pre><code>public static String reverse_2(String string)
+{
+  String reverse_Str = &quot;&quot;; // &lt;---- reverseStr
+  for(int i =string.length()-1; i&gt;=0; i--) 
+  {
+     reverse_Str = reverse_Str + string.charAt(i);
+  }
+  return reverse_Str;
+}</code></pre>
+<p>JavaDoc tag
+-
+@radius should be @param</p>
+<pre><code>    /**
+     * An overloaded constructor with a variable radius
+     * @radius   The radius of the Sphere
+     */
+    public Sphere(double radius)
+    {
+        setState(radius);
+        this.numberSpheres = numberSpheres+1;
+    }</code></pre>
+<p>A further example:</p>
+<pre><code>/**
+ * A default constructor for a book object.
+ * @ title = The title of the book.
+ * @ author = The author of the book.
+ * @ numberPages = The number of pages in the book.
+ * @ isbn = The ISBN of the book.
+ * @ borrowed = Sets the default to false to make the book available for loan
+ * @ numberBorrowings = Sets the default to zero as book has not been borrowed yet.
+ */
+public Book(String title, String author, int numberPages, String isbn)
+{
+    this.title=title;
+    this.author=author;
+    this.numberPages=numberPages;
+    this.isbn=isbn;
+    borrowed=false;
+    numberBorrowings=0;
+}</code></pre>
+<p>Excessive number whitepaces
+-</p>
+<pre><code>
+    /**
+     * Removes all books from the library.
+     */
+    public void     removeAllBooks()
+    {
+        books.removeAll(books);
+    }</code></pre>
+<p>String object is immutable
+-
+Therefore, the parameter String object <strong>s</strong> is not changed in the following code.</p>
+<pre><code>public static boolean isPalindrome(String s)
+{
+  s.replaceAll(&quot;[^a-zA-Z]&quot;, &quot;&quot;);
+  ...
+  ...
+}</code></pre>
+<p>Create a modified copy. If, for example, s is <em>No lemon, no melon.</em> then
+sModifed becomes <em>Nolemonnomelon</em>. Punctuation and whitespace would be removed.</p>
+<pre><code>public static boolean isPalindrome(String s)
+{
+  String sModified = s.replaceAll(&quot;[^a-zA-Z]&quot;, &quot;&quot;);
+  ...
+  ...
+}</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,598 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      05: WitPress prototype web app, TDD & Advanced Git.
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Advanced-Git-II">
+      Advanced-Git-II
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Advanced-Git-II">
+        <h1>A final lab on the use of Git.</h1>
+<p>We explore how merging and rebasing may be used to manage Git history. Use of simple examples should provide confidence in using these features to produce a professional-looking project history.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Branch &amp; Merge</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<h2>Page contents</h2>
+<ul>
+<li>Initialize an empty repository.</li>
+<li>Create a series of commits on the master branch.</li>
+<li>Create a secondary branch.</li>
+<li>Populate the secondary branch with a series commits.</li>
+<li>Merge the secondary branch into the master branch.</li>
+<li>Delete the secondary branch.</li>
+</ul>
+<h2>Action</h2>
+<p>Start with an empty repository.</p>
+<p>If necessary, delete .git:</p>
+<pre><code>rm -rf .git</code></pre>
+<p>and initialise a new repo:</p>
+<pre><code>git init</code></pre>
+<pre><code>Initialized empty Git repository in ../gitlab/.git/</code></pre>
+<p>Create, add and commit a file Circle.java.</p>
+<pre><code>echo Circle.java &gt; Circle.java
+git add .
+git commit -m &#39;A&#39;</code></pre>
+<p>Modify Circle.java, add and commit with message &#39;B&#39;.</p>
+<p>Repeat with message &#39;C&#39;.</p>
+<p>Check the log. It should be somewhat similar to that shown in Figure 1. Only the commit messages should be exactly the same as the dates and hash values will almost certainly differ.</p>
+<p><img src="img/54.png" alt="Figure 1: master branch"></p>
+<p>Now create and checkout a branch at B named branch-1 as shown in Figure 1, ensuring you use the correct hash, not the one in the figure above.</p>
+<pre><code>git checkout -b branch-1 9ca1d52</code></pre>
+<p>Change, add and commit Circle.java repeatedly with commit messages D, E. F. The log should be similar to the in Figure 2.</p>
+<p><img src="img/56.png" alt="Figure 2: branch-1"></p>
+<p>Your working tree is now as represented in Figure 3.</p>
+<p><img src="img/55.png" alt="Figure 3: Working tree comprising master and branch-1"></p>
+<p>Now merge branch-1 into master as follows:</p>
+<pre><code>git checkout master
+git merge branch-1</code></pre>
+<p>If Circle.java version in branch-1 differs from Circle.java in master then the following message will be generated:</p>
+<pre><code>Auto-merging Circle.java
+CONFLICT (content): Merge conflict in Circle.java
+Automatic merge failed; fix conflicts and then commit the result.</code></pre>
+<p><img src="img/57.png" alt="Figure 4: CONFLICT Merge conflict in Circle.java"></p>
+<p>Open Circle.java in the <code>vi</code> text editor. It should resemble something like that shown in Figure 5.
+<img src="img/58.png" alt="Figure 5: HEAD and branch-1 Circle.java versions differ"></p>
+<p>Edit Circle.java to resolve the conflicts. Such an exercise has already been dealt with in Git-I lab.</p>
+<p>Save the edited Circle.java. This will immediately exit <code>vi</code>.</p>
+<p>Run <code>git status</code> and observe a message something like that shown in Figure 6:</p>
+<p><img src="img/43.png" alt="Figure: 6: Unmerged paths"></p>
+<p> Add and commit with, for convenience and consistency, a commit message <em>G</em>. Print the log to verify the merge has completed satisfactorily. See Figure 7.</p>
+<p><img src="img/60.png" alt="Figure 7: Log verifies merge successful"></p>
+<p>Your working tree should now be as represented in Figure 8.</p>
+<p><img src="img/52.png" alt="Figure 8: Working tree following successful merge of branch-1 into master branch"></p>
+<p>Lastly, delete the branch-1 pointer as it&#39;s no longer required.</p>
+<pre><code>git branch -d branch-1</code></pre>
+<p>The working tree will now be as depicted in Figure 9.</p>
+<p><img src="img/53.png" alt="Figure 9: branch-1 deleted following merge"></p>
+<p>Examine the commit object whose message is G. This is the tip of the master branch following merging.</p>
+<pre><code>git log</code></pre>
+<p>The object, with some explanations, is shown here in Figure 10. Note the following describes the situation before merging:</p>
+<ul>
+<li>Commit C is tip of the <em>master</em> branch.</li>
+<li>Commit F is the tip of the branch <em>branch-1</em>.</li>
+</ul>
+<p>Following merging, commit G, the tip of the master, has two parents whose abbreviated hash values are shown in Figure 10 and which are depicted in Figure 3.</p>
+<p><img src="img/65.png" alt="Figure 10: Commit G object (master)"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Branch &amp; Rebase</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<h2>Page contents</h2>
+<ul>
+<li>Initialize an empty repository.</li>
+<li>Create a series of commits on the master branch.</li>
+<li>Create a secondary branch.</li>
+<li>Populate the secondary branch with a series commits.</li>
+<li>Use rebase to merge the secondary branch into the master branch.</li>
+<li>Delete the secondary branch.</li>
+</ul>
+<h2>Action</h2>
+<ul>
+<li>You will create a series of commits as shown in Figure 1.</li>
+<li>You will then create a branch at commit B and make further commits resulting in structure in Figure 2.</li>
+<li>You will rebase the new branch to the tip of the master at commit C as shown in Figure 3.</li>
+<li>The secondary branch pointer, no longer required,  will be deleted.</li>
+</ul>
+<p><img src="img/61.png" alt="Figure 1: master"></p>
+<p><img src="img/62.png" alt="Figure 2: branch-1"></p>
+<p><img src="img/63.png" alt="Figure 3: Rebased"></p>
+<p>Here are the detailed steps:</p>
+<ul>
+<li><p>Begin with an empty local repository.</p>
+</li>
+<li><p>Create, stage and commit a file, for example, Circle.java. </p>
+</li>
+<li><p>Make the commit label &#39;A&#39;.</p>
+</li>
+<li><p>Repeat the process for commits B and C (Figure 1).</p>
+</li>
+</ul>
+<p>The log is shown in Figure 4. </p>
+<ul>
+<li>Compare Figure 4 and Figure 1.</li>
+</ul>
+<p><img src="img/44.png" alt="Figure 4: Log - master branch"></p>
+<p>Now let&#39;s create a branch off commit B as follows:</p>
+<p>Create and check out a branch at commit B: </p>
+<pre><code>git checkout 1075692 # Checkout at B
+git branch branch-1 # Create the branch
+git checkout branch-1 # Checkout the branch</code></pre>
+<p>The above may be combined into one command as follows:</p>
+<pre><code>git checkout -b branch-1 1075692</code></pre>
+<p>We should receive a reply:</p>
+<pre><code>Switched to branch &#39;branch-1&#39;</code></pre>
+<p>Now, as with the master branch above, add commits D, E &amp; F making changes to Circle.java for each commit. Study Figure 2 and Figure 5.</p>
+<p><img src="img/45.png" alt="Figure 5: Log shows new branch-1 at commit B"></p>
+<p>Finally, execute the command:</p>
+<pre><code>git rebase master # master shown in Figure 1</code></pre>
+<p>The respose should be similar to that shown in Figure 6. The rebase command has failed because Circle.java as represented in branch-1 differs from that in the master branch and Git is unsure as to which is correct. Therefore manual intervention is required. </p>
+<p><img src="img/46.png" alt="Figure 6: Rebase command failure"></p>
+<p>Open Circle.java in the <code>vi</code> editor and fix the conflict. See Figure 7.</p>
+<p><img src="img/47.png" alt="Figure 7: Circle.java shows conflict to be resolved"></p>
+<p>Fix the conflict in Circle.java as shown in Figure 8 and save the edited file. Then check the status: it should be similar to that in Figure 9.</p>
+<p><img src="img/47a.png" alt="Figure 8: Conflicts resolved in editor before saving"></p>
+<p><img src="img/48.png" alt="Figure 9: Status check following Circle.java conflict resolution and saving"></p>
+<p>When the file has been modified and saved, run these commands. The output generated should resemble that shown in Figure 10.</p>
+<pre><code>git add .
+git rebase --continue</code></pre>
+<p><img src="img/49.png" alt="Figure 10: Rebase underway"></p>
+<p>Finally, run these commands to complete the rebase process. Note the final log and observe that goal represented in Figure 3 has been achieved. All the commits, A to F inclusive are now on the master branch. This is the only branch now in existence since branch-1 has been deleted.</p>
+<pre><code>git checkout master
+git merge branch-1
+git branch -d branch-1</code></pre>
+<p><img src="img/49a.png" alt="Figure 11 run and observe output from above 3 commands"></p>
+<p><img src="img/50.png" alt="Figure 12: Rebase complete - the final master branch"></p>
+<p><img src="img/64.png" alt="Figure 13: Rebase complete - branch-1 deleted"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Squash Commits</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<h2>Page contents</h2>
+<ul>
+<li>Refactor commit history by compressing a number of commits into a single commit.</li>
+<li>Retain an existing message or provide a new message for this single commit.</li>
+<li>Use the <em>git rebase</em> command for this task.</li>
+</ul>
+<h2>Action</h2>
+<ul>
+<li>Continue working on repo as developed on previous step. </li>
+<li>Recreate branch-1 off commit B as in the earlier steps.</li>
+<li>Checkout branch-1.</li>
+<li>Create a series of commits as shown in Figure 1.</li>
+<li>Combine commits <em>commit 1</em> to <em>commit 4</em> into a single commit with message <em>H</em>.</li>
+</ul>
+<p><img src="img/66.png" alt="Figure 1: Newly populated branch-1"></p>
+<p>Note down the content of Circle.java. We will need this to verify that the rebasing operation works correctly.</p>
+<p>Run the following command to facilitate rebasing of last 4 commits on the branch branch-1:</p>
+<pre><code>git rebase -i HEAD~4</code></pre>
+<p>This results in the opening of a text file in the terminal window as shown in Figure 2. Study its content.</p>
+<p><img src="img/67.png" alt="Figure 2: Rebasing commits underway"></p>
+<p>Edit the text file as shown in Figure 3. Note that <em>s</em> denotes squash.</p>
+<p><img src="img/68.png" alt="Figure 3: Preparing to squash commits"></p>
+<p>The text file displayed changes to that shown in Figure 4.</p>
+<p><img src="img/69.png" alt="Figure 4: Squash underway"></p>
+<p>Edit the file, deleting all messages except the first message <code>commit 1</code>.</p>
+<ul>
+<li>Save this file. (:wq in vi). </li>
+<li>The terminal output changes to that shown in Figure 5, indicating a successful operation.</li>
+</ul>
+<p><img src="img/70.png" alt="Figure 5: Success"></p>
+<p>Check the log. Opps. We forgot to change the commit message to &#39;H&#39; as specified. See Figure 6. </p>
+<p><img src="img/72.png" alt="Figure 6: Squash looks okay but omitted to change commit message"></p>
+<p>This can be achieved as follows:</p>
+<pre><code>git commit --amend -m &#39;H&#39;</code></pre>
+<p>Now, check the log again: it should be as shown in Figure 7, which is correct. Compare Figure 7 and Figure 1. Verify that Circle.java contains the correct version material (commit 4).</p>
+<p><img src="img/71.png" alt="Figure 7: Final log"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Modify any commit message</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p>Select hash before commit whose message to be changed. For example:</p>
+<pre><code>git rebase --i ba0e1</code></pre>
+<p>Mark message with <em>edit</em>.</p>
+<p>Note: Use vi editor.</p>
+<p>When process halts modify the message using:</p>
+<pre><code>git commit --amend -m &#39;New message&#39;</code></pre>
+<p>Complete process with:</p>
+<pre><code>git rebase ---continue</code></pre>
+<p><img src="img/commit_01.png" alt=""></p>
+<p><img src="img/commit_02.png" alt=""></p>
+<p><img src="img/commit_03.png" alt=""></p>
+<p><img src="img/commit_04.png" alt=""></p>
+<h1>Branch</h1>
+<p>To create and checkout a branch named <em>myyamba-client</em>:</p>
+<pre><code>git checkout -b myyamba-client</code></pre>
+<p>To track a remote branch:</p>
+<pre><code>$ git branch --set-upstream-to=origin/myyamba-client myyamba-client</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

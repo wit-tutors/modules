@@ -1,0 +1,1009 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      03: MyRent (Solutions)
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Solution-v1">
+      Solution-v1
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Solution-v1">
+        <h1>Solution v1</h1>
+<p><strong>Step-by-step guide to building MyRent application</strong></p>
+<ul>
+<li>Iteration v1 (Data)</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Pre Load data</h1>
+<p>Preloaded data is extremely helpful during development as continuously initialising databases with data is both tedious and inefficient. </p>
+<p>To preload data we place a class Bootstrap in the default folder and source the data from a file <em>data.yml</em> which we place in the <em>conf</em> directory.</p>
+<p>Filename: Bootstrap.java</p>
+<pre><code class="lang-java">import java.util.List;
+
+import play.*;
+import play.jobs.*;
+import play.test.*;
+import models.*;
+
+@OnApplicationStart
+public class Bootstrap extends Job 
+{ 
+  public void doJob()
+  {
+    if (User.count() == 0)
+    {
+     Fixtures.loadModels(&quot;data.yml&quot;);
+    }
+  }
+}</code></pre>
+<p>Create a file data.yml in conf directory.</p>
+<p>Filename: data.yml</p>
+<pre><code class="lang-yml">User(homer):
+    firstName: Homer
+    lastName: Simpson
+    email: homer@simpson.com
+    password: secret
+
+User(marge):
+    firstName: Marge
+    lastName: Simpson
+    email: marge@simpson.com
+    password: secret</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Iteration v1: Model (Residence)</h1>
+<p> Here is the Residence model file.</p>
+<ul>
+<li>Locate it in the models package. </li>
+</ul>
+<p> Filename: Residence.java</p>
+<pre><code class="lang-java">package models;
+
+import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import play.db.jpa.Model;
+
+@Entity
+public class Residence extends Model
+{
+  @ManyToOne
+  public User user;
+
+  // residence location in latitude longitude
+  // example: &quot;52.253456, -7.18716&quot;
+  public String geolocation; 
+
+  // date residence registered 
+  public Date dateRegistered;
+
+  // rented == &#39;yes&#39; represents residence rented, 
+  // rented == &#39;no&#39;  represents building vacant
+  public String rented;
+
+  // rent per calendar month
+  public int rent;
+
+  public int numberBedrooms;
+
+  // Apartment | Flat, Studio or House
+  public String residenceType;
+
+  public void addUser(User user)
+  {
+    this.user = user;
+    this.save();
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Iteration v1: View (InputData)</h1>
+<ul>
+<li>The InputData view is where the user enters details of the residence. <ul>
+<li>This data are stored in the Residence model.</li>
+</ul>
+</li>
+<li>Create a folder views/InputData and write a file index.html in this folder.<ul>
+<li>A JavaScript file <em>inputdata.js</em> is required to activate the controls and validation.</li>
+<li>The controls referred to are the radio button group and the drop-down box and its validation.</li>
+</ul>
+</li>
+</ul>
+<p>This is the script for inputdata.js. Place it in main.html.</p>
+<pre><code>&lt;script src=&quot;@{&#39;/public/javascripts/inputdata.js&#39;}&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;</code></pre>
+<p> For reference, here is the refactored main.html:</p>
+<pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;#{get &#39;title&#39; /}&lt;/title&gt;
+    &lt;meta charset=&quot;${_response_encoding}&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;@{&#39;/public/images/favicon.png&#39;}&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    #{doLayout /}       
+&lt;!--     &lt;script src=&quot;http://code.jquery.com/jquery-2.2.3.min.js&quot;&gt;&lt;/script&gt;  --&gt;
+    &lt;script src=&quot;@{&#39;/public/javascripts/jquery-2.2.3.js&#39;}&quot; type=&quot;text/javascript&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js&quot;&gt;&lt;/script&gt;     
+    &lt;script src=&quot;@{&#39;/public/javascripts/inputdata.js&#39;}&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;     
+    #{get &#39;moreScripts&#39; /}
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>And here is the file for InputData view:</p>
+<p>Filename: index.html</p>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Input&#39; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+   &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+   &lt;a class=&quot;ui item&quot; href=&quot;/account&quot;&gt;Sign Up&lt;/a&gt;
+   &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+   &lt;a class=&quot;ui active item&quot; href=&quot;/inputdata&quot;&gt;Input data&lt;/a&gt;
+ &lt;/nav&gt;
+
+&lt;section class=&quot;ui segment&quot;&gt;      
+  &lt;form class=&quot;ui form&quot; action=&quot;/inputdata/datacapture&quot; method=&quot;POST&quot;&gt;
+    &lt;p&gt;Please input residence data&lt;/p&gt;
+    &lt;div class=&quot;ui two column grid&quot;&gt;
+      &lt;div class=&quot;column&quot;&gt;
+        &lt;div class=&quot;ui fluid form segment&quot;&gt;         
+          &lt;label&gt;Location &lt;/label&gt; 
+          &lt;!-- &lt;input type=&quot;text&quot; id=&quot;geolocation&quot; name=&quot;residence.geolocation&quot; value=&quot;53.347298,-6.268344&quot; readonly class=&quot;input-medium&quot;&gt;   --&gt;         
+          &lt;div class=&quot;ui input&quot;&gt;
+            &lt;input id = &quot;geolocation&quot; value=&quot;53.347298,-6.268344&quot; name=&quot;residence.geolocation&quot;  type=&quot;text&quot; readonly&gt;
+          &lt;/div&gt;               
+        &lt;/div&gt;
+
+        &lt;!--   Residence rented or vacant? --&gt;  
+        &lt;div class=&quot;ui fluid form segment&quot;&gt;
+          &lt;!-- Rented or vacant? --&gt;
+          &lt;div class=&quot;grouped inline fields&quot;&gt;               
+            &lt;div class=&quot;ui radio checkbox&quot;&gt;
+              &lt;input name=&quot;residence.rented&quot; checked=&quot;checked&quot; type=&quot;radio&quot; value=&quot;yes&quot;&gt;
+              &lt;label&gt;Rented&lt;/label&gt;
+            &lt;/div&gt;                              
+            &lt;div class=&quot;ui radio checkbox&quot;&gt;
+              &lt;input name=&quot;residence.rented&quot; type=&quot;radio&quot; value=&quot;no&quot;&gt;
+              &lt;label&gt;Vacant&lt;/label&gt;
+            &lt;/div&gt;              
+          &lt;/div&gt;                 
+        &lt;/div&gt;        
+        &lt;!--   The monthly rent  --&gt;
+        &lt;div class=&quot;ui two column grid&quot;&gt;
+          &lt;div class=&quot;column&quot;&gt;
+            &lt;div class=&quot;ui form segment&quot;&gt;
+              &lt;!-- &lt;label class=&quot;control-label&quot;&gt; Rent per calendar month(&amp;euro;): &lt;/label&gt;  --&gt;
+              &lt;div class=&quot;ui fluid labeled input&quot;&gt;
+                &lt;div class=&quot;ui label&quot;&gt;
+                  Monthly rent (&amp;euro;)
+                &lt;/div&gt;   
+                &lt;input value=&quot;1500&quot; name=&quot;residence.rent&quot;  type=&quot;text&quot;&gt;
+             &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;!--   The number of bedrooms  --&gt;
+          &lt;div class=&quot;column&quot;&gt;
+            &lt;div class=&quot;ui form segment&quot;&gt;
+              &lt;!-- &lt;label class=&quot;control-label&quot;&gt; Rent per calendar month(&amp;euro;): &lt;/label&gt;  --&gt;
+              &lt;div class=&quot;ui fluid labeled input&quot;&gt;
+                &lt;div class=&quot;ui label&quot;&gt;
+                  Number bedrooms:
+                &lt;/div&gt;   
+                &lt;input value=&quot;3&quot; name=&quot;residence.numberBedrooms&quot;  type=&quot;text&quot; size=1em&gt;
+             &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;   
+        &lt;!--   The residence type  --&gt;    
+        &lt;div class=&quot;ui fluid form segment&quot;&gt;
+          &lt;div class=&quot;ui selection dropdown&quot;&gt;
+            &lt;input name=&quot;residence.residenceType&quot; type=&quot;hidden&quot;&gt;
+            &lt;div class=&quot;text&quot;&gt;Residence type&lt;/div&gt;
+            &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+            &lt;div class=&quot;menu&quot;&gt;
+              &lt;div class=&quot;item&quot; data-value=&quot;flat&quot;&gt;Apartment|Flat&lt;/div&gt;
+              &lt;div class=&quot;item&quot; data-value=&quot;studio&quot;&gt;Studio&lt;/div&gt;
+              &lt;div class=&quot;item&quot; data-value=&quot;house&quot;&gt;House&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt; 
+        &lt;/div&gt;
+
+        &lt;!--   Submit form button  --&gt;
+        &lt;div class=&quot;form-actions&quot;&gt;
+          &lt;div class=&quot;ui blue submit button&quot;&gt;Submit Data &lt;i class=&quot;add icon&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;div class=&quot;ui error message&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;            
+      &lt;!-- close 1st column --&gt;
+      &lt;!-- The map representing residence location --&gt;
+      &lt;div class=&quot;column&quot;&gt;
+        &lt;div class=&quot;ui raised fluid form segment&quot;&gt;
+          &lt;div id=&quot;map_canvas&quot;&gt;&lt;/div&gt;
+          &lt;script src=&quot;https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&quot;&gt;&lt;/script&gt;
+          &lt;script src=&quot;@{&#39;/public/javascripts/map.js&#39;}&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- close 2nd column --&gt;
+    &lt;/div&gt;
+    &lt;!-- class ui two column grid --&gt;
+  &lt;/form&gt; 
+&lt;/section&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Iteration v1: Inputdata Semantic UI controls</h1>
+<p>Here we describe how to initialize and validate the SemanticUI radio button and drop-down controls.</p>
+<p>Place this file in <em>public/javascripts</em> folder:</p>
+<p>Filename: inputdata.js</p>
+<pre><code>// initialize the controls in the input data template and validate residence type
+$(&#39;.ui.dropdown&#39;).dropdown();
+$(&#39;.ui.checkbox&#39;).checkbox();
+$(&#39;.ui.form&#39;)
+.form({
+  residenceType : {
+    identifier : &#39;residence.residenceType&#39;,
+    rules: [
+      {
+          type : &#39;empty&#39;,
+          prompt: &#39;Please select a residence type&#39;
+      }
+    ]
+  }
+});</code></pre>
+<p>This line initializes the drop-down box where the residence type is selected:</p>
+<ul>
+<li>Apartment|Flat</li>
+<li>Studio</li>
+<li>House</li>
+</ul>
+<pre><code>$(&#39;.ui.dropdown&#39;).dropdown();</code></pre>
+<p>The radio button group which allows a user to indicate whether the residence is rented or vacant is initialized with this script:</p>
+<pre><code>$(&#39;.ui.checkbox&#39;).checkbox();</code></pre>
+<p>These scripts could have been placed at the end of the html (template).</p>
+<ul>
+<li>See the file <em>views/InputData/index.html</em>.</li>
+</ul>
+<p>The final script validates the drop-down input. </p>
+<ul>
+<li>If no input is selected an error is indicated and the user prompted to select a value from the drop-down menu:</li>
+</ul>
+<p><img src="img/01.png" alt="">
+<img src="img/02.png" alt="Figure 1: Drop-down validation">
+<img src="img/03.png" alt="Figure 2: Validation &amp; associated html"></p>
+<p>Observe how the validation is activated using <em>class = ui error message</em>:</p>
+<pre><code>        &lt;!--   Submit form button  --&gt;
+        &lt;div class=&quot;form-actions&quot;&gt;
+          &lt;div class=&quot;ui blue submit button&quot;&gt;Submit Data &lt;i class=&quot;add icon&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;div class=&quot;ui error message&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+<p>The following code, located towards the end of InputData.index.html, loads the <em>inputdata.js</em> script:</p>
+<pre><code>&lt;script src=&quot;@{&#39;/public/javascripts/inputdata.js&#39;}&quot; type=&quot;text/javascript&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Iteration v1: Controller (InputData)</h1>
+<p>Here it the InputData controller code:</p>
+<p>Filename: InputData.java</p>
+<pre><code class="lang-java">
+package controllers;
+
+import java.util.Date;
+
+import models.Residence;
+import models.User;
+import play.Logger;
+import play.mvc.Controller;
+
+public class InputData extends Controller
+{
+
+  /**
+   * Render data input view (logged-in users only).
+   */
+  public static void index()
+  {
+    if (session.get(&quot;logged_status&quot;).equals(&quot;logged_in&quot;))
+    {
+      render();
+    }
+    else
+    {
+      Accounts.login();
+    }
+  }
+
+  /**
+   * Update models with residential data
+   */
+  public static void dataCapture(Residence residence)
+  {
+    User user = Accounts.getCurrentUser();
+    residence.addUser(user);   
+    residence.dateRegistered = new Date();
+    residence.save();
+
+    Logger.info(&quot;Residence data received and saved&quot;);
+    Logger.info(&quot;Residence type: &quot; + residence.residenceType);
+    Logger.info(&quot;Rented? &quot; + residence.rented);
+
+    index();
+  }
+
+}</code></pre>
+<p>We are now in a position to answer a question that may have occured to you when studying the files InputData.index and the model Residence.java.</p>
+<ul>
+<li>Notice that there isn&#39;t a constructor in Residence.java <ul>
+<li>Why is this? </li>
+<li>The answer may be inferred by examining the InputData.index file. <ul>
+<li>Notice that the field names are prefixed by &#39;residence.&#39;. For example:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-html">name=&quot;residence.county&quot;</code></pre>
+<ul>
+<li>Notice also in the above method <em>InputData.dataCapture</em> that the first argument is <em>Residence residence</em>. <ul>
+<li>What&#39;s happening is that the Play templating language creates a Residence object using the various fields in InputData.index and passes this object to the controller as an argument in InputData.dataCapture. </li>
+<li>This hugely reduces the code bloat that would otherwise be necessary.</li>
+</ul>
+</li>
+</ul>
+<p>Finally, update the routing: </p>
+<ul>
+<li>Add the following to the conf/routes file:</li>
+</ul>
+<pre><code>#Input Data
+GET /inputdata                                InputData.index
+POST /inputdata/datacapture                   InputData.dataCapture</code></pre>
+<p>If you launch myrent and immediately attempt access InputData before logging in you may encounter an exception, the infamous NullPointerException. (Example: localhost:9000/inputdata)</p>
+<ul>
+<li>To avoid this replace this line in <em>controllers/InputData.index</em>:</li>
+</ul>
+<pre><code>if (session.get(&quot;logged_status&quot;).equals(&quot;logged_in&quot;))</code></pre>
+<p>with this line:</p>
+<pre><code>if (session.get(&quot;logged_status&quot;) != null &amp;&amp; session.get(&quot;logged_status&quot;).equals(&quot;logged_in&quot;))</code></pre>
+<p>In the next step we shall implement the method <em>Accounts.getCurrentUser()</em> that is invoked in <em>dataCapture</em> above.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Iteration v1: InputData (Accounts controller)</h1>
+<p>We wish that when a user logs in and successfully authenticates, it is automatically routed to the InputData view. </p>
+<ul>
+<li>To implement this, include this statement:</li>
+</ul>
+<pre><code>InputData.index();</code></pre>
+<p>in <em>Accounts.authenticate</em>.</p>
+<p>Here is the refactored <em>Accounts.authenticate</em> method:</p>
+<pre><code>  /**
+   * Authenticates that a user&#39;s login credentials are valid
+   * 
+   * @param email
+   *          The submitted email address
+   * @param password
+   *          The corresponding password
+   */
+  public static void authenticate(String email, String password)
+  {
+    User user = User.findByEmail(email);
+    if ((user != null) &amp;&amp; (user.checkPassword(password) == true))
+    {
+      Logger.info(&quot;Authentication successful&quot;);
+      session.put(&quot;logged_in_userid&quot;, user.id);
+      session.put(&quot;logged_status&quot;, &quot;logged_in&quot;);
+      InputData.index();
+    }
+    else
+    {
+      Logger.info(&quot;Authentication failed&quot;);
+      login();
+    }
+  }</code></pre>
+<p>  Notice that in the method <em>authenticate</em> we now also introduce the <a href="https://www.playframework.com/documentation/1.3.x/api/play/mvc/Controller.html#session"><em>Play session</em></a> to track key information such as the logged-in user id and so on:</p>
+<pre><code>      session.put(&quot;logged_in_userid&quot;, user.id);
+      session.put(&quot;logged_status&quot;, &quot;logged_in&quot;);</code></pre>
+<p>A method <em>getCurrentUser</em> is invoked in the method <em>dataCapture</em> in the <em>InputData</em> controller.</p>
+<p>Here is its implementation. Add this to the Accounts contoller.</p>
+<pre><code>  public static User getCurrentUser()
+  {
+    User user = null;
+    if (session.contains(&quot;logged_in_userid&quot;))
+    {
+      String userId = session.get(&quot;logged_in_userid&quot;);
+      user = User.findById(Long.parseLong(userId));
+    }
+    return user;
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Iteration v1: Map</h1>
+<p>The location of a particular residence is determined using a GoogleMap. </p>
+<ul>
+<li>The user drags an overlay marker and drops it on the residence.</li>
+<li>The script file <em>map.js</em> includes code obtained at <a href="https://developers.google.com/maps/documentation/javascript/v2/examples/">Google developers</a> and modified appropriately.<ul>
+<li><em>map.js</em> is located in <em>public/javascripts</em> folder. <ul>
+<li>This contains the JavaScript code to <ul>
+<li>render the map</li>
+<li>facilitate dragging of an overlay (a marker) and </li>
+<li>capturing of the latitude and longitude coordinates of the last position of the marker.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Filename: map.js</p>
+<pre><code>function initialize() {
+  let map;
+  let marker;
+  const latlng = new google.maps.LatLng(53.347298, -6.268344);
+  const mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(53.347298, -6.268344),
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+  };
+  const mapDiv = document.getElementById(&#39;map_canvas&#39;);
+  map = new google.maps.Map(mapDiv, mapOptions);
+  mapDiv.style.width = &#39;500px&#39;;
+  mapDiv.style.height = &#39;600px&#39;;
+
+  // place a marker
+  marker = new google.maps.Marker({
+    map: map,
+    draggable: true,
+    position: latlng,
+    title: &#39;Drag and drop on your property!&#39;,
+  });
+
+  // To add the marker to the map, call setMap();
+  marker.setMap(map);
+
+  // marker listener populates hidden fields ondragend
+  google.maps.event.addListener(marker, &#39;dragend&#39;, function () {
+    const latLng = marker.getPosition();
+    const latlong = latLng.lat().toString().substring(0, 10) + &#39;,&#39;
+        + latLng.lng().toString().substring(0, 10);
+
+    // publish lat long in geolocation control in html page
+    $(&#39;#geolocation&#39;).val(latlong);
+
+    // update the new marker position
+    map.setCenter(latLng);
+  });
+}
+
+google.maps.event.addDomListener(window, &#39;load&#39;, initialize);</code></pre>
+<p>Notice the statement</p>
+<pre><code>var mapDiv = document.getElementById(&#39;map_canvas&#39;);</code></pre>
+<p>in map.js. Notice also in InputData.index.html the statement</p>
+<pre><code>&lt;div id=&quot;map_canvas&quot;&gt;&lt;/div&gt;</code></pre>
+<p>The id &#39;map_canvas&#39; is common to both statements. </p>
+<ul>
+<li>This is what determines the map location within the view.</li>
+</ul>
+<p>Note that a JavaScript library JQuery is required, for example in the method invocation:</p>
+<p>A script call to JQuery has already been autogenerated by Play and can be found in views/main.html.</p>
+<pre><code>&lt;script src=&quot;@{&#39;/public/javascripts/jquery-2.2.3.js&#39;}&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;</code></pre>
+<p>This statement captures the latitude and longitude of the marker at the conclusion of dragging and renders it using JQuery to the html element whose id is &quot;geolocation&quot;.</p>
+<pre><code>$(&quot;#geolocation&quot;).val(latlong);</code></pre>
+<p>Reference: JavaScript - The Definitive Guide by David Flanagan is availabe in pdf <a href="archive/flanagan-javascript-the-definitive-guide.pdf">here</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Iteration v1: Navigation</h1>
+<p>It is necessary to modify the navigation bar to allow access to the new InputData view (template) in this iteration.</p>
+<p>Here is the refactored code as it appears in <em>views/InputData/index.html</em>:</p>
+<pre><code>&lt;nav class=&quot;ui menu&quot;&gt;
+   &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+   &lt;a class=&quot;ui item&quot; href=&quot;/account&quot;&gt;Sign Up&lt;/a&gt;
+   &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+   &lt;a class=&quot;ui active item&quot; href=&quot;/inputdata&quot;&gt;Input data&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+<p>Add this line to the navigation bar code in the remaining templates such as:</p>
+<ul>
+<li>Accounts/index.html</li>
+<li>Accounts/login.html</li>
+<li>Home/index.html</li>
+</ul>
+<pre><code>&lt;a class=&quot;ui item&quot; href=&quot;/inputdata&quot;&gt;Input data&lt;/a&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Iteration v1: Ajax</h1>
+<p>Run MyRent app, log in and switch to the inputdata view.</p>
+<p>Select a data set and press the Submit Data button.</p>
+<p>Notice how the page refreshes, in particular that the map appears to flash briefly.</p>
+<p>We shall address this problem by using a pattern referred to as <strong>Ajax</strong>.</p>
+<ul>
+<li>The term Ajax originally derived from the phrase <em>asynchronous JavaScript and XML</em>. This is now a misnomer as XML has been replaced by JSON.</li>
+</ul>
+<p>Modifications are required to the following files:</p>
+<ul>
+<li>app/controllers/InputData.java</li>
+<li>app/views/InputData/index.html</li>
+<li>public/javascripts/inputdata.js</li>
+</ul>
+<p><strong>Filename: InputData.java</strong></p>
+<p>Comment out the call to <em>index()</em> in <em>dataCapture</em> and replace with:</p>
+<pre><code>    JSONObject obj = new JSONObject();
+    String value = &quot;Congratulations. You have successfully registered your &quot; + residence.residenceType +&quot;.&quot;;
+    obj.put(&quot;inputdata&quot;, value);
+    renderJSON(obj);</code></pre>
+<p>This code requires the following import:</p>
+<pre><code>import org.json.simple.JSONObject;</code></pre>
+<p>Also required is the file <em>json-simple-1.1.jar</em> available <a href="archive/json-simple-1.1.jar">here</a>.</p>
+<ul>
+<li>Download and place in the lib file in the MyRent project.</li>
+<li>Refresh the lib file (F5).</li>
+<li>Add the jar to the build path. See Figure 1.</li>
+</ul>
+<p><img src="img/04.png" alt="Figure 1: Add json-simple-1.1.jar to build path">.</p>
+<p><strong>Filename: InputData/index.html</strong></p>
+<p>Replace this:</p>
+<pre><code>&lt;form class=&quot;ui form&quot; action=&quot;/inputdata/datacapture&quot; method=&quot;POST&quot;&gt;</code></pre>
+<p>with this:</p>
+<pre><code> &lt;form class=&quot;ui form&quot;&gt;</code></pre>
+<p>Add this div immediately before the <em>Submit form button</em> code:</p>
+<pre><code>&lt;div class=&quot;ui fluid form segment&quot;&gt;
+  &lt;div id=&quot;notification&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>We shall use this to post a notification message on successful return from the Ajax call.</p>
+<p><strong>Filename: inputdata.js</strong></p>
+<p>This block of code is to be added to the end of the validation method:</p>
+<pre><code>
+    onSuccess : function() {
+        submitForm();
+        return false;
+    }</code></pre>
+<p>If the validation succeeds the function submitForm is invoked.</p>
+<p>Here is the modified validation folllowed by submitForm:</p>
+<pre><code>// Refactored for Ajax call. See lab solution v1 step 09
+$( document ).ready(function() {
+  // initialize the controls in the input data template and validate residence type
+  $(&#39;.ui.dropdown&#39;).dropdown();
+  $(&#39;.ui.checkbox&#39;).checkbox();
+  $(&#39;.ui.form&#39;)
+  .form({
+      residenceType : {
+          identifier : &#39;residence.residenceType&#39;,
+          rules: [{
+                    type : &#39;empty&#39;,
+                    prompt: &#39;Please select a residence type&#39;
+            }]
+      }
+  },
+
+  {
+      onSuccess : function() {
+          submitForm();
+          return false;
+      } 
+  });
+
+  function submitForm() {
+      var formData = $(&#39;.ui.form.segment input&#39;).serialize(); 
+      $.ajax({
+        type: &#39;POST&#39;,
+        url: &#39;/inputdata/datacapture&#39;,
+        data: formData,
+        success: function(response) { 
+            console.log(&quot;notification: &quot; + response.inputdata);
+            $(&#39;#notification&#39;).html(response.inputdata);
+        }
+      });
+    }
+});</code></pre>
+<p>Once you have performed the above refactoring, the data input screen will remain flicker-free when the Submit Data button is pressed. Also, a notification will be written to the notification div, for example as shown in Figure 2.</p>
+<p><img src="img/05.png" alt="Figure 2: Successful registration of data notification"></p>
+<p>Commit this iteration to your myrent repository, add a tag and push all to remote repo.</p>
+<pre><code>git add .
+git commit -m &#39;iteration  v1&#39;
+git tag -a v1 -m &#39;iteration v1&#39;
+git push &amp;&amp; git push --tags</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

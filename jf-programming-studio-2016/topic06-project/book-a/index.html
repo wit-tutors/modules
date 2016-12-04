@@ -1,0 +1,989 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      06: Project Specification & tutorial on Heroku cloud deployment.
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Project (Resources)">
+      Project (Resources)
+    </a>
+    
+    <a class="item" data-tab="Resources">
+      Resources
+    </a>
+    
+    <a class="item" data-tab="Q&A">
+      Q&A
+    </a>
+    
+    <a class="item" data-tab="Q&A.Solutions">
+      Q&A.Solutions
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Project (Resources)">
+        <h1>Project(Documentation)</h1>
+<p><strong>Assignment</strong>: The submission process comprises a cover page to be uploaded by means of a dropbox on Moodle. On the page should be links to the three project repositories on Bitbucket and the url to the completed application, deployed on Heroku. A link to download a cover page template is provided in this resource.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Resources">
+        <h1>Resources</h1>
+<p>The same MyRent repository used by a student in the labs should be used also for the assignment project.</p>
+<ul>
+<li>Simply add and tag each story and then push (including tag) to the remote repo on BitBucket.</li>
+<li>Deploy your finished app to Heroku. </li>
+</ul>
+<p>Documentation associated with the assignment as follows:</p>
+<ul>
+<li>A cover page. You are asked to edit this appropriately and upload in the dropbox that will be provided. Templates are available in Word and pdf formats:<ul>
+<li><a href="archives/assignment-submission-cover-page.docx">Word format</a></li>
+<li><a href="archives/assignment-submission-cover-page.pdf">pdf format</a></li>
+</ul>
+</li>
+</ul>
+<p>A version of MyRent with all stories implemented is viewable online at:</p>
+<ul>
+<li><a href="https://myrent-studio-2016.herokuapp.com/"><a href="https://myrent-studio-2016.herokuapp.com/">https://myrent-studio-2016.herokuapp.com/</a></a></li>
+</ul>
+<p>The hard deadline for completed submissions is 11pm, August 20th. Materials submitted later will not be graded.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Q&A">
+        <h1>Presentation and question &amp; answer session</h1>
+<h2>Introduction</h2>
+<p>As discussed during the studio sesssion, the final act in the grading process will comprise a presentation by you of your completed application and a question and answer session related to the application, JavaScript and the Git versioning system.</p>
+<p>The questions will be based on the following list.</p>
+<p>As indicated in the schedule already published, the total time allotted for each student is 20 minutes, 10 minutes for presentation and the remaining 10 for Q&amp;A.</p>
+<h2>Play Framework</h2>
+<ol>
+<li>What is a framework? </li>
+<li>What is the Play Framework?</li>
+<li>You have been developing using version 1.x. There is a later version 2.x. What are some fundamental differences? Would your version work without refactoring were you to upgrade to Play 2?</li>
+<li>Play uses the Model View Controller (MVC) pattern. Briefly explain the pattern. Why is it used? Is it unique to Play?</li>
+<li>Each Play application contains a <strong>routes</strong> file. What is its purpose?</li>
+<li>Here is a typical extract from a routes file. Explain.<pre><code># Donation page
+GET    /donation                                DonationController.index
+POST   /donation/donate                         DonationController.donate</code></pre>
+</li>
+<li>What is the purpose of the <strong>application.conf</strong> file?</li>
+<li>The following Play command is frequently used. What is the purpose of doing so?<pre><code>play eclipsify</code></pre>
+</li>
+<li>Play uses a templating engine. Explain. Discuss where templating has been used in your project application, for example.</li>
+<li>What is the role of the controller?</li>
+<li>What is the role of the view?</li>
+<li>What is the role of the model?</li>
+<li>Explain @Entity and the parent class Model as used in this code snippet:<pre><code>@Entity
+public class Donation extends Model 
+{
+...
+}</code></pre>
+</li>
+<li>Explain the following terms:<pre><code>@ManyToOne
+@OneToMany
+@OneToOne</code></pre>
+</li>
+</ol>
+<h2>JavaScript Language (JS)</h2>
+<ol>
+<li>Who developed the JavaScript language and when was it developed?</li>
+<li>What have Java and JavaScript in common (other than the word Java)?</li>
+<li>What is ECMAScript? How does it compare to JavaScript?</li>
+<li>What role does JavaScript play in developing client-side code?</li>
+<li>What is ES6? What preceded it? Name some new features introduced in ES6.</li>
+<li>JS now has 6 primitive types. What is a primitive type? List some of the six.</li>
+<li>JS is a loosely typed language. Explain.</li>
+<li>Discuss any behavioural differences between the types <em>var</em>, <em>const</em> and <em>let</em>.</li>
+<li>Java has several number types, for example, <em>int</em>, <em>long</em>, <em>float</em> and so on. How many number types does JS have? </li>
+<li>Discuss the strengths and weaknessess of the JS number types.</li>
+<li>What is the difference between <em>null</em> and <em>undefined</em>?</li>
+<li>ES6 introduced the <em>Symbol</em> type. What is it and what is its purpose?</li>
+<li>What is a JS object?</li>
+<li>What is an object literal?</li>
+<li>How do JS objects and arrays differ? When would one use an object, when an array?</li>
+<li>Discuss the use of semi-colons in JS.</li>
+<li>Discuss the differences, if any, between the uses of the equality operators in the following code:<pre><code>String s1 = &#39;Hello world&#39;;
+String s2 = &#39;Hello world&#39;;
+let b1 = s1 == s2;
+let b2 = s1 === s2;</code></pre>
+</li>
+<li>Explain the terms <em>truthy</em> and <em>falsy</em>.</li>
+<li>Explain how the use of the <strong>&amp;&amp;</strong> and <strong>||</strong> operators differ in JS compared to in Java.</li>
+<li>How is control flow achieved in JS?</li>
+<li>Where may one place JS code in a web app? Discuss the implications of where such code is located?</li>
+<li>How might one simultaneously debug both client JS and Play server Java code?</li>
+<li>Explain the terms <em>function</em> and <em>method</em>.</li>
+<li>What is an anonymous JS function?</li>
+<li>Discuss some of the implications in using <em>strict</em> mode.</li>
+<li>What is the <em>arrow</em> function? How does the behaviour of the <em>this</em> object or reference change when using an <em>arrow</em> function?</li>
+<li>A JS function is sometimes referred to as a <em>first class object</em>. Explain. In what way, if any, does it differ from a regular JS object?</li>
+<li>jQuery: what is it? Why use it?</li>
+<li>Explain: <ul>
+<li><strong>The</strong> jQuery function, </li>
+<li>A jQuery function, </li>
+<li>A jQuery method, </li>
+<li>A jQuery object.</li>
+</ul>
+</li>
+<li>In the context of a JS file, what do the terms minification and obfuscation mean and why might these processes be used?</li>
+<li>What are the options available and steps involved to introduce jQuery into an application? </li>
+<li>JS is referred to as a prototypal language. Explain. Compare to Java.</li>
+<li>What does the term <strong>scope</strong> mean? How do scopes differ in the JS and Java languages?</li>
+<li>Explain and discuss in the context of JS the terms <strong>global</strong> scope, <strong>function</strong> scope and <strong>block</strong> scope.</li>
+<li>What is an immediately invoked function expression (IIFE)? When might one use an IIFE?</li>
+<li>Describe some techiques to avoid polluting the global scope (namespace)?</li>
+<li>Explain Temporal Dead Zone (TDZ).</li>
+<li>Explain what is meant by a closure. Describe an example where use of a closure would be advantageous.</li>
+<li>Explain what is meant by Ajax (Asynchronous Java + XML). Why might one use it?</li>
+</ol>
+<h2>Git Versioning System</h2>
+<ol>
+<li>Git is a distributed versioning system. How does this compare to centralized version control systems?</li>
+<li>Describe in broad terms how to put an existing application under Git version control.</li>
+<li>Would you put all files in a project under Git control? If not, why not? How would you decide which files to exclude and how would you achieve this?</li>
+<li>What do you hope would happen were you to run this command?<pre><code>git push origin master</code></pre>
+</li>
+<li>What do you hope would happen were you to run this command?<pre><code>git pull origin master</code></pre>
+</li>
+<li>What is the index?</li>
+<li>What does the <em>commit</em> command achieve?</li>
+<li>What are the consequences for your working folder and its contents when, while on the master branch, you run a command such as the following. What might <em>dev</em> refer to?<pre><code>git checkout dev</code></pre>
+</li>
+<li>How many object types in Git, list them and briefly explain?</li>
+<li>What is SHA-1, a SHA-1 hash and what role do they play in Git? </li>
+<li>The merge and rebase commands may be used, for example, to move a development branch to the master branch. Which command should one use and why?</li>
+<li>How might one revise the commit history of a project, for example in reducing the number of commit messages or changing the message content of a message or messages? What is good practice in doing so?</li>
+</ol>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Q&A.Solutions">
+        <h1>Presentation and question &amp; answer session (Sample answers)</h1>
+<h2>Play Framework</h2>
+<p>[1] What is a framework? </p>
+<p>An abstraction in which common generic code may be overridden. </p>
+<h4>Distinguishing features:</h4>
+
+<ul>
+<li><p>inversion of control: In a framework, unlike in libraries or normal user applications, the overall program&#39;s flow of control is not dictated by the caller, but by the framework.</p>
+</li>
+<li><p>default behavior: A framework has a default behavior. This default behavior must actually be some useful behavior and not a series of no-ops.</p>
+</li>
+<li><p>extensibility: A framework can be extended by the user usually by selective overriding or specialized by user code providing specific functionality.</p>
+</li>
+<li><p>non-modifiable framework code: The framework code, in general, is not allowed to be modified. Users can extend the framework, but not modify its code.</p>
+</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Software_framework">Wikipedia: Software framework</a></p>
+<p>[2] What is the Play Framework?</p>
+<p>A framework to facilitate building web applications using Java or Scala.</p>
+<p>[3] You have been developing using version 1.x. There is a later version 2.x. What are some fundamental differences? Would your version work without refactoring were you to upgrade to Play 2?</p>
+<p>No. Version 2.x breaks backward compatibility, is a complete rewrite and uses a different language, Scala. Java is the language of 1.x</p>
+<p>[4] Play uses the Model View Controller (MVC) pattern. Briefly explain the pattern. Why is it used? Is it unique to Play?</p>
+<p>MVC is a widely used pattern. It separates presentation from the domain objects that model the real world. The model is unaware of the view. Presentation of the same model may be performed by different views, for example by a GUI and the command line. The presentation part of the MVC comprises the controller and view. The controller communicates with the view, receiving and manipulating user input data. Optionally it may transmit data to the view resulting from this manipulation.
+Clearly MVC is not unique to Play.
+<a href="http://www.martinfowler.com/eaaDev/uiArchs.html#ModelViewController">Martin Fowler: Model View Controller</a>.</p>
+<p>[5] Each Play application contains a <strong>routes</strong> file. What is its purpose?</p>
+<p>The routes file contains routing instructions for the built-in HTTP router. The router translates an incoming HTTP request to an action call. An action is a public controller method. </p>
+<p>[6] Here is a typical extract from a routes file. Explain.</p>
+<pre><code># Donation page
+GET    /donation        DonationController.index
+POST   /donation/donate DonationController.donate</code></pre>
+<p>In the above code block there are two HTTP requests.</p>
+<p>For example: </p>
+<ul>
+<li><em>/donation DonationController.index</em> is the request path.</li>
+<li>GET and POST are the HTTP methods. In the first example, the request results in the invocation of a method <em>index</em> in the controller class <em>DonationController</em>.</li>
+</ul>
+<p><a href="https://www.playframework.com/documentation/1.4.x/routes">Play Documentation: HTTP Routing</a></p>
+<p>[7] What is the purpose of the <strong>application.conf</strong> file?</p>
+<p>The <em>conf</em> folder contains all configuration files for a Play app. One of these files is <em>application.conf.</em> This is the main configuration file containing standard configuration parameters such as the application name, identification and configuration of the database employed and so on.</p>
+<p><a href="https://www.playframework.com/documentation/1.4.x/configuration">Play Documentation: Configuration parameters</a></p>
+<p>[8] The following Play command is frequently used. What is the purpose of doing so?</p>
+<pre><code>play eclipsify</code></pre>
+<p>This is a command that may be run from a terminal (command line) at the root of a Play application folder. The output from the command is a set of Eclipse configuration files and folders. This allows the app to then be imported into the Eclipse IDE. Among the files generated is <em>.classpath</em>. This establishes an absolute path (specific to the particular host machine) to the various Play library files (jars) required for the project. If the application is opened in a different computer then re-running <em>play eclipsify</em> will adjust the paths appropriately.</p>
+<p>[9] Play uses a templating engine. Explain. Discuss where templating has been used in your project application, for example.</p>
+<p>The Play template engine facilitates dynamic generation of &quot;HTML, JSON or any text-based formatted document&quot;. It uses the Groovy language. Templates are stored in the <em>app/views</em> folder. For example, if we have a controller named Donation.java that has two methods, <em>index</em> and <em>donate</em>, then this will be matched to an <em>app/views/Donation</em> folder in which there will be two template (html) files named <em>index.html</em> and <em>donate.html</em>.</p>
+<p><a href="https://www.playframework.com/documentation/1.4.x/templates">Play Documentation: Template Engine</a></p>
+<p>[10] What is the role of the controller?</p>
+<p>In the Play framework, a controller is a Java class derived from the Play Controller class and located in the <em>controllers</em> package. It provides a layer between the UI and the model and decides what to do with HTTP requests, generally applying changes to the model.</p>
+<p><a href="https://www.playframework.com/documentation/1.4.x/controllers">Play Documentation: Controllers</a>.</p>
+<p>[11] What is the role of the view?</p>
+<p>The view is what the user is presented with. It facilitates interaction with the model (via the controller).</p>
+<p><a href="https://www.playframework.com/documentation/1.4.x/main">Play Documentation: The MVC application model</a></p>
+<p>[12] What is the role of the model?</p>
+<p>The model is the domain-specific representation of the data related to the application. It comprises one or more Java classes, derived from the (Play) Model class.</p>
+<p>[13] Explain @Entity and the parent class Model as used in this code snippet:</p>
+<pre><code>@Entity
+public class Donation extends Model 
+{
+  ...
+}</code></pre>
+<p>Model is a Play support class that helps &quot;to deal with JPA&quot;, the Java Persistence API. JPA is a specification for managing data in the presence of Java objects and a relational database. The implementation of JPA we use with Play is Hibernate.</p>
+<p>Using @Entity as above results in the Donation class being mapped to a table (whose default name is Donation). The fields in Donation (not shown) become the columns in the database.</p>
+<p>[14] Explain the following terms:</p>
+<pre><code>@ManyToOne
+@OneToMany
+@OneToOne</code></pre>
+<p>@ManyToOne annotation defines a many-to-one mapping. An example of this could be found in an Employee class and a Department class. A Department may have many Employees but any one Employee will belong to only one Department. This might be repesented as follows:</p>
+<pre><code>@Entity
+public class Employee {
+  @ManyToOne
+  private Department department;
+  // ...
+}</code></pre>
+<p>The @OneToMany is the converse of @ManyToOne.</p>
+<pre><code>@Entity
+public class Department {
+  @OneToMany(mappedBy=&quot;department&quot;)
+  private List&lt;Employee&gt; employees;
+  // ...
+}</code></pre>
+<p>An example of OneToOne mapping is demonstrated in this snippet:</p>
+<pre><code>@Entity
+public class Employee {
+  @OneToOne
+  ParkingSpace parkingSpace;
+  // ...
+}</code></pre>
+<pre><code>@Entity
+public class ParkingSpace {
+  @OneToOne(mappedBy=&quot;parkingSpace&quot;)
+  Employee employee;
+  // ...
+}</code></pre>
+<p>Reference: Pro JPA 2, Mastering the Java™ Persistence API. By Mike Keith , Merrick Schincariol (Pages 92, 121, 124).</p>
+<h2>JavaScript Language (JS)</h2>
+<p>[1] Who developed the JavaScript language and when was it developed?</p>
+<p>Developed over 10 days in May 1995 by Brendan Eich while working at Netscape (now Mozilla). Originally called Mocha by Marc Andreesen, the founder of Netcape.</p>
+<p>[2] What have Java and JavaScript in common (other than the word Java)?</p>
+<p>These are two completely different languages. Despite the implication of the<em>script</em> suffix, JavaScript is a complete programming language. Both languages share the C-family syntax.</p>
+<p>[3] What is ECMAScript? How does it compare to JavaScript?</p>
+<p>ECMAScript is a language specification controlled by the non-profit standards organization Ecma International, formerly known as the European Computer Manufacturers Association (ECMA). JavaScript is an implementation of the ECMAScript standard. Other implementations are JScript, developed by Microsoft and ActionScript developed by Macromedia.</p>
+<p>[4] What role does JavaScript play in developing client-side code?</p>
+<p>Provides access to main components of web page such as CSS properties, markup content (div, img, p and so on). It facilitates communication to the server using forms.</p>
+<p>[5] What is ES6? What preceded it? Name some new features introduced in ES6.</p>
+<p>ECMAScript 2015 (6th Edition) is the current version of the ECMAScript Language Specification standard and is commonly referred to as <em>ES6</em>.</p>
+<p>Some of the many new features include block scope, arrow functions, constants, spread operator, rest parameters, sets, maps and so on.</p>
+<p>[6] JS now has 6 primitive types. What is a primitive type? List some of the six.</p>
+<p>All types except objects define immutable values, that is values which are incapable of being changed. Values of these types are referred to as primitives. Here are the six: boolean, number, string symbol (introduced in ES6), null and undefined.</p>
+<p><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Data_structures">MDN Primitive values</a></p>
+<p>[7] JS is a loosely typed language. Explain.</p>
+<p>Loose typing means a variable is declared without specifying its type. It does not mean that the variable does not have a type. For example <em>let s = &quot;This is a string&quot;;</em> defines a string variable and <em>let n = 10;</em> declares a number variable. In neither case is the type explicity stated, this being determined at run time. This approach contrasts to strong typing where the compiler checks as much as possible before the program gets deployed.</p>
+<p>A consequence of loose typing is that any variable may receive any kind of value. This then means that any function parameter can receive any kind of value and return any kind of value.</p>
+<p>[8] Discuss any behavioural differences between the types <em>var</em>, <em>const</em> and <em>let</em>.</p>
+<p>Both const and let are block-scoped whereas var is function scoped. Of the three, only var may be hoisted.</p>
+<p>&quot;The const declaration creates a read-only reference to a value. It does not mean the value it holds is immutable, just that the variable identifier cannot be reassigned.&quot; For example:</p>
+<pre><code>const intArray = [1, 2, 3];
+intArray[0] = 4; // legal
+console.log(intArray[0]);
+
+intArray = [4, 5, 6]; // illegal: attempt to reassign intArray</code></pre>
+<p><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/const">MDN const</a></p>
+<p>[9] Java has several number types, for example, <em>int</em>, <em>long</em>, <em>float</em> and so on. How many number types does JS have? </p>
+<p>Just one, Number.</p>
+<p>[10] Discuss the strengths and weaknessess of the JS number types.</p>
+<p>Having just one number provides significant advantage over, for example, Java with its many number types where choosing a number type that is appropriate when the program is written may prove inadequate much later and generate error. For example, int type may be okay for years but prove too restrictive as data structures incrcease in size and cause overflow errors.</p>
+<p>Unfortunately the JavaScript Number type is a float type and therefore unsuitable for industries such as banking and finance where 2 + 2 is expected to equal 4, a result not achievable with floating point types.</p>
+<p>[11] What is the difference between <em>null</em> and <em>undefined</em>?</p>
+<p><code>undefined</code> is the default value for variables. If you declare a variable but do not give it an initialization value then it will be undefined. Also, all functions return a value. If a value is not specified then undefined is the returned value.</p>
+<p><code>null</code> &quot;represents the intentional absence of any object value.&quot; <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/null">MDN null</a>.</p>
+<pre><code>Difference between null and undefined
+-------------------------------------
+typeof null        // object (bug in ECMAScript, should be null)
+typeof undefined   // undefined
+null === undefined // false
+null  == undefined // true</code></pre>
+<p>[12] ES6 introduced the <em>Symbol</em> type. What is it and what is its purpose?</p>
+<p>&quot;A symbol is a unique and immutable data type and may be used as an identifier for object properties. The Symbol object is an implicit object wrapper for the symbol primitive data type.&quot; <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol">MDN Symbol</a>.</p>
+<p>[13] What is a JS object?</p>
+<p>&quot;An object is a collection of properties, and a property is an association between a name (or key) and a value&quot;.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">MDN: Working with object</a></p>
+<p>[14] What is an object literal?</p>
+<p>A JavaScript object literal is a comma-separated list of name-value pairs wrapped in curly braces. It is the recommended method to create an object.</p>
+<p>Example:</p>
+<pre><code>let anObject = {
+  firstName: &#39;Homer&#39;,
+  lastName: &#39;Simpson&#39;,
+};</code></pre>
+<p>An array literal also exists:</p>
+<pre><code>const fruits = [&quot;Apple&quot;, &quot;Banana&quot;];
+
+console.log(fruits[1]); // Banana</code></pre>
+<p>[15] How do JS objects and arrays differ? When would one use an object, when an array?</p>
+<p>Objects comprise name-value pairs, the name being the key.</p>
+<p>An array is a single object that contains multiple values stored as a list. Each array element is accessed using an index number. For example, <code>fruits[1]</code> in an earlier question.</p>
+<p>Thus, you use arrays when you have numerically indexed data.</p>
+<p>[16] Discuss the use of semi-colons in JS.</p>
+<p>The use of semi-colons is optional but recommended and in the case of some style guides such as <em>AirBnB</em>, obligatory. Some surprising errors may result if semi-colons are omitted.</p>
+<p>[17] Discuss the differences, if any, between the uses of the equality operators in the following code:</p>
+<pre><code>String s1 = &#39;Hello world&#39;;
+String s2 = &#39;Hello world&#39;;
+let b1 = s1 == s2;
+let b2 = s1 === s2;</code></pre>
+<p><code>===</code> is known as strict comparison operator.</p>
+<p><code>==</code> known as type-converting comparison operator.</p>
+<p>When the strict comparison operator (===) is used, the result is true only if the operands are of the same type and the contents match.</p>
+<p>When the type-converting operator (==) is used the operands are converted if they are not of the same type and then strict comparison is applied. Examples:</p>
+<pre><code>1 == 1; // true
+&#39;1&#39; == 1; // true - type conversion
+
+1 === 1; // true
+&#39;1&#39; === 1; // false - operands not of same type</code></pre>
+<p><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">MDN Comparison operators</a></p>
+<p>[18] Explain the terms <em>truthy</em> and <em>falsy</em>.</p>
+<p>All expressions are either truthy or falsy.</p>
+<p>An expression is falsy if it is any of the following:</p>
+<pre><code>false
+undefined
+null
+0
+NaN
+&quot;&quot; (the empty string)</code></pre>
+<p>[19] Explain how the use of the &amp;&amp; and || operators differ in JS compared to in Java.</p>
+<p>Consider two variables <code>a</code> and <code>b</code> and a variable <code>c</code>, the result of applying the above operators. Then in Java:</p>
+<pre><code>c = a &amp;&amp; b is true if both a and b are true
+c = a || b is true if either a or b is true</code></pre>
+<p>In JavaScript the behaviour is quite different:</p>
+<pre><code>a &amp;&amp; b is a if a is falsy otherwise it is b
+a || b is a if a is truthy otherwise it is b</code></pre>
+<p><code>&amp;&amp;</code> is known as guard operator. Here is an example:</p>
+<pre><code>// Use &amp;&amp; as guard operator
+const flight = {};
+const airline = &quot;BA&quot;;
+const nationality = &quot;UK&quot;;
+// Use of guard operator prevents TypeError exception
+console.log(flight.airline &amp;&amp; flight.airline.nationality); // &gt; undefined
+console.log(flight.airline.nationality); // TypeError exception (no guard operator)</code></pre>
+<p><code>||</code> may be used to insert default values. Here is an example:</p>
+<pre><code>// Use OR to insert default values
+const person = {};
+let name = person.name || &#39;No such person&#39;;
+console.log(name); // &gt; No such person
+
+person.name = &#39;Jane Doe&#39;;
+name = person.name || &#39;No such person&#39;;
+console.log(name); // &gt; Jane Doe</code></pre>
+<p>[20] How is control flow achieved in JS?</p>
+<p>Very similar to in Java using logical operators, if, while, do-while, for, forEach, break and continue.</p>
+<p>[21] Where may one place JS code in a web app? Discuss the implications of where such code is located?</p>
+<p>Script code may be placed within the HTML or in an external file referenced something like the following were the script element is placed, preferrably, at bottom of the body section:</p>
+<pre><code>&lt;script src=&quot;javaScriptFile.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Externally located script code is the preferred option.</p>
+<p>[22] How might one simultaneously debug both client JS and Play server Java code?</p>
+<p>The Play server code could be debugged within the Eclipse IDE. Simultaneously, the client code could be debugged using, for example, Chrome or Mozilla developer tools.</p>
+<p>[23] Explain the terms <em>function</em> and <em>method</em>. </p>
+<p>A function is a block of code defined once and invokable many times. Such a block of code located witin an object is referred to as a method.</p>
+<p>Functions have four parts: the reserved word <code>function</code>, a name (optional), zero or more parameters and a block of statements with an optional return statement, contained within curly braces.</p>
+<p>[24] What is an anonymous JS function?</p>
+<p>An anonymous function is a function without a name, for example:</p>
+<pre><code>function () {}</code></pre>
+<p>Contrast to a named function:</p>
+<pre><code>const x = function () {}</code></pre>
+<p>Expand this in Chrome developer tools watch window and observe the <code>name: &quot;x&quot;</code> property. In an anonymous property the value of this property would be the empty string.</p>
+<pre><code>x: function()
+arguments: null
+caller: null
+length: 0
+name: &quot;x&quot;</code></pre>
+<p><a href="https://developer.mozilla.org/en-US/docs/Glossary/Function">MDN: Function</a></p>
+<p>[25] Discuss some of the implications in using <em>strict</em> mode.</p>
+<p>Introduced in ES5, <code>strict mode</code> is a means of opting in to a restricted variant of JS. For strict mode to operate as designed a browser needs to support it. Some of the changes strict mode causes are:</p>
+<ul>
+<li>eliminates some JS silent errors,</li>
+<li>makes it impossible to accidentally create global variables by, for example, omitting var, let or const keywords when first declaring a variable.</li>
+</ul>
+<p>Examples:</p>
+<pre><code>// Assignment to a getter-only property
+var obj2 = { get x() { return 17; } };
+obj2.x = 5;  
+console.log(obj2.x); // &gt; 17</code></pre>
+<pre><code>&#39;use strict&#39;;
+// Assignment to a getter-only property
+var obj2 = { get x() { return 17; } };
+obj2.x = 5; // throws a TypeError
+console.log(obj2.x); // &gt; Uncaught TypeError: Cannot set property x of #&lt;Object&gt; which has only a getter</code></pre>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">MDN: Strict mode</a></p>
+<p>[26] What is the <em>arrow</em> function? How does the behaviour of the <em>this</em> object or reference change when using an <em>arrow</em> function?</p>
+<p>An arrow function is a more concise syntax compared to function expressions. For example:</p>
+<pre><code>function x() {
+  function inner() {
+    let x = this;
+  }
+}</code></pre>
+<p>becomes:</p>
+<pre><code>() =&gt; {
+  function inner() {
+    let x = this;
+  }
+}</code></pre>
+<p>An arrow function is always anonymous. </p>
+<p>Importantly, <code>this</code> binding is different. </p>
+<pre><code>&#39;use strict&#39;;
+
+let myObj = {
+  x: 0,
+  set: function (x) {
+    let _this = this; // workaround ...
+    modify(x);
+    function modify(val) {
+      _this.x = x; // ... to access myObj this
+    };
+  },
+};
+myObj.set(100); // sets myObj.x to 100</code></pre>
+<pre><code>//this now bound to containing object myObj
+&#39;use strict&#39;;
+let myObj = {
+  x: 0,
+  set: function (x) {
+    let modify = (val) =&gt; { // nested function
+      this.x = val; // this now bound to myObj
+      console.log(this); // Object{x: 0}
+    };
+
+    modify(x);
+  },
+};
+console.log(myObj); // Object { x: 100, set: myObj.set() }
+myObj.set(100); // myObj.x set to 100
+console.log(myObj.x); // 100</code></pre>
+<p>[28] A JS function is sometimes referred to as a <em>first class object</em>. Explain. In what way, if any, does it differ from a regular JS object?</p>
+<p>A JS function may be invoked - other JS object may not.</p>
+<p>[29] jQuery: what is it? Why use it? </p>
+<p><code>jQuery</code> is a JavaScript library. It facilitates HTML document traversal and manipulation, event handling, animation, Ajax and so on. Importantly it hides brower differences and incompatibilites from the user. It is widely used and supported by all major browsers.</p>
+<p>[30] Explain: 
+  - <strong>The</strong> jQuery function, 
+  - A jQuery function, 
+  - A jQuery method, 
+  - A jQuery object.</p>
+<ul>
+<li><code>The jQuery function</code>: jQuery() or frequently using the alias $(). This is a single global function.</li>
+<li>A <code>jQuery</code> function is a function defined withing $().</li>
+<li>A <code>jQuery</code> method is a method bound to a jQuery object.</li>
+<li>A <code>jQuery</code> object is an object returned by $().</li>
+</ul>
+<p>[31] In the context of a JS file, what do the terms minification and obfuscation mean and why might these processes be used?</p>
+<p>Minification, sometimes referred to as minimisation, is the process of removing all non-essential characters from the source code and thus result in faster download times.</p>
+<p>Obfuscation is the process of modifying source code without altering its functionality so that it becomes difficult to read. Some reasons for obfuscation of code are secrecy and prevention of tampering.</p>
+<p>[32] What are the options available and steps involved to introduce jQuery into an application? </p>
+<p>A file containing the jQuery code, optionally minimised, may be included with the applications source and referenced from within the html.</p>
+<p>Alternative it may be referenced from a content deliver network (cdn).</p>
+<p><a href="http://www.webopedia.com/TERM/C/CDN.html">What is a CDN</a></p>
+<p>[33] JS is referred to as a prototypal language. Explain. Compare to Java.</p>
+<p>Java is a classical language: Classes are a fundamental feature. Classes inherit from classes. JavaScript does not have classes. It is an object oriented language that inherits directly from other JS objects. It is true that ES6 introduces the concept of classes but this is merely what is referred to as syntactic sugar.</p>
+<p>[34] What does the term <strong>scope</strong> mean? How do scopes differ in the JS and Java languages?</p>
+<p>Scope is the current context of execution in which values and expressions may be validly referenced. In simple terms, a variable is in scope at a particular point in the execution cycle if it is visible, that is accessible. </p>
+<p>Java has block scope. JavaScript has both global, block and function scope. Block scope was introduced in ES6.</p>
+<p>[35] Explain and discuss in the context of JS the terms <strong>global</strong> scope, <strong>function</strong> scope and <strong>block</strong> scope.</p>
+<p>A variable that has global scope is visible throughout the entire program. </p>
+<p>A variable that has function scope is visible throughtout the function within which it is declared irrespective of where in the function its declaration takes place. </p>
+<pre><code>// Example function scope
+&#39;use strict&#39;;
+
+let myObj = {
+  set: function (val) {
+    modify(val);
+    function modify(v) {
+      x = v; // legal because x has function scope
+      console.log(x);
+    }
+
+    var x;
+  },
+};
+myObj.set(100);</code></pre>
+<p>A variable has block scope if it is visible only inside the pair of curly braces within which it is declared.</p>
+<pre><code>
+// Example block scope
+&#39;use strict&#39;;
+
+function x() {
+  {
+    let b = 20; // b is visible only within its enclosing { }
+  }
+
+  console.log(b); // Uncaught ReferenceError: b is not defined
+}
+
+x();</code></pre>
+<p>[36] What is an immediately invoked function expression (IIFE)? When might one use an IIFE?</p>
+<p>Sometimes referred to as a self-executing anonymous function. Here are examples of an IIFE and a standard JS function.</p>
+<pre><code>&#39;use strict&#39;;
+
+// IIFE
+(function () {
+  let c = 20;
+  console.log(c); // &gt; 20
+}());
+
+// JS function expression
+function x() {
+  let b = 10;
+  console.log(b); // &gt; 10
+}
+
+x(); // function invocation</code></pre>
+<p>[37] Describe some techiques to avoid polluting the global scope (namespace)?</p>
+<ul>
+<li>Use strict mode.</li>
+<li>Use an IIFE.</li>
+<li>export and import statements (not yet natively implemented in browers).</li>
+</ul>
+<p>[38] Explain Temporal Dead Zone (TDZ).</p>
+<p>In ECMAScript 2015, let will hoist the variable to the top of the block. However, referencing the variable in the block before the variable declaration results in a ReferenceError. The variable is in a &quot;temporal dead zone&quot; from the start of the block until the declaration is processed.</p>
+<pre><code>function do_something() {
+  console.log(foo); // ReferenceError
+  let foo = 2;
+}</code></pre>
+<p><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/let">MDN: Temporal dead zone and errors with let</a></p>
+<p>[39] Explain what is meant by a closure. Describe an example where use of a closure would be advantageous.</p>
+<p>&quot;Closures are functions that refer to independent (free) variables (variables that are used locally, but defined in an enclosing scope). In other words, these functions &#39;remember&#39; the environment in which they were created.&quot;</p>
+<p>In the example below, the functions add5 and add10 are closures.</p>
+<pre><code>
+function makeAdder(x) {
+  return function(y) {
+    return x + y;
+  };
+}
+
+var add5 = makeAdder(5);
+var add10 = makeAdder(10);
+
+console.log(add5(2));  // 7
+console.log(add10(2)); // 12</code></pre>
+<p>Closures are particularly useful in web programming where much of the code is event driven. We have seen several examples in the JS slide decks and encountered applications of closures in the Google maps code, for example where we click on markers to reveal info windows.</p>
+<p><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Closures">MDN: Closures</a></p>
+<p>[40] Explain what is meant by Ajax (Asynchronous Java + XML). Why might one use it?</p>
+<p>Using Ajax allows discrete changes to be made to a web page without incurring a full page reload. This is both quicker and easier on the eye.</p>
+<p>This is what W3Schools has to say about Ajax:</p>
+<p><em>AJAX is a developer&#39;s dream, because you can:</em></p>
+<ul>
+<li><em>Update a web page without reloading the page</em></li>
+<li><em>Request data from a server - after the page has loaded</em></li>
+<li><em>Receive data from a server - after the page has loaded</em></li>
+<li><em>Send data to a server - in the background</em></li>
+</ul>
+<p><a href="https://developer.mozilla.org/en/docs/AJAX">MDN: Asynchronous JavaScript + XML (Ajax)</a></p>
+<p><a href="https://www.youtube.com/watch?v=v2ifWcnQs6M">Douglas Crockford: The JavaScript Programming Language</a>.</p>
+<h2>Git Versioning System</h2>
+<p>[1] Git is a distributed versioning system (DVCS). How does this compare to centralized version control systems (CVCS)?</p>
+<p>Declaration of interest: I am biased in favour of DVCS, specifically Git.</p>
+<p>In a centralized version control system there exists a central single copy of the project, usually on a server accessible by the development team. Some of the disadvantages are:</p>
+<ul>
+<li>single point of failure: if the server goes down the development team may be seriously disrupted.</li>
+<li>remote commits are slow.</li>
+<li>unsolicited changes may break your build. </li>
+<li>merging is not simple.</li>
+</ul>
+<p>Some common centralized version control systems are CVS, Subversion (or SVN) and Perforce.</p>
+<p>In a DVCS each developer has a full copy of the repository that includes the full hisory of the project. Generally, but not necessarily, there will be a central copy of the repository. This might be hosted on a private server or on proprietary server, for example as provided by Bitbucket or Github.</p>
+<ul>
+<li>the single point of failure weakness of CVCS is avoided.</li>
+<li>the number of remote commits to the central copy can be minimised.</li>
+<li>the developer controls when to accept other developers&#39; code changes.</li>
+<li>merging is simple.</li>
+</ul>
+<p>A disadvantage is that DVCS is a complex application with a steep learning curve.</p>
+<p>The most common DVCS are Git, Mercurial and Bazaar.</p>
+<p>[2] Describe in broad terms how to put an existing application under Git version control.</p>
+<ul>
+<li>Change into the project folder in a terminal.</li>
+<li>Create a .gitignore file to control what content to exclude from the repository (repo).</li>
+<li>Initialize an empty repo.</li>
+<li>Add the files to the repo&#39;s index.</li>
+<li>Commit the files.</li>
+<li>Push to a remote copy (optional).</li>
+</ul>
+<p>[3] Would you put all files in a project under Git control? If not, why not? How would you decide which files to exclude and how would you achieve this?</p>
+<p>Use a .gitignore to specify which files within the project should be excluded from the repo.
+Only those files that are essential to build the project are committed. All temporary files, binary files, user-specific project and configuration files and so on are excluded. </p>
+<p>[4] What do you hope would happen were you to run this command?</p>
+<pre><code>git push origin master</code></pre>
+<p>Pushes a current snapshot of the master branch to the remote repository.</p>
+<p>[5] What do you hope would happen were you to run this command?</p>
+<pre><code>git pull origin master</code></pre>
+<p>Refresh the local working directory (tree) by fetching the latest snapshot from the remote repository and fast forward merging it with the local working tree.</p>
+<p>[6] What is the index?</p>
+<p>The staging area or cache in which files are placed before committing to the repository. For example, <em>git add .</em> adds all new and modified material to the index.</p>
+<p>[7] What does the <em>commit</em> command achieve?</p>
+<p>Creates and saves a snapshot of the latest state of the working tree in the repository.</p>
+<p>[8] What are the consequences for your working folder and its contents when, while on the master branch, you run a command such as the following. What might <em>dev</em> refer to?</p>
+<pre><code>git checkout dev</code></pre>
+<p><code>dev</code> could be either a tag name or a branch name. It either event, running the command will checkout the repository at that tag or branch. If <em>dev</em> is a tag then the result would be a detached head.</p>
+<p>[9] How many object types in Git, list them and briefly explain?</p>
+<p>Git has four objects, Tree, Blob, Commit and Tag.</p>
+<ul>
+<li>Tree: equivalent to file or folder</li>
+<li>Blob: stores data. Corresponds to file contents. May include folders and subfolders.</li>
+<li>Commit: describes the commit</li>
+<li>Tag (light &amp; annotated): describes the tag. A lightweight tag is a pointer to a specific commit. An annotated tag is stored as a full object and contains information such as the tagger name, email, tag date and so on.</li>
+</ul>
+<p>[10] What is SHA-1, a SHA-1 hash and what role do they play in Git? </p>
+<p>SHA-1 (Secure Hash Algorithm 1) is a cryptographic hash function designed by the United States National Security Agency (NSA). It produces a 160-bit (20-byte, 40-character) hash value known as a message digest. In Git this digest is used as a key in the Git object key-value pair.</p>
+<p>[11]. The merge and rebase commands may be used, for example, to move a development branch to the master branch. Which command should one use and why?</p>
+<p>Merging is non-destructive and so is a safe operation. However, other developers may find it difficult to understand the history of the project.</p>
+<p>Rebasing provides for a clean, linear history but should not be applied to a public branch. That is, if anybody else is looking at the branch being considered for rebasing then don&#39;t rebase.</p>
+<p><a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing/">Atlassian: Merging vs Rebasing</a></p>
+<p><a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing/conceptual-overview/#the-golden-rule-of-rebasing">Atlassian: The Golden Rule of Rebasing</a></p>
+<p>[12] How might one revise the commit history of a project, for example in reducing the number of commit messages or changing the message content of a message or messages? What is good practice in doing so?</p>
+<p>Use the interactive rebase command and squash the surplus commits. Example:</p>
+<pre><code>
+rebase -i HEAD~3</code></pre>
+<p>This will facilitate compressing the last three commits into one.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

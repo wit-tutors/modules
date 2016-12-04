@@ -1,0 +1,574 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder">  Web Dev  Studio</h2>
+    <p> All Slides in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    John Fitzgerald.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic01/talk-1/basic_git.pdf">
+      Git version control
+    </a>
+    
+    <a class="item" href="topic01/talk-2/donation-app.pdf">
+      Donation prototype
+    </a>
+    
+    <a class="item" href="topic02/talk-1/javascript_1.pdf">
+      JavaScript I
+    </a>
+    
+    <a class="item" href="topic02/talk-2/javascript_2.pdf">
+      JavaScript II
+    </a>
+    
+    <a class="item" href="topic02/talk-3/play_eclipse_debug.pdf">
+      Debugging
+    </a>
+    
+    <a class="item" href="topic03/talk-1/javascript_3a.pdf">
+      JavaScript IIIa
+    </a>
+    
+    <a class="item" href="topic03/talk-2/javascript_3b.pdf">
+      JavaScript IIIb
+    </a>
+    
+    <a class="item" href="topic03/talk-3/javascript_3c.pdf">
+      JavaScript IIIc
+    </a>
+    
+    <a class="item" href="topic03/talk-4/javascript_3d.pdf">
+      JavaScript IIId
+    </a>
+    
+    <a class="item" href="topic03/talk-5/myrent.pdf">
+      MyRent prototype
+    </a>
+    
+    <a class="item" href="topic03/talk-6/languages-2.pdf">
+      Languages
+    </a>
+    
+    <a class="item" href="topic04/talk-1/javascript_4a.pdf">
+      Javascript IVa
+    </a>
+    
+    <a class="item" href="topic04/talk-2/javascript_4b.pdf">
+      Javascript IVb
+    </a>
+    
+    <a class="item" href="topic04/talk-3/javascript_4c.pdf">
+      Javascript IVc
+    </a>
+    
+    <a class="item" href="topic04/talk-4/map-overlays.pdf">
+      JavaScript V
+    </a>
+    
+    <a class="item" href="topic04/talk-5/polygon-overlay.pdf">
+      JavaScript VI
+    </a>
+    
+    <a class="item" href="topic05/talk-1/advanced_git.pdf">
+      02 Git 
+    </a>
+    
+    <a class="item" href="topic06-project/talk-1/ict-skills-2016-assignment.pdf">
+      Project (Specification)
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic01/talk-1/basic_git.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Git version control </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01/talk-1/basic_git.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>git</strong>: A source code control application that allows a development team to construct a fine grained history of a project.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01/talk-2/donation-app.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Donation prototype </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01/talk-2/donation-app.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Donation</strong>: a dynamic web app that allows an authenticated user to make donations.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02/talk-1/javascript_1.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> JavaScript I </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02/talk-1/javascript_1.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>JavaScript</strong>, an introduction to the language of the web. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02/talk-2/javascript_2.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> JavaScript II </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02/talk-2/javascript_2.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Continuing introduction to the language including the topics of identifiers, operators and contol flow techniques.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02/talk-3/play_eclipse_debug.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Debugging </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02/talk-3/play_eclipse_debug.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>How to debug server-side Play app within Eclipse</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-1/javascript_3a.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> JavaScript IIIa </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-1/javascript_3a.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Simple JavaScript client-side applications. Introducing Chrome Developer tools.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-2/javascript_3b.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> JavaScript IIIb </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-2/javascript_3b.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Exploring some of the expressive features of the language, such as functions as first class objects. Brief encounter with some of the newly introduced functionaliy as part of ECMAScript 2015 (ES6).</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-3/javascript_3c.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> JavaScript IIIc </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-3/javascript_3c.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>jQuery: although not as popular as it once may have been, rumours of its death have likely been greatly exaggerated. Undoubtedly losing ground to modern frameworks. it will still probably be in widespread use for quite some time yet.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-4/javascript_3d.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> JavaScript IIId </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-4/javascript_3d.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The DOM: Javascript manipulates the contents of the web page through a standard abstraction called the Document Object Model (DOM), hence the reason for this brief introduction.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-5/myrent.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> MyRent prototype </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-5/myrent.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A presentation outlining the structure of the MyRent prototype web app</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/talk-6/languages-2.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Languages </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/talk-6/languages-2.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>When McCarthy designed Lisp in the late 1950s, it was a radical departure from existing languages, the most important of which was Fortran...</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/talk-1/javascript_4a.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Javascript IVa </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/talk-1/javascript_4a.jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Brief discussion on arrays and global variables.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/talk-2/javascript_4b.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Javascript IVb </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/talk-2/javascript_4b.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Examining closure and scope</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/talk-3/javascript_4c.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Javascript IVc </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/talk-3/javascript_4c.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Concluding our introduction to JavaScript with a brief discussion about Ajax.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/talk-4/map-overlays.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> JavaScript V </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/talk-4/map-overlays.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Google map</strong>: Apply our knowledge of JavaScript to add marker and circle map overlays to a Google Map.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/talk-5/polygon-overlay.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> JavaScript VI </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/talk-5/polygon-overlay.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Google map</strong>: Use JavaScript to fence a set of markers on a Google map with a user-defined polygon overlay, filtering out markers that fall outside the polygon.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/talk-1/advanced_git.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> 02 Git  </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/talk-1/advanced_git.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Git</strong>: This second lab in the series describes how two users might collaborate to use Git to manage a project. Features explored include merging, rebasing and reorganising commit history.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-project/talk-1/ict-skills-2016-assignment.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Project (Specification) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-project/talk-1/ict-skills-2016-assignment.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Assignment</strong>: ICTSkills Studio (Summer School) project brief. The assignment comprises the addition of features in the form of stories to the MyRent web app developed to base level during the studio labs. Additionally, the use of Git to manage and track the project comprises a significant portion of the assignment.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

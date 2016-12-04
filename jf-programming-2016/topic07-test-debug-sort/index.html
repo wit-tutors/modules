@@ -1,0 +1,282 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+  <header class="ui middle aligned center aligned stackable grid segment">
+
+    <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+    <div class="seven wide center aligned column">
+      <h2> 6: Testing, Debugging, Searching & Sorting </h2>
+      <p> Single Topic </p>
+    </div>
+
+    
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="../index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+    
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    John Fitzgerald.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+    
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="../talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="../labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <div class="header">
+      <a class="item" href="#">
+        6: Testing, Debugging, Searching & Sorting
+      </a>
+    </div>
+    <div class="menu">
+      
+        <a class="item" href="talk-a/lecture_11.pdf">
+          Testing
+        </a>
+      
+        <a class="item" href="talk-b/lecture_12.pdf">
+          Algorithmic complexity
+        </a>
+      
+        <a class="item" href="book-a/index.html">
+          Testing-&-Debugging
+        </a>
+      
+        <a class="item" href="book-b/index.html">
+          Testing-&-Debugging-(contd.)
+        </a>
+      
+        <a class="item" href="book-c/index.html">
+          Sorting-searching
+        </a>
+      
+    </div>
+  </div>
+
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="talk-a/lecture_11.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Testing </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="talk-a/lecture_11.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Exhaustive testing of software is not feasible because the number of such tests is so great as to be impossible to perform within a reasonable time. What is possible, however, is the progressive construction of a suite of unit tests as the project progresses accompanied by test harness that allows this suite to be exercised on a regular basis and whenever changes take place to the code base or additional tests are added.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="talk-b/lecture_12.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Algorithmic complexity </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="talk-b/lecture_12.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We discuss algorithmic complexity and how it is measured. We examine the performance differences between linear and binary search methods. Some indicative running times for different sort algorithms are presented to highlight the importance of choosing the correct implementation of a particular algorithm in the course of development.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="book-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Testing-&-Debugging </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="book-a/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We explore the BlueJ <em>diary-prototype</em> project as a prelude to unit and regression testing.In introducing unit tests we examine the role and experiment with both positive and negative tests.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="book-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Testing-&-Debugging-(contd.) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="book-b/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We implement some simple unit tests. We first test manually and progress to semi-automated tests. Then we introduce test automation by showing how batches of unit tests can be run automatically. The BlueJ Debugger is used to locate any errors discovered during testing. A helpful feature of the BlueJ framework is exercised to record and replay a suite of tests.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="book-c/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Sorting-searching </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="book-c/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Explore two contrasting sort algorithms, the inefficient Selection sort and a significantly faster Merge sort. Use Binary search to locate a specific element in a sorted array. Explore the performance of these algorithms. The results may surprise you.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+
+      </div>
+    </div>
+   </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

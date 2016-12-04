@@ -1,0 +1,551 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder">  Programming Fundamentals (Java)</h2>
+    <p> All Slides in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    John Fitzgerald.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic01-classes-objects/talk-a/lecture_01.pdf">
+      Overview
+    </a>
+    
+    <a class="item" href="topic01-classes-objects/talk-b/lecture_02.pdf">
+      Classes and objects
+    </a>
+    
+    <a class="item" href="topic02-ticket-machine/talk-a/lecture_03.pdf">
+      Understanding class definitions
+    </a>
+    
+    <a class="item" href="topic02-ticket-machine/talk-b/lecture_04.pdf">
+      Ticket machine
+    </a>
+    
+    <a class="item" href="topic03-abstraction-modularization/talk-a/lecture_05.pdf">
+      Abstraction & modularization
+    </a>
+    
+    <a class="item" href="topic03-abstraction-modularization/talk-b/lecture_06.pdf">
+      Abstraction & modularization
+    </a>
+    
+    <a class="item" href="topic04-generics-control-flow/talk-a/lecture_07.pdf">
+      Collections classes and control flow
+    </a>
+    
+    <a class="item" href="topic04-generics-control-flow/talk-b/lecture_08.pdf">
+      String class and primitive char type
+    </a>
+    
+    <a class="item" href="topic06-collections/talk-a/lecture_09.pdf">
+      More sophisticated behaviour
+    </a>
+    
+    <a class="item" href="topic06-collections/talk-b/lecture_10.pdf">
+      Working with characters
+    </a>
+    
+    <a class="item" href="topic07-test-debug-sort/talk-a/lecture_11.pdf">
+      Testing
+    </a>
+    
+    <a class="item" href="topic07-test-debug-sort/talk-b/lecture_12.pdf">
+      Algorithmic complexity
+    </a>
+    
+    <a class="item" href="topic08-spacebook/talk-a/lecture_13.pdf">
+      Spacebook
+    </a>
+    
+    <a class="item" href="topic08-spacebook/talk-b/lecture_14.pdf">
+      Program style
+    </a>
+    
+    <a class="item" href="topic10-interfaces/talk-a/lecture_15.pdf">
+      Java Interface Type
+    </a>
+    
+    <a class="item" href="topic11-inheritance/talk-a/lecture_16.pdf">
+      Inheritance
+    </a>
+    
+    <a class="item" href="topic11-inheritance/talk-b/lecture_17.pdf">
+      Exceptions
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic01-classes-objects/talk-a/lecture_01.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Overview </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01-classes-objects/talk-a/lecture_01.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Brief overview of course content with an introduction to BlueJ (IDE) and a preliminary discussion of classes and objects.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01-classes-objects/talk-b/lecture_02.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Classes and objects </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01-classes-objects/talk-b/lecture_02.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We continue exploration of classes and objects and introduce methods, parameters data types and access modifiers.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-ticket-machine/talk-a/lecture_03.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Understanding class definitions </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-ticket-machine/talk-a/lecture_03.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this presentation we continue exploring elements of classes and the Java language including how source code is written and presented.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02-ticket-machine/talk-b/lecture_04.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Ticket machine </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02-ticket-machine/talk-b/lecture_04.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We examine some of the components of the ticket machine program.  We look at some further elements of the Java language such as <em>local variables</em> and <em>scope</em>. We also introduce <em>conditional statements</em>, which offer choices between different actions as the program executes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-abstraction-modularization/talk-a/lecture_05.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Abstraction & modularization </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-abstraction-modularization/talk-a/lecture_05.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Abstraction means ignoring details for the moment and concentrating on the problem at a higher level. Modularization comprises subdividing the problem into manageable parts each of which interacts in well-defined ways into the overall project.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03-abstraction-modularization/talk-b/lecture_06.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Abstraction & modularization </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03-abstraction-modularization/talk-b/lecture_06.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Here we use the BlueJ clock to demonstate use of modularization. We develop a NumberDisplay class and adapt it for dual use, both to display hours and minutes.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-generics-control-flow/talk-a/lecture_07.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Collections classes and control flow </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-generics-control-flow/talk-a/lecture_07.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We now introduce collection classes and control flow techniques to traverse such collections. Specifically we examine the ArrayList class and how to use the class to manage and manipulate data.ArrayList objects may store user-specified data types which are designated as parameters when the ArrayList variable is declared. ArrayList is an example of what is referred to as a <em>generic</em> class.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04-generics-control-flow/talk-b/lecture_08.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> String class and primitive char type </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04-generics-control-flow/talk-b/lecture_08.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We explore the relationship between the String class and the Java primitive type <em>char</em> and observe that a String object is equivalent to an array of <em>char</em>s.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-collections/talk-a/lecture_09.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> More sophisticated behaviour </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-collections/talk-a/lecture_09.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We discuss the application programming interface (API) of a class. We examine how random data may be generated. We revisit collections and examine the HashMap and HashSet generic classes.  We introduce a range of topics that includes two-dimensional arrays of primitive types, anonymous objects, chaining and control flow using the <em>switch</em>, <em>break</em> and <em>continue</em> statements. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-collections/talk-b/lecture_10.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Working with characters </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-collections/talk-b/lecture_10.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We obtain further practice in character manipulation by developing and exploring simple ciphers such as Caesar and Vigenere.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-test-debug-sort/talk-a/lecture_11.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Testing </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-test-debug-sort/talk-a/lecture_11.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Exhaustive testing of software is not feasible because the number of such tests is so great as to be impossible to perform within a reasonable time. What is possible, however, is the progressive construction of a suite of unit tests as the project progresses accompanied by test harness that allows this suite to be exercised on a regular basis and whenever changes take place to the code base or additional tests are added.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic07-test-debug-sort/talk-b/lecture_12.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Algorithmic complexity </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic07-test-debug-sort/talk-b/lecture_12.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We discuss algorithmic complexity and how it is measured. We examine the performance differences between linear and binary search methods. Some indicative running times for different sort algorithms are presented to highlight the importance of choosing the correct implementation of a particular algorithm in the course of development.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08-spacebook/talk-a/lecture_13.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Spacebook </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08-spacebook/talk-a/lecture_13.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We examine the rules that apply to designing a class and apply those rules to develop an application named <em>Spacebook</em>. Concepts such as cohesion and coupling in the relationship between classes are briefly discussed. We explain the approach that is adopted in the labs to develop the application as a series of iterations and examine the content of each iteration.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic08-spacebook/talk-b/lecture_14.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Program style </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic08-spacebook/talk-b/lecture_14.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Code without style may compile, run and indeed produce correct results. But code written without complying with a community-agreed style proves not only difficult to write but even more difficult to maintain. Here we present an initial approach to styling code based mostly on the rules laid out in the Google Java Style document.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic10-interfaces/talk-a/lecture_15.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Java Interface Type </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic10-interfaces/talk-a/lecture_15.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>In this presentation we show how to use the Java interface type to unify common behaviour. In doing so we are demonstrating a concept known as polymorphism, a pattern in object oriented programming in which classes have different functionality while sharing a common interface.We have already gained experience in using sorting algorithms but found it necessary to rewrite the algorithm when we wished to sort a new type. We show how, by using interfaces, we may write such an algoritm only once yet use it to sort a variety of types of our choosing.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-inheritance/talk-a/lecture_16.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Inheritance </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-inheritance/talk-a/lecture_16.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A class may inherit from another class and in doing so gain access to much of its behaviour and data.  The inherited or derived class, in addition to having access to its parent, may specialize by adding its own methods and data or customizing selected methods of its parent.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic11-inheritance/talk-b/lecture_17.pdf">
+    <div class="content">
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Exceptions </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic11-inheritance/talk-b/lecture_17.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>An exception is a disruptive event that may occur during the execution of a program and if not anticipated and dealt with may result in the program producing incorrect results or crashing. Here we briefly discuss techniques to use exceptions to indicate the occurrence of errors during program execution and demonstrate how to catch or handle such exceptions.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

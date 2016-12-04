@@ -1,0 +1,650 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      05: WitPress (Solutions)
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Solution-v0">
+      Solution-v0
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Solution-v0">
+        <h1>Solution v0</h1>
+<p><strong>Step-by-step guide to building WitPress application</strong></p>
+<ul>
+<li>Iteration v0 (Authentication)</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Iteration v0: View</h1>
+<p>In this iteration</p>
+<ul>
+<li><p>create a walking skeleton using Play 1.3.0 and </p>
+</li>
+<li><p>implement standard Model, View, Controller (MVC) pattern to build a component for sign up, sign in and sign out.</p>
+</li>
+<li><p>save data to a model named User</p>
+</li>
+</ul>
+<p>Copy the following files to the views/Accounts folder:</p>
+<p>Filename: index.html</p>
+<pre><code class="lang-html">
+#{extends &#39;main.html&#39; /} #{set title:&#39;Get Started with WitPress&#39; /}
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui active item&quot; href=&quot;/&quot;&gt;WitPress&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;div class=&quot;ui one column grid&quot;&gt;
+  &lt;div class=&quot;ten wide column&quot;&gt;
+    &lt;form action=&quot;/signup&quot; method=&quot;GET&quot;&gt;
+      &lt;div class=&quot;ui segment&quot;&gt;
+        &lt;div class=&quot;ui segment&quot;&gt;
+          &lt;button type=&quot;submit&quot; class=&quot;ui massive green button&quot;&gt;
+            Get Started - sign up here&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+    &lt;form action=&quot;/authenticate&quot; method=&quot;POST&quot;&gt;
+      &lt;div class=&quot;ui segment&quot;&gt;
+        If already registered log in and begin publishing.
+        &lt;div class=&quot;ui fluid form segment&quot;&gt;
+          &lt;div class=&quot;fluid field&quot;&gt;
+            &lt;label&gt;Email&lt;/label&gt; &lt;input placeholder=&quot;Email&quot; name=&quot;email&quot;
+              type=&quot;text&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;fluid field&quot;&gt;
+            &lt;label&gt;Password&lt;/label&gt; &lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;
+          &lt;/div&gt;
+          &lt;button type=&quot;submit&quot; class=&quot;ui green submit button&quot;&gt;Login&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>Filename: signup.html</p>
+<pre><code>
+#{extends &#39;main.html&#39; /}
+#{set title:&#39;Sign up&#39; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui active item&quot; href=&quot;/&quot;&gt;WitPress&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;section class=&quot;ui segment&quot;&gt;
+&lt;form action=&quot;/register&quot; method=&quot;POST&quot;&gt;
+  &lt;div class=&quot;ui two column grid&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;div class=&quot;ui fluid form segment&quot;&gt;
+      &lt;h3 class=&quot;ui header&quot;&gt;Sign Up&lt;/h3&gt;
+      &lt;div class=&quot;two fields&quot;&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;label&gt;First Name&lt;/label&gt;
+          &lt;input placeholder=&quot;First Name&quot; name=&quot;user.firstName&quot; type=&quot;text&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;label&gt;Last Name&lt;/label&gt;
+          &lt;input placeholder=&quot;Last Name&quot; name=&quot;user.lastName&quot; type=&quot;text&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;field&quot;&gt;
+        &lt;label&gt;Email&lt;/label&gt;
+        &lt;input placeholder=&quot;Email&quot; name=&quot;user.email&quot; type=&quot;text&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;field&quot;&gt;
+        &lt;label&gt;Password&lt;/label&gt;
+        &lt;input type=&quot;password&quot; name=&quot;user.password&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;inline field&quot;&gt;
+        &lt;div class=&quot;ui checkbox&quot;&gt;
+          &lt;input id=&quot;conditions&quot; type=&quot;checkbox&quot;&gt;
+          &lt;label for=&quot;conditions&quot;&gt;I agree to the terms and conditions&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;button type=&quot;submit&quot; class=&quot;ui green submit button&quot;&gt;Submit&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;/section&gt;</code></pre>
+<p>In main.html we use a CDN to make use of jQuery and Semantic UI.</p>
+<p>File: main.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;#{get &#39;title&#39; /}&lt;/title&gt;
+    &lt;meta charset=&quot;${_response_encoding}&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;@{&#39;/public/images/favicon.png&#39;}&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    #{doLayout /}       
+    &lt;script src=&quot;http://code.jquery.com/jquery-2.2.3.min.js&quot;&gt;&lt;/script&gt; 
+    &lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js&quot;&gt;&lt;/script&gt;          
+    #{get &#39;moreScripts&#39; /}
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Replace the routes file with the following:</p>
+<p>Filename: routes</p>
+<pre><code># Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Accounts
+GET    /                                       Accounts.index
+GET    /signup                                 Accounts.signup
+GET    /login                                  Accounts.login
+GET    /logout                                 Accounts.logout
+POST   /authenticate                           Accounts.authenticate
+POST   /register                               Accounts.register
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Iteration v0: Model</h1>
+<p>Here is the code for a standard User model.</p>
+<pre><code class="lang-java">
+package models;
+
+import javax.persistence.Entity;
+import play.db.jpa.Model;
+
+
+@Entity
+public class User extends Model
+{ 
+  public String firstName;
+  public String lastName;
+  public String email;
+  public String password;
+
+
+  public User(String firstName, String lastName,String email, String password)
+  {
+    this.firstName = firstName;
+    this.lastName = lastName;   
+    this.email = email;
+    this.password = password;
+  }
+
+  public static User findByEmail(String email)
+  {
+    return find(&quot;email&quot;, email).first();
+  }
+
+  public boolean checkPassword(String password)
+  {
+    return this.password.equals(password);
+  }  
+
+
+  public String toString()
+  {
+    return firstName;
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Iteration v0: Controller</h1>
+<p>Filename: Accounts.java</p>
+<pre><code class="lang-java">
+package controllers;
+
+import play.*;
+import play.mvc.*;
+import java.util.*;
+import models.*;
+
+public class Accounts extends Controller
+{
+  public static void signup()
+  {
+    render();
+  }
+
+  public static void logout()
+  {
+  session.clear();
+    index();
+  }
+
+  public static void index()
+  {
+    render();
+  }
+
+  public static void register(User user)
+  {
+    Logger.info(&quot;registering &quot; + user.firstName + &quot; &quot; + user.lastName + &quot; &quot; + user.email + &quot; &quot; + user.password);
+    user.save();
+    index();
+  }
+
+  public static void authenticate(String email, String password)
+  {
+    User user = User.findByEmail(email);
+    if (user == null || !user.checkPassword(password))
+    {
+      Logger.info(&quot;Authentication failure&quot;);
+      index();
+    }
+    session.put(&quot;logged_in_userid&quot;, user.id);
+    Logger.info(&quot;Authentication success: &quot; +  user.firstName + &quot; &quot; + user.lastName);
+    index();
+  }
+
+  public static User getLoggedInUser()
+  {
+    User user = null;
+    if (session.contains(&quot;logged_in_userid&quot;))
+    {
+      String userId = session.get(&quot;logged_in_userid&quot;);
+      user = User.findById(Long.parseLong(userId));
+    }
+    else
+    {
+      index(); // =&gt; log in
+    }
+    return user;
+  }
+}</code></pre>
+<p>Enable the in-memory database:</p>
+<ul>
+<li>In file conf/application.conf locate # db.default=mem</li>
+<li>Remove the #<pre><code>db.default=mem</code></pre>
+</li>
+</ul>
+<p>Iteration v0 is now complete. </p>
+<p>Execute <em>play run</em> from a terminal within the <em>witpress</em> folder.</p>
+<ul>
+<li>The application should open in a window as depicted in Figure 1.</li>
+</ul>
+<p><img src="img/02.png" alt="Figure 1: WitPress home view"></p>
+<p>Click on Get Started button to reveal the sign up page shown in Figure 2:</p>
+<p><img src="img/03.png" alt="Figure 2: WitPress sign up"></p>
+<p>Commit this iteration to your <em>witpress</em> repository, add a tag and push all to remote repo.</p>
+<pre><code>git add .
+git commit -m &#39;iteration  v0&#39;
+git tag -a v0 -m &#39;iteration v0&#39;
+git push &amp;&amp; git push --tags</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,638 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      06: Project Specification & tutorial on Heroku cloud deployment.
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Heroku">
+      Heroku
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Heroku">
+        <h1>Objectives</h1>
+<p>Tutorial on deployment of a Play web application to the cloud (Heroku).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction</h1>
+<p>It is assumed you have already installed <em>git</em> on your computer.</p>
+<p>It is also assumed that you have installed <em>ssh</em> and generated a key pair.</p>
+<ul>
+<li>A separate lab and presentation set on the basic use of <em>git</em> and <em>ssh</em> keys is available elsewhere in the course material.</li>
+</ul>
+<p>An archive of project <em>donation-service</em> as used in this lab is available to download from here:</p>
+<ul>
+<li><a href="archives/org-wit-donation-service-id.zip">donation-service</a></li>
+</ul>
+<p>Alternatively, you may use a working Play app of your choosing.</p>
+<p>This guide on deploying a Play application to Heroku is based on Heroku documentation viewable <a href="https://devcenter.heroku.com/articles/git#creating-a-heroku-remote">here</a> [accessed on 2.7.2015].</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Local Repository</h1>
+<p>Warning!</p>
+<p>Where your model includes the name User the following sample class illustrates how to avoid a name clash when deploying to Heroku (which uses Heroku PostGres database in which User is a reserved word):</p>
+<pre><code>import javax.persistence.Table;
+
+/**
+ * User has been escaped: This is necessary because User is a reserved word in PostGreSQL
+ * However, if working in local host and wish to use localhost:9000/@db (for example) to view database
+ * Then it is necessary to temporarily comment out the line (i.e. @Table(name = &quot;`User`&quot;) while testing with local host
+ *
+ */
+@Entity
+@Table(name=&quot;`User`&quot;)
+public class User extends Model
+{
+  ...
+  ...
+
+}</code></pre>
+<p>If you wish to use the local database and view its contents using the H2 Console (<a href="http://localhost:9000/@db">http://localhost:9000/@db</a>) it will be necessary to comment out <em>@Table(name=&quot;`User&#39;&quot;)</em>.</p>
+<p>Create a directory on your computer named, for example, <em>org-wit-donation-service</em>.</p>
+<p>In Git Bash terminal <em>cd</em> into this new directory.</p>
+<pre><code> cd org-wit-donation-service</code></pre>
+<p>Create a new empty repository:</p>
+<pre><code>git init</code></pre>
+<p>Using a file manager or otherwise, copy the contents of the <em>donation-service-id</em> project that you can download from <a href="archives/org-wit-donation-service-id.zip">here</a> to the <em>org-wit-donation-service</em> folder.
+<img src="img/heroku_014.png" alt=""></p>
+<p>Create and add a file named <strong>ProcFile</strong> to the root of <em>org-wit-donation-service</em>.</p>
+<ul>
+<li><p>Add the following single line to ProcFile:</p>
+<p>  <em>web: play run --http.port=$PORT $PLAY_OPTS</em></p>
+</li>
+</ul>
+<p>Ensure that the  <strong>.gitignore</strong> file is present in the root of <em>org-wit-donation-service</em>.</p>
+<p>To ensure a unique app name when deploying to Heroku, change the application name in <em>application.conf</em>, replacing <em>id</em> with your id number.</p>
+<p>Add all to the repo and commit:</p>
+<pre><code>git add .
+git commit -m &#39;first commit&#39;</code></pre>
+<p>Verify by running the command</p>
+<pre><code>git status</code></pre>
+<p>The response should as follow:
+<img src="img/heroku_016.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Heroku repository</h1>
+<p>Create an account on <a href="http://www.heroku.com">Heroku</a>.</p>
+<ul>
+<li>Note carefully your login and password.</li>
+</ul>
+<p>Download and install <a href="https://toolbelt.heroku.com">Heroku Toolbelt for Windows</a></p>
+<ul>
+<li>Close and reopen Git Bash following installation of Toolbelt.</li>
+<li><p>Verify installation ok by typing </p>
+<p>  <em>heroku --version</em> </p>
+</li>
+<li><p>The response should be something like:</p>
+<p>  <em>heroku/toolbelt/3.12.1 (i386-mingw32) ruby/1.9.3</em></p>
+</li>
+</ul>
+<p>Login in to your heroku account from Git Bash</p>
+<pre><code>heroku login</code></pre>
+<ul>
+<li>You will be prompted for you email and password.</li>
+<li>Successful authentication will be confirmed.</li>
+</ul>
+<p>Next create an app and repository on Heroku as follows:</p>
+<pre><code>heroku create</code></pre>
+<ul>
+<li>The response will be something like this:</li>
+</ul>
+<p><img src="img/heroku_003.png" alt="Figure 1: Heroku: app and repository created"></p>
+<p>Notice the default name assigned by Heroku to the remote app.</p>
+<p>Verify with the command </p>
+<pre><code>git remote -v</code></pre>
+<p>and observe a response similar to that in Figure 2.</p>
+<p><img src="img/heroku_004.png" alt="Figure 2: Checking remote repo on Heroku"></p>
+<p>Now add your SSH keys to Heroku (ensure no space between keys: and add).</p>
+<pre><code>heroku keys:add</code></pre>
+<p><img src="img/heroku_005.png" alt="Figure 3: Heroku: Adding SSH Keys"></p>
+<p>Finally, push the local repo to Heroku:</p>
+<pre><code>git push heroku master</code></pre>
+<p>The response should be somewhat similar to that shown in Figure 4.</p>
+<p><img src="img/heroku_006.png" alt="Figure 4: Successful deployment"></p>
+<p>We shall now test the service:</p>
+<ul>
+<li>In the specific case of this lab we have been randomly assigned a remote Heroku repo named <em>guarded-reef-267.git</em>. </li>
+<li>The convention for construction a URI to access this repo or service can easily be deduced by studying the URI for this specific service:</li>
+</ul>
+<pre><code>http://guarded-reef-2677.herokuapp.com/api/users</code></pre>
+<ul>
+<li>The portions <strong>/api/users</strong> is determined by how we, the developers, wrote the application (<em>donation-service</em>).</li>
+<li>Notice where the actual name of the repo is located in the URI:<ul>
+<li><em>guarded-reef-2677</em>.</li>
+</ul>
+</li>
+</ul>
+<p>Copy this URI into a brower&#39;s navigation bar: unfortunately an application error is flagged.</p>
+<ul>
+<li>The reason for this is that we have not set up a suitable database on Heroku. We shall attend to this shortly.</li>
+</ul>
+<p>A further example of a url is:</p>
+<pre><code>http://donation-v4.herokuapp.com/</code></pre>
+<p>In this case our application is <em>donation-v4</em>.</p>
+<p><strong>Changing name of Heroku app</strong></p>
+<p>We shall now change the Heroku-assigned name <em>guarded-reef-2677</em> to a more meaningful name <em>org-wit-donation-service-id</em> where <strong>id</strong> is your email address excluding @, periods, underscores and so on. For example john_doe@organs.com becomes johndoeorganscom. This is just a suggestion to ensure that the name you choose for the app on Heroku will be unique.</p>
+<p>Run the following command within the Heroku terminal:</p>
+<pre><code>heroku apps:rename org-wit-donation-service-id --app guarded-reef-2677</code></pre>
+<p>A typical response is shown in Figure 5:</p>
+<p><img src="img/heroku_007.png" alt="Figure 5: Changing name of Heroku app from command line"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Heroku Database</h1>
+<p>You created a Heroku app in an earlier step (using the command <em>heroku create</em>) </p>
+<ul>
+<li>A database was made available as part of the app creation process.</li>
+<li>You can verify this by running the following command:</li>
+</ul>
+<pre><code>heroku pg:info</code></pre>
+<p>A typical response is depicted in Figure 1.</p>
+<p><img src="img/heroku_012.png" alt="Figure 1: Database information"></p>
+<p>In this case the DATABASE_URL is HEROKU_POSTGRESQL_MAUVE_URL.</p>
+<p>Log in to <a href="https://dashboard-next.heroku.com/apps/">Heroku</a> website for more detailed information such as is shown here in Figure 2 for the current project.</p>
+<p><img src="img/heroku_025.png" alt="Figure 2: App and associated database details on Heroku site"></p>
+<p>In order to make use of this database do the following:</p>
+<ul>
+<li>Modify the <em>application.conf</em> file:<ul>
+<li>Comment out any database activation statments such as, for example, <em>db = mem</em>.</li>
+<li>Add the following block to the end of the file.</li>
+</ul>
+</li>
+</ul>
+<pre><code>#================heroku databse config config=========================
+db=${DATABASE_URL}
+jpa.dialect=org.hibernate.dialect.PostgreSQLDialect
+jpa.ddl=update
+#================end database config heroku config====================</code></pre>
+<ul>
+<li>In the Heroku terminal add and commit the changes:</li>
+</ul>
+<pre><code>git add .
+git commit -m &#39;database configured&#39;
+git push heroku master</code></pre>
+<p>The response should be similar to that shown in Figure 3.
+<img src="img/heroku_010.png" alt="Figure 3: Application + configured database pushed to remote heroku repo"></p>
+<p><strong>Test App</strong></p>
+<p>You can test that the application is working correctly in a number of ways, listed here:</p>
+<ul>
+<li>Run the following command: output similar to that in Figure 4 indicates your app has been successfully deployed.</li>
+</ul>
+<pre><code>heroku ps</code></pre>
+<p><img src="img/heroku_023.png" alt="Figure 4: Successful deployment"></p>
+<ul>
+<li>Next run the command to open a browser: Figure 5 shows the command and additionally the response to the command and the output in the browser if the app is running correctly.</li>
+</ul>
+<pre><code>heroku open</code></pre>
+<p><img src="img/heroku_024.png" alt="Figure 5: Application ready"></p>
+<ul>
+<li>Finally, introduce this URI in a browser&#39;s navigation bar: the expected response is shown here in Figure 6:</li>
+</ul>
+<pre><code>http://org-wit-donation-service-id.herokuapp.com/api/users</code></pre>
+<p><img src="img/heroku_011.png" alt="Figure 6: List of users returned in resonse to query"></p>
+<p><strong>Reset Database</strong></p>
+<p>You can reset the database as follows:</p>
+<ul>
+<li>First obtain the DATABASE_URL with the following command:</li>
+</ul>
+<pre><code>heroku pg:info</code></pre>
+<p>A typical response is depicted in Figure 7.</p>
+<p><img src="img/heroku_012.png" alt="Figure 7: Database information"></p>
+<p>In this case the DATABASE_URL is HEROKU_POSTGRESQL_MAUVE_URL. The command to run to reset is:</p>
+<pre><code>heroku pg:reset HEROKU_POSTGRESQL_MAUVE_URL</code></pre>
+<p>More simply you may use the command:</p>
+<pre><code>heroku pg:reset DATABASE_URL</code></pre>
+<p>Follow the instructions as indicated in Figure 8.</p>
+<p><img src="img/heroku_013.png" alt="Figure 8: Resetting the database"></p>
+<p>If you make changes to a model class then it will be necessary to reset the database.</p>
+<ul>
+<li>Always following a database reset it&#39;s advisable (even necessary) to execute a fresh push (touching a file if necessary).</li>
+</ul>
+<p><strong>References</strong></p>
+<p><a href="https://devcenter.heroku.com/articles/git">Deploying with Git</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Regenerate project (Optional)</h1>
+<p>You can regenerate your work environment as follows:</p>
+<ul>
+<li>Create a working folder, for example <em>workspacePlay</em></li>
+<li>Change directory into this folder<pre><code>cd workspacePlay</code></pre>
+</li>
+<li>If not already logged in to Heroku, do so now:</li>
+</ul>
+<pre><code>heroku login</code></pre>
+<p>Obtain a clone of the remote repo:</p>
+<pre><code> git clone git@heroku.com:org-wit-donation-service-id.git</code></pre>
+<p><img src="img/heroku_017.png" alt="Figure 1: Cloning heroku repository"></p>
+<p>The project will now be recreated in a folder <em>org-wit-donation-service-id</em>.</p>
+<ul>
+<li>Change directory to <em>org-wit-donation-service-id</em>.</li>
+<li>Run the command to allow the project to be imported into an Eclipse workspace:<pre><code>play eclipsify</code></pre>
+Launch Eclipse, switch to the workspace <em>workspacePlay</em> and import the project:</li>
+</ul>
+<p><img src="img/heroku_018.png" alt="Figure 2: Importing project into Eclipse workspace"></p>
+<p>Note that earlier we pushed to Heroku with the following command:</p>
+<pre><code>git push heroku master</code></pre>
+<p>This will not now work. To understand why check the remote:</p>
+<pre><code>git remote -v</code></pre>
+<p><img src="img/heroku_019.png" alt=""></p>
+<p>Notice that it is <strong>origin</strong>, not <strong>heroku</strong>. </p>
+<p>Working with origin will work ok.</p>
+<p>But perhaps it is better to preserve Heroku convention which requires that we:</p>
+<ul>
+<li>Remove <em>origin</em> as the remote</li>
+<li>Replace with <em>heroku</em></li>
+</ul>
+<p>This can easily be achieved with the following commands:</p>
+<pre><code>git remote remove origin
+git remote add heroku git@heroku.com:org-wit-donation-service-id.git</code></pre>
+<p>Then, push with the following command:</p>
+<pre><code>git push heroku master</code></pre>
+<p>It is possible to push a local branch other than master to heroku with the following command:</p>
+<pre><code>git push heroku other:master</code></pre>
+<p>For example, if the local branch is <em>donation-v4</em> then the command becomes:</p>
+<pre><code>git push heroku donation-v4:master</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

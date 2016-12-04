@@ -1,0 +1,871 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      06: Project Specification & tutorial on Heroku cloud deployment.
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Assignment Tips">
+      Assignment Tips
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="10">
+      10
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Assignment Tips">
+        <h1>Objectives</h1>
+<p>This short lab provides some hints on how to implement the more difficult parts of the assignment. The topics discussed are Ajax, Global abatement (maps), validation and manipulation of Semantic controls (dropdown and edit box), dynamic updating of map markers, specifying alternative Play templates and, lastly, deployment of a non-master branch to Heroku.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction</h1>
+<p>The existing labs and presentations contain all the material required to implement stories in levels basic and good. These include all stories in the range 1 to 10.</p>
+<p>Students attempting the levels excellent and outstanding will likely find it necessary to carry out some research in areas such as Ajax, making dynamic changes to Semantic controls (dropdowns and input controls) and Google maps.</p>
+<p>Some guidelines are supplied in this lab.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Global abatement</h1>
+<p>The following code shows how to remove a Google map from the global scope (namespace) by creating a global variable, wrapping the map code in an immediately invokable function expression (IIFE) and exposing the necessary functionality in a returned anonymous JavaScript object that is assigned to the newly introduced global variable. This is demonstrated in the following code. </p>
+<pre><code>const CIRCLEMAP = (function (context) {
+  let map;
+  let circle;
+  const markers = [];
+
+  context.onclick = function requestReportCircle() {
+    const center = circle.getCenter();
+    const latcenter = center.lat().toString();
+    const lngcenter = center.lng().toString();
+    const radius = circle.getRadius().toString();
+    $(&#39;#radius&#39;).val(radius);
+    $(&#39;#latcenter&#39;).val(latcenter);
+    $(&#39;#lngcenter&#39;).val(lngcenter);
+  };
+
+  //...
+  //...
+
+  function initialize() {
+    // ...
+  }
+
+  function updateMarkers(data) {
+    //...
+  }
+
+  // public api
+  return {
+    initialize,
+    updateMarkers,
+  };
+}(this));
+
+google.maps.event.addDomListener(window, &#39;load&#39;, CIRCLEMAP.initialize);</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Semantic Validation</h1>
+<p>Here we show how to validate a Semantic UI (version 2) dropdown.</p>
+<pre><code>  $(&#39;.ui.dropdown&#39;).dropdown(&#39;clear&#39;); // &#39;clear&#39; restores placeholder value
+
+  $(&#39;.ui.form.donate&#39;).form({
+    fields : { 
+      amountDonated : { 
+        identifier : &#39;amountDonated&#39;,
+        rules : [{
+          type : &#39;empty&#39;,
+          prompt : &#39;Please select an amount to donate&#39;
+        },],
+      },
+    },
+
+  });</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Ajax</h1>
+<p>Following on from the previous step, on successful validation, an Ajax call may follow:</p>
+<pre><code>$(&#39;.ui.dropdown&#39;).dropdown(&#39;clear&#39;); // This restores the placeholder
+
+$(&#39;.ui.form.donate&#39;).form({
+  fields: {
+    amountDonated: {
+      identifier: &#39;amountDonated&#39;,
+      rules: [{
+        type: &#39;empty&#39;,
+        prompt: &#39;Please select an amount to donate&#39;,
+      }]
+    },
+  },
+
+  onSuccess: function (event, fields) {
+    submitForm();
+    event.preventDefault();
+  },
+});
+
+function submitForm() {
+  var formData = $(&#39;.ui.form.donate&#39;).serialize();
+  console.log(&#39;formData: &#39;, formData);
+  $.ajax({
+    type: &#39;POST&#39;,
+    url: &#39;/donation/donate&#39;,
+    data: formData,
+    success: function (response) {
+      console.log(&#39;donate server response :&#39; + response);
+    },
+  });
+}</code></pre>
+<p>Here is the associated html and controller code:</p>
+<pre><code class="lang-html">&lt;form class=&quot;ui form donate&quot;&gt;
+
+  &lt;div class=&quot;ui selection dropdown&quot; id=&quot;landlord&quot;&gt;
+    &lt;input name=&quot;amountDonated&quot; type=&quot;hidden&quot;&gt;
+    &lt;div class=&quot;default text&quot;&gt;Amount&lt;/div&gt;
+    &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;menu&quot;&gt;
+      &lt;div class=&quot;item&quot; data-value=&quot;100&quot;&gt;$100&lt;/div&gt;
+      &lt;div class=&quot;item&quot; data-value=&quot;500&quot;&gt;$500&lt;/div&gt;
+      &lt;div class=&quot;item&quot; data-value=&quot;1000&quot;&gt;$1000&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;ui blue submit button&quot;&gt;Donate &lt;i class=&quot;add icon&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class=&quot;ui error message&quot;&gt;&lt;/div&gt;
+&lt;/form&gt;
+
+&lt;script src=&quot;@{&#39;/public/javascripts/dropdown.js&#39;}&quot;&gt;&lt;/script&gt;</code></pre>
+<pre><code class="lang-java">package controllers;
+
+import play.*;
+import play.mvc.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import models.*;
+
+public class Application extends Controller
+{
+  static Gson gson = new GsonBuilder().create();
+
+  public static void index()
+  {
+    render();
+  }
+
+  public static void donate(long amountDonated)
+  {   
+    renderJSON(gson.toJson(amountDonated));
+  }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Semantic dropdown</h1>
+<p>Here is sample code showing how to dynamically remove an entry from a dropdown.</p>
+<p>An Ajax call retrieves a hardcoded name from the server.</p>
+<p>If this name is present in the dropdown content then that item is deleted from the dropdown.</p>
+<p>To exercise:</p>
+<ul>
+<li>Chose <em>any</em> name in the dropdown,</li>
+<li>Press Donate button,</li>
+<li>This should have the effect of deleting Homer from the dropdown.</li>
+<li>Check the console to verify the response.</li>
+</ul>
+<pre><code class="lang-javascript">/**
+ * Semantic ui 2 validation applied.
+ * Ajax call receives donor named Homer.
+ * This name checked against dropdown content.
+ * If match found, Homer removed from dropdown.
+ * Placeholder restored in dropdown (Donor).
+ */
+  $(&#39;.ui.dropdown&#39;).dropdown(&#39;clear&#39;);
+
+  $(&#39;.ui.form.donate&#39;).form({
+    fields : {
+      name : {
+        identifier : &#39;name&#39;,
+        rules : [{
+          type : &#39;empty&#39;,
+          prompt : &#39;Please select a dropdown entry&#39;
+        },],
+      },
+    },
+    onSuccess : function(event, fields) {
+      submitForm();      
+      event.preventDefault();
+     },
+   });
+
+  function submitForm() {
+    var formData = $(&#39;.ui.form.donate&#39;).serialize(); // Here this includes donor selected in dropdown
+
+    console.log(&#39;formData: &#39;, formData);
+
+    $.ajax({
+      type : &#39;POST&#39;,
+      url : &#39;/donation/donate&#39;, // see the routes file and Application.donate.
+      data : formData,
+      success : function(response) { // See Application.donate: response hardwired &#39;Homer&#39;
+        console.log(&#39;donate server response :&#39; + response);
+        dropdownDonorClear(response);
+      }
+    });
+  }
+
+  function dropdownDonorClear(name) {
+    let $obj = $(&#39;.item.name&#39;);
+    for (let i = 0; i &lt; $obj.length; i += 1) { // Iterate the list of dropdown names.
+      if($obj[i].getAttribute(&#39;data-value&#39;).localeCompare(name) == 0) { // If match found,
+        $obj[i].remove(); // Remove the argument Donor from dropdown (hardwired in Application.donate).
+        $(&#39;.ui.dropdown.names&#39;).dropdown(&#39;clear&#39;); // Restore the dropdown placeholder (Donor).
+        break;
+      }
+    }
+  }</code></pre>
+<p>The html and java code follows here:</p>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /}
+#{set title:&#39;Home&#39; /}
+
+&lt;form class=&quot;ui form donate&quot;&gt;
+
+  &lt;div class=&quot;ui selection dropdown names&quot;&gt;
+    &lt;input name=&quot;name&quot; type=&quot;hidden&quot;&gt;
+    &lt;div class=&quot;default text&quot;&gt;Donor&lt;/div&gt;
+    &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;menu donor&quot;&gt;
+      #{list items: names, as: &#39;name&#39;}
+        &lt;div class=&quot;item name&quot; data-value=&quot;${name}&quot;&gt;${name}&lt;/div&gt;
+      #{/list}
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;ui blue submit button&quot;&gt;Donate &lt;i class=&quot;add icon&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class=&quot;ui error message&quot;&gt;&lt;/div&gt;
+&lt;/form&gt;
+
+&lt;script src=&quot;@{&#39;/public/javascripts/dropdown.js&#39;}&quot;&gt;&lt;/script&gt;</code></pre>
+<pre><code class="lang-java">package controllers;
+
+import play.*;
+import play.mvc.*;
+import java.util.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import models.*;
+
+public class Application extends Controller
+{
+  static Gson gson = new GsonBuilder().create();
+
+  public static void index()
+  {
+    List&lt;String&gt; names = new ArrayList&lt;String&gt;(Arrays.asList(&quot;Homer&quot;, &quot;Marge&quot;, &quot;Bart&quot;));
+    render(names);
+  }
+
+  public static void donate(String name)
+  {
+    String response = gson.toJson(&quot;Homer&quot;);
+    renderJSON(response);
+  }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Differentiate Semantic controls</h1>
+<p>Here we present code snippets showing how to differentiate between two dropdowns on same page.</p>
+<p>You could introduce the form <a href="http://www.w3schools.com/tags/tag_form.asp"><code>name</code></a> attribute as a means of distinguishing between the two dropdowns. The html &amp; script code might then be something like this:</p>
+<pre><code>&lt;form class=&quot;ui form&quot; name=&quot;landlordform&quot;&gt;
+  ...
+&lt;/form&gt;</code></pre>
+<pre><code>$(&#39;.ui.form[name=&quot;landlordform&quot;]&#39;).form({
+  // ...
+});</code></pre>
+<p>However, it&#39;s much simpler to use a class selector:</p>
+<pre><code>&lt;form class=&quot;ui form landlord&quot;&gt;
+  //...
+&lt;/form&gt;</code></pre>
+<pre><code>&lt;form class=&quot;ui form tenant&quot;&gt;
+  //...
+&lt;/form&gt;</code></pre>
+<pre><code>$(&#39;.ui.form.landlord&#39;).form({
+// ...
+});</code></pre>
+<p>Here are more detailed examples.</p>
+<p>A landlord dropdown:</p>
+<pre><code>
+      &lt;form class=&quot;ui form segment landlord&quot;&gt;
+        &lt;div id=&quot;deletelandlord&quot; class=&quot;ui fluid selection dropdown landlord&quot;&gt;
+          &lt;input name=&quot;email_landlord&quot; type=&quot;hidden&quot; id=&quot;form_delete_landlord&quot;&gt;
+          &lt;div class=&quot;default text&quot;&gt;Select landlord to delete&lt;/div&gt;
+          &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+          &lt;div class=&quot;menu landlord&quot;&gt;
+            #{list items: emailLandlords, as: &#39;emailLandlord&#39;}
+            &lt;div class=&quot;item landlord&quot; data-value=&quot;${emailLandlord}&quot;&gt;${emailLandlord}&lt;/div&gt;
+            #{/list}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Possibly other material within form --&gt;
+       &lt;/form&gt;</code></pre>
+<p>A tenant dropdown on same page:</p>
+<pre><code>
+      &lt;form class=&quot;ui form segment tenant&quot;&gt;
+        &lt;div id=&quot;deletetenant&quot; class=&quot;ui fluid selection dropdown&quot;&gt;
+          &lt;input name=&quot;email_tenant&quot; type=&quot;hidden&quot; id=&quot;form_delete_tenant&quot;&gt;
+          &lt;div class=&quot;default text&quot;&gt;Select tenant to delete&lt;/div&gt;
+          &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+          &lt;div class=&quot;menu&quot;&gt;
+            #{list items:emailTenants, as: &#39;emailTenant&#39;}
+            &lt;div class=&quot;item tenant&quot; data-value=&quot;${emailTenant}&quot;&gt;${emailTenant}&lt;/div&gt;
+            #{/list}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Possibly other material within form --&gt;
+       &lt;/form&gt;</code></pre>
+<pre><code>  $(&#39;#deletelandlord&#39;).dropdown();</code></pre>
+<p>  As before, a class selector could be used instead of an id:</p>
+<pre><code>  $(&#39;.ui.dropdown.landlord&#39;).dropdown();</code></pre>
+<pre><code>  /**
+   * Validate delete landlord dropdown
+   * Invoke controller action and retrieve data using jQuery ajax
+   */
+
+  $(&#39;.ui.form.landlord&#39;).form({
+    //...
+  });</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Map markers</h1>
+<p>Here is a code snippet applying to a situation where the landlord selected in the dropdown list is deleted and the associated map markers are updated to reflect this change.</p>
+<pre><code>function updateLandlord() {
+  var formData = $(&#39;.ui.form.landlord&#39;).serialize();
+  $.ajax({
+    type: &#39;POST&#39;,
+    url: &#39;/administrators/deletelandlord&#39;,
+    data: formData,
+    success: function (response) { // Response contains array marker data
+      console.log(&#39;delete landlord response : &#39; + response);
+      $(&#39;#notificationLandlord&#39;).html(&#39;Landlord deleted : &#39; + $(&#39;#form_delete_landlord&#39;).val());
+
+      // response format: eircode, lat, lng, marker message
+      ADMIN_MAP.updateMarkers(response);
+
+      let email = $(&#39;#deletelandlord&#39;).dropdown(&#39;get text&#39;);
+      removeItemLandlordDropdown(email);
+    },
+  });
+}
+
+function removeItemLandlordDropdown(email) {
+  // ...
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Play controllers</h1>
+<p>Play Framwork documentation on contollers is availabe <a href="https://www.playframework.com/documentation/1.4.x/controllers">here</a>.</p>
+<p>We are interested in how a template is executed. By this we mean, how does the controller respond to a http request in determining which template or html page is rendered and what data is provided to the page by the controller?</p>
+<p>Consider this code snippet taken from the Play documentation:</p>
+<pre><code>public class Clients extends Controller {
+
+    public static void index() {
+        render();    
+    }
+}</code></pre>
+<p>This results in a template named <code>index.html</code> being rendered. The template is located in <code>app/views/Clients</code> folder.</p>
+<p>This is the default situation.</p>
+<p><img src="img/01.png" alt="Figure 1: Default template"></p>
+<p>Recall that the method <code>public static void index()</code> is referred to as an <strong>Action</strong>.</p>
+<p>Now consider a situation where several requests issue from a html page.  This applies, for example, to story 14.</p>
+<p><img src="img/02.png" alt="Figure 2: Story 14"></p>
+<p>This story implementation results in 4 submit buttons on the html page, one for each of the requested reports. The same controller is used in all cases. Therefore the default situation, described above, is no longer adequate. A single action, <code>index</code>, would be insufficient since we require to respond with a different data set for each different request (button press). </p>
+<p><img src="img/03.png" alt="Figure 3: Reports page"></p>
+<p>We can implement additional actions by using the Play <code>renderTemplate(...)</code> method. </p>
+<p><img src="img/04.png" alt="Figure 4: Multiple actions may invoke same template while responding with different data"></p>
+<p>The default action might be used to respond with one particular data set, for example as shown here:</p>
+<pre><code>  public static void index()
+  {
+    ...
+    render(residences);
+  }</code></pre>
+<p>Other actions could then be developed to respond with differ data:</p>
+<pre><code>  public static void byRented(String rentedStatus)
+  {
+    // Create list of residences whose rented status match argument.
+    ...
+
+    renderTemplate(&quot;Reports/index.html&quot;, residences);
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Git branching</h1>
+<p>Key points: </p>
+<ul>
+<li><p>If you have a branch (named, for example, <code>dev</code>) and wish to push this to your remote repo, then you should do so explicitly. A push executed while master is checked out will not result in <code>dev</code> also being pushed. </p>
+</li>
+<li><p>If, on resuming, you wish to continue developing on <code>dev</code>, then check it out and update with a pull request before commencing work.</p>
+</li>
+</ul>
+<p>Consider this local situation:</p>
+<ul>
+<li>You have a branch named <code>dev</code>.</li>
+<li>You are working on the master branch and make a commit and push in the normal manner:</li>
+</ul>
+<pre><code>git add .
+git commit -m &#39;story xx ....&#39;
+git push # or git push origin master</code></pre>
+<p>This will not result in the branch <code>dev</code> being pushed. To do so switch to <code>dev</code> branch and execute a push:</p>
+<pre><code>git checkout dev
+git push</code></pre>
+<p>Attempting this for the first time will result in the following response:</p>
+<pre><code>git push
+fatal: The current branch dev has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin dev</code></pre>
+<p>Run this command as shown below followed by an extract from a typical output:</p>
+<pre><code>git push --set-upstream origin dev
+
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 291 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: 
+remote: Create pull request for dev:
+remote:   https://bitbucket.org/...
+remote: 
+To git@bitbucket.org:....git
+ * [new branch]      dev -&gt; dev
+Branch dev set up to track remote branch dev from origin.</code></pre>
+<p>You may delete the remote branch as shown in this example:</p>
+<pre><code>git push origin --delete dev
+To git@bitbucket.org:.....git
+ - [deleted]         dev</code></pre>
+<p>A local branch, dev, may be delete thus:</p>
+<pre><code>git checkout master # Cannot delete branch currently checked out.
+git branch -d dev</code></pre>
+<p>To pull the remote branch?</p>
+<pre><code>git pull origin dev</code></pre>
+<p>The response is something along the following lines if local <code>dev</code> is already up-to-date:</p>
+<pre><code>From bitbucket.org:....
+ * branch            dev        -&gt; FETCH_HEAD
+Already up-to-date.</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="10">
+        <h1>Heroku</h1>
+<p>When you have completed development on the master branch, create a branch dedicated to the version you will deploy to <code>Heroku</code> as follows:</p>
+<pre><code>git checkout -b heroku</code></pre>
+<p>This command will create and checkout a local branch named <code>heroku</code>. It is not mandatory that the branch name be <code>heroku</code> - it just seems a logical, self-documenting choice.</p>
+<p>Follow the steps in the <code>Heroku</code> lab to create an account and so on.</p>
+<p>Still checked out on the <code>heroku</code> branch, execute this command to deploy:</p>
+<pre><code>git push heroku heroku:master</code></pre>
+<p>This last command differs from that you would use were you to push your master branch, namely: <em>git push heroku master</em>.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

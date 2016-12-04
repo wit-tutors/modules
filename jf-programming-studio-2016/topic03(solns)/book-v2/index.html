@@ -1,0 +1,888 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      03: MyRent (Solutions)
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Solution-v2">
+      Solution-v2
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Solution-v2">
+        <h1>Solution v2</h1>
+<p><strong>Step-by-step guide to building MyRent application</strong></p>
+<ul>
+<li>Iteration v2 (Report)</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Iteration v2: Utils</h1>
+<p>The following bespoke or custom-made classes are required in this and remaining iterations. </p>
+<p>They are Circle, LatLng and Geodistance.</p>
+<p>Circle has fields to define a circle object namely radius and coordinates of the centre. </p>
+<p>LatLng has a pair of fields of type double to store the latitude and longitude of a position.</p>
+<p>Geodistance has public methods:</p>
+<ul>
+<li>to calculate the distance between two points on the surface of a sphere measured along the sphere&#39;s surface. In this application the earth is approximated to by a sphere.</li>
+<li>to determine if a point on the sphere falls within a specified circular area.</li>
+</ul>
+<p>The classes are located in a folder (package) app/utils.</p>
+<p>Filename: Circle.java</p>
+<pre><code class="lang-java">
+package utils;
+/**
+ * @file    Circle.java
+ * @brief   Class to facilitate instantiation of a circle defined by its radius and centre specified in latitude and longitude
+ * @version 1.0 April 1, 2013
+ * @author  jfitzgerald
+ */
+public class Circle {
+
+  public double radius;
+  public double latcenter;
+  public double lngcenter;
+
+  /**
+   * Returns the centre of the circle as a LatLng object
+   * 
+   * @return the centre of the circle
+   */
+  public LatLng getCenter() 
+  {
+    return new LatLng(latcenter,lngcenter);
+  }
+
+  /**
+   * Returns the radius of the circle
+   * 
+   * @return the radius of the circle
+   */
+  public double getRadius() 
+  {
+    return radius;
+  }
+  /**
+   * Constructor to instantiate circle
+   * @param lat the centre of the circle&#39;s latitude coordinate
+   * @param lng the centre of the circle&#39;s longitude coordinate
+   * @param radius the radius of the circle
+   */
+  public Circle(double lat, double lng, double radius) 
+  {
+    this.radius = radius;
+    this.latcenter = lat;
+    this.lngcenter = lng;
+  }
+}</code></pre>
+<p>Here is the Geoodistance class:</p>
+<p>Filename: Geodistance.java</p>
+<pre><code class="lang-java">package utils;
+
+public class Geodistance
+{
+
+  /**
+   * Determines if a point is within a circle
+   * 
+   * @param point
+   * @param circle
+   *          : radius units expected in metres
+   * @return true if point within circle else false
+   */
+  public static boolean inCircle(LatLng resLocn, Circle circle)
+  {
+    return Math.abs(1000 * haversine(resLocn, circle)) &lt; circle.getRadius() ? true : false;
+  }
+
+  /**
+   * [Following 3 reference sites accessed June 2013]
+   * http://www.movable-type.co.uk/scripts/latlong.html
+   * http://www.movable-type.co.uk/scripts/latlon.js Calculates the distance
+   * between two points (latitude, longitude) on spherical surface
+   * 
+   * @return the distance in km
+   */
+  public static double geodistance(double latOrig, double lonOrig, double latDest, double lonDest)
+  {
+    double R = 6371; // km
+    double lat1 = Math.toRadians(latOrig);
+    double lon1 = Math.toRadians(lonOrig);
+    double lat2 = Math.toRadians(latDest);
+    double lon2 = Math.toRadians(lonDest);
+    double dLat = lat2 - lat1;
+    double dLon = lon2 - lon1;
+
+    double a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2)
+        * Math.sin(dLon / 2);
+    double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    return R * c;
+  }
+
+  private static double haversine(LatLng p1, LatLng p2)
+  {
+    return geodistance(p1.getLatitude(), p1.getLongitude(), p2.getLatitude(), p2.getLongitude());
+  }
+
+  private static double haversine(LatLng p1, Circle circle)
+  {
+    LatLng center = circle.getCenter();
+    return haversine(p1, center);
+  }
+}</code></pre>
+<p>The final <em>util</em> class follows:</p>
+<p>Filename: LatLng.java</p>
+<pre><code class="lang-java">package utils;
+
+public class LatLng
+{
+
+  private double lat;
+  private double lng;
+
+  public LatLng(double lat, double lng)
+  {
+    this.lat = lat;
+    this.lng = lng;
+  }
+
+  public String toString()
+  {
+    return lat + &quot;,&quot; + lng;
+  }
+
+  /**
+   * @param latlng
+   *          : a string comprising a lat,lng : eg 53.444,-5.455
+   * @return a LatLng object whose fields obtained by parsing argument
+   */
+  public static LatLng toLatLng(String latlng)
+  {
+    String[] latLng = latlng.split(&quot;,&quot;);
+    return new LatLng(Double.parseDouble(latLng[0]), Double.parseDouble(latLng[1]));
+  }
+
+
+  public double getLatitude()
+  {
+    return lat;
+  }
+
+  public double getLongitude()
+  {
+    return lng;
+  }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Iteration v2: View (Report)</h1>
+<p>In this iteration we shall develop the facility to generate a report. </p>
+<p>Create a folder views/ReportController and add the following files.</p>
+<p>Filename: ReportController/index.html</p>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Report Request&#39; /}
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/account&quot;&gt;Sign Up&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/inputdata&quot;&gt;Input data&lt;/a&gt;
+  &lt;a class=&quot;ui active item&quot; href=&quot;/report&quot;&gt;Report&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/logout&quot;&gt;Log Out&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;section class=&quot;ui segment&quot;&gt;   
+  &lt;h4&gt;Define the region for which you require a report&lt;/h4&gt;
+  &lt;form action=&quot;/report/generateReport&quot; method=&quot;POST&quot;&gt;    
+    Size and position circle to select region for report 
+    &lt;div id=&quot;map_canvas&quot;&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;ui blue submit button&quot; onclick=&quot;requestReport()&quot;&gt;Generate Report&lt;/button&gt;
+    &lt;div style=&quot;visibility: hidden&quot; name=&quot;circledata&quot; id=&quot;circledata&quot;&gt;
+      &lt;input type=&quot;text&quot;  id=&quot;radius&quot; name=&quot;radius&quot;&gt;
+      &lt;input type=&quot;text&quot;  id=&quot;latcenter&quot; name=&quot;latcenter&quot;&gt;
+      &lt;input type=&quot;text&quot;  id=&quot;lngcenter&quot; name=&quot;lngcenter&quot;&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/section&gt;
+
+&lt;script src=&quot;https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&quot;&gt;&lt;/script&gt;</code></pre>
+<p>The second view file to be included is:</p>
+<p>Filename: renderReport.html</p>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Output&#39; /}
+
+   &lt;nav class=&quot;ui menu&quot;&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/account&quot;&gt;Sign Up&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/inputdata&quot;&gt;Input data&lt;/a&gt;
+    &lt;a class=&quot;ui active item&quot; href=&quot;/report&quot;&gt;Report&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/logout&quot;&gt;Log Out&lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;section class=&quot;ui segment&quot;&gt;
+    &lt;h4&gt;Report&lt;/h4&gt;           
+
+        &lt;section class=&quot;ui segment&quot;&gt;
+            &lt;table class =&quot;ui table segment&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Commissioned by&lt;/th&gt;
+                        &lt;th&gt;Search: radius(m)&lt;/th&gt;
+                        &lt;th&gt;centre(latitude)&lt;/th&gt;
+                        &lt;th&gt;centre(longitude)&lt;/tdh&gt;
+                    &lt;/tr&gt;       
+                &lt;/thead&gt;
+                &lt;tbody&gt;           
+                    &lt;tr&gt;
+                      &lt;td&gt;${user}&lt;/td&gt;
+                      &lt;td&gt;${circle.radius.format(&#39;#.0&#39;)}&lt;/td&gt;
+                      &lt;td&gt;${circle.latcenter.format(&#39;#.00000&#39;)}&lt;/td&gt;
+                      &lt;td&gt;${circle.lngcenter.format(&#39;#.00000&#39;)}&lt;/td&gt;
+                    &lt;/tr&gt;         
+                &lt;/tbody&gt;            
+            &lt;/table&gt; 
+
+            &lt;table class=&quot;ui five column celled table segment&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+
+                      &lt;th&gt;Residence Id&lt;/th&gt;
+                      &lt;th&gt;Residence User&lt;/th&gt;
+                      &lt;th&gt;Date registered&lt;/th&gt;
+                      &lt;th&gt;Rented?&lt;/th&gt;
+                      &lt;th&gt;Rent(€)&lt;/th&gt;
+                      &lt;th&gt;Bedrooms&lt;/th&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    #{list items:residences, as:&#39;residence&#39;}
+                      &lt;tr&gt;
+                        &lt;td&gt;${residence.id}&lt;/td&gt;
+                        &lt;td&gt;${residence.user}&lt;/td&gt;            
+                        &lt;td&gt;${residence.dateRegistered.format(&#39;dd MMMM yyyy&#39;, &#39;en&#39;)}&lt;/td&gt;
+                        &lt;td&gt;${residence.rented}&lt;/td&gt;
+                        &lt;td&gt;${residence.rent.format(&#39;#&#39;)}&lt;/td&gt;
+                        &lt;td&gt;${residence.numberBedrooms}&lt;/td&gt;
+                      &lt;/tr&gt;
+                   #{/list}          
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;</code></pre>
+<p>Add the following report navigation element to the other templates:</p>
+<ul>
+<li>Accounts<ul>
+<li>index</li>
+<li>login</li>
+</ul>
+</li>
+<li>Home<ul>
+<li>index</li>
+</ul>
+</li>
+<li>InputData<ul>
+<li>index</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;a class=&quot;ui item&quot; href=&quot;/report&quot;&gt;Report&lt;/a&gt;</code></pre>
+<p>A small addition to the model User class is required.</p>
+<p>It is necessary to override <em>toString</em> because of this statement above:</p>
+<pre><code>&lt;td&gt;${user}&lt;/td&gt;</code></pre>
+<p>Were <em>toString</em> not overridden this statement would output something like:</p>
+<p><em>User[1]</em></p>
+<p>whereas we require the user&#39;s full name (firstname + lastname) to be rendered.</p>
+<pre><code>  public String toString()
+  {
+    return firstName + &quot; &quot; + lastName;
+  }</code></pre>
+<p>In routes file add:</p>
+<pre><code>
+#Report
+GET  /report                                  ReportController.index
+POST /report/generateReport                   ReportController.generateReport</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Iteration v2: Controller (ReportController)</h1>
+<p>Here is the controller code:</p>
+<p>Filename : ReportController.java</p>
+<pre><code>package controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Residence;
+import models.User;
+import play.mvc.Before;
+import play.mvc.Controller;
+import utils.Circle;
+import utils.Geodistance;
+import utils.LatLng;
+
+public class ReportController extends Controller
+{
+  /**
+   * This method executed before each action call in the controller.
+   * Checks that a user has logged in.
+   * If no user logged in the user is presented with the log in screen.
+   */
+  @Before
+  static void checkAuthentification()
+  {
+    if(session.contains(&quot;logged_in_userid&quot;) == false)
+      Accounts.login();
+  }
+
+  /**
+   *  Generates a Report instance relating to all residences within circle
+   * @param radius    The radius (metres) of the search area
+   * @param latcenter The latitude of the centre of the search area
+   * @param lngcenter The longtitude of the centre of the search area
+   */
+  public static void generateReport(double radius, double latcenter, double lngcenter)
+  {
+    // All reported residences will fall within this circle
+    Circle circle = new Circle(latcenter, lngcenter, radius);
+    User user = Accounts.getCurrentUser();
+    List&lt;Residence&gt; residences = new ArrayList&lt;Residence&gt;();
+    // Fetch all residences and filter out those within circle
+    List&lt;Residence&gt; residencesAll = Residence.findAll();
+    for (Residence res : residencesAll)
+    {
+      LatLng residenceLocation = res.getGeolocation();
+      if (Geodistance.inCircle(residenceLocation, circle))
+      {
+        residences.add(res);
+      }
+    }
+    render(&quot;ReportController/renderReport.html&quot;, user, circle, residences);
+  }
+
+  /**
+   * Render the views/ReporController/index.html template
+   * This presents a map and resizable circle to indicate a search area for residences
+   */
+  public static void index()
+  {
+    render();
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Iteration v2: Residence (model)</h1>
+<p>Some changes are necessary to <em>models/Residence.java</em>.</p>
+<p>Add the following method (used above) to the Residence.java file. </p>
+<ul>
+<li>Its pupose is the return the geolocation of the current residence in the form of a LatLng object.</li>
+<li>LatLng is a class we have written to house the latitude and longitude as a pair of type double. </li>
+<li>The geolocation field in Residence, obtained from the view input, comprises a concatenation of 3 strings: <ul>
+<li>latitude + , + longitude. </li>
+<li>For example the position {50.5, -7.5} would be represented as a String &quot;50.5,-7.5&quot;. </li>
+<li>The method LatLng.toLatLng splits this into a pair of double values.</li>
+</ul>
+</li>
+</ul>
+<p>The class LatLng is defined in the myrent/utils package.</p>
+<pre><code>
+  public LatLng getGeolocation()
+  {
+    return LatLng.toLatLng(this.geolocation);
+  }</code></pre>
+<p>You should also add the import statement:</p>
+<pre><code>
+import utils.LatLng;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Iteration v2: View (Report : GoogleMap)</h1>
+<p>The map which facilitates definition of a circular zone within which residences to be reported on is generated by JavaScipt code. </p>
+<p>The file containing this code should be located in public/javascripts directory.</p>
+<p>A script call is present towards the end of the view file ReportController/index.html.</p>
+<pre><code>&lt;script src=&quot;@{&#39;/public/javascripts/reportmap.js&#39;}&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Filename reportmap.js</p>
+<pre><code class="lang-javascript">
+let circle;
+function requestReport() {
+  const center = circle.getCenter();
+  const latcenter = center.lat().toString();
+  const lngcenter = center.lng().toString();
+  const radius = circle.getRadius().toString();
+  $(&#39;#radius&#39;).val(radius);
+  $(&#39;#latcenter&#39;).val(latcenter);
+  $(&#39;#lngcenter&#39;).val(lngcenter);
+}
+
+function initialize() {
+  const center = new google.maps.LatLng(53.347298, -6.268344);
+  const initRadius = 10000;
+  const mapProp = {
+    center: center,
+    zoom: 7,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+  };
+  const mapDiv = document.getElementById(&#39;map_canvas&#39;);
+  const map = new google.maps.Map(mapDiv, mapProp);
+  mapDiv.style.width = &#39;500px&#39;;
+  mapDiv.style.height = &#39;500px&#39;;
+
+  circle = new google.maps.Circle({
+    center: center,
+    radius: initRadius,
+    strokeColor: &#39;#0000FF&#39;,
+    strokeOpacity: 0.4,
+    strokeWeight: 1,
+    fillColor: &#39;#0000FF&#39;,
+    fillOpacity: 0.4,
+    draggable: true,
+  });
+  circle.setEditable(true);//allows constying radius be dragging anchor point
+  circle.setMap(map);
+}
+
+google.maps.event.addDomListener(window, &#39;load&#39;, initialize);</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Iteration v2: Logout</h1>
+<p>In controllers/Accounts.java</p>
+<p>The following Action will facilitate logging out:</p>
+<pre><code>  public static void logout()
+  {
+    setSessionLogout();
+    Home.index();
+  }
+
+  /*
+   * clear session on logout
+   */
+  protected static void setSessionLogout()
+  {
+    if (session.get(&quot;logged_status&quot;) != null &amp;&amp; session.get(&quot;logged_status&quot;).equals(&quot;logged_in&quot;))
+    {
+      session.clear();
+      session.put(&quot;logged_status&quot;, &quot;logged_out&quot;);
+    }
+  }</code></pre>
+<p>Add the following to the Accounts section in conf/routes:</p>
+<pre><code>#Logout
+GET /logout                                   Accounts.logout</code></pre>
+<p>Modify navigation bars in all view templates to include the following:</p>
+<pre><code>    &lt;a class=&quot;ui item&quot; href=&quot;/logout&quot;&gt;Log Out&lt;/a&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Iteration v2: Conclusion</h1>
+<p>This concludes iteration v2. You may conduct a superficial test as follows:</p>
+<ul>
+<li>register</li>
+<li>log in.</li>
+<li>input one residence at the default overlay marker position.</li>
+<li>generate a report, leaving the overlay circle in its default position.</li>
+<li>a report with one residence should be generated.</li>
+<li>move the overlay circle off the default location.</li>
+<li>generate a report: it should not contain a residence.</li>
+<li>generate a report again leaving the circle in the default position: the residence should again appear in the report.</li>
+<li>log out, log in as a new user and input residence data.</li>
+<li>generate a report and satify yourself that the output is correct.</li>
+</ul>
+<p>Commit this iteration to your <em>myrent</em> repository, add a tag and push all to remote repo.</p>
+<pre><code>git add .
+git commit -m &#39;iteration  v2&#39;
+git tag -a v2 -m &#39;iteration v2&#39;
+git push &amp;&amp; git push --tags</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

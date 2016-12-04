@@ -1,0 +1,919 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder">  Web Dev  Studio</h2>
+    <p> All Labs in the Course </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    John Fitzgerald.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic00/book-a/index.html">
+      Welcome
+    </a>
+    
+    <a class="item" href="topic00/book-b/index.html">
+      Venue
+    </a>
+    
+    <a class="item" href="topic00/book-c/index.html">
+      Outline
+    </a>
+    
+    <a class="item" href="topic01/book-a/index.html">
+      Basic-Git
+    </a>
+    
+    <a class="item" href="topic01/book-b/index.html">
+      Donation
+    </a>
+    
+    <a class="item" href="topic01(solns)/book-v0/index.html">
+      Solution-v0
+    </a>
+    
+    <a class="item" href="topic01(solns)/book-v1/index.html">
+      Solution-v1
+    </a>
+    
+    <a class="item" href="topic01(solns)/book-v2/index.html">
+      Solution-v2
+    </a>
+    
+    <a class="item" href="topic01(solns)/book-v3/index.html">
+      Solution-v3
+    </a>
+    
+    <a class="item" href="topic01(solns)/book-v4/index.html">
+      Solution-v4
+    </a>
+    
+    <a class="item" href="topic02/book-a/index.html">
+      JavaScript-I
+    </a>
+    
+    <a class="item" href="topic02/book-b/index.html">
+      JavaScript-II
+    </a>
+    
+    <a class="item" href="topic03/book-a/index.html">
+      MyRent
+    </a>
+    
+    <a class="item" href="topic03/book-b/index.html">
+      JavaScript III
+    </a>
+    
+    <a class="item" href="topic03/book-c/index.html">
+      JavaScript IV (Maps)
+    </a>
+    
+    <a class="item" href="topic03(solns)/book-v0/index.html">
+      Solution-v0
+    </a>
+    
+    <a class="item" href="topic03(solns)/book-v1/index.html">
+      Solution-v1
+    </a>
+    
+    <a class="item" href="topic03(solns)/book-v2/index.html">
+      Solution-v2
+    </a>
+    
+    <a class="item" href="topic03(solns)/book-v3/index.html">
+      Solution-v3
+    </a>
+    
+    <a class="item" href="topic04/book-a/index.html">
+      Circle-map-overlay
+    </a>
+    
+    <a class="item" href="topic04/book-b/index.html">
+      Polygon-map-overlay
+    </a>
+    
+    <a class="item" href="topic04/book-c/index.html">
+      JavaScript VI (SemanticUI)
+    </a>
+    
+    <a class="item" href="topic04/book-d/index.html">
+      Ajax
+    </a>
+    
+    <a class="item" href="topic05/book-a/index.html">
+      Advanced-Git-I
+    </a>
+    
+    <a class="item" href="topic05/book-b/index.html">
+      Advanced-Git-II
+    </a>
+    
+    <a class="item" href="topic05/book-c/index.html">
+      TDD
+    </a>
+    
+    <a class="item" href="topic05/book-d/index.html">
+      WitPress
+    </a>
+    
+    <a class="item" href="topic05(solns)/book-v0/index.html">
+      Solution-v0
+    </a>
+    
+    <a class="item" href="topic05(solns)/book-v1/index.html">
+      Solution-v1
+    </a>
+    
+    <a class="item" href="topic05(solns)/book-v2/index.html">
+      Solution-v2
+    </a>
+    
+    <a class="item" href="topic06-project/book-a/index.html">
+      Project (Resources)
+    </a>
+    
+    <a class="item" href="topic06-project/book-b/index.html">
+      Assignment Tips
+    </a>
+    
+    <a class="item" href="topic06-project/book-c/index.html">
+      Heroku
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+        
+  <a class="ui raised link card" href="topic00/book-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Welcome </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic00/book-a/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Welcome to the Waterford Institute of Technology (WIT) ICTSkills Summer School, also referred to as ICTSkills Studio. The course spans six consecutive weeks commencing late May and ending early July. The venue is the WIT West Campus at Carriganore. Course content includes the <em>git</em> versioning system, an introduction to the <em>JavaScript</em> language, dynamic web development and a module on oral and written communications. The course is a five credit module. Grading is based on continuous assessment and a web application development project.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic00/book-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Venue </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic00/book-b/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The course will be run on Tuesdays and Wednesdays and industry presentations will take place on Thursdays in the boardroom at Carriganore. You may view maps of the location and route in the next step. Accommodation will also be available elsewhere for work on Mondays and Fridays and for the period between the end of the course and beginning of the autumn semester at a venue or venues to be advised.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic00/book-c/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Outline </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic00/book-c/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Here we present an outline timeline and the assignment grading rubric.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01/book-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Basic-Git </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01/book-a/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Lab describing how to use <strong>git</strong> to manage a project by creating a local repository, inserting the project files into the repository and creating and managing a tracking copy of the repository on a cloud-based server.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01/book-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Donation </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01/book-b/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>   Develop a dynamic web application called <em>donation</em> that will allow a user to register, log in and log out, make donations and print a report of all donations.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01(solns)/book-v0/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v0 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01(solns)/book-v0/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building Donation application.</strong>  - Iteration v0    - Welcome    - Register    - Log in    - Log out</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01(solns)/book-v1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v1 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01(solns)/book-v1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building Donation application.</strong>  - Iteration v1      - Donation controller and view placeholder</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01(solns)/book-v2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v2 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01(solns)/book-v2/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building Donation application.</strong>  - Iteration v2      - Donation module: implementation</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01(solns)/book-v3/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v3 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01(solns)/book-v3/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building Donation application.</strong>  - Iteration v3      - Progress bar implementation in Donation module. </p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic01(solns)/book-v4/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v4 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic01(solns)/book-v4/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building Donation application.</strong>  - Iteration v4      - Report</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02/book-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> JavaScript-I </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02/book-a/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Introducing the fundamentals of the javascript language, becoming familiar with some of the different sources of a selection of javascript resources. Explore Google Chrome&#39;s javascript-based tools. Understand basic types. Acquire an understanding of the roles that arrays and objects play in a javascript program. All using JetBrains&#39; WebStorm IDE.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic02/book-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> JavaScript-II </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic02/book-b/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Examine some of JavaScript&#39;s constructs such as conditionals, loops, arrays, objects, functions and scope. Understanding some concepts such as Truthy and Falsy values. simple static web site, include an external JavaScript file and use Google Chrome developer tools to debug into the script at runtime.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/book-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> MyRent </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/book-a/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><em>myrent</em>, a prototype web application to allow a user to register and authenticate, to gather data on residential properties, to store the data in a database and generate reports on properties located within specified regions.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/book-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> JavaScript III </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/book-b/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Use both native JavaScript and JQuery to access and manipulate the DOM, for example by hiding and revealing nodes (elements).</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/book-c/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> JavaScript IV (Maps) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/book-c/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Demonstrate how to embed a map in a web page and add a marker or overlay. Enable the marker so that it may be dragged and dropped. Capture the marker&#39;s geolocation and dynamically display this on the webpage.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03(solns)/book-v0/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v0 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03(solns)/book-v0/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building MyRent application</strong>- Iteration v0 (Register)</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03(solns)/book-v1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v1 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03(solns)/book-v1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building MyRent application</strong>- Iteration v1 (Data)</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03(solns)/book-v2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v2 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03(solns)/book-v2/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building MyRent application</strong>- Iteration v2 (Report)</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03(solns)/book-v3/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v3 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03(solns)/book-v3/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building MyRent application</strong>- Iteration v3 (Contact)This is an optional iteration.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/book-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Circle-map-overlay </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/book-a/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Use JavaScript to manipulate map using resizable and moveable circular overlays.This technique used in searching for objects within a specific region.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/book-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Polygon-map-overlay </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/book-b/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Manually create a polygon-shaped overlay on a Google map and filter out marker overlays located outside polygon. Employ a jQuery ajax call to fetch users and their geolocations from the server.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/book-c/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> JavaScript VI (SemanticUI) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/book-c/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Semantic elements such as dropdown and radio button require initialization. Semantic also facilitates form validation. In this short tutorial a dropdown is initialized, form validation is invoked and use of a Semantic progress bar is demonstrated. jQuery ajax is employed to fetch and render data. <span style="color:red">Warning:</span> This lab applies to Semantic UI version 1x. See the appendix for Semantic 2 material.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic04/book-d/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Ajax </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic04/book-d/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Asynchronous JavaScript &amp; XML. Used to manage transmission of data between client (web) and server. The ajax operation takes place in the background. Facilitates updates of targetted areas on page without requirement to refresh entire page.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/book-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Advanced-Git-I </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/book-a/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>The lab describes how a two-person team might collaborate to use Git to manage a project. Individually owned and shared material is used to demonstrate where conflicts may be expected and how to resolve them when they arise.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/book-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Advanced-Git-II </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/book-b/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>We explore how merging and rebasing may be used to manage Git history. Use of simple examples should provide confidence in using these features to produce a professional-looking project history.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/book-c/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> TDD </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/book-c/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A Play model set composed of three entity-related classes is developed using a Test Driven Development (TDD) approach. The individual model classes are developed within individual test classes. The tests may be run individually or as a group within a test suite, the development of which is the final step in the lab.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05/book-d/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> WitPress </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05/book-d/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><em>witpress</em>, a prototype web application that allows an authenticated user to manage blog posts and comments on posts. An authenticated user may create a blog post, delete from its existing list of posts, add comments and access the public blog directory.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05(solns)/book-v0/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v0 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05(solns)/book-v0/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building WitPress application</strong>- Iteration v0 (Authentication)</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05(solns)/book-v1/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v1 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05(solns)/book-v1/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building WitPress application</strong>- Iteration v1 (Post &amp; Comment)</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic05(solns)/book-v2/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Solution-v2 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic05(solns)/book-v2/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Step-by-step guide to building WitPress application</strong>- Iteration v2 (Public Blog, About, Contact)</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-project/book-a/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Project (Resources) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-project/book-a/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>Assignment</strong>: The submission process comprises a cover page to be uploaded by means of a dropbox on Moodle. On the page should be links to the three project repositories on Bitbucket and the url to the completed application, deployed on Heroku. A link to download a cover page template is provided in this resource.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-project/book-b/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Assignment Tips </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-project/book-b/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This short lab provides some hints on how to implement the more difficult parts of the assignment. The topics discussed are Ajax, Global abatement (maps), validation and manipulation of Semantic controls (dropdown and edit box), dynamic updating of map markers, specifying alternative Play templates and, lastly, deployment of a non-master branch to Heroku.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic06-project/book-c/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Heroku </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic06-project/book-c/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Tutorial on deployment of a Play web application to the cloud (Heroku).</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

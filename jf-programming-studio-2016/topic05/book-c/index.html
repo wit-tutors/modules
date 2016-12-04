@@ -1,0 +1,1060 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      05: WitPress prototype web app, TDD & Advanced Git.
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="TDD">
+      TDD
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="Appendix">
+      Appendix
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="TDD">
+        <h1>Test Driven Development (TDD)</h1>
+<p>A Play model set composed of three entity-related classes is developed using a Test Driven Development (TDD) approach. The individual model classes are developed within individual test classes. The tests may be run individually or as a group within a test suite, the development of which is the final step in the lab.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction</h1>
+<p>This lab is based on a tutor version of a practically completed MyRent play application, the subject of this year&#39;s summer school (studio) project.</p>
+<p>The lab provides a step by step guide on how to build a set of Play model classes: Landlord, Tenant and Residence. </p>
+<p>The reason we are providing this lab is not for students to attempt direct copying of the material into their projects. It is unlikely that this will be feasible. Rather, it is to refresh the knowledge they have already gained in earlier parts of the course in this field. The Java Persistence Application Programming Interface (JPA) is complex. This lab deals only with a small subset of the technology. This, however, should be sufficient for our purposes.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Setup</h1>
+<p>Open a terminal and change directory into your workspace.</p>
+<p>Run:</p>
+<pre><code>play new myrent-model-test</code></pre>
+<p>Change directory into <code>myrent-model-test</code> and run:</p>
+<pre><code>play eclipsify</code></pre>
+<p>Open Eclipse and import <code>myrent-model-test</code>.</p>
+<p>In the folder <code>test,</code> create a package <code>theTests</code>. </p>
+<ul>
+<li>The individual tests and, ultimately, the test suite, will be located here.</li>
+</ul>
+<p>Expand the <code>apps</code> folder. Note the presence of <code>controllers</code>, <code>models</code> and <code>views</code>, a structure with which we are now well familiar.</p>
+<p>In the next step we shall introduce a simple Landlord model and proceed to write and then run a JUnit test on this class.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Landlord</h1>
+<p>Add this class to the <code>models</code> folder:</p>
+<pre><code> package models;
+
+import javax.persistence.Entity;
+import play.db.jpa.Model;
+
+@Entity
+public class Landlord extends Model
+{
+  public String firstName;
+  public String lastName;
+
+  public String email;
+  public String password;
+
+  public Landlord(String firstName, String lastName, String email) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    password = &quot;secret&quot;;
+  }
+
+  public static Landlord findByEmail(String email)
+  {
+    return find(&quot;byEmail&quot;, email).first();
+  }
+
+  /**
+   * For simplicity we choose to consider 2 Landlord objects equal if their emails match.
+   * @param The Object (a Landlord object) to be compared to this object
+   * @return True if the email of this object matches the argument&#39;s email.
+   */
+  @Override
+  public boolean equals(Object o)
+  {
+    return email.equalsIgnoreCase(((Landlord)o).email);    
+  }
+
+}</code></pre>
+<p>Here is the test code, a class named LandlordTest. Create it in <code>test\theTests</code>.</p>
+<pre><code>package theTests;
+
+import org.junit.*;
+import java.util.*;
+import play.test.*;
+import models.*;
+
+public class LandlordTest extends UnitTest
+{
+
+  private Landlord landlord;
+
+  @Before
+  public void setup()
+  {
+    landlord = new Landlord(&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;);
+    landlord.save();
+  }
+
+  @After
+  public void teardown()
+  {
+    landlord.delete();
+  }
+
+  @Test
+  public void testCreate()
+  {
+    Landlord owner = Landlord.findByEmail(&quot;homer@simpson.com&quot;);
+    // Positive test
+    assertEquals(landlord.equals(owner), true);
+    // Negative test
+    assertNull(Landlord.findByEmail(&quot;marge@simpson.com&quot;));
+  }  
+
+}</code></pre>
+<p>Run the test by selecting LandlordTest, right clicking and selecting `Run As | JUnit Test&#39; in the menu that opens as shown in Figure 1.</p>
+<p>The expected output is shown in Figure 2.</p>
+<p><img src="img/01.png" alt="Figure 1: Run JUnit Test"></p>
+<p><img src="img/02.png" alt="Figure 2: Successful JUnit test"></p>
+<p>We shall now run the test from the commandline, the Tests runner in the browser and use the H2 console to examine the Landlord object in the database. But first make a temporary change to the LandlordTest.teardown method: comment out <code>landlord.delete()</code>. Otherwise the database will be empty. Do not forget to remove the comment after the test. As you will see later in the lab, successful deletion becomes quite complicated and it is therefore particularly important to fully exercise this for all tests.</p>
+<p>In your project, from the commandline, run:</p>
+<pre><code>play test</code></pre>
+<p>Then, in a browser, navigate to:</p>
+<pre><code>http://localhost:9000/@tests</code></pre>
+<p>Select the <code>LandlordTest</code> and press Start!. The colour of the banner should change from blue to green indicating a successful test.</p>
+<p><img src="img/03.png" alt="Figure 3: Tests runner"></p>
+<p>Open the H2 console and view the database.</p>
+<pre><code>http://localhost:9000/@db</code></pre>
+<p><img src="img/04.png" alt="Figure 4: Database"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Tenant</h1>
+<p>Add a Tenant class to the models folder:</p>
+<pre><code>package models;
+
+import javax.persistence.Entity;
+import play.db.jpa.Model;
+
+@Entity
+public class Tenant extends Model
+{
+  public String firstName;
+  public String lastName;
+  public String email;
+  public String password;
+
+  public Tenant(String firstName, String lastName, String email)
+  {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+  }
+
+  public static Tenant findByEmail(String email)
+  {
+    return find(&quot;byEmail&quot;, email).first();
+  }
+
+  /**
+   * For simplicity we choose to consider 2 Tenant objects equal if their emails match.
+   * @param The Object (a Landlord object) to be compared to this object
+   * @return True if the email of this object matches the argument&#39;s email.
+   */
+  @Override
+  public boolean equals(Object o)
+  {
+    return email.equalsIgnoreCase(((Tenant)o).email);    
+  }
+
+}</code></pre>
+<p>Here is the corresponding test.</p>
+<pre><code>package theTests;
+
+import org.junit.*;
+
+import models.Tenant;
+
+import java.util.*;
+import play.test.*;
+import theTests.*;
+
+public class TenantTest extends UnitTest
+{
+
+  private Tenant tenant;
+
+  @Before
+  public void setup()
+  {
+    tenant = new Tenant(&quot;barney&quot;, &quot;gumble&quot;, &quot;barney@gumble.com&quot;);
+    tenant.save();
+  }
+
+  @After
+  public void teardown()
+  {
+    tenant.delete();
+  }
+
+  @Test
+  public void testCreate()
+  {
+    Tenant renter = Tenant.findByEmail(&quot;barney@gumble.com&quot;);
+    // Positive test
+    assertEquals(tenant.equals(renter), true);
+    // Negative test
+    assertNull(Tenant.findByEmail(&quot;marge@simpson.com&quot;));
+  }
+
+}</code></pre>
+<p>Run the tests, following the same procedure as in the previous step.</p>
+<ul>
+<li>Observe that there are now three units tests displayed in the browser, the BasicTest, the LandlordTest and the TenantTest.</li>
+</ul>
+<p>The database output is shown in Figure 1.</p>
+<p><img src="img/05.png" alt="Figure 1: Database showing one tenant"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Residence</h1>
+<p>Here is a walking skeleton of a Residence model class:</p>
+<pre><code>package models;
+
+import javax.persistence.Entity;
+import play.db.jpa.Model;
+
+
+@Entity
+public class Residence extends Model
+{
+
+
+  // eircodes introduced for all RoI properties July 2015
+  public String eircode;
+
+  /**
+   * Constructs a default Residence object. Field values chosen arbitrarily.
+   */
+  public Residence()
+  {
+    this.eircode = &quot;X000 Y000&quot;; // A non-existent eircode for test only
+  }
+
+  // Introduced for JUnit test
+  public Residence(String eircode) 
+  {
+    this.eircode = eircode;
+  }
+
+  public static Residence findByEircode(String eircode)
+  {
+    return find(&quot;byEircode&quot;, eircode).first();
+  }
+
+  /**
+   * For simplicity we choose to consider 2 Residence objects equal if their eircodes match.
+   * @param The Object (a Residence object) to be compared to this object
+   * @return True if the eircode of this object matches the argument&#39;s eircode.
+   */
+  @Override
+  public boolean equals(Object o)
+  {
+
+    if (o instanceof Residence)
+    {
+      return eircode.equalsIgnoreCase(((Residence) o).eircode);
+    }
+    return false;
+  }
+}</code></pre>
+<p>And here is the test:</p>
+<pre><code>package theTests;
+import org.junit.*;
+
+import models.Residence;
+
+import java.util.*;
+import play.test.*;
+import theTests.*;
+
+public class ResidenceTest extends UnitTest {
+
+  private Residence residence;
+
+
+  @Before
+  public void setup()
+  {
+    residence = new Residence();
+    residence.save();
+  }
+
+  @After
+  public void teardown()
+  {
+    residence.delete();
+
+  }
+
+  @Test
+  public void testCreate()
+  {
+    String eircode = residence.eircode;
+    Residence r1 = Residence.findByEircode(eircode);
+    // Positive test
+    assertEquals(r1.equals(residence), true);
+    // Negative test
+    assertNull(Residence.findByEircode(&quot;XXX YYY&quot;));   
+  }
+
+}</code></pre>
+<p>Carry out the same checks as detailed previously. Always check the database an remove the comments from the teardown method when done.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Landlord Residence</h1>
+<p>We shall now establish an entity relationship between a landlord and residence.</p>
+<p>This is the relationship we wish to capture: </p>
+<ul>
+<li>A landlord may own many residences.</li>
+<li>A residence may have only one landlord.</li>
+</ul>
+<p>Here are the additional code snippets that form this relationship:</p>
+<pre><code>import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.ManyToOne;
+import javax.persistence.CascadeType;
+...
+
+@Entity
+public class Landlord extends Model
+{
+  @OneToMany(mappedBy=&quot;landlord&quot;, cascade=CascadeType.ALL)
+  public List&lt;Residence&gt; residences = new ArrayList&lt;Residence&gt;();
+  ...
+}</code></pre>
+<pre><code>import javax.persistence.ManyToOne;
+...
+
+@Entity
+public class Residence extends Model
+{
+
+  @ManyToOne
+  public Landlord landlord;
+  ...
+}</code></pre>
+<p>Here is the test code:</p>
+<pre><code>package theTests;
+
+import org.junit.*;
+
+import models.Landlord;
+import models.Residence;
+
+import java.util.*;
+import play.test.*;
+import theTests.*;
+import play.*;
+import play.jobs.*;
+import play.test.*;
+/**
+ * Create a landlord and a residence
+ * Establish entity relationship
+ *
+ */
+public class LandlordResidence extends UnitTest
+{
+
+  private Landlord landlord;
+  private Residence residence1;
+
+  @Before
+  public void setup()
+  {
+    landlord = new Landlord(&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;); 
+    landlord.save(); 
+    residence1 = new Residence(); 
+    landlord.residences.add(residence1);
+    residence1.landlord = landlord;
+    residence1.save();
+    landlord.save();
+  }
+
+  @After
+  public void teardown()
+  {
+    deleteLandlordResidences();
+
+  }
+
+  private void deleteLandlordResidences()
+  {
+    List&lt;Residence&gt; residences = Residence.findAll();
+    for (int i = 0; i &lt; residences.size(); i += 1) 
+    {
+      Residence residence = residences.get(0);
+      landlord.residences.remove(residence);
+      landlord.save();
+      residence.delete();
+    }
+    landlord.delete();
+  }
+
+  @Test
+  public void testEntities()
+  {
+
+    Landlord homer = Landlord.findByEmail(&quot;homer@simpson.com&quot;);
+    Landlord marge = Landlord.findByEmail(&quot;marge@hotmail.com&quot;);
+
+    // Positive test
+    assertEquals(homer.equals(landlord), true);
+    // Negative test
+    assertNull(marge);
+  }
+
+
+}</code></pre>
+<p>Run all tests and move to the next step only when all succeed.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Tenant Residence</h1>
+<p>Establish and test the relationship between Tenant and Residence.</p>
+<p>Here is a snippet from model Tenant showing the additional code.</p>
+<pre><code>import javax.persistence.OneToOne;
+
+
+@Entity
+public class Tenant extends Model {
+
+  @OneToOne
+  public Residence residence;
+  ...
+}</code></pre>
+<p>The Residence model additional code:</p>
+<pre><code>import javax.persistence.OneToOne;
+
+
+@Entity
+public class Residence extends Model {
+
+
+  @OneToOne(mappedBy = &quot;residence&quot;)
+  public Tenant tenant;
+  ...
+}</code></pre>
+<p>The test code:</p>
+<pre><code>package theTests;
+
+import org.junit.*;
+
+import models.Residence;
+import models.Tenant;
+
+import java.util.*;
+import play.test.*;
+import theTests.*;
+
+public class TenantResidence extends UnitTest
+{
+
+  private Tenant tenant;
+  private Residence residence;
+
+  @Before
+  public void setup()
+  {
+    residence = new Residence();
+    residence.save();
+
+    tenant = new Tenant(&quot;barney&quot;, &quot;gumble&quot;, &quot;barney@gumble.com&quot;);
+    tenant.residence = residence;
+    tenant.save();
+
+    residence.tenant = tenant;
+    residence.save();
+  }
+
+  @After
+  public void teardown()
+  {
+    tenant.residence = null;
+    tenant.save();
+    residence.delete();
+    tenant.delete();
+  }
+
+  @Test
+  public void testCreate()
+  {
+    Tenant renter = Tenant.findByEmail(&quot;barney@gumble.com&quot;);
+    // Positive test
+    assertEquals(tenant.equals(renter), true);
+    // Negative test
+    assertNull(Tenant.findByEmail(&quot;marge@simpson.com&quot;));
+  }
+
+}</code></pre>
+<p>Fully test as in previous steps. Additionally conduct the following experiments and understand the changed outputs:</p>
+<ul>
+<li>Remove the <code>(mappedBy=&quot;residence&quot;)</code> from Residence.<ul>
+<li>Run all tests. In particular, if the tests succeed, study the database changes if any.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Remove <code>(mappedBy=&quot;residence&quot;)</code> from Residence.<ul>
+<li>Add <code>(mappedBy=&quot;tenant&quot;)</code> immediately following the <code>OneToOne</code> annotation in Tenant model.</li>
+<li>Run all tests. In particular, if the tests succeed, study the database changes if any.</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Landlord Tenant Residence</h1>
+<p>Here is test code that exercises all three model classes followed by test suite code to run all tests in succession.</p>
+<pre><code>package theTests;
+
+import org.junit.*;
+
+import models.Landlord;
+import models.Residence;
+import models.Tenant;
+
+import java.util.*;
+import play.test.*;
+import theTests.*;
+import play.*;
+import play.jobs.*;
+import play.test.*;
+
+public class LandlordTenantResidence extends UnitTest
+{
+
+  private Landlord landlord;
+  private Tenant tenant1;
+  private Residence residence1;  
+
+  @Before
+  public void setup()
+  {
+
+    landlord = new Landlord(&quot;homer&quot;, &quot;simpson&quot;, &quot;homer@simpson.com&quot;); 
+    landlord.save(); 
+
+    residence1 = new Residence(&quot;XOOO, Y123&quot;); 
+    landlord.residences.add(residence1);
+    residence1.landlord = landlord;
+    residence1.save();
+    landlord.save();
+
+    tenant1 = new Tenant(&quot;barney&quot;, &quot;gumble&quot;, &quot;barney@gumble.com&quot;); 
+    tenant1.residence = residence1;
+    tenant1.save();  
+
+    residence1.tenant = tenant1;
+    residence1.save();
+  }
+
+  @After
+  public void teardown()
+  {
+    List&lt;Residence&gt; residences = Residence.findAll();
+    for (int i = 0; i &lt; residences.size(); i += 1) 
+    {
+      Residence residence = residences.get(0);
+
+      Tenant tenant = Tenant.findById(residence.id);
+      tenant.residence = null;
+      tenant.save();      
+      tenant.delete();
+
+      landlord.residences.remove(residence);
+      landlord.save();
+      residence.tenant = null;
+      residence.delete(); // Design decision to bind residence and landlord
+
+    }
+    landlord.delete();
+  }
+
+  @Test
+  public void testFindLandlord()
+  {
+
+    Landlord homer = Landlord.findByEmail(&quot;homer@simpson.com&quot;);
+    Landlord marge = Landlord.findByEmail(&quot;marge@hotmail.com&quot;);
+
+    // Positive test
+    assertEquals(homer.equals(landlord), true);
+
+    // Negative test
+    assertNull(marge);
+
+  }
+
+  @Test
+  public void testFindTenant()
+  {
+    Tenant renter = Tenant.findByEmail(&quot;barney@gumble.com&quot;);
+    // Positive test
+    assertEquals(tenant1.equals(renter), true);
+    // Negative test
+    assertNull(Tenant.findByEmail(&quot;marge@simpson.com&quot;));
+  }
+
+  @Test
+  public void testFindResidence()
+  {
+    Residence residence = Residence.findByEircode(&quot;XOOO, Y123&quot;);
+
+    // Positive test
+    assertEquals(residence.eircode.equals(&quot;XOOO, Y123&quot;), true);
+
+    // Negative test
+    Residence residence2 = Residence.findByEircode(&quot;AAA 432&quot;);
+    assertNull(residence2);
+  }
+}</code></pre>
+<p>Test Suite</p>
+<pre><code>package theTests;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+
+@RunWith(Suite.class)
+@SuiteClasses({ 
+  LandlordTenantResidence.class ,
+  LandlordTest.class, 
+  TenantTest.class,
+  ResidenceTest.class, 
+  LandlordResidence.class, 
+  TenantResidence.class, 
+
+  })
+public class AllTests
+{
+
+}</code></pre>
+<p>Test thoroughly following earlier procedures.</p>
+<p>Recall that you may comment out <code>@After</code> to retain the database content at the end of the test.</p>
+<p>The following figures indicate a successful outcome. Note how the relationship between the various models is represented. For example, the Residence table contains a column of Landlord IDs. Ignore the fact that the Eircodes are the same. This is so because we chose a default Residence constructor. It would have been better had we randomly generated the Eircodes.</p>
+<p>Similarly, ignore the fact that the Tenant passwords are <code>null</code>. This is an oversight and has no effect on the tests we conducted.</p>
+<p><img src="img/dbase/01.png" alt="Figure 1"></p>
+<p><img src="img/dbase/02.png" alt="Figure 2"></p>
+<p><img src="img/dbase/03.png" alt="Figure 3"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Appendix">
+        <h1>Resources</h1>
+<p>A Git repository containing the test application on which this lab is based is available to download locally <a href="archives/myrent-junit-tests.zip">here</a>.</p>
+<p>To view tags and their messages run: </p>
+<pre><code>git tag -n</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

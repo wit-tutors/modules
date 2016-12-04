@@ -1,0 +1,491 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      01: Donation (Solutions)
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Solution-v1">
+      Solution-v1
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Solution-v1">
+        <h1>Solution v1</h1>
+<p><strong>Step-by-step guide to building Donation application.</strong></p>
+<ul>
+<li>Iteration v1<ul>
+<li>Donation controller and view placeholder</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Iteration v1 Controller</h1>
+<p>Here is a summary of the first iteration:</p>
+<p><strong>Summary v0 features</strong></p>
+<p>A user may register (sign on) and log in (sign in).</p>
+<p>Having signed on, a user&#39;s details are stored in a database.</p>
+<p>So far, we have used the embedded Play database.</p>
+<p>Later we will deploy the application and use a remote database.</p>
+<p>We have replaced the default css by Semantic UI css.</p>
+<p>A log out (sign out) facility has been provided.</p>
+<p><strong>Features of iteration v1</strong></p>
+<ul>
+<li><p>Welcome</p>
+</li>
+<li><p>Sign on</p>
+</li>
+<li><p>Log in</p>
+</li>
+<li><p>Blank donation page with routing</p>
+</li>
+<li><p>Log out</p>
+</li>
+</ul>
+<p>Note that we are not yet introducing a second model class. </p>
+<p>A model class will be required for donations but in this iteration we are simply using a placeholder view template.</p>
+<p><strong>DonationController</strong></p>
+<p><img src="img/v1/controller-donation.jpg" alt="Figure 1: v1 Donation Controller"></p>
+<p>Addd the following file to the <em>controllers</em> package:</p>
+<p>Filename: donationController.java</p>
+<pre><code class="lang-java">package controllers;
+
+import play.*;
+import play.mvc.*;
+
+public class DonationController extends Controller 
+{
+
+    public static void index() 
+    {
+      Logger.info(&quot;About to donate&quot;);
+      render();
+    }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Iteration v1 Views</h1>
+<p><strong>Update navigation bar</strong></p>
+<p>It is necessary to modify the navigation bar to facilitate access to the new donation page that we are about to introduce. Here is the addition:</p>
+<pre><code class="lang-html">    &lt;a class=&quot;ui item&quot; href=&quot;/donation&quot;&gt;Make Donation&lt;/a&gt;</code></pre>
+<p>The updated navigation code block should be placed in all the view tempates, namely:</p>
+<ul>
+<li>views/Accounts/index.html</li>
+<li>views/Accounts/login.html</li>
+<li>views/Accounts/signup.html</li>
+<li>views/DonationController/index.html</li>
+<li>views/Welcome/index.html</li>
+</ul>
+<p>Here is the latest navigation bar. Notice that the link to the donation page has been included and that it has the <em>active</em> attribute.</p>
+<ul>
+<li>Ensure that the <em>active</em> attribute is correctly positioned in each template (html) file.</li>
+</ul>
+<pre><code class="lang-html">
+   &lt;nav class=&quot;ui menu&quot;&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;Home&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/signup&quot;&gt;Sign Up&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+    &lt;a class=&quot;ui active item&quot; href=&quot;/donation&quot;&gt;Make Donation&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/logout&quot;&gt;Log Out&lt;/a&gt;
+  &lt;/nav&gt;</code></pre>
+<p><strong>Donation view</strong></p>
+<p>Create a folder DonationController in the views folder and add a corresponding view template, index.html.</p>
+<p>DonationController folder: index.html</p>
+<pre><code class="lang-html">
+#{extends &#39;main.html&#39; /} #{set title:&#39;Donation Request&#39; /} 
+&lt;nav class=&quot;ui menu&quot;&gt;
+   &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;Home&lt;/a&gt;
+   &lt;a class=&quot;ui item&quot; href=&quot;/signup&quot;&gt;Sign Up&lt;/a&gt;
+   &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+   &lt;a class=&quot;ui active item&quot; href=&quot;/donation&quot;&gt;Make Donation&lt;/a&gt;
+   &lt;a class=&quot;ui item&quot; href=&quot;/logout&quot;&gt;Log Out&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;section class=&quot;ui segment&quot;&gt;
+    &lt;p&gt;&lt;h4&gt;Welcome&lt;/h4&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;h5&gt;Please give generously&lt;/h5&gt;&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+<p><strong>Modify routes</strong></p>
+<p>Add the following to the routes file immediately following the Accounts page block but before the Map static resources...:</p>
+<pre><code class="lang-routes">
+# Donation page
+GET    /donation                                DonationController.index</code></pre>
+<p><strong>Test run</strong></p>
+<p>Run the application, open in a browser and welcome the next president:</p>
+<p><img src="img/v1/president-homer.png" alt="Figure 1: President O&#39;Simpson"></p>
+<p>Navigate to the donation page (click on Make Donation) and you should see:</p>
+<p><img src="img/v1/donation.png" alt="Figure 2: Donation placeholder page"></p>
+<p>Test the iteration by executing <em>play run</em> and exercising the various navigation tabs. </p>
+<p><img src="img/v1/01.png" alt="Figure 3: Home page contains navigation to newly added Donation page"></p>
+<p>Commit this iteration to your <em>donation</em> repository, add a tag and push all to remote repo.</p>
+<pre><code>git add .
+git commit -m &#39;iteration  v1&#39;
+git tag -a v1 -m &#39;iteration v1&#39;
+git push &amp;&amp; git push --tags</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

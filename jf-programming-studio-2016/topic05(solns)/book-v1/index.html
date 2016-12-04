@@ -1,0 +1,954 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      05: WitPress (Solutions)
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Solution-v1">
+      Solution-v1
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Solution-v1">
+        <h1>Solution v1</h1>
+<p><strong>Step-by-step guide to building WitPress application</strong></p>
+<ul>
+<li>Iteration v1 (Post &amp; Comment)</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Iteration v1: Pre Load data</h1>
+<p>Copy the file Bootstrap.java into the root of the project - the default package.</p>
+<p>Filename: Bootstrap.java</p>
+<pre><code class="lang-java">
+import java.util.List;
+
+import play.*;
+import play.jobs.*;
+import play.test.*;
+import models.*;
+
+@OnApplicationStart
+public class Bootstrap extends Job 
+{ 
+  public void doJob()
+  {
+    if (User.count() == 0)
+    {
+     Fixtures.loadModels(&quot;data.yml&quot;);
+    }
+  }
+}</code></pre>
+<p>Create a file data.yml in conf directory.</p>
+<p>Filename: data.yml</p>
+<pre><code class="lang-yml">
+Comment(comment1):
+    content: Couldn&#39;t disagree with you more.
+
+Comment(comment2):
+    content: Couldn&#39;t agree with you less.
+
+Comment(comment3):
+    content: Up Kilkenny.
+
+Comment(comment4):
+    content: Up Waterord.
+
+Comment(comment5):
+    content: Up the world.
+
+Comment(comment6):
+    content: Up the junction.
+
+Comment(comment7):
+    content: Ask a 65 year old.
+
+Comment(comment8):
+    content: Motherhood and Apple pie.
+
+Comment(comment9):
+    content: I prefer tea.
+
+Comment(comment10):
+    content: I prefer C++.
+
+Comment(comment11):
+    content: We are monitoring the situation (Local Authority Press Release)
+
+Post(post1):
+    title: The state of the nation.
+    content: The less said of this the better.
+    comments:
+             - comment1
+             - comment2
+
+Post(post2):
+    title: The state of rugby.
+    content: The less said of this the better.
+    comments:
+             - comment3
+             - comment4
+
+Post(post3):
+    title: The state of hurling.
+    content: The less said of this the better.
+    comments:
+             - comment5
+             - comment6
+
+Post(post4):
+    title: What about Brian O&#39;Driscoll then?.
+    content: Is 34 that really old?.
+    comments:
+             - comment7
+             - comment8
+
+Post(post5):
+    title: Java.
+    content: Better than Nescafe.
+    comments:
+             - comment9
+             - comment10
+
+Post(post6):
+    title: NamaWineLake.
+    content: Is no more.
+
+Post(post7):
+    title: I should be at the beach.
+    content: Can&#39;t swim very well.
+
+Post(post8):
+    title: The state of the beaches.
+    content: Litter free?.
+    comments:
+             - comment11
+
+Post(post9):
+    title: The state of the government
+    content: I&#39;m for the government. Up the government.
+
+Post(post10):
+    title: The state of the rivers
+    content: Something&#39;s rotten in the state of Suir
+
+User(homer):
+    firstName: Homer
+    lastName: Simpson
+    email: homer@simpson.com
+    password: secret
+    posts: 
+             - post1
+             - post2
+
+User(marge):
+    firstName: Marge
+    lastName: Simpson
+    email: marge@simpson.com
+    password: secret
+    posts: 
+             - post3
+             - post4
+
+User(lisa):
+    firstName: Lisa
+    lastName: Simpson
+    email: lisa@simpson.com
+    password: secret
+    posts: 
+             - post5
+             - post6
+
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    email: bart@simpson.com
+    password: secret
+    posts: 
+             - post7
+             - post8
+
+User(maggie):
+    firstName: Maggie
+    lastName: Simpson
+    email: maggie@simpson.com
+    password: secret
+    posts: 
+             - post9
+             - post10</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Iteration v1: Controller (Blog | BlogPost)</h1>
+<p>Modify Accounts controller: </p>
+<ul>
+<li>In the controller Accounts.java add <em>Blog.index();</em> as the final line in the method authenticate which now becomes:</li>
+</ul>
+<p>Method: Accounts.authenticate</p>
+<pre><code class="lang-java">
+  public static void authenticate(String email, String password)
+  {
+    User user = User.findByEmail(email);
+    if (user == null || !user.checkPassword(password))
+    {
+      Logger.info(&quot;Authentication failure&quot;);
+      index();
+    }
+    session.put(&quot;logged_in_userid&quot;, user.id);
+    Logger.info(&quot;Authentication success: &quot; +  user.firstName + &quot; &quot; + user.lastName);
+    Blog.index();
+  }</code></pre>
+<p>This switches to the Blog view once authentication successfully concludes.</p>
+<p>Now add two new controllers: Blog and BlogPost.</p>
+<p>The Blog controller displays the list of posts, facilitates the creation of a new post and the deletion of a specified post.</p>
+<p>The BlogPost controller finds and displays a comment associated with a specified post and facilitates the creation of a new comment and the deletion of a specified comment, both associated with a particular post.</p>
+<p>Filename: Blog.java</p>
+<pre><code class="lang-java">package controllers;
+
+import java.util.List;
+import models.Post;
+import models.User;
+import play.Logger;
+import play.mvc.Controller;
+import java.util.Collections;
+import java.util.ArrayList;
+
+public class Blog  extends Controller
+{
+  public static void index()
+  {
+    User user = Accounts.getLoggedInUser();
+    List&lt;Post&gt; reversePosts  = new ArrayList&lt;Post&gt; (user.posts);
+    Collections.reverse(reversePosts);
+    render(user, reversePosts);
+  }
+
+  public static void newPost(String title, String content)
+  {
+    User user = Accounts.getLoggedInUser();
+
+    Post post = new Post (title, content);
+    user.addPost(post);
+    user.save();
+
+    Logger.info (&quot;title:&quot; + title + &quot; content:&quot; + content);
+    index();
+  }
+
+  public static void deletePost(Long postid)
+  {    
+    User user = Accounts.getLoggedInUser(); 
+
+    Post post = Post.findById(postid);
+    user.posts.remove(post);
+
+    user.save();
+    post.delete();
+
+    index();
+  }
+}</code></pre>
+<p>Filename: BlogPost.java</p>
+<pre><code class="lang-java">
+package controllers;
+
+import models.Post;
+import models.User;
+import models.Comment;
+import play.Logger;
+import play.mvc.Controller;
+
+public class BlogPost  extends Controller
+{
+  public static void show(Long postid)
+  {
+    Logger.info(&quot;Post ID = &quot; + postid);
+    Post post = Post.findById(postid);
+    render (post);
+  }
+
+  public static void newComment(Long postid, String content)
+  {    
+    Logger.info(&quot;Post ID = &quot; + postid);
+    Post post = Post.findById(postid);
+    Comment comment = new Comment(content);
+
+    post.addComment(comment);
+    post.save();
+    show(postid);
+  }
+
+  public static void deleteComment(Long postid, Long commentid)
+  {    
+    Logger.info(&quot;Post ID = &quot; + postid);
+    Comment comment = Comment.findById(commentid);
+    Post post = Post.findById(postid);
+    post.comments.remove(comment);
+    post.save();
+    show(postid);
+  }
+}</code></pre>
+<p>Observe that in the method Blog.index() the list of Post objects is displayed in reverse order so that the most recent posts appear first. 
+Rather than writing a bespoke algorithm we have chosed to use a utility class from the java libraries that already has this <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collections.html">feature</a>.</p>
+<p>In particular, we have this method the <em>public static void reverse(...)</em>, details regarding which are available <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#reverse(java.util.List">here</a>&gt;).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Iteration v1: View</h1>
+<p>In views/Blog create:</p>
+<p>Filename index.html</p>
+<pre><code class="lang-html">
+#{extends &#39;main.html&#39; /}
+#{set title:&quot;WitPress Home Page for ${user.firstName} ${user.lastName}&quot; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;WitPress&lt;/a&gt;
+  &lt;a class=&quot;ui active item&quot; href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;div class=&quot;ui two column grid&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;form action=&quot;blog/newpost&quot; method=POST&gt;
+      &lt;div class=&quot;ui fluid form segment&quot;&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;textarea placeholder=&#39;Choose a title for post&#39; name=&quot;title&quot; rows=&quot;1&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;textarea placeholder=&#39;Write your post here&#39; name=&quot;content&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;!-- &lt;div class=&quot;ui green submit button&quot;&gt;Submit your Post&lt;/div&gt; --&gt;
+        &lt;button class=&quot;ui green button&quot;&gt;Submit New Post&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;ui fluid form segment&quot;&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      #{list items:reversePosts, as:&#39;post&#39;} &lt;a
+        href=&quot;@{BlogPost.show(post.id)}&quot;&gt; ${post.title} &lt;/a&gt;
+      &lt;div class=&quot;ui form&quot;&gt;
+        &lt;a href=&quot;@{Blog.deletePost(post.id)}&quot; class=&quot;mini ui orange button&quot;&gt;Delete&lt;/a&gt;
+      &lt;/div&gt;
+      #{/list}
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>In views/BlogPost create:</p>
+<p>Filename: show.html</p>
+<pre><code class="lang-html">
+#{extends &#39;main.html&#39; /}
+#{set title:&quot;WitPress Blog Post : ${post.title}&quot; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;WitPress&lt;/a&gt;
+  &lt;a class=&quot;ui active item&quot; href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;div class=&quot;ui one column grid&quot;&gt;
+  &lt;div class=&quot;ten wide column&quot;&gt;   
+  &lt;div class=&quot;ui segment&quot;&gt;  
+        &lt;h4&gt;
+          ${post.title}
+        &lt;/h4&gt; 
+        &lt;p&gt; 
+          ${post.content}:
+        &lt;/p&gt;
+
+        &lt;div class=&quot;ui divider&quot;&gt;&lt;/div&gt;
+        &lt;h5&gt; Comments: &lt;/h5&gt;
+          #{list items:post.comments, as:&#39;comment&#39;}
+           &lt;p&gt; 
+             ${comment.content}:
+             &lt;/p&gt;
+        &lt;div class=&quot;ui form&quot;&gt;
+          &lt;a href=&quot;@{BlogPost.deleteComment(post.id, comment.id)}&quot; class=&quot;mini ui orange button&quot;&gt;Delete&lt;/a&gt;
+        &lt;/div&gt;                     
+        #{/list}                 
+      &lt;div class=&quot;ui divider&quot;&gt;&lt;/div&gt;
+        &lt;form action=&quot;@{BlogPost.newComment(post.id)}&quot; method=&quot;POST&quot;&gt;   
+          &lt;div class=&quot;ui fluid form segment&quot;&gt;        
+            &lt;div class=&quot;field&quot;&gt;
+              &lt;textarea placeholder=&#39;Provide a comment here&#39; name=&quot;content&quot; rows=&#39;2&#39;&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+            &lt;button class=&quot;ui green tiny button&quot;&gt;New Comment&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;         
+        &lt;div class=&quot;ui divider&quot;&gt;&lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;  
+&lt;/div&gt;</code></pre>
+<p>Note how the post currently held in the user object is displayed in a loop:</p>
+<pre><code class="lang-html">
+    #{list items:user.posts, as:&#39;post&#39;}
+      &lt;h4&gt;
+        ${post.title}
+      &lt;/h4&gt; 
+      &lt;p&gt; 
+        ${post.content}:
+      &lt;/p&gt;
+    #{/list}</code></pre>
+<p>Update routes file with following addition:</p>
+<pre><code class="lang-routes">
+# Blog Controller and View
+GET   /blog                                     Blog.index
+POST  /blog/newpost                             Blog.newPost</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Iteration v1: Model (Post &amp; Comment)</h1>
+<p>To introduce a blog, we first introduce a &#39;Post&#39; class, which will represent a specific post to a blog:</p>
+<pre><code class="lang-java">
+package models;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Lob;
+import play.db.jpa.Model;
+import java.util.List;
+
+@Entity
+public class Post extends Model
+{
+  public String title;
+  @Lob
+  public String content;
+
+  @OneToMany (cascade=CascadeType.ALL)
+  public List&lt;Comment&gt; comments;
+
+  public Post(String title, String content)
+  {
+    this.title = title;
+    this.content = content;
+  }
+
+  public void addComment(Comment comment) {
+   comments.add(comment);
+  }
+
+  public String toString()
+  {
+    return title;
+  } 
+}</code></pre>
+<p>This class is to be introduced into the Model package. </p>
+<p>Notice the &#39;OneToMany&#39; annotation. </p>
+<p>This declares that there will be many Comment objects for each Post object.</p>
+<p>We now create a Comment model:</p>
+<p>Filename: Comment.java</p>
+<pre><code class="lang-java">
+package models;
+
+import javax.persistence.Entity;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+
+import play.db.jpa.Model;
+
+@Entity
+public class Comment extends Model
+{
+  public String content;
+
+  public Comment(String content)
+  {
+    this.content = content;
+  }
+}</code></pre>
+<p>Next we augment the User class to maintain a list of posts:</p>
+<pre><code class="lang-java">  @OneToMany(cascade=CascadeType.ALL)
+  public List&lt;Post&gt; posts;</code></pre>
+<p>Add a method to User to add a Post object:</p>
+<pre><code>  public void addPost (Post post)
+  {
+    posts.add(post);
+  }</code></pre>
+<p>Place this inside the User class following the password field. </p>
+<p>The complete User class now looks like this:</p>
+<pre><code class="lang-java">package models;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+
+import play.db.jpa.Model;
+
+
+@Entity
+public class User extends Model
+{ 
+  public String firstName;
+  public String lastName;
+  public String email;
+  public String password;
+
+  @OneToMany(cascade=CascadeType.ALL)
+  public List&lt;Post&gt; posts;
+
+  public void addPost (Post post)
+  {
+    posts.add(post);
+  }
+
+  public static User findByEmail(String email)
+  {
+    return find(&quot;email&quot;, email).first();
+  }
+
+  public boolean checkPassword(String password)
+  {
+    return this.password.equals(password);
+  }  
+
+
+  public String toString()
+  {
+    return firstName;
+  }
+}</code></pre>
+<p>The Comment class follows:</p>
+<pre><code>package models;
+
+import javax.persistence.Entity;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+
+import play.db.jpa.Model;
+
+@Entity
+public class Comment extends Model
+{
+  public String content;
+
+  public Comment(String content)
+  {
+    this.content = content;
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Iteration v1: Deleting Blog Posts - UI and Controller</h1>
+<p>Following is an explanation on how to deleta a Post object.</p>
+<ul>
+<li>Here is the method for doing so:</li>
+</ul>
+<pre><code class="lang-java">  public static void deletePost(Long postid)
+  {    
+    User user = Accounts.getLoggedInUser(); 
+
+    Post post = Post.findById(postid);
+    user.posts.remove(post);
+
+    user.save();
+    post.delete();
+
+    index();
+  }</code></pre>
+<p>The steps are clear:</p>
+<ul>
+<li>locate the user</li>
+<li>locate the post</li>
+<li>remove the post from the users collection of posts</li>
+<li>save the user (with the post removed)</li>
+<li>delete the post from the database</li>
+</ul>
+<p>Snippet from Blog.index</p>
+<pre><code>      #{list items:reversePosts, as:&#39;post&#39;} &lt;a
+        href=&quot;@{BlogPost.show(post.id)}&quot;&gt; ${post.title} &lt;/a&gt;
+      &lt;div class=&quot;ui form&quot;&gt;
+        &lt;a href=&quot;@{Blog.deletePost(post.id)}&quot; class=&quot;mini ui orange button&quot;&gt;Delete&lt;/a&gt;
+      &lt;/div&gt;
+      #{/list}</code></pre>
+<p>This is the <strong><em>Reverse Router</em></strong> syntax:</p>
+<pre><code>&quot;@{Blog.deletePost(post.id)}&quot;</code></pre>
+<p>Essentially it looks like we are calling the BlogPost.deletePost method directly (with the appropriate parameter). </p>
+<p>Iteration v1 is now complete. </p>
+<p>Commit this iteration to your <em>witpress</em> repository, add a tag and push all to remote repo.</p>
+<pre><code>git add .
+git commit -m &#39;iteration  v1&#39;
+git tag -a v1 -m &#39;iteration v1&#39;
+git push &amp;&amp; git push --tags</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,483 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      01: Donation (Solutions)
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Solution-v3">
+      Solution-v3
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Solution-v3">
+        <h1>Solution v3</h1>
+<p><strong>Step-by-step guide to building Donation application.</strong></p>
+<ul>
+<li>Iteration v3<ul>
+<li>Progress bar implementation in Donation module.</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Iteration v3</h1>
+<p>This iteration focusses on writing all necessary code to enable the progress bar to reflect the dynamic changes in cumulative donations.
+As previously, v3 will be built by adding to and where necessary modifying v2.</p>
+<p><strong>Features of iteration v3</strong></p>
+<p>Welcome</p>
+<p>Sign on</p>
+<p>Sign in</p>
+<p>Donation : add a fully functioning progress bar</p>
+<p>Sign out</p>
+<p>Report</p>
+<p><strong>Progress bar</strong></p>
+<p> We will use a <a href="http://semantic-ui.com/elements/progress.html">Semantic UI</a> progress bar.</p>
+<p> <img src="img/v3/01.png" alt="Figure 1: Semantic UI Successful progress bar"></p>
+<p>We must now provide this code with dynamic data: </p>
+<ul>
+<li>when a donation is made the total amount donated to date as a percentage of the target amount to be raised should be pushed from the controller to the progress bar.</li>
+</ul>
+<p>Following are the steps to do this:</p>
+<ul>
+<li><p>Two new methods are required in DonationController. The first, <em>getDonationTarget</em>, is a method to set the target amount required. This is a hack: we really ought to write an administrative panel or equivalent so as to allow a user to make this configuration. As an improvement, consider reading the target amount from a configuration file that you provide.</p>
+</li>
+<li><p>The other method, <em>getPercentTargetAchieved</em>, </p>
+<ul>
+<li>extracts a list of donations from the database, </li>
+<li>obtains the total of these donations and then </li>
+<li>calculates the total donated as a percentage of the target. </li>
+</ul>
+</li>
+</ul>
+<p>Method: DonationController.getDonationTarget()</p>
+<pre><code class="lang-java">    private static long getDonationTarget() 
+    {
+        // TODO Input this value thro&#39; html template admin controlled
+        return 20000;
+    }
+
+    public static String getPercentTargetAchieved() 
+    {
+        List&lt;Donation&gt; allDonations = Donation.findAll();
+        long total = 0;
+        for (Donation donation : allDonations) 
+        {
+            total += donation.received;
+        }
+        long target = getDonationTarget();
+        long percentachieved = (total * 100 / target);
+        String progress = String.valueOf(percentachieved);
+        Logger.info(&quot;Percent of target achieved (string) &quot; + progress
+                + &quot; percentachieved (long)= &quot; + percentachieved);
+        return progress;
+    }</code></pre>
+<p>This import is required:</p>
+<pre><code>import java.util.List;</code></pre>
+<p>It is also necessary to modify the index method in DonationController to invoke getPercenTargetAchieved. </p>
+<p>Method: DonationController.index()</p>
+<pre><code class="lang-java">    public static void index() 
+    {
+        User user = Accounts.getCurrentUser();
+        if (user == null) 
+        {
+            Accounts.login();
+        } 
+        else 
+        {
+            String prog = getPercentTargetAchieved();
+            String progress = prog + &quot;%&quot;;
+            Logger.info(&quot;Donation ctrler : user is &quot; + user.email);
+            Logger.info(&quot;Donation ctrler : percent target achieved &quot; + progress);
+            render(user, progress);
+        }
+    }</code></pre>
+<p>Here is the code for the progress bar:</p>
+<ul>
+<li>Insert this in <em>DonationController/index.html</em> immediately following closing form tag towards the end of the file, replacing the existing placeholder code.</li>
+</ul>
+<pre><code class="lang-html">  &lt;!-- Donation progress bar --&gt;
+  &lt;div class=&quot;ui segment&quot;&gt;   
+    &lt;div class=&quot;ui indicating progress&quot; id=&quot;progress&quot;&gt;
+      &lt;div class=&quot;bar&quot;&gt;
+        &lt;div class=&quot;progress&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;label&quot;&gt;${progress}% target achieved to date&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt; 
+  &lt;script&gt;$(&#39;#progress&#39;).progress(&#39;increment&#39;, &#39;${progress}&#39;);&lt;/script&gt;
+  &lt;!-- End progress bar --&gt;</code></pre>
+<p><strong>Test</strong></p>
+<p>Test the iteration by:</p>
+<ul>
+<li>Making several donations.</li>
+<li>Observing the progress bar reflects the growth of contributions.</li>
+<li>Noting also that the progress bar colour changes from initial red to final green as the cumulative donated approaches the target amount as illustrated in Figures 1 and 2.</li>
+</ul>
+<p><img src="img/v3/03.png" alt="Figure 2: 5% target amount received">
+<img src="img/v3/04.png" alt="Figure 3: 100% target amount received"></p>
+<p>Commit this iteration to your <em>donation</em> repository, add a tag and push all to remote repo.</p>
+<pre><code>git add .
+git commit -m &#39;iteration  v3&#39;
+git tag -a v3 -m &#39;iteration v3&#39;
+git push &amp;&amp; git push --tags</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

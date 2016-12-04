@@ -1,0 +1,694 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder">  Web Dev  Studio</h2>
+    <p> Top Level Topics </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="#"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    John Fitzgerald.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic00/index.html">
+        00: Summer school (Studio)
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic00/book-a/index.html">
+          Welcome</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic00/book-b/index.html">
+          Venue</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic00/book-c/index.html">
+          Outline</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic01/index.html">
+        01: Git intro & Donation web app
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic01/talk-1/basic_git.pdf">
+          Git version control</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/talk-2/donation-app.pdf">
+          Donation prototype</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/book-a/index.html">
+          Basic-Git</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/book-b/index.html">
+          Donation</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic01(solns)/index.html">
+        01: Donation (Solutions)
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic01(solns)/book-v0/index.html">
+          Solution-v0</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01(solns)/book-v1/index.html">
+          Solution-v1</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01(solns)/book-v2/index.html">
+          Solution-v2</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01(solns)/book-v3/index.html">
+          Solution-v3</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01(solns)/book-v4/index.html">
+          Solution-v4</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic02/index.html">
+        02: JavaScript Introduction
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-1/javascript_1.pdf">
+          JavaScript I</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-2/javascript_2.pdf">
+          JavaScript II</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-3/play_eclipse_debug.pdf">
+          Debugging</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/book-a/index.html">
+          JavaScript-I</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/book-b/index.html">
+          JavaScript-II</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic03/index.html">
+        03: Javascript & Maps; MyRent specification.
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-1/javascript_3a.pdf">
+          JavaScript IIIa</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-2/javascript_3b.pdf">
+          JavaScript IIIb</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-3/javascript_3c.pdf">
+          JavaScript IIIc</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-4/javascript_3d.pdf">
+          JavaScript IIId</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-5/myrent.pdf">
+          MyRent prototype</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-6/languages-2.pdf">
+          Languages</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/book-a/index.html">
+          MyRent</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/book-b/index.html">
+          JavaScript III</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/book-c/index.html">
+          JavaScript IV (Maps)</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic03(solns)/index.html">
+        03: MyRent (Solutions)
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03(solns)/book-v0/index.html">
+          Solution-v0</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03(solns)/book-v1/index.html">
+          Solution-v1</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03(solns)/book-v2/index.html">
+          Solution-v2</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03(solns)/book-v3/index.html">
+          Solution-v3</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic04/index.html">
+        04: Map overlays, the DOM & SemanticUI controls
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-1/javascript_4a.pdf">
+          Javascript IVa</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-2/javascript_4b.pdf">
+          Javascript IVb</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-3/javascript_4c.pdf">
+          Javascript IVc</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-4/map-overlays.pdf">
+          JavaScript V</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-5/polygon-overlay.pdf">
+          JavaScript VI</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/book-a/index.html">
+          Circle-map-overlay</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/book-b/index.html">
+          Polygon-map-overlay</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/book-d/index.html">
+          Ajax</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic05/index.html">
+        05: WitPress prototype web app, TDD & Advanced Git.
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-1/advanced_git.pdf">
+          02 Git </a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/book-a/index.html">
+          Advanced-Git-I</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/book-b/index.html">
+          Advanced-Git-II</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/book-c/index.html">
+          TDD</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/book-d/index.html">
+          WitPress</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic05(solns)/index.html">
+        05: WitPress (Solutions)
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic05(solns)/book-v0/index.html">
+          Solution-v0</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05(solns)/book-v1/index.html">
+          Solution-v1</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05(solns)/book-v2/index.html">
+          Solution-v2</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic06-project/index.html">
+        06: Project Specification & tutorial on Heroku cloud deployment.
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic06-project/talk-1/ict-skills-2016-assignment.pdf">
+          Project (Specification)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-project/book-a/index.html">
+          Project (Resources)</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-project/book-b/index.html">
+          Assignment Tips</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06-project/book-c/index.html">
+          Heroku</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+          
+  <a class="ui raised link card" href="./topic00/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 00: Summer school (Studio) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic00/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Gain experience in the use of the <em>git</em> source code management tool, acquire basic knowledge of the <em>JavaScript</em> language and improve your web application development skill set.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic01/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 01: Git intro & Donation web app </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic01/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>A basic introduction to the Git versioning system working from the commandline. Specification for a simple dynamic web app named Donation to be implemented using the Play framework.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic01(solns)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 01: Donation (Solutions) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic01(solns)/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Sample set of solutions in developing <em>donation</em> app in 5 iterations: authentication through to generating reports.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic02/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 02: JavaScript Introduction </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic02/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Beginning a condensed introduction to the JavaScript language with a discussion on data types and some basic features of the language such as identifiers, operators and control flow.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic03/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 03: Javascript & Maps; MyRent specification. </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic03/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>How to use developer tools to debug into JavaScript code, a discussion on some new features introduced in ES6 such as arrow functions and the spread-rest operator and exploring the somewhat arcane <code>this</code> keyword. Specification for a second dynamic web app named MyRent.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic03(solns)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 03: MyRent (Solutions) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic03(solns)/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Sample set of solutions in developing <em>myrent</em> app in 4 iterations: authentication, data capture, reporting and feedback.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic04/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 04: Map overlays, the DOM & SemanticUI controls </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic04/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Exploring the use of customised circle and polygon map overlays. Using JavaScript to validate Semantic UI input. Introducing Ajax with some simple applications.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic05/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 05: WitPress prototype web app, TDD & Advanced Git. </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic05/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p><strong>WitPress</strong>: A web app to facilitate the creation and management of web logs (blogs). Using a Test Driven Development (TDD) approach in developing a set of entity-related Play models classes. Advanced Git tutorials and presentation building on an the earlier basic introduction.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic05(solns)/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 05: WitPress (Solutions) </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic05(solns)/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Sample set of solutions in developing <em>witpress</em> app in 3 iterations: authentication, post and comment, public blog and feedback.</p>
+
+      </div>
+    </div>
+    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic06-project/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> 06: Project Specification & tutorial on Heroku cloud deployment. </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic06-project/topic.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
+    
+  </a>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

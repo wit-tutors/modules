@@ -1,0 +1,914 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      04: Map overlays, the DOM & SemanticUI controls
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="JavaScript VI (SemanticUI)">
+      JavaScript VI (SemanticUI)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="Appendix">
+      Appendix
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="JavaScript VI (SemanticUI)">
+        <h1>Validation &amp; Progress Bar</h1>
+<p>Semantic elements such as dropdown and radio button require initialization. Semantic also facilitates form validation. In this short tutorial a dropdown is initialized, form validation is invoked and use of a Semantic progress bar is demonstrated. jQuery ajax is employed to fetch and render data. <span style="color:red">Warning:</span> This lab applies to Semantic UI version 1x. See the appendix for Semantic 2 material.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Import archive</h1>
+<p>A subset of the donation app with sample Semantic-UI validation a demo progress bar may be downloaded <a href="archives/donation_validated.zip">here</a>.</p>
+<ul>
+<li>Download to a temporary directory.</li>
+<li>Change directory to the temporary directory, expand the archive, cd into <em>donation_validated</em> and execute <em>play eclipsify</em> to refresh the <em>eclipse folder</em>.</li>
+<li>Launch Eclipse, switching to <em>workspaceStudio</em>.</li>
+<li>Import the rm project <em>donation_validated</em>.<ul>
+<li>You need not be concerned with overwriting your existing <em>donation</em> app as the name of the archived project is different (<em>donation_validated</em>).</li>
+</ul>
+</li>
+<li>Study the code now and as you progress through the lab.<br><img src="img/01.png" alt="">
+<img src="img/02.png" alt="">
+<img src="img/03.png" alt=""></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Demo</h1>
+<ul>
+<li>Browse to the folder where you have expanded <em>donation_validated</em> and execute<ul>
+<li>play run</li>
+</ul>
+</li>
+<li><p>The <em>make donation</em> page should open directly as depicted in Figure 1.</p>
+</li>
+<li><p>Test validation by pressing the Donate button</p>
+<ul>
+<li>Do not make a selection from the Amount drop-down box.</li>
+</ul>
+</li>
+<li>Observe the warning prompt<ul>
+<li>Please select an amount to donate</li>
+</ul>
+</li>
+<li>This is Semantic UI validation in action: Figure 1.</li>
+<li>Now select an amount from the drop-down control and then press Donate button<ul>
+<li>Observe that the warning prompt has disappeared</li>
+<li>The amount donated is registered in the server. Figure 2.</li>
+<li>The progress bar has not been coded to respond when a donation is added. <ul>
+<li>The controller code is discussed in a following step.</li>
+</ul>
+</li>
+<li>The code supporting the validation is discussed in the next step.
+<img src="img/04.png" alt="Figure 1: Validation in action">
+<img src="img/05.png" alt="Figure 2: Validation check succeeded"></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Validation</h1>
+<p>Here is the index file for the donation screen:</p>
+<p>Filename: index.html</p>
+<pre><code>#{extends &#39;main.html&#39; /} #{set title:&#39;Donation Request&#39; /}
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h3&gt;Welcome ...&lt;/h3&gt;
+  Please give generously
+
+  &lt;div class=&quot;ui grid&quot;&gt;
+      &lt;div class=&quot;six wide column&quot;&gt;
+        &lt;form class=&quot;ui form&quot; action=&quot;/donation/donate&quot; method=&quot;POST&quot;&gt;
+          &lt;table class=&quot;ui table&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th&gt;Make a donation&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;td&gt;
+                  &lt;div class=&quot;ui selection dropdown&quot;&gt;
+                      &lt;input name=&quot;amountDonated&quot; type=&quot;hidden&quot;&gt;
+                      &lt;div class=&quot;default text&quot;&gt;Amount&lt;/div&gt;
+                      &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+                      &lt;div class=&quot;menu&quot;&gt;
+                        &lt;div class=&quot;item&quot; data-value=&quot;100&quot;&gt;$100&lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-value=&quot;500&quot;&gt;$500&lt;/div&gt;
+                        &lt;div class=&quot;item&quot; data-value=&quot;1000&quot;&gt;$1000&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;         
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;
+                  &lt;div class=&quot;grouped inline fields&quot;&gt;
+                    &lt;div class=&quot;field&quot;&gt;
+                      &lt;div class=&quot;ui radio checkbox&quot;&gt;
+                        &lt;input id=&quot;paypal&quot; name=&quot;methodDonated&quot; value=&quot;paypal&quot; checked=&quot;checked&quot; type=&quot;radio&quot;&gt; 
+                        &lt;label for=&quot;paypal&quot;&gt;PayPal&lt;/label&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;field&quot;&gt;
+                      &lt;div class=&quot;ui radio checkbox&quot;&gt;
+                        &lt;input id=&quot;direct&quot; name=&quot;methodDonated&quot; value=&quot;direct&quot; type=&quot;radio&quot;&gt; 
+                        &lt;label for=&quot;direct&quot;&gt;Direct&lt;/label&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/td&gt;         
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;
+                  &lt;div class=&quot;ui blue submit button&quot;&gt;Donate &lt;i class=&quot;add icon&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                 &lt;div class=&quot;ui error message&quot;&gt;&lt;/div&gt;
+                &lt;/td&gt;         
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Donation progress  --&gt;
+  &lt;div class=&quot;ui segment&quot;&gt;   
+    &lt;div class=&quot;ui indicating progress&quot; id=&quot;progress&quot;&gt;
+      &lt;div class=&quot;bar&quot;&gt;
+        &lt;div class=&quot;progress&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;label&quot;&gt;${donationprogress}% target achieved to date&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt; 
+&lt;/section&gt;
+
+&lt;script src=&quot;@{&#39;/public/javascripts/donate.js&#39;}&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(&#39;#progress&#39;).progress(&#39;increment&#39;, &#39;${donationprogress}&#39;); 
+&lt;/script&gt;</code></pre>
+<p>Note the script tag towards the end of the file. This loads a JavaScript file named <em>donate.js</em>. </p>
+<pre><code>&lt;script src=&quot;@{&#39;/public/javascripts/donate.js&#39;}&quot;&gt;&lt;/script&gt;</code></pre>
+<ul>
+<li>The file is located in the <em>public</em> folder in a sub-folder named <em>javascripts</em>.</li>
+<li>Official documentation, on which the code is based, is accessible on the Semantic site here: <a href="http://semantic-ui.com/modules/form.html">UI Behaviour: Form Validation</a></li>
+</ul>
+<p>Filename: donate.js</p>
+<pre><code>// Initialization
+$(&#39;.ui.dropdown&#39;)
+  .dropdown()
+;
+
+// Form validation
+$(&#39;.ui.form&#39;)
+.form({
+
+  amountDonated: {
+    identifier: &#39;amountDonated&#39;,
+    rules: [{
+        type: &#39;empty&#39;,
+        prompt: &#39;Please select an amount to donate&#39;
+      }]
+  }
+});</code></pre>
+<p>Study the official documentation, the above code extracts and the contents of Figure 1 below to obtain an understanding of the validation process.</p>
+<p><img src="img/06.png" alt="Figure 1: Validation: association between html and javascript"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>jQuery</h1>
+<p>Here is the portion of the JavaScript file that validates input from the drop-down box in Donation once the Submit button is pressed.</p>
+<ul>
+<li>It uses jQuery.</li>
+</ul>
+<p>Filename: donate.js</p>
+<pre><code>
+$(&#39;.ui.form&#39;)
+.form({
+  amountDonated: {
+    identifier: &#39;amountDonated&#39;,
+    rules: [
+      {
+        type: &#39;empty&#39;,
+        prompt: &#39;Please select an amount to donate&#39;
+      }
+    ]
+  }
+})
+;</code></pre>
+<p>Recall that a literal is a data value that appears directly in a program.</p>
+<p><img src="img/07.png" alt="Figure 1: JavaScript Literals"></p>
+<p>Using the information in Figure 1 helps us understand the structure of the code.</p>
+<p>Figures 2 &amp; 3 shows the how the parameter to the method <em>form</em> is composed.</p>
+<p><img src="img/08.png" alt="Figure 2: Analysis of form paramter"></p>
+<p><img src="img/09.png" alt="Figure 3: Verbose equivalent of validation shown in Figure 2"></p>
+<p>You may explore this further by executing the following code.</p>
+<p>Filename: semanticui_validation.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;ICTSkills JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p id=&quot;p1&quot;&gt;&lt;/p&gt;
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;  
+  &lt;script src=&quot;validation.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Filename: validation.js</p>
+<pre><code>var rulesObj = {type : &#39;empty&#39;};
+rulesObj.prompt = &#39;Please select amount to donate&#39;;
+var rulesArray = [rulesObj];
+
+var amountDonated = {identifier : &#39;amountDonated&#39;};
+amountDonated.rules = rulesArray;
+console.log(amountDonated);</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Progress bar</h1>
+<p>Refer to the file <em>index.html</em> in DonationController.</p>
+<p>Following extract renders a Semantic-UI progress bar.</p>
+<pre><code>  &lt;!-- Donation progress  --&gt;
+  &lt;div class=&quot;ui segment&quot;&gt;   
+    &lt;div class=&quot;ui indicating progress&quot; id=&quot;progress&quot;&gt;
+      &lt;div class=&quot;bar&quot;&gt;
+        &lt;div class=&quot;progress&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;label&quot;&gt;${donationprogress}% target achieved to date&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+<p>Important note: the variable name <strong>donationprogress</strong> that appears as an argument in <em>DonationController.index.render</em> must be also used in the html progress bar expression (see above html and Figure 1).</p>
+<p>The progress is initialized with this jQuery invocation:</p>
+<pre><code>&lt;script&gt;
+  $(&#39;#progress&#39;).progress(&#39;increment&#39;, &#39;${donationprogress}&#39;); 
+&lt;/script&gt;</code></pre>
+<p>The expression <strong>&#39;${donationprogress}&#39;</strong> holds the progress bar value.</p>
+<p>In this tutorial the value is hardcoded at 70% in the controller: see Figure 1.</p>
+<p><img src="img/10.png" alt="Figure 1: Progress hardcoded in controller"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Controller</h1>
+<p>The controller code is presented here.</p>
+<ul>
+<li><p><em>index</em> renders the <em>make donation</em> page, transmitting the <em>donationprogress</em> value as an argument in the <em>render</em> method.</p>
+</li>
+<li><p>the private helper method <em>percentDonationTargetReceived</em> returns a fixed value as a string.</p>
+</li>
+<li><p><em>donate</em> receives the amount donated and the method by which the donation is made.</p>
+<ul>
+<li>These are output as logs in the terminal.</li>
+<li><em>index</em> is then invoked which refreshes the <em>make donation</em> page.</li>
+</ul>
+</li>
+</ul>
+<pre><code>package controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import play.Logger;
+import play.mvc.Controller;
+
+
+public class DonationController extends Controller 
+{
+
+    public static void index()
+    {
+        String donationprogress = percentDonationTargetReached();
+        render(donationprogress);
+    }
+
+    private static String percentDonationTargetReached()
+    {
+      return &quot;70&quot;;
+    }
+
+    public static void donate(long amountDonated, String methodDonated) 
+    {
+        Logger.info(&quot;amount donated &quot; + amountDonated + &quot; &quot; + &quot;method donated &quot; + methodDonated);
+        index();
+    }
+
+}</code></pre>
+<p>The method <em>DonationController.donate</em> is the destination of form data:</p>
+<pre><code>&lt;form class=&quot;ui form&quot; action=&quot;/donation/donate&quot; method=&quot;POST&quot;&gt;</code></pre>
+<p>This is established in the routes file:</p>
+<pre><code># Donation page
+GET    /donation                    DonationController.index
+POST   /donation/donate             DonationController.donate</code></pre>
+<p>A compressed archive of the project is available to download <a href="archives/donation_validated.zip">here</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Addendum</h1>
+<p>A second project, also a Play app, named <a href="archives/semantic_validation.zip"><em>semantic_validation</em></a> is available to download.</p>
+<p>This project contains three controllers and associated templates. These are:</p>
+<ul>
+<li><p>Application</p>
+<ul>
+<li>The default module has been modified to demonstrate validation of a typical data input page.
+<img src="img/11.png" alt="Figure 1: Tell Us About Yourself"></li>
+</ul>
+</li>
+<li><p>Customize</p>
+<ul>
+<li>This module demonstrates a customization of Semantic UI validation.<ul>
+<li>Study the file <em>public/javascripts/customized_validation.js</em>.</li>
+<li>Methods have been introduced into <em>semantic.js</em> to validate latitude and longitude.</li>
+<li>The application implements validation of latitude only. <ul>
+<li>Longtidude follows a very similar pattern.</li>
+<li>Longitude validation code has been introduced into <em>semantic.js</em>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>This customization has proven necessary because Semantic validation rules cater for integers only, not floating point numbers.</li>
+<li>This approach has the disadvantage of being overrwritten on upgrading Semantic distribution.
+<img src="img/12.png" alt="Figure 2: Customized validation of latitude | longitude"></li>
+</ul>
+</li>
+<li><p>Make Donation</p>
+<ul>
+<li>This module demonstrates two features:<ul>
+<li>A method of dealing with attempts to donate in excess of the target amount.</li>
+<li>Dynamic creation of a label indicating when the donation target reached.</li>
+</ul>
+</li>
+<li>Some sample code on this topic is presented in the next step.
+<img src="img/13.png" alt="Figure 3: Make Donation validation"></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Donation target</h1>
+<p>To ensure that the progress bar does not exceed 100% one could: <br><br></p>
+<ul>
+<li><p>Introduce some code in the Donation controller  <em>donate</em> method to enforce the condition that the donation would only be accepted if the progress was still less than 100%. </p>
+</li>
+<li><p>More efficiently, perhaps, check within the DonationController template (view) that the donation progress is less than 100 before posting the donation.</p>
+</li>
+</ul>
+<p>Here is some sample code applying to the first approach:</p>
+<ul>
+<li>Further associated code is contained in the downloadable project <em>semantic_validation</em>.<ul>
+<li>Allowing rapid testing of progress bar.</li>
+<li>Adding a label advising when target reached.</li>
+</ul>
+</li>
+</ul>
+<pre><code>   // DonationController.donate
+    public static void donate(long amountDonated, String methodDonated, String candidateEmail) 
+    {       
+        session.put(&quot;currentCandidate&quot;, candidateEmail);
+        User user = Accounts.getCurrentUser();
+        if (user == null) 
+        {
+            Accounts.login();
+        } 
+        else 
+        {
+            String progressPercent = getProgress();
+            Candidate candidate = Candidate.findByEmail(candidateEmail);           
+            if(!progressPercent.equalsIgnoreCase(&quot;100&quot;))
+            {
+              Donation donation = new Donation(user, amountDonated, methodDonated, candidate);
+              donation.save();
+              candidate.addDonation(donation);
+              candidate.save();
+              user.addDonation(donation);
+              user.save();
+            }
+            JSONObject obj = new JSONObject();
+            obj.put(&quot;progress&quot;, progressPercent);
+            obj.put(&quot;candidate&quot;, candidate.firstName + &quot; &quot; + candidate.lastName);
+            renderJSON(obj);            
+        }
+    }</code></pre>
+<p>The associated JavaScript could be something like this:</p>
+<pre><code>
+$(&#39;.ui.dropdown&#39;).dropdown();
+
+$(&#39;.ui.form&#39;)
+.form({
+
+   candidateEmail: {
+    identifier: &#39;candidateEmail&#39;,
+    rules: [{
+        type: &#39;empty&#39;,
+        prompt: &#39;Please select a Candidate to whom you wish to make a donation&#39;
+      }]
+  },
+
+  amountDonated: {
+    identifier: &#39;amountDonated&#39;,
+    rules: [{
+        type: &#39;empty&#39;,
+        prompt: &#39;Please select an amount to donate&#39;
+      }]
+  }
+},
+
+{
+  onSuccess : function() {
+      submitForm();
+      return false; 
+      // TODO: Check why dropdown remains open following press donate button.
+  } 
+});
+
+
+  function submitForm() {
+    var formData = $(&#39;.ui.form.segment input&#39;).serialize(); 
+    $.ajax({
+      type: &#39;POST&#39;,
+      url: &#39;/donation/donate&#39;,
+      data: formData,
+      success: function(response) {            
+        console.log(&quot;make donation page submitForm response: &quot; + response.progress);
+        $(&#39;.ui.indicating.progress&#39;).progress({
+          percent: response.progress
+        });
+        $(&#39;#progresslabel&#39;).text(response.progress + &quot; % of target achieved to date for candidate &quot; + response.candidate);
+      }
+    });
+  }</code></pre>
+<p>And the html might be something along the lines of:</p>
+<pre><code>  &lt;!-- Donation progress  --&gt;
+  &lt;div class=&quot;ui segment&quot;&gt;   
+    &lt;div class=&quot;ui indicating progress&quot; id=&quot;progress&quot;&gt;
+      &lt;div class=&quot;bar&quot;&gt;
+        &lt;div class=&quot;progress&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;label&quot; id=&quot;progresslabel&quot;&gt;&lt;/div&gt;     
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt; 
+
+&lt;script src=&quot;@{&#39;/public/javascripts/donate.js&#39;}&quot;&gt;&lt;/script&gt;
+
+&lt;!-- See: http://semantic-ui.com/modules/progress.html --&gt;
+&lt;!-- See: http://semantic-ui.com/modules/progress.html#/usage --&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Appendix">
+        <h1>Semantic 2</h1>
+<p>The validation code applicable for Semantic 2 has changed.</p>
+<p>Here is sample code. Compare to version 1 validation code. Here the form parameter is a single object containing <code>fields: {...}</code> name-value pair.</p>
+<pre><code>  $(&#39;.ui.form.landlord&#39;).form({
+    fields: {
+      landlord : {
+        identifier : &#39;email_landlord&#39;,
+        rules : [{
+          type : &#39;empty&#39;,
+          prompt : &#39;Please select a landlord&#39;
+        },],
+      },
+      tenant : {
+        identifier : &#39;email_tenant&#39;,
+        rules : [{
+          type : &#39;empty&#39;,
+          prompt : &#39;Please select a tenant&#39;
+        },],
+      },
+    },
+  });</code></pre>
+<p>Where an Ajax call is required the form parameter is a single object comprises two name:value pairs:</p>
+<ul>
+<li>fields: { ...}</li>
+<li>onSuccess: {...}</li>
+</ul>
+<pre><code>  $(&#39;.ui.form.landlord&#39;).form({
+    fields: {
+      landlord : {
+        identifier : &#39;email_landlord&#39;,
+        rules : [{
+          type : &#39;empty&#39;,
+          prompt : &#39;Please select a landlord&#39;
+        },],
+      },
+      tenant : {
+        identifier : &#39;email_tenant&#39;,
+        rules : [{
+          type : &#39;empty&#39;,
+          prompt : &#39;Please select a tenant&#39;
+        },],
+      },
+    },
+
+    onSuccess : function(event, fields) {
+     makeTheCall();      
+     event.preventDefault();
+    },
+  });</code></pre>
+<pre><code>function makeTheCall()  {
+    var formData = $(&#39;.ui.form.landlord&#39;).serialize(); 
+    $.ajax({
+      type : &#39;POST&#39;,
+      url : &#39;/administrators/deletelandlord&#39;,
+      data : formData,
+      success : function(response) {
+        // do something
+      }
+    });
+}</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

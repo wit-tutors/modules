@@ -1,0 +1,418 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      00: Summer school (Studio)
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Welcome">
+      Welcome
+    </a>
+    
+    <a class="item" data-tab="Course_outline">
+      Course_outline
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="active item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Welcome">
+        <h1>Welcome</h1>
+<p>Welcome to the Waterford Institute of Technology (WIT) ICTSkills Summer School, also referred to as ICTSkills Studio. The course spans six consecutive weeks commencing late May and ending early July. The venue is the WIT West Campus at Carriganore. Course content includes the <em>git</em> versioning system, an introduction to the <em>JavaScript</em> language, dynamic web development and a module on oral and written communications. The course is a five credit module. Grading is based on continuous assessment and a web application development project.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Course_outline">
+        <h1>ICTSkills Studio (2016)</h1>
+<p>The course begins on Tuesday May 31st at 9.30 am in the boardroom at Carriganore. The course will run for 6 weeks. It will comprise a set of labs and presentations dealing with a selected range of topics that include the <em>git</em> versioning system, the <em>JavaScript</em> language and dynamic web application development using the Play Framework. It will also include a graded module on oral and written communications, interview skills and the like. Attendance at the course is mandatory. There will be one assignment based on the course content with a submission deadline of Saturday August 20th.</p>
+<p>The assignment comprises:</p>
+<ul>
+<li>Using the <em>git</em> versioning system to manage the three labs that form the core of the course. </li>
+<li>Adding a set of features, presented as stories, to the Donation web app. Donation is one of the three labs that will be presented.</li>
+</ul>
+<p>You will be provided with a detailed brief on the assignment at the beginning of week five. </p>
+<ul>
+<li>The assignment is valued at 5 credit points and achievement of at least a pass grade is mandatory. </li>
+<li>The deadline for submission of the assignment is August 29th, allowing you approximately 8 weeks to complete the project.</li>
+</ul>
+<p>Two hour thirty minute supervised lecture | lab sessions will take place on Tuesdays and Wednesdays, commencing at 9.30 am. The topics that will be dealt with are:</p>
+<ul>
+<li>The <em>git</em> versioning system.</li>
+<li>The JavaScript language.</li>
+<li>Three web apps (labs) using the Play framework.</li>
+</ul>
+<p><strong>Tuesdays</strong> and <strong>Wednesdays</strong> are scheduled for work on labs and the project.</p>
+<p>Each <strong>Thursday</strong> is reserved for seminars presented by TSSG research staff &amp; industry partners.</p>
+<p><strong>Mondays</strong> and <strong>Fridays</strong> are free learning days in FTG24.  The facilities at Carriganore will not be available on those days. </p>
+<p>FTG24 will also be accessible during the remainder of the summer.</p>
+<p>Among subjects you  might consider during free learning are HTML5, JavaScript, Node and Android Development. The following sites are targetted at experienced developers. You may find the material therein challenging. Howevery the sites contain tutorial materials at varying levels. In addition the sites cover topical news items and opinion pieces related to these technologies.</p>
+<ul>
+<li><a href="http://html5weekly.com/issues">HTML5</a></li>
+<li><a href="http://javascriptweekly.com/issues">JavaScript</a></li>
+<li><a href="http://nodeweekly.com/issues">Node.js</a></li>
+<li><a href="http://androidweekly.net/archive">Android</a></li>
+</ul>
+<p>The lab sessions include an introduction to the <strong>git</strong> versioning system. Acquiring a working knowledge of <strong>git</strong> :</p>
+<ul>
+<li>requires patience and regular practice</li>
+<li>an acceptance that the learning path is steep </li>
+<li>that mistakes will be made and that until sufficient skill has been acquired independent backup of material is necessary.</li>
+</ul>
+<p>Students should consider competence in the use of <strong>git</strong> an essential skill that will be of use not only in employment but in preparing and presenting their CVs.</p>
+<p>The Studio course is an intensive six-week course. </p>
+<p>However, there is considerable time (and space) devoted to this phase of the programme and it is strongly recommended that you take advantage of this. </p>
+<p>The primary purpose of Studio is to advance your programming skills to the next level thus allowing you to make significant progress in App Development in the autumn semester. </p>
+<p>Much of the learning will be independent - with a range of tuition material provided on Edge. This material is provided to assist and encourage you to build your own apps according to a simple specification. Solutions to each of these applications will be released as the weeks progress.</p>
+<p>Best of luck!</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

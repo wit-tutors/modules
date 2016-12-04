@@ -1,0 +1,748 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      01: Donation (Solutions)
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Solution-v2">
+      Solution-v2
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Solution-v2">
+        <h1>Solution v2</h1>
+<p><strong>Step-by-step guide to building Donation application.</strong></p>
+<ul>
+<li>Iteration v2<ul>
+<li>Donation module: implementation</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Iteration v2</h1>
+<ul>
+<li>Iteration v1 has been built on iteration v0. <ul>
+<li>All the features of v0 are retained (or modified) in v1.</li>
+</ul>
+</li>
+<li>Iteration v2 will be developed by building on v1.</li>
+</ul>
+<p><strong>Features of iteration v2</strong></p>
+<ul>
+<li><p>Welcome</p>
+</li>
+<li><p>Sign on</p>
+</li>
+<li><p>Sign in</p>
+</li>
+<li><p>Make Donation</p>
+</li>
+<li><p>Log out</p>
+</li>
+</ul>
+<p><strong>Models</strong></p>
+<ul>
+<li><p>User</p>
+</li>
+<li><p>Donation</p>
+</li>
+</ul>
+<p><strong>Donation Model</strong></p>
+<p>The Donation Model class persists data regarding the donations received namely the amount received and the method donated (cash or PayPal).</p>
+<p><img src="img/v2/model.jpg" alt="Figure 1: v1 Donation Model"></p>
+<p>Filename: Donation.java</p>
+<pre><code class="lang-java">package models;
+
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import play.db.jpa.Model;
+
+@Entity
+public class Donation extends Model 
+{
+    public long received;
+    public String methodDonated;
+
+    @ManyToOne
+    public User from;
+
+    public Donation(User from, long received, String methodDonated) 
+    {
+        this.received = received;
+        this.methodDonated = methodDonated;
+        this.from = from;
+    }
+}</code></pre>
+<p>There is a many-to-one relationship between the Donation and User models. </p>
+<p>A user may make 1 or several donations but a donation can only be received from one user. </p>
+<p>In a commercial product this would be unlikely to be an adequate design and a many-to-many relationship would, most likely, be required.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Iteration v2: Controller</h1>
+<p><strong>Accounts</strong></p>
+<p>Two changes are introduced into the accounts controller:</p>
+<ul>
+<li>(1) Once a new user has registered, immediately open the log in page.</li>
+<li>(2) Render donation page immediately successfully authenticated.</li>
+</ul>
+<p><strong>Change the register method</strong></p>
+<p>Simply replace a call to index() with a call to login();</p>
+<pre><code>
+    public static void register(User user)
+    {
+        Logger.info(user.firstName + &quot; &quot; + user.lastName + &quot; &quot; + user.email + &quot; &quot; + user.password);
+        user.save();
+        login();
+    }</code></pre>
+<p><strong>Modify authenticate</strong></p>
+<p>Introduce</p>
+<pre><code class="lang-java">DonationController.index();</code></pre>
+<p>into the authenticate method which now becomes:</p>
+<pre><code class="lang-java">    public static void authenticate(String email, String password) 
+    {
+       Logger.info(&quot;Attempting to authenticate with &quot; + email + &quot;:&quot; + password);
+
+       User user = User.findByEmail(email);
+       if ((user != null) &amp;&amp; (user.checkPassword(password) == true)) 
+       {
+           Logger.info(&quot;Successfull authentication of  &quot; + user.firstName + &quot; &quot; + user.lastName);
+           session.put(&quot;logged_in_userid&quot;, user.id);
+           DonationController.index();
+       } 
+       else 
+       {
+           Logger.info(&quot;Authentication failed&quot;);
+           Accounts.login();
+       }
+     }</code></pre>
+<p>The purpose of this line of code is to automatically render the donation page once the user is authenticated.</p>
+<ul>
+<li>If, on the other hand, authentication fails, one is returned to the login view.</li>
+</ul>
+<p><img src="img/v2/authentication.png" alt="Figure 1: Authentication"></p>
+<p><strong>DonationController</strong></p>
+<p><img src="img/v2/controller.jpg" alt="Figure 2: v2 Donation Controller"></p>
+<p>Filename: DonationController.java</p>
+<pre><code class="lang-java">package controllers;
+
+import models.Donation;
+import models.User;
+import play.Logger;
+import play.mvc.Controller;
+
+public class DonationController extends Controller 
+{
+
+    public static void index() 
+    {
+        User user = Accounts.getCurrentUser();
+        if (user == null) 
+        {
+            Logger.info(&quot;Donation class : Unable to getCurrentuser&quot;);
+            Accounts.login();
+        } 
+        else 
+        {
+            Logger.info(&quot;Donation ctrler : user is &quot; + user.email);
+            render(user);
+        }
+    }
+
+    /**
+     * Log and save to database amount donated and method of donation, eg.
+     * paypal, direct payment
+     * 
+     * @param amountDonated
+     * @param methodDonated
+     */
+    public static void donate(long amountDonated, String methodDonated) 
+    {
+        Logger.info(&quot;amount donated &quot; + amountDonated + &quot; &quot; + &quot;method donated &quot;
+                + methodDonated);
+
+        User user = Accounts.getCurrentUser();
+        if (user == null) 
+        {
+            Logger.info(&quot;Donation class : Unable to getCurrentuser&quot;);
+            Accounts.login();
+        } 
+        else 
+        {
+            addDonation(user, amountDonated,methodDonated);
+        }
+        index();
+    }
+
+    /**
+     * @param user
+     * @param amountDonated
+     */
+    private static void addDonation(User user, long amountDonated,String methodDonated) 
+    {
+        Donation bal = new Donation(user, amountDonated,methodDonated);
+        bal.save();
+    }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Iteration v2: Views</h1>
+<p><strong>views/DonationController</strong></p>
+<p>The placeholder template in views/DonationController is replaced as follows: </p>
+<p><img src="img/v2/views.jpg" alt="Figure 1: v2 Views"></p>
+<p>Filename: index.html</p>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /} #{set title:&#39;Donation Request&#39; /}
+  &lt;nav class=&quot;ui menu&quot;&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;Home&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/signup&quot;&gt;Sign Up&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+    &lt;a class=&quot;ui active item&quot; href=&quot;/donation&quot;&gt;Make Donation&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/logout&quot;&gt;Log Out&lt;/a&gt;
+  &lt;/nav&gt;
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h3&gt;Welcome ${user.firstName}&lt;/h3&gt;
+  Please give generously
+  &lt;form class=&quot;ui form&quot; action=&quot;/donation/donate&quot; method=&quot;POST&quot;&gt;
+    &lt;div class=&quot;ui four column grid&quot;&gt;
+      &lt;div class=&quot;column&quot;&gt;
+        &lt;div class=&quot;ui selection dropdown&quot;&gt;
+          &lt;input name=&quot;amountDonated&quot; type=&quot;hidden&quot;&gt;
+          &lt;div class=&quot;default text&quot;&gt;Amount&lt;/div&gt;
+          &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+          &lt;div class=&quot;menu&quot;&gt;
+            &lt;div class=&quot;item&quot; data-value=&quot;100&quot;&gt;$100&lt;/div&gt;
+            &lt;div class=&quot;item&quot; data-value=&quot;500&quot;&gt;$500&lt;/div&gt;
+            &lt;div class=&quot;item&quot; data-value=&quot;1000&quot;&gt;$1000&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;column&quot;&gt;
+        &lt;div class=&quot;grouped inline fields&quot;&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;ui radio checkbox&quot;&gt;
+              &lt;input id=&quot;paypal&quot; name=&quot;methodDonated&quot; value=&quot;paypal&quot; checked=&quot;checked&quot; type=&quot;radio&quot;&gt; 
+              &lt;label for=&quot;paypal&quot;&gt;PayPal&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;ui radio checkbox&quot;&gt;
+              &lt;input id=&quot;direct&quot; name=&quot;methodDonated&quot; value=&quot;direct&quot; type=&quot;radio&quot;&gt; 
+              &lt;label for=&quot;direct&quot;&gt;Direct&lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ui blue submit button&quot;&gt;Donate &lt;i class=&quot;add icon&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui error message&quot;&gt;&lt;/div&gt;
+  &lt;/form&gt;
+  &lt;div class=&quot;ui segment&quot;&gt;
+    &lt;h4 class=&quot;ui header&quot;&gt;Amount target achieved&lt;/h4&gt;
+    &lt;div class=&quot;ui green progress&quot;&gt;
+      &lt;div class=&quot;bar&quot; style=&quot;width:${progress}&quot;&gt;&lt;/div&gt;&lt;!--&quot;width:50%&quot; &quot;width:${progress}&quot; --&gt;
+      &lt;div class=&quot;label&quot;&gt;Funding (${progress})&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;@{&#39;/public/javascripts/donate.js&#39;}&quot;&gt;&lt;/script&gt;
+&lt;/section&gt;</code></pre>
+<p>The routes file needs an addition to facilitate posting data:</p>
+<pre><code># Donation page
+POST   /donation/donate                         DonationController.donate</code></pre>
+<p>Observe this line of code (line 57):</p>
+<pre><code>&lt;div class=&quot;ui error message&quot;&gt;&lt;/div&gt;</code></pre>
+<p>and this (line 66):</p>
+<pre><code>&lt;script src=&quot;@{&#39;/public/javascripts/donate.js&#39;}&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Their function, together with the JavaScript file <em>donation.js</em>, is to disallow an attempt to donate without selecting an amount in the dropdown menu.</p>
+<p>Should an error be flagged in Eclipse, as shown in Figure 1, check that the path to <em>donate.js</em> is correctly stated.</p>
+<p><img src="img/v2/01.png" alt="Figure 1: False error message"></p>
+<p>Here is the script code:</p>
+<p>File: donation.js</p>
+<pre><code>$(&#39;.ui.dropdown&#39;).dropdown();
+
+$(&#39;.ui.form&#39;)
+.form({
+  amountDonated: {
+    identifier: &#39;amountDonated&#39;,
+    rules: [
+      {
+        type: &#39;empty&#39;,
+        prompt: &#39;Please select an amount to donate&#39;
+      }
+    ]
+  }
+})
+;</code></pre>
+<p>Place this file in <em>public/javascripts</em> folder.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Iteration v2: Pre Load data</h1>
+<p>Preloaded data is extremely helpful during development as continuously initialising databases with data is both tedious and inefficient. </p>
+<p>To preload data we place a class Bootstrap in the default folder and source the data from a file <em>data.yml</em> which we place in the <em>conf</em> directory.</p>
+<p>Filename: Bootstrap.java</p>
+<pre><code class="lang-java">import java.util.List;
+
+import play.*;
+import play.jobs.*;
+import play.test.*;
+import models.*;
+
+@OnApplicationStart
+public class Bootstrap extends Job 
+{ 
+  public void doJob()
+  {
+    if (User.count() == 0)
+    {
+     Fixtures.loadModels(&quot;data.yml&quot;);
+    }
+  }
+}</code></pre>
+<p>Create a file data.yml in conf directory.</p>
+<p>Filename: data.yml</p>
+<pre><code class="lang-yml">User(homer):
+    usaCitizen: true
+    firstName: Homer
+    lastName: Simpson
+    email: homer@simpson.com
+    password: secret
+
+User(marge):
+    usaCitizen: true
+    firstName: Marge
+    lastName: Simpson
+    email: marge@simpson.com
+    password: secret
+
+User(lisa):
+    usaCitizen: true
+    firstName: Lisa
+    lastName: Simpson
+    email: lisa@simpson.com
+    password: secret
+
+User(bart):
+    usaCitizen: true
+    firstName: Bart
+    lastName: Simpson
+    email: bart@simpson.com
+    password: secret
+
+User(maggie):
+    usaCitizen: true
+    firstName: Maggie
+    lastName: Simpson
+    email: maggie@simpson.com
+    password: secret</code></pre>
+<p>This data will be loaded into the User database.</p>
+<p>You might consider adding data for the Donation model also.</p>
+<p>Here&#39;s a snippet that works with the above yml file.</p>
+<pre><code>Donation(first):
+    from: homer
+    received: 1000
+    methodDonated: cash</code></pre>
+<p>You may view this data through an SQL viewer, e.g. localhost:9000/@db when the embedded database is used.</p>
+<p>Test the iteration by executing <em>play run</em> and exercising the various navigation tabs. </p>
+<ul>
+<li>Switch to <em>Make Donation</em> page.</li>
+<li>Attempt to select a donation from the drop down <em>Amount</em>.</li>
+<li>Should nothing happens then the reason may be that a more recent version of the JavaScript library <em>JQuery</em> is required. <ul>
+<li>Check <em>javascripts</em> folder and if the <em>jquery</em> version is earlier than 2.1.1 download <em>jquery-2.2.3.js</em> from <a href="archive/jquery-2.2.3.zip">here</a>, expand and copy the file to <em>public/javascripts</em> folder.</li>
+<li>In <em>main.html</em> change the reference to this jquery file.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Test</strong></p>
+<p>Test the application.</p>
+<ul>
+<li>It should now be possible to make donations. </li>
+</ul>
+<p>Make several donations.</p>
+<ul>
+<li>Observe, however, that the progress bar does not reflect the contributions made. We shall attend to this issue later.</li>
+</ul>
+<p><img src="img/v2/02.png" alt="Figure 1: Donation page authentication in action"></p>
+<p>Commit this iteration to your <em>donation</em> repository, add a tag and push all to remote repo.</p>
+<pre><code>git add .
+git commit -m &#39;iteration  v2&#39;
+git tag -a v2 -m &#39;iteration v2&#39;
+git push &amp;&amp; git push --tags</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

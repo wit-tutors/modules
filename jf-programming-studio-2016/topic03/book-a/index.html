@@ -1,0 +1,556 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      03: Javascript & Maps; MyRent specification.
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent">
+      MyRent
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent">
+        <h1>Prototype</h1>
+<p><em>myrent</em>, a prototype web application to allow a user to register and authenticate, to gather data on residential properties, to store the data in a database and generate reports on properties located within specified regions.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction</h1>
+<p>Develop <em>myrent</em>, a prototype application, the purpose of which is to allow a user to register, log in and log out, gather data on residential properties, store the data in a database and generate reports.
+.</p>
+<p>This being a prototype, only a subset of the necessary data to define a property should be gathered:</p>
+<ul>
+<li>includes the property&#39;s geolocation</li>
+<li>the occupancy status: whether rented or vacant</li>
+<li>the rent payable</li>
+<li>the number of bedrooms</li>
+<li>the residence type such as apartment, house and so on.</li>
+</ul>
+<p>Develop the project in 4 iterations:</p>
+<ul>
+<li>Each iteration to comprise a completed, working, error-free, part of the application as specified.</li>
+<li>User <em>git</em> to commit each iteration to a single repository named <em>myrent</em> on your BitBucket or other similar account.</li>
+<li>Add tags to each iteration.</li>
+</ul>
+<p>The application is viewable online <a href="http://org-wit-myrent.herokuapp.com/">here</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Iteration v0</h1>
+<p>Develop the <em>sign up</em> and <em>sign in</em> facility.  </p>
+<p>Introduce a model named <em>User</em>:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>A user should be capable of signing on (registering) and logging in. </p>
+<p>It should be possible to open the database and verify that the user is recorded in User.</p>
+<ul>
+<li>Use the H2 console <ul>
+<li>Example: <em>localhost:9000/@db</em></li>
+</ul>
+</li>
+</ul>
+<p><strong><em>Model | View | Controller</em></strong></p>
+<p><strong>Views</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Sign up</li>
+<li>Log in</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>Accounts</li>
+<li>Home</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>User</li>
+</ul>
+<h2>Iteration v0 views</h2>
+<p><strong>Welcome</strong></p>
+<p><img src="img/04.png" alt=""></p>
+<p><strong>Sign Up</strong></p>
+<p><img src="img/02.png" alt=""></p>
+<p><strong>Log in</strong></p>
+<p><img src="img/03.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Iteration v1</h1>
+<p>Build on iteration v0 by adding </p>
+<ul>
+<li>a residence model, </li>
+<li>an input data controller and </li>
+<li>a view template to accept user data.</li>
+</ul>
+<p><strong><em>Model | View | Controller</em></strong></p>
+<p><strong>Views</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Sign up</li>
+<li>Log in</li>
+<li>InputData</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>User</li>
+<li>Residence</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>Accounts</li>
+<li>Home</li>
+<li>InputData</li>
+</ul>
+<h2>Additional view iteration v1</h2>
+<p><strong>Input Data</strong></p>
+<p><img src="img/05.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Iteration v2</h1>
+<p>Build on iteration v1 by adding a report view that allows the user to select a circular area within which all properties are listed together with specified attributes as illustated on the screen shot below.</p>
+<p><strong><em>Model | View | Controller</em></strong></p>
+<p><strong>Views</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Sign up</li>
+<li>Log in</li>
+<li>InputData</li>
+<li>Report</li>
+<li>Log out</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>User</li>
+<li>Residence</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>Accounts</li>
+<li>ReportController</li>
+<li>Home</li>
+<li>InputData</li>
+</ul>
+<h2>Additional views iteration v2</h2>
+<p><strong>Report generation</strong></p>
+<p><img src="img/06.png" alt="Report generate view"></p>
+<p><strong>Report</strong></p>
+<p><img src="img/07.png" alt="Sample report"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Iteration v3</h1>
+<p>This is an optional iteration.</p>
+<p>Complete the application building on iteration v2.</p>
+<p>Provide a template to allow the user send feedback.</p>
+<p>This is an advanced feature.</p>
+<ul>
+<li>Sample code will be provided.</li>
+</ul>
+<p><strong><em>Model | View | Controller</em></strong></p>
+<p><strong>Views</strong></p>
+<ul>
+<li>Welcome</li>
+<li>Sign up</li>
+<li>Log in</li>
+<li>InputData</li>
+<li>Report</li>
+<li>Contact</li>
+<li>Log out</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>User</li>
+<li>Residence</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>Accounts</li>
+<li>ReportController</li>
+<li>Home</li>
+<li>InputData</li>
+</ul>
+<h2>Additional views iteration v3</h2>
+<p><strong>Contact</strong></p>
+<p><img src="img/08.png" alt=""></p>
+<p><strong>Acknowledgement</strong></p>
+<p><img src="img/09.png" alt=""></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

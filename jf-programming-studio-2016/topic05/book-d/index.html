@@ -1,0 +1,597 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      05: WitPress prototype web app, TDD & Advanced Git.
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="WitPress">
+      WitPress
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="WitPress">
+        <h1>Prototype</h1>
+<p><em>witpress</em>, a prototype web application that allows an authenticated user to manage blog posts and comments on posts. An authenticated user may create a blog post, delete from its existing list of posts, add comments and access the public blog directory.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction</h1>
+<p>First some definitions: </p>
+<ul>
+<li>Blog: A web log, more commonly referred to as a blog, is a program that enables a user to create a post. </li>
+<li>Post: A post is just any text the owner may enter in the blog.</li>
+<li>Comment: A comment is text that an authorised user may attach to a post.</li>
+</ul>
+<p>Now the Objectives:</p>
+<ul>
+<li>Build the application over three iterations as specified in this lab.</li>
+<li>Create a baseline walking skeleton generated by Play.</li>
+<li>Create an authentication module.</li>
+<li>Implement a new class - Post - to represent a blog post</li>
+<li>Introduce mapping from User to Post</li>
+<li>Incorporate Routes, Controller and View to support blog posts</li>
+<li>Evolve an approach for deleting a blog post</li>
+<li>Implement a button in the blog to delete the post</li>
+<li>Blog posts to occupy their own pages.</li>
+<li>Implement blog posts with comments.</li>
+<li>Implement publicly read only blog &amp; blog directory.</li>
+<li>Implement blog and comment delete facilities for owner.</li>
+<li>Use Semantic UI framework.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Packages and Folders</h1>
+<p>The directory structure used in the solutions is illustated in Figure 1.</p>
+<p><img src="img/directory-structure.jpg" alt="Figure 1: WitPress directory structure"> </p>
+<p><strong>default package</strong></p>
+<ul>
+<li><strong>Bootstrap class</strong> is located in the default package. <ul>
+<li>Its purpose is to pre-load test data (from a .yml file in the conf folder), such as the names of signed-up contributors.</li>
+<li>This is a time-saving device which greatly speeds up development and initial testing. </li>
+</ul>
+</li>
+</ul>
+<p><strong>controllers package</strong></p>
+<p><em>Controllers</em> are classes that are extensions of the Play framework and contain methods (or Actions) that process requests and send results to the client (the web page). There are 7 controllers in this application: About, Accounts, Blog, BlogPost, Contact, PublicBlog, PublicBlogDirectory.</p>
+<ul>
+<li><p><strong>About</strong> is a placeholder for the About box. An About box contains, typically, credits, revision information and usually a logo or icon relating to the product or company developing the product.</p>
+</li>
+<li><p><strong>Accounts</strong> manages signing up or registering and signing in and out.</p>
+</li>
+<li><p><strong>Blog</strong> manages the blog content.</p>
+</li>
+<li><p><strong>BlogPost</strong> manages individual blogs and associated comments.</p>
+</li>
+<li><p><strong>Contact</strong> is a placeholder in which to provide contact details for users.</p>
+</li>
+<li><p><strong>PublicBlog</strong> : members of the public, whether or not signed in, may access individual&#39;s blog provided they are in possession of its url.</p>
+</li>
+<li><p><strong>PublicBlogDirectory</strong> : manages the listing of public blogs.</p>
+</li>
+</ul>
+<p><strong>models package</strong></p>
+<p>The model package contains classes that are extensions of the Play framework Model class. These classes manage the storage and retrieval of the client and donation details in a database.</p>
+<p>This application has 3 model classes: User, Post and Comment. </p>
+<ul>
+<li><p><strong>User</strong> contains details of the client (name, email, password and so on). A database table (default name &#39;user&#39;) will be generated by the framework to which the data may be written and from which selected items of data may be 
+retrieved.</p>
+</li>
+<li><p><strong>Post</strong> contains data fields that define a blog. Additionally it can be associated with multiple comments.</p>
+</li>
+<li><p><strong>Comment</strong> contains a field to store an individual comment.</p>
+</li>
+</ul>
+<p><strong>views folder</strong></p>
+<p>This folder contains sub-folders that map to the controllers. For example since there exists 7 controllers there will necessarily be 7 sub-folders with the same names.</p>
+<p>Each subfolder contains an index template (<em>index.html</em>) corresonding to each method in the controllers. </p>
+<ul>
+<li>Thus, for example, the file login.html will map to a method in the Accounts controller with the signature <ul>
+<li><em>public static void login()</em>.</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Iteration v0</h1>
+<ul>
+<li>Develop the <em>sign up</em> and <em>sign in</em> facility.  </li>
+<li>Implement  <em>sign out</em> functionality.</li>
+<li>Implement a model named <em>User</em>.</li>
+</ul>
+<p><img src="img/user-model.jpg" alt="Figure 1: User model"></p>
+<p>A user should be capable of signing on (registering) and signing in. It should be possible to open the database and verify that the user is recorded in User.</p>
+<h2>Model | View | Controller</h2>
+<p><strong>Views</strong></p>
+<ul>
+<li>Accounts</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>Accounts</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>User</li>
+</ul>
+<h2>Completed Iteration</h2>
+<p><strong>Sign Up page</strong></p>
+<p><img src="img/signup.png" alt="Figure 2: Sign up"></p>
+<p><strong>Sign in page</strong></p>
+<p><img src="img/login.png" alt="Figure 3: Log in"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Iteration v1</h1>
+<ul>
+<li>Implement a new class - Post - to represent a blog post</li>
+<li>Implement a new class - Comment - to represent a comment on a post.</li>
+<li>Introduce mapping from User to Post</li>
+<li>Incorporate Routes, Controller and View to support blog posts</li>
+<li>Evolve an approach for deleting a blog post</li>
+<li>Implement a button in the blog to delete the post</li>
+<li>Blog posts to occupy their own pages.</li>
+<li>Implement blog posts with comments.</li>
+</ul>
+<p><img src="img/post-model.jpg" alt="Figure 1: Post model"></p>
+<p><img src="img/comment-model.jpg" alt="Figure 2: Comment model"></p>
+<h2>Model | View | Controller</h2>
+<p><strong>Views</strong></p>
+<ul>
+<li>Accounts</li>
+<li>Blog</li>
+<li>BlogPost</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>Accounts</li>
+<li>Blog</li>
+<li>BlogPost</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>Comment</li>
+<li>Post</li>
+<li>User</li>
+</ul>
+<h2>Completed Iteration</h2>
+<p><strong>Sign Up page</strong></p>
+<p><img src="img/signup.png" alt="Figure 3: Sign up"></p>
+<p><strong>Sign in page</strong></p>
+<p><img src="img/login.png" alt="Figure 4: Sign in"></p>
+<p><strong>Create New Blog page</strong></p>
+<p><img src="img/bloglist.png" alt="Figure 5: Creating a new blog entry"></p>
+<p><strong>Individual Blog + Comments page</strong></p>
+<p><img src="img/blogsingle.png" alt="Figure 6: A blog entry and comments"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Iteration v2</h1>
+<ul>
+<li>Provide support for public blogs. </li>
+<li>Any member of the public whether signed in or not may read the blog provided the url is known.</li>
+<li>Ensure that only signed-in users are allowed to delete posts and comments. </li>
+</ul>
+<p><img src="img/user-model.jpg" alt="Figure 1: User model"></p>
+<p><img src="img/post-model.jpg" alt="Figure 2: Post model"></p>
+<p><img src="img/comment-model.jpg" alt="Figure 3: Comment model"></p>
+<h1>Model | View | Controller</h1>
+<p><strong>Views</strong></p>
+<ul>
+<li>About</li>
+<li>Accounts</li>
+<li>Blog</li>
+<li>BlogPost</li>
+<li>Contact</li>
+<li>PublicBlog</li>
+<li>PublicBlogDirecory</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>About</li>
+<li>Accounts</li>
+<li>Blog</li>
+<li>BlogPost</li>
+<li>Contact</li>
+<li>PublicBlog</li>
+<li>PublicBlogDirecory</li>
+</ul>
+<p><strong>Model</strong></p>
+<ul>
+<li>Comment</li>
+<li>Post</li>
+<li>User</li>
+</ul>
+<h1>Completed Iteration</h1>
+<p>Observe the newly introduced link to Public Blogs on the nav bar.</p>
+<p><strong>Sign Up page</strong></p>
+<p><img src="img/signup.png" alt="Figure 4: Sign up"></p>
+<p><strong>Sign in page</strong></p>
+<p><img src="img/login.png" alt="Figure 5: Sign in"></p>
+<p><strong>Create New Blog page</strong></p>
+<p><img src="img/bloglist.png" alt="Figure 6: Createing new blog entry"></p>
+<p><strong>Individual Blog + Comments page</strong></p>
+<p><img src="img/blogsingle.png" alt="Figure 7: Blog entry and comments"></p>
+<p><strong>Public Blog Directory page</strong></p>
+<p><img src="img/publicblogdirectory.png" alt="Figure 8: Public directory listing"></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

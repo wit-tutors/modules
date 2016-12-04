@@ -1,0 +1,929 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      03: Javascript & Maps; MyRent specification.
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="JavaScript III">
+      JavaScript III
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="JavaScript III">
+        <h1>Objectives</h1>
+<p>Use both native JavaScript and JQuery to access and manipulate the DOM, for example by hiding and revealing nodes (elements).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Access the DOM</h1>
+<p>In <em>workspaceStudio</em> and using Eclipse, create a static web project called <em>dom</em>.</p>
+<ul>
+<li>Create the following file in <em>WebContent</em></li>
+</ul>
+<p>Filename: dom-access.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;p id=&quot;demo&quot;&gt;Click the button to change this text.&lt;/p&gt;
+        &lt;button onclick=&quot;domAccess()&quot;&gt;Try it&lt;/button&gt;
+        &lt;script src=&quot;js/dom-access.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Create a folder named <em>js</em> in WebContent and add the following file:</p>
+<p>Filename dom-access.js</p>
+<pre><code>function domAccess()  {
+    document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hi ICTSkills&quot;;
+}</code></pre>
+<p>Open <em>dom-access.html</em> in Chrome browser.</p>
+<ul>
+<li>You should be presented with something similar to that depicted in Figure 1.</li>
+</ul>
+<p><img src="img/01.png" alt="Figure 1: Invitation to click"></p>
+<ul>
+<li>Click the button <em>Try it</em>.<ul>
+<li>The  text <em>Click the button to change this text</em> should be replaced with:</li>
+<li>Hi ICTSkills (Figure 2).</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/02.png" alt="Figure 2: Hi ICTSkills"></p>
+<p>Let&#39;s use Google Chrome debugger to better understand what&#39;s happening:</p>
+<ul>
+<li>Open <em>dom-access.html</em> in Chrome.</li>
+<li><p>Select <em>Tools | Developer Tools</em> in the context menu: see Figugre 3.
+<img src="img/03.png" alt="Figure 3: Launching Developer Tools"></p>
+</li>
+<li><p>Select the file <em>dom-access.js</em> into the text window (see Figure 4).
+<img src="img/04.png" alt="Figure 4: Select dom-access.js"></p>
+</li>
+<li><p>The file <em>dom-access.js</em> should now be visible as shown in Figure 5.
+<img src="img/05.png" alt="Figure 5: dom-access.js javaScript file"></p>
+</li>
+</ul>
+<p>Place a breakpoint on line 3, the statement <em>document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hi ICTSkills&quot;;</em></p>
+<ul>
+<li><p>You may do this by simply placing the mouse pointer on the number 3 and clicking. See Figure 6.
+<img src="img/06.png" alt="Figure 6: Breakpoint set"></p>
+</li>
+<li><p>Reload the page and press the button <strong>Try it</strong></p>
+<ul>
+<li>As shown in Figure 7, the program stops at line 3, the breakpoint.
+<img src="img/07.png" alt="Figure 7: Program halts at breakpoint"></li>
+</ul>
+</li>
+</ul>
+<p>How does this happen?</p>
+<ul>
+<li>When, during the loading of the page described in the file <em>dom-access.html</em>, the statement <code>&lt;script src=&quot;js/dom-access.js&quot;\&gt;&lt;/script\&gt;</code> is encountered, the JavaScript file <em>dom-access.js</em>, located in the folder <em>js</em>, is incorporated into the page and the <em>document.getElementById</em> command executed.<ul>
+<li>This accesses the paragraph node in the DOM whose <em>id</em> is <em>demo</em> and replaces the text with <em>Hi ICTSkills</em>.</li>
+</ul>
+</li>
+</ul>
+<p>Let&#39;s now replace the native JavaScript with jQuery to achieve the same goal.</p>
+<ul>
+<li>Replace the the function <em>domAccess</em> in with the following:</li>
+</ul>
+<p>Filename: dom-access.js</p>
+<pre><code>function domAccess()  {
+
+    $(&quot;#demo&quot;).html(&quot;Hi ICTSkills&quot;);
+
+}</code></pre>
+<ul>
+<li>Reload the html file <em>dom-access.html</em>.</li>
+<li>Press the <strong>Try it</strong> button:<ul>
+<li>Opps! There&#39;s a problem. The text does not change. <ul>
+<li>The reason is that we have not loaded the jQuery library. </li>
+<li>We can load a local or a cloud copy of jQuery. Let&#39;s do the latter. </li>
+<li>The modified html follows: reload this file, press the <strong>Try it</strong> button and observe that the result should be exactly the same as before: the text changes to <em>Hi ICTSkills</em>.<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;p id=&quot;demo&quot;&gt;Click the button to change this text.&lt;/p&gt;
+&lt;button onclick=&quot;domAccess()&quot;&gt;Try it&lt;/button&gt;
+&lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/dom-access.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Study the jQuery syntax.</p>
+<ul>
+<li>$(&quot;#demo&quot;).html(&quot;Hi ICTSkills&quot;);<ul>
+<li>#demo refers to the <em>id</em> in the html paragraph node<ul>
+<li>Observe that a hash (#) is prepended to the id as shown in the html file.</li>
+</ul>
+</li>
+<li>$(&quot;#demo&quot;) is a jQuery object</li>
+<li>$(&quot;#demo&quot;).html(...): here a jQuery method <em>html(...)</em> is being invoked on the jQuery object.<ul>
+<li>The text parameter in <em>html(...)</em> replaces the existing text at the location identified by the id <em>#demo</em>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Get Element by id</h1>
+<p>In this step we shall use both native JavaScript and jQuery to obtain information on a single DOM element using the element&#39;s <em>id</em> attribute.</p>
+<p>-Recall that an <strong>id</strong> uniquely identifies an element on a page.</p>
+<p>Download the <a href="archive/img.zip">img.zip</a> from the local archive, expand and place the folder <em>img</em> in your <em>WebContent</em> folder.</p>
+<ul>
+<li>The folder <em>img</em> contains three arbitrarily chosen png images, 01, 02 and 03.</li>
+<li>Create a file domManip.html in WebContent and add the following content:</li>
+</ul>
+<p>Filename: domManip.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+      &lt;h2&gt;Image 1&lt;/h2&gt;
+      &lt;img src=&quot;img/01.png&quot; id=&quot;img1&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;
+      &lt;h2&gt;Image 2&lt;/h2&gt;
+      &lt;img src=&quot;img/02.png&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;h2&gt;Image 3&lt;/h2&gt;
+      &lt;img src=&quot;img/03.png&quot;&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/domManip.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Create file <em>domManip.js</em> in the folder <em>js</em> and add this content:</p>
+<pre><code>const image = document.getElementById(&quot;img1&quot;); 
+alert(&quot;Image height is &quot; + image.height);</code></pre>
+<p>Open <em>domManip.html</em> in Chrome. An alert box should open as shown in Figure 1.
+<img src="img/08.png" alt="Figure 1: Image height"></p>
+<p>Let&#39;s now use a jQuery function call to obtain the image height.</p>
+<p>Replace the <em>domManip.js</em> content with:</p>
+<pre><code>const image = $(&quot;#img1&quot;);
+alert(&quot;Image height is &quot; + image.height());</code></pre>
+<p>Alternatively use a more compact version:</p>
+<pre><code>alert(&quot;Image height is &quot; + $(&quot;#img1&quot;).height());</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Get Elements by name</h1>
+<p>Recall that whereas an <strong>id</strong> uniquely identifies an element on a page, a <strong>name</strong> may be repeated.</p>
+<ul>
+<li>In this step we shall obtain information about an array of elements identified by their <em>name</em> attribute.</li>
+</ul>
+<p>Modify the file <em>domManip.html</em> as follows:</p>
+<ul>
+<li>add a name attribute to images 1 and 2<ul>
+<li><em>name=&quot;imgs&quot;</em></li>
+<li>the third image shall remain nameless.</li>
+</ul>
+</li>
+</ul>
+<p>The object is to retrieve an array of elements comprising those whose name attribute is &quot;imgs&quot;.</p>
+<ul>
+<li>We expect, therefore, that the array shall contain two images.</li>
+</ul>
+<p>Here is the replacement html:</p>
+<p>Filename domManip.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+      &lt;h2&gt;Image 1&lt;/h2&gt;
+      &lt;img src=&quot;img/01.png&quot; id=&quot;img1&quot; name=&quot;imgs&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;h2&gt;Image 2&lt;/h2&gt;
+      &lt;img src=&quot;img/02.png&quot; name=&quot;imgs&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;h2&gt;Image 3&lt;/h2&gt;
+      &lt;img src=&quot;img/03.png&quot;&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/domManip.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>And here is the corresponding JavaScript:</p>
+<p>Filename: domManip.js</p>
+<pre><code>const images = document.getElementsByName(&quot;imgs&quot;);
+for(let i = 0; i &lt; images.length; i++)  {
+    alert(&quot;Image number &quot; + i + &quot; is &quot; + images[i].height);
+}</code></pre>
+<p>Open (or reload) <em>domManip.html</em>.</p>
+<ul>
+<li>Two alert boxes should open in succession, each stating the image number and its height.<ul>
+<li>Note that there are three images on the page but that, as expected, we obtain information on only two, those whose name is <em>imgs</em>.</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/09.png" alt="Figure 1: Get elements by name"></p>
+<p>To use jQuery to the same effect replace the content of <em>domManip.js</em> with:</p>
+<p>Filename domManip.js</p>
+<pre><code>const images = $(&#39;[name=&quot;imgs&quot;]&#39;);
+alert(&quot;There are &quot;+ images.length +&quot; images with name=\&quot;imgs\&quot; in this page&quot;);
+const index = 0;
+images.each(function() {
+    alert(&quot;Image &quot; + index + &quot; height is &quot; + $(this).height());
+    index += 1;
+});</code></pre>
+<p>We have included an extra statement here to indicate the number of images with *name=\&quot;imgs\&quot;.</p>
+<ul>
+<li>alert(&quot;There are &quot;+ images.length +&quot; images with name=&quot;imgs&quot; in this page&quot;);
+<img src="img/10.png" alt="Figure 2: Using jQuery to discover number of elements matching name=&quot;imgs&quot;"></li>
+</ul>
+<p>Note the jQuery syntax to reference the <strong>name</strong> attribute.</p>
+<ul>
+<li>$(&#39;[name=&quot;imgs&quot;]&#39;)</li>
+</ul>
+<p>Recall the syntax to reference <strong>id</strong></p>
+<ul>
+<li>$(&quot;#img1&quot;)</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Get Elements by tagName</h1>
+<p>In this step we shall retrieve nodes using the native JavaScript method <em>getElementsByTagName</em> and its jQuery equivalent.</p>
+<p>The method <em>getElementsByTagName</em> differs from the methods <em>getElementById</em> and <em>getElementsByName</em> in that it can be invoked on any node, not just the <em>document</em> root node as is the case with the latter two methods.</p>
+<p>There are two parts to this step.</p>
+<ul>
+<li>In part 1 we shall retrieve an array of all the images in a web page and print the size of the array in an alert box.</li>
+<li>In part 2 we shall retrieve an array only of those images in the div node whose id is &quot;ictskills-imgs&quot;.</li>
+</ul>
+<p><strong>Preparation</strong></p>
+<ul>
+<li>Download the <a href="archive/img.zip">img.zip</a> from the local archive, expand and copy the three png images (04, 05,06) to the img folder in WebContent.<ul>
+<li>There will then be six images in the <em>img</em> folder.</li>
+</ul>
+</li>
+<li>Replace the content of the html file as follows:</li>
+</ul>
+<p>Filename: domManip.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div id=&quot;ictskills-imgs&quot;&gt;
+      &lt;div&gt;
+        &lt;h2&gt;Image 1&lt;/h2&gt;
+        &lt;img src=&quot;img/01.png&quot; name=&quot;imgs&quot;&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;h2&gt;Image 2&lt;/h2&gt;
+        &lt;img src=&quot;img/02.png&quot; name=&quot;imgs&quot;&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;h2&gt;Image 3&lt;/h2&gt;
+        &lt;img src=&quot;img/03.png&quot; name=&quot;imgs&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div id =&quot;computer-science-imgs&quot;&gt;
+      &lt;div&gt;
+        &lt;h2&gt;Image 4&lt;/h2&gt;
+        &lt;img src=&quot;img/04.png&quot; name=&quot;imgs&quot;&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;h2&gt;Image 5&lt;/h2&gt;
+        &lt;img src=&quot;img/05.png&quot; name=&quot;imgs&quot;&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;h2&gt;Image 6&lt;/h2&gt;
+        &lt;img src=&quot;img/06.png&quot; name=&quot;imgs&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/domManip.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Study the changes:</p>
+<ul>
+<li>We have added 3 extra images.</li>
+<li>The original 3 images are wrapped in a div with id <em>ictskills-imgs</em>.</li>
+<li>The new images are in a div with id <em>computer-science-imgs</em>.</li>
+</ul>
+<p><strong>Part 1</strong></p>
+<p>Replace the content of <em>domManip.js</em> with:</p>
+<pre><code>const images = document.getElementsByTagName(&#39;img&#39;);
+alert(&quot;Number of images in page is &quot; + images.length);</code></pre>
+<p>Open <em>domManip.html</em> in Chrome. You should be presented with an alert box as depiced in Figure 1:
+<img src="img/11.png" alt="Figure 1: Discovered six image tags"></p>
+<p>To repeat using jQuery, replace the javascript file with the following:</p>
+<p>Filename: domManip.js</p>
+<pre><code>const images = $(&quot;[name=&#39;imgs&#39;]&quot;);
+alert(&quot;Number of images in page is &quot; + images.length);</code></pre>
+<p>Carefully note the jQuery syntax.</p>
+<p><strong>Part 2</strong>
+In this part we shall count the number of images in a specific div.</p>
+<p>The html remains unchanged.</p>
+<p>Here is the revised javascript:</p>
+<pre><code>const imgDiv = document.getElementById(&quot;ictskills-imgs&quot;);
+const images = imgDiv.getElementsByTagName(&#39;img&#39;); 
+alert(&quot;There are &quot;+images.length+&quot; images in this page&quot;);</code></pre>
+<p>Replace the content of <em>domManip.js</em> with the above code and then open <em>domManip.html</em> in a browser.</p>
+<p>You should see a JavaScript Alert box similar to that in Figure 2.
+<img src="img/12.png" alt="Figure 2: Three images in node whose id is ictskills-imgs">
+Note what&#39;s happening here:</p>
+<ul>
+<li>We retrieve the node whose id is &quot;ictskills-imgs&quot;. <ul>
+<li>This is the div defined within the html as follows:<ul>
+<li><div id="ictskills-imgs"\></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>We then invoke *getElementsByTagName on this node (an object):<ul>
+<li>imgDiv.getElementsByTagName(&#39;img&#39;); </li>
+<li>This allows us to determine the number of images in the node.</li>
+</ul>
+</li>
+</ul>
+<p>Here is the jQuery code.</p>
+<ul>
+<li>Delete the existing content in <em>domManip.js</em> and substitute this:</li>
+</ul>
+<p>Filename: domManip.js</p>
+<pre><code>const images = $(&quot;#ictskills-imgs [name=&#39;imgs&#39;]&quot;);
+alert(&quot;There are &quot;+ images.length +&quot; images with name=\&quot;imgs\&quot; in this page&quot;);</code></pre>
+<p>The jQuery syntax here requires careful study.</p>
+<p>The expression <em>$(&quot;[name=&#39;imgs&#39;]&quot;);</em> would return all images whose attribute name is <em>imgs</em>, 6 in total.</p>
+<p>However, the expression <em>$(&quot;#ictskills-imgs [name=&#39;imgs&#39;]&quot;);</em> returns only the images within the node (the div in this case), whose id is <em>ictskills-imgs</em> AND whose attribute name is <em>imgs</em>, a total of 3.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Hide and Reveal Elements</h1>
+<p>Create a file in WebContent named <em>show.html</em> with the following content:</p>
+<p>Filename: show.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;Hide and Reveal&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p id=&quot;text&quot;&gt;Watch me appear and disappear&lt;/p&gt;
+        &lt;button onclick=&quot;hide()&quot;&gt;Hide&lt;/button&gt;
+        &lt;button onclick=&quot;reveal()&quot;&gt;Reveal&lt;/button&gt;
+
+
+        &lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/show.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Create a corresponding JavaScript file in the <em>js</em> folder:</p>
+<p>Filename: show.js</p>
+<pre><code>function hide()  {
+    document.getElementById(&quot;text&quot;).style.visibility = &quot;hidden&quot;;
+}
+function reveal()  {
+    document.getElementById(&quot;text&quot;).style.visibility = &quot;visible&quot;;
+}</code></pre>
+<p>Open show.html in Chrome. </p>
+<p><img src="img/13.png" alt="Figure 1: Now you see me"></p>
+<p>Press Hide.</p>
+<p><img src="img/14.png" alt="Figure 2: Now you don&#39;t"></p>
+<p>Press Reveal.</p>
+<p><img src="img/13.png" alt="Figure 3: Can&#39;t get rid of me that easily"></p>
+<p>Replace the content of show.js with the jQuery equivalent:</p>
+<pre><code>function hide() {
+    $(&#39;#text&#39;).hide();
+}
+
+function reveal() {
+    $(&#39;#text&#39;).show();
+}</code></pre>
+<p>Test as before: the behaviour should be similar.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Carousel</h1>
+<p>This item is optional.</p>
+<p>Several carousel plugins are now available. </p>
+<ul>
+<li>One has been selected for implementation in this step - <a href="http://baijs.com/tinycarousel/">Tiny Carousel</a>.<ul>
+<li>In this implementation we have made some minor amendments and folder reorganization.</li>
+</ul>
+</li>
+</ul>
+<h2>Instructions to implement <em>Tiny Carousel</em></h2>
+<ul>
+<li>Create a new static web project called <em>tinycarousel</em>.</li>
+<li>Create the following folders in WebContent:<ul>
+<li>css</li>
+<li>images</li>
+<li>js</li>
+</ul>
+</li>
+<li>Add a file named <em>tinycarousel.css</em> to the css folder:</li>
+</ul>
+<p>Filename: tinycarousel.css</p>
+<pre><code>/* Tiny Carousel */
+#slider1 { height: 1%; overflow:hidden; padding: 0 0 10px;   }
+#slider1 .viewport { float: left; width: 240px; height: 125px; overflow: hidden; position: relative; }
+#slider1 .buttons {
+    background: #C01313;
+    border-radius: 35px;
+    display: block;
+    margin: 30px 10px 0 0;
+    float: left;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 22px;
+}
+#slider1 .next {
+    margin: 30px 0 0 10px;
+}
+#slider1 .buttons:hover{
+    color: #C01313;
+    background: #fff;
+}
+#slider1 .disable { visibility: hidden; }
+#slider1 .overview { list-style: none; position: absolute; padding: 0; margin: 0; width: 240px; left: 0 top: 0; }
+#slider1 .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 121px; border: 1px solid #dcdcdc; width: 236px;}
+
+.slider {
+  margin: 10px 0;
+  width: 580px; /* Update to your slider width */
+  height: 250px; /* Update to your slider height */
+  position: relative;
+  overflow: hidden;
+}
+
+.slider li {
+  display: none;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}</code></pre>
+<ul>
+<li><p>Download the file <a href="archive/images.zip">images.zip</a> from the local archive, expand it and copy or move the 7 jpg files to WebContent/images folder.</p>
+</li>
+<li><p>Download the file <a href="archive/js.zip">js.zip</a> from the local archive, expand it and copy or move the 3 JavaScript files to WebContent/js folder:</p>
+<ul>
+<li>tinycarousel.js</li>
+<li>jquery.tinycarousel.js</li>
+<li>jquery-2.2.3.js</li>
+</ul>
+</li>
+<li>The content of tinycarousel.js is as follows:</li>
+</ul>
+<pre><code>$(document).ready(function() {
+    $(&#39;#slider1&#39;).tinycarousel();
+});</code></pre>
+<ul>
+<li><p><em>$(document).ready</em> ensures the DOM is ready before the carousel code executes.</p>
+<ul>
+<li>See the jQuery API documentation for <a href="http://api.jquery.com/ready/">.ready()</a>.</li>
+</ul>
+</li>
+<li><p><em>$(&#39;#slider1&#39;).tinycarousel();</em> invokes the method <em>tinycarousel</em> on the jQuery object $(&#39;#slider1&#39;) which wraps the node contained by the div with id = <em>slider1</em>:</p>
+<ul>
+<li><div id="slider1"\></li>
+</ul>
+</li>
+<li><em>tinycarousel</em> is a function in the JavaScript file <em>jquery.tinycarousel</em>.</li>
+</ul>
+<p>The last step is to create the html file: <em>tiny-carousel.html</em>.</p>
+<ul>
+<li>Locate this in WebContent.</li>
+</ul>
+<p>Filename: tiny-carousel.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+    &lt;title&gt;Tiny Carousel: A lightweight jQuery plugin&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/tinycarousel.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;/&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;slider1&quot;&gt;
+      &lt;a class=&quot;buttons prev&quot; href=&quot;#&quot;&gt;&amp;#60;&lt;/a&gt;
+      &lt;div class=&quot;viewport&quot;&gt;
+        &lt;ul class=&quot;overview&quot;&gt;
+          &lt;li&gt;&lt;img src=&quot;images/picture6.jpg&quot; /&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src=&quot;images/picture5.jpg&quot; /&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src=&quot;images/picture4.jpg&quot; /&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src=&quot;images/picture3.jpg&quot; /&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src=&quot;images/picture2.jpg&quot; /&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;img src=&quot;images/picture1.jpg&quot; /&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;a class=&quot;buttons next&quot; href=&quot;#&quot;&gt;&amp;#62;&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;js/jquery-2.2.3.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/jquery.tinycarousel.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/tinycarousel.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Open <em>tiny-carousel.html</em> in a browser.
+<img src="img/15.png" alt="Figure 1: Tiny Carousel"></p>
+<p>Click on the arrows at the left and right of the picture and observe the carousel in action.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

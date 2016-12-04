@@ -1,0 +1,1036 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      01: Git intro & Donation web app
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Basic-Git">
+      Basic-Git
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="10">
+      10
+    </a>
+    
+    <a class="item" data-tab="11">
+      11
+    </a>
+    
+    <a class="item" data-tab="12">
+      12
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Basic-Git">
+        <h1>A first lab on the use of Git.</h1>
+<p>Lab describing how to use <strong>git</strong> to manage a project by creating a local repository, inserting the project files into the repository and creating and managing a tracking copy of the repository on a cloud-based server.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction</h1>
+<p><img src="img/git-logo.jpg" alt=""> This short lab is aimed at the single developer who wishes to use Git to maintain a project.</p>
+<p>Before commencing you are recommended to download and install <em>Sublime Text</em> text editor available <a href="http://www.sublimetext.com/2">here</a>.</p>
+<p><strong>git</strong> is a source code control application that allows a development team to construct a fine grained history of a project comprising a set of versions, a version being a complete copy of the project made at a specific point in the development cycle. Any particular version is retrievable at any time, a feature that helps not only the development but also the maintenance phases of the project.</p>
+<p>Many older version control systems work with a centralized repository of the project code base. Git, however, is a fully distributed system that allows each developer to have one or more full copies of the repository and to thus be able to work offline whenever this might be a requirement.</p>
+<p>It takes time to become confident in the use of <em>git</em>. The approach adopted here is to introduce one to a small subset of the application&#39;s features that is, nevertheless, sufficient to fully manage a one-developer project. </p>
+<p>This briefly is how the system will work. </p>
+<ul>
+<li>You will create an account with BitBucket.<ul>
+<li>This will allow you to create a remote repository (repo) there.</li>
+<li>Your project will reside in this repository.</li>
+<li>You may create a clone of the repository on any number of local machines.<ul>
+<li>For example, you might have a copy on your laptop and another on your desktop.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Suppose, for example, you have completed a morning&#39;s work on your laptop in college.<ul>
+<li>Carry out a process, described below, that will update your remote repo with this, the latest version of your work.</li>
+</ul>
+</li>
+<li>Suppose that later, for example at home, you wish to work some more on the project using your desktop:<ul>
+<li>Simply browse to the folder (directory) where your project is stored on the desktop machine and update the copy of the project on your desktop from the remote repo.</li>
+<li>When you have completed this work session update the remote repo once more.</li>
+</ul>
+</li>
+</ul>
+<p>Note the pattern above:</p>
+<ul>
+<li>Always update the repo with the local copy of your project once you have finished your work session.</li>
+<li>When you commence a new work session you immediately update the local copy of the project with the remote repo BEFORE you make any changes to the local copy. This is important.</li>
+<li>In this way, when you are no longer working on your project, you can be confident that the latest version is always in the remote repo.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Git Bash</h1>
+<p><img src="img/git-logo.jpg" alt=""> Download and install <a href="http://git-scm.com/downloads">git</a>.</p>
+<ul>
+<li>This will be used in this lab. We shall refer to it as <em>Git Bash</em>.</li>
+<li>Important: Work within the Git Bash terminal, not the native Windows terminal, throughout this lab.</li>
+</ul>
+<p><img src="img/heroku_022.png" alt="Figure 1: Installation Wizard Git Bash"></p>
+<p>All the following commands should be run within the Git Bash terminal, not the standard windows terminal (Command Prompt).</p>
+<p><img src="img/10.png" alt="Figure 2: Test git installation"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Git(Mac)</h1>
+<p><img src="img/git-logo.jpg" alt=""> If you are a Mac user you should check if <em>Git</em> is already installed by </p>
+<ul>
+<li>Opening a terminal</li>
+<li>Typing <em>git --version</em></li>
+</ul>
+<p>If <em>Git</em> is already on your computer the response should be something like that depicted in Figure 1.
+<img src="img/11.png" alt="Figure 1: Checking if git installed"></p>
+<p>If Git is not installed or if the installed version requires upgrading then you may consider using the graphical Git installer available <a href="http://sourceforge.net/projects/git-osx-installer/">here</a>.
+<img src="img/12.png" alt="Figure 2: Graphical Git installer for Mac"></p>
+<ul>
+<li><p>Save the download file to a temporary folder.
+<img src="img/13.png" alt="Figure 3: Git OSX Installer"></p>
+</li>
+<li><p>Double click on the saved <em>dmg</em> file.</p>
+</li>
+<li><p>Launch the installer by double clicking on the package icon (Figure 4).
+<img src="img/14.png" alt="Figure 4: Snow Leopard Intel Universal"></p>
+</li>
+<li><p>Accept the defaults presented in the various screens of the <em>Install Git</em> wizard:
+<img src="img/15.png" alt="Figure 5: Git Installer - Introduction">
+<img src="img/16.png" alt="Figure 6: Git Installer - Destination Select | Installation Type">
+<img src="img/17.png" alt="Figure 7: Git Installer - Successfully installed"></p>
+</li>
+</ul>
+<p>Typically the fresh install will be located in <em>/usr/local/git</em> whereas the Apple version is likely to be located iin <em>/usr/bin/git</em>. In order that the latest version is launched at the <em>git</em> command modify the <em>.bash_profile</em> file by adding <em>/usr/local/git</em> to the path so that it is encountered before <em>/usr/bin/git</em>.</p>
+<p>Your <em>.bash_profile</em> should then include something like the following:</p>
+<pre><code>PATH=/usr/local/git/bin:$PATH
+
+export PATH</code></pre>
+<p>Check by typing <em>which git</em> in a terminal. If the upgrade and path change have been successful then the response should be:</p>
+<p>/usr/local/git/bin/git</p>
+<p>Finally verify the version is correct by typing <em>git --version</em> (Figure 8).</p>
+<p><img src="img/18.png" alt="Figure 8: Which Git"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Configure Git.</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p><strong>Git global configuration</strong></p>
+<p>Set identity and email:</p>
+<pre><code>// Example
+git config --global user.name &quot;Your Name&quot;
+git config --global user.email your_name@gitlab.com</code></pre>
+<p>Very likely the <strong>vi</strong> editor will be configured by default. However you may set the editor of your choice. An example is shown below. However, we recommend you do not make this choice just now until you have checked the default editor later in the lab.</p>
+<pre><code>git config --global core.editor vim</code></pre>
+<p>Now check the global git settings:</p>
+<pre><code>git config --get user.name
+git config --get user.email</code></pre>
+<p>Check the git configuration file:</p>
+<pre><code>git config --list</code></pre>
+<p>Repeat all above for Student B.</p>
+<p><strong>Optional: Terminal Colors in OSX</strong></p>
+<p>Set colors for OSX terminal output by adding the following to .bash_profile:</p>
+<pre><code>export CLICOLOR=1
+export LSCOLORS=cxFxBxDxCxegedabagacad</code></pre>
+<p>An explanation is available <a href="http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x">here</a>.</p>
+<p>The default colour scheme in Git Bash should prove adequate.</p>
+<p><strong>Pretty print log output</strong></p>
+<p>We shall now introduce an alias to print logs in a short and convenient format. You have a choice of two methods as follows:</p>
+<p>Method 1:</p>
+<p>Run this command from within the terminal:</p>
+<pre><code>git config --global alias.gitpa &quot;log --pretty=format:&#39;%C(yellow)%h %&lt;(24)%C(red)%ad   
+%&lt;(18)%C(green)%an %C(reset)%s&#39; --date=local --max-count=10&quot;</code></pre>
+<p>This can be used to generate a log output of the last 10 commits:</p>
+<pre><code>git gitpa</code></pre>
+<p>The choice of the letters <em>gitpa</em> is arbitrary (abbreviation for git print include author).
+You may wish to choose a shorter alias such as <em>gl</em>.</p>
+<p>Method 2:</p>
+<p>Add an alias to your bash_profile or bash_rc file as follows:</p>
+<pre><code>alias gitpa=&quot;git log --pretty=format:&#39;%C(yellow)%h %&lt;(24)%C(red)%ad %&lt;(18)%C(green)%an %C(reset)%s&#39; --date=local --max-count=10&quot;</code></pre>
+<p>This method requires less typing to generate a log output:</p>
+<pre><code>gitpa</code></pre>
+<p>as compared to:</p>
+<pre><code>git gitpa</code></pre>
+<p>Some further aliases are presented in the slide decks accompanying the first git lab. These including logs where the authors name is omitted and also the entire log history, not just the last 10 commits.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>BitBucket</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<ul>
+<li>Create an account at Atlassian <a href="https://bitbucket.org">BitBucket</a>.
+<img src="img/19.png" alt="Figure 1: Create Bitbucket account"></li>
+</ul>
+<p>This account will allow you to create a separate repository (repo) for each project.</p>
+<p><img src="img/20.png" alt="Figure 2: Create repository on Bitbucket">
+<img src="img/21.png" alt="Figure 3: Name and describe the repo (application)">
+<img src="img/22.png" alt="Figure 4: I have an existing project">
+<img src="img/23.png" alt="Figure 5: The command line instructions we&#39;ll require"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>SSH Keys</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p>This section applies only if you do not have SSH keys on your computer. </p>
+<p>Your computer will communicate with BitBucket using <a href="http://en.wikipedia.org/wiki/Secure_Shell">Secure Shell</a> (SSH).</p>
+<p>It could also use your login-password to authenticate each time you access BitBucket. This, however, would be extremely inefficient.</p>
+<p>Here are brief instructions on how to check for the presence of SSH keys on your computer and to generate them if necessary.</p>
+<p>Git Bash should have an SSH client. Verify this with the following command:</p>
+<pre><code>ssh -v</code></pre>
+<p>The response should be similar to this:</p>
+<p><img src="img/heroku_001.png" alt="Figure 2: Verify presence of SSH client on Windows"></p>
+<p>Check if you already have SSH keys by checking for the presence of the<strong>.ssh</strong> folder and if it exists, listing its contents:</p>
+<pre><code>ls -l ~/.ssh</code></pre>
+<p>If keys are present then the response should be something simiar to that shown in Figure 3:</p>
+<p><img src="img/heroku_002.png" alt="Figure 3: SSH Keys"></p>
+<p>If keys are not present then generate a set with this command:</p>
+<pre><code>ssh-keygen</code></pre>
+<p>Accept the default prompts but add a password when prompted. </p>
+<ul>
+<li>It is essential that you do not forget this password as doing will will likely require that you, at some stage, will be required to generate new keys.</li>
+<li>One some environments it is possible to use keys that are not password protected. However, you will require password-protected keys when your operating system is a Linux variant.</li>
+</ul>
+<pre><code>ls -l ~/.ssh</code></pre>
+<p>The response should be something like that in Figure 3.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>SSH Keys - Bitbucket</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p>Instructions on setting up SSH for Git are available <a href="https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git">here</a> and in particular <a href="https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-and-mercurial-on-mac-osx-linux-270827678.html">here</a>.</p>
+<p>Following is a summary (it is assumed you have an ssh client installed):</p>
+<h2>Create a SSH config file</h2>
+<p>Use a text editor ~/.ssh/config file.</p>
+<p>Add an entry to the configuration file using the following format:</p>
+<p><img src="img/40.png" alt=""></p>
+<p>The second line is indented. That indentation (a single space) is important, so make sure you include it.  The second line is the location of your private key file.</p>
+<p>Check your file is here:</p>
+<p>~/.ssh/id_rsa</p>
+<pre><code>ls -l ~/.ssh/id_rsa</code></pre>
+<p>When you are done editing, your configuration looks similar to the following:</p>
+<p><img src="img/39.png" alt=""></p>
+<p>Save and close the file.</p>
+<p>Restart the GitBash terminal.</p>
+<h2>Install the public key on your Bitbucket account</h2>
+<p>In  browser log into your account on Bitbucket.</p>
+<p>Choose avatar &gt; Manage Accounts from the menu bar. See Figure 1.</p>
+<p>The system displays the Accounts settings page.</p>
+<p>Click SSH keys.</p>
+<p>The SSH Keys page displays. It shows a list of any existing keys. Then, below that, a dialog for labeling and entering a new key.</p>
+<p><img src="img/38.png" alt="Figure 1: Choose avatar &gt; Manage Accounts"></p>
+<p>In your terminal window, cat the contents of the public key file.</p>
+<p>For example:</p>
+<p>cat ~/.ssh/id_rsa.pub</p>
+<p>Select and copy the key output in the clipboard.</p>
+<p>If you have problems with copy and paste, you can open the file directly with Notepad. Select the contents of the file (just avoid selecting the end-of-file character).</p>
+<p>Back in your browser, enter a Label for your new key, for example, Default public key.</p>
+<p>Paste the copied public key into the SSH Key field.</p>
+<p>Click the Add key button: see Figure 2.</p>
+<p><img src="img/41.png" alt="Figure 2: Installing public key on BitBucket"></p>
+<p>Start the ssh-agent and load your keys:</p>
+<ul>
+<li>In the terminal run:<pre><code>ps -e | grep ssh-agent</code></pre>
+Load the new identity into ssh agent:<pre><code>ssh-add ~/.ssh/id_rsa</code></pre>
+Check keys being managed by agent:<pre><code>ssh-add -l</code></pre>
+You should be presented with something like this:<pre><code>2048 4d:b3:2d:ba:2d:6b:c6:3a:24:25:da:22:d1:74:51:e2 /Users/john/.ssh/id_rsa (RSA)</code></pre>
+</li>
+</ul>
+<p>Verify configuration:</p>
+<pre><code>ssh -T git@bitbucket.org</code></pre>
+<p>If the key deployment has been successful the response of executing this command should be something like that shown here in Figure 3:</p>
+<p><img src="img/42.png" alt="Figure 3: Key successfully installed"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>BitBucket</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p>Now that we have registered our SSH key with BitBucket we shall establish a tracking relationship between the local and remote repositories.</p>
+<ul>
+<li><p>You will already have registered an account on BitBucket and created a repository named <em>donation</em>.</p>
+</li>
+<li><p>If SSH has been properly set up then you will be able to push a local <em>donation</em> project upstream to the remote repo on BitBucket without being required to authenticate with a login and password as would be the case were you to use the HTTP protocol.</p>
+</li>
+<li><p>In this step we shall </p>
+<ul>
+<li>create an application using the Play framework </li>
+<li>add the application to a local repo</li>
+<li>push the a copy of the local repo to the remote BitBucket repo.</li>
+</ul>
+</li>
+<li><p>In folder <em>workspaceStudio</em>, create a new Play app called <em>donation</em>.
+<img src="img/19a.png" alt="Figure 1: Create play app named donation"></p>
+</li>
+</ul>
+<p>In the terminal window execute the following sequence of commands:</p>
+<p>Change into the <em>donation</em> folder:</p>
+<pre><code>cd donation</code></pre>
+<p>Create an empty local <em>git</em> repository:</p>
+<pre><code>git init</code></pre>
+<p>Make this the remote repo using a command copied from the Bitbucket site:</p>
+<pre><code>git remote add origin git@bitbucket.org:yourBitBucketId/donation.git</code></pre>
+<p>Before adding our project to the repository (repo) we will decide which files to omit. There would be little point in adding files that would auto generated each time the project is compiled, such as temporary files and so on.</p>
+<ul>
+<li>To facilite filtering we use a file called <strong>.gitignore</strong> (note the file name begins with a period).<ul>
+<li>Let&#39;s assume, for the moment, that we wish to track all files and folders except the following folders and their contents:<ul>
+<li>public</li>
+<li>eclipse</li>
+</ul>
+</li>
+<li>Here is the <em>.gitignore</em> that enforces this:</li>
+</ul>
+</li>
+</ul>
+<p>Filename: .gitignore</p>
+<pre><code>public
+eclipse</code></pre>
+<p>Create a .gitignore in the root of <em>donation</em> with this content.</p>
+<p>Execute the command <em>git status</em> again and note the difference in output compared to earlier:</p>
+<p><img src="img/25.png" alt="Figure 2: .gitignore added"></p>
+<ul>
+<li>The folder <em>public</em> is no longer tracked</li>
+<li>The newly added .gitignore is now being tracked.</li>
+</ul>
+<p>The next step is to update the local repo with the files we would like to track. Here is the command:</p>
+<pre><code>git add .</code></pre>
+<p>Let&#39;s see the effect of this command by executing <em>git status</em>. See Figure 3.</p>
+<p><img src="img/26.png" alt="Figure 3: Files added and status check"></p>
+<p>A more detailed .gitignore file will be required as one develops a Play app. For this (and other) Play apps, use the following .gitignore file.</p>
+<p>Filename .gitignore</p>
+<pre><code># Ignore all dotfiles...
+.*
+
+# except for .gitignore
+!.gitignore
+
+# Ignore Play! working directory #
+war
+db
+eclipse
+lib
+log
+logs
+modules
+precompiled
+project/project
+project/target
+crud/*
+data/*
+conf/crud/*
+public/crud/*
+target
+tmp
+test-result
+server.pid
+*.iml
+*.eml
+bin
+RemoteSystemTempFiles</code></pre>
+<p>Add this file to the repo:</p>
+<pre><code>git add .</code></pre>
+<p>Let&#39;s prepare the application for Eclipse: </p>
+<ul>
+<li>run the command</li>
+</ul>
+<pre><code>play eclipsify</code></pre>
+<p>Launch Eclipse and switch to the <em>workspaceStudio</em> workspace.</p>
+<ul>
+<li>Import <em>donation</em> into workspace ensuring you <strong>do not tick</strong> the check box <em>Copy projects into workspace</em>.</li>
+</ul>
+<p><img src="img/27.png" alt="Figure 4: Import project into workspace (do not copy)"></p>
+<p>Switch back to the terminal and run the command:</p>
+<pre><code>git add .</code></pre>
+<p>Check the status:</p>
+<pre><code>git status</code></pre>
+<p>Study Figure 5 and notice some additional files present by comparison with Figure 3.
+<img src="img/28.png" alt="Figure 5: Application ready for first commit"></p>
+<p>We are now ready to make a first commit to the repo:</p>
+<pre><code>git commit -m &#39;Baseline donation application generated by Play framework&#39;</code></pre>
+<p>The response is shown in Figure 6.</p>
+<p><img src="img/29.png" alt="Figure 6: Committed baseline donation application"></p>
+<p>If you list the files in the current folder (donation) you will see something like that shown in Figure 7.
+<img src="img/30.png" alt="Figure 7: Content of donation folder">
+The <strong>.git</strong> folder contains a local copy of your repository.</p>
+<ul>
+<li>We will now copy this to your remote repository on Bitbucket.<ul>
+<li>This action is referred to as a <em>push</em>.</li>
+<li>Run the following command:<pre><code>git push -u origin --all</code></pre>
+The response should correspond to that depicted in Figure 8.
+<img src="img/31.png" alt="Figure 8: Baseline donation pushed to remote repo"></li>
+</ul>
+</li>
+</ul>
+<p>If you encounter a problem pushing the project check the addendum at the bottom of this page.</p>
+<p>Let&#39;s check the logs generated by <em>git</em>. Many options to do so exist, such as the basic <em>git log</em>, but we shall make frequent use of the following:</p>
+<pre><code>git log --pretty=oneline</code></pre>
+<p>See a typical response in Figure 9.
+<img src="img/32.png" alt="Figure 9: Log output following initial commit and push"></p>
+<p>Now run this command:</p>
+<pre><code>git pull</code></pre>
+<p>The expected response is shown in Figure 10.
+<img src="img/37.png" alt="Figure 10: git pull"></p>
+<ul>
+<li>The remote repo and the local repo are synchronized - they are similar. </li>
+<li>Had the remote repo been a later version then the local repo would have been updated with the the changes.</li>
+</ul>
+<p>This situation may be simulated as follows:</p>
+<p>Open another terminal window and create a new folder (call it a name of your choice, for example <em>temp</em>)</p>
+<ul>
+<li>Change directory into temp.</li>
+<li>Run the equivalent of the following command<ul>
+<li>Obtain the exact command from the Bitbucket site as shown in Figure 11.<pre><code>git clone https://yourBitBucketId@bitbucket.org/yourBitBucketId/donation.git</code></pre>
+<em>yourBitBucketId</em> is your username associated with your BitBucket account.</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/35.png" alt="Figure 11: Clone command">
+This will create an exact copy of the remote repo in the current directory.</p>
+<p>Switch back to Eclipse and make changes to the project, for example by adding the following files:</p>
+<ul>
+<li>In Models<ul>
+<li>Donation.java</li>
+<li>User.java</li>
+</ul>
+</li>
+<li>At the project root<ul>
+<li>readme.txt</li>
+</ul>
+</li>
+</ul>
+<p>Switch to the original folder and add, commit and push the changes to the remote repo (conventionally known as <strong>origin</strong>).</p>
+<ul>
+<li>Switch to the second location and run the following command:<ul>
+<li><em>git pull</em></li>
+</ul>
+</li>
+<li>This will update your second repo.<ul>
+<li>The result is shown in Figure 12.
+<img src="img/34.png" alt="Figure 12: Second local copy of repo updated with pull from remote"></li>
+</ul>
+</li>
+</ul>
+<h2>More on logs</h2>
+<p>Here is a command that generates a time stamp and produces log information on the 10 most recent commits:</p>
+<pre><code>git log --pretty=format:&#39;%C(yellow)%h %Cred%ad  %Creset%s&#39; --date=local --max-count=10</code></pre>
+<p>Typing this last command repeatedly is impractical. Adding it as an alias in an appropriate script solves this problem. For example in the case of the Mac, the following could be added to the <em>.bash_profile</em> file:</p>
+<pre><code>alias gitp=&quot;git log --pretty=format:&#39;%C(yellow)%h %Cred%ad  %Creset%s&#39; --date=local --max-count=10&quot;</code></pre>
+<p>On Windows you could add it to the .bashrc file (creating the file if necessary) in the user root folder or paste the command into a terminal, execute it once and thereafter use DOSKEY to reintroduce the command into the terminal window.</p>
+<p>Notice the terminating expression <em>--max-count=10</em></p>
+<ul>
+<li>This prints the information relating to the most recent 10 commits.<ul>
+<li>Change the number 10 if you wish</li>
+<li>Alternatively omit the expression and all log information relating to all commits will be printed.<pre><code>alias gitpp=&quot;git log --pretty=format:&#39;%C(yellow)%h %Cred%ad  %Creset%s&#39; --date=local&quot;</code></pre>
+</li>
+</ul>
+</li>
+<li>To output log details of the last commits, therefore, execute <em>gitp</em> on the command line.</li>
+<li>To output log details of all commits to date execute <em>gitpp</em>, pressing space bar to scroll to each successive page and pressing Q to quit.</li>
+</ul>
+<p><img src="img/23_logs.png" alt="Figure 13: More on logs"></p>
+<h2>Addendum: Configure your repository to use the SSH protocol</h2>
+<p>Ignore this addendum if you have already successfully pushed the project to BitBucket.</p>
+<p>This addendum applies where confusion may arise regarding which protocol to use to push the project to BitBucket: SSH or HTTPS.</p>
+<p>Open the git config file. Assuming you are in Windows and using the notepad editor, this is the command to run from within the project folder (donation):</p>
+<pre><code>notepad .git/config</code></pre>
+<p>Ensure that the url value is set to use SSH rather than, possibly, the default HTTPS. For example:</p>
+<pre><code>[remote &quot;origin&quot;]
+  fetch = +refs/heads/*:refs/remotes/origin/*
+  url = git@bitbucket.org:yourBitBucktetId/donation.git</code></pre>
+<p>Save and close the edited config file.</p>
+<p>It should now be possible to push the project to BitBucket without the requirement to authenticate with logon-password each time a push is executed.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Tags</h1>
+<p><img src="img/git-logo.jpg" alt=""> 
+Tags may be used to denote specific points in the project&#39;s history.</p>
+<p>See <a href="http://git-scm.com/book/en/Git-Basics-Tagging">here</a> for detailed information.</p>
+<p>To list all existing tags:</p>
+<pre><code>git tag</code></pre>
+<p><img src="img/tag1.jpg" alt="Figure 1: List tags"></p>
+<p>To list all tags and associated messages:</p>
+<pre><code>git tag -n</code></pre>
+<p><img src="img/tag2.jpg" alt="Figure 2: List tags &amp; messages"></p>
+<p>To add a tag to the project in the local repo:</p>
+<pre><code>git tag -a tagName -m &#39;message re tag&#39;</code></pre>
+<p><img src="img/tag3.jpg" alt="Figure 3: Add tag + message"></p>
+<p>Tags must be explicitly pushed to the remote repo (if required):</p>
+<pre><code>git push --tags</code></pre>
+<p>Add a tag to previous arbitrary commit:</p>
+<ul>
+<li>You could, for example, examine commit history with command</li>
+</ul>
+<pre><code>git log --pretty=oneline</code></pre>
+<p>and select specific previous commit that you wish to tag.</p>
+<p><img src="img/tag4.jpg" alt="Figure 4: Partial commit history"></p>
+<p>and then add required tag:</p>
+<pre><code>git tag -a v0 ecc9475f554 -m &quot;Message here&quot;</code></pre>
+<p>To delete a tag:</p>
+<pre><code>git tag -d tagName</code></pre>
+<p>To delete a tag from remote repo:</p>
+<pre><code>git tag -d tagName
+git push origin :refs/tags/tagName</code></pre>
+<p><img src="img/tag5.jpg" alt="Figure 6: Delete remote tag"></p>
+<p>List remote tags:</p>
+<pre><code>git ls-remote</code></pre>
+<p><img src="img/tag6.jpg" alt="Figure 6: List remote tags"></p>
+<p>To push all including a commit to remote:</p>
+<pre><code>git push &amp;&amp; git push --tags</code></pre>
+<p>To obtain the hash code of the commit associated with a particular tag:</p>
+<pre><code>git show-ref --tags -d</code></pre>
+<p><img src="img/tag7.png" alt="Figure 7: Obtain hash of commit associated with particular tag">
+<img src="img/tag8.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="10">
+        <h1>Procedure</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p>Here we describe a simple procedure to minimise the likelihood of problems arising when using <em>git</em>.</p>
+<p>The procedure assumes that between work sessions your remote repo and all local repos are up-to-date, that is, all the local repos are exact replicas of the remote repo.</p>
+<p>It also assumes that you have, at least,</p>
+<ul>
+<li>added, committed and pushed a baseline version of your project to the remote repo.</li>
+</ul>
+<h3>Steps to take</h3>
+<ul>
+<li>When you commence a work session:<ul>
+<li>Run <em>git status</em> <ul>
+<li>The output should correspond to that shown in Figure 1.
+<img src="img/36.png" alt="Figure 1: Working directory clean"></li>
+</ul>
+</li>
+<li>Carry out your work on your project.</li>
+<li>Add the changes:<pre><code>git add .</code></pre>
+</li>
+</ul>
+</li>
+<li>Commit the changes:<pre><code>git commit -m &#39;include your commit description here&#39;</code></pre>
+<ul>
+<li>Push the changed repo to Bitbucket:<pre><code>git push</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p>Repeat this cycle for each work session.</p>
+<h3>Key points</h3>
+<ul>
+<li>Check the status as the last operation of your worksession:</li>
+</ul>
+<pre><code>git status</code></pre>
+<ul>
+<li><p>Always ensure that at the both the beginning and end of your work session the output from this last command is as shown in Figure 1.</p>
+<ul>
+<li>That is, your working directory is <em>clean</em>.</li>
+</ul>
+</li>
+<li><p>When you resume your work on whichever workstation, check the status again.</p>
+<ul>
+<li>If your working directory is clean then you are ready to proceed.<ul>
+<li>If not, then somewhere in your work you have not adhered to the procedure described on this page.</li>
+</ul>
+</li>
+<li>If your working directory is clean run this command before you begin work:</li>
+</ul>
+</li>
+</ul>
+<pre><code>git pull</code></pre>
+<ul>
+<li>If the remote repo is ahead of the local repo, this last command will update the local repo.</li>
+<li>If the local and remote repos are similar the the output will be <em>Already up-to-date</em>.</li>
+</ul>
+<h3>Summary:</h3>
+<ul>
+<li>When not working on the project:<ul>
+<li>The local directories of all your local repos are clean.<ul>
+<li>For example on your laptop and desktop computers.</li>
+</ul>
+</li>
+<li>The remote repo contains the most up-to-date version of the project.</li>
+</ul>
+</li>
+<li>When you resume work:<ul>
+<li>Verify your local directory is clean by running a status check and</li>
+<li>Then pull from remote repo.</li>
+</ul>
+</li>
+<li>At the end of your work session:<ul>
+<li>add, commit and push to the local repo.</li>
+<li>verify local directory clean by running a status check.</li>
+</ul>
+</li>
+</ul>
+<h3>Help!</h3>
+<p>Assume you&#39;re in serious trouble, you&#39;ve failed to follow procedure, and you are unable to recover.</p>
+<p><strong>Disaster recovery method 1</strong></p>
+<ul>
+<li>In Windows Explorer, Finder or the like, delete the contents of your local repo, for example <em>donation</em>.<ul>
+<li>Do not delete from within a terminal window as there is a risk you might delete the <strong>.git</strong> folder.</li>
+</ul>
+</li>
+<li>Still using Explorer or the like, copy the contents of your emergency back-up file (example, expanded <em>donation.zip</em>) into the repo folder (<em>donation</em>).</li>
+<li>In terminal, in the <em>donation</em> folder run the commands:<pre><code>git add .
+git commit -m &#39;your comment here&#39;</code></pre>
+Your repo now contains the emergency back up archive.</li>
+</ul>
+<p><strong>Disaster recovery method 2</strong></p>
+<p>Roll back to an earlier commit</p>
+<ul>
+<li>Checkout the commit you wish to
+revert to</li>
+<li>Copy the working tree to a
+recovery folder<ul>
+<li>Do not copy .git folder</li>
+</ul>
+</li>
+<li>git checkout master</li>
+<li>Delete contents working tree<ul>
+<li>Do not delete .git folder</li>
+</ul>
+</li>
+<li>Copy backup to working folder (working tree)</li>
+<li>Add all, commit and push.</li>
+</ul>
+<h2>Warning</h2>
+<p><img src="img/detachedHead.png" alt="Detached head"></p>
+<p>If you checkout an earlier commit then your repo will be in a state referred to as <em>Detached Head</em>.</p>
+<ul>
+<li>You may think you can proceed to make changes, commit and push in the ususal manner while in this state. You may not.</li>
+<li>If you wish to roll back your work to an earlier commit and discard all subsequent commits you should, for now, use one of the disaster recovery methods described above.</li>
+<li>Alternatively, you may create a new branch at this HEAD and continue to make changes and commit in the usual manner. You later have the option of merging this branch into the master branch, for example.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="11">
+        <h1>Supplement: Branching</h1>
+<p>Consider an application Donation which has tags story-01 to story-07 inclusive on the master branch.</p>
+<p>You wish to make some changes to the code at story-04 branch.</p>
+<p>Checkout story-04:</p>
+<pre><code>git checkout story-04</code></pre>
+<p>Create and checkout a new branch at this location:</p>
+<pre><code>git checkout -b story-04</code></pre>
+<p>We have given the branch the same name as the tag for convenience.</p>
+<p>Make the necessary changes.</p>
+<p>Add and commit the changes:</p>
+<pre><code>git add .</code></pre>
+<p>or </p>
+<pre><code>git add --all</code></pre>
+<p>on earlier versions of git.</p>
+<p>Commit: </p>
+<pre><code>git commit -m &#39;add your message here&#39;</code></pre>
+<p>Push this new branch to the remote repo:</p>
+<pre><code>git push origin story-04</code></pre>
+<p>Delete tag story-04, local and remote:</p>
+<pre><code>git tag -d story-04
+git git push origin :refs/tags/story-04</code></pre>
+<p>Recreate tag local and remote:</p>
+<pre><code>git tag -a story-04 -m &#39;your message here&#39;
+git push --tags</code></pre>
+<p>This useful command prints tags and their associated hash codes:</p>
+<pre><code>alias gitag=&quot;git log --no-walk --tags --pretty=format:&#39; %C(yellow)%h %Cgreen%d  %Cred%ad  %Creset%s&#39; --date=local&quot;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="12">
+        <h1>References</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p><a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1">GitHub For Beginners: Don&#39;t Get Scared, Get Started</a> that may prove helpful.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

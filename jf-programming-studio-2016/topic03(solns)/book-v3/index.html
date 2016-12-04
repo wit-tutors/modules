@@ -1,0 +1,615 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      03: MyRent (Solutions)
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Solution-v3">
+      Solution-v3
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Solution-v3">
+        <h1>Solution v3</h1>
+<p><strong>Step-by-step guide to building MyRent application</strong></p>
+<ul>
+<li>Iteration v3 (Contact)</li>
+</ul>
+<p>This is an optional iteration.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Iteration v4: View (Contact &amp; Acknowledgement)</h1>
+<p>This is an optional feature.</p>
+<ul>
+<li>Its purpose is to allow a user to provide feeback. </li>
+</ul>
+<p>A mail jar file is required. Download it from <a href="archive/mail-1.4.jar">here</a>. </p>
+<ul>
+<li>add to <em>lib</em> folder in project as shown in Figure 1.</li>
+</ul>
+<p><img src="img/01.png" alt="Figure 1: Add mail jar to project"></p>
+<p>Add the jar to the build path as shown in Figure 2.</p>
+<p><img src="img/02.png" alt="Figure 2: Add mail jar to build path"></p>
+<p>Create a folder /views/Contact and create a file index.html.</p>
+<p>Here is the file content:</p>
+<p>Filename: views/Contact/index.html</p>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /}
+#{set title:&#39;Contact&#39; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/account&quot;&gt;Sign Up&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/inputdata&quot;&gt;Input data&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/report&quot;&gt;Report&lt;/a&gt;
+  &lt;a class=&quot;ui active item&quot; href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/logout&quot;&gt;Log Out&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;section class=&quot;ui segment&quot;&gt;      
+  &lt;h5&gt;We would very much appreciate if you would provide some feedback.&lt;/h5&gt;
+  &lt;form action=&quot;/contact/sendmessage&quot; method=&quot;POST&quot;&gt;
+    &lt;div class=&quot;ui input field&quot;&gt;
+      &lt;input placeholder=&quot;Your first name&quot; name=&quot;user.firstName&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ui input field&quot;&gt;
+      &lt;input placeholder=&quot;Your last name&quot; name=&quot;user.lastName&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ui divider&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;ui left icon input&quot;&gt;
+        &lt;input placeholder=&quot;Your email address&quot; name=&quot;user.email&quot; type=&quot;text&quot; size=&quot;30&quot;&gt;
+        &lt;i class=&quot;user icon&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;div class=&quot;ui divider&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;ui form&quot;&gt;
+      &lt;div class=&quot;field&quot;&gt;
+        &lt;textarea placeholder=&quot;Your message&quot; name=&quot;messageTxd&quot;&gt;&lt;/textarea&gt;
+      &lt;/div&gt;
+    &lt;/div&gt; 
+    &lt;div class=&quot;ui divider&quot;&gt;&lt;/div&gt;
+     &lt;button type=&quot;submit&quot; class=&quot;ui blue submit button&quot;&gt;Send Message&lt;/button&gt;    
+  &lt;/form&gt;
+&lt;/section&gt;</code></pre>
+<p>Create another folder also in views called Acknowledgement and place the following index.html file.</p>
+<p>Filename : views/Acknowledgement/index.html</p>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Acknowledgement&#39; /}
+
+   &lt;nav class=&quot;ui menu&quot;&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/account&quot;&gt;Sign Up&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/inputdata&quot;&gt;Input data&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/report&quot;&gt;Report&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;
+    &lt;a class=&quot;ui item&quot; href=&quot;/logout&quot;&gt;Log Out&lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;section class=&quot;ui segment&quot;&gt;
+    &lt;h2&gt;MyRent&lt;/h2&gt;
+    &lt;h3&gt;Acknowledgement&lt;/h3&gt;   
+    &lt;p&gt;Thank you for your message. &lt;/p&gt;
+    &lt;p&gt;We very much appreciate your having taken the time out of your very busy schedule to contact us.&lt;/p&gt;
+    &lt;p&gt;We will deal with the issues you have raised and advise you of the outcome as soon as possible.&lt;/p&gt;        
+    &lt;p&gt;With best wishes,&lt;/p&gt;
+    &lt;p&gt; From the MyRent team&lt;/p&gt;
+  &lt;/section&gt;</code></pre>
+<p>Add routing: </p>
+<pre><code>#Contact
+GET /contact                                  Contact.index    
+POST /contact/sendmessage                     Contact.sendMessage</code></pre>
+<p>Add the following report navigation element to the other templates (before the Log Out link):</p>
+<ul>
+<li>Accounts<ul>
+<li>index</li>
+<li>login</li>
+</ul>
+</li>
+<li>Home<ul>
+<li>index</li>
+</ul>
+</li>
+<li>InputData<ul>
+<li>index</li>
+</ul>
+</li>
+<li>ReportController<ul>
+<li>index</li>
+<li>renderReport</li>
+</ul>
+</li>
+</ul>
+<pre><code>    &lt;a class=&quot;ui item&quot; href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Iteration v4: Controller (Contact &amp; Acknowledgement)</h1>
+<p>These controllers receive feedback and issue an acknowledgememt.</p>
+<p>Warning: The contact module is not configured for the cloud - only for localhost.</p>
+<p>There may be firewall issues and spam filtering barriers in attempting to test this component in certain environments. </p>
+<ul>
+<li>For example, Gmail is likely to interpret traffic generated by this component as spam. </li>
+<li>To date, Yahoo mail works satisfactorily.</li>
+</ul>
+<p>Filename: Contact.java</p>
+<pre><code class="lang-java">package controllers;
+
+import play.Logger;
+import play.mvc.Controller;
+
+import java.util.Properties;
+
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+import models.User;
+
+/**
+ * This class configured only for localhost
+ * 
+ * @author jfitzgerald
+ * 
+ */
+public class Contact extends Controller
+{
+  public static void index()
+  {
+    render();
+  }
+
+  /**
+   * 
+   * @param firstName
+   *          : the message sender&#39;s first and
+   * @param lastName
+   *          : last name.
+   * @param emailSender
+   *          : the email address of the sender of the message.
+   * @param messageTxd
+   *          : the message.
+   */
+  //public static void sendMessage(String firstName, String lastName, String emailSender, String messageTxd)
+  public static void sendMessage(User user, String messageTxd)
+ {
+
+    if (Accounts.getCurrentUser() == null)
+    {
+      Accounts.login();
+    }
+    final String username = &quot;xxxxxx@yahoo.com&quot;;
+    final String password = &quot;password&quot;;
+
+    Properties props = new Properties();
+    props.put(&quot;mail.smtp.auth&quot;, &quot;true&quot;);
+    props.put(&quot;mail.smtp.starttls.enable&quot;, &quot;true&quot;);
+    props.put(&quot;mail.smtp.host&quot;, &quot;smtp.mail.yahoo.com&quot;);
+    props.put(&quot;mail.smtp.port&quot;, &quot;587&quot;);
+
+    Session session = Session.getInstance(props, new javax.mail.Authenticator()
+    {
+      protected PasswordAuthentication getPasswordAuthentication()
+      {
+        return new PasswordAuthentication(username, password);
+      }
+    });
+
+    try
+    {
+      String forwarderAddress = username;
+      String destinationAddress1 = user.email;
+      String destinationAddress2 = username;
+      Message message = new MimeMessage(session);
+      message.setFrom(new InternetAddress(forwarderAddress));
+      message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(destinationAddress1));
+      message.setRecipients(Message.RecipientType.BCC, InternetAddress.parse(destinationAddress2));
+      message.setSubject(&quot;Message for MyRent Webmaster&quot;);
+      message.setText(messageTxd);
+
+      Transport.send(message);
+
+    }
+    catch (MessagingException e)
+    {
+      Logger.info(e.getMessage());
+      Acknowledgement.index();// a temporary fix: an exception caught when
+                              // sendMessage invoked from Cloud
+      throw new RuntimeException(e);
+    }
+
+    Acknowledgement.index();
+  }
+}</code></pre>
+<p>You may add details of email accounts that you own. </p>
+<p>You will require a source (transmitting) account and a target (receiving) account to perform testing.</p>
+<p>Here is the Acknowledgement controller code:</p>
+<p>Filename: Acknowledgement.java</p>
+<pre><code>
+package controllers;
+
+import play.mvc.Controller;
+
+public class Acknowledgement extends Controller
+{
+  public static void index()
+  {
+    render();
+  }
+}</code></pre>
+<p>This concludes iteration v3, the final iteration.</p>
+<p>The application is viewable online <a href="http://org-wit-myrent.herokuapp.com/">here</a></p>
+<p>Commit this iteration to your <em>myrent</em> repository, add a tag and push all to remote repo.</p>
+<pre><code>git add .
+git commit -m &#39;iteration  v3&#39;
+git tag -a v3 -m &#39;iteration v3&#39;
+git push &amp;&amp; git push --tags</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

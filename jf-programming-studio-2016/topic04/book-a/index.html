@@ -1,0 +1,1147 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      04: Map overlays, the DOM & SemanticUI controls
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Circle-map-overlay">
+      Circle-map-overlay
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Circle-map-overlay">
+        <h1>Objectives</h1>
+<p>Use JavaScript to manipulate map using resizable and moveable circular overlays.
+This technique used in searching for objects within a specific region.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Embed Map</h1>
+<p>Create a static web project and populate it with the following empty files:</p>
+<p>At root of project</p>
+<ul>
+<li>circledata.html</li>
+</ul>
+<p>In folder named js at same level as circledata.html</p>
+<ul>
+<li>circledata.js</li>
+</ul>
+<p>Copy a jquery file to folder js</p>
+<ul>
+<li>jquery-2.2.3.js </li>
+</ul>
+<p>Add this html to circledata.html:</p>
+<p><img src="img/01.png" alt="Figure 1: maps project directory structure &amp; files"></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;div id=&quot;map-canvas&quot;&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;script src=&quot;js/jquery-2.2.3.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/circledata.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Add this content to circledata.js</p>
+<pre><code>let map;
+function initialize()
+{
+    const center = new google.maps.LatLng(52.254427, -7.185281);
+    const mapOptions = {
+            center      :center,
+            zoom        :12,
+            mapTypeId   :google.maps.MapTypeId.ROADMAP
+    };
+    const mapDiv          = document.getElementById(&quot;map-canvas&quot;);
+    mapDiv.style.width  = &#39;600px&#39;;
+    mapDiv.style.height = &#39;400px&#39;;
+    map = new google.maps.Map(mapDiv,mapOptions);
+
+};
+
+google.maps.event.addDomListener(window, &#39;load&#39;, initialize);</code></pre>
+<p>Open circledata.html in a browser. It should display as shown in Figure 2.</p>
+<p><img src="img/02.png" alt="Figure 2: circledata.html"></p>
+<p>Two points worth noting:</p>
+<ul>
+<li>we have fixed the size of the image at 600 pixels x 400 pixels, an aspect ratio of 3:2.</li>
+</ul>
+<pre><code>    mapDiv.style.width     = &#39;600px&#39;;
+    mapDiv.style.height = &#39;400px&#39;;</code></pre>
+<ul>
+<li>The <em>map</em> variable is located outside the function <em>initialize</em>, thus making it a global variable.<ul>
+<li>More on this later.<pre><code>let map;
+function initialize()
+{
+...
+};</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Circle Overlay</h1>
+<p>In this step we shall add to the map a circular overlay with the following properties:</p>
+<ul>
+<li>One may drag and drop the circle anywhere on the map.<ul>
+<li>For example: place the mouse cursor anywhere within the circle, hold down left key and drag.<ul>
+<li>Release mouse key to drop.</li>
+</ul>
+</li>
+<li>The map itself may be zoomed and panned.</li>
+</ul>
+</li>
+<li>The circle may be resized by selecting any of the four anchor points and holding down the mouse button while dragging the anchor point.</li>
+</ul>
+<p><img src="img/03.png" alt="Figure 1: Manipulating circular overlay"></p>
+<p>The file <em>circledata.html</em> remains unchanged.</p>
+<p>The javascript file <em>circledata.js</em> becomes:</p>
+<pre><code>let circle;
+let map;
+
+function initialize()
+{
+    const center = new google.maps.LatLng(52.254427, -7.185281);
+    const initRadius = 2000;
+    const mapOptions = {
+            center      :center,
+            zoom        :12,
+            mapTypeId   :google.maps.MapTypeId.ROADMAP
+    };
+    const mapDiv          = document.getElementById(&quot;map-canvas&quot;);
+    mapDiv.style.width  = &#39;600px&#39;;
+    mapDiv.style.height = &#39;400px&#39;;
+    map = new google.maps.Map(mapDiv,mapOptions);
+
+    circle = new google.maps.Circle({
+        center:center,
+        radius:initRadius,
+        strokeColor:&quot;#0000FF&quot;,
+        strokeOpacity:0.4,
+        strokeWeight:1,
+        fillColor:&quot;#0000FF&quot;,
+        fillOpacity:0.4,
+        draggable: true
+        });
+    //Enable to allow user to vary radius by dragging anchor point
+    circle.setEditable(true);
+    circle.setMap(map);
+};
+
+google.maps.event.addDomListener(window, &#39;load&#39;, initialize);</code></pre>
+<p>Note the changes:</p>
+<ul>
+<li>A global variable <em>const circle</em> has been added.</li>
+<li>A variable <em>initRadius</em> has been declared and initialized with the value 2000.<ul>
+<li>This represents the initial size of the circular overlay.</li>
+</ul>
+</li>
+<li>A circle object has been created by invoking the <em>google.maps.Circle</em> constructor.<ul>
+<li>Arbitrarily, the centre of the map matches the centre of the circle.</li>
+</ul>
+</li>
+<li>The statement <em>circle.setEditable(true)</em> ensures the circle&#39;s position on the map may be altered.</li>
+<li>The statement <em>circle.setMap(map)</em> renders the circle on the map.</li>
+</ul>
+<p>When you have completed the refactoring of <em>circledata.js</em>, open <em>circledata.html</em> in a browser. It should render similar to that shown in Figure 2.</p>
+<p>Experiment by altering the size and position of the circle.</p>
+<p><img src="img/04.png" alt="Figure 2: Circular overlay "></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Capture Circle Data</h1>
+<p>Add the following to <em>circledata.html</em> immediately following the map canvas div.</p>
+<pre><code>    &lt;button type=&quot;submit&quot; class=&quot;submit button&quot; onclick=&quot;circleData()&quot;&gt;Get Circle Data&lt;/button&gt;
+    &lt;div id=&quot;circledata&quot;&gt; 
+      &lt;input type=&quot;text&quot;  id=&quot;radius&quot; size=&quot;10&quot;&gt;
+      &lt;input type=&quot;text&quot;  id=&quot;latcenter&quot; size=&quot;25&quot;&gt;
+      &lt;input type=&quot;text&quot;  id=&quot;lngcenter&quot; size=&quot;25&quot;&gt;
+    &lt;/div&gt;</code></pre>
+<p>The code snippet immediately above:</p>
+<ul>
+<li>Provides a submit button which when clicked seeks to invoke a javascript function named <em>circleData</em>.</li>
+<li>Contains three input views, one for the circle&#39;s radius, and the other two for the coordinates of the centre.<ul>
+<li>We shall see below how the data for these views are generated and transmitted.</li>
+</ul>
+</li>
+</ul>
+<p>Also, load the jquery file:</p>
+<pre><code>&lt;script src=&quot;js/jquery-2.2.3.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Here is the refactored html file:</p>
+<p>Filename: <em>circledata.html</em></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;div id=&quot;map-canvas&quot;&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;submit button&quot; onclick=&quot;circleData()&quot;&gt;Get Circle Data&lt;/button&gt;
+    &lt;div id=&quot;circledata&quot;&gt; 
+      &lt;input type=&quot;text&quot;  id=&quot;radius&quot; size=&quot;10&quot;&gt;
+      &lt;input type=&quot;text&quot;  id=&quot;latcenter&quot; size=&quot;25&quot;&gt;
+      &lt;input type=&quot;text&quot;  id=&quot;lngcenter&quot; size=&quot;25&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/jquery-2.2.3.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/circledata.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>It only remains to add the method <em>circleData</em> to the javascript file, <em>circledata.js</em>:</p>
+<pre><code>function circleData() {
+  const center = circle.getCenter();
+  const latcenter = center.lat().toString();
+  const lngcenter = center.lng().toString();
+  const radius = circle.getRadius().toString();
+  $(&quot;#radius&quot;).val(radius);
+  $(&quot;#latcenter&quot;).val(latcenter);
+  $(&quot;#lngcenter&quot;).val(lngcenter);    
+}</code></pre>
+<p>The method interrogates the circle object to obtain the centre of the circle and the circle&#39;s radius and transmits these using jQuery to the div placeholders in the html file.</p>
+<p>Here is the complete javascript file:</p>
+<pre><code>let circle;
+let map;
+
+function circleData() {
+  const center = circle.getCenter();
+  const latcenter = center.lat().toString();
+  const lngcenter = center.lng().toString();
+  const radius = circle.getRadius().toString();
+  $(&quot;#radius&quot;).val(radius);
+  $(&quot;#latcenter&quot;).val(latcenter);
+  $(&quot;#lngcenter&quot;).val(lngcenter);    
+}
+
+function initialize()
+{
+    const center = new google.maps.LatLng(52.254427, -7.185281);
+    const initRadius = 2000;
+    const mapOptions = {
+            center      :center,
+            zoom        :12,
+            mapTypeId   :google.maps.MapTypeId.ROADMAP
+    };
+    const mapDiv          = document.getElementById(&quot;map-canvas&quot;);
+    mapDiv.style.width  = &#39;600px&#39;;
+    mapDiv.style.height = &#39;400px&#39;;
+    map = new google.maps.Map(mapDiv,mapOptions);
+
+    circle = new google.maps.Circle({
+        center:center,
+        radius:initRadius,
+        strokeColor:&quot;#0000FF&quot;,
+        strokeOpacity:0.4,
+        strokeWeight:1,
+        fillColor:&quot;#0000FF&quot;,
+        fillOpacity:0.4,
+        draggable: true
+        });
+    //Enable to allow user to vary radius by dragging anchor point
+    circle.setEditable(true);
+    circle.setMap(map);
+
+};
+
+google.maps.event.addDomListener(window, &#39;load&#39;, initialize);</code></pre>
+<p>Open the circledata.html in a browser and note the presence of the <em>Get Circle Data</em> button and three views to receive and display the data describing the circle&#39;s radius and centre (see Figure 1).</p>
+<p><img src="img/05.png" alt="Figure 1: Views to receive and display circle parameters"></p>
+<p>Press the <em>Get Circle Data</em> button. The three views should immediately be populated with data (Figure 2).</p>
+<p><img src="img/06.png" alt="Figure 2: Circle parameters"></p>
+<p>Observe how the data changes following a change to the circle&#39;s position and | or location.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Map Overlay (Marker)</h1>
+<p>Add the following code to <em>circledata.html</em> following the div whose id is <em>circledata</em>:</p>
+<pre><code>    &lt;button type=&quot;submit&quot; class=&quot;submit button&quot; onclick=&quot;markerData()&quot;&gt;Get Marker Data&lt;/button&gt;
+    &lt;div id=&quot;markerdata&quot;&gt; 
+        &lt;input type=&quot;text&quot; id=&quot;geolocation&quot;  readonly class=&quot;input-medium&quot; size=&quot;25&quot;&gt;  
+    &lt;/div&gt;</code></pre>
+<p>When the <em>Get Marker Data</em> button is pressed, a method <em>markerData</em> is invoked and this causes the marker location to be transmitted to and displayed in the input view whose id is geolocation.</p>
+<p>Modify the javascript file <em>circledata.js</em> as follows:</p>
+<ul>
+<li>Add a function <em>addMarker</em><ul>
+<li>This adds a marker overlay to the map</li>
+</ul>
+</li>
+<li>Add a function <em>markerData</em> that:<ul>
+<li>interrogates the <em>google.maps.Marker</em> object to obtain the marker&#39;s position, </li>
+<li>converts the position (a LatLng object) to a single string</li>
+<li>uses jQuery to transmit the string to the view</li>
+</ul>
+</li>
+</ul>
+<pre><code>function addMarker(map, center)
+{
+    // create a marker
+    marker = new google.maps.Marker({
+        map         : map,
+        position    : center,
+        title       : &quot;Drag and drop on your property!&quot;,
+        draggable   : true
+    });
+    marker.setMap(map);
+};
+
+function markerData()
+{
+    const latLng = marker.getPosition();
+    const latlong = latLng.lat().toString().substring(0,10) + &#39;,&#39; + latLng.lng().toString().substring(0,10);      
+    //publish lat long in geolocation control in html page
+    $(&quot;#geolocation&quot;).val(latlong);
+}</code></pre>
+<p>Invoke <em>addMarker</em> from within <em>function initialize</em> by placing the statement</p>
+<pre><code>    addMarker(map, center);</code></pre>
+<p>at the end of <em>funtion initialize</em>.</p>
+<p>Add a marker declaration towards the top of the file:</p>
+<pre><code>let marker;</code></pre>
+<p>Here is the complete javascript:</p>
+<p>Filename: circledata.js</p>
+<pre><code>let circle;
+let map;
+let marker;
+
+function circleData() {
+  const center = circle.getCenter();
+  const latcenter = center.lat().toString();
+  const lngcenter = center.lng().toString();
+  const radius = circle.getRadius().toString();
+  $(&quot;#radius&quot;).val(radius);
+  $(&quot;#latcenter&quot;).val(latcenter);
+  $(&quot;#lngcenter&quot;).val(lngcenter);    
+}
+
+function initialize()
+{
+    const center = new google.maps.LatLng(52.254427, -7.185281);
+    const initRadius = 2000;
+    const mapOptions = {
+            center      :center,
+            zoom        :12,
+            mapTypeId   :google.maps.MapTypeId.ROADMAP
+    };
+    const mapDiv          = document.getElementById(&quot;map-canvas&quot;);
+    mapDiv.style.width  = &#39;600px&#39;;
+    mapDiv.style.height = &#39;400px&#39;;
+    map = new google.maps.Map(mapDiv,mapOptions);
+
+    circle = new google.maps.Circle({
+        center:center,
+        radius:initRadius,
+        strokeColor:&quot;#0000FF&quot;,
+        strokeOpacity:0.4,
+        strokeWeight:1,
+        fillColor:&quot;#0000FF&quot;,
+        fillOpacity:0.4,
+        draggable: true
+        });
+    //Enable to allow user to vary radius by dragging anchor point
+    circle.setEditable(true);
+    circle.setMap(map);
+    addMarker(map, center);
+};
+
+function addMarker(map, center)
+{
+    // create a marker
+    marker = new google.maps.Marker({
+        map         : map,
+        position    : center,
+        title       : &quot;Drag and drop on your property!&quot;,
+        draggable   : true
+    });
+    marker.setMap(map);
+};
+
+function markerData()
+{
+    const latLng = marker.getPosition();
+    const latlong = latLng.lat().toString().substring(0,10) + &#39;,&#39; + latLng.lng().toString().substring(0,10);      
+    //publish lat long in geolocation control in html page
+    $(&quot;#geolocation&quot;).val(latlong);
+}
+
+google.maps.event.addDomListener(window, &#39;load&#39;, initialize);</code></pre>
+<p>Launch <em>circledata.html</em> in a brower and observe something similar to that shown in Figure 1.</p>
+<p><img src="img/07.png" alt="Figure 1: Marker overlay added"></p>
+<p>Press the buttons <em>Get Circle Data</em> and <em>Get Marker Data</em> and observe the default Circle and Marker data in the data views (Figure 2):</p>
+<p><img src="img/09.png" alt="Figure 2: Default data">
+Change the marker&#39;s location and the circle&#39;s size and location.</p>
+<ul>
+<li>Press the buttons <em>Get Circle Data</em> and <em>Get Marker Data</em> and note how the data views are updated.<ul>
+<li>See, for example, Figure 3.</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/08.png" alt="Figure 3: Circle and Marker overlays&#39; data captured and displayed"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Add Listeners</h1>
+<p>In this step we shall add listeners so that updated data is automatically transmitted to the views (not necessary to press buttons) when any of the following events occur:</p>
+<ul>
+<li>The circle overlay is either moved.</li>
+<li>The circle overlay is resized.</li>
+<li>The marker is moved.</li>
+</ul>
+<p>This is an easy change to implement.</p>
+<ul>
+<li>The difficult work has been done in writing the methods<ul>
+<li>circleData</li>
+<li>markerData<ul>
+<li>Rather than invoke these methods by pressing a button, we arrange for the listeners to do so programmatically.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Remove the button code from the html file.</p>
+<p>Add a listener method to detect changes in the circle&#39;s properties: either radius or location or both:</p>
+<pre><code>function circleListener()
+{
+    google.maps.event.addListener(circle, &#39;center_changed&#39;, function() {
+        circleData();
+    }); 
+    google.maps.event.addListener(circle, &#39;radius_changed&#39;, function() {
+        circleData();
+    }); 
+}</code></pre>
+<p>Add a marker listener:</p>
+<pre><code>function markerListener()
+{
+  google.maps.event.addListener(marker, &#39;dragend&#39;, function() {
+        markerData();
+    });
+}</code></pre>
+<p>See <a href="https://developers.google.com/maps/documentation/javascript/reference#Circle">here</a> for further information.</p>
+<p>Here is the complete file:</p>
+<p>Filename circledata.js</p>
+<pre><code>let circle;
+let map;
+let marker;
+
+
+function initialize()
+{
+    const center = new google.maps.LatLng(52.254427, -7.185281);
+    const initRadius = 2000;
+    const mapOptions = {
+            center      :center,
+            zoom        :12,
+            mapTypeId   :google.maps.MapTypeId.ROADMAP
+    };
+    const mapDiv                  = document.getElementById(&quot;map-canvas&quot;);
+    mapDiv.style.width  = &#39;600px&#39;;
+    mapDiv.style.height = &#39;400px&#39;;
+    map = new google.maps.Map(mapDiv,mapOptions);
+
+    circle = new google.maps.Circle({
+        center:center,
+        radius:initRadius,
+        strokeColor:&quot;#0000FF&quot;,
+        strokeOpacity:0.4,
+        strokeWeight:1,
+        fillColor:&quot;#0000FF&quot;,
+        fillOpacity:0.4,
+        draggable: true
+        });
+    //Enable to allow user to vary radius by dragging anchor point
+    circle.setEditable(true);
+    circle.setMap(map);
+    addMarker(map, center);
+    markerListener(marker);
+    circleListener();
+};
+
+function circleListener()
+{
+    google.maps.event.addListener(circle, &#39;center_changed&#39;, function() {
+        circleData();
+    }); 
+    google.maps.event.addListener(circle, &#39;radius_changed&#39;, function() {
+        circleData();
+    }); 
+}
+
+function markerListener()
+{
+  google.maps.event.addListener(marker, &#39;drag&#39;, function() {
+        markerData();
+    });
+}
+
+function circleData() {
+  const center = circle.getCenter();
+  const latcenter = center.lat().toString();
+  const lngcenter = center.lng().toString();
+  const radius = circle.getRadius().toString();
+  $(&quot;#radius&quot;).val(radius);
+  $(&quot;#latcenter&quot;).val(latcenter);
+  $(&quot;#lngcenter&quot;).val(lngcenter);    
+}
+
+function markerData()
+{
+    const latLng = marker.getPosition();
+    const latlong = latLng.lat().toString().substring(0,10) + &#39;,&#39; + latLng.lng().toString().substring(0,10);      
+    //publish lat long in geolocation control in html page
+    $(&quot;#geolocation&quot;).val(latlong);
+}
+
+function addMarker(map, center)
+{
+    // create a marker
+    marker = new google.maps.Marker({
+        map         : map,
+        position    : center,
+        title       : &quot;Drag and drop on your property!&quot;,
+        draggable   : true
+    });
+    marker.setMap(map);
+};
+
+google.maps.event.addDomListener(window, &#39;load&#39;, initialize);</code></pre>
+<p>Open <em>circledata.html</em> in a browser and experiment by change the position and size of the circle and the position of the marker. See Figure 1, for example.</p>
+<p><img src="img/10.png" alt="Figure 1: Data pushed to views by listeners"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Marker in Circle?</h1>
+<ul>
+<li>In this step we shall add a method to the <em>circledata</em> module to determine if the marker is located inside or outside the circle.</li>
+<li>We use the <a href="https://developers.google.com/maps/documentation/javascript/reference">Google spherical coordinates library</a> to calculate the shortest distance between two points on a sphere measured along the surface of the sphere (called a geodesic).<ul>
+<li>The shortest path will be part of a great circle (Figure 1).</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/11.png" alt="Figure 1: Shortest path along surface of sphere between two points"></p>
+<ul>
+<li>A great circle is one whose centre coincides with the centre of the sphere (Figure 2).</li>
+</ul>
+<p><img src="img/12.png" alt="Figure 2: Great circle"></p>
+<p>Amend <em>circledata.html</em> as follows:</p>
+<ul>
+<li>Modify the script call to Google maps by adding a call to the geometry library:</li>
+</ul>
+<pre><code>&amp;libraries=geometry</code></pre>
+<p>The modified line becomes:</p>
+<pre><code>    &lt;script src=&quot;https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;libraries=geometry&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Add a label and input view where the return value of the new function will be displayed. For example:</p>
+<ul>
+<li><p>Marker in Circle? <em>inside</em></p>
+<p>  or</p>
+</li>
+<li><p>Marker in Circle? <em>outside</em></p>
+</li>
+</ul>
+<pre><code>    &lt;label&gt;Marker in Circle?&lt;/label&gt;   
+    &lt;input type=&quot;text&quot; id=&quot;markerpos&quot; size=&quot;10&quot;&gt;</code></pre>
+<p>Here is the complete file:</p>
+<p>Filename: circledata.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;map-canvas&quot;&gt;&lt;/div&gt;
+    &lt;br&gt;
+    &lt;div id=&quot;circledata&quot;&gt; 
+      &lt;input type=&quot;text&quot;  id=&quot;radius&quot; size=&quot;10&quot;&gt;
+      &lt;input type=&quot;text&quot;  id=&quot;latcenter&quot; size=&quot;25&quot;&gt;
+      &lt;input type=&quot;text&quot;  id=&quot;lngcenter&quot; size=&quot;25&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;markerdata&quot;&gt; 
+      &lt;input type=&quot;text&quot; id=&quot;geolocation&quot;  readonly class=&quot;input-medium&quot; size=&quot;25&quot;&gt;  
+    &lt;/div&gt; 
+
+    &lt;label&gt;Marker in Circle?&lt;/label&gt;   
+    &lt;input type=&quot;text&quot; id=&quot;markerpos&quot; size=&quot;10&quot;&gt;
+
+    &lt;script src=&quot;https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;libraries=geometry&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/jquery-2.2.3.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/circledata.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Note that :</p>
+<p>We use a Google method to calculate the distance between 2 LatLngs</p>
+<ul>
+<li>The signature of the method is <em>computeDistanceBetween(from:LatLng, to:LatLng, radius?:number)</em></li>
+<li>We do not include a third parameter (radius) thus acepting the default radius of the Earth (which is 6378137 meters)</li>
+</ul>
+<p>The algorithm to determine if a marker lies on or within the circle is simple. Here is the algorithmic code:</p>
+<ul>
+<li>Use a Circle accessor to obtain the coordinates of its centre<ul>
+<li>This will be returned as a LatLng object</li>
+</ul>
+</li>
+<li>Use a Marker accessor to obtain the coordinates of its position<ul>
+<li>Again, this will be a LatLng object.</li>
+</ul>
+</li>
+<li>Invoke <em>computeDistanceBetween(...)</em> to obtain the geodesic distance between the circle and marker<ul>
+<li>If this distance exceeds the radius of the circle<ul>
+<li>Then the marker falls outside the circle</li>
+</ul>
+</li>
+<li>Otherwise<ul>
+<li>The marker falls within the circle.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Here is the JavaScript method.</p>
+<ul>
+<li>Note that the method writes output to the html page using jQuery. For example:<ul>
+<li><em>$(&quot;#markerpos&quot;).val(&quot;inside&quot;);</em></li>
+</ul>
+</li>
+</ul>
+<pre><code>function isMarkerInCircle()
+{ 
+    const ccenter = circle.getCenter();
+    const mcenter = marker.getPosition();
+    const distance = google.maps.geometry.spherical.computeDistanceBetween(ccenter, mcenter);
+    const is_in_circle = distance &lt;= circle.getRadius();
+    if(is_in_circle) 
+    {
+        $(&quot;#markerpos&quot;).val(&quot;inside&quot;);
+    }
+    else 
+    {
+        $(&quot;#markerpos&quot;).val(&quot;outside&quot;);
+    }
+};</code></pre>
+<p>Invoke this method in the following locations:</p>
+<ul>
+<li>As the last statement in <em>initialize</em><ul>
+<li>To ensure the default states of the circle and marker are correctly reported.</li>
+</ul>
+</li>
+<li>Within <em>circleListener</em> and <em>markerListener</em><ul>
+<li>To ensure that when the state of any of the following changes, the marker is correctly reported as being inside or outside the circle:<ul>
+<li>Circle size changes,</li>
+<li>Circle moves to new position,</li>
+<li>Marker moves to new position.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Here is the complete modified <em>circledata.js</em>:</p>
+<pre><code>let circle;
+let map;
+let marker;
+
+
+function initialize()
+{
+    const center = new google.maps.LatLng(52.254427, -7.185281);
+    const initRadius = 2000;
+    const mapOptions = {
+            center      :center,
+            zoom        :12,
+            mapTypeId   :google.maps.MapTypeId.ROADMAP
+    };
+    const mapDiv                  = document.getElementById(&quot;map-canvas&quot;);
+    mapDiv.style.width  = &#39;600px&#39;;
+    mapDiv.style.height = &#39;400px&#39;;
+    map = new google.maps.Map(mapDiv,mapOptions);
+
+    circle = new google.maps.Circle({
+        center:center,
+        radius:initRadius,
+        strokeColor:&quot;#0000FF&quot;,
+        strokeOpacity:0.4,
+        strokeWeight:1,
+        fillColor:&quot;#0000FF&quot;,
+        fillOpacity:0.4,
+        draggable: true
+        });
+    //Enable to allow user to vary radius by dragging anchor point
+    circle.setEditable(true);
+    circle.setMap(map);
+    addMarker(map, center);
+    markerListener(marker);
+    circleListener();
+    //on initialization get publish default values
+    circleData();
+    markerData(marker);
+    isMarkerInCircle();
+};
+
+function circleListener()
+{
+    google.maps.event.addListener(circle, &#39;center_changed&#39;, function() 
+    {
+        circleData();
+        isMarkerInCircle();
+    }); 
+    google.maps.event.addListener(circle, &#39;radius_changed&#39;, function() 
+    {
+        circleData();
+        isMarkerInCircle();
+    }); 
+}
+
+function markerListener()
+{
+  google.maps.event.addListener(marker, &#39;drag&#39;, function() {
+        markerData();
+        isMarkerInCircle();
+    });
+}
+
+function circleData() {
+  const center = circle.getCenter();
+  const latcenter = center.lat().toString();
+  const lngcenter = center.lng().toString();
+  const radius = circle.getRadius().toString();
+  $(&quot;#radius&quot;).val(radius);
+  $(&quot;#latcenter&quot;).val(latcenter);
+  $(&quot;#lngcenter&quot;).val(lngcenter);    
+}
+
+function markerData()
+{
+    const latLng = marker.getPosition();
+    const latlong = latLng.lat().toString().substring(0,10) + &#39;,&#39; + latLng.lng().toString().substring(0,10);      
+    //publish lat long in geolocation control in html page
+    $(&quot;#geolocation&quot;).val(latlong);
+}
+
+function addMarker(map, center)
+{
+    // create a marker
+    marker = new google.maps.Marker({
+        map         : map,
+        position    : center,
+        title       : &quot;Drag and drop on your property!&quot;,
+        draggable   : true
+    });
+    marker.setMap(map);
+};
+
+function isMarkerInCircle()
+{ 
+    const ccenter = circle.getCenter();
+    const mcenter = marker.getPosition();
+    const distance = google.maps.geometry.spherical.computeDistanceBetween(ccenter, mcenter);
+    const is_in_circle = distance &lt;= circle.getRadius();
+    if(is_in_circle) 
+    {
+        $(&quot;#markerpos&quot;).val(&quot;inside&quot;);
+    }
+    else 
+    {
+        $(&quot;#markerpos&quot;).val(&quot;outside&quot;);
+    }
+};
+
+google.maps.event.addDomListener(window, &#39;load&#39;, initialize);</code></pre>
+<ul>
+<li>Open <em>circledata.html</em> in a browser. <ul>
+<li>The default view is shown in Figure 3.</li>
+</ul>
+</li>
+<li>Change the relative positions of the marker and circle so that the marker is outside the circle.<ul>
+<li>Notice that when the marker moves outside the circle the output displayed in the <em>Marker in Circle</em> view changes to <em>outside</em>.</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/13.png" alt="Figure 3: Default view - marker inside circle">
+<img src="img/14.png" alt="Figure 4: Marker outside circle"></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

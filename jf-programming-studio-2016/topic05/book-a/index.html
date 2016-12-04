@@ -1,0 +1,927 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      05: WitPress prototype web app, TDD & Advanced Git.
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Advanced-Git-I">
+      Advanced-Git-I
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" data-tab="Appendix">
+      Appendix
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Advanced-Git-I">
+        <h1>A second lab on the use of Git.</h1>
+<p>The lab describes how a two-person team might collaborate to use Git to manage a project. Individually owned and shared material is used to demonstrate where conflicts may be expected and how to resolve them when they arise.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction.</h1>
+<p><img src="img/git-logo.jpg" alt=""> This lab follows on from the lab on basic git published earlier in the course.</p>
+<p>The lab begins with a brief description on single-user use of Git. An example of such use would be to manage a software development project where only one developer is involved.</p>
+<p>The lab then progresses to the describe how two users might collaborate to use Git to manage a project.</p>
+<p>In the lab, Student A will own module-A and Student B will own module-B. During the lab a shared module, module-Shared, will be developed.</p>
+<p>You will see that each student can develop its lab without interference from the other. Neither student makes any changes to the other&#39;s code and so there is not risk of conflict arising. Conflict will be explained and demonstrated later. The repository will contain both modules and each student will be able to retain a local up-to-date version of the repository containing all modules. </p>
+<p>The project directory structure will be as shown in Figure 1.</p>
+<p><img src="img/13.png" alt="Figure 1: Folder structure"></p>
+<p>Each developer will have a local copy of the remote repository on its computer.</p>
+<p>They will work from the command line principally but may also,optionally, observe the project&#39;s progress in Eclipse&#39;s Egit and Atlassian&#39;s SourceTree or other Git GUI software of their own choosing.</p>
+<p>To commence the project, Student A will create the remote repo and generate and push the baseline project. </p>
+<p>Student B will then make a contribution to the project.</p>
+<p>Here are the features of <em>git</em> that will be exercised:</p>
+<ul>
+<li>Configure <em>git</em> on their respective computers:<ul>
+<li>set their names and emails.</li>
+<li>assign a text editor.</li>
+</ul>
+</li>
+<li>Create the remote repository.</li>
+<li>Clone the repository to their computers.</li>
+<li>Make several changes to the project.</li>
+<li>Add the changed project to the index (staging area).</li>
+<li>Commit the project to the local repository.</li>
+<li>Display the commit history using a range of format options.</li>
+<li>Roll back the most recent commit.</li>
+<li>Push commits to the remote repository.</li>
+<li>Exercise the fetch &amp; merge commands (including resolving conflicts).</li>
+<li>Delete and then refresh the working tree from the remote repository.</li>
+<li>Create a branch from a commit positioned at some intermediate point along the main branch (master branch).</li>
+<li>Make a number of commits to this branch.</li>
+<li>Squash a subset of the commits into a single commit.</li>
+<li>Rebase the branch onto the master branch in a local repository.</li>
+<li>Merge the squashed branch with the remote master.</li>
+<li>Create and examine the implications of a detatched HEAD.</li>
+<li>Create, add, delete tags.</li>
+<li>Push tags to remote repository.</li>
+<li>Checkout a selected commit based on its tag.</li>
+<li>Checkout a branch.</li>
+<li>View the commit history.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Student A</h1>
+<p><img src="img/git-logo.jpg" alt=""></p>
+<p><strong>Page contents</strong></p>
+<ul>
+<li>Create remote repo.</li>
+<li>Create a local repo.</li>
+<li>Set up remote repo to track local repo.</li>
+<li>Create baseline project locally, add and commit to repo.</li>
+<li>Push local repo to remote.</li>
+<li>Print logs.</li>
+</ul>
+<h2>Action</h2>
+<p>Student A will now do the following:</p>
+<ul>
+<li>Create a remote repository.</li>
+<li>Create local repository directory.</li>
+<li>Create a module (a folder) containing a file.</li>
+<li>Stage, commit and push to remote (origin).</li>
+<li>Display the commit history.</li>
+<li>Grant write access to Student B to the remote repo.</li>
+</ul>
+<p><strong>Create Local Repository</strong></p>
+<ul>
+<li>Create a folder on your computer named <strong>gitlab</strong>.</li>
+<li>cd into it into a terminal. </li>
+<li>Create a subfolder named module-A.</li>
+<li>Add a file named Circle.java to module-A.</li>
+<li>Create a git repository.</li>
+<li>Add all newly created content.</li>
+</ul>
+<p>Here are the commands:</p>
+<pre><code>cd gitlab
+mkdir module-A
+echo Circle.java &gt; module-A/Circle.java
+git add .
+git commit -m &#39;first commit: added Circle.java&#39;</code></pre>
+<p>Open Circle.java in an editor and add content:</p>
+<pre><code>/**
+ * A circle that can be manipulated and that draws itself on a canvas.
+ * @author  student A
+ */
+
+public class Circle
+{
+
+}</code></pre>
+<p><strong>Create Remote Repository</strong></p>
+<p>Create a remote repository on BitBucket called <strong>gitlab</strong>. </p>
+<p>An easy option is to do so from within the BitBucket site. </p>
+<p><img src="img/05.png" alt="Figure 1: Creating tracking repository on Bitbucket"></p>
+<p><img src="img/06.png" alt="Figure 2: Creating tracking repository on Bitbucket"></p>
+<p>Still in the gitlab folder, run these commands (as shown in Figure 2) but making appropriate substitution to <code>your domain</code>:</p>
+<pre><code>git remote add origin git@bitbucket.org:your domain/gitlab.git
+git push -u origin --all 
+git push -u origin --tags</code></pre>
+<ul>
+<li>The first command establishes the tracking relationship between your local and remote repos.</li>
+<li>The remaining two commands push a copy of the local repo and any tags to Bitbucket.<ul>
+<li>Ensure you include the <strong>-u</strong> switch on the first commit.</li>
+<li>Subsequent commits do not require either -u or --all, simply:</li>
+</ul>
+</li>
+</ul>
+<pre><code>git push origin master</code></pre>
+<p>If the push executes correctly then a response somewhat similar to that shown in Figure 3 will be generated:</p>
+<p><img src="img/03.png" alt="Figure 3: First push to remote repo successful"></p>
+<p>Now let&#39;s examine the commit history:</p>
+<pre><code>git log</code></pre>
+<p>The response should be similar to that shown in Figure 4. Following the word <em>commit</em> is a 40 hex digit number. This is a <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a> message digest or hash value related to this commit. More, for convenience, usually we shall output a subset of the hash. This is illustrated in Figure 5.</p>
+<p><img src="img/01.png" alt="Figure 4: Log output following first commit"></p>
+<p>For a more detailed history we could use the command:</p>
+<pre><code>git log --pretty=format:&quot;%h %an %ar : %s&quot;</code></pre>
+<p>and obtain a response similar to the following:</p>
+<p><img src="img/02.png" alt="Figure 5: Pretty print log"></p>
+<p>Check the branches, local and origin with the command:</p>
+<pre><code>git branch -a</code></pre>
+<p><img src="img/04.png" alt="Looks good"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Student B</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p><strong>Page contents</strong></p>
+<ul>
+<li>Clone a remote repo.</li>
+<li>Make changes.</li>
+<li>Stage &amp; commit.</li>
+<li>Push updated local repo to remote.</li>
+<li>Inspect log.</li>
+</ul>
+<h2>Action</h2>
+<p>Now that Student A has created a local repository and pushed its baseline project, you Student B will:</p>
+<ul>
+<li>Clone the repository to your local working directory.</li>
+<li>Create a new file.</li>
+<li>Add the file to the repo, commit and push to remote.</li>
+</ul>
+<p>In the terminal cd to repo folder and run this command, replacing the placeholder with your domain name:</p>
+<pre><code>git clone git@bitbucket.org:your domain/gitlab.git</code></pre>
+<p><img src="img/07.png" alt="Figure 1: Cloning git lab repo"></p>
+<p>No conflicts were encountered because you did not have Circle.java in your repo. If Circle.java had been in your folder before executing pull and were it to have differed from the pulled version then a conflict would have arisen. We shall contrive an example to demonstrate this later in the lab.</p>
+<p>Verify that the repository <em>gitlab</em> has been received by running the <em>ls</em> command.</p>
+<ul>
+<li>Change into <em>gitlab</em> and check the commit history. It should be similar to that shown in Figure 2. The hash and date values are likely to differ from yours. </li>
+<li>The file <em>Circle.java</em> was created and pushed to the remote repo by Student A. Provided Student A has not made any further changes to its repository subsequent to executing push, then both of you now have identical repos and these exactly match the remote repo in Bitbucket.</li>
+</ul>
+<p><img src="img/08.png" alt="Figure 2: Commit history gitlab repo"></p>
+<p>We shall now describe how to perform the following steps:</p>
+<ul>
+<li>Create module-B folder.</li>
+<li>Create Square.java in module-B.</li>
+<li>Add Square.java to your repo, commit and push to the remote.</li>
+</ul>
+<p>The commands are shown here and the output should be similar to that shown in Figure 3.</p>
+<pre><code>cd gitlab
+mkdir module-B
+echo Square.java &gt; module-B/Square.java</code></pre>
+<p>Place this initial content in Square.java once you have created the file.</p>
+<pre><code>/**
+ * A square that can be manipulated and that draws itself on a canvas.
+ * @author  student B
+ */
+
+public class Square
+{
+
+}</code></pre>
+<p>Proceed with these commands:</p>
+<pre><code>git add .
+git commit -m &#39;added Square.java&#39; 
+git push</code></pre>
+<p><img src="img/09.png" alt="Figure 3: Creating Square.java">
+<img src="img/15.png" alt="Figure 4: Add new material">
+<img src="img/14.png" alt="Figure 5: Check status">
+<img src="img/16.png" alt="Figure 6: Push to remote repo">
+<img src="img/10.png" alt="Figure 7: Commit history"></p>
+<p>At this point your local repo and the remote repo are in sync but Student A&#39;s local repo has yet to be updated with the new material added in this step.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Shared module</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p><strong>Page contents</strong></p>
+<ul>
+<li>Create shared content file.</li>
+<li>Add content.</li>
+<li>Push to remote.</li>
+<li>Perform a merge.</li>
+</ul>
+<h2>Student A</h2>
+<p>Create a shared folder named <em>module-Shared</em> and add a new file named <em>Triangle.java</em> to this folder.</p>
+<pre><code>mkdir module-Shared
+echo Triangle.java &gt; module-Shared/Triangle.java</code></pre>
+<p><img src="img/17.png" alt="Figure 1: Create a folder with newly created file as content"></p>
+<p>Check the status of the repo, noting the untracked, newly added <em>module-Shared</em> folder.</p>
+<pre><code>git status</code></pre>
+<p><img src="img/18.png" alt="Figure 2: Check the status of the repo"></p>
+<p>Add the new material to the local repo and check the status to verify. File <em>Triangle.java</em> and its containing folder are now staged, ready for a commit.</p>
+<pre><code>git add module-Shared
+git status</code></pre>
+<p><img src="img/19.png" alt="Figure 3: New file staged ... ready to commit"></p>
+<p>Commit the new material, adding a suitable message.</p>
+<pre><code>git commit -m &#39;added module-Shared folder and Triangle.java file&#39;</code></pre>
+<p><img src="img/20.png" alt="Figure 4: Commit the new material, providing suitable commit message"></p>
+<p>A status check indicates the local repo is ahead of the remote.
+<img src="img/21.png" alt="Figure 5: Status check indicate local repo ahead of remote repo"></p>
+<p>Execute a push command. The push fails because we did not update our local repo before commencing work on it.</p>
+<pre><code>git push</code></pre>
+<p><img src="img/11.png" alt="Figure 6: Push fails because we omitted to pull before we began to make local changes"></p>
+<p>Responding to the hint (as shown in Figure 6), we execute a pull command. This causes the default editor (example vi) to open so that a commit message may be provided. Refer to the Appendix if you require help with the <em>vi editor</em> commands.</p>
+<p><img src="img/23.png" alt="Figure 7: The response when pull executed"></p>
+<p>Add the message and save the file. </p>
+<ul>
+<li>The local and remote repos should then be automatically merged without any conflicts arising. </li>
+<li>No conflicts arise in this instance because no attempt is made to overwrite a local file with different remote content while the merge process is underway.</li>
+</ul>
+<p><img src="img/24.png" alt="Figure 8: Add a message using the vi editor to explain why merge necessary"></p>
+<p>Check the status of the repo and note it is two commits ahead of the remote. </p>
+<p>Do <code>not</code> push. We are about to create a conflict to gain some experience in how to deal with such an issue.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Shared module</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p><strong>Page contents</strong></p>
+<ul>
+<li>Add a shared folder.</li>
+<li>Add a file to the shared folder.</li>
+<li>Add and push to the remote tracking repo.</li>
+</ul>
+<h2>Student B</h2>
+<p>Student B shall now add a shared folder.</p>
+<p><img src="img/25.png" alt="Figure 1: Note the absence of folder module-Shared"></p>
+<p>Repeat the actions of Student A: Create a shared folder named <em>module-Shared</em> and add a new file named <em>Triangle.java</em> to this folder.</p>
+<pre><code>mkdir module-Shared
+echo Triangle.java &gt; module-Shared/Triangle.java</code></pre>
+<p><img src="img/17.png" alt="Figure 2: Create a folder with newly created file as content"></p>
+<p>Check the status of the repo, noting the untracked, newly added <em>module-Shared</em> folder.</p>
+<pre><code>git status</code></pre>
+<p><img src="img/18.png" alt="Figure 3: Check the status of the repo"></p>
+<p>Add the new material to the local repo and check the status to verify. File <em>Triangle.java</em> and its containing folder are now staged, ready for a commit.</p>
+<pre><code>git add module-Shared
+git status</code></pre>
+<p><img src="img/19.png" alt="Figure 4: New file staged ... ready to commit"></p>
+<p>Commit the new material, adding a suitable message.</p>
+<pre><code>git commit -m &#39;added module-Shared folder and Triangle.java file&#39;</code></pre>
+<p><img src="img/20.png" alt="Figure 5: Commit the new material, providing suitable commit message"></p>
+<p>A status check indicates the local repo is ahead of the remote.
+<img src="img/21.png" alt="Figure 6: Status check indicate local repo ahead of remote repo"></p>
+<p>Execute a push command. The push succeeds as indicated in Figure 15.</p>
+<pre><code>git push</code></pre>
+<p><img src="img/22.png" alt="Figure 7: Successful push"></p>
+<p>The remote repository was successfully updated with the latest copy of Student B local.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Shared module</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p><strong>Page contents</strong></p>
+<ul>
+<li>Resolve issue of a failed push in attempting to update remote repo.</li>
+<li>Make change to local file.</li>
+<li>Add and push.</li>
+</ul>
+<h2>Student A</h2>
+<p>Check the status of the repo. Observe that it is 2 commits ahead of the remote. This is because Student A did not push its work before Student B added new material to the remote repo.</p>
+<p><img src="img/26.png" alt="Figure 1: Status check indicates local ahead of remote"></p>
+<p>Execute a <em>git push</em> as recommended in Figure 16. The attempted push fails because &quot;the remote contains work you do not have locally&quot; as stated in the message shown in Figure 2.</p>
+<p><img src="img/11.png" alt="Figure 2: Failed push because remote contains content not present locally"></p>
+<p>Execute <em>git pull</em>. The result is shown in Figure 3. The remote content is fetched and an edit window opens to facilitate addition of a commit message.</p>
+<ul>
+<li>Add the message `Update Student-A with remote content&#39; in the vi editor.</li>
+<li>Save the message. This should automatically exit the editor and perform a merge, generating the message <code>Merge made by the &#39;recursive&#39; strategy.</code></li>
+</ul>
+<p><img src="img/28.png" alt="Figure 3: Local repo updated with remote content"></p>
+<p>Check the folder contents:</p>
+<p><img src="img/29.png" alt="Figure 4: Updated folder contents"></p>
+<p>Check status: the working directory is clean but the local is 3 commits ahead of the remote.</p>
+<p><img src="img/30.png" alt="Figure 5: Status check shows local is 3 commits ahead of remote"></p>
+<p>Before updating remote make a change to the shared file Triangle.java:</p>
+<pre><code>/**
+ * A circle that can be manipulated and that draws itself on a canvas.
+ * @author  student A
+ * @author  student B
+ */
+
+public class Triangle
+{
+
+}</code></pre>
+<p>Then add, commit and push.</p>
+<pre><code>git add .
+git commit -m &#39;Triangle.java edit by Student A&#39;
+git push</code></pre>
+<p><img src="img/74.png" alt="Figure 6: Pushing changes to Triangle.java">
+Run status command to check working directory clean.</p>
+<p>Print the log:</p>
+<p><img src="img/31.png" alt="Figure 7: Latest log"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Shared module</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p><strong>Page contents</strong></p>
+<ul>
+<li>Manually resolve a conflict.</li>
+</ul>
+<h2>Student B</h2>
+<p>Student B shall now create and resolve a conflict. </p>
+<p>Do <strong>not</strong> execute a pull command.</p>
+<p>Change Triangle.java to the following:</p>
+<pre><code>/**
+ * A Triangle that can be manipulated and that draws itself on a canvas.
+ * @author  student A
+ * @author  student B
+ */
+
+public class Triangle
+{
+
+  double base = 100;
+  double height = 100;
+  public Triangle(double base, double height) {
+    this.base = base;
+    this.height = height;
+  }
+}</code></pre>
+<p>Then add, commit and push.</p>
+<pre><code>git add .
+git commit -m &#39;Triangle.java edit by Student B&#39;
+git push</code></pre>
+<p>The push was rejected for the reasons described in Figure 1.</p>
+<p><img src="img/32.png" alt="Figure 1: Failed to push"></p>
+<p>Executing a pull command results in a further error message. See Figure 2.</p>
+<p><img src="img/33.png" alt="Figure 2: Conflict has arisen in attempt to merge remote and local content"></p>
+<p>Open Triangle.java. This is shown in Figure 3. </p>
+<ul>
+<li>Student B file is positioned between &lt;&lt;&lt;&lt;&lt; HEAD and ======.</li>
+<li>Student A file is positioned between ===== and &gt;&gt;&gt;&gt;&gt;&gt;&gt;.</li>
+<li>To resolve conflicts remove &lt;&lt;&lt;&lt; HEAD, ===== and &gt;&gt;&gt;&gt;&gt;.</li>
+<li>Add correct file content.</li>
+<li>Save file.</li>
+<li>Run the following commands, studying the output in each case.</li>
+</ul>
+<pre><code>git status 
+git add .
+git commit -m &#39;resolved conflicts Triangle.java&#39;
+git push</code></pre>
+<p><img src="img/34.png" alt="Figure 3: Triangle.java showing differences between Student A and Student B versions"></p>
+<p>Finally, print the log:</p>
+<p><img src="img/35.png" alt="Figure 4: Final log output"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Detached Head</h1>
+<p><img src="img/git-logo.jpg" alt=""> </p>
+<p><strong>Page contents</strong></p>
+<ul>
+<li>Create a detached head.</li>
+<li>Resolve.</li>
+</ul>
+<h2>Student A &amp; Student B</h2>
+<p><strong>Action</strong></p>
+<ul>
+<li>This step does not require use of the remote repository.</li>
+<li>Delete the local repository <em>gitlab</em>, recreate and add and commit a file name <em>Circle.java</em></li>
+<li>Then make three commits of the test source file Circle.java, changing the file between commits. </li>
+<li>Check the log as before: you should see something like Figure 1.</li>
+</ul>
+<pre><code>rm -rf gitlab
+mkdir gitlab
+cd gitlab
+git init
+echo Circle.java &gt; Circle.java
+git add .
+git commit -m &#39;1st commit&#39;
+echo Circle.java 2nd commit &gt; Circle.java
+git add .
+git commit -m &#39;2nd commit&#39;
+echo Circle.java 3rd commit &gt; Circle.java
+git add .
+git commit -m &#39;3rd commit&#39;</code></pre>
+<p><img src="img/36.png" alt="Figure 1"></p>
+<p>Checkout the second commit.</p>
+<pre><code>git checkout 8cdbece</code></pre>
+<p>See Figure 2 for the response to this checkout request.</p>
+<p><img src="img/37.png" alt="Figure 2"></p>
+<p>Our working tree is now in the infamous <strong>detached head</strong> state which is not a good place to be.</p>
+<h1>Scenario 1</h1>
+<p>We can take immediate action to resolve this be simply checking out the master:</p>
+<pre><code>git checkout master</code></pre>
+<p><img src="img/38.png" alt="Figure 3"></p>
+<p>But we&#39;re not quite done yet as there are many ways to really screw up, some - but not all - of which we&#39;ll deal with.</p>
+<h1>Scenario 2</h1>
+<p>Let&#39;s complicate the situation.</p>
+<p>Checkout the second commit as before.</p>
+<pre><code>git checkout 8cdbece</code></pre>
+<p>As experienced previously and as illustrated in Figure 2, this checkout will generate a detached HEAD warning.</p>
+<p>Now, make a change to Circle.java, add and commit: here are the instructions and response (Figure 4).</p>
+<p><img src="img/39.png" alt="Figure 4"></p>
+<p>The log output is shown in Figure 5.</p>
+<p><img src="img/40.png" alt="Figure 5"></p>
+<p>Notice that the 3rd commit is not included. </p>
+<p>Let&#39;s check what branches are present:</p>
+<pre><code>git branch</code></pre>
+<p>Here&#39;s the output:</p>
+<p><img src="img/41.png" alt="Figure 6"></p>
+<p>The master branch is present as one would expect. However an anonymous branch (<em>detached from cc5990f</em>) has also been created.</p>
+<p>Let&#39;s clean this up as follows:</p>
+<pre><code>git branch branch-det-head
+git checkout branch-det-head</code></pre>
+<p>These commands generate output similar to that shown in Figure 7.</p>
+<p><img src="img/42.png" alt="Figure 7"></p>
+<p>What we have done is to create a new branch named <em>branch-det-head</em> and checked out this branch. </p>
+<ul>
+<li>We are now in a position to continue to make changes to the repository on this branch.</li>
+<li>Should we so wish, we could push this branch to the remote repository.</li>
+<li>Or we could, once development on this branch was completed, merge the branch into our master branch. This is dealt with in a later step.</li>
+</ul>
+<p>Note that we could have combined these last two commands into a single command as follows:</p>
+<pre><code>git checkout -b branch-det-head</code></pre>
+<p><img src="img/43.png" alt="Figure 8: List local branches, checked-out branch denoted by asterisk"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>gitignore</h1>
+<p>Scenario: you have forgotten somehow to exclude a file or folder from your .git repo, have already added the material to the index, committed and pushed to your remote repo. Now you wish to rectify the situation. Here is how to do so:</p>
+<ul>
+<li>Assume the folder you wish to exclude is <code>tmp</code>. Add it to the .gitignore file and save.</li>
+</ul>
+<pre><code>// File: .gitignore
+
+...
+...
+tmp</code></pre>
+<p>Run these commands:</p>
+<pre><code>git rm -r --cache tmp
+git commit -m &#39;excluding tmp &amp; cleaning local cache&#39; # or some such message
+git push</code></pre>
+<p><img src="img/cache/01.png" alt="Figure 1: Folder contents">
+<img src="img/cache/02.png" alt="Figure 2: First commit - no gitignore">
+<img src="img/cache/03.png" alt="Figure 3: Status check">
+<img src="img/cache/04.png" alt="Figure 4: Push to remote repo">
+<img src="img/cache/05.png" alt="Figure 5: Pull in separate device or folder">
+<img src="img/cache/14.png" alt="Figure 6: Unwanted tmp folder pulled">
+<img src="img/cache/07.png" alt="">
+<img src="img/cache/08.png" alt="Figure 7: Add tmp to gitignore">
+<img src="img/cache/09.png" alt="Figure 8: Run git rm -r --cache tmp to remove tmp from index">
+<img src="img/cache/10.png" alt="Figure 9: Status check verifies index change">
+<img src="img/cache/11.png" alt="Figure 10: Commit changes">
+<img src="img/cache/12.png" alt="Figure 11: Status check confirm local repo ahead by 1 commit as expected">
+<img src="img/cache/13.png" alt="Figure 12: Push to remote">
+<img src="img/cache/14.png" alt="Figure 13: Switch to remote device &amp; verify tmp no longer being tracked">
+<img src="img/cache/15.png" alt="">
+<img src="img/cache/16.png" alt="">
+<img src="img/cache/17.png" alt="">
+<img src="img/cache/18.png" alt="Figure 14: Unwanted tmp folder no longer tracked"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<ol>
+<li>Switch roles: that is, Student A assumes the role of Student B and vice versa. Then repeat the steps involving teamwork, namely 02 to 07 inclusive.</li>
+</ol>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Appendix">
+        <h1>Vi Editor</h1>
+<p>Basic commands: these should be sufficient when using Git.</p>
+<ul>
+<li>Open a file:<ul>
+<li>In a terminal cd to folder containing file.</li>
+<li>The following command opens the file in <em>command mode</em>. <pre><code>vi filename</code></pre>
+</li>
+</ul>
+</li>
+<li>Edit the file.<ul>
+<li>Press the lower case letter <strong>i</strong> to switch to <em>edit mode</em>.</li>
+<li>The word INSERT will appear at the foot of the screen.</li>
+<li>Make the necessary changes.</li>
+<li>Press the ESC key to exit the <em>edit mode</em> and to enter the <em>command mode</em>.</li>
+<li>When <em>command mode</em> is entered the INSERT word disappears from the foot of the screen.</li>
+<li>Execute the following command to save the file:<pre><code>:wq</code></pre>
+Here is a list of further commands (use in <em>command mode</em>):</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-javascript">A moves cursor to end line and switches to edit mode.
+I moves cursor to start line and switches to edit mode.
+
+e goes to the end of the next word.
+w goes to the beginning of the next word.
+b goes to the beginning of the previous word.
+dd deletes the current line.
+dw deletes the current word.</code></pre>
+<p>The arrow keys may be used to move the cursor while in <em>edit mode</em>.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

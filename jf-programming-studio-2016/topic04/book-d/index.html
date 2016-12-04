@@ -1,0 +1,632 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      04: Map overlays, the DOM & SemanticUI controls
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Ajax">
+      Ajax
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Ajax">
+        <h1>Ajax</h1>
+<p>Asynchronous JavaScript &amp; XML. Used to manage transmission of data between client (web) and server. The ajax operation takes place in the background. Facilitates updates of targetted areas on page without requirement to refresh entire page.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<p>Download an archive of the Donation web app from <a href="archives/donation-ajax-demo.zip">this location</a>.</p>
+<p>Expand the archive into your workspace and cd into the project. The project name is <em>donation-ajax-demo</em>.</p>
+<p>Run the command:</p>
+<pre><code>play eclipsify</code></pre>
+<p>Run the app:</p>
+<pre><code>play run</code></pre>
+<p>Log in with these credentials:</p>
+<pre><code>homer@simpson.com
+secret</code></pre>
+<p>Make a donation. Observe how the entire screen refreshes once the donate button is pressed.</p>
+<p>The purpose of this lab is to introduce changes, applying ajax, so as to eliminate this screen refresh and its annoying flicker.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Refactor</h1>
+<p>The files requiring refactoring are:</p>
+<pre><code>app/controllers/DonationController.java
+app/views/DonationController.html
+public/javascripts/donate.js
+public/javascripts/map.js</code></pre>
+<p>Before embarking on the refactoring, let&#39;s reflect on the process that exists (i.e. without ajax).</p>
+<ul>
+<li>When a user successfully logs in (authenticates) it is routed to the Donation controller <em>index</em> action.</li>
+</ul>
+<pre><code># Donation page
+GET    /donation                    DonationController.index</code></pre>
+<ul>
+<li>The DonationController action <em>index()</em> is invoked: this causes the Donation page to render.</li>
+<li>The parameters in the <em>render</em> call, user and candidates, are arrays to populate the dropdowns in the DonationController page.</li>
+</ul>
+<pre><code>public static void index()
+{
+  ...
+  ...
+  render(user, candidates);
+}</code></pre>
+<ul>
+<li>The view DonationController template has a form element, the skeleton of which is shown below.</li>
+<li>This is a Semantic UI element, identified by the class name <em>ui form</em>.</li>
+<li>The form handler is specified by the attribute <em>action</em> which directs that the form delivers its data to the end point determined by <em>/donation/donate</em>. </li>
+<li>The HTTP method <em>POST</em> is specified as a means of submitting the data.</li>
+</ul>
+<pre><code>&lt;form class=&quot;ui form&quot; action=&quot;/donation/donate&quot; method=&quot;POST&quot;&gt;
+   ...
+   ...
+&lt;/form&gt;</code></pre>
+<ul>
+<li>To determine where precisely this end point is one must refer to the routes file.</li>
+<li>This points to a DonationController method named <em>donate</em> as shown here:</li>
+</ul>
+<pre><code># Extract from roots file
+
+POST   /donation/donate             DonationController.donate</code></pre>
+<ul>
+<li>Here is the donation header and skeleton code:</li>
+<li>In particular observe that the method concludes with a call to index(): this causes the html page to refresh in its entirety.</li>
+</ul>
+<pre><code>  public static void donate(long amountDonated, String methodDonated, String candidateEmail) 
+  {
+    // Perform database transactions.
+    // Invoke index(): this causes a page refresh
+    index();
+  }</code></pre>
+<p>In the following steps we shall explain how to refactor the application to submit the data using ajax and thereby avoid the full page refresh that occurs as a result of DonationController.index being invoked at the conclusion of the DonationController.donate method.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Applying AJAX</h1>
+<p>What we require is an asynchronous call to be made once the submit button is pressed. This call will:</p>
+<ul>
+<li>submit the data to the server and </li>
+<li>obtain back a response containing the updated percentage number to be inserted in the progress bar.</li>
+</ul>
+<p>Initially we shall omit any Semantic UI dropdown validation or progress bar update. These tasks will follow in a later step.</p>
+<p>Recall the skeleton of the form from the previous step:</p>
+<pre><code>&lt;form class=&quot;ui form&quot; action=&quot;/donation/donate&quot; method=&quot;POST&quot;&gt;
+   ...
+   ...
+&lt;/form&gt;</code></pre>
+<p>Replace this with the following code in which the action attribute and HTTP method have been deleted. This functionality will be moved to JavaScript code.</p>
+<pre><code>&lt;form class=&quot;ui form&quot;&gt;
+   ...
+   ...
+&lt;/form&gt;</code></pre>
+<p>Replace the content of the donation.js file with the following:</p>
+<pre><code>$(&#39;.ui.dropdown&#39;).dropdown();
+$(&#39;.ui.submit.button&#39;).click(function () {
+  var formData = $(&#39;.ui.form.segment input&#39;).serialize();
+  $.ajax({
+    type: &#39;POST&#39;,
+    url: &#39;/donation/donate&#39;,
+    data: formData,
+    success: function (response) {
+      console.log(&#39;make donation page submitForm response: &#39; + response.progress);
+    },
+  });
+});</code></pre>
+<p>In DonationController.java replace the call to <em>index</em> as follows:</p>
+<pre><code>  public static void donate(long amountDonated, String methodDonated, String candidateEmail) 
+  {
+    // Perform database transactions.
+    ...
+    ...
+
+    JSONObject obj = new JSONObject();
+    obj.put(&quot;progress&quot;, getProgress());
+    renderJSON(obj);
+  }</code></pre>
+<p>And <code>getProgress</code>:</p>
+<pre><code>    private static String getProgress()
+    {
+      String currentCandidateEmail = session.get(&quot;currentCandidate&quot;);
+      Candidate candidate = Candidate.findByEmail(currentCandidateEmail);
+      String donationprogress = &quot;0&quot;;
+      if (candidate != null)
+      {
+        donationprogress = CandidateController.percentDonationTargetReached(candidate);
+      }
+      return donationprogress;
+    }</code></pre>
+<p>Import the JSONObject:</p>
+<pre><code>import org.json.simple.JSONObject;</code></pre>
+<p>Place the <a href="archives/json-simple-1.1.jar">json-simple-1.1.jar</a> in a new folder <em>lib</em> in the root of the project.</p>
+<p>Add the jar to the class path.</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Refresh the app (or re-run) and make a donation. Open developer tools console. You should see a message such as:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>Also in your computer terminal a log message similar to the following should be printed:</p>
+<p><img src="img/03.png" alt=""></p>
+<p>These messages indicate the ajax call was successful.</p>
+<p>The screen flicker should no longer be present when the submit button is pressed.</p>
+<p>In the following steps we shall discuss the above in detail, introduce Semantic UI dropdown validation and update the progress bar.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Analysis Ajax</h1>
+<p>Figure 1 shows the essential snippets relating to our initial ajax implementation taken from the html, javascript and java.</p>
+<p>The form data is obtained from two inputs. Here is what&#39;s delivered in the script:</p>
+<pre><code>formData: &quot;candidateEmail=able%40whitehouse.com&amp;amountDonated=500&amp;methodDonated=direct&quot;</code></pre>
+<p>This is retrieved with the following code:</p>
+<pre><code>const formData = $(&#39;.ui.form.segment input&#39;).serialize();</code></pre>
+<p>Recall the content removed from the form in the original non-ajax implementation: the equivalent is inserted into the script code.</p>
+<pre><code>      type: &#39;POST&#39;,
+      url: &#39;/donation/donate&#39;,</code></pre>
+<p>Figure 1 has color-coded overlays to associate closely related entities in the html and script. </p>
+<p>In this initial implementation of ajax we have omitted validation of the dropdowns and triggered the ajax process by a button click:</p>
+<pre><code>$(&#39;.ui.submit.button&#39;).click(function() { ...});</code></pre>
+<p>In the next step we shall arrange that Semantic validation of the dropdowns must first succeed before the ajax call proceeds.</p>
+<p><img src="img/04.png" alt="Figure 1: Analysis of initial ajax implementation"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Validation</h1>
+<p>We now validate the dropdowns ensuring that selections are made on both before the submit button is pressed.</p>
+<p>Additionally we write directly to update the progress bar.</p>
+<p>Here are the necessary changes.</p>
+<p>Controller:</p>
+<pre><code>JSONObject obj = new JSONObject();
+obj.put(&quot;progress&quot;, getProgress());
+obj.put(&quot;candidate&quot;, candidate.firstName + &quot; &quot; + candidate.lastName);
+renderJSON(obj);</code></pre>
+<p>donation.js</p>
+<pre><code>$(&#39;.ui.dropdown&#39;).dropdown();
+
+$(&#39;.ui.form&#39;)
+.form({
+
+   candidateEmail: {
+    identifier: &#39;candidateEmail&#39;,
+    rules: [{
+        type: &#39;empty&#39;,
+        prompt: &#39;Please select a Candidate to whom you wish to make a donation&#39;
+      }]
+  },
+
+  amountDonated: {
+    identifier: &#39;amountDonated&#39;,
+    rules: [{
+        type: &#39;empty&#39;,
+        prompt: &#39;Please select an amount to donate&#39;
+      }]
+  }
+},
+
+{
+  onSuccess : function() {
+    inline: true,
+      console.log(&#39;on success&#39;);
+      submitForm();
+      return false; // dropdown remains open following press donate button. progress bar fails on return true. why?
+  } 
+});
+
+
+  function submitForm() {
+    var formData = $(&#39;.ui.form.segment input&#39;).serialize(); 
+    $.ajax({
+      type: &#39;POST&#39;,
+      url: &#39;/donation/donate&#39;,
+      data: formData,
+    success: function(response) {            
+      console.log(&quot;make donation page submitForm response: &quot; + response.progress);
+      $(&#39;.ui.indicating.progress&#39;).progress({
+          percent: response.progress
+        });
+      $(&#39;#progresslabel&#39;).text(response.progress + &quot; % of target achieved to date for candidate &quot; + response.candidate);
+    }
+    });
+  }</code></pre>
+<p>HTML</p>
+<p>Introduce an error placeholder under the submit button.</p>
+<pre><code>&lt;div class=&quot;ui blue submit button&quot;&gt;Donate &lt;i class=&quot;add icon&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;div class=&quot;ui error message&quot;&gt;&lt;/div&gt;</code></pre>
+<p>The progress bar code:</p>
+<pre><code>  &lt;!-- Donation progress  --&gt;
+  &lt;div class=&quot;ui segment&quot;&gt;   
+    &lt;div class=&quot;ui indicating progress&quot; id=&quot;progress&quot;&gt;
+      &lt;div class=&quot;bar&quot;&gt;
+        &lt;div class=&quot;progress&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;label&quot; id=&quot;progresslabel&quot;&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+<p>Note the script that writes to this html:</p>
+<pre><code>$(&#39;.ui.indicating.progress&#39;).progress({percent: response.progress });
+$(&#39;#progresslabel&#39;).text(response.progress + &quot; % of target achieved to date for candidate &quot; + response.candidate);</code></pre>
+<p>Run the app and experiment by making donations and:</p>
+<ul>
+<li>setting break points in the script in developer tools and observing the flow of execution,</li>
+<li>setting watch variables, such as formData, in the watch window in developer tools (Firefox and Chrome),</li>
+<li>debugging into the server and observing values as the JSON object formed and populated.</li>
+</ul>
+<p>For reference, a copy of the repo used in development of this lab is available <a href="archives/donation-ajax-demo-repo.zip">here</a>. Consult the readme therein and check the branches.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

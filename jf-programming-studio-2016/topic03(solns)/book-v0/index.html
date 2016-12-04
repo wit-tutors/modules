@@ -1,0 +1,822 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      03: MyRent (Solutions)
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Solution-v0">
+      Solution-v0
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Solution-v0">
+        <h1>Solution v0</h1>
+<p><strong>Step-by-step guide to building MyRent application</strong></p>
+<ul>
+<li>Iteration v0 (Register)</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Create baseline project skeleton using Play 1.3.0</h1>
+<p><strong>Use the Play Framework to create the application</strong></p>
+<ul>
+<li>A suggested folder layout for the ICTSkills Studio program is illustrated in Figure 1.<ul>
+<li>This provides for the thee applications, the subject of the ICTSkills Studio program.<ul>
+<li>Donation</li>
+<li>MyRent</li>
+<li>WitPress</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/01.png" alt="Figure 1: Recommended directory structure"></p>
+<ul>
+<li>Create a new Play application named <strong>myrent</strong> in your workspace as follows:<ul>
+<li>It is assumed that you already have Play installed and configured.</li>
+<li>Open a terminal window, change directory to your <em>workspaceStudio</em>.</li>
+</ul>
+</li>
+</ul>
+<pre><code>    play new myrent</code></pre>
+<p>Accept the default prompts.  </p>
+<ul>
+<li><p>Once this has completed, change into the folder just created (myrent).  </p>
+</li>
+<li><p>Then run the <em>eclipsify</em> command:</p>
+</li>
+</ul>
+<pre><code>    play eclipsify</code></pre>
+<p>This generates the necessary infrastructure to allow the application be imported as a project in Eclipse.</p>
+<ul>
+<li><p>Launch Eclipse and if necessary switch workspace to <em>workspaceStudio</em>.
+<img src="img/02.png" alt="Figure 2: In workspaceStudio"></p>
+</li>
+<li><p>In Eclipse, import the newly created application, MyRent.</p>
+<pre><code>  File | Import | General | Existing Projects into Workspace.</code></pre>
+</li>
+<li>Import the project into eclipse:
+<img src="img/03.png" alt="Figure 3: Import project"></li>
+<li><p>Browse to MyRent.  </p>
+<ul>
+<li><p>Since MyRent is already in the workspace, untick &quot;Copy projects into workspace&quot; and click <em>Finish</em>.  </p>
+</li>
+<li><p>It may be necessary to refresh using F5 to enable <em>Next</em> or <em>Finish</em> buttons.</p>
+</li>
+</ul>
+</li>
+<li><p>Test the application by executing <em>play run</em> from terminal within the donation directory.
+<img src="img/play-run.jpg" alt="Figure 4: Listening on port 9000"></p>
+</li>
+<li><p>Switch to a browser, enter <em>localhost:9000</em> in the location bar and press return. The Play welcome screen should then load.</p>
+</li>
+</ul>
+<p><img src="img/play-welcome.jpg" alt="Figure 5: Play Welcome Screen"></p>
+<p>Create a git repository, add and commit the project following steps similar to that described in detail in the solution to Donation v0 (step 01).</p>
+<pre><code>git init
+git add .
+git commit -m &#39;baseline created using Play 1.4.2&#39;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Semantic UI</h1>
+<p>In the solution to Donation we used previously downloaded Semantic UI and jQuery modules. Here we shall use a content delivery network (CDN) for both.</p>
+<p>Open <em>views/main.html</em>, if necessary changing the character encoding to UTF-8.</p>
+<p>Replace the entire file with the following:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;#{get &#39;title&#39; /}&lt;/title&gt;
+    &lt;meta charset=&quot;${_response_encoding}&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;@{&#39;/public/images/favicon.png&#39;}&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    #{doLayout /}       
+    &lt;script src=&quot;http://code.jquery.com/jquery-2.2.3.min.js&quot;&gt;&lt;/script&gt; 
+    &lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js&quot;&gt;&lt;/script&gt;          
+    #{get &#39;moreScripts&#39; /}
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>In the view file Application.index replace #{welcome /} with &quot;Hello MyRent&quot;.</p>
+<p>Connect to a local database in memory, provided as part of the Play framework. To do this, open the file application.conf which is located in the conf directory.</p>
+<p>Locate the following code:</p>
+<pre><code># To quickly set up a development database, use either:
+#   - mem : for a transient in memory database (H2 in memory)
+#   - fs  : for a simple file written database (H2 file stored)
+# db=mem</code></pre>
+<p>Remove the # that preceeds db=mem. </p>
+<p>Save the file and run the application from within the myrent directory in a terminal window. </p>
+<p>Then launch in a browser (localhost:9000).</p>
+<p>You should be presented with the greeting <em>Hello MyRent</em>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Iteration v0: View (Home)</h1>
+<p>Create a folder named Home in <em>app/views</em>.</p>
+<ul>
+<li>Within Home create a file <em>index.html</em> and copy the content below into this file:</li>
+</ul>
+<p>Filename: index.html</p>
+<pre><code class="lang-html">
+#{extends &#39;main.html&#39; /}
+#{set title:&#39;Home&#39; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui active item&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/account&quot;&gt;Sign Up&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+&lt;/nav&gt;
+
+
+&lt;section class=&quot;ui segment&quot;&gt;
+ &lt;h2 class=&quot;title&quot;&gt;Welcome to MyRent&lt;/h2&gt;
+ &lt;h3&gt;Your guide to residential property&lt;/h3&gt;
+ &lt;div class=&quot;ui grid&quot;&gt;
+  &lt;div class=&quot;ten wide column&quot;&gt;
+    &lt;div class=&quot;ui raised segment&quot;&gt;
+      &lt;p&gt;
+          The 2004 Residential Tenancies act gives every landlord and tenant a right to a rent
+          review once each year.       
+      &lt;/p&gt;
+      &lt;p&gt;
+      The Act makes it illegal for a landlord to charge a rent higher than the market rent. 
+      &lt;/p&gt;
+      &lt;p&gt;
+      If there is a dispute about the market rent, either the landlord or the tenant can take a case to the Private Residential Tenancies Board (the PTRB).
+      &lt;/p&gt;
+      &lt;p&gt;
+      The problem with this system is in establishing an objective way of determining the market rent of a property. 
+      &lt;p&gt;
+      The purpose of &lt;em&gt;myrent&lt;/em&gt; is to gather information on rents from landlords and tenants and allow any registered user to generate a report on the state of the rental market.
+      &lt;/p&gt;
+      &lt;p&gt;      
+      The success of the project will depend on the willingness of tenants and landlords to provide information about their properties.    
+      &lt;/p&gt;
+      &lt;p&gt;       
+      &lt;a href=&quot;/login&quot;&gt;Log in&lt;/a&gt; or &lt;a href=&quot;/account&quot;&gt;create a new account &lt;/a&gt; and input your details on the Input Data page.
+      To provide the required information will take just a few minutes of your time. &lt;br /&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+<p>With reference to context sensitive navigation mentioned above: Note the active tab on the welcome page navigation bar. </p>
+<p>This is created by the <em>active</em> attribute in the navigation html:</p>
+<pre><code>
+&lt;a class=&quot;ui active item&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Iteration v0: Controllers (Home)</h1>
+<p>Create a Home controller:</p>
+<p>Home.java</p>
+<pre><code>package controllers;
+
+
+import play.mvc.*;
+
+public class Home extends Controller {
+
+    public static void index() {
+        render();
+    }
+}</code></pre>
+<p>In <em>conf/routes</em> replace:</p>
+<pre><code>GET     /                                       Application.index</code></pre>
+<p>with</p>
+<pre><code>GET     /                                       Home.index</code></pre>
+<p>This changes the default view to the Welcome page we designed earlier.</p>
+<p>We no longer require the Application controller or view therefore delete:</p>
+<ul>
+<li>controllers/Application.java</li>
+<li>the folder <em>views/Application</em> and its content</li>
+</ul>
+<p>Execute play run from the command line within the project folder in a terminal and launch a browser at localhost:9000. </p>
+<ul>
+<li>You should see the myrent Welcome page. </li>
+</ul>
+<p><img src="img/08.png" alt="Figure 1: MyRent Welcome page"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Iteration v0: View (Accounts)</h1>
+<p>Create a folder views/Accounts and add the following 2 files: index.html and login.html. </p>
+<p>The file index.html allows a person to sign up to the myrent site.</p>
+<p>Filename: index.html </p>
+<pre><code class="lang-html">#{extends &#39;main.html&#39; /}
+#{set title:&#39;Sign Up&#39; /}
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+  &lt;a class=&quot;ui active item&quot; href=&quot;/account&quot;&gt;Sign Up&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+&lt;/nav&gt;
+
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h3&gt;Create a MyRent account&lt;/h3&gt;
+  &lt;h5&gt;Register using a valid email address&lt;/h5&gt;
+  &lt;form action=&quot;/account/register&quot; method=&quot;POST&quot;&gt;
+    &lt;div class=&quot;ui two column grid&quot;&gt;
+    &lt;div class=&quot;column&quot;&gt;
+      &lt;div class=&quot;ui fluid form segment&quot;&gt;
+        &lt;h3 class=&quot;ui header&quot;&gt;Sign Up&lt;/h3&gt;
+        &lt;div class=&quot;two fields&quot;&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;label&gt;First Name&lt;/label&gt;
+            &lt;input placeholder=&quot;First Name&quot; name=&quot;user.firstName&quot; type=&quot;text&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;label&gt;Last Name&lt;/label&gt;
+            &lt;input placeholder=&quot;Last Name&quot; name=&quot;user.lastName&quot; type=&quot;text&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;label&gt;Email&lt;/label&gt;
+          &lt;input placeholder=&quot;Email&quot; name=&quot;user.email&quot; type=&quot;text&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;label&gt;Password&lt;/label&gt;
+          &lt;input type=&quot;password&quot; name=&quot;user.password&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;inline field&quot;&gt;
+          &lt;div class=&quot;ui checkbox&quot;&gt;
+            &lt;input id=&quot;conditions&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;conditions&quot;&gt;I agree to the terms and conditions&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;ui blue submit button&quot;&gt;Submit&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/section&gt;</code></pre>
+<p>Filename: login.html</p>
+<pre><code class="lang-html">
+#{extends &#39;main.html&#39; /}
+#{set title:&#39;Log in&#39; /}
+
+&lt;nav class=&quot;ui menu&quot;&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+  &lt;a class=&quot;ui item&quot; href=&quot;/account&quot;&gt;Sign Up&lt;/a&gt;
+  &lt;a class=&quot;ui active item&quot; href=&quot;/login&quot;&gt;Log In&lt;/a&gt;
+&lt;/nav&gt;
+
+ &lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h3&gt;Log into your account&lt;/h3&gt;
+  &lt;h5&gt;Your username is the email you registered with&lt;/h5&gt;
+  &lt;form action=&quot;/login/authenticate&quot; method=&quot;POST&quot;&gt;
+    &lt;div class=&quot;ui two column grid&quot;&gt;
+    &lt;div class=&quot;column&quot;&gt;
+      &lt;div class=&quot;ui fluid form segment&quot;&gt;
+        &lt;h3 class=&quot;ui header&quot;&gt;Log-in&lt;/h3&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;label&gt;Email&lt;/label&gt;
+          &lt;input placeholder=&quot;Email&quot; name=&quot;email&quot; type=&quot;text&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;label&gt;Password&lt;/label&gt;
+          &lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;ui blue submit button&quot;&gt;Login&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/section&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Iteration v0: Model (User)</h1>
+<p>Create a <em>User</em> model in the models package. </p>
+<ul>
+<li>This model contains details of a user such as name, email and so on. </li>
+<li>It facilitates data persistence, that is, saving the data to a specified database.</li>
+</ul>
+<p>Here is the file content:</p>
+<p>Filename: User.java</p>
+<pre><code class="lang-html">package models;
+
+import javax.persistence.Entity;
+import play.db.jpa.Model;
+
+@Entity
+public class User extends Model
+{
+  public String firstName;
+  public String lastName;
+  public String email;
+  public String password;
+
+
+  public static User findByEmail(String email)
+  {
+    return find(&quot;byEmail&quot;, email).first();
+  }
+
+  public boolean checkPassword(String password)
+  {
+    return this.password.equals(password);
+  }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Iteration v0: Controllers (Accounts)</h1>
+<ul>
+<li>A controller class is required to associate the Accounts views with the User model and perform any necessary Actions. <ul>
+<li>An Action is a &quot;function that handles a request and generates a result to be sent to the client&quot; (Play Documentation).</li>
+</ul>
+</li>
+<li>The Accounts controller contains Actions to facilitate signing on (registering), logging in, authentication and so on.</li>
+<li>Create the controller Accounts.java in the controllers package. Here is the file content:</li>
+</ul>
+<p>Filename: Accounts.java</p>
+<pre><code class="lang-html">
+package controllers;
+
+import models.User;
+import play.Logger;
+import play.mvc.Controller;
+
+public class Accounts extends Controller
+{
+
+  public static void index()
+  {
+    render();
+  }
+
+  /**
+   * Registers a user onto the MyRent system
+   * 
+   * @param firstName
+   *          the user&#39;s first name
+   * @param lastName
+   *          the user&#39;s last name
+   * @param email
+   *          the user&#39;s email address
+   * @param password
+   *          the user&#39;s password, in plain text, naturally :-)
+   */
+  public static void register(User user)
+  {
+    user.save();
+    login();
+  }
+
+  /**
+   * Authenticates that a user&#39;s login credentials are valid
+   * 
+   * @param email
+   *          The submitted email address
+   * @param password
+   *          The corresponding password
+   */
+  public static void authenticate(String email, String password)
+  {
+    User user = User.findByEmail(email);
+    if ((user != null) &amp;&amp; (user.checkPassword(password) == true))
+    {
+      Logger.info(&quot;Authentication successful&quot;);
+    }
+    else
+    {
+      Logger.info(&quot;Authentication failed&quot;);
+      login();
+    }
+  }
+
+  public static void login()
+  {
+    render();
+  }
+
+}</code></pre>
+<ul>
+<li>Notice the method <em>getCurrentUser</em>. <ul>
+<li>Because this is a static method it may be invoked from any of the controllers, thus helping to minimise code duplication.</li>
+</ul>
+</li>
+<li>Also required is a <em>Home</em> controller. <ul>
+<li>Add the following file <em>Home.java</em> to the controllers package:</li>
+</ul>
+</li>
+</ul>
+<p>In <em>routes</em> file add routing for the various views we have recently added:</p>
+<pre><code>#Accounts
+GET /account                                  Accounts.index
+GET /login                                    Accounts.login
+POST /login/authenticate                      Accounts.authenticate
+POST /account/register                        Accounts.register</code></pre>
+<p>Execute play run from the command line within the project folder in a terminal and launch a browser at localhost:9000. </p>
+<ul>
+<li>You should see the myrent Welcome page. </li>
+<li>It should also be possible to navigate to the Sign Up and Log In pages. See Figures 2, 3 &amp; 4 below.</li>
+</ul>
+<p>Register and sign in a user:</p>
+<ul>
+<li>Then check the terminal output.</li>
+<li>You should see the message &quot;Authentication successful&quot;, otherwise there is a coding error.</li>
+</ul>
+<p><img src="img/07.png" alt="Figure 1: Authentication successful"></p>
+<p>At this stage your app should be capable of generating Welcome, Sign Up and Log In pages as shown in Figure 2.
+<img src="img/09.png" alt="Figure 2: MyRent screens at end current iteration"></p>
+<p>Commit this iteration to your <em>myrent</em> repository, add a tag and push all to remote repo.</p>
+<pre><code>git add .
+git commit -m &#39;iteration  v0&#39;
+git tag -a v0 -m &#39;iteration v0&#39;
+git push &amp;&amp; git push --tags</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,918 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      04: Map overlays, the DOM & SemanticUI controls
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Polygon-map-overlay">
+      Polygon-map-overlay
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic00/book-a/index.html">
+          Welcome
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-b/index.html">
+          Venue
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic00/book-c/index.html">
+          Outline
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Basic-Git
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Donation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01(solns)/book-v4/index.html">
+          Solution-v4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-a/index.html">
+          JavaScript-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book-b/index.html">
+          JavaScript-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          MyRent
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          JavaScript III
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-c/index.html">
+          JavaScript IV (Maps)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03(solns)/book-v3/index.html">
+          Solution-v3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Circle-map-overlay
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic04/book-b/index.html">
+          Polygon-map-overlay
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-c/index.html">
+          JavaScript VI (SemanticUI)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-d/index.html">
+          Ajax
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-a/index.html">
+          Advanced-Git-I
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-b/index.html">
+          Advanced-Git-II
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-c/index.html">
+          TDD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-d/index.html">
+          WitPress
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v0/index.html">
+          Solution-v0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v1/index.html">
+          Solution-v1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(solns)/book-v2/index.html">
+          Solution-v2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-a/index.html">
+          Project (Resources)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-b/index.html">
+          Assignment Tips
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-project/book-c/index.html">
+          Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Polygon-map-overlay">
+        <h1>Objectives</h1>
+<p>Manually create a polygon-shaped overlay on a Google map and filter out marker overlays located outside polygon. Employ a jQuery ajax call to fetch users and their geolocations from the server.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Baseline app</h1>
+<p>Create a Play app named <em>play_google_map_polygon</em>:</p>
+<ul>
+<li>Change into app folder &amp; create an empty git repo<ul>
+<li>git init</li>
+</ul>
+</li>
+<li>Import a standard Play .gitignore</li>
+<li>Commit this baseline app</li>
+<li>Create a tracking repo on BitBucket.<ul>
+<li>Then push local to the remote:<ul>
+<li>git remote add origin git@bitbucket.org:youDomainName/play_google_map_polygon</li>
+<li>git push -u origin --all</li>
+<li>git push -u origin --tags</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Still in project folder:</p>
+<ul>
+<li>Run Play eclipsify &amp;</li>
+<li>Import project into Eclipse.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Map v0</h1>
+<p>Create a file <em>polygon.js</em> in <em>public/javascripts</em>.</p>
+<p>Add this content:</p>
+<pre><code>let map; // the google map
+const latlng = []; // geolocation data later retrieved from server in func callback
+const markers = []; // array of all markers (unfiltered)
+
+/**
+ * Render the basic google map
+ */
+function initialize() {
+  rendermap();
+  retrieveMarkerLocations();
+}
+
+/**
+ * The basic map, no markers, no centre specified
+ * Canvas id on html is &#39;googleMap&#39;
+ */
+function rendermap() {
+  const mapProp = {
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  //map = new google.maps.Map(document.getElementById(&quot;googleMap&quot;), mapProp); // using vanilla js
+  map = new google.maps.Map($(&quot;#googleMap&quot;)[0], mapProp); // using jQuery
+}
+
+/**
+ * Use ajax call to get users and their geolocations
+ * pass returned array marker locations to callback method
+ * Here is the format in which marker data stored
+ * geoObj[0] is descripion.             
+ * geoObj[1] is latitude                              
+ * geoObj[2] is longitude  
+ * We use geoObj[0] in the infoWindow. Click marker to reveal description.
+ */
+function retrieveMarkerLocations()
+{
+  $(function() {
+    $.get(&quot;/application/geolocations&quot;, function(data) {
+      $.each(data, function(index, geoObj) {
+        console.log(geoObj[0] + &quot; &quot; + geoObj[1] + &quot; &quot; + geoObj[2]);
+    });
+      callback(data);
+    });
+  });
+}
+
+/**
+ * we&#39;ve got the marker location from data in ajax call
+ * we now put data into an array
+ * the format is &#39;firstName, xx.xxxx, yy.yyyyy&#39; -&gt; (firstName, lat, lng)
+ * then invoke &#39;fitBounds&#39; to render the markers, centre map and create infoWindow to display firstName
+ */
+function callback(data)
+{
+
+  latlng = data; // store the array of data in a global for later use
+  fitBounds(latlng); // then invoke fitBounds to zoom and display markers within view
+  setInfoWindowListener(latlng);
+}
+
+/**
+ * creates and positions markers
+ * sets zoom so that all markers visible
+ */
+function fitBounds(latlngStr)
+{
+  const bounds = new google.maps.LatLngBounds();
+    for (let i = 0; i &lt; latlngStr.length; i++) 
+    {
+        marker = new google.maps.Marker({
+            position: getLatLng(latlngStr[i]),
+            map: map
+        });
+        markers[i] = marker;      
+        bounds.extend(marker.position);
+    }
+    map.fitBounds(bounds);
+}
+
+function setInfoWindowListener(latlngStr)
+{
+    const infowindow = new google.maps.InfoWindow();
+    for (let i = 0; i &lt; latlng.length; i++) 
+    {
+      /*respond to click on marker by displaying infowindow text*/
+      const marker = markers[i];
+      google.maps.event.addListener(marker, &#39;click&#39;, (function (marker, i) {
+          return function () {
+            infowindow.setContent(latlngStr[i][0]);
+            infowindow.open(map, marker);
+          }
+      })(marker, i));
+    }
+}
+/**
+ * A helper function to convert the latlng string to individual numbers
+ * and thence to a google.maps.LatLng object
+ * @param str str is list of strings : username, lat, lon    
+ * str[0] is description                
+ * str[1] is latitude                              
+ * str[2] is longitude                             
+ * 
+ * @param The object &#39;str&#39; holding an individual marker data set
+ * @return A google.maps.LatLng object containing the marker coordinates.
+ */
+function getLatLng(str)
+{ 
+
+  const lat = Number(str[1]);
+  const lon = Number(str[2]);
+  return new google.maps.LatLng(lat, lon);
+}
+
+google.maps.event.addDomListener(window, &#39;load&#39;, initialize);</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Controller v0</h1>
+<p>Replace the Application controller code with the following:</p>
+<pre><code>package controllers;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import play.mvc.Controller;
+
+public class Application extends Controller {
+
+    public static void index() {
+        render();
+    }
+
+    /**
+     * Create list sample positional data
+     * Necessary to add json-simple-1.1.jar or equivalent to lib folder
+     * Then add jar to build path and import here
+     */
+    public static void listGeolocations()
+    {
+      List&lt;List&lt;String&gt;&gt; jsonArray = new ArrayList&lt;List&lt;String&gt;&gt;();
+      jsonArray.add(0, Arrays.asList(&quot;Position 1&quot;, &quot;44.008620&quot;, &quot;-123.074341&quot;));
+      jsonArray.add(1, Arrays.asList(&quot;Position 2&quot;, &quot;42.360082&quot;, &quot;-71.058880&quot;));
+      jsonArray.add(2, Arrays.asList(&quot;Position 3&quot;, &quot;31.360082&quot;, &quot;-91.058880&quot;));
+      renderJSON(jsonArray);
+    }
+
+}</code></pre>
+<p>Add this to routes (immediately following GET /):</p>
+<pre><code>GET     /application/geolocations               Application.listGeolocations</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>View v0</h1>
+<p>Replace <em>main.html</em> with the following:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;#{get &#39;title&#39; /}&lt;/title&gt;
+        &lt;meta charset=&quot;${_response_encoding}&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;@{&#39;/public/stylesheets/main.css&#39;}&quot;&gt;
+        #{get &#39;moreStyles&#39; /}
+        &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;@{&#39;/public/images/favicon.png&#39;}&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        #{doLayout /}
+
+        &lt;script src=&quot;@{&#39;/public/javascripts/jquery-2.2.3.js&#39;}&quot; type=&quot;text/javascript&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;
+        #{get &#39;moreScripts&#39; /}
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Ensure that the default <em>jquery</em> file in <em>javascripts</em> is replaced with <em>jquery-2.2.3.js</em>.</p>
+<p>Replace <em>Application/index.html</em> as follows:</p>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Home&#39; /}
+&lt;style&gt;
+  #googleMap {
+    width: 500px;
+    height:400px;
+  }
+&lt;/style&gt;
+&lt;div id=&quot;googleMap&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;http://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;@{&#39;public/javascripts/polygon.js&#39;}&quot;&gt;&lt;/script&gt;</code></pre>
+<p>In a terminal execute <em>play run</em>. In a browser, at <em><a href="http://localhost:9000/">http://localhost:9000/</a></em> you should see something similar to that shown in Figure 1.</p>
+<p><img src="img/01.png" alt="Figure 1: Map with markers at sample locations"></p>
+<p>This concludes iteration v0. </p>
+<ul>
+<li>Commit, tag (v0) and push (including tags).</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Map v1</h1>
+<p>In this iteration we shall facilitate drawing of a polygon overlay on the map, adding buttons to enable start, stop, reset and filtering of markers falling outside the polygon.</p>
+<p>Add these declarations at the top of <em>polygon.js</em> immediately following <em>const markers...</em>.</p>
+<pre><code>const startAllowed; // boolean to enforce start() invocation once only between refreshes
+const pos = []; // array of lat, lng representing the polyline start and endpoints created by clicking map
+const posIndex = 0; // index constiable associate with pos[]</code></pre>
+<p>Add the following at the end of the file but before the last statement <em>google.maps.event...</em>.</p>
+<pre><code>/** ***************************** filtering markers ************************** */
+/**
+ * registers click listener to capture lat,lng
+ * clicked point data stored in array (pos[])
+ */
+function start() {
+  if (startAllowed == false) {
+    alert(&quot;Reset to Start&quot;);
+    return;
+  }
+  $(&#39;#usertable&#39;).empty();
+  listenerHandler = google.maps.event.addListener(map, &#39;click&#39;, function(e) {
+    pos[posIndex] = e.latLng;
+    if (posIndex &gt; 0) {
+      polyline(posIndex - 1, posIndex);
+    }
+    posIndex += 1;
+  });
+
+}
+
+/**
+ * Stop drawing the sequence of polylines 
+ * Update listeners Invoke drawPolygon method
+ */
+function stop() {
+  polyline(pos.length - 1, 0); // close the polygon: last to first points
+  // it would be better to somehow convert existing polyline to polygon
+  // but for the moment this will do - overlaying polyline with polygon
+  drawPolygon();
+  google.maps.event.removeListener(listenerHandler);
+  listenerHandler = null;
+  startAllowed = false; // ensures start() invokable once only between
+  // refreshes
+}
+
+/**
+ * (re)initialize array of locations falling within poly overlay.
+ *  Recall latlng[i][0] contains description and latlng[i][1] and latlng[i][2]
+ * the latitude &amp; longitude respectively. In this method the markers falling
+ * within polyon are rendered and those outside are not displayed
+ */
+function filter() {
+  for (let i = 0; i &lt; latlng.length; i += 1) {
+    const point = new google.maps.LatLng(latlng[i][1], latlng[i][2]);
+    if (google.maps.geometry.poly.containsLocation(point, polygon)) {
+      markers[i].setVisible(true);
+      // populateTableRow(latlng[i]);
+    } else {
+      markers[i].setVisible(false);
+    }
+  }
+}
+
+/**
+ * Clears table row data Restores table data with complete unfiltered user list
+ */
+function reset() {
+  location.reload();
+}
+
+/**
+ * create and render a polyline on map attaches beginning to end previous
+ * polyline if such exists
+ * 
+ * @param prevIndex
+ * @param index
+ */
+function polyline(prevIndex, index) {
+  const coords = [
+      new google.maps.LatLng(pos[prevIndex].lat(), pos[prevIndex].lng()),
+      new google.maps.LatLng(pos[index].lat(), pos[index].lng())];
+
+  const line = new google.maps.Polyline({
+    path : coords,
+    geodesic : true,
+    strokeColor : &#39;#FF0000&#39;,
+    strokeOpacity : 1.0,
+    strokeWeight : 2
+  });
+  line.setMap(map);
+}
+
+/**
+ * Use data (pos[]) to draw polygon
+ */
+function drawPolygon() {
+  const lineCoords = [];
+  // log the coordinates
+  // draw polygon defined by coordinates
+  for (let j = 0; j &lt; pos.length; j += 1) {
+    console.log(pos[j].lat + &quot; &quot; + pos[j].lng);
+    lineCoords[j] = new google.maps.LatLng(pos[j].lat(), pos[j].lng());
+  }
+  // make last point same as first to close the polygon
+  lineCoords[pos.length] = new google.maps.LatLng(pos[0].lat(), pos[0].lng());
+
+  polygon = new google.maps.Polyline({
+    path : lineCoords,
+    geodesic : true,
+    strokeColor : &#39;#FF0000&#39;,
+    strokeOpacity : 1.0,
+    strokeWeight : 2
+  });
+
+  polygon.setMap(map);
+  google.maps.event.clearListeners(map, &#39;click&#39;);
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>View v1</h1>
+<p>Replace Application.index.html with the following code. This introduces buttons that facilate invocation of functions declared in <em>polygon.js</em>.</p>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Polygon overlay&#39; /}
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h4&gt;Marker locations&lt;/h4&gt;
+  &lt;button type=&quot;button&quot; onclick=&quot;start()&quot;&gt;Start&lt;/button&gt;
+  &lt;button type=&quot;button&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+  &lt;button type=&quot;button&quot; onclick=&quot;filter()&quot;&gt;Filter&lt;/button&gt;
+  &lt;button type=&quot;button&quot; onclick=&quot;reset()&quot;&gt;Reset&lt;/button&gt;
+  &lt;/section&gt;
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;div id=&quot;googleMap&quot; style=&quot;width:90%;height:400px;&quot;&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;script src=&quot;http://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;@{&#39;public/javascripts/polygon.js&#39;}&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Test the app as follows:</p>
+<ul>
+<li>Press Start.</li>
+<li>Click on map, then click at second location.</li>
+<li>A line (referred to as polyline) should appear.</li>
+<li>Continue with further clicks to form all but the final segment of a polygon.</li>
+<li>Click Stop: this should result in the final polyline being drawn which closes the polygon. See Figure 1.</li>
+</ul>
+<p><img src="img/02.png" alt="Figure 1: Polygon overlay complete"></p>
+<ul>
+<li>Click Filter: the markers outside the polygon should disappear as shown in Figure 2.</li>
+</ul>
+<p><img src="img/03.png" alt="Figure 2: Markers outside polgon filtered out"></p>
+<ul>
+<li>Click Reset: this refreshes screen.</li>
+</ul>
+<p>This concludes iteration v1. </p>
+<ul>
+<li>Commit, tag (v1) and push (including tags).</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Map v2</h1>
+<p>Here we introduce code to write the marker data to a table in the view.</p>
+<p>Add this code at the end of <em>polygon.js</em> just before the final statement <em>google.maps.event...</em>.</p>
+<pre><code>/*******************************populating table with marker data*************************/
+/**
+ * Populates table with complete marker list + it&#39;s gps coords
+ */
+function populateTable()
+{
+  $.each(latlng, function(i, val) {
+    populateTableRow(val);
+  });
+}
+
+/**
+ * renders table row comprising marker and its gps coordinates
+ * @param data the array comprising description + gps (lat, lng)
+ */
+function populateTableRow(data)
+{
+  const description = &quot;&lt;td&gt;&quot; + data[0] + &quot;&lt;/td&gt;&quot;;
+  const gps   = &quot;&lt;td&gt;&quot; + data[1] + &quot; &quot; + data[2] + &quot;&lt;/td&gt;&quot;;
+  $(&#39;#markertable&#39;).append(&quot;&lt;tr&gt;&quot; + description + gps + &quot;&lt;/tr&gt;&quot;);
+}</code></pre>
+<p>Invoke populateTable in function callback. This now becomes:</p>
+<pre><code>function callback(data) {
+
+  latlng = data; // store the array of data in a global for later use
+  fitBounds(latlng); // then invoke fitBounds to zoom and display markers
+  setInfoWindowListener(latlng);
+  populateTable();
+}</code></pre>
+<p>Initialize the marker table in function start. This now becomes:</p>
+<pre><code>function start() {
+  if (startAllowed == false) {
+    alert(&quot;Reset to Start&quot;);
+    return;
+  }
+  $(&#39;#markertable&#39;).empty();
+  listenerHandler = google.maps.event.addListener(map, &#39;click&#39;, function(e) {
+    pos[posIndex] = e.latLng;
+    if (posIndex &gt; 0) {
+      polyline(posIndex - 1, posIndex);
+    }
+    posIndex += 1;
+  });
+
+}</code></pre>
+<p>Populate each table row in function filter. Here is the refactored method:</p>
+<pre><code>function filter() {
+  for (let i = 0; i &lt; latlng.length; i += 1) {
+    const point = new google.maps.LatLng(latlng[i][1], latlng[i][2]);
+    if (google.maps.geometry.poly.containsLocation(point, polygon)) {
+      markers[i].setVisible(true);
+      populateTableRow(latlng[i]);
+    } else {
+      markers[i].setVisible(false);
+    }
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>View v2</h1>
+<p>We now redesign Application.index.html to dispay, in addition to the map, a table of currently rendered marker data:</p>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Polygon overlay&#39; /}
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;div class=&quot;ui grid&quot;&gt;
+    &lt;div class=&quot;eight wide column&quot;&gt;
+      &lt;section class=&quot;ui segment&quot;&gt;
+        &lt;h4&gt;Marker locations&lt;/h4&gt;
+        &lt;div id=&quot;googleMap&quot; style=&quot;width:100%;height:400px;&quot;&gt;&lt;/div&gt;     
+        &lt;button type=&quot;button&quot; onclick=&quot;start()&quot;&gt;Start&lt;/button&gt;
+        &lt;button type=&quot;button&quot; onclick=&quot;stop()&quot;&gt;Stop&lt;/button&gt;
+        &lt;button type=&quot;button&quot; onclick=&quot;filter()&quot;&gt;Filter&lt;/button&gt;
+        &lt;button type=&quot;button&quot; onclick=&quot;reset()&quot;&gt;Reset&lt;/button&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;eight wide column&quot;&gt;
+      &lt;section class=&quot;ui segment&quot;&gt;
+      &lt;h4&gt;Markers within search area&lt;/h4&gt;&lt;br&gt;
+        &lt;div style=&quot;overflow-y:scroll; max-height:405px&quot;&gt;
+          &lt;table class=&quot;ui table segment&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th&gt;Description&lt;/th&gt;
+                &lt;th&gt;GPS(latitude, longitude)&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody id=&quot;markertable&quot;&gt;           
+              &lt;tr&gt;
+              &lt;/tr&gt;          
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;script src=&quot;http://maps.googleapis.com/maps/api/js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;@{&#39;public/javascripts/polygon.js&#39;}&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Test the app. Here is an example where one of the markers is filtered out. Note that the table represents the remaining markers only.</p>
+<p><img src="img/04.png" alt="Figure 1: Redesigned view"></p>
+<p>This concludes iteration v2 (and the lab). </p>
+<ul>
+<li>Commit, tag (v2) and push (including tags).</li>
+</ul>
+<p>A compressed folder containing the git repository of play_google_map_polygon is available for download <a href="archive/play_google_map_polygon.zip">here</a>.</p>
+<ul>
+<li>Unzip, change into the expanded folder and run <em>git checkout -f</em> to populate the folder.</li>
+<li>The repo is tagged, matching those is this lab.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercise 1:</h1>
+<p>Modify the code so that when a marker is clicked, in addition to the existing text, the latitude and longitude of the marker are also displayed.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

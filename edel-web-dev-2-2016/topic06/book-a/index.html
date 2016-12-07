@@ -428,7 +428,7 @@ h3
 <h2>Exercise 3</h2>
 <p>Start the application from scratch.  Browse to the database administrator:</p>
 <ul>
-<li><a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#104;&#x74;&#x74;&#x70;&#x3a;&#x2f;&#47;&#x6c;&#x6f;&#99;&#x61;&#x6c;&#104;&#111;&#x73;&#116;&#x3a;&#x39;&#48;&#x30;&#x30;&#x2f;&#x40;&#100;&#98;">&#104;&#x74;&#x74;&#x70;&#x3a;&#x2f;&#47;&#x6c;&#x6f;&#99;&#x61;&#x6c;&#104;&#111;&#x73;&#116;&#x3a;&#x39;&#48;&#x30;&#x30;&#x2f;&#x40;&#100;&#98;</a></li>
+<li><a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#104;&#x74;&#x74;&#112;&#58;&#47;&#x2f;&#x6c;&#x6f;&#x63;&#97;&#108;&#x68;&#x6f;&#x73;&#x74;&#58;&#x39;&#48;&#x30;&#48;&#47;&#64;&#100;&#98;">&#104;&#x74;&#x74;&#112;&#58;&#47;&#x2f;&#x6c;&#x6f;&#x63;&#97;&#108;&#x68;&#x6f;&#x73;&#x74;&#58;&#x39;&#48;&#x30;&#48;&#47;&#64;&#100;&#98;</a></li>
 </ul>
 <p>Use this user interface to create some users. Then see if you can log in with these users using the regular interface:</p>
 <ul>
@@ -473,7 +473,7 @@ public class Bootstrap extends Job
 <p><img src="img/01.png" alt=""></p>
 <p>Stop the application and start it again. Go directly to the database admin page</p>
 <ul>
-<li><a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#104;&#116;&#116;&#x70;&#x3a;&#x2f;&#47;&#x6c;&#x6f;&#99;&#97;&#108;&#x68;&#111;&#x73;&#116;&#58;&#x39;&#48;&#48;&#48;&#x2f;&#x40;&#100;&#x62;">&#104;&#116;&#116;&#x70;&#x3a;&#x2f;&#47;&#x6c;&#x6f;&#99;&#97;&#108;&#x68;&#111;&#x73;&#116;&#58;&#x39;&#48;&#48;&#48;&#x2f;&#x40;&#100;&#x62;</a></li>
+<li><a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#104;&#x74;&#x74;&#112;&#x3a;&#47;&#x2f;&#x6c;&#111;&#99;&#x61;&#108;&#104;&#x6f;&#x73;&#x74;&#58;&#57;&#48;&#48;&#48;&#47;&#x40;&#x64;&#98;">&#104;&#x74;&#x74;&#112;&#x3a;&#47;&#x2f;&#x6c;&#111;&#99;&#x61;&#108;&#104;&#x6f;&#x73;&#x74;&#58;&#57;&#48;&#48;&#48;&#47;&#x40;&#x64;&#98;</a></li>
 </ul>
 <p>...and see if the users we specified are there. See if you can log in without registering.</p>
 <p>Add a few more users and see if they appear as expected (you will have to stop and restart the application for this to take effect).</p>
@@ -498,24 +498,20 @@ public class Bootstrap extends Job
 
     </footer>
     <script>
-      
-$(document).ready(function()
-{
-  $("img").addClass ("ui image");
+      $(document).ready(function () {
+  $('img').addClass('ui image');
   $('.ui.embed').embed();
 
-  var images = $(".lab img");
-  jQuery.each(images, function(i)  {
-    if((images[i].alt).length > 0)
-    {
-      var div_img = $(document.createElement("div")).addClass("ui segment");
-      $(images[i]).wrap(div_img);
-      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
-      div_label.append(images[i].alt);
-      $(div_label).insertBefore(images[i]);
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
     }
   });
-
 
   $('.ui.menu .item')
       .tab({

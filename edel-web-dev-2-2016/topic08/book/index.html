@@ -472,7 +472,7 @@ public class Message extends Model
 <p>Note, however, that the messages don;t seem to be going anywhere, and our message text area is cleared every time we leave a message. We need to find a way of listing the messages on this page, on the right where we currently have a &#39;hard coded&#39; message. </p>
 <p>Before doing that, though, we can still verify whether the messages are being saved to the database. This can be done via the &#39;@db&#39; interface we explored earlier. Browse to this url here:</p>
 <ul>
-<li><a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#x68;&#116;&#116;&#112;&#58;&#47;&#x2f;&#108;&#x6f;&#99;&#x61;&#108;&#x68;&#x6f;&#115;&#x74;&#x3a;&#x39;&#48;&#48;&#x30;&#47;&#x40;&#x64;&#x62;">&#x68;&#116;&#116;&#112;&#58;&#47;&#x2f;&#108;&#x6f;&#99;&#x61;&#108;&#x68;&#x6f;&#115;&#x74;&#x3a;&#x39;&#48;&#48;&#x30;&#47;&#x40;&#x64;&#x62;</a></li>
+<li><a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x68;&#116;&#116;&#x70;&#58;&#x2f;&#47;&#108;&#x6f;&#99;&#97;&#108;&#x68;&#x6f;&#x73;&#116;&#x3a;&#57;&#48;&#x30;&#48;&#47;&#x40;&#100;&#x62;">&#x68;&#116;&#116;&#x70;&#58;&#x2f;&#47;&#108;&#x6f;&#99;&#97;&#108;&#x68;&#x6f;&#x73;&#116;&#x3a;&#57;&#48;&#x30;&#48;&#47;&#x40;&#100;&#x62;</a></li>
 </ul>
 <p>...and navigate to the messages table, running the default query:</p>
 <p><img src="img/13.png" alt=""></p>
@@ -642,24 +642,20 @@ GET     /profile/getpicture/{id}                Profile.getPicture</code></pre>
 
     </footer>
     <script>
-      
-$(document).ready(function()
-{
-  $("img").addClass ("ui image");
+      $(document).ready(function () {
+  $('img').addClass('ui image');
   $('.ui.embed').embed();
 
-  var images = $(".lab img");
-  jQuery.each(images, function(i)  {
-    if((images[i].alt).length > 0)
-    {
-      var div_img = $(document.createElement("div")).addClass("ui segment");
-      $(images[i]).wrap(div_img);
-      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
-      div_label.append(images[i].alt);
-      $(div_label).insertBefore(images[i]);
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
     }
   });
-
 
   $('.ui.menu .item')
       .tab({

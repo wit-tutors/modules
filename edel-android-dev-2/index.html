@@ -2,10 +2,12 @@
  <html>
    <head>
 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
@@ -17,8 +19,10 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
-        
+     
+
+     <style>
+       
 
 body 
 {
@@ -38,9 +42,9 @@ figcaption
 
 
 
-    </style>
+     </style>
 
-  </head>
+   </head>
 
   <body>
     
@@ -457,7 +461,7 @@ figcaption
     </div>
     <div class="content">
       <div class="description">
-         <p>Here we explore how to capture photos using an existing camera application. Although most Android devices have at least one camera we, nevertheless, verify this in advance of shooting. We show how to capture a thumnail, save the photo and add it to a, for now one-photo, gallery. </p>
+         <p>Here we explore how to capture photos using an existing camera application. Although most Android devices have at least one camera we, nevertheless, verify this in advance of shooting. We show how to capture a thumnail, save the photo and add it to a, for now one-photo, gallery.</p>
 
       </div>
     </div>
@@ -476,7 +480,7 @@ figcaption
     </div>
     <div class="content">
       <div class="description">
-         <p>We conclude the course with instructions on how to sign an app and with a brief discussion on the supporting cryptographic technologies. <br>Android 7.0 (Nougat) has introduced a new signing scheme, APK Signature Scheme v2. We have not covered this in this lab.</p>
+         <p>We conclude the course with instructions on how to sign an app and with a brief discussion on the supporting cryptographic technologies. <br></p>
 
       </div>
     </div>
@@ -527,6 +531,8 @@ figcaption
       $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({

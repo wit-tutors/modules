@@ -2,10 +2,12 @@
  <html>
    <head>
 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
@@ -17,8 +19,10 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
-        
+     
+
+     <style>
+       
 
 body 
 {
@@ -38,9 +42,9 @@ figcaption
 
 
 
-    </style>
+     </style>
 
-  </head>
+   </head>
 
   <body>
     
@@ -64,17 +68,36 @@ h1
 {
   font-style:italic;
   font-size:130%;
-  border-bottom: thin solid black;
+  border-bottom:thin solid black;
 }
+
 h2
 {
   font-size:110%;
   border-bottom: thin solid black;
 }
+
 h3
 {
   font-size:100%;
   border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
 }
 
 
@@ -216,7 +239,7 @@ h3
       
     
   </div>
-  <div class="pusher">
+  <div class="pusher" tabindex="-1">
     <div class="ui basic segment">
       <br>
       
@@ -427,7 +450,7 @@ public class MessageTest extends UnitTest
 <pre><code>play test</code></pre>
 <p>and then browse to:</p>
 <ul>
-<li><p><a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x68;&#x74;&#116;&#x70;&#58;&#x2f;&#47;&#x6c;&#111;&#99;&#97;&#x6c;&#x68;&#111;&#x73;&#116;&#x3a;&#x39;&#48;&#48;&#x30;&#47;&#x40;&#x74;&#101;&#115;&#116;&#x73;">&#x68;&#x74;&#116;&#x70;&#58;&#x2f;&#47;&#x6c;&#111;&#99;&#97;&#x6c;&#x68;&#111;&#x73;&#116;&#x3a;&#x39;&#48;&#48;&#x30;&#47;&#x40;&#x74;&#101;&#115;&#116;&#x73;</a></p>
+<li><p><a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#104;&#x74;&#116;&#112;&#58;&#47;&#x2f;&#x6c;&#111;&#x63;&#x61;&#108;&#x68;&#x6f;&#115;&#116;&#58;&#x39;&#48;&#x30;&#48;&#47;&#64;&#116;&#101;&#115;&#x74;&#x73;">&#104;&#x74;&#116;&#112;&#58;&#47;&#x2f;&#x6c;&#111;&#x63;&#x61;&#108;&#x68;&#x6f;&#115;&#116;&#58;&#x39;&#48;&#x30;&#48;&#47;&#64;&#116;&#101;&#115;&#x74;&#x73;</a></p>
 <p>Select the tests you want to run and run them.</p>
 </li>
 </ul>
@@ -547,7 +570,7 @@ public class BlogTest extends UnitTest
 <p>Run the BlogPost test. It should succeed. However, is it in fact deleted?</p>
 <p>With the app still running under test, open the database interface in another tab:</p>
 <ul>
-<li><a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x68;&#116;&#116;&#112;&#x3a;&#x2f;&#x2f;&#108;&#111;&#x63;&#97;&#x6c;&#104;&#111;&#115;&#116;&#x3a;&#x39;&#x30;&#x30;&#x30;&#47;&#x40;&#100;&#x62;">&#x68;&#116;&#116;&#112;&#x3a;&#x2f;&#x2f;&#108;&#111;&#x63;&#97;&#x6c;&#104;&#111;&#115;&#116;&#x3a;&#x39;&#x30;&#x30;&#x30;&#47;&#x40;&#100;&#x62;</a></li>
+<li><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x68;&#x74;&#116;&#112;&#x3a;&#47;&#47;&#108;&#x6f;&#99;&#x61;&#108;&#x68;&#111;&#x73;&#x74;&#x3a;&#x39;&#48;&#48;&#x30;&#x2f;&#x40;&#100;&#x62;">&#x68;&#x74;&#116;&#112;&#x3a;&#47;&#47;&#108;&#x6f;&#99;&#x61;&#108;&#x68;&#111;&#x73;&#x74;&#x3a;&#x39;&#48;&#48;&#x30;&#x2f;&#x40;&#100;&#x62;</a></li>
 </ul>
 <p>Look at the list if Posts objects. Our post (the one we thought we deleted) is still there. However, the user bob is gone, and the other posts we created are all gone. How can this be?</p>
 <p>The reason is that we removed the post form the collection owned by the user bob, but we never explicitly deleted the post. Here is another version:</p>
@@ -633,7 +656,7 @@ public class BlogTest extends UnitTest
 <pre><code>    &lt;a href=&quot;/blog/deletepost/${post.id}&quot; class=&quot;ui button red labeled icon&quot;&gt;&lt;i class=&quot;icon delete&quot;&gt;&lt;/i&gt; Delete &lt;/a&gt;</code></pre>
 <p>Try this now. You should be able to create a number of posts, and delete them. Keep an eye on the database:</p>
 <ul>
-<li><a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#104;&#116;&#x74;&#112;&#58;&#x2f;&#x2f;&#108;&#x6f;&#99;&#x61;&#x6c;&#x68;&#x6f;&#115;&#x74;&#58;&#57;&#x30;&#48;&#x30;&#x2f;&#x40;&#x64;&#x62;">&#104;&#116;&#x74;&#112;&#58;&#x2f;&#x2f;&#108;&#x6f;&#99;&#x61;&#x6c;&#x68;&#x6f;&#115;&#x74;&#58;&#57;&#x30;&#48;&#x30;&#x2f;&#x40;&#x64;&#x62;</a></li>
+<li><a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x74;&#x74;&#112;&#58;&#47;&#x2f;&#x6c;&#111;&#x63;&#x61;&#108;&#104;&#x6f;&#x73;&#x74;&#x3a;&#57;&#48;&#x30;&#x30;&#x2f;&#64;&#100;&#x62;">&#104;&#x74;&#x74;&#112;&#58;&#47;&#x2f;&#x6c;&#111;&#x63;&#x61;&#108;&#104;&#x6f;&#x73;&#x74;&#x3a;&#57;&#48;&#x30;&#x30;&#x2f;&#64;&#100;&#x62;</a></li>
 </ul>
 <p>and make sure the posts table reflect the delete actions you perform. To test this, comment out the post delete:</p>
 <pre><code class="lang-java">//    post.delete();</code></pre>
@@ -664,6 +687,29 @@ public class BlogTest extends UnitTest
     </div>
   </div>
 
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
     <footer>
 
     </footer>
@@ -682,6 +728,8 @@ public class BlogTest extends UnitTest
       $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({

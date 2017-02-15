@@ -2,10 +2,12 @@
  <html>
    <head>
 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
@@ -17,8 +19,10 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
-        
+     
+
+     <style>
+       
 
 body 
 {
@@ -38,9 +42,9 @@ figcaption
 
 
 
-    </style>
+     </style>
 
-  </head>
+   </head>
 
   <body>
     
@@ -64,17 +68,36 @@ h1
 {
   font-style:italic;
   font-size:130%;
-  border-bottom: thin solid black;
+  border-bottom:thin solid black;
 }
+
 h2
 {
   font-size:110%;
   border-bottom: thin solid black;
 }
+
 h3
 {
   font-size:100%;
   border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
 }
 
 
@@ -228,7 +251,7 @@ h3
       
     
   </div>
-  <div class="pusher">
+  <div class="pusher" tabindex="-1">
     <div class="ui basic segment">
       <br>
       
@@ -614,7 +637,7 @@ import javax.persistence.OneToMany;</code></pre>
 <p>Because we have made a change to the database, we will need to completely restart the application again. i.e. Ctrl-C in the command prompt, and enter <code>play run</code> again.</p>
 <p>Log in to spacebook as Homer, and see if you can &#39;Follow&#39; marge. Although the UI doesnt show any signs of the friendship having been established, you should be able to see it by browsing the database:</p>
 <ul>
-<li><a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x6c;&#x6f;&#x63;&#x61;&#x6c;&#x68;&#111;&#115;&#x74;&#x3a;&#x39;&#x30;&#x30;&#x30;&#x2f;&#64;&#100;&#98;">&#x6c;&#x6f;&#x63;&#x61;&#x6c;&#x68;&#111;&#115;&#x74;&#x3a;&#x39;&#x30;&#x30;&#x30;&#x2f;&#64;&#100;&#98;</a>
+<li><a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x6c;&#x6f;&#x63;&#x61;&#108;&#104;&#111;&#x73;&#116;&#58;&#x39;&#48;&#48;&#x30;&#47;&#x40;&#100;&#98;">&#x6c;&#x6f;&#x63;&#x61;&#108;&#104;&#111;&#x73;&#116;&#58;&#x39;&#48;&#48;&#x30;&#47;&#x40;&#100;&#98;</a>
 
 </li>
 </ul>
@@ -835,7 +858,7 @@ GET     /publicprofile/{id}                     PublicProfile.visit</code></pre>
 <h2>Exercise 3</h2>
 <p>Explore the database admin interface again:</p>
 <ul>
-<li><a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#104;&#x74;&#x74;&#112;&#58;&#47;&#x2f;&#108;&#111;&#x63;&#97;&#x6c;&#104;&#111;&#115;&#116;&#x3a;&#57;&#48;&#x30;&#x30;&#x2f;&#64;&#x64;&#98;">&#104;&#x74;&#x74;&#112;&#58;&#47;&#x2f;&#108;&#111;&#x63;&#97;&#x6c;&#104;&#111;&#115;&#116;&#x3a;&#57;&#48;&#x30;&#x30;&#x2f;&#64;&#x64;&#98;</a></li>
+<li><a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#104;&#116;&#x74;&#x70;&#x3a;&#47;&#x2f;&#108;&#x6f;&#x63;&#97;&#x6c;&#x68;&#111;&#x73;&#116;&#x3a;&#57;&#48;&#x30;&#x30;&#x2f;&#x40;&#x64;&#98;">&#104;&#116;&#x74;&#x70;&#x3a;&#47;&#x2f;&#108;&#x6f;&#x63;&#97;&#x6c;&#x68;&#111;&#x73;&#116;&#x3a;&#57;&#48;&#x30;&#x30;&#x2f;&#x40;&#x64;&#98;</a></li>
 </ul>
 <p>In particular, look at how the friendship list is represented:</p>
 <p><img src="img/15.png" alt=""></p>
@@ -857,6 +880,29 @@ GET     /publicprofile/{id}                     PublicProfile.visit</code></pre>
     </div>
   </div>
 
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
     <footer>
 
     </footer>
@@ -875,6 +921,8 @@ GET     /publicprofile/{id}                     PublicProfile.visit</code></pre>
       $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({

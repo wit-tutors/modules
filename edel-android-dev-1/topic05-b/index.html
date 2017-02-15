@@ -2,10 +2,12 @@
  <html>
    <head>
 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
@@ -17,8 +19,10 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
-        
+     
+
+     <style>
+       
 
 body 
 {
@@ -38,9 +42,9 @@ figcaption
 
 
 
-    </style>
+     </style>
 
-  </head>
+   </head>
 
   <body>
     
@@ -140,7 +144,7 @@ figcaption
     </div>
     <div class="content">
       <div class="description">
-         <p>Fragments facilitate a more dynamic approach to UI design. By dividing the layout into fragments it becomes possible to alter the UI appearance at runtime, swapping in and out components as required. Here we examine how a fragment may be inserted into an activity layout from within the application code. </p>
+         <p>Fragments facilitate a more dynamic approach to UI design. By dividing the layout into fragments it becomes possible to alter the UI appearance at runtime, swapping in and out components as required. Here we examine how a fragment may be inserted into an activity layout from within the application code.</p>
 
       </div>
     </div>
@@ -178,7 +182,7 @@ figcaption
     </div>
     <div class="content">
       <div class="description">
-         <p> In the previous lab we gained experience in using single-pane screens, a pane containing only a single fragment. Here we develop a simple application to demonstate how two fragments may be successively rendered on a single pane in portrait mode. We provide the same feature in landscape mode but additionaly allow the simultaneous rendering of an additional fragment. This is sometimes referred to as the master-detail pattern.</p>
+         <p>In the previous lab we gained experience in using single-pane screens, a pane containing only a single fragment. Here we develop a simple application to demonstate how two fragments may be successively rendered on a single pane in portrait mode. We provide the same feature in landscape mode but additionaly allow the simultaneous rendering of an additional fragment. This is sometimes referred to as the master-detail pattern.</p>
 
       </div>
     </div>
@@ -211,6 +215,8 @@ figcaption
       $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({

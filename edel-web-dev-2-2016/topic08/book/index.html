@@ -2,10 +2,12 @@
  <html>
    <head>
 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
@@ -17,8 +19,10 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
-        
+     
+
+     <style>
+       
 
 body 
 {
@@ -38,9 +42,9 @@ figcaption
 
 
 
-    </style>
+     </style>
 
-  </head>
+   </head>
 
   <body>
     
@@ -64,17 +68,36 @@ h1
 {
   font-style:italic;
   font-size:130%;
-  border-bottom: thin solid black;
+  border-bottom:thin solid black;
 }
+
 h2
 {
   font-size:110%;
   border-bottom: thin solid black;
 }
+
 h3
 {
   font-size:100%;
   border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
 }
 
 
@@ -220,7 +243,7 @@ h3
       
     
   </div>
-  <div class="pusher">
+  <div class="pusher" tabindex="-1">
     <div class="ui basic segment">
       <br>
       
@@ -472,7 +495,7 @@ public class Message extends Model
 <p>Note, however, that the messages don;t seem to be going anywhere, and our message text area is cleared every time we leave a message. We need to find a way of listing the messages on this page, on the right where we currently have a &#39;hard coded&#39; message. </p>
 <p>Before doing that, though, we can still verify whether the messages are being saved to the database. This can be done via the &#39;@db&#39; interface we explored earlier. Browse to this url here:</p>
 <ul>
-<li><a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x68;&#116;&#116;&#x70;&#58;&#x2f;&#47;&#x6c;&#111;&#99;&#97;&#108;&#104;&#x6f;&#x73;&#116;&#x3a;&#57;&#48;&#x30;&#x30;&#47;&#x40;&#x64;&#98;">&#x68;&#116;&#116;&#x70;&#58;&#x2f;&#47;&#x6c;&#111;&#99;&#97;&#108;&#104;&#x6f;&#x73;&#116;&#x3a;&#57;&#48;&#x30;&#x30;&#47;&#x40;&#x64;&#98;</a></li>
+<li><a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#104;&#x74;&#116;&#x70;&#58;&#x2f;&#x2f;&#x6c;&#x6f;&#99;&#97;&#x6c;&#x68;&#111;&#x73;&#116;&#58;&#x39;&#x30;&#x30;&#48;&#47;&#64;&#x64;&#98;">&#104;&#x74;&#116;&#x70;&#58;&#x2f;&#x2f;&#x6c;&#x6f;&#99;&#97;&#x6c;&#x68;&#111;&#x73;&#116;&#58;&#x39;&#x30;&#x30;&#48;&#47;&#64;&#x64;&#98;</a></li>
 </ul>
 <p>...and navigate to the messages table, running the default query:</p>
 <p><img src="img/13.png" alt=""></p>
@@ -638,6 +661,29 @@ GET     /profile/getpicture/{id}                Profile.getPicture</code></pre>
     </div>
   </div>
 
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
     <footer>
 
     </footer>
@@ -656,6 +702,8 @@ GET     /profile/getpicture/{id}                Profile.getPicture</code></pre>
       $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({

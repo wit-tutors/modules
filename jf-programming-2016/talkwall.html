@@ -2,10 +2,12 @@
  <html>
    <head>
 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
@@ -17,8 +19,10 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
-        
+     
+
+     <style>
+       
 
 body 
 {
@@ -38,9 +42,9 @@ figcaption
 
 
 
-    </style>
+     </style>
 
-  </head>
+   </head>
 
   <body>
     
@@ -304,7 +308,7 @@ figcaption
     </div>
     <div class="content">
       <div class="description">
-         <p>We now introduce collection classes and control flow techniques to traverse such collections. Specifically we examine the ArrayList class and how to use the class to manage and manipulate data.ArrayList objects may store user-specified data types which are designated as parameters when the ArrayList variable is declared. ArrayList is an example of what is referred to as a <em>generic</em> class.</p>
+         <p>We now introduce collection classes and control flow techniques to traverse such collections. Specifically we examine the ArrayList class and how to use the class to manage and manipulate data.</p>
 
       </div>
     </div>
@@ -342,7 +346,7 @@ figcaption
     </div>
     <div class="content">
       <div class="description">
-         <p>We discuss the application programming interface (API) of a class. We examine how random data may be generated. We revisit collections and examine the HashMap and HashSet generic classes.  We introduce a range of topics that includes two-dimensional arrays of primitive types, anonymous objects, chaining and control flow using the <em>switch</em>, <em>break</em> and <em>continue</em> statements. </p>
+         <p>We discuss the application programming interface (API) of a class. We examine how random data may be generated. We revisit collections and examine the HashMap and HashSet generic classes.  We introduce a range of topics that includes two-dimensional arrays of primitive types, anonymous objects, chaining and control flow using the <em>switch</em>, <em>break</em> and <em>continue</em> statements.</p>
 
       </div>
     </div>
@@ -456,7 +460,7 @@ figcaption
     </div>
     <div class="content">
       <div class="description">
-         <p>In this presentation we show how to use the Java interface type to unify common behaviour. In doing so we are demonstrating a concept known as polymorphism, a pattern in object oriented programming in which classes have different functionality while sharing a common interface.We have already gained experience in using sorting algorithms but found it necessary to rewrite the algorithm when we wished to sort a new type. We show how, by using interfaces, we may write such an algoritm only once yet use it to sort a variety of types of our choosing.</p>
+         <p>In this presentation we show how to use the Java interface type to unify common behaviour. In doing so we are demonstrating a concept known as polymorphism, a pattern in object oriented programming in which classes have different functionality while sharing a common interface.</p>
 
       </div>
     </div>
@@ -526,6 +530,8 @@ figcaption
       $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({

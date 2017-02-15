@@ -2,10 +2,12 @@
  <html>
    <head>
 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
@@ -17,8 +19,10 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
-        
+     
+
+     <style>
+       
 
 body 
 {
@@ -38,9 +42,9 @@ figcaption
 
 
 
-    </style>
+     </style>
 
-  </head>
+   </head>
 
   <body>
     
@@ -64,17 +68,36 @@ h1
 {
   font-style:italic;
   font-size:130%;
-  border-bottom: thin solid black;
+  border-bottom:thin solid black;
 }
+
 h2
 {
   font-size:110%;
   border-bottom: thin solid black;
 }
+
 h3
 {
   font-size:100%;
   border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
 }
 
 
@@ -232,7 +255,7 @@ h3
       
     
   </div>
-  <div class="pusher">
+  <div class="pusher" tabindex="-1">
     <div class="ui basic segment">
       <br>
       
@@ -441,8 +464,8 @@ public class ClubTest extends UnitTest
 <pre><code>play test</code></pre>
 <p>and verify that the test and admin consoles appear:</p>
 <ul>
-<li><a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#104;&#116;&#x74;&#x70;&#58;&#47;&#x2f;&#x6c;&#x6f;&#99;&#x61;&#108;&#104;&#111;&#x73;&#x74;&#58;&#57;&#x30;&#48;&#x30;&#x2f;&#64;&#x74;&#101;&#115;&#x74;&#115;">&#104;&#116;&#x74;&#x70;&#58;&#47;&#x2f;&#x6c;&#x6f;&#99;&#x61;&#108;&#104;&#111;&#x73;&#x74;&#58;&#57;&#x30;&#48;&#x30;&#x2f;&#64;&#x74;&#101;&#115;&#x74;&#115;</a></li>
-<li><a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#104;&#116;&#x74;&#x70;&#x3a;&#47;&#47;&#x6c;&#111;&#x63;&#97;&#x6c;&#104;&#x6f;&#115;&#116;&#x3a;&#x39;&#x30;&#x30;&#48;&#47;&#64;&#100;&#x62;">&#104;&#116;&#x74;&#x70;&#x3a;&#47;&#47;&#x6c;&#111;&#x63;&#97;&#x6c;&#104;&#x6f;&#115;&#116;&#x3a;&#x39;&#x30;&#x30;&#48;&#47;&#64;&#100;&#x62;</a></li>
+<li><a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#104;&#x74;&#116;&#x70;&#x3a;&#47;&#x2f;&#108;&#x6f;&#x63;&#x61;&#108;&#x68;&#x6f;&#x73;&#116;&#58;&#57;&#x30;&#48;&#48;&#47;&#x40;&#x74;&#x65;&#x73;&#x74;&#x73;">&#104;&#x74;&#116;&#x70;&#x3a;&#47;&#x2f;&#108;&#x6f;&#x63;&#x61;&#108;&#x68;&#x6f;&#x73;&#116;&#58;&#57;&#x30;&#48;&#48;&#47;&#x40;&#x74;&#x65;&#x73;&#x74;&#x73;</a></li>
+<li><a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#104;&#116;&#x74;&#x70;&#58;&#47;&#47;&#x6c;&#x6f;&#x63;&#x61;&#x6c;&#104;&#x6f;&#115;&#116;&#58;&#57;&#48;&#48;&#x30;&#x2f;&#64;&#100;&#98;">&#104;&#116;&#x74;&#x70;&#58;&#47;&#47;&#x6c;&#x6f;&#x63;&#x61;&#x6c;&#104;&#x6f;&#115;&#116;&#58;&#57;&#48;&#48;&#x30;&#x2f;&#64;&#100;&#98;</a></li>
 </ul>
 <p>This complete the &#39;walking skeleton&#39; phase. </p>
 
@@ -847,6 +870,29 @@ public class Player extends Model
     </div>
   </div>
 
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
     <footer>
 
     </footer>
@@ -865,6 +911,8 @@ public class Player extends Model
       $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({

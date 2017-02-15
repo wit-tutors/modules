@@ -2,10 +2,12 @@
  <html>
    <head>
 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
@@ -17,8 +19,10 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
-        
+     
+
+     <style>
+       
 
 body 
 {
@@ -38,9 +42,9 @@ figcaption
 
 
 
-    </style>
+     </style>
 
-  </head>
+   </head>
 
   <body>
     
@@ -64,17 +68,36 @@ h1
 {
   font-style:italic;
   font-size:130%;
-  border-bottom: thin solid black;
+  border-bottom:thin solid black;
 }
+
 h2
 {
   font-size:110%;
   border-bottom: thin solid black;
 }
+
 h3
 {
   font-size:100%;
   border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
 }
 
 
@@ -220,7 +243,7 @@ h3
       
     
   </div>
-  <div class="pusher">
+  <div class="pusher" tabindex="-1">
     <div class="ui basic segment">
       <br>
       
@@ -675,7 +698,7 @@ public class User extends Model
 <p>Where does &#39;user.save()&#39; put the user details? It goes to a database - and in this step we will take a peak inside the database to have have a look at the entries. This will be useful for debugging, as we would like to be able to verify what is happening with any data we save.</p>
 <p>With your application running, browse to this url:</p>
 <ul>
-<li><a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x68;&#116;&#x74;&#112;&#58;&#x2f;&#x2f;&#108;&#x6f;&#99;&#x61;&#108;&#104;&#111;&#x73;&#x74;&#x3a;&#57;&#48;&#x30;&#48;&#47;&#64;&#x64;&#x62;">&#x68;&#116;&#x74;&#112;&#58;&#x2f;&#x2f;&#108;&#x6f;&#99;&#x61;&#108;&#104;&#111;&#x73;&#x74;&#x3a;&#57;&#48;&#x30;&#48;&#47;&#64;&#x64;&#x62;</a></li>
+<li><a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x68;&#x74;&#116;&#112;&#58;&#47;&#x2f;&#108;&#111;&#99;&#x61;&#108;&#104;&#x6f;&#115;&#116;&#x3a;&#x39;&#x30;&#48;&#48;&#x2f;&#64;&#x64;&#98;">&#x68;&#x74;&#116;&#112;&#58;&#47;&#x2f;&#108;&#111;&#99;&#x61;&#108;&#104;&#x6f;&#115;&#116;&#x3a;&#x39;&#x30;&#48;&#48;&#x2f;&#64;&#x64;&#98;</a></li>
 </ul>
 <p>You should see this screen here:</p>
 <p><img src="img/14a.png" alt=""></p>
@@ -746,6 +769,29 @@ public class User extends Model
     </div>
   </div>
 
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
     <footer>
 
     </footer>
@@ -764,6 +810,8 @@ public class User extends Model
       $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({

@@ -2,10 +2,12 @@
  <html>
    <head>
 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
@@ -17,8 +19,10 @@
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
-        
+     
+
+     <style>
+       
 
 body 
 {
@@ -38,9 +42,9 @@ figcaption
 
 
 
-    </style>
+     </style>
 
-  </head>
+   </head>
 
   <body>
     
@@ -163,7 +167,7 @@ figcaption
     </div>
     <div class="content">
       <div class="description">
-         <p>The Status Text is a text field the the user can enter on her profile page. The members list will be a list of actual users (not a hard coded list of the simpsons) that will be displayed on the Members page </p>
+         <p>The Status Text is a text field the the user can enter on her profile page. The members list will be a list of actual users (not a hard coded list of the simpsons) that will be displayed on the Members page</p>
 
       </div>
     </div>
@@ -201,7 +205,7 @@ figcaption
     </div>
     <div class="content">
       <div class="description">
-         <p>Show a list of live list of members on the service. Extend the User model to include a list of members being followed. Allow a user to &#39;friend&#39; and and &#39;drop&#39; other members </p>
+         <p>Show a list of live list of members on the service. Extend the User model to include a list of members being followed. Allow a user to &#39;friend&#39; and and &#39;drop&#39; other members</p>
 
       </div>
     </div>
@@ -234,6 +238,8 @@ figcaption
       $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({

@@ -450,7 +450,7 @@ public class MessageTest extends UnitTest
 <pre><code>play test</code></pre>
 <p>and then browse to:</p>
 <ul>
-<li><p><a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#104;&#x74;&#116;&#112;&#x3a;&#47;&#x2f;&#x6c;&#x6f;&#x63;&#97;&#108;&#x68;&#x6f;&#115;&#x74;&#58;&#57;&#x30;&#x30;&#48;&#47;&#64;&#x74;&#101;&#115;&#x74;&#x73;">&#104;&#x74;&#116;&#112;&#x3a;&#47;&#x2f;&#x6c;&#x6f;&#x63;&#97;&#108;&#x68;&#x6f;&#115;&#x74;&#58;&#57;&#x30;&#x30;&#48;&#47;&#64;&#x74;&#101;&#115;&#x74;&#x73;</a></p>
+<li><p><a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x68;&#116;&#116;&#x70;&#x3a;&#47;&#x2f;&#108;&#x6f;&#x63;&#97;&#108;&#104;&#x6f;&#x73;&#x74;&#58;&#x39;&#48;&#x30;&#48;&#x2f;&#x40;&#116;&#x65;&#115;&#116;&#x73;">&#x68;&#116;&#116;&#x70;&#x3a;&#47;&#x2f;&#108;&#x6f;&#x63;&#97;&#108;&#104;&#x6f;&#x73;&#x74;&#58;&#x39;&#48;&#x30;&#48;&#x2f;&#x40;&#116;&#x65;&#115;&#116;&#x73;</a></p>
 <p>Select the tests you want to run and run them.</p>
 </li>
 </ul>
@@ -570,7 +570,7 @@ public class BlogTest extends UnitTest
 <p>Run the BlogPost test. It should succeed. However, is it in fact deleted?</p>
 <p>With the app still running under test, open the database interface in another tab:</p>
 <ul>
-<li><a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#104;&#116;&#x74;&#112;&#58;&#47;&#x2f;&#108;&#x6f;&#99;&#x61;&#108;&#104;&#x6f;&#115;&#x74;&#58;&#57;&#x30;&#x30;&#x30;&#47;&#x40;&#100;&#x62;">&#104;&#116;&#x74;&#112;&#58;&#47;&#x2f;&#108;&#x6f;&#99;&#x61;&#108;&#104;&#x6f;&#115;&#x74;&#58;&#57;&#x30;&#x30;&#x30;&#47;&#x40;&#100;&#x62;</a></li>
+<li><a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x68;&#116;&#116;&#x70;&#x3a;&#47;&#x2f;&#108;&#x6f;&#x63;&#97;&#108;&#x68;&#111;&#115;&#x74;&#58;&#x39;&#48;&#48;&#48;&#47;&#x40;&#100;&#x62;">&#x68;&#116;&#116;&#x70;&#x3a;&#47;&#x2f;&#108;&#x6f;&#x63;&#97;&#108;&#x68;&#111;&#115;&#x74;&#58;&#x39;&#48;&#48;&#48;&#47;&#x40;&#100;&#x62;</a></li>
 </ul>
 <p>Look at the list if Posts objects. Our post (the one we thought we deleted) is still there. However, the user bob is gone, and the other posts we created are all gone. How can this be?</p>
 <p>The reason is that we removed the post form the collection owned by the user bob, but we never explicitly deleted the post. Here is another version:</p>
@@ -656,7 +656,7 @@ public class BlogTest extends UnitTest
 <pre><code>    &lt;a href=&quot;/blog/deletepost/${post.id}&quot; class=&quot;ui button red labeled icon&quot;&gt;&lt;i class=&quot;icon delete&quot;&gt;&lt;/i&gt; Delete &lt;/a&gt;</code></pre>
 <p>Try this now. You should be able to create a number of posts, and delete them. Keep an eye on the database:</p>
 <ul>
-<li><a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#104;&#116;&#116;&#112;&#x3a;&#x2f;&#47;&#108;&#111;&#x63;&#97;&#x6c;&#104;&#111;&#115;&#x74;&#58;&#x39;&#x30;&#x30;&#x30;&#x2f;&#x40;&#x64;&#98;">&#104;&#116;&#116;&#112;&#x3a;&#x2f;&#47;&#108;&#111;&#x63;&#97;&#x6c;&#104;&#111;&#115;&#x74;&#58;&#x39;&#x30;&#x30;&#x30;&#x2f;&#x40;&#x64;&#98;</a></li>
+<li><a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x68;&#x74;&#116;&#x70;&#x3a;&#x2f;&#x2f;&#x6c;&#x6f;&#x63;&#x61;&#x6c;&#x68;&#111;&#115;&#x74;&#58;&#57;&#48;&#48;&#x30;&#x2f;&#x40;&#100;&#98;">&#x68;&#x74;&#116;&#x70;&#x3a;&#x2f;&#x2f;&#x6c;&#x6f;&#x63;&#x61;&#x6c;&#x68;&#111;&#115;&#x74;&#58;&#57;&#48;&#48;&#x30;&#x2f;&#x40;&#100;&#98;</a></li>
 </ul>
 <p>and make sure the posts table reflect the delete actions you perform. To test this, comment out the post delete:</p>
 <pre><code class="lang-java">//    post.delete();</code></pre>
